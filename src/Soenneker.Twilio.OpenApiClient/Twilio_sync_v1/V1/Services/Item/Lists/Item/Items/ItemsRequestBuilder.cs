@@ -30,19 +30,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.I
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.Item.Items.Item.WithIndexItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Items in a sync list</summary>
-        /// <param name="position">The index of the Sync List Item resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.Item.Items.Item.WithIndexItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.Item.Items.Item.WithIndexItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("Index", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.Item.Items.Item.WithIndexItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.Item.Items.ItemsRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -141,17 +128,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.I
         #pragma warning restore CS1591
         {
             /// <summary>&quot;Whether to include the List Item referenced by the `from` parameter. Can be: `inclusive` to include the List Item referenced by the `from` parameter or `exclusive` to start with the next List Item. The default value is `inclusive`.&quot;</summary>
-            [Obsolete("This property is deprecated, use BoundsAsSyncListItemEnumQueryFromBoundType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? Bounds { get; set; }
-#nullable restore
-#else
-            public string Bounds { get; set; }
-#endif
-            /// <summary>&quot;Whether to include the List Item referenced by the `from` parameter. Can be: `inclusive` to include the List Item referenced by the `from` parameter or `exclusive` to start with the next List Item. The default value is `inclusive`.&quot;</summary>
-            [QueryParameter("Bounds")]
-            public global::Soenneker.Twilio.OpenApiClient.Models.Sync_list_item_enum_query_from_bound_type? BoundsAsSyncListItemEnumQueryFromBoundType { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.Sync_list_item_enum_query_from_bound_type? Bounds { get; set; }
             /// <summary>The `index` of the first Sync List Item resource to read. See also `bounds`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -161,17 +138,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.I
             public string From { get; set; }
 #endif
             /// <summary>&quot;How to order the List Items returned by their `index` value. Can be: `asc` (ascending) or `desc` (descending) and the default is ascending.&quot;</summary>
-            [Obsolete("This property is deprecated, use OrderAsSyncListItemEnumQueryResultOrder instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? Order { get; set; }
-#nullable restore
-#else
-            public string Order { get; set; }
-#endif
-            /// <summary>&quot;How to order the List Items returned by their `index` value. Can be: `asc` (ascending) or `desc` (descending) and the default is ascending.&quot;</summary>
-            [QueryParameter("Order")]
-            public global::Soenneker.Twilio.OpenApiClient.Models.Sync_list_item_enum_query_result_order? OrderAsSyncListItemEnumQueryResultOrder { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.Sync_list_item_enum_query_result_order? Order { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }
             /// <summary>How many resources to return in each list page. The default is 50, and the maximum is 100.</summary>
@@ -184,22 +151,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.I
 #else
             public string PageToken { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ItemsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.Item.Items.ItemsRequestBuilder.ItemsRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ItemsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

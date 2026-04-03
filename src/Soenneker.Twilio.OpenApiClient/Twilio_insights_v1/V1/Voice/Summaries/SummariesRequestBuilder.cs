@@ -88,14 +88,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries
             /// <summary>A boolean flag indicating an abnormal session where the last SIP response was not 200 OK.</summary>
             public bool? AbnormalSession { get; set; }
             /// <summary>An Answered By value for the calls based on `Answering Machine Detection (AMD)`. One of `unknown`, `machine_start`, `machine_end_beep`, `machine_end_silence`, `machine_end_other`, `human` or `fax`.</summary>
-            [Obsolete("This property is deprecated, use AnsweredByAsCallSummariesEnumAnsweredBy instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? AnsweredBy { get; set; }
-#nullable restore
-#else
-            public string AnsweredBy { get; set; }
-#endif
+            public global::Soenneker.Twilio.OpenApiClient.Models.Call_summaries_enum_answered_by? AnsweredBy { get; set; }
             /// <summary>Either machine or human.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -104,9 +97,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries
 #else
             public string AnsweredByAnnotation { get; set; }
 #endif
-            /// <summary>An Answered By value for the calls based on `Answering Machine Detection (AMD)`. One of `unknown`, `machine_start`, `machine_end_beep`, `machine_end_silence`, `machine_end_other`, `human` or `fax`.</summary>
-            [QueryParameter("AnsweredBy")]
-            public global::Soenneker.Twilio.OpenApiClient.Models.Call_summaries_enum_answered_by? AnsweredByAsCallSummariesEnumAnsweredBy { get; set; }
             /// <summary>A unique SID identifier of the Branded Call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -262,17 +252,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries
             public string PageToken { get; set; }
 #endif
             /// <summary>A Processing State of the Call Summaries. One of `completed`, `partial` or `all`.</summary>
-            [Obsolete("This property is deprecated, use ProcessingStateAsCallSummariesEnumProcessingStateRequest instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? ProcessingState { get; set; }
-#nullable restore
-#else
-            public string ProcessingState { get; set; }
-#endif
-            /// <summary>A Processing State of the Call Summaries. One of `completed`, `partial` or `all`.</summary>
-            [QueryParameter("ProcessingState")]
-            public global::Soenneker.Twilio.OpenApiClient.Models.Call_summaries_enum_processing_state_request? ProcessingStateAsCallSummariesEnumProcessingStateRequest { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.Call_summaries_enum_processing_state_request? ProcessingState { get; set; }
             /// <summary>A subjective Quality Issue with the calls. One of `no_quality_issue`, `low_volume`, `choppy_robotic`, `echo`, `dtmf`, `latency`, `owa`, `static_noise`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -282,17 +262,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries
             public string QualityIssueAnnotation { get; set; }
 #endif
             /// <summary>A Sort By criterion for the returned list of Call Summaries. One of `start_time` or `end_time`.</summary>
-            [Obsolete("This property is deprecated, use SortByAsCallSummariesEnumSortBy instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? SortBy { get; set; }
-#nullable restore
-#else
-            public string SortBy { get; set; }
-#endif
-            /// <summary>A Sort By criterion for the returned list of Call Summaries. One of `start_time` or `end_time`.</summary>
-            [QueryParameter("SortBy")]
-            public global::Soenneker.Twilio.OpenApiClient.Models.Call_summaries_enum_sort_by? SortByAsCallSummariesEnumSortBy { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.Call_summaries_enum_sort_by? SortBy { get; set; }
             /// <summary>A boolean flag indicating spam calls.</summary>
             public bool? SpamAnnotation { get; set; }
             /// <summary>A Start time of the calls. xm (x minutes), xh (x hours), xd (x days), 1w, 30m, 3d, 4w or datetime-ISO. Defaults to 4h.</summary>
@@ -355,14 +325,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries
 #else
             public string VoiceIntegrityUseCase { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SummariesRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries.SummariesRequestBuilder.SummariesRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

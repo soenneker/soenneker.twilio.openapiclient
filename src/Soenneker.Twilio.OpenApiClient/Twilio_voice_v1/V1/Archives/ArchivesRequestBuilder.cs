@@ -27,19 +27,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives.Item.WithDateItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_voice_v1.v1.Archives.item collection</summary>
-        /// <param name="position">The date of the Call in UTC.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives.Item.WithDateItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives.Item.WithDateItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("Date", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives.Item.WithDateItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives.ArchivesRequestBuilder"/> and sets the default values.
         /// </summary>

@@ -149,17 +149,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
             public string BundleSids { get; set; }
 #endif
             /// <summary>The end user type of the regulation of the Bundle. Can be `business` or `individual`.</summary>
-            [Obsolete("This property is deprecated, use EndUserTypeAsGetEndUserTypeQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? EndUserType { get; set; }
-#nullable restore
-#else
-            public string EndUserType { get; set; }
-#endif
-            /// <summary>The end user type of the regulation of the Bundle. Can be `business` or `individual`.</summary>
-            [QueryParameter("EndUserType")]
-            public global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.GetEndUserTypeQueryParameterType? EndUserTypeAsGetEndUserTypeQueryParameterType { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.GetEndUserTypeQueryParameterType? EndUserType { get; set; }
             /// <summary>The string that you assigned to describe the resource. The column can contain 255 variable characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -207,41 +197,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
             public string RegulationSid { get; set; }
 #endif
             /// <summary>Can be `valid-until` or `date-updated`. Defaults to `date-created`.</summary>
-            [Obsolete("This property is deprecated, use SortByAsBundleEnumSortBy instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? SortBy { get; set; }
-#nullable restore
-#else
-            public string SortBy { get; set; }
-#endif
-            /// <summary>Can be `valid-until` or `date-updated`. Defaults to `date-created`.</summary>
-            [QueryParameter("SortBy")]
-            public global::Soenneker.Twilio.OpenApiClient.Models.Bundle_enum_sort_by? SortByAsBundleEnumSortBy { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.Bundle_enum_sort_by? SortBy { get; set; }
             /// <summary>Default is `DESC`. Can be `ASC` or `DESC`.</summary>
-            [Obsolete("This property is deprecated, use SortDirectionAsBundleEnumSortDirection instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? SortDirection { get; set; }
-#nullable restore
-#else
-            public string SortDirection { get; set; }
-#endif
-            /// <summary>Default is `DESC`. Can be `ASC` or `DESC`.</summary>
-            [QueryParameter("SortDirection")]
-            public global::Soenneker.Twilio.OpenApiClient.Models.Bundle_enum_sort_direction? SortDirectionAsBundleEnumSortDirection { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.Bundle_enum_sort_direction? SortDirection { get; set; }
             /// <summary>The verification status of the Bundle resource. Please refer to [Bundle Statuses](https://www.twilio.com/docs/phone-numbers/regulatory/api/bundles#bundle-statuses) for more details.</summary>
-            [Obsolete("This property is deprecated, use StatusAsBundleEnumStatus instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? Status { get; set; }
-#nullable restore
-#else
-            public string Status { get; set; }
-#endif
-            /// <summary>The verification status of the Bundle resource. Please refer to [Bundle Statuses](https://www.twilio.com/docs/phone-numbers/regulatory/api/bundles#bundle-statuses) for more details.</summary>
-            [QueryParameter("Status")]
-            public global::Soenneker.Twilio.OpenApiClient.Models.Bundle_enum_status? StatusAsBundleEnumStatus { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.Bundle_enum_status? Status { get; set; }
             /// <summary>Date to filter Bundles having their `valid_until_date` before or after the specified date. Can be `ValidUntilDate&gt;=` or `ValidUntilDate&lt;=`. Both can be used in conjunction as well. [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) is the acceptable date format.</summary>
             public DateTimeOffset? ValidUntilDate { get; set; }
             /// <summary>Date to filter Bundles having their `valid_until_date` before or after the specified date. Can be `ValidUntilDate&gt;=` or `ValidUntilDate&lt;=`. Both can be used in conjunction as well. [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) is the acceptable date format.</summary>
@@ -250,22 +210,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
             /// <summary>Date to filter Bundles having their `valid_until_date` before or after the specified date. Can be `ValidUntilDate&gt;=` or `ValidUntilDate&lt;=`. Both can be used in conjunction as well. [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) is the acceptable date format.</summary>
             [QueryParameter("ValidUntilDate%3E")]
             public DateTimeOffset? ValidUntilDate1 { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BundlesRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.BundlesRequestBuilder.BundlesRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BundlesRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }
