@@ -36,20 +36,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Portabilit
         /// <summary>
         /// Check if a single phone number can be ported to Twilio
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_porting_portability"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortability"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_porting_portability?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Portability.PhoneNumber.Item.WithPhoneNumberItemRequestBuilder.WithPhoneNumberItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortability?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Portability.PhoneNumber.Item.WithPhoneNumberItemRequestBuilder.WithPhoneNumberItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_porting_portability> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Portability.PhoneNumber.Item.WithPhoneNumberItemRequestBuilder.WithPhoneNumberItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortability> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Portability.PhoneNumber.Item.WithPhoneNumberItemRequestBuilder.WithPhoneNumberItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_porting_portability>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_porting_portability.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortability>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortability.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Check if a single phone number can be ported to Twilio

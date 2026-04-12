@@ -36,20 +36,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Conferences.Item.
         /// <summary>
         /// Get a specific Conference Participant Summary for a Conference.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Insights_v1_conference_conference_participant"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipant"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Insights_v1_conference_conference_participant?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Conferences.Item.Participants.Item.WithParticipantSItemRequestBuilder.WithParticipantSItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipant?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Conferences.Item.Participants.Item.WithParticipantSItemRequestBuilder.WithParticipantSItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Insights_v1_conference_conference_participant> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Conferences.Item.Participants.Item.WithParticipantSItemRequestBuilder.WithParticipantSItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipant> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Conferences.Item.Participants.Item.WithParticipantSItemRequestBuilder.WithParticipantSItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Insights_v1_conference_conference_participant>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Insights_v1_conference_conference_participant.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipant>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipant.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a specific Conference Participant Summary for a Conference.

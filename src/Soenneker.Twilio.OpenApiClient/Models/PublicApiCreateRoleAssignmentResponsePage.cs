@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePageMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePageMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "content", n => { Content = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiRoleAssignmentResponse>(global::Soenneker.Twilio.OpenApiClient.Models.PublicApiRoleAssignmentResponse.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage_meta>(global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePageMeta>(global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePageMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiRoleAssignmentResponse>("content", Content);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePageMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

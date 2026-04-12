@@ -36,22 +36,22 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_content_v1.V1.Content.Item.Appro
         /// <summary>
         /// Create a ContentApprovalRequest for a content item
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Content_v1_content_approval_create"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalCreate"/></returns>
         /// <param name="body">Content approval request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Content_v1_content_approval_create?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.ContentApprovalRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalCreate?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.ContentApprovalRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Content_v1_content_approval_create> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.ContentApprovalRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalCreate> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.ContentApprovalRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Content_v1_content_approval_create>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Content_v1_content_approval_create.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalCreate>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalCreate.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a ContentApprovalRequest for a content item

@@ -55,20 +55,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts
         /// <summary>
         /// List all the verification attempts for a given Account.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_verify_v2_ListVerificationAttempt_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2ListVerificationAttempt200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_verify_v2_ListVerificationAttempt_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts.AttemptsRequestBuilder.AttemptsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2ListVerificationAttempt200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts.AttemptsRequestBuilder.AttemptsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_verify_v2_ListVerificationAttempt_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts.AttemptsRequestBuilder.AttemptsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2ListVerificationAttempt200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts.AttemptsRequestBuilder.AttemptsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_verify_v2_ListVerificationAttempt_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_verify_v2_ListVerificationAttempt_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2ListVerificationAttempt200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2ListVerificationAttempt200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List all the verification attempts for a given Account.
@@ -105,7 +105,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts
         public partial class AttemptsRequestBuilderGetQueryParameters 
         {
             /// <summary>Filter used to query Verification Attempts by communication channel.</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Verification_attempt_enum_channels? Channel { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.VerificationAttemptEnumChannels? Channel { get; set; }
             /// <summary>Destination of a verification. It is phone number in E.164 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -141,7 +141,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts
             public string PageToken { get; set; }
 #endif
             /// <summary>Filter used to query Verification Attempts by conversion status. Valid values are `UNCONVERTED`, for attempts that were not converted, and `CONVERTED`, for attempts that were confirmed.</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Verification_attempt_enum_conversion_status? Status { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.VerificationAttemptEnumConversionStatus? Status { get; set; }
             /// <summary>Filter used to return all the Verification Attempts of a single verification. Only attempts of the provided verification SID will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

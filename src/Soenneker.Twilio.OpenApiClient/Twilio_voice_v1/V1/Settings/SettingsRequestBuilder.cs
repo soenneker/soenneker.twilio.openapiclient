@@ -36,40 +36,40 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Settings
         /// <summary>
         /// Retrieve voice dialing permissions inheritance for the sub-account
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Voice_v1_dialing_permissions_dialing_permissions_settings"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsSettings"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Voice_v1_dialing_permissions_dialing_permissions_settings?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsSettings?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Voice_v1_dialing_permissions_dialing_permissions_settings> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsSettings> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Voice_v1_dialing_permissions_dialing_permissions_settings>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Voice_v1_dialing_permissions_dialing_permissions_settings.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsSettings>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsSettings.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update voice dialing permissions inheritance for the sub-account
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Voice_v1_dialing_permissions_dialing_permissions_settings"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsSettings"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Voice_v1_dialing_permissions_dialing_permissions_settings?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_voice_v1_UpdateDialingPermissionsSettings body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsSettings?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1UpdateDialingPermissionsSettings body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Voice_v1_dialing_permissions_dialing_permissions_settings> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_voice_v1_UpdateDialingPermissionsSettings body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsSettings> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1UpdateDialingPermissionsSettings body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Voice_v1_dialing_permissions_dialing_permissions_settings>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Voice_v1_dialing_permissions_dialing_permissions_settings.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsSettings>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsSettings.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve voice dialing permissions inheritance for the sub-account
@@ -98,11 +98,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Settings
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_voice_v1_UpdateDialingPermissionsSettings body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1UpdateDialingPermissionsSettings body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_voice_v1_UpdateDialingPermissionsSettings body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1UpdateDialingPermissionsSettings body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

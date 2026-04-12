@@ -33,20 +33,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistr
         public SmsOtpRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/a2p/BrandRegistrations/{BrandRegistrationS%2Did}/SmsOtp", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v1_brand_registrations_brand_registration_otp"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsBrandRegistrationOtp"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v1_brand_registrations_brand_registration_otp?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsBrandRegistrationOtp?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v1_brand_registrations_brand_registration_otp> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsBrandRegistrationOtp> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v1_brand_registrations_brand_registration_otp>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v1_brand_registrations_brand_registration_otp.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsBrandRegistrationOtp>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsBrandRegistrationOtp.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

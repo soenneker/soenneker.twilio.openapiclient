@@ -49,20 +49,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Recordings
         /// <summary>
         /// List of all Track recordings.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_video_v1_ListRecording_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1ListRecording200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_video_v1_ListRecording_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Recordings.RecordingsRequestBuilder.RecordingsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1ListRecording200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Recordings.RecordingsRequestBuilder.RecordingsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_video_v1_ListRecording_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Recordings.RecordingsRequestBuilder.RecordingsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1ListRecording200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Recordings.RecordingsRequestBuilder.RecordingsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_video_v1_ListRecording_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_video_v1_ListRecording_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1ListRecording200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1ListRecording200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List of all Track recordings.
@@ -111,7 +111,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Recordings
             public string[] GroupingSid { get; set; }
 #endif
             /// <summary>Read only recordings that have this media type. Can be either `audio` or `video`.</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Recording_enum_type? MediaType { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumType? MediaType { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }
             /// <summary>How many resources to return in each list page.</summary>
@@ -133,7 +133,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Recordings
             public string SourceSid { get; set; }
 #endif
             /// <summary>&quot;Read only the recordings that have this status. Can be: `processing`, `completed`, or `deleted`.&quot;</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Twilio_video_v1_recording_enum_status? Status { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1RecordingEnumStatus? Status { get; set; }
         }
     }
 }

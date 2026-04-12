@@ -49,40 +49,40 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.SmsCommands
         /// <summary>
         /// Retrieve a list of SMS Commands from your account.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_ListSmsCommand_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListSmsCommand200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_ListSmsCommand_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.SmsCommands.SmsCommandsRequestBuilder.SmsCommandsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListSmsCommand200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.SmsCommands.SmsCommandsRequestBuilder.SmsCommandsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_ListSmsCommand_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.SmsCommands.SmsCommandsRequestBuilder.SmsCommandsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListSmsCommand200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.SmsCommands.SmsCommandsRequestBuilder.SmsCommandsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_ListSmsCommand_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_ListSmsCommand_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListSmsCommand200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListSmsCommand200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Send SMS Command to a Sim.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Supersim_v1_sms_command"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SmsCommand"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Supersim_v1_sms_command?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_CreateSmsCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SmsCommand?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateSmsCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Supersim_v1_sms_command> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_CreateSmsCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SmsCommand> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateSmsCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Supersim_v1_sms_command>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Supersim_v1_sms_command.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SmsCommand>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SmsCommand.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of SMS Commands from your account.
@@ -111,11 +111,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.SmsCommands
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_CreateSmsCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateSmsCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_CreateSmsCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateSmsCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -141,7 +141,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.SmsCommands
         public partial class SmsCommandsRequestBuilderGetQueryParameters 
         {
             /// <summary>The direction of the SMS Command. Can be `to_sim` or `from_sim`. The value of `to_sim` is synonymous with the term `mobile terminated`, and `from_sim` is synonymous with the term `mobile originated`.</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Sms_command_enum_direction? Direction { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.SmsCommandEnumDirection? Direction { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }
             /// <summary>How many resources to return in each list page. The default is 50, and the maximum is 1000.</summary>
@@ -163,7 +163,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.SmsCommands
             public string Sim { get; set; }
 #endif
             /// <summary>&quot;The status of the SMS Command. Can be: `queued`, `sent`, `delivered`, `received` or `failed`. See the [SMS Command Status Values](https://www.twilio.com/docs/iot/supersim/api/smscommand-resource#status-values) for a description of each.&quot;</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Sms_command_enum_status? Status { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.SmsCommandEnumStatus? Status { get; set; }
         }
     }
 }

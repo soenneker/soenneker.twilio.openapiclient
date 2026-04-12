@@ -61,20 +61,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Operators
         /// <summary>
         /// Retrieves a list of all Operators for an Account, both Custom and Pre-built.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_intelligence_v2_ListOperator_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2ListOperator200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_intelligence_v2_ListOperator_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Operators.OperatorsRequestBuilder.OperatorsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2ListOperator200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Operators.OperatorsRequestBuilder.OperatorsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_intelligence_v2_ListOperator_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Operators.OperatorsRequestBuilder.OperatorsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2ListOperator200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Operators.OperatorsRequestBuilder.OperatorsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_intelligence_v2_ListOperator_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_intelligence_v2_ListOperator_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2ListOperator200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2ListOperator200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves a list of all Operators for an Account, both Custom and Pre-built.
@@ -111,7 +111,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Operators
         public partial class OperatorsRequestBuilderGetQueryParameters 
         {
             /// <summary>&quot;Returns Operators with the provided availability type. Possible values: internal, beta, public, retired.&quot;</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Operator_enum_availability? Availability { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.OperatorEnumAvailability? Availability { get; set; }
             /// <summary>Returns Operators that support the provided language code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

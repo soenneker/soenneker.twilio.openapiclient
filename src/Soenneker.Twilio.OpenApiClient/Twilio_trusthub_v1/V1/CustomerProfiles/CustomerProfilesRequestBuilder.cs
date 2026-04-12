@@ -49,40 +49,40 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles
         /// <summary>
         /// Retrieve a list of all Customer-Profiles for an account.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trusthub_v1_ListCustomerProfile_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1ListCustomerProfile200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trusthub_v1_ListCustomerProfile_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.CustomerProfilesRequestBuilder.CustomerProfilesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1ListCustomerProfile200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.CustomerProfilesRequestBuilder.CustomerProfilesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trusthub_v1_ListCustomerProfile_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.CustomerProfilesRequestBuilder.CustomerProfilesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1ListCustomerProfile200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.CustomerProfilesRequestBuilder.CustomerProfilesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trusthub_v1_ListCustomerProfile_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trusthub_v1_ListCustomerProfile_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1ListCustomerProfile200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1ListCustomerProfile200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new Customer-Profile.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Trusthub_v1_customer_profile"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Trusthub_v1_customer_profile?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trusthub_v1_CreateCustomerProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1CreateCustomerProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Trusthub_v1_customer_profile> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trusthub_v1_CreateCustomerProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1CreateCustomerProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Trusthub_v1_customer_profile>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Trusthub_v1_customer_profile.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of all Customer-Profiles for an account.
@@ -111,11 +111,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trusthub_v1_CreateCustomerProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1CreateCustomerProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trusthub_v1_CreateCustomerProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1CreateCustomerProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -169,7 +169,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles
             public string PolicySid { get; set; }
 #endif
             /// <summary>The verification status of the Customer-Profile resource.</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Customer_profile_enum_status? Status { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.CustomerProfileEnumStatus? Status { get; set; }
         }
     }
 }

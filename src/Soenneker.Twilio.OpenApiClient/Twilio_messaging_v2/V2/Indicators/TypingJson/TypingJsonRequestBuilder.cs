@@ -36,22 +36,22 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.Indicators.Typin
         /// <summary>
         /// Send a typing indicator to notify the recipient that you are composing a message. Currently supported for whatsapp channel only. For WhatsApp, `messageId` is required.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v2_CreateTypingIndicator_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV2CreateTypingIndicator200"/></returns>
         /// <param name="body">- Payload for typing indicator request</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v2_CreateTypingIndicator_200?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v2_whatsapp_typing_indicator body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV2CreateTypingIndicator200?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2WhatsappTypingIndicator body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v2_CreateTypingIndicator_200> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v2_whatsapp_typing_indicator body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV2CreateTypingIndicator200> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2WhatsappTypingIndicator body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v2_CreateTypingIndicator_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v2_CreateTypingIndicator_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV2CreateTypingIndicator200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV2CreateTypingIndicator200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Send a typing indicator to notify the recipient that you are composing a message. Currently supported for whatsapp channel only. For WhatsApp, `messageId` is required.
@@ -61,11 +61,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.Indicators.Typin
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v2_whatsapp_typing_indicator body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2WhatsappTypingIndicator body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v2_whatsapp_typing_indicator body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2WhatsappTypingIndicator body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -55,40 +55,40 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Order
         /// <summary>
         /// Retrieve a list of HostedNumberOrders belonging to the account initiating the request.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_ListHostedNumberOrder_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2ListHostedNumberOrder200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_ListHostedNumberOrder_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Orders.OrdersRequestBuilder.OrdersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2ListHostedNumberOrder200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Orders.OrdersRequestBuilder.OrdersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_ListHostedNumberOrder_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Orders.OrdersRequestBuilder.OrdersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2ListHostedNumberOrder200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Orders.OrdersRequestBuilder.OrdersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_ListHostedNumberOrder_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_ListHostedNumberOrder_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2ListHostedNumberOrder200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2ListHostedNumberOrder200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Host a phone number&apos;s capability on Twilio&apos;s platform.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v2_hosted_number_order"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2HostedNumberOrder"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v2_hosted_number_order?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_CreateHostedNumberOrder body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2HostedNumberOrder?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateHostedNumberOrder body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v2_hosted_number_order> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_CreateHostedNumberOrder body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2HostedNumberOrder> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateHostedNumberOrder body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v2_hosted_number_order>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v2_hosted_number_order.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2HostedNumberOrder>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2HostedNumberOrder.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of HostedNumberOrders belonging to the account initiating the request.
@@ -117,11 +117,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Order
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_CreateHostedNumberOrder body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateHostedNumberOrder body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_CreateHostedNumberOrder body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateHostedNumberOrder body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -185,7 +185,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Order
             /// <summary>Whether the SMS capability will be hosted on our platform. Can be `true` of `false`.</summary>
             public bool? SmsCapability { get; set; }
             /// <summary>The Status of this HostedNumberOrder. One of `received`, `pending-verification`, `verified`, `pending-loa`, `carrier-processing`, `testing`, `completed`, `failed`, or `action-required`.</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_hosted_number_order_enum_status? Status { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumStatus? Status { get; set; }
         }
     }
 }

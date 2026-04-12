@@ -49,40 +49,40 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.IpAcc
         /// <summary>
         /// List all IP Access Control Lists for a Trunk
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trunking_v1_ListIpAccessControlList_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1ListIpAccessControlList200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trunking_v1_ListIpAccessControlList_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.IpAccessControlLists.IpAccessControlListsRequestBuilder.IpAccessControlListsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1ListIpAccessControlList200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.IpAccessControlLists.IpAccessControlListsRequestBuilder.IpAccessControlListsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trunking_v1_ListIpAccessControlList_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.IpAccessControlLists.IpAccessControlListsRequestBuilder.IpAccessControlListsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1ListIpAccessControlList200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.IpAccessControlLists.IpAccessControlListsRequestBuilder.IpAccessControlListsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trunking_v1_ListIpAccessControlList_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trunking_v1_ListIpAccessControlList_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1ListIpAccessControlList200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1ListIpAccessControlList200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Associate an IP Access Control List with a Trunk
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Trunking_v1_trunk_ip_access_control_list"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkIpAccessControlList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Trunking_v1_trunk_ip_access_control_list?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trunking_v1_CreateIpAccessControlList body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkIpAccessControlList?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreateIpAccessControlList body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Trunking_v1_trunk_ip_access_control_list> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trunking_v1_CreateIpAccessControlList body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkIpAccessControlList> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreateIpAccessControlList body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Trunking_v1_trunk_ip_access_control_list>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Trunking_v1_trunk_ip_access_control_list.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkIpAccessControlList>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkIpAccessControlList.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List all IP Access Control Lists for a Trunk
@@ -111,11 +111,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.IpAcc
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trunking_v1_CreateIpAccessControlList body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreateIpAccessControlList body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_trunking_v1_CreateIpAccessControlList body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreateIpAccessControlList body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

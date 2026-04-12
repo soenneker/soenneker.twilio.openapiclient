@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Business information associated with the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequest_business_information? BusinessInformation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestBusinessInformation? BusinessInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequest_business_information BusinessInformation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestBusinessInformation BusinessInformation { get; set; }
 #endif
         /// <summary>The friendly name for the short code application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The setup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequest_setup? Setup { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestSetup? Setup { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequest_setup Setup { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestSetup Setup { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequest"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "business_information", n => { BusinessInformation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequest_business_information>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequest_business_information.CreateFromDiscriminatorValue); } },
+                { "business_information", n => { BusinessInformation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestBusinessInformation>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestBusinessInformation.CreateFromDiscriminatorValue); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "iso_country", n => { IsoCountry = n.GetStringValue(); } },
-                { "setup", n => { Setup = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequest_setup>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequest_setup.CreateFromDiscriminatorValue); } },
+                { "setup", n => { Setup = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestSetup>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestSetup.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,10 +84,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequest_business_information>("business_information", BusinessInformation);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestBusinessInformation>("business_information", BusinessInformation);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("iso_country", IsoCountry);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequest_setup>("setup", Setup);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestSetup>("setup", Setup);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

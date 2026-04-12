@@ -49,40 +49,40 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.ESimProfiles
         /// <summary>
         /// Retrieve a list of eSIM Profiles.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_ListEsimProfile_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListEsimProfile200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_ListEsimProfile_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.ESimProfiles.ESimProfilesRequestBuilder.ESimProfilesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListEsimProfile200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.ESimProfiles.ESimProfilesRequestBuilder.ESimProfilesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_ListEsimProfile_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.ESimProfiles.ESimProfilesRequestBuilder.ESimProfilesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListEsimProfile200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.ESimProfiles.ESimProfilesRequestBuilder.ESimProfilesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_ListEsimProfile_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_ListEsimProfile_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListEsimProfile200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListEsimProfile200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Order an eSIM Profile.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Supersim_v1_esim_profile"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1EsimProfile"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Supersim_v1_esim_profile?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_CreateEsimProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1EsimProfile?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateEsimProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Supersim_v1_esim_profile> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_CreateEsimProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1EsimProfile> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateEsimProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Supersim_v1_esim_profile>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Supersim_v1_esim_profile.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1EsimProfile>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1EsimProfile.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of eSIM Profiles.
@@ -111,11 +111,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.ESimProfiles
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_CreateEsimProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateEsimProfile body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_supersim_v1_CreateEsimProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateEsimProfile body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -169,7 +169,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.ESimProfiles
             public string SimSid { get; set; }
 #endif
             /// <summary>List the eSIM Profiles that are in a given status.</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Esim_profile_enum_status? Status { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.EsimProfileEnumStatus? Status { get; set; }
         }
     }
 }

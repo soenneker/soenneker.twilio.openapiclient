@@ -36,33 +36,33 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
         /// <summary>
         /// Creates a new embedded Persona inquiry session for an existing registration in DRAFT or TWILIO_REJECTED status. Use this to resume an incomplete registration or resubmit a rejected one.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_create_embedded_session_response"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v1_CreateSenderIdRegistrationEmbeddedSession_400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v1_CreateSenderIdRegistrationEmbeddedSession_404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v1_CreateSenderIdRegistrationEmbeddedSession_409">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v1_CreateSenderIdRegistrationEmbeddedSession_500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession409">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_create_embedded_session_response?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_create_embedded_session_request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionResponse?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_create_embedded_session_response> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_create_embedded_session_request body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionResponse> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v1_CreateSenderIdRegistrationEmbeddedSession_400.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v1_CreateSenderIdRegistrationEmbeddedSession_404.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v1_CreateSenderIdRegistrationEmbeddedSession_409.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v1_CreateSenderIdRegistrationEmbeddedSession_500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession400.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession404.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession409.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_create_embedded_session_response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_create_embedded_session_response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a new embedded Persona inquiry session for an existing registration in DRAFT or TWILIO_REJECTED status. Use this to resume an incomplete registration or resubmit a rejected one.
@@ -72,11 +72,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_create_embedded_session_request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v1_create_embedded_session_request body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

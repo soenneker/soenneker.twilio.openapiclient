@@ -43,26 +43,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Business information associated with the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_business_information? BusinessInformation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseBusinessInformation? BusinessInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_business_information BusinessInformation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseBusinessInformation BusinessInformation { get; set; }
 #endif
         /// <summary>Compliance keywords for the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_compliance_keywords? ComplianceKeywords { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseComplianceKeywords? ComplianceKeywords { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_compliance_keywords ComplianceKeywords { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseComplianceKeywords ComplianceKeywords { get; set; }
 #endif
         /// <summary>Content examples for the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_content_examples? ContentExamples { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseContentExamples? ContentExamples { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_content_examples ContentExamples { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseContentExamples ContentExamples { get; set; }
 #endif
         /// <summary>The identity of the user who created the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,10 +111,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Setup configuration for the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_setup? Setup { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup? Setup { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_setup Setup { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup Setup { get; set; }
 #endif
         /// <summary>The unique identifier of the Short Code Application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,10 +127,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>SMS campaign details for the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_sms_campaign_details? SmsCampaignDetails { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSmsCampaignDetails? SmsCampaignDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_sms_campaign_details SmsCampaignDetails { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSmsCampaignDetails SmsCampaignDetails { get; set; }
 #endif
         /// <summary>The state of the application.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_state? State { get; set; }
@@ -145,10 +145,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>User sign-up configuration for the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_user_sign_up? UserSignUp { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp? UserSignUp { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_user_sign_up UserSignUp { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp UserSignUp { get; set; }
 #endif
         /// <summary>The Zendesk ticket ID associated with the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -187,9 +187,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "application_requirements_sid", n => { ApplicationRequirementsSid = n.GetStringValue(); } },
                 { "application_requirements_version", n => { ApplicationRequirementsVersion = n.GetIntValue(); } },
                 { "bundle_sid", n => { BundleSid = n.GetStringValue(); } },
-                { "business_information", n => { BusinessInformation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_business_information>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_business_information.CreateFromDiscriminatorValue); } },
-                { "compliance_keywords", n => { ComplianceKeywords = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_compliance_keywords>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_compliance_keywords.CreateFromDiscriminatorValue); } },
-                { "content_examples", n => { ContentExamples = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_content_examples>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_content_examples.CreateFromDiscriminatorValue); } },
+                { "business_information", n => { BusinessInformation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseBusinessInformation>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseBusinessInformation.CreateFromDiscriminatorValue); } },
+                { "compliance_keywords", n => { ComplianceKeywords = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseComplianceKeywords>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseComplianceKeywords.CreateFromDiscriminatorValue); } },
+                { "content_examples", n => { ContentExamples = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseContentExamples>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseContentExamples.CreateFromDiscriminatorValue); } },
                 { "created_by", n => { CreatedBy = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
@@ -197,12 +197,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "iso_country", n => { IsoCountry = n.GetStringValue(); } },
                 { "notification_emails", n => { NotificationEmails = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "reviewer", n => { Reviewer = n.GetStringValue(); } },
-                { "setup", n => { Setup = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_setup>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_setup.CreateFromDiscriminatorValue); } },
+                { "setup", n => { Setup = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "sms_campaign_details", n => { SmsCampaignDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_sms_campaign_details>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_sms_campaign_details.CreateFromDiscriminatorValue); } },
+                { "sms_campaign_details", n => { SmsCampaignDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSmsCampaignDetails>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSmsCampaignDetails.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_state>(); } },
                 { "updated_by", n => { UpdatedBy = n.GetStringValue(); } },
-                { "user_sign_up", n => { UserSignUp = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_user_sign_up>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_user_sign_up.CreateFromDiscriminatorValue); } },
+                { "user_sign_up", n => { UserSignUp = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp.CreateFromDiscriminatorValue); } },
                 { "zendesk_ticket_id", n => { ZendeskTicketId = n.GetStringValue(); } },
             };
         }
@@ -217,9 +217,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("application_requirements_sid", ApplicationRequirementsSid);
             writer.WriteIntValue("application_requirements_version", ApplicationRequirementsVersion);
             writer.WriteStringValue("bundle_sid", BundleSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_business_information>("business_information", BusinessInformation);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_compliance_keywords>("compliance_keywords", ComplianceKeywords);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_content_examples>("content_examples", ContentExamples);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseBusinessInformation>("business_information", BusinessInformation);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseComplianceKeywords>("compliance_keywords", ComplianceKeywords);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseContentExamples>("content_examples", ContentExamples);
             writer.WriteStringValue("created_by", CreatedBy);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
@@ -227,12 +227,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("iso_country", IsoCountry);
             writer.WriteCollectionOfPrimitiveValues<string>("notification_emails", NotificationEmails);
             writer.WriteStringValue("reviewer", Reviewer);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_setup>("setup", Setup);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup>("setup", Setup);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_sms_campaign_details>("sms_campaign_details", SmsCampaignDetails);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSmsCampaignDetails>("sms_campaign_details", SmsCampaignDetails);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_state>("state", State);
             writer.WriteStringValue("updated_by", UpdatedBy);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_user_sign_up>("user_sign_up", UserSignUp);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp>("user_sign_up", UserSignUp);
             writer.WriteStringValue("zendesk_ticket_id", ZendeskTicketId);
             writer.WriteAdditionalData(AdditionalData);
         }

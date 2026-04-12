@@ -49,40 +49,40 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge
         /// <summary>
         /// List all knowledge
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_knowledge_v1_ListKnowledge_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV1ListKnowledge200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_knowledge_v1_ListKnowledge_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.KnowledgeRequestBuilder.KnowledgeRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV1ListKnowledge200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.KnowledgeRequestBuilder.KnowledgeRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_knowledge_v1_ListKnowledge_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.KnowledgeRequestBuilder.KnowledgeRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV1ListKnowledge200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.KnowledgeRequestBuilder.KnowledgeRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_knowledge_v1_ListKnowledge_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_knowledge_v1_ListKnowledge_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV1ListKnowledge200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV1ListKnowledge200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create knowledge
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_v1_service_knowledge"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceKnowledge"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_v1_service_knowledge?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_v1_service_create_knowledge_request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceKnowledge?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreateKnowledgeRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_v1_service_knowledge> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_v1_service_create_knowledge_request body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceKnowledge> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreateKnowledgeRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_v1_service_knowledge>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_v1_service_knowledge.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceKnowledge>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceKnowledge.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List all knowledge
@@ -111,11 +111,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_v1_service_create_knowledge_request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreateKnowledgeRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_v1_service_create_knowledge_request body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreateKnowledgeRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

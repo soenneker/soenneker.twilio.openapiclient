@@ -36,20 +36,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.Marketplace.AvailableAdd
         /// <summary>
         /// Fetch an instance of an Extension for the Available Add-on.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Preview_marketplace_available_add_on_available_add_on_extension"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnAvailableAddOnExtension"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Preview_marketplace_available_add_on_available_add_on_extension?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnAvailableAddOnExtension?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Preview_marketplace_available_add_on_available_add_on_extension> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnAvailableAddOnExtension> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Preview_marketplace_available_add_on_available_add_on_extension>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Preview_marketplace_available_add_on_available_add_on_extension.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnAvailableAddOnExtension>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnAvailableAddOnExtension.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Fetch an instance of an Extension for the Available Add-on.

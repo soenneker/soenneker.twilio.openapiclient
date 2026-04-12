@@ -42,25 +42,25 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.RateLimits
         /// <summary>
         /// Retrieve the list of rate limits for all fields (if any)It returns also the twilio rate limits.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_lookups_v2_FetchLookupAccountRateLimits_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupAccountRateLimits200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_lookups_v2_FetchLookupAccountRateLimits_400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupAccountRateLimits400">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_lookups_v2_FetchLookupAccountRateLimits_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.RateLimits.RateLimitsRequestBuilder.RateLimitsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupAccountRateLimits200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.RateLimits.RateLimitsRequestBuilder.RateLimitsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_lookups_v2_FetchLookupAccountRateLimits_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.RateLimits.RateLimitsRequestBuilder.RateLimitsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupAccountRateLimits200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.RateLimits.RateLimitsRequestBuilder.RateLimitsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.Twilio_lookups_v2_FetchLookupAccountRateLimits_400.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupAccountRateLimits400.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_lookups_v2_FetchLookupAccountRateLimits_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_lookups_v2_FetchLookupAccountRateLimits_200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupAccountRateLimits200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupAccountRateLimits200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the list of rate limits for all fields (if any)It returns also the twilio rate limits.

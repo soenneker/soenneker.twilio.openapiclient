@@ -49,40 +49,40 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Autho
         /// <summary>
         /// Retrieve a list of AuthorizationDocuments belonging to the account initiating the request.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_ListAuthorizationDocument_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2ListAuthorizationDocument200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_ListAuthorizationDocument_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.AuthorizationDocuments.AuthorizationDocumentsRequestBuilder.AuthorizationDocumentsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2ListAuthorizationDocument200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.AuthorizationDocuments.AuthorizationDocumentsRequestBuilder.AuthorizationDocumentsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_ListAuthorizationDocument_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.AuthorizationDocuments.AuthorizationDocumentsRequestBuilder.AuthorizationDocumentsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2ListAuthorizationDocument200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.AuthorizationDocuments.AuthorizationDocumentsRequestBuilder.AuthorizationDocumentsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_ListAuthorizationDocument_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_ListAuthorizationDocument_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2ListAuthorizationDocument200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2ListAuthorizationDocument200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create an AuthorizationDocument for authorizing the hosting of phone number capabilities on Twilio&apos;s platform.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v2_authorization_document"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocument"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v2_authorization_document?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_CreateAuthorizationDocument body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocument?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateAuthorizationDocument body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v2_authorization_document> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_CreateAuthorizationDocument body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocument> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateAuthorizationDocument body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v2_authorization_document>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Numbers_v2_authorization_document.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocument>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocument.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of AuthorizationDocuments belonging to the account initiating the request.
@@ -111,11 +111,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Autho
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_CreateAuthorizationDocument body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateAuthorizationDocument body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_CreateAuthorizationDocument body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateAuthorizationDocument body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -161,7 +161,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Autho
             public string PageToken { get; set; }
 #endif
             /// <summary>&quot;Status of an instance resource. It can hold one of the values: 1. opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the section entitled [Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values) for more information on each of these statuses.&quot;</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Twilio_numbers_v2_authorization_document_enum_status? Status { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2AuthorizationDocumentEnumStatus? Status { get; set; }
         }
     }
 }

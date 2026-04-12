@@ -36,20 +36,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts.Summary
         /// <summary>
         /// Get a summary of how many attempts were made and how many were converted.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Verify_v2_verification_attempts_summary"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptsSummary"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Verify_v2_verification_attempts_summary?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts.Summary.SummaryRequestBuilder.SummaryRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptsSummary?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts.Summary.SummaryRequestBuilder.SummaryRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Verify_v2_verification_attempts_summary> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts.Summary.SummaryRequestBuilder.SummaryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptsSummary> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts.Summary.SummaryRequestBuilder.SummaryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Verify_v2_verification_attempts_summary>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Verify_v2_verification_attempts_summary.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptsSummary>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptsSummary.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a summary of how many attempts were made and how many were converted.
@@ -86,7 +86,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts.Summary
         public partial class SummaryRequestBuilderGetQueryParameters 
         {
             /// <summary>Filter Verification Attempts considered on the summary aggregation by communication channel.</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Verification_attempts_summary_enum_channels? Channel { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.VerificationAttemptsSummaryEnumChannels? Channel { get; set; }
             /// <summary>Filter used to consider only Verification Attempts sent to the specified destination country on the summary aggregation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

@@ -36,20 +36,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries
         /// <summary>
         /// Get a list of Call Summaries.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_insights_v1_ListCallSummaries_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1ListCallSummaries200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_insights_v1_ListCallSummaries_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries.SummariesRequestBuilder.SummariesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1ListCallSummaries200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries.SummariesRequestBuilder.SummariesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_insights_v1_ListCallSummaries_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries.SummariesRequestBuilder.SummariesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1ListCallSummaries200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries.SummariesRequestBuilder.SummariesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_insights_v1_ListCallSummaries_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_insights_v1_ListCallSummaries_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1ListCallSummaries200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1ListCallSummaries200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a list of Call Summaries.
@@ -88,7 +88,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries
             /// <summary>A boolean flag indicating an abnormal session where the last SIP response was not 200 OK.</summary>
             public bool? AbnormalSession { get; set; }
             /// <summary>An Answered By value for the calls based on `Answering Machine Detection (AMD)`. One of `unknown`, `machine_start`, `machine_end_beep`, `machine_end_silence`, `machine_end_other`, `human` or `fax`.</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Call_summaries_enum_answered_by? AnsweredBy { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumAnsweredBy? AnsweredBy { get; set; }
             /// <summary>Either machine or human.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -252,7 +252,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries
             public string PageToken { get; set; }
 #endif
             /// <summary>A Processing State of the Call Summaries. One of `completed`, `partial` or `all`.</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Call_summaries_enum_processing_state_request? ProcessingState { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumProcessingStateRequest? ProcessingState { get; set; }
             /// <summary>A subjective Quality Issue with the calls. One of `no_quality_issue`, `low_volume`, `choppy_robotic`, `echo`, `dtmf`, `latency`, `owa`, `static_noise`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -262,7 +262,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries
             public string QualityIssueAnnotation { get; set; }
 #endif
             /// <summary>A Sort By criterion for the returned list of Call Summaries. One of `start_time` or `end_time`.</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Call_summaries_enum_sort_by? SortBy { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumSortBy? SortBy { get; set; }
             /// <summary>A boolean flag indicating spam calls.</summary>
             public bool? SpamAnnotation { get; set; }
             /// <summary>A Start time of the calls. xm (x minutes), xh (x hours), xd (x days), 1w, 30m, 3d, 4w or datetime-ISO. Defaults to 4h.</summary>

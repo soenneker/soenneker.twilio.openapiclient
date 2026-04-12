@@ -46,37 +46,37 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistr
         public VettingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/a2p/BrandRegistrations/{BrandRegistrationS%2Did}/Vettings{?VettingProvider*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v1_ListBrandVetting_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1ListBrandVetting200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v1_ListBrandVetting_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistrations.Item.Vettings.VettingsRequestBuilder.VettingsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1ListBrandVetting200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistrations.Item.Vettings.VettingsRequestBuilder.VettingsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v1_ListBrandVetting_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistrations.Item.Vettings.VettingsRequestBuilder.VettingsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1ListBrandVetting200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistrations.Item.Vettings.VettingsRequestBuilder.VettingsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v1_ListBrandVetting_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v1_ListBrandVetting_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1ListBrandVetting200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1ListBrandVetting200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v1_brand_registrations_brand_vetting"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsBrandVetting"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v1_brand_registrations_brand_vetting?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v1_CreateBrandVetting body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsBrandVetting?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateBrandVetting body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v1_brand_registrations_brand_vetting> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v1_CreateBrandVetting body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsBrandVetting> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateBrandVetting body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v1_brand_registrations_brand_vetting>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Messaging_v1_brand_registrations_brand_vetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsBrandVetting>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsBrandVetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -99,11 +99,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistr
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v1_CreateBrandVetting body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateBrandVetting body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.Twilio_messaging_v1_CreateBrandVetting body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateBrandVetting body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -128,7 +128,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistr
         #pragma warning restore CS1591
         {
             /// <summary>The third-party provider of the vettings to read</summary>
-            public global::Soenneker.Twilio.OpenApiClient.Models.Brand_vetting_enum_vetting_provider? VettingProvider { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.BrandVettingEnumVettingProvider? VettingProvider { get; set; }
         }
     }
 }

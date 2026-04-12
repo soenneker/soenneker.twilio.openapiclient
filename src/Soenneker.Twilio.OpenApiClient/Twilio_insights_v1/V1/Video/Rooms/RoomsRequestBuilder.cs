@@ -49,20 +49,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms
         /// <summary>
         /// Get a list of Programmable Video Rooms.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Twilio_insights_v1_ListVideoRoomSummary_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1ListVideoRoomSummary200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_insights_v1_ListVideoRoomSummary_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.RoomsRequestBuilder.RoomsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1ListVideoRoomSummary200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.RoomsRequestBuilder.RoomsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_insights_v1_ListVideoRoomSummary_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.RoomsRequestBuilder.RoomsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1ListVideoRoomSummary200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.RoomsRequestBuilder.RoomsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Twilio_insights_v1_ListVideoRoomSummary_200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Twilio_insights_v1_ListVideoRoomSummary_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1ListVideoRoomSummary200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1ListVideoRoomSummary200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a list of Programmable Video Rooms.
@@ -101,10 +101,10 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms
             /// <summary>Codecs used by participants in the room. Can be `VP8`, `H264`, or `VP9`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Twilio.OpenApiClient.Models.Video_room_summary_enum_codec[]? Codec { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumCodec[]? Codec { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Twilio.OpenApiClient.Models.Video_room_summary_enum_codec[] Codec { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumCodec[] Codec { get; set; }
 #endif
             /// <summary>Only read rooms that started on or after this ISO 8601 timestamp.</summary>
             public DateTimeOffset? CreatedAfter { get; set; }
@@ -133,10 +133,10 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms
             /// <summary>Type of room. Can be `go`, `peer_to_peer`, `group`, or `group_small`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Twilio.OpenApiClient.Models.Video_room_summary_enum_room_type[]? RoomType { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomType[]? RoomType { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Twilio.OpenApiClient.Models.Video_room_summary_enum_room_type[] RoomType { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomType[] RoomType { get; set; }
 #endif
         }
     }

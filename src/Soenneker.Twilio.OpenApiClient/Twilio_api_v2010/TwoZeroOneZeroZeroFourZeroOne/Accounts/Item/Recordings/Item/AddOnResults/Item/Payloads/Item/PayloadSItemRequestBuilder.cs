@@ -59,20 +59,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// <summary>
         /// Fetch an instance of a result payload
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Api_v2010_account_recording_recording_add_on_result_recording_add_on_result_payload"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayload"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Api_v2010_account_recording_recording_add_on_result_recording_add_on_result_payload?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayload?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Api_v2010_account_recording_recording_add_on_result_recording_add_on_result_payload> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayload> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Api_v2010_account_recording_recording_add_on_result_recording_add_on_result_payload>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Api_v2010_account_recording_recording_add_on_result_recording_add_on_result_payload.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayload>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayload.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a payload from the result along with all associated Data
