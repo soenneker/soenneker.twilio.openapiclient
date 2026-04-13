@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Set of booleans describing the capabilities hosted on Twilio&apos;s platform. SMS is currently only supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersHostedNumberOrderCapabilities? Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersHostedNumberOrder_capabilities? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersHostedNumberOrderCapabilities Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersHostedNumberOrder_capabilities Capabilities { get; set; }
 #endif
         /// <summary>A list of emails that LOA document for this HostedNumberOrder will be carbon copied to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -190,7 +190,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "address_sid", n => { AddressSid = n.GetStringValue(); } },
                 { "call_delay", n => { CallDelay = n.GetIntValue(); } },
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersHostedNumberOrderCapabilities>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersHostedNumberOrderCapabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersHostedNumberOrder_capabilities>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersHostedNumberOrder_capabilities.CreateFromDiscriminatorValue); } },
                 { "cc_emails", n => { CcEmails = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
@@ -222,7 +222,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("address_sid", AddressSid);
             writer.WriteIntValue("call_delay", CallDelay);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersHostedNumberOrderCapabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersHostedNumberOrder_capabilities>("capabilities", Capabilities);
             writer.WriteCollectionOfPrimitiveValues<string>("cc_emails", CcEmails);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);

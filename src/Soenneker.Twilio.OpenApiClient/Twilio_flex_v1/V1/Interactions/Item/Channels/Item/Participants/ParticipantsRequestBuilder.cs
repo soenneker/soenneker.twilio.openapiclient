@@ -49,20 +49,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
         /// <summary>
         /// List all Participants for a Channel.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1ListInteractionChannelParticipant200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListInteractionChannelParticipantResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1ListInteractionChannelParticipant200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.Participants.ParticipantsRequestBuilder.ParticipantsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListInteractionChannelParticipantResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.Participants.ParticipantsRequestBuilder.ParticipantsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1ListInteractionChannelParticipant200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.Participants.ParticipantsRequestBuilder.ParticipantsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListInteractionChannelParticipantResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.Participants.ParticipantsRequestBuilder.ParticipantsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1ListInteractionChannelParticipant200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1ListInteractionChannelParticipant200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListInteractionChannelParticipantResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListInteractionChannelParticipantResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Add a Participant to a Channel.

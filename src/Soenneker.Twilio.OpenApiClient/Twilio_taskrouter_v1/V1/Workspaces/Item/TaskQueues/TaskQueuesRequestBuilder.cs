@@ -58,20 +58,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
         public TaskQueuesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{S%2Did}/TaskQueues{?EvaluateWorkerAttributes*,FriendlyName*,Ordering*,Page*,PageSize*,PageToken*,WorkerSid*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1ListTaskQueue200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListTaskQueueResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1ListTaskQueue200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues.TaskQueuesRequestBuilder.TaskQueuesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListTaskQueueResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues.TaskQueuesRequestBuilder.TaskQueuesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1ListTaskQueue200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues.TaskQueuesRequestBuilder.TaskQueuesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListTaskQueueResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues.TaskQueuesRequestBuilder.TaskQueuesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1ListTaskQueue200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1ListTaskQueue200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListTaskQueueResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListTaskQueueResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueue"/></returns>
         /// <param name="body">The request body</param>

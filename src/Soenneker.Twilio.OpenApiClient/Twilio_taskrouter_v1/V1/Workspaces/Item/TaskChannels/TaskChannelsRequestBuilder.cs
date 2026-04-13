@@ -46,20 +46,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
         public TaskChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{S%2Did}/TaskChannels{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1ListTaskChannel200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListTaskChannelResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1ListTaskChannel200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskChannels.TaskChannelsRequestBuilder.TaskChannelsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListTaskChannelResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskChannels.TaskChannelsRequestBuilder.TaskChannelsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1ListTaskChannel200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskChannels.TaskChannelsRequestBuilder.TaskChannelsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListTaskChannelResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskChannels.TaskChannelsRequestBuilder.TaskChannelsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1ListTaskChannel200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1ListTaskChannel200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListTaskChannelResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListTaskChannelResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskChannel"/></returns>
         /// <param name="body">The request body</param>

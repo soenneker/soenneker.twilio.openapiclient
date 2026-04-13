@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are  `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberMobileCapabilities? Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberMobile_capabilities? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberMobileCapabilities Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberMobile_capabilities Capabilities { get; set; }
 #endif
         /// <summary>The date and time in GMT that the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -251,7 +251,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "api_version", n => { ApiVersion = n.GetStringValue(); } },
                 { "beta", n => { Beta = n.GetBoolValue(); } },
                 { "bundle_sid", n => { BundleSid = n.GetStringValue(); } },
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberMobileCapabilities>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberMobileCapabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberMobile_capabilities>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberMobile_capabilities.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetStringValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetStringValue(); } },
                 { "emergency_address_sid", n => { EmergencyAddressSid = n.GetStringValue(); } },
@@ -294,7 +294,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("api_version", ApiVersion);
             writer.WriteBoolValue("beta", Beta);
             writer.WriteStringValue("bundle_sid", BundleSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberMobileCapabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberMobile_capabilities>("capabilities", Capabilities);
             writer.WriteStringValue("date_created", DateCreated);
             writer.WriteStringValue("date_updated", DateUpdated);
             writer.WriteStringValue("emergency_address_sid", EmergencyAddressSid);

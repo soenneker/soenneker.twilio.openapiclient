@@ -36,20 +36,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.DialingPermissions.C
         /// <summary>
         /// Fetch the high-risk special services prefixes from the country resource corresponding to the [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1ListDialingPermissionsHrsPrefixes200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsHrsPrefixesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1ListDialingPermissionsHrsPrefixes200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.DialingPermissions.Countries.Item.HighRiskSpecialPrefixes.HighRiskSpecialPrefixesRequestBuilder.HighRiskSpecialPrefixesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsHrsPrefixesResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.DialingPermissions.Countries.Item.HighRiskSpecialPrefixes.HighRiskSpecialPrefixesRequestBuilder.HighRiskSpecialPrefixesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1ListDialingPermissionsHrsPrefixes200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.DialingPermissions.Countries.Item.HighRiskSpecialPrefixes.HighRiskSpecialPrefixesRequestBuilder.HighRiskSpecialPrefixesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsHrsPrefixesResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.DialingPermissions.Countries.Item.HighRiskSpecialPrefixes.HighRiskSpecialPrefixesRequestBuilder.HighRiskSpecialPrefixesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1ListDialingPermissionsHrsPrefixes200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1ListDialingPermissionsHrsPrefixes200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsHrsPrefixesResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsHrsPrefixesResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Fetch the high-risk special services prefixes from the country resource corresponding to the [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)

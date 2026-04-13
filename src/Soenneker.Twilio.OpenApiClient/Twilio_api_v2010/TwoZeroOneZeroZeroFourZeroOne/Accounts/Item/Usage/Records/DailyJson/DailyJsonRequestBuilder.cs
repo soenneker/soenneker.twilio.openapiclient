@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Twilio.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -33,20 +32,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         public DailyJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{AccountS%2Did}/Usage/Records/Daily.json{?Category*,EndDate*,IncludeSubaccounts*,Page*,PageSize*,PageToken*,StartDate*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010ListUsageRecordDaily200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.Usage.Records.DailyJson.DailyGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010ListUsageRecordDaily200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.Usage.Records.DailyJson.DailyJsonRequestBuilder.DailyJsonRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.Usage.Records.DailyJson.DailyGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.Usage.Records.DailyJson.DailyJsonRequestBuilder.DailyJsonRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010ListUsageRecordDaily200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.Usage.Records.DailyJson.DailyJsonRequestBuilder.DailyJsonRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.Usage.Records.DailyJson.DailyGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.Usage.Records.DailyJson.DailyJsonRequestBuilder.DailyJsonRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010ListUsageRecordDaily200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010ListUsageRecordDaily200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.Usage.Records.DailyJson.DailyGetResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.Usage.Records.DailyJson.DailyGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

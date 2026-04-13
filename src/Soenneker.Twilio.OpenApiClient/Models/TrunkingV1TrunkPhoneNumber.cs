@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are  `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberCapabilities? Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumber_capabilities? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberCapabilities Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumber_capabilities Capabilities { get; set; }
 #endif
         /// <summary>The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -191,7 +191,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "address_requirements", n => { AddressRequirements = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PhoneNumberEnumAddressRequirement>(); } },
                 { "api_version", n => { ApiVersion = n.GetStringValue(); } },
                 { "beta", n => { Beta = n.GetBoolValue(); } },
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberCapabilities>(global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberCapabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumber_capabilities>(global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumber_capabilities.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
@@ -226,7 +226,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PhoneNumberEnumAddressRequirement>("address_requirements", AddressRequirements);
             writer.WriteStringValue("api_version", ApiVersion);
             writer.WriteBoolValue("beta", Beta);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberCapabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumber_capabilities>("capabilities", Capabilities);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);

@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms
         /// <summary>
         /// Fetch list of Alarms
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2ListAlarms200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListAlarms"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse">When receiving a 400 status code</exception>
@@ -57,11 +57,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2ListAlarms200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.AlarmsRequestBuilder.AlarmsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListAlarms?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.AlarmsRequestBuilder.AlarmsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2ListAlarms200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.AlarmsRequestBuilder.AlarmsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListAlarms> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.AlarmsRequestBuilder.AlarmsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms
                 { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2ListAlarms200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2ListAlarms200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListAlarms>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListAlarms.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create an alarm

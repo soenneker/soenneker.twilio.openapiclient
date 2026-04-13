@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The policy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppUpdateRequestPolicy? Policy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppUpdateRequest_policy? Policy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppUpdateRequestPolicy Policy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppUpdateRequest_policy Policy { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,7 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "access_token_ttl", n => { AccessTokenTtl = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "policy", n => { Policy = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppUpdateRequestPolicy>(global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppUpdateRequestPolicy.CreateFromDiscriminatorValue); } },
+                { "policy", n => { Policy = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppUpdateRequest_policy>(global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppUpdateRequest_policy.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -90,7 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("access_token_ttl", AccessTokenTtl);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppUpdateRequestPolicy>("policy", Policy);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppUpdateRequest_policy>("policy", Policy);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -49,20 +49,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
         /// <summary>
         /// Retrieve a list of Network Access Profile resource&apos;s Network resource.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListNetworkAccessProfileNetwork200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileNetworkResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListNetworkAccessProfileNetwork200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProfiles.Item.Networks.NetworksRequestBuilder.NetworksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileNetworkResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProfiles.Item.Networks.NetworksRequestBuilder.NetworksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListNetworkAccessProfileNetwork200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProfiles.Item.Networks.NetworksRequestBuilder.NetworksRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileNetworkResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProfiles.Item.Networks.NetworksRequestBuilder.NetworksRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListNetworkAccessProfileNetwork200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1ListNetworkAccessProfileNetwork200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileNetworkResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileNetworkResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Add a Network resource to the Network Access Profile resource.

@@ -49,20 +49,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Ite
         /// <summary>
         /// Retrieve a list of all delivery and read receipts of the conversation message
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1ListServiceConversationMessageReceipt200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationMessageReceiptResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1ListServiceConversationMessageReceipt200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Item.Conversations.Item.Messages.Item.Receipts.ReceiptsRequestBuilder.ReceiptsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationMessageReceiptResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Item.Conversations.Item.Messages.Item.Receipts.ReceiptsRequestBuilder.ReceiptsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1ListServiceConversationMessageReceipt200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Item.Conversations.Item.Messages.Item.Receipts.ReceiptsRequestBuilder.ReceiptsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationMessageReceiptResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Item.Conversations.Item.Messages.Item.Receipts.ReceiptsRequestBuilder.ReceiptsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1ListServiceConversationMessageReceipt200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1ListServiceConversationMessageReceipt200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationMessageReceiptResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationMessageReceiptResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of all delivery and read receipts of the conversation message

@@ -49,20 +49,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Messa
         /// <summary>
         /// Retrieve a list of all Messaging Configurations for a Service.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2ListMessagingConfiguration200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListMessagingConfigurationResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2ListMessagingConfiguration200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.MessagingConfigurations.MessagingConfigurationsRequestBuilder.MessagingConfigurationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListMessagingConfigurationResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.MessagingConfigurations.MessagingConfigurationsRequestBuilder.MessagingConfigurationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2ListMessagingConfiguration200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.MessagingConfigurations.MessagingConfigurationsRequestBuilder.MessagingConfigurationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListMessagingConfigurationResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.MessagingConfigurations.MessagingConfigurationsRequestBuilder.MessagingConfigurationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2ListMessagingConfiguration200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2ListMessagingConfiguration200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListMessagingConfigurationResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListMessagingConfigurationResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new MessagingConfiguration for a service.

@@ -27,10 +27,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFreeCapabilities? Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFree_capabilities? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFreeCapabilities Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFree_capabilities Capabilities { get; set; }
 #endif
         /// <summary>A formatted version of the phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,7 +127,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "address_requirements", n => { AddressRequirements = n.GetStringValue(); } },
                 { "beta", n => { Beta = n.GetBoolValue(); } },
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFreeCapabilities>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFreeCapabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFree_capabilities>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFree_capabilities.CreateFromDiscriminatorValue); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "iso_country", n => { IsoCountry = n.GetStringValue(); } },
                 { "lata", n => { Lata = n.GetStringValue(); } },
@@ -149,7 +149,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("address_requirements", AddressRequirements);
             writer.WriteBoolValue("beta", Beta);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFreeCapabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFree_capabilities>("capabilities", Capabilities);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("iso_country", IsoCountry);
             writer.WriteStringValue("lata", Lata);

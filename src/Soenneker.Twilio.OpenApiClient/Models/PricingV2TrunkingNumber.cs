@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The [OriginatingCallPrice](https://www.twilio.com/docs/voice/pricing#inbound-call-price) record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumberOriginatingCallPrice? OriginatingCallPrice { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumber_originating_call_price? OriginatingCallPrice { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumberOriginatingCallPrice OriginatingCallPrice { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumber_originating_call_price OriginatingCallPrice { get; set; }
 #endif
         /// <summary>The origination phone number in [[E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,7 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "destination_number", n => { DestinationNumber = n.GetStringValue(); } },
                 { "iso_country", n => { IsoCountry = n.GetStringValue(); } },
-                { "originating_call_price", n => { OriginatingCallPrice = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumberOriginatingCallPrice>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumberOriginatingCallPrice.CreateFromDiscriminatorValue); } },
+                { "originating_call_price", n => { OriginatingCallPrice = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumber_originating_call_price>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumber_originating_call_price.CreateFromDiscriminatorValue); } },
                 { "origination_number", n => { OriginationNumber = n.GetStringValue(); } },
                 { "price_unit", n => { PriceUnit = n.GetStringValue(); } },
                 { "terminating_prefix_prices", n => { TerminatingPrefixPrices = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumber_terminating_prefix_prices>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumber_terminating_prefix_prices.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -123,7 +123,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("destination_number", DestinationNumber);
             writer.WriteStringValue("iso_country", IsoCountry);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumberOriginatingCallPrice>("originating_call_price", OriginatingCallPrice);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumber_originating_call_price>("originating_call_price", OriginatingCallPrice);
             writer.WriteStringValue("origination_number", OriginationNumber);
             writer.WriteStringValue("price_unit", PriceUnit);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingNumber_terminating_prefix_prices>("terminating_prefix_prices", TerminatingPrefixPrices);

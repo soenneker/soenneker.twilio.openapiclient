@@ -119,7 +119,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string VerificationDocumentSid { get; set; }
 #endif
         /// <summary>The verificationType property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType_2? VerificationType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType? VerificationType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequest"/> and sets the default values.
         /// </summary>
@@ -161,7 +161,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "statusCallbackUrl", n => { StatusCallbackUrl = n.GetStringValue(); } },
                 { "uniqueName", n => { UniqueName = n.GetStringValue(); } },
                 { "verificationDocumentSid", n => { VerificationDocumentSid = n.GetStringValue(); } },
-                { "verificationType", n => { VerificationType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType_2>(); } },
+                { "verificationType", n => { VerificationType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType>(); } },
             };
         }
         /// <summary>
@@ -187,7 +187,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("statusCallbackUrl", StatusCallbackUrl);
             writer.WriteStringValue("uniqueName", UniqueName);
             writer.WriteStringValue("verificationDocumentSid", VerificationDocumentSid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType_2>("verificationType", VerificationType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType>("verificationType", VerificationType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -33,20 +33,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.J
         public JobsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{ResourceType}/Jobs{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioBulkexportsV1ListExportCustomJob200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListExportCustomJobResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioBulkexportsV1ListExportCustomJob200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.Jobs.JobsRequestBuilder.JobsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListExportCustomJobResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.Jobs.JobsRequestBuilder.JobsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioBulkexportsV1ListExportCustomJob200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.Jobs.JobsRequestBuilder.JobsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListExportCustomJobResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.Jobs.JobsRequestBuilder.JobsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioBulkexportsV1ListExportCustomJob200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioBulkexportsV1ListExportCustomJob200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListExportCustomJobResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListExportCustomJobResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportExportCustomJob"/></returns>
         /// <param name="body">The request body</param>

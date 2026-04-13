@@ -36,20 +36,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v2.V2.Voice.Reports.Pho
         /// <summary>
         /// Get Inbound Phone Numbers Level Reports for the given Report Id.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV2ListInboundPhoneNumbersReport200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListInboundPhoneNumbersReports"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV2ListInboundPhoneNumbersReport200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v2.V2.Voice.Reports.PhoneNumbers.Inbound.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListInboundPhoneNumbersReports?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v2.V2.Voice.Reports.PhoneNumbers.Inbound.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV2ListInboundPhoneNumbersReport200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v2.V2.Voice.Reports.PhoneNumbers.Inbound.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListInboundPhoneNumbersReports> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v2.V2.Voice.Reports.PhoneNumbers.Inbound.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV2ListInboundPhoneNumbersReport200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV2ListInboundPhoneNumbersReport200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListInboundPhoneNumbersReports>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListInboundPhoneNumbersReports.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get Inbound Phone Numbers Level Reports for the given Report Id.

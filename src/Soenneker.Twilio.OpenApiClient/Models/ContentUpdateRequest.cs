@@ -34,10 +34,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Content types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.Types_1? Types { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.Types? Types { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.Types_1 Types { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.Types Types { get; set; }
 #endif
         /// <summary>Key value pairs of variable name to value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,7 +74,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
-                { "types", n => { Types = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.Types_1>(global::Soenneker.Twilio.OpenApiClient.Models.Types_1.CreateFromDiscriminatorValue); } },
+                { "types", n => { Types = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.Types>(global::Soenneker.Twilio.OpenApiClient.Models.Types.CreateFromDiscriminatorValue); } },
                 { "variables", n => { Variables = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentUpdateRequest_variables>(global::Soenneker.Twilio.OpenApiClient.Models.ContentUpdateRequest_variables.CreateFromDiscriminatorValue); } },
             };
         }
@@ -87,7 +87,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("language", Language);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.Types_1>("types", Types);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.Types>("types", Types);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentUpdateRequest_variables>("variables", Variables);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -33,20 +33,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         public TollFreeJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{AccountS%2Did}/IncomingPhoneNumbers/TollFree.json{?Beta*,FriendlyName*,Origin*,Page*,PageSize*,PageToken*,PhoneNumber*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010ListIncomingPhoneNumberTollFree200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.TollFreeJson.TollFreeGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010ListIncomingPhoneNumberTollFree200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.TollFreeJson.TollFreeJsonRequestBuilder.TollFreeJsonRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.TollFreeJson.TollFreeGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.TollFreeJson.TollFreeJsonRequestBuilder.TollFreeJsonRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010ListIncomingPhoneNumberTollFree200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.TollFreeJson.TollFreeJsonRequestBuilder.TollFreeJsonRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.TollFreeJson.TollFreeGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.TollFreeJson.TollFreeJsonRequestBuilder.TollFreeJsonRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010ListIncomingPhoneNumberTollFree200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010ListIncomingPhoneNumberTollFree200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.TollFreeJson.TollFreeGetResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.TollFreeJson.TollFreeGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberTollFree"/></returns>
         /// <param name="body">The request body</param>
