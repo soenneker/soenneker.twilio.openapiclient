@@ -7,7 +7,6 @@ using Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Channels;
 using Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Configuration;
 using Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.FlexFlows;
 using Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Insights;
-using Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Instances;
 using Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions;
 using Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService;
 using Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.WebChannels;
@@ -47,11 +46,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1
         public global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Insights.InsightsRequestBuilder Insights
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Insights.InsightsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The Instances property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Instances.InstancesRequestBuilder Instances
-        {
-            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Instances.InstancesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The Interactions property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.InteractionsRequestBuilder Interactions

@@ -14,6 +14,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The ID of the RealTimeTranscription Configuration for configuring all the non-default behaviors in one go.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ConfigurationId { get; set; }
+#nullable restore
+#else
+        public string ConfigurationId { get; set; }
+#endif
         /// <summary>The ID of the Conversations Configuration for customizing conversation behavior in Intelligence Service</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -139,6 +147,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "ConfigurationId", n => { ConfigurationId = n.GetStringValue(); } },
                 { "ConversationConfiguration", n => { ConversationConfiguration = n.GetStringValue(); } },
                 { "ConversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "EnableAutomaticPunctuation", n => { EnableAutomaticPunctuation = n.GetBoolValue(); } },
@@ -165,6 +174,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("ConfigurationId", ConfigurationId);
             writer.WriteStringValue("ConversationConfiguration", ConversationConfiguration);
             writer.WriteStringValue("ConversationId", ConversationId);
             writer.WriteBoolValue("EnableAutomaticPunctuation", EnableAutomaticPunctuation);

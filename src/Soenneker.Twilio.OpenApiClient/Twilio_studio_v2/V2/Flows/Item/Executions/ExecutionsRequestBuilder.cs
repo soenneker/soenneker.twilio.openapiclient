@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executio
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExecutionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{FlowS%2Did}/Executions{?DateCreatedFrom*,DateCreatedTo*,Page*,PageSize*,PageToken*}", pathParameters)
+        public ExecutionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{FlowS%2Did}/Executions{?DateCreatedFrom*,DateCreatedTo*,Page*,PageSize*,PageToken*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executio
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExecutionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{FlowS%2Did}/Executions{?DateCreatedFrom*,DateCreatedTo*,Page*,PageSize*,PageToken*}", rawUrl)
+        public ExecutionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{FlowS%2Did}/Executions{?DateCreatedFrom*,DateCreatedTo*,Page*,PageSize*,PageToken*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -156,6 +156,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executio
 #else
             public string PageToken { get; set; }
 #endif
+            /// <summary>&quot;Only show Execution resources with the given status. Can be: `active` or `ended`.&quot;</summary>
+            [QueryParameter("status")]
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2ExecutionEnumStatus? Status { get; set; }
         }
     }
 }

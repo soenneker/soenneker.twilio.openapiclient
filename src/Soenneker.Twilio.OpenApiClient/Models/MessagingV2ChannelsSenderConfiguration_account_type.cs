@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>The account type for ISV Account Type Migration. Set to &apos;ISV&apos; or &apos;ISVSubAccount&apos; to configure, null or empty string to clear, or omit to preserve the existing value.</summary>
+    /// <summary>The account type for ISV Account Type Migration. Set to &apos;ISV&apos; or &apos;ISVSubAccount&apos; to configure, empty string to clear, or omit to preserve the existing value.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum MessagingV2ChannelsSenderConfiguration_account_type
     {

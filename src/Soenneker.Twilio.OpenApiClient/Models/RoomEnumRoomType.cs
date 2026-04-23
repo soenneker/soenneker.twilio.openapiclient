@@ -3,11 +3,14 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
+    /// <summary>Type of room. Use `group` for new implementations. `go`, `peer-to-peer`, and `group-small` are deprecated.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum RoomEnumRoomType
-    #pragma warning restore CS1591
     {
+        [EnumMember(Value = "group")]
+        #pragma warning disable CS1591
+        Group,
+        #pragma warning restore CS1591
         [EnumMember(Value = "go")]
         #pragma warning disable CS1591
         Go,
@@ -15,10 +18,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         [EnumMember(Value = "peer-to-peer")]
         #pragma warning disable CS1591
         PeerToPeer,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "group")]
-        #pragma warning disable CS1591
-        Group,
         #pragma warning restore CS1591
         [EnumMember(Value = "group-small")]
         #pragma warning disable CS1591

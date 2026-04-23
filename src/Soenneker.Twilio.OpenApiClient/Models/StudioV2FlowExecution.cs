@@ -60,6 +60,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The Flow version number at the time of Execution creation.</summary>
         public int? FlowVersion { get; set; }
+        /// <summary>The SID or identifier that triggered this Execution. For example, a Call SID if triggered by an incoming call, a Message SID if triggered by an incoming message, a Request SID if triggered by a REST API request, and so on.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? InitiatedBy { get; set; }
+#nullable restore
+#else
+        public string InitiatedBy { get; set; }
+#endif
         /// <summary>The URLs of nested resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -119,6 +127,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "flow_sid", n => { FlowSid = n.GetStringValue(); } },
                 { "flow_version", n => { FlowVersion = n.GetIntValue(); } },
+                { "initiated_by", n => { InitiatedBy = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecution_links>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecution_links.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2ExecutionEnumStatus>(); } },
@@ -140,6 +149,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("flow_sid", FlowSid);
             writer.WriteIntValue("flow_version", FlowVersion);
+            writer.WriteStringValue("initiated_by", InitiatedBy);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecution_links>("links", Links);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2ExecutionEnumStatus>("status", Status);

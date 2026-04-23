@@ -13,7 +13,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MessagingV2ChannelsSenderConfiguration : IAdditionalDataHolder, IParsable
     {
-        /// <summary>The account type for ISV Account Type Migration. Set to &apos;ISV&apos; or &apos;ISVSubAccount&apos; to configure, null or empty string to clear, or omit to preserve the existing value.</summary>
+        /// <summary>The account type for ISV Account Type Migration. Set to &apos;ISV&apos; or &apos;ISVSubAccount&apos; to configure, empty string to clear, or omit to preserve the existing value.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration_account_type? AccountType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

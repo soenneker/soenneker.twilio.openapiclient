@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The HTTP method Twilio uses to call `status_callback`. Can be `POST` or `GET` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Room_status_callback_method? StatusCallbackMethod { get; set; }
-        /// <summary>The type property</summary>
+        /// <summary>Type of room. Use `group` for new implementations. `go`, `peer-to-peer`, and `group-small` are deprecated.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumRoomType? Type { get; set; }
         /// <summary>An application-defined string that uniquely identifies the resource. It can be used as a `room_sid` in place of the resource&apos;s `sid` in the URL to address the resource, assuming it does not contain any [reserved characters](https://tools.ietf.org/html/rfc3986#section-2.2) that would need to be URL encoded. This value is unique for `in-progress` rooms. SDK clients can use this name to connect to the room. REST API clients can use this name in place of the Room SID to interact with the room as long as the room is `in-progress`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -15,10 +15,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>End time of the report</summary>
-        public DateTimeOffset? EndTime { get; set; }
-        /// <summary>Start time of the report</summary>
-        public DateTimeOffset? StartTime { get; set; }
+        /// <summary>End date time of the report</summary>
+        public DateTimeOffset? EndDatetime { get; set; }
+        /// <summary>Start date time of the report</summary>
+        public DateTimeOffset? StartDatetime { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2CreateAccountReportRequestTimeRange"/> and sets the default values.
         /// </summary>
@@ -44,8 +44,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "end_time", n => { EndTime = n.GetDateTimeOffsetValue(); } },
-                { "start_time", n => { StartTime = n.GetDateTimeOffsetValue(); } },
+                { "end_datetime", n => { EndDatetime = n.GetDateTimeOffsetValue(); } },
+                { "start_datetime", n => { StartDatetime = n.GetDateTimeOffsetValue(); } },
             };
         }
         /// <summary>
@@ -55,8 +55,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteDateTimeOffsetValue("end_time", EndTime);
-            writer.WriteDateTimeOffsetValue("start_time", StartTime);
+            writer.WriteDateTimeOffsetValue("end_datetime", EndDatetime);
+            writer.WriteDateTimeOffsetValue("start_datetime", StartDatetime);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

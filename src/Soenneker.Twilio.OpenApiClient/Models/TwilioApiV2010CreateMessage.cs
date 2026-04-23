@@ -52,6 +52,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ContentVariables { get; set; }
 #endif
+        /// <summary>A fallback SMS sender to use when the recipient cannot be reached over RCS. This parameter may only be used when also providing a [Messaging Service](https://twilio.com/docs/messaging/services) containing an RCS sender. The fallback SMS sender must be either a Twilio phone number (in [E.164](https://en.wikipedia.org/wiki/E.164) format), [alphanumeric sender ID](https://www.twilio.com/docs/sms/quickstart), or [short code](https://www.twilio.com/en-us/messaging/channels/sms/short-codes), hosted within Twilio and belong to the Account creating the Message.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FallbackFrom { get; set; }
+#nullable restore
+#else
+        public string FallbackFrom { get; set; }
+#endif
         /// <summary>Reserved</summary>
         public bool? ForceDelivery { get; set; }
         /// <summary>The sender&apos;s Twilio phone number (in [E.164](https://en.wikipedia.org/wiki/E.164) format), [alphanumeric sender ID](https://www.twilio.com/docs/sms/quickstart), [Wireless SIM](https://www.twilio.com/docs/iot/wireless/programmable-wireless-send-machine-machine-sms-commands), [short code](https://www.twilio.com/en-us/messaging/channels/sms/short-codes), or [channel address](https://www.twilio.com/docs/messaging/channels) (e.g., `whatsapp:+15554449999`). The value of the `from` parameter must be a sender that is hosted within Twilio and belongs to the Account creating the Message. If you are using `messaging_service_sid`, this parameter can be empty (Twilio assigns a `from` value from the Messaging Service&apos;s Sender Pool) or you can provide a specific sender from your Sender Pool.</summary>
@@ -154,6 +162,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "ContentRetention", n => { ContentRetention = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumContentRetention>(); } },
                 { "ContentSid", n => { ContentSid = n.GetStringValue(); } },
                 { "ContentVariables", n => { ContentVariables = n.GetStringValue(); } },
+                { "FallbackFrom", n => { FallbackFrom = n.GetStringValue(); } },
                 { "ForceDelivery", n => { ForceDelivery = n.GetBoolValue(); } },
                 { "From", n => { From = n.GetStringValue(); } },
                 { "MaxPrice", n => { MaxPrice = n.GetDoubleValue(); } },
@@ -187,6 +196,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumContentRetention>("ContentRetention", ContentRetention);
             writer.WriteStringValue("ContentSid", ContentSid);
             writer.WriteStringValue("ContentVariables", ContentVariables);
+            writer.WriteStringValue("FallbackFrom", FallbackFrom);
             writer.WriteBoolValue("ForceDelivery", ForceDelivery);
             writer.WriteStringValue("From", From);
             writer.WriteDoubleValue("MaxPrice", MaxPrice);

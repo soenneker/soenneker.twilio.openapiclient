@@ -115,7 +115,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SendDigits { get; set; }
 #endif
-        /// <summary>A string containing a JSON map of key value pairs of tags to be recorded as metadata for the message. The object may contain up to 10 tags. Keys and values can each be up to 128 characters in length.</summary>
+        /// <summary>A string containing a JSON map of key value pairs of tags to be recorded as metadata for the message. The tags will also be included as part of the verification and message status event type payloads. The object may contain up to 10 tags. Keys and values can each be up to 128 characters in length. **This value should not contain PII.**</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Tags { get; set; }

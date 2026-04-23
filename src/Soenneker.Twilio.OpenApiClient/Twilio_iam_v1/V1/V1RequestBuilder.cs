@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Account;
 using Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Keys;
+using Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Roles;
 using Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Token;
 using System.Collections.Generic;
 using System.IO;
@@ -26,6 +27,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1
         public global::Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Keys.KeysRequestBuilder Keys
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Keys.KeysRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The Roles property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Roles.RolesRequestBuilder Roles
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Roles.RolesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The token property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Token.TokenRequestBuilder Token

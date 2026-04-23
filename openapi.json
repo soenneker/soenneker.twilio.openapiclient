@@ -2392,12 +2392,6 @@
                   "title": "ListAccountResponse",
                   "type": "object",
                   "properties": {
-                    "accounts": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -2427,6 +2421,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "accounts": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account"
+                      }
                     }
                   }
                 },
@@ -3463,12 +3463,6 @@
                   "title": "ListAddressResponse",
                   "type": "object",
                   "properties": {
-                    "addresses": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.address"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -3498,6 +3492,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "addresses": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.address"
+                      }
                     }
                   }
                 },
@@ -4275,12 +4275,6 @@
                   "title": "ListApplicationResponse",
                   "type": "object",
                   "properties": {
-                    "applications": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.application"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -4310,6 +4304,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "applications": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.application"
+                      }
                     }
                   }
                 },
@@ -5023,12 +5023,6 @@
                   "title": "ListAuthorizedConnectAppResponse",
                   "type": "object",
                   "properties": {
-                    "authorized_connect_apps": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.authorized_connect_app"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -5058,6 +5052,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "authorized_connect_apps": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.authorized_connect_app"
+                      }
                     }
                   }
                 },
@@ -5775,12 +5775,6 @@
                   "title": "ListAvailablePhoneNumberLocalResponse",
                   "type": "object",
                   "properties": {
-                    "available_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_local"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -5810,6 +5804,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "available_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_local"
+                      }
                     }
                   }
                 },
@@ -6131,12 +6131,6 @@
                   "title": "ListAvailablePhoneNumberMachineToMachineResponse",
                   "type": "object",
                   "properties": {
-                    "available_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_machine_to_machine"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -6166,6 +6160,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "available_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_machine_to_machine"
+                      }
                     }
                   }
                 },
@@ -6487,12 +6487,6 @@
                   "title": "ListAvailablePhoneNumberMobileResponse",
                   "type": "object",
                   "properties": {
-                    "available_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_mobile"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -6522,6 +6516,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "available_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_mobile"
+                      }
                     }
                   }
                 },
@@ -6843,12 +6843,6 @@
                   "title": "ListAvailablePhoneNumberNationalResponse",
                   "type": "object",
                   "properties": {
-                    "available_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_national"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -6878,6 +6872,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "available_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_national"
+                      }
                     }
                   }
                 },
@@ -7199,12 +7199,6 @@
                   "title": "ListAvailablePhoneNumberSharedCostResponse",
                   "type": "object",
                   "properties": {
-                    "available_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_shared_cost"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -7234,6 +7228,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "available_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_shared_cost"
+                      }
                     }
                   }
                 },
@@ -7555,12 +7555,6 @@
                   "title": "ListAvailablePhoneNumberTollFreeResponse",
                   "type": "object",
                   "properties": {
-                    "available_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_toll_free"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -7590,6 +7584,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "available_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_toll_free"
+                      }
                     }
                   }
                 },
@@ -7911,12 +7911,6 @@
                   "title": "ListAvailablePhoneNumberVoipResponse",
                   "type": "object",
                   "properties": {
-                    "available_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_voip"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -7946,6 +7940,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "available_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.available_phone_number_country.available_phone_number_voip"
+                      }
                     }
                   }
                 },
@@ -8486,7 +8486,6 @@
                         "siprec": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Siprec.json",
                         "streams": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Streams.json",
                         "transcriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Transcriptions.json",
-                        "twiml_sessions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/TwimlSessions.json",
                         "user_defined_message_subscriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessageSubscriptions.json",
                         "user_defined_messages": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessages.json"
                       },
@@ -8527,7 +8526,6 @@
                         "siprec": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Siprec.json",
                         "streams": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Streams.json",
                         "transcriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Transcriptions.json",
-                        "twiml_sessions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/TwimlSessions.json",
                         "user_defined_message_subscriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessageSubscriptions.json",
                         "user_defined_messages": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessages.json"
                       },
@@ -8865,12 +8863,6 @@
                   "title": "ListCallResponse",
                   "type": "object",
                   "properties": {
-                    "calls": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.call"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -8900,6 +8892,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "calls": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.call"
+                      }
                     }
                   }
                 },
@@ -8936,7 +8934,6 @@
                             "siprec": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Siprec.json",
                             "streams": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Streams.json",
                             "transcriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Transcriptions.json",
-                            "twiml_sessions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/TwimlSessions.json",
                             "user_defined_message_subscriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessageSubscriptions.json",
                             "user_defined_messages": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessages.json"
                           },
@@ -8975,7 +8972,6 @@
                             "siprec": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/Siprec.json",
                             "streams": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/Streams.json",
                             "transcriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/Transcriptions.json",
-                            "twiml_sessions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/TwimlSessions.json",
                             "user_defined_message_subscriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/UserDefinedMessageSubscriptions.json",
                             "user_defined_messages": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/UserDefinedMessages.json"
                           },
@@ -9028,7 +9024,6 @@
                             "siprec": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Siprec.json",
                             "streams": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Streams.json",
                             "transcriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Transcriptions.json",
-                            "twiml_sessions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/TwimlSessions.json",
                             "user_defined_message_subscriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessageSubscriptions.json",
                             "user_defined_messages": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessages.json"
                           },
@@ -9067,7 +9062,6 @@
                             "siprec": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/Siprec.json",
                             "streams": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/Streams.json",
                             "transcriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/Transcriptions.json",
-                            "twiml_sessions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/TwimlSessions.json",
                             "user_defined_message_subscriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/UserDefinedMessageSubscriptions.json",
                             "user_defined_messages": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0/UserDefinedMessages.json"
                           },
@@ -9214,13 +9208,6 @@
               "call_sid": "sid"
             },
             "resource_url": "/2010-04-01/Accounts/{account_sid}/Calls/{call_sid}/UserDefinedMessages.json"
-          },
-          "twiml_sessions": {
-            "mapping": {
-              "account_sid": "account_sid",
-              "call_sid": "sid"
-            },
-            "resource_url": "/2010-04-01/Accounts/{account_sid}/Calls/{call_sid}/TwimlSessions.json"
           }
         },
         "parent": "/Accounts/{Sid}.json",
@@ -9381,7 +9368,6 @@
                         "siprec": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Siprec.json",
                         "streams": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Streams.json",
                         "transcriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Transcriptions.json",
-                        "twiml_sessions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/TwimlSessions.json",
                         "user_defined_message_subscriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessageSubscriptions.json",
                         "user_defined_messages": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessages.json"
                       },
@@ -9618,7 +9604,6 @@
                         "siprec": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Siprec.json",
                         "streams": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Streams.json",
                         "transcriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Transcriptions.json",
-                        "twiml_sessions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/TwimlSessions.json",
                         "user_defined_message_subscriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessageSubscriptions.json",
                         "user_defined_messages": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessages.json"
                       },
@@ -9659,7 +9644,6 @@
                         "siprec": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Siprec.json",
                         "streams": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Streams.json",
                         "transcriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Transcriptions.json",
-                        "twiml_sessions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/TwimlSessions.json",
                         "user_defined_message_subscriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessageSubscriptions.json",
                         "user_defined_messages": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessages.json"
                       },
@@ -9700,7 +9684,6 @@
                         "siprec": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Siprec.json",
                         "streams": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Streams.json",
                         "transcriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Transcriptions.json",
-                        "twiml_sessions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/TwimlSessions.json",
                         "user_defined_message_subscriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessageSubscriptions.json",
                         "user_defined_messages": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessages.json"
                       },
@@ -9741,7 +9724,6 @@
                         "siprec": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Siprec.json",
                         "streams": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Streams.json",
                         "transcriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Transcriptions.json",
-                        "twiml_sessions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/TwimlSessions.json",
                         "user_defined_message_subscriptions": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessageSubscriptions.json",
                         "user_defined_messages": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Calls/CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/UserDefinedMessages.json"
                       },
@@ -9839,13 +9821,6 @@
               "call_sid": "sid"
             },
             "resource_url": "/2010-04-01/Accounts/{account_sid}/Calls/{call_sid}/UserDefinedMessages.json"
-          },
-          "twiml_sessions": {
-            "mapping": {
-              "account_sid": "account_sid",
-              "call_sid": "sid"
-            },
-            "resource_url": "/2010-04-01/Accounts/{account_sid}/Calls/{call_sid}/TwimlSessions.json"
           }
         },
         "parent": "/Accounts/{Sid}.json",
@@ -9960,12 +9935,6 @@
                   "title": "ListCallEventResponse",
                   "type": "object",
                   "properties": {
-                    "events": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.call.call_event"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -9995,6 +9964,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "events": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.call.call_event"
+                      }
                     }
                   }
                 },
@@ -10374,12 +10349,6 @@
                   "title": "ListCallNotificationResponse",
                   "type": "object",
                   "properties": {
-                    "notifications": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.call.call_notification"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -10409,6 +10378,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "notifications": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.call.call_notification"
+                      }
                     }
                   }
                 },
@@ -10900,12 +10875,6 @@
                   "title": "ListCallRecordingResponse",
                   "type": "object",
                   "properties": {
-                    "recordings": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.call.call_recording"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -10935,6 +10904,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "recordings": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.call.call_recording"
+                      }
                     }
                   }
                 },
@@ -12030,12 +12005,6 @@
                   "title": "ListConferenceResponse",
                   "type": "object",
                   "properties": {
-                    "conferences": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.conference"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -12065,6 +12034,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "conferences": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.conference"
+                      }
                     }
                   }
                 },
@@ -12673,12 +12648,6 @@
                   "title": "ListConferenceRecordingResponse",
                   "type": "object",
                   "properties": {
-                    "recordings": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.conference.conference_recording"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -12708,6 +12677,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "recordings": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.conference.conference_recording"
+                      }
                     }
                   }
                 },
@@ -13576,12 +13551,6 @@
                   "title": "ListConnectAppResponse",
                   "type": "object",
                   "properties": {
-                    "connect_apps": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.connect_app"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -13611,6 +13580,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "connect_apps": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.connect_app"
+                      }
                     }
                   }
                 },
@@ -13788,12 +13763,6 @@
                   "title": "ListDependentPhoneNumberResponse",
                   "type": "object",
                   "properties": {
-                    "dependent_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.address.dependent_phone_number"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -13823,6 +13792,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "dependent_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.address.dependent_phone_number"
+                      }
                     }
                   }
                 },
@@ -14591,12 +14566,6 @@
                   "title": "ListIncomingPhoneNumberResponse",
                   "type": "object",
                   "properties": {
-                    "incoming_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -14626,6 +14595,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "incoming_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number"
+                      }
                     }
                   }
                 },
@@ -15361,12 +15336,6 @@
                   "title": "ListIncomingPhoneNumberAssignedAddOnResponse",
                   "type": "object",
                   "properties": {
-                    "assigned_add_ons": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number.incoming_phone_number_assigned_add_on"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -15396,6 +15365,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "assigned_add_ons": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number.incoming_phone_number_assigned_add_on"
+                      }
                     }
                   }
                 },
@@ -15883,12 +15858,6 @@
                   "title": "ListIncomingPhoneNumberAssignedAddOnExtensionResponse",
                   "type": "object",
                   "properties": {
-                    "extensions": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number.incoming_phone_number_assigned_add_on.incoming_phone_number_assigned_add_on_extension"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -15918,6 +15887,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "extensions": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number.incoming_phone_number_assigned_add_on.incoming_phone_number_assigned_add_on_extension"
+                      }
                     }
                   }
                 },
@@ -16147,12 +16122,6 @@
                   "title": "ListIncomingPhoneNumberLocalResponse",
                   "type": "object",
                   "properties": {
-                    "incoming_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number.incoming_phone_number_local"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -16182,6 +16151,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "incoming_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number.incoming_phone_number_local"
+                      }
                     }
                   }
                 },
@@ -16742,12 +16717,6 @@
                   "title": "ListIncomingPhoneNumberMobileResponse",
                   "type": "object",
                   "properties": {
-                    "incoming_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number.incoming_phone_number_mobile"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -16777,6 +16746,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "incoming_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number.incoming_phone_number_mobile"
+                      }
                     }
                   }
                 },
@@ -17337,12 +17312,6 @@
                   "title": "ListIncomingPhoneNumberTollFreeResponse",
                   "type": "object",
                   "properties": {
-                    "incoming_phone_numbers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number.incoming_phone_number_toll_free"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -17372,6 +17341,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "incoming_phone_numbers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.incoming_phone_number.incoming_phone_number_toll_free"
+                      }
                     }
                   }
                 },
@@ -18147,12 +18122,6 @@
                   "title": "ListKeyResponse",
                   "type": "object",
                   "properties": {
-                    "keys": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.key"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -18182,6 +18151,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "keys": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.key"
+                      }
                     }
                   }
                 },
@@ -18687,12 +18662,6 @@
                   "title": "ListMediaResponse",
                   "type": "object",
                   "properties": {
-                    "media_list": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.message.media"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -18722,6 +18691,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "media_list": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.message.media"
+                      }
                     }
                   }
                 },
@@ -19193,12 +19168,6 @@
                   "title": "ListMemberResponse",
                   "type": "object",
                   "properties": {
-                    "queue_members": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.queue.member"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -19228,6 +19197,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "queue_members": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.queue.member"
+                      }
                     }
                   }
                 },
@@ -19410,6 +19385,11 @@
                   "From": {
                     "type": "string",
                     "description": "The sender's Twilio phone number (in [E.164](https://en.wikipedia.org/wiki/E.164) format), [alphanumeric sender ID](https://www.twilio.com/docs/sms/quickstart), [Wireless SIM](https://www.twilio.com/docs/iot/wireless/programmable-wireless-send-machine-machine-sms-commands), [short code](https://www.twilio.com/en-us/messaging/channels/sms/short-codes), or [channel address](https://www.twilio.com/docs/messaging/channels) (e.g., `whatsapp:+15554449999`). The value of the `from` parameter must be a sender that is hosted within Twilio and belongs to the Account creating the Message. If you are using `messaging_service_sid`, this parameter can be empty (Twilio assigns a `from` value from the Messaging Service's Sender Pool) or you can provide a specific sender from your Sender Pool.",
+                    "format": "phone-number"
+                  },
+                  "FallbackFrom": {
+                    "type": "string",
+                    "description": "A fallback SMS sender to use when the recipient cannot be reached over RCS. This parameter may only be used when also providing a [Messaging Service](https://twilio.com/docs/messaging/services) containing an RCS sender. The fallback SMS sender must be either a Twilio phone number (in [E.164](https://en.wikipedia.org/wiki/E.164) format), [alphanumeric sender ID](https://www.twilio.com/docs/sms/quickstart), or [short code](https://www.twilio.com/en-us/messaging/channels/sms/short-codes), hosted within Twilio and belong to the Account creating the Message.",
                     "format": "phone-number"
                   },
                   "MessagingServiceSid": {
@@ -20015,12 +19995,6 @@
                   "title": "ListMessageResponse",
                   "type": "object",
                   "properties": {
-                    "messages": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.message"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -20050,6 +20024,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.message"
+                      }
                     }
                   }
                 },
@@ -20957,12 +20937,6 @@
                   "title": "ListSigningKeyResponse",
                   "type": "object",
                   "properties": {
-                    "signing_keys": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.signing_key"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -20992,6 +20966,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "signing_keys": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.signing_key"
+                      }
                     }
                   }
                 },
@@ -21330,12 +21310,6 @@
                   "title": "ListNotificationResponse",
                   "type": "object",
                   "properties": {
-                    "notifications": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.notification"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -21365,6 +21339,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "notifications": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.notification"
+                      }
                     }
                   }
                 },
@@ -21848,12 +21828,6 @@
                   "title": "ListOutgoingCallerIdResponse",
                   "type": "object",
                   "properties": {
-                    "outgoing_caller_ids": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.outgoing_caller_id"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -21883,6 +21857,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "outgoing_caller_ids": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.outgoing_caller_id"
+                      }
                     }
                   }
                 },
@@ -23576,12 +23556,6 @@
                   "title": "ListParticipantResponse",
                   "type": "object",
                   "properties": {
-                    "participants": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.conference.participant"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -23611,6 +23585,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "participants": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.conference.participant"
+                      }
                     }
                   }
                 },
@@ -24620,12 +24600,6 @@
                   "title": "ListQueueResponse",
                   "type": "object",
                   "properties": {
-                    "queues": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.queue"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -24655,6 +24629,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "queues": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.queue"
+                      }
                     }
                   }
                 },
@@ -24965,6 +24945,10 @@
                     "type": "string",
                     "description": "The ID of the Conversation for associating this Transcription with an existing Conversation in Intelligence Service"
                   },
+                  "ConfigurationId": {
+                    "type": "string",
+                    "description": "The ID of the RealTimeTranscription Configuration for configuring all the non-default behaviors in one go."
+                  },
                   "EnableProviderData": {
                     "type": "boolean",
                     "description": "Whether the callback includes raw provider data."
@@ -24993,6 +24977,7 @@
                     "IntelligenceService": "GAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                     "ConversationConfiguration": "conv_configuration_01k1etk2y5f1y9fpe2epfdtvv2",
                     "ConversationId": "conv_01k1etk2y5f1y9fpe2epfdtvv2",
+                    "ConfigurationId": "real_time_transcription_7ah86qz6t0nk3s0xcqhn66j0x7",
                     "EnableProviderData": false
                   }
                 }
@@ -25690,12 +25675,6 @@
                   "title": "ListRecordingResponse",
                   "type": "object",
                   "properties": {
-                    "recordings": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.recording"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -25725,6 +25704,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "recordings": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.recording"
+                      }
                     }
                   }
                 },
@@ -26207,12 +26192,6 @@
                   "title": "ListRecordingAddOnResultResponse",
                   "type": "object",
                   "properties": {
-                    "add_on_results": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.recording.recording_add_on_result"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -26242,6 +26221,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "add_on_results": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.recording.recording_add_on_result"
+                      }
                     }
                   }
                 },
@@ -26670,12 +26655,6 @@
                   "title": "ListRecordingAddOnResultPayloadResponse",
                   "type": "object",
                   "properties": {
-                    "payloads": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.recording.recording_add_on_result.recording_add_on_result_payload"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -26705,6 +26684,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "payloads": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.recording.recording_add_on_result.recording_add_on_result_payload"
+                      }
                     }
                   }
                 },
@@ -27221,12 +27206,6 @@
                   "title": "ListRecordingTranscriptionResponse",
                   "type": "object",
                   "properties": {
-                    "transcriptions": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.recording.recording_transcription"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -27256,6 +27235,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "transcriptions": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.recording.recording_transcription"
+                      }
                     }
                   }
                 },
@@ -27744,12 +27729,6 @@
                   "title": "ListShortCodeResponse",
                   "type": "object",
                   "properties": {
-                    "short_codes": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.short_code"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -27779,6 +27758,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "short_codes": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.short_code"
+                      }
                     }
                   }
                 },
@@ -28403,12 +28388,6 @@
                   "title": "ListSipAuthCallsCredentialListMappingResponse",
                   "type": "object",
                   "properties": {
-                    "contents": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain.sip_auth.sip_auth_calls.sip_auth_calls_credential_list_mapping"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -28438,6 +28417,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "contents": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain.sip_auth.sip_auth_calls.sip_auth_calls_credential_list_mapping"
+                      }
                     }
                   }
                 },
@@ -28920,12 +28905,6 @@
                   "title": "ListSipAuthCallsIpAccessControlListMappingResponse",
                   "type": "object",
                   "properties": {
-                    "contents": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain.sip_auth.sip_auth_calls.sip_auth_calls_ip_access_control_list_mapping"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -28955,6 +28934,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "contents": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain.sip_auth.sip_auth_calls.sip_auth_calls_ip_access_control_list_mapping"
+                      }
                     }
                   }
                 },
@@ -29451,12 +29436,6 @@
                   "title": "ListSipAuthRegistrationsCredentialListMappingResponse",
                   "type": "object",
                   "properties": {
-                    "contents": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain.sip_auth.sip_auth_registrations.sip_auth_registrations_credential_list_mapping"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -29486,6 +29465,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "contents": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain.sip_auth.sip_auth_registrations.sip_auth_registrations_credential_list_mapping"
+                      }
                     }
                   }
                 },
@@ -29841,12 +29826,6 @@
                   "title": "ListSipCredentialResponse",
                   "type": "object",
                   "properties": {
-                    "credentials": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_credential_list.sip_credential"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -29876,6 +29855,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "credentials": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_credential_list.sip_credential"
+                      }
                     }
                   }
                 },
@@ -30490,12 +30475,6 @@
                   "title": "ListSipCredentialListResponse",
                   "type": "object",
                   "properties": {
-                    "credential_lists": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_credential_list"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -30525,6 +30504,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "credential_lists": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_credential_list"
+                      }
                     }
                   }
                 },
@@ -31253,12 +31238,6 @@
                   "title": "ListSipCredentialListMappingResponse",
                   "type": "object",
                   "properties": {
-                    "credential_list_mappings": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain.sip_credential_list_mapping"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -31288,6 +31267,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "credential_list_mappings": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain.sip_credential_list_mapping"
+                      }
                     }
                   }
                 },
@@ -31633,12 +31618,6 @@
                   "title": "ListSipDomainResponse",
                   "type": "object",
                   "properties": {
-                    "domains": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -31668,6 +31647,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "domains": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain"
+                      }
                     }
                   }
                 },
@@ -32510,12 +32495,6 @@
                   "title": "ListSipIpAccessControlListResponse",
                   "type": "object",
                   "properties": {
-                    "ip_access_control_lists": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_ip_access_control_list"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -32545,6 +32524,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "ip_access_control_lists": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_ip_access_control_list"
+                      }
                     }
                   }
                 },
@@ -33457,12 +33442,6 @@
                   "title": "ListSipIpAccessControlListMappingResponse",
                   "type": "object",
                   "properties": {
-                    "ip_access_control_list_mappings": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain.sip_ip_access_control_list_mapping"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -33492,6 +33471,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "ip_access_control_list_mappings": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_domain.sip_ip_access_control_list_mapping"
+                      }
                     }
                   }
                 },
@@ -33665,12 +33650,6 @@
                   "title": "ListSipIpAddressResponse",
                   "type": "object",
                   "properties": {
-                    "ip_addresses": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_ip_access_control_list.sip_ip_address"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -33700,6 +33679,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "ip_addresses": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.sip.sip_ip_access_control_list.sip_ip_address"
+                      }
                     }
                   }
                 },
@@ -36941,12 +36926,6 @@
                   "title": "ListTranscriptionResponse",
                   "type": "object",
                   "properties": {
-                    "transcriptions": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.transcription"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -36976,6 +36955,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "transcriptions": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.transcription"
+                      }
                     }
                   }
                 },
@@ -37210,12 +37195,6 @@
                   "title": "ListUsageRecordResponse",
                   "type": "object",
                   "properties": {
-                    "usage_records": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -37245,6 +37224,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "usage_records": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record"
+                      }
                     }
                   }
                 },
@@ -37460,12 +37445,6 @@
                   "title": "ListUsageRecordAllTimeResponse",
                   "type": "object",
                   "properties": {
-                    "usage_records": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_all_time"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -37495,6 +37474,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "usage_records": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_all_time"
+                      }
                     }
                   }
                 },
@@ -37710,12 +37695,6 @@
                   "title": "ListUsageRecordDailyResponse",
                   "type": "object",
                   "properties": {
-                    "usage_records": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_daily"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -37745,6 +37724,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "usage_records": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_daily"
+                      }
                     }
                   }
                 },
@@ -37960,12 +37945,6 @@
                   "title": "ListUsageRecordLastMonthResponse",
                   "type": "object",
                   "properties": {
-                    "usage_records": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_last_month"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -37995,6 +37974,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "usage_records": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_last_month"
+                      }
                     }
                   }
                 },
@@ -38210,12 +38195,6 @@
                   "title": "ListUsageRecordMonthlyResponse",
                   "type": "object",
                   "properties": {
-                    "usage_records": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_monthly"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -38245,6 +38224,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "usage_records": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_monthly"
+                      }
                     }
                   }
                 },
@@ -38460,12 +38445,6 @@
                   "title": "ListUsageRecordThisMonthResponse",
                   "type": "object",
                   "properties": {
-                    "usage_records": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_this_month"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -38495,6 +38474,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "usage_records": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_this_month"
+                      }
                     }
                   }
                 },
@@ -38710,12 +38695,6 @@
                   "title": "ListUsageRecordTodayResponse",
                   "type": "object",
                   "properties": {
-                    "usage_records": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_today"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -38745,6 +38724,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "usage_records": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_today"
+                      }
                     }
                   }
                 },
@@ -38960,12 +38945,6 @@
                   "title": "ListUsageRecordYearlyResponse",
                   "type": "object",
                   "properties": {
-                    "usage_records": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_yearly"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -38995,6 +38974,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "usage_records": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_yearly"
+                      }
                     }
                   }
                 },
@@ -39210,12 +39195,6 @@
                   "title": "ListUsageRecordYesterdayResponse",
                   "type": "object",
                   "properties": {
-                    "usage_records": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_yesterday"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -39245,6 +39224,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "usage_records": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_record.usage_record_yesterday"
+                      }
                     }
                   }
                 },
@@ -39952,12 +39937,6 @@
                   "title": "ListUsageTriggerResponse",
                   "type": "object",
                   "properties": {
-                    "usage_triggers": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_trigger"
-                      }
-                    },
                     "end": {
                       "type": "integer"
                     },
@@ -39987,6 +39966,12 @@
                     "uri": {
                       "type": "string",
                       "format": "uri"
+                    },
+                    "usage_triggers": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/api.v2010.account.usage.usage_trigger"
+                      }
                     }
                   }
                 },
@@ -80413,115 +80398,6 @@
         "pathType": "instance"
       }
     },
-    "/twilio_flex-api_v1/v1/FlexInsights/Metadata": {
-      "servers": [
-        {
-          "url": "https://flex-api.twilio.com"
-        }
-      ]
-    },
-    "/twilio_flex-api_v1/v1/FlexInsights/Query": {
-      "servers": [
-        {
-          "url": "https://flex-api.twilio.com"
-        }
-      ]
-    },
-    "/twilio_flex_v1/v1/Instances": {
-      "description": "",
-      "post": {
-        "tags": [
-          "FlexV1Instance"
-        ],
-        "summary": "This endpoint allows you to create a Flex Instance",
-        "description": "This endpoint allows you to create a Flex Instance",
-        "operationId": "twilio_flex_v1_CreateInstance",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "title": "CreateInstanceRequestBody",
-                "type": "object",
-                "properties": {
-                  "Conversation": {
-                    "type": "object",
-                    "properties": {
-                      "Default": {
-                        "type": "boolean",
-                        "description": "Set newly created conversation service as the default conversation service"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/flex.v1.instance"
-                },
-                "examples": {
-                  "update": {
-                    "value": {
-                      "flex_instance_sid": "GOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-                      "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-                      "status": "creation-in-progress",
-                      "date_created": "2016-08-01T22:10:40Z",
-                      "date_updated": "2016-08-01T22:10:40Z"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "twilio_flex_v1_accountSid_authToken": [ ]
-          }
-        ]
-      },
-      "servers": [
-        {
-          "url": "https://flex-api.twilio.com"
-        }
-      ],
-      "x-twilio": {
-        "defaultOutputProperties": [
-          "flex_instance_sid",
-          "account_sid",
-          "status",
-          "date_created",
-          "date_updated"
-        ],
-        "mountName": "create_flex_instance",
-        "pathType": "instance"
-      }
-    },
-    "/twilio_flex_v1/v1/Instances/{InstanceSid}": {
-      "description": "",
-      "servers": [
-        {
-          "url": "https://flex-api.twilio.com"
-        }
-      ],
-      "x-twilio": {
-        "defaultOutputProperties": [
-          "flex_instance_sid",
-          "account_sid",
-          "status",
-          "date_created",
-          "date_updated"
-        ],
-        "mountName": "get_flex_instance",
-        "pathType": "instance"
-      }
-    },
     "/twilio_flex_v1/v1/Channels": {
       "description": "Flex chat channels",
       "get": {
@@ -96494,6 +96370,198 @@
         "pathType": "instance"
       }
     },
+    "/twilio_iam_v1/v1/Roles/{RoleSid}/Permissions": {
+      "description": "",
+      "get": {
+        "tags": [
+          "IamV1RolePermission"
+        ],
+        "description": "List resolved permissions for a role",
+        "operationId": "twilio_iam_v1_ListRolePermission",
+        "parameters": [
+          {
+            "name": "RoleSid",
+            "in": "path",
+            "description": "The SID of the Role for which Permissions will be fetched.",
+            "required": true,
+            "schema": {
+              "maxLength": 34,
+              "minLength": 34,
+              "pattern": "^IX[0-9a-fA-F]{32}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "description": "How many resources to return in each list page. The default is 50, and the maximum is 100.",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "description": "The page index. This value is simply for client state.",
+            "schema": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          {
+            "name": "PageToken",
+            "in": "query",
+            "description": "The page token. This is provided by the API.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "description": "Specify the origin(s) allowed to access the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "Specify the HTTP methods allowed when accessing the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "POST, OPTIONS"
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Specify the headers allowed when accessing the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Content-Type, Authorization"
+              },
+              "Access-Control-Allow-Credentials": {
+                "description": "Indicates whether the browser should include credentials",
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "Access-Control-Expose-Headers": {
+                "description": "Headers exposed to the client",
+                "schema": {
+                  "type": "string",
+                  "example": "X-Custom-Header1, X-Custom-Header2"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "ListRolePermissionResponse",
+                  "type": "object",
+                  "properties": {
+                    "permissions": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/iam.v1.role_permission"
+                      }
+                    },
+                    "meta": {
+                      "type": "object",
+                      "properties": {
+                        "first_page_url": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "key": {
+                          "type": "string"
+                        },
+                        "next_page_url": {
+                          "type": "string",
+                          "format": "uri",
+                          "nullable": true
+                        },
+                        "page": {
+                          "type": "integer"
+                        },
+                        "page_size": {
+                          "type": "integer"
+                        },
+                        "previous_page_url": {
+                          "type": "string",
+                          "format": "uri",
+                          "nullable": true
+                        },
+                        "url": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "readEmpty": {
+                    "value": {
+                      "permissions": [ ],
+                      "meta": {
+                        "page": 0,
+                        "page_size": 50,
+                        "first_page_url": "https://iam.twilio.com/v1/Roles/IXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Permissions?PageSize=50&Page=0",
+                        "previous_page_url": null,
+                        "url": "https://iam.twilio.com/v1/Roles/IXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Permissions?PageSize=50&Page=0",
+                        "next_page_url": null,
+                        "key": "permissions"
+                      }
+                    }
+                  },
+                  "readFull": {
+                    "value": {
+                      "permissions": [
+                        {
+                          "sid": "IZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                          "namespace": "twilio",
+                          "product": "iam",
+                          "resource": "roles",
+                          "action": "read",
+                          "externalDescription": "Read access to IAM roles"
+                        }
+                      ],
+                      "meta": {
+                        "page": 0,
+                        "page_size": 50,
+                        "first_page_url": "https://iam.twilio.com/v1/Roles/IXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Permissions?PageSize=50&Page=0",
+                        "previous_page_url": null,
+                        "url": "https://iam.twilio.com/v1/Roles/IXaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Permissions?PageSize=50&Page=0",
+                        "next_page_url": null,
+                        "key": "permissions"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [ ]
+      },
+      "servers": [
+        {
+          "url": "https://iam.twilio.com"
+        }
+      ],
+      "x-twilio": {
+        "defaultOutputProperties": [ ],
+        "mountName": "role_permission",
+        "parent": "/v1/Roles/{Sid}",
+        "pathType": "list"
+      }
+    },
     "/twilio_iam_v1/v1/token": {
       "post": {
         "tags": [
@@ -99346,6 +99414,109 @@
                             "call_score": 1
                           },
                           "url": "https://insights.twilio.com/v1/Voice/Summaries"
+                        },
+                        {
+                          "call_sid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                          "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                          "created_time": "2021-08-25T14:31:18Z",
+                          "start_time": "2021-08-25T14:31:22Z",
+                          "end_time": "2021-08-25T14:32:02Z",
+                          "duration": 44,
+                          "connect_duration": 41,
+                          "call_type": "trunking",
+                          "call_state": "completed",
+                          "answered_by": "machine_start",
+                          "from": {
+                            "caller": "+15555555555",
+                            "carrier": "ACS",
+                            "connection": "landline",
+                            "number_prefix": "1555",
+                            "location": {
+                              "lat": 60.268353,
+                              "lon": -141.13632
+                            },
+                            "country_code": "US"
+                          },
+                          "to": {
+                            "callee": "+15555555556",
+                            "carrier": "Hawaiian Telcom, Inc. - HI",
+                            "connection": "landline",
+                            "number_prefix": "1555",
+                            "location": {
+                              "lat": 20.956036,
+                              "lon": -157.23793
+                            },
+                            "country_code": "US"
+                          },
+                          "processing_state": "complete",
+                          "sdk_edge": null,
+                          "sip_edge": {
+                            "properties": {
+                              "media_region": "us1",
+                              "signaling_region": "us1",
+                              "twilio_media_ip": "54.xxx.xx.xx",
+                              "twilio_signaling_ip": "54.xxx.xx.xx",
+                              "external_signaling_ip": "54.xxx.xx.xx",
+                              "sip_call_id": "xxxxx@0.0.0.0",
+                              "user_agent": "xxxx",
+                              "edge_location": "xxxxx",
+                              "trunk_sid": "xxxxxxx",
+                              "direction": "inbound"
+                            },
+                            "metrics": {
+                              "outbound": {
+                                "codec": 0,
+                                "codec_name": "pcmu",
+                                "packets_sent": 1953,
+                                "packets_lost": 0,
+                                "packets_loss_percentage": 0.0,
+                                "jitter": {
+                                  "max": 1.76407,
+                                  "avg": 0.23138
+                                },
+                                "latency": {
+                                  "max": 0.386,
+                                  "avg": 0.3765
+                                }
+                              }
+                            }
+                          },
+                          "client_edge": null,
+                          "carrier_edge": {
+                            "properties": {
+                              "media_region": "us1",
+                              "signaling_region": "us1",
+                              "edge_location": "xxxx",
+                              "direction": "outbound"
+                            }
+                          },
+                          "tags": [
+                            "silence"
+                          ],
+                          "attributes": {
+                            "conference_participant": false
+                          },
+                          "properties": {
+                            "last_sip_response_num": 200,
+                            "pdd_ms": 1990,
+                            "disconnected_by": "caller",
+                            "direction": "trunking_terminating"
+                          },
+                          "trust": {
+                            "verified_caller": {
+                              "verified": true
+                            }
+                          },
+                          "annotation": {
+                            "answered_by": "human",
+                            "spam": true,
+                            "connectivity_issue": "invalid_number",
+                            "quality_issues": [
+                              "choppy_robotic"
+                            ],
+                            "call_score": 1
+                          },
+                          "url": "https://insights.twilio.com/v1/Voice/Summaries"
                         }
                       ]
                     }
@@ -100955,6 +101126,44 @@
                           "client_edge": null,
                           "carrier_edge": null,
                           "sip_edge": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "configurations",
+                          "group": "conversation_relay",
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null,
+                          "carrier_edge": null,
+                          "level": null,
+                          "edge": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "call_wrap_up",
+                          "group": "conversation_relay",
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null,
+                          "carrier_edge": null,
+                          "edge": null,
+                          "level": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "final_token_received",
+                          "group": "conversation_relay",
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null,
+                          "carrier_edge": null,
+                          "level": null
                         }
                       ]
                     }
@@ -101014,6 +101223,123 @@
                           "client_edge": null,
                           "carrier_edge": null,
                           "sip_edge": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "configurations",
+                          "group": "conversation_relay",
+                          "edge": null,
+                          "carrier_edge": null,
+                          "level": null,
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "call_wrap_up",
+                          "group": "conversation_relay",
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null,
+                          "carrier_edge": null,
+                          "edge": null,
+                          "level": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "final_token_received",
+                          "group": "conversation_relay",
+                          "edge": null,
+                          "carrier_edge": null,
+                          "level": null,
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "tts_latency",
+                          "group": "conversation_relay",
+                          "edge": null,
+                          "carrier_edge": null,
+                          "level": null,
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "stt_latency",
+                          "group": "conversation_relay",
+                          "edge": null,
+                          "carrier_edge": null,
+                          "level": null,
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "interrupt",
+                          "group": "conversation_relay",
+                          "edge": null,
+                          "carrier_edge": null,
+                          "level": null,
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "language_changed",
+                          "group": "conversation_relay",
+                          "edge": null,
+                          "carrier_edge": null,
+                          "level": null,
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "error",
+                          "group": "conversation_relay",
+                          "edge": null,
+                          "carrier_edge": null,
+                          "level": "ERROR",
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null
+                        },
+                        {
+                          "timestamp": "2019-09-19T22:15:23Z",
+                          "call_sid": "CA03a02b156c6faa96c86906f7e9ad0f38",
+                          "account_sid": "AC998c10b68cbfda9f67277f7d8f4439c9",
+                          "name": "language_info",
+                          "group": "conversation_relay",
+                          "edge": null,
+                          "carrier_edge": null,
+                          "level": null,
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": null
                         }
                       ]
                     }
@@ -102239,6 +102565,20 @@
         "pathType": "list"
       }
     },
+    "/twilio_insights_v1/v1/InsightsDomains/Flex/Reports/Metadata": {
+      "servers": [
+        {
+          "url": "https://insights.twilio.com"
+        }
+      ]
+    },
+    "/twilio_insights_v1/v1/InsightsDomains/Flex/Reports/Query": {
+      "servers": [
+        {
+          "url": "https://insights.twilio.com"
+        }
+      ]
+    },
     "/twilio_insights_v2/v2/Voice/Reports": {
       "description": "Root resource for Voice Reports V2",
       "post": {
@@ -102308,8 +102648,8 @@
                       "report_id": "voiceinsights_report_01jmzm99cte5rrbbhv8bctd4av",
                       "status": "created",
                       "request_meta": {
-                        "start_time": "2024-11-01T00:00:00Z",
-                        "end_time": "2024-11-07T00:00:00Z",
+                        "start_datetime": "2024-11-01T00:00:00Z",
+                        "end_datetime": "2024-11-07T00:00:00Z",
                         "filters": [ ]
                       },
                       "url": "https://insights.twilio.com/v2/Voice/Reports/voiceinsights_report_01jmzm99cte5rrbbhv8bctd4av"
@@ -102411,8 +102751,8 @@
                       "report_id": "voiceinsights_report_01jmzm99cte5rrbbhv8bctd4av",
                       "status": "completed",
                       "request_meta": {
-                        "start_time": "2024-11-01T00:00:00Z",
-                        "end_time": "2024-11-07T00:00:00Z",
+                        "start_datetime": "2024-11-01T00:00:00Z",
+                        "end_datetime": "2024-11-07T00:00:00Z",
                         "filters": [ ]
                       },
                       "report": {
@@ -102669,8 +103009,8 @@
                       "report_id": "voiceinsights_report_01jmzm99cte5rrbbhv8bctd4av",
                       "status": "created",
                       "request_meta": {
-                        "start_time": "2024-11-01T00:00:00Z",
-                        "end_time": "2024-11-07T00:00:00Z",
+                        "start_datetime": "2024-11-01T00:00:00Z",
+                        "end_datetime": "2024-11-07T00:00:00Z",
                         "filters": [ ]
                       },
                       "url": "https://insights.twilio.com/v2/Voice/Reports/PhoneNumbers/Inbound/voiceinsights_report_01jmzm99cte5rrbbhv8bctd4av"
@@ -102998,8 +103338,8 @@
                       "report_id": "voiceinsights_report_01jmzm99cte5rrbbhv8bctd4av",
                       "status": "created",
                       "request_meta": {
-                        "start_time": "2024-11-01T00:00:00Z",
-                        "end_time": "2024-11-07T00:00:00Z",
+                        "start_datetime": "2024-11-01T00:00:00Z",
+                        "end_datetime": "2024-11-07T00:00:00Z",
                         "filters": [ ]
                       },
                       "url": "https://insights.twilio.com/v2/Voice/Reports/PhoneNumbers/Outbound/voiceinsights_report_01jmzm99cte5rrbbhv8bctd4av"
@@ -138441,6 +138781,216 @@
     "/twilio_messaging_v3/v3/OptOuts/{OptOutSid}/MessageTypes": { },
     "/twilio_messaging_v3/v3/OptOuts/{OptOutSid}/Messages": { },
     "/twilio_messaging_v3/v3/OptOuts/{OptOutSid}/Keywords": { },
+    "/twilio_messaging_v3/v3/Indicators/Typing.json": {
+      "description": "Send a typing indicator event for OTT channels (e.g., WhatsApp, Apple Messages for Business).",
+      "post": {
+        "tags": [
+          "MessagingV3TypingIndicator"
+        ],
+        "summary": "Send a typing indicator",
+        "description": "Send a typing indicator to notify the recipient that you are composing a message. Supported channels: WhatsApp, Apple Messages for Business. The request body varies by channel — use the `channel` field as the discriminator.\n",
+        "operationId": "twilio_messaging_v3_CreateV3TypingIndicator",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypingIndicatorRequest"
+              },
+              "examples": {
+                "whatsapp_typing_indicator": {
+                  "summary": "WhatsApp Typing Indicator",
+                  "description": "Send a typing indicator for an active WhatsApp conversation",
+                  "value": {
+                    "channel": "WHATSAPP",
+                    "messageId": "SM1234567890abcdef1234567890abcdef"
+                  }
+                },
+                "apple_typing_indicator": {
+                  "summary": "Apple Typing Indicator",
+                  "description": "Send a typing indicator for an Apple Messages for Business conversation",
+                  "value": {
+                    "channel": "APPLE",
+                    "from": "apple:a89a691c-15c0-4fd1-a589-1ded34b59c39",
+                    "to": "apple:urn:mbid:AQAAYyUbut6E4B3T9FLv5EbG",
+                    "event": "START"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Typing indicator was successfully sent to the recipient.",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "description": "Specify the origin(s) allowed to access the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "Specify the HTTP methods allowed when accessing the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "POST, OPTIONS"
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Specify the headers allowed when accessing the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Content-Type, Authorization"
+              },
+              "Access-Control-Allow-Credentials": {
+                "description": "Indicates whether the browser should include credentials",
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "Access-Control-Expose-Headers": {
+                "description": "Headers exposed to the client",
+                "schema": {
+                  "type": "string",
+                  "example": "X-Custom-Header1, X-Custom-Header2"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "description": "Indicates if the typing indicator was sent successfully.",
+                      "example": true
+                    }
+                  }
+                },
+                "examples": {
+                  "success": {
+                    "value": {
+                      "success": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request. The request body is missing required fields or contains invalid values.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Error message"
+                    },
+                    "more_info": {
+                      "type": "string",
+                      "description": "Link to Error Code References"
+                    },
+                    "status": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication credentials are missing or invalid.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Error message"
+                    },
+                    "more_info": {
+                      "type": "string",
+                      "description": "Link to Error Code References"
+                    },
+                    "status": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "The account is not authorized to send typing indicators for this channel.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Error message"
+                    },
+                    "more_info": {
+                      "type": "string",
+                      "description": "Link to Error Code References"
+                    },
+                    "status": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_messaging_v3_accountSid_authToken": [ ]
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://messaging.twilio.com"
+        }
+      ],
+      "x-twilio": {
+        "defaultOutputProperties": [
+          "success"
+        ],
+        "mountName": "typing_indicator",
+        "pathType": "list"
+      }
+    },
     "/twilio_monitor_v1/v1/Alerts/{Sid}": {
       "description": "Debugger alerts",
       "get": {
@@ -151322,6 +151872,9 @@
     },
     "/twilio_numbers_v2/v2/ShortCodes/Applications/Bundles/{BundleSid}/Inquiries": {
       "description": "Initialize a Persona inquiry session for a shortcodes application"
+    },
+    "/twilio_numbers_v2/v2/ShortCodes/Applications/{Sid}/Documents": {
+      "description": "Manage documents for a Short Code Application"
     },
     "/twilio_numbers_v3/v3/HostedNumbers/HostedNumberOrders": {
       "post": {
@@ -171462,6 +172015,14 @@
             }
           },
           {
+            "name": "status",
+            "in": "query",
+            "description": "Only show Execution resources with the given status. Can be: `active` or `ended`.",
+            "schema": {
+              "$ref": "#/components/schemas/twilio_studio_v2_execution_enum_status"
+            }
+          },
+          {
             "name": "DateCreatedFrom",
             "in": "query",
             "description": "Only show Execution resources starting on or after this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time, given as `YYYY-MM-DDThh:mm:ss-hh:mm`.",
@@ -171737,6 +172298,7 @@
                       "status": "active",
                       "date_created": "2015-07-30T20:00:00Z",
                       "date_updated": "2015-07-30T20:00:00Z",
+                      "initiated_by": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                       "links": {
                         "steps": "https://studio.twilio.com/v2/Flows/FWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Executions/FNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Steps",
                         "execution_context": "https://studio.twilio.com/v2/Flows/FWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Executions/FNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Context"
@@ -171877,6 +172439,7 @@
                       "context": { },
                       "date_created": "2017-11-06T12:00:00Z",
                       "date_updated": null,
+                      "initiated_by": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                       "url": "https://studio.twilio.com/v2/Flows/FWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Executions/FNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                       "links": {
                         "steps": "https://studio.twilio.com/v2/Flows/FWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Executions/FNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Steps",
@@ -172055,6 +172618,7 @@
                       "status": "ended",
                       "date_created": "2017-11-06T12:00:00Z",
                       "date_updated": "2017-11-06T12:00:00Z",
+                      "initiated_by": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                       "links": {
                         "steps": "https://studio.twilio.com/v2/Flows/FWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Executions/FNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Steps",
                         "execution_context": "https://studio.twilio.com/v2/Flows/FWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Executions/FNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Context"
@@ -217408,7 +217972,7 @@
                   },
                   "Tags": {
                     "type": "string",
-                    "description": "A string containing a JSON map of key value pairs of tags to be recorded as metadata for the message. The object may contain up to 10 tags. Keys and values can each be up to 128 characters in length."
+                    "description": "A string containing a JSON map of key value pairs of tags to be recorded as metadata for the message. The tags will also be included as part of the verification and message status event type payloads. The object may contain up to 10 tags. Keys and values can each be up to 128 characters in length. **This value should not contain PII.**"
                   }
                 }
               },
@@ -220739,13 +221303,6 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "options": {
-                      "type": "object",
-                      "description": "An object that contains challenge options. Currently only used for `passkeys`.",
-                      "x-twilio": {
-                        "shortDescription": "Options for a `challenge`."
-                      }
-                    },
                     "sid": {
                       "maxLength": 34,
                       "minLength": 34,
@@ -220935,6 +221492,13 @@
                       "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Nested resource URLs."
+                      }
+                    },
+                    "options": {
+                      "type": "object",
+                      "description": "An object that contains challenge options. Currently only used for `passkeys`.",
+                      "x-twilio": {
+                        "shortDescription": "Options for a `challenge`."
                       }
                     }
                   }
@@ -221217,13 +221781,6 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "options": {
-                      "type": "object",
-                      "description": "An object that contains challenge options. Currently only used for `passkeys`.",
-                      "x-twilio": {
-                        "shortDescription": "Options for a `challenge`."
-                      }
-                    },
                     "sid": {
                       "maxLength": 34,
                       "minLength": 34,
@@ -221413,6 +221970,13 @@
                       "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Nested resource URLs."
+                      }
+                    },
+                    "options": {
+                      "type": "object",
+                      "description": "An object that contains challenge options. Currently only used for `passkeys`.",
+                      "x-twilio": {
+                        "shortDescription": "Options for a `challenge`."
                       }
                     }
                   }
@@ -242271,34 +242835,82 @@
         }
       },
       "assistants.v1.service.assistant_with_tools_and_knowledge": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/assistants.v1.service.assistant"
+        "required": [
+          "knowledge",
+          "owner",
+          "name",
+          "id",
+          "account_sid",
+          "model",
+          "date_updated",
+          "personality_prompt",
+          "tools",
+          "date_created",
+          "customer_ai"
+        ],
+        "type": "object",
+        "properties": {
+          "account_sid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^AC[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Assistant resource."
           },
-          {
-            "required": [
-              "knowledge",
-              "tools"
-            ],
+          "customer_ai": {
             "type": "object",
-            "properties": {
-              "knowledge": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/assistants.v1.service.knowledge"
-                },
-                "description": "The list of knowledge sources associated with the assistant."
-              },
-              "tools": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/assistants.v1.service.tool"
-                },
-                "description": "The list of tools associated with the assistant."
-              }
-            }
+            "description": "The Personalization and Perception Engine settings."
+          },
+          "id": {
+            "pattern": "^aia_asst_.+$",
+            "type": "string",
+            "description": "The Assistant ID."
+          },
+          "model": {
+            "type": "string",
+            "description": "The default model used by the assistant."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the assistant."
+          },
+          "owner": {
+            "type": "string",
+            "description": "The owner/company of the assistant."
+          },
+          "url": {
+            "type": "string",
+            "description": "The url of the assistant resource."
+          },
+          "personality_prompt": {
+            "type": "string",
+            "description": "The personality prompt to be used for assistant."
+          },
+          "date_created": {
+            "type": "string",
+            "description": "The date and time in GMT when the Assistant was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+            "format": "date-time"
+          },
+          "date_updated": {
+            "type": "string",
+            "description": "The date and time in GMT when the Assistant was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+            "format": "date-time"
+          },
+          "knowledge": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/assistants.v1.service.knowledge"
+            },
+            "description": "The list of knowledge sources associated with the assistant."
+          },
+          "tools": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/assistants.v1.service.tool"
+            },
+            "description": "The list of tools associated with the assistant."
           }
-        ]
+        }
       },
       "assistants.v1.service.knowledge_status": {
         "required": [
@@ -242329,23 +242941,77 @@
         }
       },
       "assistants.v1.service.tool_with_policies": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/assistants.v1.service.tool"
+        "required": [
+          "name",
+          "id",
+          "meta",
+          "enabled",
+          "type",
+          "date_updated",
+          "description",
+          "requires_auth",
+          "date_created"
+        ],
+        "type": "object",
+        "properties": {
+          "account_sid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^AC[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Tool resource."
           },
-          {
+          "description": {
+            "type": "string",
+            "description": "The description of the tool."
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "True if the tool is enabled."
+          },
+          "id": {
+            "pattern": "^aia_tool_.+$",
+            "type": "string",
+            "description": "The tool ID."
+          },
+          "meta": {
             "type": "object",
-            "properties": {
-              "policies": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/assistants.v1.service.policy"
-                },
-                "description": "The Policies associated with the tool."
-              }
-            }
+            "description": "The metadata related to method, url, input_schema to used with the Tool."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the tool."
+          },
+          "requires_auth": {
+            "type": "boolean",
+            "description": "The authentication requirement for the tool."
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of the tool. ('WEBHOOK')"
+          },
+          "url": {
+            "type": "string",
+            "description": "The url of the tool resource."
+          },
+          "date_created": {
+            "type": "string",
+            "description": "The date and time in GMT when the Tool was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+            "format": "date-time"
+          },
+          "date_updated": {
+            "type": "string",
+            "description": "The date and time in GMT when the Tool was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+            "format": "date-time"
+          },
+          "policies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/assistants.v1.service.policy"
+            },
+            "description": "The Policies associated with the tool."
           }
-        ]
+        }
       },
       "assistants.v1.service.create_assistant_request": {
         "required": [
@@ -242773,25 +243439,43 @@
         }
       },
       "assistants.v1.service.knowledge_chunk_with_score": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/assistants.v1.service.knowledge_chunk"
+        "type": "object",
+        "properties": {
+          "account_sid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^AC[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Knowledge resource."
           },
-          {
+          "content": {
+            "type": "string",
+            "description": "The chunk content."
+          },
+          "metadata": {
             "type": "object",
-            "properties": {
-              "score": {
-                "type": "number",
-                "description": "The score associated with the chunk.",
-                "format": "float"
-              },
-              "knowledge_id": {
-                "type": "string",
-                "description": "The knowledge ID associated with the chunk."
-              }
-            }
+            "description": "The metadata of the chunk."
+          },
+          "date_created": {
+            "type": "string",
+            "description": "The date and time in GMT when the Chunk was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+            "format": "date-time"
+          },
+          "date_updated": {
+            "type": "string",
+            "description": "The date and time in GMT when the Chunk was updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+            "format": "date-time"
+          },
+          "score": {
+            "type": "number",
+            "description": "The score associated with the chunk.",
+            "format": "float"
+          },
+          "knowledge_id": {
+            "type": "string",
+            "description": "The knowledge ID associated with the chunk."
           }
-        ]
+        }
       },
       "assistants.v1.service.session": {
         "type": "object",
@@ -252191,6 +252875,46 @@
         ],
         "type": "string"
       },
+      "flex.v2.instance": {
+        "type": "object",
+        "properties": {
+          "flex_instance_sid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^GO[0-9a-fA-F]{32}$",
+            "type": "string"
+          },
+          "account_sid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^AC[0-9a-fA-F]{32}$",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "unknown",
+              "creation-in-progress",
+              "ready",
+              "creation-failed",
+              "deletion-in-progress",
+              "deleted",
+              "deletion-failed"
+            ],
+            "type": "string",
+            "example": "ready"
+          },
+          "date_created": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-01-18T10:30:00.000Z"
+          },
+          "date_updated": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-01-18T10:30:00.000Z"
+          }
+        }
+      },
       "flex.v2.flex_user": {
         "type": "object",
         "properties": {
@@ -253347,6 +254071,44 @@
         ],
         "type": "string"
       },
+      "iam.v1.role_permission": {
+        "type": "object",
+        "properties": {
+          "sid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^IZ[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The unique string that identifies the Permission resource.",
+            "nullable": true
+          },
+          "namespace": {
+            "type": "string",
+            "description": "The namespace of the permission (e.g., twilio).",
+            "nullable": true
+          },
+          "product": {
+            "type": "string",
+            "description": "The product the permission belongs to (e.g., iam).",
+            "nullable": true
+          },
+          "resource": {
+            "type": "string",
+            "description": "The resource the permission applies to (e.g., roles).",
+            "nullable": true
+          },
+          "action": {
+            "type": "string",
+            "description": "The action granted by the permission (e.g., read).",
+            "nullable": true
+          },
+          "externalDescription": {
+            "type": "string",
+            "description": "The external description of the permission.",
+            "nullable": true
+          }
+        }
+      },
       "twilio_iam_v1_oauth.v1.token": {
         "type": "object",
         "properties": {
@@ -253916,6 +254678,13 @@
             "type": "string",
             "description": "Organization friendly name"
           },
+          "currentAccountSid": {
+            "pattern": "AC[0-9a-f]{32}",
+            "type": "string",
+            "description": "Unique Twilio account sid",
+            "format": "AccountSid",
+            "example": "AC33f4f3aa6fffe840d000f8ef22e883db"
+          },
           "timeZone": {
             "type": "string",
             "description": "User time zone"
@@ -254315,7 +255084,8 @@
                   "enum": [
                     "organization",
                     "account",
-                    "subaccount"
+                    "subaccount",
+                    "resource"
                   ],
                   "type": "string",
                   "description": "Type of the scope entity"
@@ -256060,6 +256830,361 @@
           }
         }
       },
+      "latency_event": {
+        "type": "object",
+        "properties": {
+          "latency_ms": {
+            "type": "integer",
+            "description": "Latency in milliseconds."
+          }
+        }
+      },
+      "interrupt_event": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "enum": [
+              "DTMF",
+              "SPEECH"
+            ],
+            "type": "string",
+            "description": "Type of interruption event."
+          }
+        }
+      },
+      "last_token_received_event": {
+        "type": "object",
+        "properties": {
+          "total_tokens": {
+            "type": "integer",
+            "description": "Total number of tokens received."
+          },
+          "total_words": {
+            "type": "integer",
+            "description": "Total number of words received."
+          }
+        }
+      },
+      "configuration_event": {
+        "type": "object",
+        "properties": {
+          "configurations": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Key-value pairs for configuration settings."
+          },
+          "languages": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "tts_provider": {
+                  "type": "string"
+                },
+                "voice": {
+                  "type": "string"
+                },
+                "transcription_provider": {
+                  "type": "string"
+                },
+                "speech_model": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Key-value pairs for language configurations."
+          }
+        }
+      },
+      "language_changed_event": {
+        "type": "object",
+        "properties": {
+          "tts_language_code": {
+            "type": "string"
+          },
+          "transcription_language_code": {
+            "type": "string"
+          },
+          "tts_provider": {
+            "type": "string"
+          },
+          "voice": {
+            "type": "string"
+          },
+          "transcription_provider": {
+            "type": "string"
+          },
+          "speech_model": {
+            "type": "string"
+          }
+        }
+      },
+      "call_wrap_up_event": {
+        "type": "object",
+        "properties": {
+          "duration_in_seconds": {
+            "type": "integer",
+            "description": "Duration in seconds."
+          },
+          "end_status": {
+            "enum": [
+              "unknown",
+              "failure",
+              "ended",
+              "hung_up"
+            ],
+            "type": "string",
+            "description": "End status of the call wrap up event."
+          }
+        }
+      },
+      "error_event": {
+        "type": "object",
+        "properties": {
+          "error_code": {
+            "type": "integer",
+            "description": "Error code.",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message."
+          }
+        }
+      },
+      "language_info_event": {
+        "type": "object",
+        "properties": {
+          "tts_language_code": {
+            "type": "string"
+          },
+          "transcription_language_code": {
+            "type": "string"
+          },
+          "tts_provider": {
+            "type": "string"
+          },
+          "voice": {
+            "type": "string"
+          },
+          "transcription_provider": {
+            "type": "string"
+          },
+          "speech_model": {
+            "type": "string"
+          }
+        }
+      },
+      "base_relay_data": {
+        "maxProperties": 2,
+        "required": [
+          "session_id",
+          "sequence_number"
+        ],
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "Session id of the conversation relay."
+          },
+          "sequence_number": {
+            "type": "integer",
+            "description": "Sequence number of the event."
+          }
+        },
+        "additionalProperties": false
+      },
+      "tts_latency_relay_data": {
+        "required": [
+          "session_id",
+          "sequence_number",
+          "tts_latency"
+        ],
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "Session id of the conversation relay."
+          },
+          "sequence_number": {
+            "type": "integer",
+            "description": "Sequence number of the event."
+          },
+          "tts_latency": {
+            "$ref": "#/components/schemas/latency_event"
+          }
+        }
+      },
+      "stt_latency_relay_data": {
+        "required": [
+          "session_id",
+          "sequence_number",
+          "stt_latency"
+        ],
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "Session id of the conversation relay."
+          },
+          "sequence_number": {
+            "type": "integer",
+            "description": "Sequence number of the event."
+          },
+          "stt_latency": {
+            "$ref": "#/components/schemas/latency_event"
+          }
+        }
+      },
+      "interrupt_relay_data": {
+        "required": [
+          "session_id",
+          "sequence_number",
+          "interrupt"
+        ],
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "Session id of the conversation relay."
+          },
+          "sequence_number": {
+            "type": "integer",
+            "description": "Sequence number of the event."
+          },
+          "interrupt": {
+            "$ref": "#/components/schemas/interrupt_event"
+          }
+        }
+      },
+      "last_token_received_relay_data": {
+        "required": [
+          "session_id",
+          "sequence_number",
+          "last_token_received"
+        ],
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "Session id of the conversation relay."
+          },
+          "sequence_number": {
+            "type": "integer",
+            "description": "Sequence number of the event."
+          },
+          "last_token_received": {
+            "$ref": "#/components/schemas/last_token_received_event"
+          }
+        }
+      },
+      "configurations_relay_data": {
+        "required": [
+          "session_id",
+          "sequence_number",
+          "configurations"
+        ],
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "Session id of the conversation relay."
+          },
+          "sequence_number": {
+            "type": "integer",
+            "description": "Sequence number of the event."
+          },
+          "configurations": {
+            "$ref": "#/components/schemas/configuration_event"
+          }
+        }
+      },
+      "language_changed_relay_data": {
+        "required": [
+          "session_id",
+          "sequence_number",
+          "language_changed"
+        ],
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "Session id of the conversation relay."
+          },
+          "sequence_number": {
+            "type": "integer",
+            "description": "Sequence number of the event."
+          },
+          "language_changed": {
+            "$ref": "#/components/schemas/language_changed_event"
+          }
+        }
+      },
+      "call_wrap_up_relay_data": {
+        "required": [
+          "session_id",
+          "sequence_number",
+          "call_wrap_up"
+        ],
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "Session id of the conversation relay."
+          },
+          "sequence_number": {
+            "type": "integer",
+            "description": "Sequence number of the event."
+          },
+          "call_wrap_up": {
+            "$ref": "#/components/schemas/call_wrap_up_event"
+          }
+        }
+      },
+      "error_relay_data": {
+        "required": [
+          "session_id",
+          "sequence_number",
+          "error"
+        ],
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "Session id of the conversation relay."
+          },
+          "sequence_number": {
+            "type": "integer",
+            "description": "Sequence number of the event."
+          },
+          "error": {
+            "$ref": "#/components/schemas/error_event"
+          }
+        }
+      },
+      "language_info_relay_data": {
+        "required": [
+          "session_id",
+          "sequence_number",
+          "language_info"
+        ],
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "Session id of the conversation relay."
+          },
+          "sequence_number": {
+            "type": "integer",
+            "description": "Sequence number of the event."
+          },
+          "language_info": {
+            "$ref": "#/components/schemas/language_info_event"
+          }
+        }
+      },
       "event_enum_twilio_edge": {
         "enum": [
           "unknown_edge",
@@ -256682,24 +257807,126 @@
         ],
         "type": "string"
       },
+      "call_summary_agent_session_summary": {
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string"
+          },
+          "tts_latency_ms": {
+            "$ref": "#/components/schemas/call_summary_crelay_rate_stats"
+          },
+          "stt_latency_ms": {
+            "$ref": "#/components/schemas/call_summary_crelay_rate_stats"
+          },
+          "network_latency_ms": {
+            "$ref": "#/components/schemas/call_summary_crelay_rate_stats"
+          },
+          "time_to_first_audio_ms": {
+            "$ref": "#/components/schemas/call_summary_crelay_rate_stats"
+          },
+          "application_latency_ms": {
+            "$ref": "#/components/schemas/call_summary_crelay_rate_stats"
+          },
+          "tokens": {
+            "$ref": "#/components/schemas/call_summary_crelay_token_stats"
+          },
+          "words": {
+            "$ref": "#/components/schemas/call_summary_crelay_word_stats"
+          },
+          "turns": {
+            "type": "integer"
+          },
+          "interruptions": {
+            "$ref": "#/components/schemas/call_summary_crelay_interruptions"
+          },
+          "session_state": {
+            "$ref": "#/components/schemas/call_summary_crelay_session_state"
+          }
+        }
+      },
+      "call_summary_crelay_rate_stats": {
+        "type": "object",
+        "properties": {
+          "min": {
+            "type": "number",
+            "format": "float",
+            "default": 0
+          },
+          "max": {
+            "type": "number",
+            "format": "float",
+            "default": 0
+          },
+          "avg": {
+            "type": "number",
+            "format": "float",
+            "default": 0
+          }
+        }
+      },
+      "call_summary_crelay_token_stats": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "tokens_per_second": {
+            "$ref": "#/components/schemas/call_summary_crelay_rate_stats"
+          }
+        }
+      },
+      "call_summary_crelay_word_stats": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "words_per_minute": {
+            "$ref": "#/components/schemas/call_summary_crelay_rate_stats"
+          }
+        }
+      },
+      "call_summary_crelay_interruptions": {
+        "type": "object",
+        "properties": {
+          "customer_to_agent": {
+            "type": "integer",
+            "default": 0
+          },
+          "agent_to_customer": {
+            "type": "integer",
+            "default": 0
+          }
+        }
+      },
+      "call_summary_crelay_session_state": {
+        "enum": [
+          "unknown",
+          "failure",
+          "ended",
+          "hung_up"
+        ],
+        "type": "string"
+      },
       "insights.v2.create_account_report_request": {
         "type": "object",
         "properties": {
           "time_range": {
             "type": "object",
             "properties": {
-              "start_time": {
+              "start_datetime": {
                 "type": "string",
-                "description": "Start time of the report",
+                "description": "Start date time of the report",
                 "format": "date-time",
                 "example": "2024-01-01T00:00:00Z",
                 "x-twilio": {
                   "shortDescription": "Start time of the report"
                 }
               },
-              "end_time": {
+              "end_datetime": {
                 "type": "string",
-                "description": "End time of the report",
+                "description": "End date time of the report",
                 "format": "date-time",
                 "example": "2024-01-07T00:00:00Z",
                 "x-twilio": {
@@ -256782,18 +258009,18 @@
           "time_range": {
             "type": "object",
             "properties": {
-              "start_time": {
+              "start_datetime": {
                 "type": "string",
-                "description": "Start time of the report",
+                "description": "Start date time of the report",
                 "format": "date-time",
                 "example": "2024-01-01T00:00:00Z",
                 "x-twilio": {
                   "shortDescription": "Start time of the report"
                 }
               },
-              "end_time": {
+              "end_datetime": {
                 "type": "string",
-                "description": "End time of the report",
+                "description": "End date time of the report",
                 "format": "date-time",
                 "example": "2024-01-07T00:00:00Z",
                 "x-twilio": {
@@ -257056,14 +258283,14 @@
       "report_metadata": {
         "type": "object",
         "properties": {
-          "start_time": {
+          "start_datetime": {
             "type": "string",
-            "description": "Start time of the report",
+            "description": "Start date time of the report",
             "format": "date-time"
           },
-          "end_time": {
+          "end_datetime": {
             "type": "string",
-            "description": "End time of the report",
+            "description": "End date time of the report",
             "format": "date-time"
           },
           "filters": {
@@ -260298,25 +261525,43 @@
         }
       },
       "knowledge.v1.service.knowledge_chunk_with_score": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/knowledge.v1.service.knowledge_chunk"
+        "type": "object",
+        "properties": {
+          "account_sid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^AC[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Knowledge resource."
           },
-          {
+          "content": {
+            "type": "string",
+            "description": "The chunk content."
+          },
+          "metadata": {
             "type": "object",
-            "properties": {
-              "score": {
-                "type": "number",
-                "description": "The score associated with the chunk.",
-                "format": "float"
-              },
-              "knowledge_id": {
-                "type": "string",
-                "description": "The knowledge ID associated with the chunk."
-              }
-            }
+            "description": "The metadata of the chunk."
+          },
+          "date_created": {
+            "type": "string",
+            "description": "The date and time in GMT when the Chunk was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+            "format": "date-time"
+          },
+          "date_updated": {
+            "type": "string",
+            "description": "The date and time in GMT when the Chunk was updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+            "format": "date-time"
+          },
+          "score": {
+            "type": "number",
+            "description": "The score associated with the chunk.",
+            "format": "float"
+          },
+          "knowledge_id": {
+            "type": "string",
+            "description": "The knowledge ID associated with the chunk."
           }
-        ]
+        }
       },
       "knowledge.v1.service.create_policy_request": {
         "required": [
@@ -263991,7 +265236,7 @@
               "ISVSubAccount"
             ],
             "type": "string",
-            "description": "The account type for ISV Account Type Migration. Set to 'ISV' or 'ISVSubAccount' to configure, null or empty string to clear, or omit to preserve the existing value.",
+            "description": "The account type for ISV Account Type Migration. Set to 'ISV' or 'ISVSubAccount' to configure, empty string to clear, or omit to preserve the existing value.",
             "nullable": true
           }
         },
@@ -264924,6 +266169,90 @@
             "example": "STOP"
           }
         }
+      },
+      "TypingIndicatorRequest": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/WhatsAppTypingIndicatorRequest"
+          },
+          {
+            "$ref": "#/components/schemas/AppleTypingIndicatorRequest"
+          }
+        ],
+        "description": "Request body for sending a typing indicator. The schema varies by channel. Use the `channel` field to determine which properties are required.\n",
+        "discriminator": {
+          "propertyName": "channel",
+          "mapping": {
+            "WHATSAPP": "#/components/schemas/WhatsAppTypingIndicatorRequest",
+            "APPLE": "#/components/schemas/AppleTypingIndicatorRequest"
+          }
+        }
+      },
+      "WhatsAppTypingIndicatorRequest": {
+        "required": [
+          "channel",
+          "messageId"
+        ],
+        "type": "object",
+        "properties": {
+          "channel": {
+            "enum": [
+              "WHATSAPP"
+            ],
+            "type": "string",
+            "description": "The messaging channel. Must be \"WHATSAPP\".",
+            "example": "WHATSAPP"
+          },
+          "messageId": {
+            "pattern": "^(SM|MM)[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The SID of a recent inbound message from the recipient. Must be an SM or MM SID format.\n",
+            "example": "SM1234567890abcdef1234567890abcdef"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Typing indicator request for WhatsApp channel. Requires a messageId from a recent inbound message."
+      },
+      "AppleTypingIndicatorRequest": {
+        "required": [
+          "channel",
+          "from",
+          "to"
+        ],
+        "type": "object",
+        "properties": {
+          "channel": {
+            "enum": [
+              "APPLE"
+            ],
+            "type": "string",
+            "description": "The messaging channel. Must be \"APPLE\".",
+            "example": "APPLE"
+          },
+          "from": {
+            "type": "string",
+            "description": "The Apple Messages for Business identifier of the sender (business).",
+            "example": "apple:a89a691c-15c0-4fd1-a589-1ded34b59c39"
+          },
+          "to": {
+            "type": "string",
+            "description": "The Apple Messages for Business identifier of the recipient (customer).",
+            "example": "apple:urn:mbid:AQAAYyUbut6E4B3T9FLv5EbG"
+          },
+          "event": {
+            "enum": [
+              "START",
+              "END"
+            ],
+            "type": "string",
+            "description": "The type of typing event. \"START\" indicates the agent began typing, \"END\" indicates the agent stopped typing. Defaults to \"START\".\n",
+            "default": "START",
+            "example": "START"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Typing indicator request for Apple Messages for Business channel."
       },
       "monitor.v1.alert": {
         "type": "object",
@@ -267246,15 +268575,78 @@
         }
       },
       "numbers.v1.a2p_registration_details_fetch": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/numbers.v1.a2p_registration_details"
-          },
-          {
-            "$ref": "#/components/schemas/numbers.v1.a2p_brand_campaign_compliance_registration_sids"
-          }
+        "required": [
+          "phoneNumberSid",
+          "accountSid",
+          "externalPhoneNumberStatus",
+          "phoneNumber"
         ],
+        "type": "object",
+        "properties": {
+          "accountSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^AC[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "Account Sid that the phone number belongs to in Twilio. This is only returned for phone numbers that already exist in Twilio’s inventory and belong to your account or sub account."
+          },
+          "phoneNumberSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^PN[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "Phone Number SID for the requested phone number resource"
+          },
+          "phoneNumber": {
+            "type": "string"
+          },
+          "externalPhoneNumberStatus": {
+            "type": "string"
+          },
+          "campaignSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^CM[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "Campaign Sid associated with the phone number",
+            "nullable": true
+          },
+          "messagingServiceSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^MG[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "Messaging Service Sid that the number is associated with",
+            "nullable": true
+          },
+          "externalCampaignId": {
+            "type": "string",
+            "description": "The identifier for a campaign in the registrar. Typically, this is the TCR Campaign Id.",
+            "nullable": true
+          },
+          "lastUpdated": {
+            "type": "string",
+            "description": "The date and time when the A2P registration details were last updated",
+            "format": "date-time",
+            "nullable": true
+          },
+          "campaignComplianceRegistrationSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^BU[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "Sid associated with campaign compliance registration",
+            "nullable": true
+          },
+          "brandComplianceRegistrationSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^BU[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "Sid associated with brand compliance registration",
+            "nullable": true
+          }
+        },
         "description": "Single A2P registration details response including brand and campaign compliance registration SIDs"
       },
       "numbers.v1.a2p_registration_details_campaign_list": {
@@ -267532,15 +268924,75 @@
         }
       },
       "numbers.v2.a2p_registration_details_fetch": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/numbers.v2.a2p_registration_details"
-          },
-          {
-            "$ref": "#/components/schemas/numbers.v2.a2p_brand_sids"
-          }
+        "required": [
+          "phoneNumberSid",
+          "accountSid",
+          "externalPhoneNumberStatus",
+          "phoneNumber"
         ],
+        "type": "object",
+        "properties": {
+          "accountSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^AC[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "Account Sid that the phone number belongs to in Twilio. This is only returned for phone numbers that already exist in Twilio's inventory and belong to your account or sub account."
+          },
+          "phoneNumberSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^PN[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "Phone Number SID for the requested phone number resource"
+          },
+          "phoneNumber": {
+            "type": "string"
+          },
+          "externalPhoneNumberStatus": {
+            "type": "string"
+          },
+          "campaignSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^CM[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "Campaign Sid associated with the phone number",
+            "nullable": true
+          },
+          "messagingServiceSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^MG[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "Messaging Service Sid that the number is associated with",
+            "nullable": true
+          },
+          "externalCampaignId": {
+            "type": "string",
+            "description": "The identifier for a campaign in the registrar. Typically, this is the TCR Campaign Id.",
+            "nullable": true
+          },
+          "lastUpdated": {
+            "type": "string",
+            "description": "The date and time when the A2P registration details were last updated",
+            "format": "date-time",
+            "nullable": true
+          },
+          "brandRegistrationSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^BN[0-9a-f]{32}$",
+            "type": "string",
+            "description": "Sid associated with campaign's brand",
+            "nullable": true
+          },
+          "externalBrandId": {
+            "type": "string",
+            "description": "The external brand identifier (e.g., TCR Brand ID)",
+            "nullable": true
+          }
+        },
         "description": "Single A2P registration details response including brand and campaign identifiers"
       },
       "numbers.v2.address": {
@@ -270011,6 +271463,41 @@
           }
         }
       },
+      "ShortCodeApplicationDocument": {
+        "type": "object",
+        "properties": {
+          "sid": {
+            "type": "string",
+            "description": "The unique identifier of the document."
+          },
+          "document_type": {
+            "enum": [
+              "SC_LETTER_OF_AUTHORIZATION",
+              "CALL_TO_ACTION_OR_OPT_IN_MOCKUP",
+              "SMS_CAMPAIGN_TERMS_OF_SERVICE",
+              "SMS_PRIVACY_POLICY",
+              "MIGRATION_REQUEST_LETTER",
+              "SHORT_CODE_LEASE_RECEIPT",
+              "ADDITIONAL_SUPPORTING_DOCUMENTS_1",
+              "ADDITIONAL_SUPPORTING_DOCUMENTS_2",
+              "ADDITIONAL_SUPPORTING_DOCUMENTS_3",
+              "ADDITIONAL_SUPPORTING_DOCUMENTS_4",
+              "ADDITIONAL_SUPPORTING_DOCUMENTS_5",
+              "ADDITIONAL_SUPPORTING_DOCUMENTS_6",
+              "ADDITIONAL_SUPPORTING_DOCUMENTS_7",
+              "ADDITIONAL_SUPPORTING_DOCUMENTS_8",
+              "ADDITIONAL_SUPPORTING_DOCUMENTS_9",
+              "ADDITIONAL_SUPPORTING_DOCUMENTS_10"
+            ],
+            "type": "string",
+            "description": "The type of document."
+          },
+          "friendly_name": {
+            "type": "string",
+            "description": "The friendly name of the document."
+          }
+        }
+      },
       "CountryRequirementList": {
         "type": "array",
         "items": {
@@ -270374,6 +271861,11 @@
             "pattern": "^BU[0-9a-fA-F]{32}$",
             "type": "string",
             "description": "Bundle SID of customer's profile"
+          },
+          "isv_opt_in_consent": {
+            "type": "boolean",
+            "description": "ISV opt-in consent flag. Defaults to true if not provided. Only rejected when explicitly set to false for ISV customers registering in Australia.\n",
+            "default": true
           }
         }
       },
@@ -275495,6 +276987,11 @@
             "type": "string",
             "description": "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
             "format": "date-time",
+            "nullable": true
+          },
+          "initiated_by": {
+            "type": "string",
+            "description": "The SID or identifier that triggered this Execution. For example, a Call SID if triggered by an incoming call, a Message SID if triggered by an incoming message, a Request SID if triggered by a REST API request, and so on.",
             "nullable": true
           },
           "url": {
@@ -283492,12 +284989,13 @@
       },
       "room_enum_room_type": {
         "enum": [
+          "group",
           "go",
           "peer-to-peer",
-          "group",
           "group-small"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "Type of room. Use `group` for new implementations. `go`, `peer-to-peer`, and `group-small` are deprecated."
       },
       "room_enum_video_codec": {
         "enum": [
@@ -286510,10 +288008,6 @@
         "type": "http",
         "scheme": "basic"
       },
-      "twilio_flex_api_v1_accountSid_authToken": {
-        "type": "http",
-        "scheme": "basic"
-      },
       "twilio_flex_v1_accountSid_authToken": {
         "type": "http",
         "scheme": "basic"
@@ -287810,6 +289304,10 @@
       "name": "MessagingV2TypingIndicator"
     },
     {
+      "name": "MessagingV3TypingIndicator",
+      "description": "Send typing indicators to OTT channel recipients (WhatsApp, Apple Messages for Business).\n"
+    },
+    {
       "name": "MonitorV1Alert"
     },
     {
@@ -287985,6 +289483,9 @@
     },
     {
       "name": "V2ShortCodeApplicationBundleInquiries"
+    },
+    {
+      "name": "V2ShortCodeDocuments"
     },
     {
       "name": "OauthV1Index"

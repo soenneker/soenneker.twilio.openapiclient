@@ -9,9 +9,57 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class AssistantsV1ServiceToolWithPolicies : global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceTool, IParsable
+    public partial class AssistantsV1ServiceToolWithPolicies : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Tool resource.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AccountSid { get; set; }
+#nullable restore
+#else
+        public string AccountSid { get; set; }
+#endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The date and time in GMT when the Tool was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
+        public DateTimeOffset? DateCreated { get; set; }
+        /// <summary>The date and time in GMT when the Tool was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
+        public DateTimeOffset? DateUpdated { get; set; }
+        /// <summary>The description of the tool.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
+        /// <summary>True if the tool is enabled.</summary>
+        public bool? Enabled { get; set; }
+        /// <summary>The tool ID.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; set; }
+#nullable restore
+#else
+        public string Id { get; set; }
+#endif
+        /// <summary>The metadata related to method, url, input_schema to used with the Tool.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies_meta? Meta { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies_meta Meta { get; set; }
+#endif
+        /// <summary>The name of the tool.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
         /// <summary>The Policies associated with the tool.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -20,12 +68,37 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy> Policies { get; set; }
 #endif
+        /// <summary>The authentication requirement for the tool.</summary>
+        public bool? RequiresAuth { get; set; }
+        /// <summary>The type of the tool. (&apos;WEBHOOK&apos;)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Type { get; set; }
+#nullable restore
+#else
+        public string Type { get; set; }
+#endif
+        /// <summary>The url of the tool resource.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Url { get; set; }
+#nullable restore
+#else
+        public string Url { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies"/> and sets the default values.
+        /// </summary>
+        public AssistantsV1ServiceToolWithPolicies()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies();
@@ -34,22 +107,44 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "account_sid", n => { AccountSid = n.GetStringValue(); } },
+                { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
+                { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
+                { "enabled", n => { Enabled = n.GetBoolValue(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies_meta>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies_meta.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetStringValue(); } },
                 { "policies", n => { Policies = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "requires_auth", n => { RequiresAuth = n.GetBoolValue(); } },
+                { "type", n => { Type = n.GetStringValue(); } },
+                { "url", n => { Url = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("account_sid", AccountSid);
+            writer.WriteDateTimeOffsetValue("date_created", DateCreated);
+            writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
+            writer.WriteStringValue("description", Description);
+            writer.WriteBoolValue("enabled", Enabled);
+            writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies_meta>("meta", Meta);
+            writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy>("policies", Policies);
+            writer.WriteBoolValue("requires_auth", RequiresAuth);
+            writer.WriteStringValue("type", Type);
+            writer.WriteStringValue("url", Url);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

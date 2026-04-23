@@ -33,6 +33,7 @@ using Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2;
 using Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2;
+using Soenneker.Twilio.OpenApiClient.Twilio_messaging_v3;
 using Soenneker.Twilio.OpenApiClient.Twilio_monitor_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2;
 using Soenneker.Twilio.OpenApiClient.Twilio_notify_v1;
@@ -204,6 +205,11 @@ namespace Soenneker.Twilio.OpenApiClient
         public global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.Twilio_messaging_v2RequestBuilder Twilio_messaging_v2
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.Twilio_messaging_v2RequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The twilio_messaging_v3 property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v3.Twilio_messaging_v3RequestBuilder Twilio_messaging_v3
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v3.Twilio_messaging_v3RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The twilio_monitor_v1 property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_monitor_v1.Twilio_monitor_v1RequestBuilder Twilio_monitor_v1
