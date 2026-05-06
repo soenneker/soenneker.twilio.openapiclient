@@ -16,6 +16,7 @@ using Soenneker.Twilio.OpenApiClient.Twilio_chat_v3;
 using Soenneker.Twilio.OpenApiClient.Twilio_content_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_content_v2;
 using Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1;
+using Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2;
 using Soenneker.Twilio.OpenApiClient.Twilio_events_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_flex_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_flex_v2;
@@ -24,13 +25,17 @@ using Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations;
 using Soenneker.Twilio.OpenApiClient.Twilio_iam_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_insights_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_insights_v2;
+using Soenneker.Twilio.OpenApiClient.Twilio_insights_v3;
 using Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2;
+using Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3;
 using Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2;
 using Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1;
+using Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2;
 using Soenneker.Twilio.OpenApiClient.Twilio_lookups_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2;
 using Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1;
+using Soenneker.Twilio.OpenApiClient.Twilio_memory_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2;
 using Soenneker.Twilio.OpenApiClient.Twilio_messaging_v3;
@@ -58,6 +63,7 @@ using Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_verify_v2;
 using Soenneker.Twilio.OpenApiClient.Twilio_video_v1;
 using Soenneker.Twilio.OpenApiClient.Twilio_voice_v1;
+using Soenneker.Twilio.OpenApiClient.Twilio_voice_v3;
 using Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1;
 using System.Collections.Generic;
 using System.IO;
@@ -121,6 +127,11 @@ namespace Soenneker.Twilio.OpenApiClient
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.Twilio_conversations_v1RequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The twilio_conversations_v2 property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.Twilio_conversations_v2RequestBuilder Twilio_conversations_v2
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.Twilio_conversations_v2RequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The twilio_events_v1 property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_events_v1.Twilio_events_v1RequestBuilder Twilio_events_v1
         {
@@ -161,10 +172,20 @@ namespace Soenneker.Twilio.OpenApiClient
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v2.Twilio_insights_v2RequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The twilio_insights_v3 property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.Twilio_insights_v3RequestBuilder Twilio_insights_v3
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.Twilio_insights_v3RequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The twilio_intelligence_v2 property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.Twilio_intelligence_v2RequestBuilder Twilio_intelligence_v2
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.Twilio_intelligence_v2RequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The twilio_intelligence_v3 property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.Twilio_intelligence_v3RequestBuilder Twilio_intelligence_v3
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.Twilio_intelligence_v3RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The twilio_ip_messaging_v1 property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.Twilio_ip_messaging_v1RequestBuilder Twilio_ip_messaging_v1
@@ -181,6 +202,11 @@ namespace Soenneker.Twilio.OpenApiClient
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.Twilio_knowledge_v1RequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The twilio_knowledge_v2 property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.Twilio_knowledge_v2RequestBuilder Twilio_knowledge_v2
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.Twilio_knowledge_v2RequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The twilio_lookups_v1 property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_lookups_v1.Twilio_lookups_v1RequestBuilder Twilio_lookups_v1
         {
@@ -195,6 +221,11 @@ namespace Soenneker.Twilio.OpenApiClient
         public global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.Twilio_marketplace_v1RequestBuilder Twilio_marketplace_v1
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.Twilio_marketplace_v1RequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The twilio_memory_v1 property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.Twilio_memory_v1RequestBuilder Twilio_memory_v1
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.Twilio_memory_v1RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The twilio_messaging_v1 property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.Twilio_messaging_v1RequestBuilder Twilio_messaging_v1
@@ -330,6 +361,11 @@ namespace Soenneker.Twilio.OpenApiClient
         public global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.Twilio_voice_v1RequestBuilder Twilio_voice_v1
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.Twilio_voice_v1RequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The twilio_voice_v3 property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.Twilio_voice_v3RequestBuilder Twilio_voice_v3
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.Twilio_voice_v3RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The twilio_wireless_v1 property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.Twilio_wireless_v1RequestBuilder Twilio_wireless_v1

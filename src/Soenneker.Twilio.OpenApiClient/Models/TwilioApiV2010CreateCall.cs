@@ -126,6 +126,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string RecordingChannels { get; set; }
 #endif
+        /// <summary>The identifier of the configuration to be used when creating and processing the recording</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RecordingConfigurationId { get; set; }
+#nullable restore
+#else
+        public string RecordingConfigurationId { get; set; }
+#endif
         /// <summary>The URL that we call when the recording is available to be accessed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -275,6 +283,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "Method", n => { Method = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCall_Method>(); } },
                 { "Record", n => { Record = n.GetBoolValue(); } },
                 { "RecordingChannels", n => { RecordingChannels = n.GetStringValue(); } },
+                { "RecordingConfigurationId", n => { RecordingConfigurationId = n.GetStringValue(); } },
                 { "RecordingStatusCallback", n => { RecordingStatusCallback = n.GetStringValue(); } },
                 { "RecordingStatusCallbackEvent", n => { RecordingStatusCallbackEvent = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "RecordingStatusCallbackMethod", n => { RecordingStatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCall_RecordingStatusCallbackMethod>(); } },
@@ -320,6 +329,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCall_Method>("Method", Method);
             writer.WriteBoolValue("Record", Record);
             writer.WriteStringValue("RecordingChannels", RecordingChannels);
+            writer.WriteStringValue("RecordingConfigurationId", RecordingConfigurationId);
             writer.WriteStringValue("RecordingStatusCallback", RecordingStatusCallback);
             writer.WriteCollectionOfPrimitiveValues<string>("RecordingStatusCallbackEvent", RecordingStatusCallbackEvent);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCall_RecordingStatusCallbackMethod>("RecordingStatusCallbackMethod", RecordingStatusCallbackMethod);

@@ -22,6 +22,22 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Identity { get; set; }
 #endif
+        /// <summary>The resource id for resource-level role assignments</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ResourceId { get; set; }
+#nullable restore
+#else
+        public string ResourceId { get; set; }
+#endif
+        /// <summary>The resource type for resource-level role assignments</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ResourceType { get; set; }
+#nullable restore
+#else
+        public string ResourceType { get; set; }
+#endif
         /// <summary>Twilio Role Sid representing assigned role</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,6 +88,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "identity", n => { Identity = n.GetStringValue(); } },
+                { "resource_id", n => { ResourceId = n.GetStringValue(); } },
+                { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "role_sid", n => { RoleSid = n.GetStringValue(); } },
                 { "scope", n => { Scope = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -85,6 +103,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("identity", Identity);
+            writer.WriteStringValue("resource_id", ResourceId);
+            writer.WriteStringValue("resource_type", ResourceType);
             writer.WriteStringValue("role_sid", RoleSid);
             writer.WriteStringValue("scope", Scope);
             writer.WriteStringValue("sid", Sid);

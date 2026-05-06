@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RoleAssignmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/RoleAssignments{?Identity*,PageSize*,PageToken*,Scope*}", pathParameters)
+        public RoleAssignmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/RoleAssignments{?Identity*,PageSize*,PageToken*,ResourceId*,ResourceType*,Scope*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RoleAssignmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/RoleAssignments{?Identity*,PageSize*,PageToken*,Scope*}", rawUrl)
+        public RoleAssignmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/RoleAssignments{?Identity*,PageSize*,PageToken*,ResourceId*,ResourceType*,Scope*}", rawUrl)
         {
         }
         /// <summary>
@@ -168,6 +168,22 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
 #nullable restore
 #else
             public string PageToken { get; set; }
+#endif
+            /// <summary>Filter by resource id for resource-level role assignments</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? ResourceId { get; set; }
+#nullable restore
+#else
+            public string ResourceId { get; set; }
+#endif
+            /// <summary>Filter by resource type for resource-level role assignments</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? ResourceType { get; set; }
+#nullable restore
+#else
+            public string ResourceType { get; set; }
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

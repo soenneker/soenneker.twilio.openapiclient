@@ -14,6 +14,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The SID of the User that created the Flow.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AuthorSid { get; set; }
+#nullable restore
+#else
+        public string AuthorSid { get; set; }
+#endif
         /// <summary>Description of change made in the revision.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,6 +73,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "AuthorSid", n => { AuthorSid = n.GetStringValue(); } },
                 { "CommitMessage", n => { CommitMessage = n.GetStringValue(); } },
                 { "Definition", n => { Definition = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2CreateFlow_Definition>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2CreateFlow_Definition.CreateFromDiscriminatorValue); } },
                 { "FriendlyName", n => { FriendlyName = n.GetStringValue(); } },
@@ -78,6 +87,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("AuthorSid", AuthorSid);
             writer.WriteStringValue("CommitMessage", CommitMessage);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2CreateFlow_Definition>("Definition", Definition);
             writer.WriteStringValue("FriendlyName", FriendlyName);
