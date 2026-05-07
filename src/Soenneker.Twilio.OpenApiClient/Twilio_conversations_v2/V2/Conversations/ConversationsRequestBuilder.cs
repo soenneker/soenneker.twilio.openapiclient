@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversation
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_conversations_v2.v2.Conversations.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ConversationS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("Conversation%2Did", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

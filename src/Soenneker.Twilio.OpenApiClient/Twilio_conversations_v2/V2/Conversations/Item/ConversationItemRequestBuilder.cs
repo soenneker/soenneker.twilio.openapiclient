@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Models;
+using Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.Actions;
 using Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.Communications;
 using Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.Participants;
 using System.Collections.Generic;
@@ -14,11 +15,16 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_conversations_v2\v2\Conversations\{ConversationS-id}
+    /// Builds and executes requests for operations under \twilio_conversations_v2\v2\Conversations\{Conversation-id}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ConversationSItemRequestBuilder : BaseRequestBuilder
+    public partial class ConversationItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The Actions property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.Actions.ActionsRequestBuilder Actions
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.Actions.ActionsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The Communications property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.Communications.CommunicationsRequestBuilder Communications
         {
@@ -30,19 +36,19 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversation
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.Participants.ParticipantsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationSItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConversationSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{ConversationS%2Did}", pathParameters)
+        public ConversationItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{Conversation%2Did}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationSItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConversationSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{ConversationS%2Did}", rawUrl)
+        public ConversationItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{Conversation%2Did}", rawUrl)
         {
         }
         /// <summary>
@@ -260,11 +266,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversation
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationSItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationSItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationSItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.ConversationItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

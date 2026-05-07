@@ -79455,6 +79455,370 @@
         "pathType": "instance"
       }
     },
+    "/twilio_conversations_v2/v2/Conversations/{ConversationId}/Actions": {
+      "post": {
+        "tags": [
+          "ConversationsV2Action"
+        ],
+        "summary": "Create an Action",
+        "description": "Creates an Action within a Conversation. Currently supports SEND_MESSAGE,\nwhich sends a message to recipients via the configured channel.\n\nReturns 202 Accepted with the Action in PENDING status. Poll\n`GET /v2/Conversations/{ConversationId}/Actions/{ActionId}` to check completion.\n",
+        "operationId": "twilio_conversations_v2_CreateConversationAction",
+        "requestBody": {
+          "description": "The action to perform.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "oneOf": [
+                  {
+                    "required": [
+                      "type",
+                      "payload"
+                    ],
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "description": "Action type discriminator. Accepted values: SEND_MESSAGE.",
+                        "example": "SEND_MESSAGE"
+                      },
+                      "payload": {
+                        "$ref": "#/components/schemas/conversations.v2.send_message_payload"
+                      }
+                    }
+                  }
+                ],
+                "discriminator": {
+                  "propertyName": "type"
+                }
+              },
+              "examples": {
+                "sendMessage": {
+                  "summary": "Send a message",
+                  "value": {
+                    "type": "SEND_MESSAGE",
+                    "payload": {
+                      "from": {
+                        "address": "+18005550100",
+                        "channel": "SMS"
+                      },
+                      "to": [
+                        {
+                          "address": "+18005550199",
+                          "channel": "SMS"
+                        }
+                      ],
+                      "content": {
+                        "text": "Hello from the Actions API!"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Action accepted. Returns the Action in PENDING status.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "id",
+                    "type",
+                    "status",
+                    "conversationId",
+                    "createdAt"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "Unique identifier for this Action.",
+                      "example": "conv_action_01k1etx3jbfx88476ccja0889e"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "The type of action. Accepted values: SEND_MESSAGE.",
+                      "example": "SEND_MESSAGE"
+                    },
+                    "status": {
+                      "enum": [
+                        "PENDING",
+                        "COMPLETED",
+                        "FAILED"
+                      ],
+                      "type": "string",
+                      "description": "Current status of the Action.\n- PENDING: Action accepted, awaiting downstream confirmation\n- COMPLETED: Downstream backend confirmed the action\n- FAILED: Downstream backend reported a failure\n",
+                      "example": "PENDING"
+                    },
+                    "conversationId": {
+                      "type": "string",
+                      "description": "The conversation this action belongs to.",
+                      "example": "conv_conversation_01k1etx3jbfx88476ccja0889c"
+                    },
+                    "related": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "Named identifiers from downstream. For SEND_MESSAGE:\n- messageSid: The downstream message SID (present when PENDING or COMPLETED)\n- communicationId: The Communication ID (present when COMPLETED)\n",
+                      "example": {
+                        "messageSid": "SM1234567890abcdef1234567890abcdef",
+                        "communicationId": "conv_communication_01k1etx3jbfx88476ccja0889c"
+                      }
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "description": "Timestamp when the action was created.",
+                      "format": "date-time",
+                      "example": "2026-03-30T10:30:00Z"
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "description": "Timestamp when the action was last updated.",
+                      "format": "date-time",
+                      "example": "2026-03-30T10:30:02Z"
+                    },
+                    "completedAt": {
+                      "type": "string",
+                      "description": "Timestamp when the action reached a terminal status.",
+                      "format": "date-time",
+                      "example": "2026-03-30T10:30:02Z"
+                    }
+                  },
+                  "example": {
+                    "id": "conv_action_01k1etx3jbfx88476ccja0889e",
+                    "type": "SEND_MESSAGE",
+                    "status": "COMPLETED",
+                    "conversationId": "conv_conversation_01k1etx3jbfx88476ccja0889c",
+                    "related": {
+                      "messageSid": "SM1234567890abcdef1234567890abcdef",
+                      "communicationId": "conv_communication_01k1etx3jbfx88476ccja0889c"
+                    },
+                    "createdAt": "2026-03-30T10:30:00Z",
+                    "completedAt": "2026-03-30T10:30:02Z"
+                  }
+                },
+                "example": {
+                  "id": "conv_action_01k1etx3jbfx88476ccja0889e",
+                  "type": "SEND_MESSAGE",
+                  "status": "PENDING",
+                  "conversationId": "conv_conversation_01k1etx3jbfx88476ccja0889c",
+                  "related": {
+                    "messageSid": "SM1234567890abcdef1234567890abcdef"
+                  },
+                  "createdAt": "2026-03-30T10:30:00Z"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          },
+          "503": {
+            "$ref": "#/components/responses/ServiceUnavailable"
+          }
+        },
+        "security": [
+          {
+            "basic_apikey_or_accountsid": [ ]
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://conversations.twilio.com"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "ConversationId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "x-twilio": {
+            "shortDescription": "Conversation ID",
+            "normalizeSid": true
+          }
+        }
+      ],
+      "x-twilio": {
+        "pathType": "list"
+      }
+    },
+    "/twilio_conversations_v2/v2/Conversations/{ConversationId}/Actions/{ActionId}": {
+      "get": {
+        "tags": [
+          "ConversationsV2Action"
+        ],
+        "summary": "Get Action Status",
+        "description": "Retrieve the current status of an Action.",
+        "operationId": "twilio_conversations_v2_FetchConversationAction",
+        "responses": {
+          "200": {
+            "description": "Action status.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "id",
+                    "type",
+                    "status",
+                    "conversationId",
+                    "createdAt"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "Unique identifier for this Action.",
+                      "example": "conv_action_01k1etx3jbfx88476ccja0889e"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "The type of action. Accepted values: SEND_MESSAGE.",
+                      "example": "SEND_MESSAGE"
+                    },
+                    "status": {
+                      "enum": [
+                        "PENDING",
+                        "COMPLETED",
+                        "FAILED"
+                      ],
+                      "type": "string",
+                      "description": "Current status of the Action.\n- PENDING: Action accepted, awaiting downstream confirmation\n- COMPLETED: Downstream backend confirmed the action\n- FAILED: Downstream backend reported a failure\n",
+                      "example": "PENDING"
+                    },
+                    "conversationId": {
+                      "type": "string",
+                      "description": "The conversation this action belongs to.",
+                      "example": "conv_conversation_01k1etx3jbfx88476ccja0889c"
+                    },
+                    "related": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "Named identifiers from downstream. For SEND_MESSAGE:\n- messageSid: The downstream message SID (present when PENDING or COMPLETED)\n- communicationId: The Communication ID (present when COMPLETED)\n",
+                      "example": {
+                        "messageSid": "SM1234567890abcdef1234567890abcdef",
+                        "communicationId": "conv_communication_01k1etx3jbfx88476ccja0889c"
+                      }
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "description": "Timestamp when the action was created.",
+                      "format": "date-time",
+                      "example": "2026-03-30T10:30:00Z"
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "description": "Timestamp when the action was last updated.",
+                      "format": "date-time",
+                      "example": "2026-03-30T10:30:02Z"
+                    },
+                    "completedAt": {
+                      "type": "string",
+                      "description": "Timestamp when the action reached a terminal status.",
+                      "format": "date-time",
+                      "example": "2026-03-30T10:30:02Z"
+                    }
+                  },
+                  "example": {
+                    "id": "conv_action_01k1etx3jbfx88476ccja0889e",
+                    "type": "SEND_MESSAGE",
+                    "status": "COMPLETED",
+                    "conversationId": "conv_conversation_01k1etx3jbfx88476ccja0889c",
+                    "related": {
+                      "messageSid": "SM1234567890abcdef1234567890abcdef",
+                      "communicationId": "conv_communication_01k1etx3jbfx88476ccja0889c"
+                    },
+                    "createdAt": "2026-03-30T10:30:00Z",
+                    "completedAt": "2026-03-30T10:30:02Z"
+                  }
+                },
+                "example": {
+                  "id": "conv_action_01k1etx3jbfx88476ccja0889e",
+                  "type": "SEND_MESSAGE",
+                  "status": "COMPLETED",
+                  "conversationId": "conv_conversation_01k1etx3jbfx88476ccja0889c",
+                  "related": {
+                    "messageSid": "SM1234567890abcdef1234567890abcdef",
+                    "communicationId": "conv_communication_01k1etx3jbfx88476ccja0889c"
+                  },
+                  "createdAt": "2026-03-30T10:30:00Z",
+                  "completedAt": "2026-03-30T10:30:02Z"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          },
+          "503": {
+            "$ref": "#/components/responses/ServiceUnavailable"
+          }
+        },
+        "security": [
+          {
+            "basic_apikey_or_accountsid": [ ]
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://conversations.twilio.com"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "ConversationId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "x-twilio": {
+            "shortDescription": "Conversation ID",
+            "normalizeSid": true
+          }
+        },
+        {
+          "name": "ActionId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "x-twilio": {
+            "shortDescription": "Action ID",
+            "normalizeSid": true
+          }
+        }
+      ]
+    },
     "/twilio_conversations_v2/v2/Conversations/{ConversationSid}/Participants": {
       "get": {
         "tags": [
@@ -115321,8 +115685,8 @@
               "application/json": {
                 "schema": {
                   "required": [
-                    "status",
-                    "dateCreated"
+                    "dateCreated",
+                    "status"
                   ],
                   "type": "object",
                   "properties": {
@@ -138001,6 +138365,60 @@
           }
         }
       },
+      "get": {
+        "tags": [
+          "Profile"
+        ],
+        "summary": "Get Profile",
+        "description": "Retrieve profile traits by profile ID. Use the `traitGroups` query parameter to restrict results to a comma-separated allow list of trait group names. For large sets of traits, prefer using the dedicated `/Traits` endpoint for pagination.",
+        "operationId": "twilio_memory_v1_FetchProfile",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/TraitGroupsQueryParam"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A profile.",
+            "headers": {
+              "Canonical-Profile-Id": {
+                "$ref": "#/components/headers/Canonical-Profile-Id"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Profile"
+                }
+              }
+            }
+          },
+          "301": {
+            "$ref": "#/components/responses/MovedPermanently"
+          },
+          "400": {
+            "$ref": "#/components/responses/twilio_memory_v1_BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/twilio_memory_v1_Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/twilio_memory_v1_Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/twilio_memory_v1_NotFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/twilio_memory_v1_TooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/twilio_memory_v1_InternalServerError"
+          },
+          "503": {
+            "$ref": "#/components/responses/twilio_memory_v1_ServiceUnavailable"
+          }
+        }
+      },
       "patch": {
         "tags": [
           "Profile"
@@ -140381,6 +140799,65 @@
                       "description": "URI to check operation status."
                     }
                   }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/twilio_memory_v1_BadRequest"
+          },
+          "404": {
+            "$ref": "#/components/responses/twilio_memory_v1_NotFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/twilio_memory_v1_TooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/twilio_memory_v1_InternalServerError"
+          },
+          "503": {
+            "$ref": "#/components/responses/twilio_memory_v1_ServiceUnavailable"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Store"
+        ],
+        "summary": "Delete a Memory Store",
+        "description": "Deletes the Memory Store and all associated resources including identity resolution settings, trait groups, profiles, traits, observations, and summaries.",
+        "operationId": "twilio_memory_v1_DeleteStore",
+        "responses": {
+          "202": {
+            "description": "Memory Store deletion request accepted.",
+            "headers": {
+              "Operation-Id": {
+                "$ref": "#/components/headers/twilio_memory_v1_OperationId"
+              },
+              "Location": {
+                "$ref": "#/components/headers/twilio_memory_v1_OperationLocation"
+              },
+              "Retry-After": {
+                "$ref": "#/components/headers/twilio_memory_v1_OperationRetryAfter"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "maxLength": 512,
+                      "type": "string",
+                      "example": "Memory Store deletion request accepted for processing."
+                    },
+                    "statusUrl": {
+                      "maxLength": 512,
+                      "type": "string",
+                      "description": "URI to check operation status."
+                    }
+                  },
+                  "additionalProperties": false
                 }
               }
             }
@@ -258147,17 +258624,17 @@
       },
       "assistants.v1.service.assistant_with_tools_and_knowledge": {
         "required": [
-          "model",
-          "date_updated",
-          "owner",
-          "personality_prompt",
-          "id",
           "account_sid",
-          "knowledge",
           "customer_ai",
-          "date_created",
+          "owner",
+          "name",
+          "personality_prompt",
           "tools",
-          "name"
+          "model",
+          "date_created",
+          "knowledge",
+          "date_updated",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -258253,15 +258730,15 @@
       },
       "assistants.v1.service.tool_with_policies": {
         "required": [
-          "date_updated",
-          "description",
-          "enabled",
-          "id",
-          "date_created",
-          "type",
-          "meta",
+          "requires_auth",
           "name",
-          "requires_auth"
+          "description",
+          "date_created",
+          "meta",
+          "date_updated",
+          "type",
+          "enabled",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -276792,17 +277269,17 @@
       "TextResult": {
         "title": "Text result",
         "required": [
-          "metadata",
-          "operator",
-          "conversationId",
-          "id",
-          "result",
-          "accountId",
+          "outputFormat",
           "dateCreated",
-          "referenceIds",
+          "operator",
+          "accountId",
+          "conversationId",
           "executionDetails",
           "intelligenceConfiguration",
-          "outputFormat"
+          "result",
+          "metadata",
+          "referenceIds",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -276878,17 +277355,17 @@
       "JSONResult": {
         "title": "JSON result",
         "required": [
-          "metadata",
-          "operator",
-          "conversationId",
-          "id",
-          "result",
-          "accountId",
+          "outputFormat",
           "dateCreated",
-          "referenceIds",
+          "operator",
+          "accountId",
+          "conversationId",
           "executionDetails",
           "intelligenceConfiguration",
-          "outputFormat"
+          "result",
+          "metadata",
+          "referenceIds",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -276955,17 +277432,17 @@
       "ClassificationResult": {
         "title": "Classification result",
         "required": [
-          "metadata",
-          "operator",
-          "conversationId",
-          "id",
-          "result",
-          "accountId",
+          "outputFormat",
           "dateCreated",
-          "referenceIds",
+          "operator",
+          "accountId",
+          "conversationId",
           "executionDetails",
           "intelligenceConfiguration",
-          "outputFormat"
+          "result",
+          "metadata",
+          "referenceIds",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -277041,17 +277518,17 @@
       "ExtractionResult": {
         "title": "Extraction result",
         "required": [
-          "metadata",
-          "operator",
-          "conversationId",
-          "id",
-          "result",
-          "accountId",
+          "outputFormat",
           "dateCreated",
-          "referenceIds",
+          "operator",
+          "accountId",
+          "conversationId",
           "executionDetails",
           "intelligenceConfiguration",
-          "outputFormat"
+          "result",
+          "metadata",
+          "referenceIds",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -277950,8 +278427,8 @@
       },
       "LanguageOperatorVersion": {
         "required": [
-          "status",
-          "dateCreated"
+          "dateCreated",
+          "status"
         ],
         "type": "object",
         "properties": {
@@ -278010,9 +278487,9 @@
       },
       "CreateOrUpdateOperatorRequest": {
         "required": [
-          "displayName",
+          "outputFormat",
           "prompt",
-          "outputFormat"
+          "displayName"
         ],
         "type": "object",
         "properties": {
@@ -280708,11 +281185,11 @@
       },
       "Knowledge": {
         "required": [
-          "id",
           "createdAt",
-          "status",
           "name",
-          "updatedAt"
+          "updatedAt",
+          "status",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -281040,12 +281517,12 @@
       },
       "KnowledgeBase": {
         "required": [
-          "version",
-          "id",
           "createdAt",
           "displayName",
+          "updatedAt",
+          "version",
           "status",
-          "updatedAt"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -282662,12 +283139,12 @@
       },
       "ObservationInfo": {
         "required": [
-          "content",
-          "id",
           "createdAt",
-          "source",
           "occurredAt",
-          "updatedAt"
+          "content",
+          "source",
+          "updatedAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -282754,12 +283231,12 @@
       },
       "SummaryInfo": {
         "required": [
-          "content",
-          "id",
-          "conversationId",
           "createdAt",
+          "conversationId",
           "occurredAt",
-          "updatedAt"
+          "content",
+          "updatedAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -282923,9 +283400,9 @@
             "items": {
               "required": [
                 "channel",
+                "address",
                 "name",
-                "id",
-                "address"
+                "id"
               ],
               "type": "object",
               "properties": {
@@ -283556,11 +284033,11 @@
       },
       "Store": {
         "required": [
-          "version",
-          "id",
-          "displayName",
           "intelligenceServiceId",
-          "status"
+          "displayName",
+          "version",
+          "status",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -283848,8 +284325,8 @@
       },
       "TraitGroup": {
         "required": [
-          "displayName",
-          "version"
+          "version",
+          "displayName"
         ],
         "type": "object",
         "properties": {
@@ -284375,9 +284852,9 @@
       },
       "CreateDataMappingInput": {
         "required": [
-          "displayName",
+          "mappingTo",
           "mappingFrom",
-          "mappingTo"
+          "displayName"
         ],
         "type": "object",
         "properties": {
@@ -284408,13 +284885,13 @@
       },
       "DataMapping": {
         "required": [
-          "mappingFrom",
-          "version",
-          "id",
           "createdAt",
           "displayName",
+          "mappingFrom",
+          "updatedAt",
           "mappingTo",
-          "updatedAt"
+          "version",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -284486,12 +284963,12 @@
       },
       "RecallObservationInfo": {
         "required": [
-          "content",
-          "id",
           "createdAt",
-          "source",
           "occurredAt",
-          "updatedAt"
+          "content",
+          "source",
+          "updatedAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -284552,12 +285029,12 @@
       },
       "RecallSummaryInfo": {
         "required": [
-          "content",
-          "id",
-          "conversationId",
           "createdAt",
+          "conversationId",
           "occurredAt",
-          "updatedAt"
+          "content",
+          "updatedAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -290399,10 +290876,10 @@
       },
       "numbers.v1.a2p_registration_details_fetch": {
         "required": [
+          "phoneNumber",
           "externalPhoneNumberStatus",
           "phoneNumberSid",
-          "accountSid",
-          "phoneNumber"
+          "accountSid"
         ],
         "type": "object",
         "properties": {
@@ -290748,10 +291225,10 @@
       },
       "numbers.v2.a2p_registration_details_fetch": {
         "required": [
+          "phoneNumber",
           "externalPhoneNumberStatus",
           "phoneNumberSid",
-          "accountSid",
-          "phoneNumber"
+          "accountSid"
         ],
         "type": "object",
         "properties": {
