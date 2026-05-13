@@ -168094,7 +168094,10 @@
             "type": "string"
           },
           "actions": {
-            "$ref": "#/components/schemas/CarouselActions"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarouselAction"
+            }
           }
         },
         "additionalProperties": false
@@ -168175,7 +168178,10 @@
             "type": "string"
           },
           "items": {
-            "$ref": "#/components/schemas/ListItems"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListItem"
+            }
           }
         },
         "additionalProperties": false,
@@ -168193,7 +168199,10 @@
             "type": "string"
           },
           "actions": {
-            "$ref": "#/components/schemas/CallToActionActions"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CallToActionAction"
+            }
           }
         },
         "additionalProperties": false,
@@ -168211,7 +168220,10 @@
             "type": "string"
           },
           "actions": {
-            "$ref": "#/components/schemas/QuickReplyActions"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuickReplyAction"
+            }
           }
         },
         "additionalProperties": false,
@@ -168234,7 +168246,10 @@
             }
           },
           "actions": {
-            "$ref": "#/components/schemas/CardActions"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CardAction"
+            }
           }
         },
         "additionalProperties": false,
@@ -168263,7 +168278,10 @@
             "type": "string"
           },
           "actions": {
-            "$ref": "#/components/schemas/CardActions"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CardAction"
+            }
           }
         },
         "additionalProperties": false,
@@ -168283,7 +168301,10 @@
             "type": "number"
           },
           "actions": {
-            "$ref": "#/components/schemas/AuthenticationActions"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AuthenticationAction"
+            }
           }
         },
         "additionalProperties": false,
@@ -168309,7 +168330,10 @@
             "type": "string"
           },
           "items": {
-            "$ref": "#/components/schemas/CatalogItems"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogItem"
+            }
           },
           "dynamic_items": {
             "type": "string"
@@ -168330,7 +168354,10 @@
             "type": "string"
           },
           "cards": {
-            "$ref": "#/components/schemas/CarouselCards"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarouselCard"
+            }
           }
         },
         "additionalProperties": false,
@@ -168418,7 +168445,10 @@
             "type": "string"
           },
           "pages": {
-            "$ref": "#/components/schemas/FlowsPages"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FlowsPage"
+            }
           },
           "type": {
             "type": "string"
@@ -168455,7 +168485,10 @@
             "type": "string"
           },
           "layout": {
-            "$ref": "#/components/schemas/FlowsPageComponents"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FlowsPageComponent"
+            }
           }
         },
         "additionalProperties": false
@@ -172252,29 +172285,48 @@
           "recipients": {
             "type": "array",
             "items": {
+              "required": [
+                "address",
+                "channel"
+              ],
               "type": "object",
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/ConversationsV2ParticipantAddress"
+              "properties": {
+                "address": {
+                  "type": "string",
+                  "description": "\"The address value formatted according to channel type:\n- SMS/VOICE: E.164 phone number (such as \\\"+18005550100\\\")\n- WHATSAPP: Phone number with whatsapp prefix (such as \\\"whatsapp:+18005550100\\\")\n- RCS: Sender ID or phone number with rcs prefix (such as \\\"rcs:brand_acme_agent\\\" or \\\"rcs:+18005550100\\\")\n- CHAT: Customer-defined string identifier\n\"",
+                  "example": "+18005550100"
                 },
-                {
-                  "type": "object",
-                  "properties": {
-                    "deliveryStatus": {
-                      "enum": [
-                        "INITIATED",
-                        "IN_PROGRESS",
-                        "DELIVERED",
-                        "COMPLETED",
-                        "FAILED"
-                      ],
-                      "type": "string",
-                      "additionalProperties": false,
-                      "description": "Delivery status of the Communication to this recipient."
-                    }
-                  }
+                "channel": {
+                  "enum": [
+                    "VOICE",
+                    "SMS",
+                    "RCS",
+                    "WHATSAPP",
+                    "CHAT"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "Channel type for the Participant address.",
+                  "example": "SMS"
+                },
+                "participantId": {
+                  "type": "string",
+                  "description": "Participant ID associated with this address.",
+                  "example": "conv_participant_01k1etx3jbfx88476ccja0889c"
+                },
+                "deliveryStatus": {
+                  "enum": [
+                    "INITIATED",
+                    "IN_PROGRESS",
+                    "DELIVERED",
+                    "COMPLETED",
+                    "FAILED"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "Delivery status of the Communication to this recipient."
                 }
-              ]
+              }
             },
             "description": "Communication recipients."
           },
@@ -190688,6 +190740,7 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
+            "RESOURCE_ID": "#/components/schemas/TwilioMemoryV1OperationResultResourceId",
             "TwilioMemoryV1OperationResultResourceId": "#/components/schemas/TwilioMemoryV1OperationResultResourceId"
           }
         }
@@ -229017,29 +229070,48 @@
                 "recipients": {
                   "type": "array",
                   "items": {
+                    "required": [
+                      "address",
+                      "channel"
+                    ],
                     "type": "object",
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/ConversationsV2ParticipantAddress"
+                    "properties": {
+                      "address": {
+                        "type": "string",
+                        "description": "\"The address value formatted according to channel type:\n- SMS/VOICE: E.164 phone number (such as \\\"+18005550100\\\")\n- WHATSAPP: Phone number with whatsapp prefix (such as \\\"whatsapp:+18005550100\\\")\n- RCS: Sender ID or phone number with rcs prefix (such as \\\"rcs:brand_acme_agent\\\" or \\\"rcs:+18005550100\\\")\n- CHAT: Customer-defined string identifier\n\"",
+                        "example": "+18005550100"
                       },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "deliveryStatus": {
-                            "enum": [
-                              "INITIATED",
-                              "IN_PROGRESS",
-                              "DELIVERED",
-                              "COMPLETED",
-                              "FAILED"
-                            ],
-                            "type": "string",
-                            "additionalProperties": false,
-                            "description": "Delivery status of the Communication to this recipient."
-                          }
-                        }
+                      "channel": {
+                        "enum": [
+                          "VOICE",
+                          "SMS",
+                          "RCS",
+                          "WHATSAPP",
+                          "CHAT"
+                        ],
+                        "type": "string",
+                        "additionalProperties": false,
+                        "description": "Channel type for the Participant address.",
+                        "example": "SMS"
+                      },
+                      "participantId": {
+                        "type": "string",
+                        "description": "Participant ID associated with this address.",
+                        "example": "conv_participant_01k1etx3jbfx88476ccja0889c"
+                      },
+                      "deliveryStatus": {
+                        "enum": [
+                          "INITIATED",
+                          "IN_PROGRESS",
+                          "DELIVERED",
+                          "COMPLETED",
+                          "FAILED"
+                        ],
+                        "type": "string",
+                        "additionalProperties": false,
+                        "description": "Delivery status of the Communication to this recipient."
                       }
-                    ]
+                    }
                   },
                   "description": "Communication recipients."
                 },
@@ -229293,29 +229365,48 @@
           "recipients": {
             "type": "array",
             "items": {
+              "required": [
+                "address",
+                "channel"
+              ],
               "type": "object",
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/ConversationsV2ParticipantAddress"
+              "properties": {
+                "address": {
+                  "type": "string",
+                  "description": "\"The address value formatted according to channel type:\n- SMS/VOICE: E.164 phone number (such as \\\"+18005550100\\\")\n- WHATSAPP: Phone number with whatsapp prefix (such as \\\"whatsapp:+18005550100\\\")\n- RCS: Sender ID or phone number with rcs prefix (such as \\\"rcs:brand_acme_agent\\\" or \\\"rcs:+18005550100\\\")\n- CHAT: Customer-defined string identifier\n\"",
+                  "example": "+18005550100"
                 },
-                {
-                  "type": "object",
-                  "properties": {
-                    "deliveryStatus": {
-                      "enum": [
-                        "INITIATED",
-                        "IN_PROGRESS",
-                        "DELIVERED",
-                        "COMPLETED",
-                        "FAILED"
-                      ],
-                      "type": "string",
-                      "additionalProperties": false,
-                      "description": "Delivery status of the Communication to this recipient."
-                    }
-                  }
+                "channel": {
+                  "enum": [
+                    "VOICE",
+                    "SMS",
+                    "RCS",
+                    "WHATSAPP",
+                    "CHAT"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "Channel type for the Participant address.",
+                  "example": "SMS"
+                },
+                "participantId": {
+                  "type": "string",
+                  "description": "Participant ID associated with this address.",
+                  "example": "conv_participant_01k1etx3jbfx88476ccja0889c"
+                },
+                "deliveryStatus": {
+                  "enum": [
+                    "INITIATED",
+                    "IN_PROGRESS",
+                    "DELIVERED",
+                    "COMPLETED",
+                    "FAILED"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "Delivery status of the Communication to this recipient."
                 }
-              ]
+              }
             },
             "description": "Communication recipients."
           },
@@ -229419,29 +229510,48 @@
           "recipients": {
             "type": "array",
             "items": {
+              "required": [
+                "address",
+                "channel"
+              ],
               "type": "object",
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/ConversationsV2ParticipantAddress"
+              "properties": {
+                "address": {
+                  "type": "string",
+                  "description": "\"The address value formatted according to channel type:\n- SMS/VOICE: E.164 phone number (such as \\\"+18005550100\\\")\n- WHATSAPP: Phone number with whatsapp prefix (such as \\\"whatsapp:+18005550100\\\")\n- RCS: Sender ID or phone number with rcs prefix (such as \\\"rcs:brand_acme_agent\\\" or \\\"rcs:+18005550100\\\")\n- CHAT: Customer-defined string identifier\n\"",
+                  "example": "+18005550100"
                 },
-                {
-                  "type": "object",
-                  "properties": {
-                    "deliveryStatus": {
-                      "enum": [
-                        "INITIATED",
-                        "IN_PROGRESS",
-                        "DELIVERED",
-                        "COMPLETED",
-                        "FAILED"
-                      ],
-                      "type": "string",
-                      "additionalProperties": false,
-                      "description": "Delivery status of the Communication to this recipient."
-                    }
-                  }
+                "channel": {
+                  "enum": [
+                    "VOICE",
+                    "SMS",
+                    "RCS",
+                    "WHATSAPP",
+                    "CHAT"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "Channel type for the Participant address.",
+                  "example": "SMS"
+                },
+                "participantId": {
+                  "type": "string",
+                  "description": "Participant ID associated with this address.",
+                  "example": "conv_participant_01k1etx3jbfx88476ccja0889c"
+                },
+                "deliveryStatus": {
+                  "enum": [
+                    "INITIATED",
+                    "IN_PROGRESS",
+                    "DELIVERED",
+                    "COMPLETED",
+                    "FAILED"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "Delivery status of the Communication to this recipient."
                 }
-              ]
+              }
             },
             "description": "Communication recipients."
           },
@@ -234052,9 +234162,6 @@
         "type": "object",
         "allOf": [
           {
-            "$ref": "#/components/schemas/LanguageOperator"
-          },
-          {
             "required": [
               "displayName",
               "prompt",
@@ -234062,7 +234169,58 @@
             ],
             "type": "object"
           }
-        ]
+        ],
+        "properties": {
+          "id": {
+            "pattern": "^intelligence_operator_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The unique identifier for the Language Operator. Assigned by Twilio (TTID)."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Language Operator describing its purpose."
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the Language Operator further explaining its purpose."
+          },
+          "version": {
+            "type": "integer",
+            "description": "Numeric Operator version. Automatically incremented with each update on the resource, used to ensure integrity when updating the Operator.",
+            "readOnly": true
+          },
+          "author": {
+            "$ref": "#/components/schemas/OperatorAuthorEnum"
+          },
+          "prompt": {
+            "type": "string",
+            "description": "\"The natural language instructions used by the operator to analyze the conversation.\n\nWithin the prompt, users can reference parameters using the `{{parameters.[param_name]}}` syntax. Parameter values are provided to the Operator by the Intelligence Configuration Rule at runtime.\n\n**Note**: Prompts will only be exposed for Custom Operators (`author` = `SELF`). Twilio-authored Operators (`author` = `TWILIO`) will have their prompts omitted from the API.\""
+          },
+          "outputFormat": {
+            "$ref": "#/components/schemas/OperatorOutputFormat"
+          },
+          "outputSchema": {
+            "type": "object",
+            "description": "\"Required for `JSON` output only. this will be set to a JSON Schema object describing the properties & data types of the response. Please see https://platform.openai.com/docs/guides/structured-outputs#supported-schemas \n\nWill include the following keywords:\n- `type` : Must be set to `object`\n- `properties`:  An object containing the property names and their data types you would like the LLM to return\n\nAdditional details on JSON output formatting:\n- The root level `type` of a JSON schema must be set to `object`\n- The following property data types are supported : `string`, `number`, `boolean`, `integer`, `object`, `array`, `anyOf`\n- Definitions with `$defs` / `$ref` are supported\n- Max 100 object properties and 10 levels of nesting are supported\n- Max 1000 enum values across all enum properties are supported\n- Notable JSON Schema keywords not supported include:\n  - For `strings`: `minLength`, `maxLength`\n  - For `objects`: `patternProperties`, `unevaluatedProperties`, `propertyNames`, `minProperties`, `maxProperties`\n  - For `arrays`: `unevaluatedItems`, `contains`, `minContains`, `maxContains`, `uniqueItems`\n- Structured Operator Results will be returned in the same order as the ordering of keys in the schema\n- In the event an Operator execution request is refused for safety reasons the Operator Result API response will include a new field called `refusal` to indicate that the LLM refused to fulfill the request\n- Twilio will automatically set `additionalProperties` to false and specify all provided fields as required (constraints of Structured Outputs). You don't need to pass these fields as part of your JSON schema. Twilio will automatically overwrite any user-provided values for these fields.\""
+          },
+          "trainingExamples": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OperatorTrainingExample"
+            },
+            "description": "\"An array of example input/output pairs used to illustrate the intended behavior of the Language Operator. These examples help guide the model's understanding of expected input–output relationships and improve consistency during evaluation and testing.\n\n**Note**: Training examples will only be exposed for Custom Operators (`author` = `SELF`). Twilio-authored Operators (`author` = `TWILIO`) will have their training examples omitted from the API.\""
+          },
+          "context": {
+            "$ref": "#/components/schemas/OperatorContext"
+          },
+          "parameters": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/OperatorParameter"
+            },
+            "description": "Defines the schema of the parameters that are provided when running the operator, including required and optional values that determine the operator's behavior.\nThe values of the parameters themselves are passed in by the attached Intelligence Configuration."
+          }
+        }
       },
       "TwilioIntelligenceV3CreateOperator201": {
         "type": "object",
@@ -234388,9 +234546,6 @@
         "type": "object",
         "allOf": [
           {
-            "$ref": "#/components/schemas/LanguageOperator"
-          },
-          {
             "required": [
               "displayName",
               "prompt",
@@ -234398,7 +234553,58 @@
             ],
             "type": "object"
           }
-        ]
+        ],
+        "properties": {
+          "id": {
+            "pattern": "^intelligence_operator_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The unique identifier for the Language Operator. Assigned by Twilio (TTID)."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Language Operator describing its purpose."
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the Language Operator further explaining its purpose."
+          },
+          "version": {
+            "type": "integer",
+            "description": "Numeric Operator version. Automatically incremented with each update on the resource, used to ensure integrity when updating the Operator.",
+            "readOnly": true
+          },
+          "author": {
+            "$ref": "#/components/schemas/OperatorAuthorEnum"
+          },
+          "prompt": {
+            "type": "string",
+            "description": "\"The natural language instructions used by the operator to analyze the conversation.\n\nWithin the prompt, users can reference parameters using the `{{parameters.[param_name]}}` syntax. Parameter values are provided to the Operator by the Intelligence Configuration Rule at runtime.\n\n**Note**: Prompts will only be exposed for Custom Operators (`author` = `SELF`). Twilio-authored Operators (`author` = `TWILIO`) will have their prompts omitted from the API.\""
+          },
+          "outputFormat": {
+            "$ref": "#/components/schemas/OperatorOutputFormat"
+          },
+          "outputSchema": {
+            "type": "object",
+            "description": "\"Required for `JSON` output only. this will be set to a JSON Schema object describing the properties & data types of the response. Please see https://platform.openai.com/docs/guides/structured-outputs#supported-schemas \n\nWill include the following keywords:\n- `type` : Must be set to `object`\n- `properties`:  An object containing the property names and their data types you would like the LLM to return\n\nAdditional details on JSON output formatting:\n- The root level `type` of a JSON schema must be set to `object`\n- The following property data types are supported : `string`, `number`, `boolean`, `integer`, `object`, `array`, `anyOf`\n- Definitions with `$defs` / `$ref` are supported\n- Max 100 object properties and 10 levels of nesting are supported\n- Max 1000 enum values across all enum properties are supported\n- Notable JSON Schema keywords not supported include:\n  - For `strings`: `minLength`, `maxLength`\n  - For `objects`: `patternProperties`, `unevaluatedProperties`, `propertyNames`, `minProperties`, `maxProperties`\n  - For `arrays`: `unevaluatedItems`, `contains`, `minContains`, `maxContains`, `uniqueItems`\n- Structured Operator Results will be returned in the same order as the ordering of keys in the schema\n- In the event an Operator execution request is refused for safety reasons the Operator Result API response will include a new field called `refusal` to indicate that the LLM refused to fulfill the request\n- Twilio will automatically set `additionalProperties` to false and specify all provided fields as required (constraints of Structured Outputs). You don't need to pass these fields as part of your JSON schema. Twilio will automatically overwrite any user-provided values for these fields.\""
+          },
+          "trainingExamples": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OperatorTrainingExample"
+            },
+            "description": "\"An array of example input/output pairs used to illustrate the intended behavior of the Language Operator. These examples help guide the model's understanding of expected input–output relationships and improve consistency during evaluation and testing.\n\n**Note**: Training examples will only be exposed for Custom Operators (`author` = `SELF`). Twilio-authored Operators (`author` = `TWILIO`) will have their training examples omitted from the API.\""
+          },
+          "context": {
+            "$ref": "#/components/schemas/OperatorContext"
+          },
+          "parameters": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/OperatorParameter"
+            },
+            "description": "Defines the schema of the parameters that are provided when running the operator, including required and optional values that determine the operator's behavior.\nThe values of the parameters themselves are passed in by the attached Intelligence Configuration."
+          }
+        }
       },
       "TwilioIntelligenceV3UpdateOperator200": {
         "type": "object",
@@ -253456,6 +253662,8 @@
         "discriminator": {
           "propertyName": "inputSource",
           "mapping": {
+            "SOURCE_ID": "#/components/schemas/VoiceV3TranscriptionCreateRequestWithSourceId",
+            "MEDIA_URL": "#/components/schemas/VoiceV3TranscriptionCreateRequestWithMediaUrl",
             "VoiceV3TranscriptionCreateRequestWithSourceId": "#/components/schemas/VoiceV3TranscriptionCreateRequestWithSourceId",
             "VoiceV3TranscriptionCreateRequestWithMediaUrl": "#/components/schemas/VoiceV3TranscriptionCreateRequestWithMediaUrl"
           }

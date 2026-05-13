@@ -39,11 +39,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("inputSource")?.GetStringValue();
             var result = new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions();
-            if("VoiceV3TranscriptionCreateRequestWithMediaUrl".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("MEDIA_URL".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.VoiceV3TranscriptionCreateRequestWithMediaUrl = new global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl();
             }
-            else if("VoiceV3TranscriptionCreateRequestWithSourceId".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("SOURCE_ID".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.VoiceV3TranscriptionCreateRequestWithSourceId = new global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceId();
             }
