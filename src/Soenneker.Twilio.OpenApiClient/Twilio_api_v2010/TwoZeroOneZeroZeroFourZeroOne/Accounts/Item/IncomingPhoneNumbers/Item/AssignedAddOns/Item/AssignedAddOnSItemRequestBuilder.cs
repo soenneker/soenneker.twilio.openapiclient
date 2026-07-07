@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{AccountS-id}\IncomingPhoneNumbers\{ResourceS-id}\AssignedAddOns\{AssignedAddOnS-id}
+    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{accountS-id}\IncomingPhoneNumbers\{resourceS-id}\AssignedAddOns\{assignedAddOnS-id}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AssignedAddOnSItemRequestBuilder : BaseRequestBuilder
@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AssignedAddOnSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{AccountS%2Did}/IncomingPhoneNumbers/{ResourceS%2Did}/AssignedAddOns/{AssignedAddOnS%2Did}", pathParameters)
+        public AssignedAddOnSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/IncomingPhoneNumbers/{resourceS%2Did}/AssignedAddOns/{assignedAddOnS%2Did}", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AssignedAddOnSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{AccountS%2Did}/IncomingPhoneNumbers/{ResourceS%2Did}/AssignedAddOns/{AssignedAddOnS%2Did}", rawUrl)
+        public AssignedAddOnSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/IncomingPhoneNumbers/{resourceS%2Did}/AssignedAddOns/{assignedAddOnS%2Did}", rawUrl)
         {
         }
         /// <summary>

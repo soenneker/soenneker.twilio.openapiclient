@@ -73,7 +73,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Used to specify that the SMS capability will be hosted on Twilio&apos;s platform.</summary>
         public bool? SmsCapability { get; set; }
         /// <summary>The HTTP method that should be used to request the SmsFallbackUrl. Must be either `GET` or `POST`. This will be copied onto the IncomingPhoneNumber resource.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequest_smsFallbackMethod? SmsFallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequestSmsFallbackMethod? SmsFallbackMethod { get; set; }
         /// <summary>A URL that Twilio will request if an error occurs requesting or executing the TwiML defined by SmsUrl. This will be copied onto the IncomingPhoneNumber resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,7 +83,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string SmsFallbackUrl { get; set; }
 #endif
         /// <summary>The HTTP method that should be used to request the SmsUrl. Must be either `GET` or `POST`.  This will be copied onto the IncomingPhoneNumber resource.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequest_smsMethod? SmsMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequestSmsMethod? SmsMethod { get; set; }
         /// <summary>The URL that Twilio should request when somebody sends an SMS to the phone number. This will be copied onto the IncomingPhoneNumber resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,7 +93,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string SmsUrl { get; set; }
 #endif
         /// <summary>Optional. The Status Callback Method attached to the IncomingPhoneNumber resource.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequest_statusCallbackMethod? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>Optional. The Status Callback URL attached to the IncomingPhoneNumber resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -119,7 +119,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string VerificationDocumentSid { get; set; }
 #endif
         /// <summary>The verificationType property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType? VerificationType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType2? VerificationType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequest"/> and sets the default values.
         /// </summary>
@@ -153,15 +153,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "phoneNumber", n => { PhoneNumber = n.GetStringValue(); } },
                 { "smsApplicationSid", n => { SmsApplicationSid = n.GetStringValue(); } },
                 { "smsCapability", n => { SmsCapability = n.GetBoolValue(); } },
-                { "smsFallbackMethod", n => { SmsFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequest_smsFallbackMethod>(); } },
+                { "smsFallbackMethod", n => { SmsFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequestSmsFallbackMethod>(); } },
                 { "smsFallbackUrl", n => { SmsFallbackUrl = n.GetStringValue(); } },
-                { "smsMethod", n => { SmsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequest_smsMethod>(); } },
+                { "smsMethod", n => { SmsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequestSmsMethod>(); } },
                 { "smsUrl", n => { SmsUrl = n.GetStringValue(); } },
-                { "statusCallbackMethod", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequest_statusCallbackMethod>(); } },
+                { "statusCallbackMethod", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequestStatusCallbackMethod>(); } },
                 { "statusCallbackUrl", n => { StatusCallbackUrl = n.GetStringValue(); } },
                 { "uniqueName", n => { UniqueName = n.GetStringValue(); } },
                 { "verificationDocumentSid", n => { VerificationDocumentSid = n.GetStringValue(); } },
-                { "verificationType", n => { VerificationType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType>(); } },
+                { "verificationType", n => { VerificationType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType2>(); } },
             };
         }
         /// <summary>
@@ -179,15 +179,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("phoneNumber", PhoneNumber);
             writer.WriteStringValue("smsApplicationSid", SmsApplicationSid);
             writer.WriteBoolValue("smsCapability", SmsCapability);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequest_smsFallbackMethod>("smsFallbackMethod", SmsFallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequestSmsFallbackMethod>("smsFallbackMethod", SmsFallbackMethod);
             writer.WriteStringValue("smsFallbackUrl", SmsFallbackUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequest_smsMethod>("smsMethod", SmsMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequestSmsMethod>("smsMethod", SmsMethod);
             writer.WriteStringValue("smsUrl", SmsUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequest_statusCallbackMethod>("statusCallbackMethod", StatusCallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersCreateHostedNumberOrderRequestStatusCallbackMethod>("statusCallbackMethod", StatusCallbackMethod);
             writer.WriteStringValue("statusCallbackUrl", StatusCallbackUrl);
             writer.WriteStringValue("uniqueName", UniqueName);
             writer.WriteStringValue("verificationDocumentSid", VerificationDocumentSid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType>("verificationType", VerificationType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType2>("verificationType", VerificationType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

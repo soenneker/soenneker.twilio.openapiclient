@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     public partial class WhatsAppTypingIndicatorRequest : IParsable
     {
         /// <summary>The messaging channel. Must be &quot;WHATSAPP&quot;.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequest_channel? Channel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequestChannel? Channel { get; set; }
         /// <summary>The SID of a recent inbound message from the recipient. Must be an SM or MM SID format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,7 +41,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequest_channel>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequestChannel>(); } },
                 { "messageId", n => { MessageId = n.GetStringValue(); } },
             };
         }
@@ -52,7 +52,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequest_channel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequestChannel>("channel", Channel);
             writer.WriteStringValue("messageId", MessageId);
         }
     }

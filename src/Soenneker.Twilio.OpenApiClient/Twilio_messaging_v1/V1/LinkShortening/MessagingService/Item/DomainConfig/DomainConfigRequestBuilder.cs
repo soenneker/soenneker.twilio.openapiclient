@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.LinkShortening.MessagingService.Item.DomainConfig
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_messaging_v1\v1\LinkShortening\MessagingService\{MessagingServiceSid}\DomainConfig
+    /// Builds and executes requests for operations under \twilio_messaging_v1\v1\LinkShortening\MessagingService\{messagingServiceSid}\DomainConfig
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DomainConfigRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.LinkShortening.M
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DomainConfigRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/MessagingService/{MessagingServiceSid}/DomainConfig", pathParameters)
+        public DomainConfigRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/MessagingService/{messagingServiceSid}/DomainConfig", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.LinkShortening.M
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DomainConfigRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/MessagingService/{MessagingServiceSid}/DomainConfig", rawUrl)
+        public DomainConfigRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/MessagingService/{messagingServiceSid}/DomainConfig", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1DomainConfigMessagingService"/></returns>

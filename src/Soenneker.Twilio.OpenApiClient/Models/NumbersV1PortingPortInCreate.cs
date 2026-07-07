@@ -66,10 +66,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of phone numbers to be ported. Maximum of 1,000 phone numbers per request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInCreate_phone_numbers>? PhoneNumbers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInCreatePhoneNumbersItem>? PhoneNumbers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInCreate_phone_numbers> PhoneNumbers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInCreatePhoneNumbersItem> PhoneNumbers { get; set; }
 #endif
         /// <summary>A field only required for Japan port in requests. It is a unique identifier for the donor carrier service the line is being ported from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -128,7 +128,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "documents", n => { Documents = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "losing_carrier_information", n => { LosingCarrierInformation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation.CreateFromDiscriminatorValue); } },
                 { "notification_emails", n => { NotificationEmails = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "phone_numbers", n => { PhoneNumbers = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInCreate_phone_numbers>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInCreate_phone_numbers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "phone_numbers", n => { PhoneNumbers = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInCreatePhoneNumbersItem>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInCreatePhoneNumbersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "portability_advance_carrier", n => { PortabilityAdvanceCarrier = n.GetStringValue(); } },
                 { "target_port_in_date", n => { TargetPortInDate = n.GetDateValue(); } },
                 { "target_port_in_time_range_end", n => { TargetPortInTimeRangeEnd = n.GetStringValue(); } },
@@ -148,7 +148,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("documents", Documents);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation>("losing_carrier_information", LosingCarrierInformation);
             writer.WriteCollectionOfPrimitiveValues<string>("notification_emails", NotificationEmails);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInCreate_phone_numbers>("phone_numbers", PhoneNumbers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInCreatePhoneNumbersItem>("phone_numbers", PhoneNumbers);
             writer.WriteStringValue("portability_advance_carrier", PortabilityAdvanceCarrier);
             writer.WriteDateValue("target_port_in_date", TargetPortInDate);
             writer.WriteStringValue("target_port_in_time_range_end", TargetPortInTimeRangeEnd);

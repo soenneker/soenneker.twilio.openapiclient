@@ -15,7 +15,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_bulkexports_v1\v1\Exports\{ResourceType}
+    /// Builds and executes requests for operations under \twilio_bulkexports_v1\v1\Exports\{resourceType}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithResourceTypeItemRequestBuilder : BaseRequestBuilder
@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithResourceTypeItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{ResourceType}", pathParameters)
+        public WithResourceTypeItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{resourceType}", pathParameters)
         {
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithResourceTypeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{ResourceType}", rawUrl)
+        public WithResourceTypeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{resourceType}", rawUrl)
         {
         }
         /// <summary>

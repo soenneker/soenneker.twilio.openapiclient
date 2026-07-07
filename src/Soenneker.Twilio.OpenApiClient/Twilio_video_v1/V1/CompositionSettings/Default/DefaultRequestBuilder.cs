@@ -54,11 +54,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.CompositionSettings.
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionSettings?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateCompositionSettings body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionSettings?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateCompositionSettingsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionSettings> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateCompositionSettings body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionSettings> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateCompositionSettingsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -86,11 +86,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.CompositionSettings.
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateCompositionSettings body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateCompositionSettingsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateCompositionSettings body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateCompositionSettingsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.E
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EnvironmentSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_serverless_v1/v1/Services/{ServiceS%2Did}/Environments/{EnvironmentS%2Did}", pathParameters)
+        public EnvironmentSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_serverless_v1/v1/Services/{serviceS%2Did}/Environments/{environmentS%2Did}", pathParameters)
         {
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.E
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EnvironmentSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_serverless_v1/v1/Services/{ServiceS%2Did}/Environments/{EnvironmentS%2Did}", rawUrl)
+        public EnvironmentSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_serverless_v1/v1/Services/{serviceS%2Did}/Environments/{environmentS%2Did}", rawUrl)
         {
         }
         /// <summary>

@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessions.Item.Participants
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_proxy_v1\v1\Services\{ServiceS-id}\Sessions\{SessionS-id}\Participants
+    /// Builds and executes requests for operations under \twilio_proxy_v1\v1\Services\{serviceS-id}\Sessions\{sessionS-id}\Participants
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ParticipantsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessio
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ParticipantS%2Did", position);
+                urlTplParams.Add("participantS%2Did", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessions.Item.Participants.Item.ParticipantSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessio
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ParticipantsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{ServiceS%2Did}/Sessions/{SessionS%2Did}/Participants{?Page*,PageSize*,PageToken*}", pathParameters)
+        public ParticipantsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{serviceS%2Did}/Sessions/{sessionS%2Did}/Participants{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessio
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ParticipantsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{ServiceS%2Did}/Sessions/{SessionS%2Did}/Participants{?Page*,PageSize*,PageToken*}", rawUrl)
+        public ParticipantsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{serviceS%2Did}/Sessions/{sessionS%2Did}/Participants{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -73,11 +73,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessio
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateParticipant body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateParticipantXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateParticipant body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateParticipantXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -111,11 +111,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessio
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateParticipant body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateParticipantXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateParticipant body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateParticipantXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

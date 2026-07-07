@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engageme
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EngagementSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{FlowS%2Did}/Engagements/{EngagementS%2Did}", pathParameters)
+        public EngagementSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{flowS%2Did}/Engagements/{engagementS%2Did}", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engageme
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EngagementSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{FlowS%2Did}/Engagements/{EngagementS%2Did}", rawUrl)
+        public EngagementSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{flowS%2Did}/Engagements/{engagementS%2Did}", rawUrl)
         {
         }
         /// <summary>

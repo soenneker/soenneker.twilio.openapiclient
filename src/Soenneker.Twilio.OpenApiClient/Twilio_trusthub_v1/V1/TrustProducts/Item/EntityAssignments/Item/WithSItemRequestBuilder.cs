@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.TrustProducts.Item.EntityAssignments.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_trusthub_v1\v1\TrustProducts\{S-id}\EntityAssignments\{Sid}
+    /// Builds and executes requests for operations under \twilio_trusthub_v1\v1\TrustProducts\{s-id}\EntityAssignments\{sid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.TrustProducts.Ite
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/TrustProducts/{S%2Did}/EntityAssignments/{Sid}", pathParameters)
+        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/TrustProducts/{s%2Did}/EntityAssignments/{sid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.TrustProducts.Ite
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/TrustProducts/{S%2Did}/EntityAssignments/{Sid}", rawUrl)
+        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/TrustProducts/{s%2Did}/EntityAssignments/{sid}", rawUrl)
         {
         }
         /// <summary>

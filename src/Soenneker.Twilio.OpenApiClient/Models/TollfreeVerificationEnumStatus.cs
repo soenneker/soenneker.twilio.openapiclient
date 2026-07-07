@@ -9,19 +9,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "PENDING_REVIEW")]
         #pragma warning disable CS1591
-        PENDING_REVIEW,
+        PendingReview,
         #pragma warning restore CS1591
         [EnumMember(Value = "IN_REVIEW")]
         #pragma warning disable CS1591
-        IN_REVIEW,
+        InReview,
         #pragma warning restore CS1591
         [EnumMember(Value = "TWILIO_APPROVED")]
         #pragma warning disable CS1591
-        TWILIO_APPROVED,
+        TwilioApproved,
         #pragma warning restore CS1591
         [EnumMember(Value = "TWILIO_REJECTED")]
         #pragma warning disable CS1591
-        TWILIO_REJECTED,
+        TwilioRejected,
         #pragma warning restore CS1591
     }
 }

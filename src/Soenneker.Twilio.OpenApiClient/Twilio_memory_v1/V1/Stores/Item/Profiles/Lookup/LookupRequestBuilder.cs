@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <summary>
         /// Find profiles that contain a specific identifier value (for example a phone number or email address). Submit an identifier object specifying the `idType` and `value`. The value is normalized using the configured identity resolution settings (such as phone number formatting) prior to matching. Multiple matches are returned if more than one profile is associated with the identifier. Returns canonical profile IDs (the earliest ID if profiles have been merged) along with the normalized value actually searched.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfilesLookup200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfilesLookup200Response"/></returns>
         /// <param name="body">Represents a single identifier value paired with its `idType`. Write operations obey limits, uniqueness, and normalization rules configured via identifier settings.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -49,11 +49,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfilesLookup200?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Identifier body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfilesLookup200Response?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Identifier body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfilesLookup200> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Identifier body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfilesLookup200Response> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.Identifier body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -68,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfilesLookup200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfilesLookup200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfilesLookup200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfilesLookup200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Find profiles that contain a specific identifier value (for example a phone number or email address). Submit an identifier object specifying the `idType` and `value`. The value is normalized using the configured identity resolution settings (such as phone number formatting) prior to matching. Multiple matches are returned if more than one profile is associated with the identifier. Returns canonical profile IDs (the earliest ID if profiles have been merged) along with the normalized value actually searched.

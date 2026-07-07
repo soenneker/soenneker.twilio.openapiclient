@@ -9,23 +9,23 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "VERBAL")]
         #pragma warning disable CS1591
-        VERBAL,
+        Verbal,
         #pragma warning restore CS1591
         [EnumMember(Value = "WEB_FORM")]
         #pragma warning disable CS1591
-        WEB_FORM,
+        WebForm,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAPER_FORM")]
         #pragma warning disable CS1591
-        PAPER_FORM,
+        PaperForm,
         #pragma warning restore CS1591
         [EnumMember(Value = "VIA_TEXT")]
         #pragma warning disable CS1591
-        VIA_TEXT,
+        ViaText,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOBILE_QR_CODE")]
         #pragma warning disable CS1591
-        MOBILE_QR_CODE,
+        MobileQrCode,
         #pragma warning restore CS1591
     }
 }

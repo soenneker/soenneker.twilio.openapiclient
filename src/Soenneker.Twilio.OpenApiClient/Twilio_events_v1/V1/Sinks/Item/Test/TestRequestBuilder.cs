@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Sinks.Item.Test
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TestRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Sinks/{Sid}/Test", pathParameters)
+        public TestRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Sinks/{sid}/Test", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Sinks.Item.Test
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TestRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Sinks/{Sid}/Test", rawUrl)
+        public TestRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Sinks/{sid}/Test", rawUrl)
         {
         }
         /// <summary>

@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOn
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("AvailableAddOnS%2Did", position);
+                urlTplParams.Add("availableAddOnS%2Did", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOns.Item.AvailableAddOnSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

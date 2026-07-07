@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipant_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipant_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantLinks Links { get; set; }
 #endif
         /// <summary>The SID of the participant&apos;s room.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,7 +105,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "duration", n => { Duration = n.GetIntValue(); } },
                 { "end_time", n => { EndTime = n.GetDateTimeOffsetValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipant_links>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipant_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantLinks.CreateFromDiscriminatorValue); } },
                 { "room_sid", n => { RoomSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "start_time", n => { StartTime = n.GetDateTimeOffsetValue(); } },
@@ -126,7 +126,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("duration", Duration);
             writer.WriteDateTimeOffsetValue("end_time", EndTime);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipant_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantLinks>("links", Links);
             writer.WriteStringValue("room_sid", RoomSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteDateTimeOffsetValue("start_time", StartTime);

@@ -32,7 +32,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.PortIn
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("PortInRequestSid", position);
+                urlTplParams.Add("portInRequestSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.PortIn.Item.WithPortInRequestSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

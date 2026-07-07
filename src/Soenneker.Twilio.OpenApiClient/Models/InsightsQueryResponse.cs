@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Array of result objects containing the query results. Each object contains properties matching the requested measures and dimensions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse_items>? Items { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponseItemsItemProperty>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse_items> Items { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponseItemsItemProperty> Items { get; set; }
 #endif
         /// <summary>Pagination metadata containing navigation tokens and result information,this schema should according to convention be added to the responsepayload&apos;s &apos;meta&apos; attribute</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "domain", n => { Domain = n.GetStringValue(); } },
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse_items>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse_items.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponseItemsItemProperty>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponseItemsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta>(global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta.CreateFromDiscriminatorValue); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("domain", Domain);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse_items>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponseItemsItemProperty>("items", Items);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }

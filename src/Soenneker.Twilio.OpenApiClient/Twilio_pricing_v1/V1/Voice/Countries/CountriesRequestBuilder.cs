@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_pricing_v1.V1.Voice.Countries
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("IsoCountry", position);
+                urlTplParams.Add("isoCountry", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_pricing_v1.V1.Voice.Countries.Item.WithIsoCountryItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

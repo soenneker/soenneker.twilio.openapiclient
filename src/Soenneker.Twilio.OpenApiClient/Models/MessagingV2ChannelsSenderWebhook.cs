@@ -16,7 +16,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The HTTP method for the webhook.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhook_callback_method? CallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhookCallbackMethod? CallbackMethod { get; set; }
         /// <summary>The URL to send the webhook to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string CallbackUrl { get; set; }
 #endif
         /// <summary>The HTTP method for the fallback webhook.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhook_fallback_method? FallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhookFallbackMethod? FallbackMethod { get; set; }
         /// <summary>The URL to send the fallback webhook to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,9 +76,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "callback_method", n => { CallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhook_callback_method>(); } },
+                { "callback_method", n => { CallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhookCallbackMethod>(); } },
                 { "callback_url", n => { CallbackUrl = n.GetStringValue(); } },
-                { "fallback_method", n => { FallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhook_fallback_method>(); } },
+                { "fallback_method", n => { FallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhookFallbackMethod>(); } },
                 { "fallback_url", n => { FallbackUrl = n.GetStringValue(); } },
                 { "status_callback_method", n => { StatusCallbackMethod = n.GetStringValue(); } },
                 { "status_callback_url", n => { StatusCallbackUrl = n.GetStringValue(); } },
@@ -91,9 +91,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhook_callback_method>("callback_method", CallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhookCallbackMethod>("callback_method", CallbackMethod);
             writer.WriteStringValue("callback_url", CallbackUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhook_fallback_method>("fallback_method", FallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhookFallbackMethod>("fallback_method", FallbackMethod);
             writer.WriteStringValue("fallback_url", FallbackUrl);
             writer.WriteStringValue("status_callback_method", StatusCallbackMethod);
             writer.WriteStringValue("status_callback_url", StatusCallbackUrl);

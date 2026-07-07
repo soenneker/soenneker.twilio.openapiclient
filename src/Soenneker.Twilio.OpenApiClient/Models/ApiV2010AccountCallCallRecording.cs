@@ -134,6 +134,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public ApiV2010AccountCallCallRecording()
         {
             AdditionalData = new Dictionary<string, object>();
+            Channels = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

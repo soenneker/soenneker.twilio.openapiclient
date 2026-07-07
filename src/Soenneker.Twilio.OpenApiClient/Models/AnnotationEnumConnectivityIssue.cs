@@ -10,27 +10,27 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "unknown_connectivity_issue")]
         #pragma warning disable CS1591
-        Unknown_connectivity_issue,
+        UnknownConnectivityIssue,
         #pragma warning restore CS1591
         [EnumMember(Value = "no_connectivity_issue")]
         #pragma warning disable CS1591
-        No_connectivity_issue,
+        NoConnectivityIssue,
         #pragma warning restore CS1591
         [EnumMember(Value = "invalid_number")]
         #pragma warning disable CS1591
-        Invalid_number,
+        InvalidNumber,
         #pragma warning restore CS1591
         [EnumMember(Value = "caller_id")]
         #pragma warning disable CS1591
-        Caller_id,
+        CallerId,
         #pragma warning restore CS1591
         [EnumMember(Value = "dropped_call")]
         #pragma warning disable CS1591
-        Dropped_call,
+        DroppedCall,
         #pragma warning restore CS1591
         [EnumMember(Value = "number_reachability")]
         #pragma warning disable CS1591
-        Number_reachability,
+        NumberReachability,
         #pragma warning restore CS1591
     }
 }

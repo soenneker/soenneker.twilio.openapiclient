@@ -89,18 +89,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that contains information of a mobile phone number quality score. Quality score will return a risk score about the phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse_phone_number_quality_score? PhoneNumberQualityScore { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupResponsePhoneNumberQualityScore? PhoneNumberQualityScore { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse_phone_number_quality_score PhoneNumberQualityScore { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupResponsePhoneNumberQualityScore PhoneNumberQualityScore { get; set; }
 #endif
         /// <summary>An object that contains pre fill information. pre_fill will return PII information associated with the phone number like first name, last name, address line, country code, state and postal code. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse_pre_fill? PreFill { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupResponsePreFill? PreFill { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse_pre_fill PreFill { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupResponsePreFill PreFill { get; set; }
 #endif
         /// <summary>The reassigned_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -178,8 +178,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "line_type_intelligence", n => { LineTypeIntelligence = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo>(global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo.CreateFromDiscriminatorValue); } },
                 { "national_format", n => { NationalFormat = n.GetStringValue(); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
-                { "phone_number_quality_score", n => { PhoneNumberQualityScore = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse_phone_number_quality_score>(global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse_phone_number_quality_score.CreateFromDiscriminatorValue); } },
-                { "pre_fill", n => { PreFill = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse_pre_fill>(global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse_pre_fill.CreateFromDiscriminatorValue); } },
+                { "phone_number_quality_score", n => { PhoneNumberQualityScore = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponsePhoneNumberQualityScore>(global::Soenneker.Twilio.OpenApiClient.Models.LookupResponsePhoneNumberQualityScore.CreateFromDiscriminatorValue); } },
+                { "pre_fill", n => { PreFill = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponsePreFill>(global::Soenneker.Twilio.OpenApiClient.Models.LookupResponsePreFill.CreateFromDiscriminatorValue); } },
                 { "reassigned_number", n => { ReassignedNumber = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo>(global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo.CreateFromDiscriminatorValue); } },
                 { "sim_swap", n => { SimSwap = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo>(global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo.CreateFromDiscriminatorValue); } },
                 { "sms_pumping_risk", n => { SmsPumpingRisk = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo>(global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo.CreateFromDiscriminatorValue); } },
@@ -204,8 +204,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo>("line_type_intelligence", LineTypeIntelligence);
             writer.WriteStringValue("national_format", NationalFormat);
             writer.WriteStringValue("phone_number", PhoneNumber);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse_phone_number_quality_score>("phone_number_quality_score", PhoneNumberQualityScore);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse_pre_fill>("pre_fill", PreFill);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponsePhoneNumberQualityScore>("phone_number_quality_score", PhoneNumberQualityScore);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponsePreFill>("pre_fill", PreFill);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo>("reassigned_number", ReassignedNumber);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo>("sim_swap", SimSwap);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo>("sms_pumping_risk", SmsPumpingRisk);

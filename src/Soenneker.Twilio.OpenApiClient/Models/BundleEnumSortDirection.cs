@@ -10,11 +10,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "ASC")]
         #pragma warning disable CS1591
-        ASC,
+        Asc,
         #pragma warning restore CS1591
         [EnumMember(Value = "DESC")]
         #pragma warning disable CS1591
-        DESC,
+        Desc,
         #pragma warning restore CS1591
     }
 }

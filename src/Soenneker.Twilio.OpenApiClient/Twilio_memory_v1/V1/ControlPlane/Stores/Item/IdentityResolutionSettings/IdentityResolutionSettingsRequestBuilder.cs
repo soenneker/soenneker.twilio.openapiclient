@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// <summary>
         /// Update the identity resolution settings for this memory store, whichdetermine how Customer Memory will use identifiers for searching, merging, and resolving profiles.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateIdentityResolutionSettings202"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateIdentityResolutionSettings202Response"/></returns>
         /// <param name="body">Identity Resolution settings help determine if a new profile should be created,or if the incoming conversation should be added to an existing profile. Thesesettings resolve how profiles are looked up and which profiles should merge together.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,11 +78,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateIdentityResolutionSettings202?> PutAsync(global::Soenneker.Twilio.OpenApiClient.Models.IdentityResolutionSettingsCore body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateIdentityResolutionSettings202Response?> PutAsync(global::Soenneker.Twilio.OpenApiClient.Models.IdentityResolutionSettingsCore body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateIdentityResolutionSettings202> PutAsync(global::Soenneker.Twilio.OpenApiClient.Models.IdentityResolutionSettingsCore body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateIdentityResolutionSettings202Response> PutAsync(global::Soenneker.Twilio.OpenApiClient.Models.IdentityResolutionSettingsCore body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -95,7 +95,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateIdentityResolutionSettings202>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateIdentityResolutionSettings202.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateIdentityResolutionSettings202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateIdentityResolutionSettings202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// These settings determine how Customer Memory will use identifiers for searching, merging, and resolving profiles. &gt; Some settings can only take on their default values and are not yet available to change, but coming soon.

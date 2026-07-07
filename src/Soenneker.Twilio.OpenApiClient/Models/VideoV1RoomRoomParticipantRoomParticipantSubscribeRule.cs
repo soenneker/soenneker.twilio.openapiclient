@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A collection of Subscribe Rules that describe how to include or exclude matching tracks. See the [Specifying Subscribe Rules](https://www.twilio.com/docs/video/api/track-subscriptions#specifying-sr) section for further information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribeRule_rules>? Rules { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribeRuleRulesItem>? Rules { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribeRule_rules> Rules { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribeRuleRulesItem> Rules { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribeRule"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "participant_sid", n => { ParticipantSid = n.GetStringValue(); } },
                 { "room_sid", n => { RoomSid = n.GetStringValue(); } },
-                { "rules", n => { Rules = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribeRule_rules>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribeRule_rules.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "rules", n => { Rules = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribeRuleRulesItem>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribeRuleRulesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("participant_sid", ParticipantSid);
             writer.WriteStringValue("room_sid", RoomSid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribeRule_rules>("rules", Rules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribeRuleRulesItem>("rules", Rules);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeSourceTypes Source { get; set; }
 #endif
         /// <summary>The status of processing the knowledge source (&apos;SCHEDULED&apos;, &apos;QUEUED&apos;, &apos;PROCESSING&apos;, &apos;COMPLETED&apos;, &apos;FAILED&apos;).</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_status? Status { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeStatus? Status { get; set; }
         /// <summary>The date and time in GMT when the Knowledge was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "source", n => { Source = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeSourceTypes>(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeSourceTypes.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeStatus>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeSourceTypes>("source", Source);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.Knowledge_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeStatus>("status", Status);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

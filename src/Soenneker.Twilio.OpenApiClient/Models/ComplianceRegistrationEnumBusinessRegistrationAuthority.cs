@@ -9,19 +9,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "UK:CRN")]
         #pragma warning disable CS1591
-        UKCRN,
+        UKColonCRN,
         #pragma warning restore CS1591
         [EnumMember(Value = "US:EIN")]
         #pragma warning disable CS1591
-        USEIN,
+        USColonEIN,
         #pragma warning restore CS1591
         [EnumMember(Value = "CA:CBN")]
         #pragma warning disable CS1591
-        CACBN,
+        CAColonCBN,
         #pragma warning restore CS1591
         [EnumMember(Value = "AU:ACN")]
         #pragma warning disable CS1591
-        AUACN,
+        AUColonACN,
         #pragma warning restore CS1591
         [EnumMember(Value = "Other")]
         #pragma warning disable CS1591

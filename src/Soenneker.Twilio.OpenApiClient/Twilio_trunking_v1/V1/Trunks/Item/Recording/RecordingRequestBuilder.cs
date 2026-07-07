@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.Recor
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordingRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{S%2Did}/Recording", pathParameters)
+        public RecordingRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{s%2Did}/Recording", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.Recor
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordingRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{S%2Did}/Recording", rawUrl)
+        public RecordingRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{s%2Did}/Recording", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkRecording"/></returns>
@@ -54,11 +54,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.Recor
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkRecording?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1UpdateRecording body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkRecording?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1UpdateRecordingXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkRecording> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1UpdateRecording body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkRecording> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1UpdateRecordingXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -86,11 +86,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.Recor
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1UpdateRecording body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1UpdateRecordingXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1UpdateRecording body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1UpdateRecordingXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -14,9 +14,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     public partial class AppleTypingIndicatorRequest : IParsable
     {
         /// <summary>The messaging channel. Must be &quot;APPLE&quot;.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest_channel? Channel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestChannel? Channel { get; set; }
         /// <summary>The type of typing event. &quot;START&quot; indicates the agent began typing, &quot;END&quot; indicates the agent stopped typing. Defaults to &quot;START&quot;.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest_event? Event { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestEvent? Event { get; set; }
         /// <summary>The Apple Messages for Business identifier of the sender (business).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -33,13 +33,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string To { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest"/> and sets the default values.
-        /// </summary>
-        public AppleTypingIndicatorRequest()
-        {
-            Event = global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest_event.START;
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -58,8 +51,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest_channel>(); } },
-                { "event", n => { Event = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest_event>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestChannel>(); } },
+                { "event", n => { Event = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestEvent>(); } },
                 { "from", n => { From = n.GetStringValue(); } },
                 { "to", n => { To = n.GetStringValue(); } },
             };
@@ -71,8 +64,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest_channel>("channel", Channel);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest_event>("event", Event);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestChannel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestEvent>("event", Event);
             writer.WriteStringValue("from", From);
             writer.WriteStringValue("to", To);
         }

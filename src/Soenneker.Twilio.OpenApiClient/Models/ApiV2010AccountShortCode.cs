@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Sid { get; set; }
 #endif
         /// <summary>&quot;The HTTP method we use to call the `sms_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCode_sms_fallback_method? SmsFallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCodeSmsFallbackMethod? SmsFallbackMethod { get; set; }
         /// <summary>The URL that we call if an error occurs while retrieving or executing the TwiML from `sms_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,7 +81,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string SmsFallbackUrl { get; set; }
 #endif
         /// <summary>&quot;The HTTP method we use to call the `sms_url`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCode_sms_method? SmsMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCodeSmsMethod? SmsMethod { get; set; }
         /// <summary>The URL we call when receiving an incoming SMS message to this short code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -130,9 +130,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "short_code", n => { ShortCode = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "sms_fallback_method", n => { SmsFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCode_sms_fallback_method>(); } },
+                { "sms_fallback_method", n => { SmsFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCodeSmsFallbackMethod>(); } },
                 { "sms_fallback_url", n => { SmsFallbackUrl = n.GetStringValue(); } },
-                { "sms_method", n => { SmsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCode_sms_method>(); } },
+                { "sms_method", n => { SmsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCodeSmsMethod>(); } },
                 { "sms_url", n => { SmsUrl = n.GetStringValue(); } },
                 { "uri", n => { Uri = n.GetStringValue(); } },
             };
@@ -151,9 +151,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("short_code", ShortCode);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCode_sms_fallback_method>("sms_fallback_method", SmsFallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCodeSmsFallbackMethod>("sms_fallback_method", SmsFallbackMethod);
             writer.WriteStringValue("sms_fallback_url", SmsFallbackUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCode_sms_method>("sms_method", SmsMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCodeSmsMethod>("sms_method", SmsMethod);
             writer.WriteStringValue("sms_url", SmsUrl);
             writer.WriteStringValue("uri", Uri);
             writer.WriteAdditionalData(AdditionalData);

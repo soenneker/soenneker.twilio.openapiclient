@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("OrganizationSid", position);
+                urlTplParams.Add("organizationSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.Item.WithOrganizationSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

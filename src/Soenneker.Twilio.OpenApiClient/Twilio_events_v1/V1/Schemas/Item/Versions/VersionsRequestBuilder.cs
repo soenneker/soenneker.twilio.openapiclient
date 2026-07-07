@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Schemas.Item.Versio
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("SchemaVersion", position);
+                urlTplParams.Add("schemaVersion", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Schemas.Item.Versions.Item.WithSchemaVersionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Schemas.Item.Versio
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VersionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Schemas/{Id}/Versions{?Page*,PageSize*,PageToken*}", pathParameters)
+        public VersionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Schemas/{id}/Versions{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Schemas.Item.Versio
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VersionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Schemas/{Id}/Versions{?Page*,PageSize*,PageToken*}", rawUrl)
+        public VersionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Schemas/{id}/Versions{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

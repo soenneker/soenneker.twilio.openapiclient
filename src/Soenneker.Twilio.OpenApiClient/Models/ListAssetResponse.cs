@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListAssetResponse_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListAssetResponseMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListAssetResponse_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListAssetResponseMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListAssetResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "assets", n => { Assets = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceAsset>(global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceAsset.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListAssetResponse_meta>(global::Soenneker.Twilio.OpenApiClient.Models.ListAssetResponse_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListAssetResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListAssetResponseMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceAsset>("assets", Assets);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListAssetResponse_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListAssetResponseMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

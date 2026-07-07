@@ -9,11 +9,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "direct_customer")]
         #pragma warning disable CS1591
-        Direct_customer,
+        DirectCustomer,
         #pragma warning restore CS1591
         [EnumMember(Value = "isv_reseller_or_partner")]
         #pragma warning disable CS1591
-        Isv_reseller_or_partner,
+        IsvResellerOrPartner,
         #pragma warning restore CS1591
         [EnumMember(Value = "unknown")]
         #pragma warning disable CS1591

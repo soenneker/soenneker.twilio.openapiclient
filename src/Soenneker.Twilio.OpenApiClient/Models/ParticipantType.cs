@@ -9,23 +9,23 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "HUMAN_AGENT")]
         #pragma warning disable CS1591
-        HUMAN_AGENT,
+        HumanAgent,
         #pragma warning restore CS1591
         [EnumMember(Value = "CUSTOMER")]
         #pragma warning disable CS1591
-        CUSTOMER,
+        Customer,
         #pragma warning restore CS1591
         [EnumMember(Value = "AI_AGENT")]
         #pragma warning disable CS1591
-        AI_AGENT,
+        AiAgent,
         #pragma warning restore CS1591
         [EnumMember(Value = "AGENT")]
         #pragma warning disable CS1591
-        AGENT,
+        Agent,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
-        UNKNOWN,
+        Unknown,
         #pragma warning restore CS1591
     }
 }

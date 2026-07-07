@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannel_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannel_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelLinks Links { get; set; }
 #endif
         /// <summary>The members_count property</summary>
         public int? MembersCount { get; set; }
@@ -102,6 +102,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IpMessagingV2ServiceChannel()
         {
             AdditionalData = new Dictionary<string, object>();
+            MembersCount = 0;
+            MessagesCount = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -127,7 +129,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannel_links>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannel_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelLinks>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelLinks.CreateFromDiscriminatorValue); } },
                 { "members_count", n => { MembersCount = n.GetIntValue(); } },
                 { "messages_count", n => { MessagesCount = n.GetIntValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
@@ -150,7 +152,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannel_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelLinks>("links", Links);
             writer.WriteIntValue("members_count", MembersCount);
             writer.WriteIntValue("messages_count", MessagesCount);
             writer.WriteStringValue("service_sid", ServiceSid);

@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item.Participants
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_insights_v1\v1\Video\Rooms\{RoomSid}\Participants
+    /// Builds and executes requests for operations under \twilio_insights_v1\v1\Video\Rooms\{roomSid}\Participants
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ParticipantsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item.
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ParticipantSid", position);
+                urlTplParams.Add("participantSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item.Participants.Item.WithParticipantSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ParticipantsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{RoomSid}/Participants{?Page*,PageSize*,PageToken*}", pathParameters)
+        public ParticipantsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{roomSid}/Participants{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ParticipantsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{RoomSid}/Participants{?Page*,PageSize*,PageToken*}", rawUrl)
+        public ParticipantsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{roomSid}/Participants{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

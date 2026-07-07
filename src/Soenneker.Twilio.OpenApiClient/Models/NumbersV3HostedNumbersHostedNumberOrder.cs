@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Set of booleans describing the capabilities hosted on Twilio&apos;s platform. SMS is currently only supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersHostedNumberOrder_capabilities? Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersHostedNumberOrderCapabilities? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersHostedNumberOrder_capabilities Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersHostedNumberOrderCapabilities Capabilities { get; set; }
 #endif
         /// <summary>A list of emails that LOA document for this HostedNumberOrder will be carbon copied to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,7 +117,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string SigningDocumentSid { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumStatus? Status { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumStatus2? Status { get; set; }
         /// <summary>Provides a unique and addressable name to be assigned to this HostedNumberOrder, assigned by the developer, to be optionally used in addition to SID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -161,13 +161,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string VerificationDocumentSid { get; set; }
 #endif
         /// <summary>The verificationType property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType? VerificationType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType2? VerificationType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersHostedNumberOrder"/> and sets the default values.
         /// </summary>
         public NumbersV3HostedNumbersHostedNumberOrder()
         {
             AdditionalData = new Dictionary<string, object>();
+            CallDelay = 0;
+            VerificationAttempts = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -190,7 +192,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "accountSid", n => { AccountSid = n.GetStringValue(); } },
                 { "addressSid", n => { AddressSid = n.GetStringValue(); } },
                 { "callDelay", n => { CallDelay = n.GetIntValue(); } },
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersHostedNumberOrder_capabilities>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersHostedNumberOrder_capabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersHostedNumberOrderCapabilities>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersHostedNumberOrderCapabilities.CreateFromDiscriminatorValue); } },
                 { "ccEmails", n => { CcEmails = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "dateCreated", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "dateUpdated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
@@ -202,14 +204,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "phoneNumber", n => { PhoneNumber = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "signingDocumentSid", n => { SigningDocumentSid = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumStatus>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumStatus2>(); } },
                 { "uniqueName", n => { UniqueName = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "verificationAttempts", n => { VerificationAttempts = n.GetIntValue(); } },
                 { "verificationCallSids", n => { VerificationCallSids = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "verificationCode", n => { VerificationCode = n.GetStringValue(); } },
                 { "verificationDocumentSid", n => { VerificationDocumentSid = n.GetStringValue(); } },
-                { "verificationType", n => { VerificationType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType>(); } },
+                { "verificationType", n => { VerificationType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType2>(); } },
             };
         }
         /// <summary>
@@ -222,7 +224,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("accountSid", AccountSid);
             writer.WriteStringValue("addressSid", AddressSid);
             writer.WriteIntValue("callDelay", CallDelay);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersHostedNumberOrder_capabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV3HostedNumbersHostedNumberOrderCapabilities>("capabilities", Capabilities);
             writer.WriteCollectionOfPrimitiveValues<string>("ccEmails", CcEmails);
             writer.WriteDateTimeOffsetValue("dateCreated", DateCreated);
             writer.WriteDateTimeOffsetValue("dateUpdated", DateUpdated);
@@ -234,14 +236,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("phoneNumber", PhoneNumber);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("signingDocumentSid", SigningDocumentSid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumStatus2>("status", Status);
             writer.WriteStringValue("uniqueName", UniqueName);
             writer.WriteStringValue("url", Url);
             writer.WriteIntValue("verificationAttempts", VerificationAttempts);
             writer.WriteCollectionOfPrimitiveValues<string>("verificationCallSids", VerificationCallSids);
             writer.WriteStringValue("verificationCode", VerificationCode);
             writer.WriteStringValue("verificationDocumentSid", VerificationDocumentSid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType>("verificationType", VerificationType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.HostedNumberOrderEnumVerificationType2>("verificationType", VerificationType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

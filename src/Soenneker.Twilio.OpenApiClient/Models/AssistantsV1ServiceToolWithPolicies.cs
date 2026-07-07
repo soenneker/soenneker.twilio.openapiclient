@@ -47,10 +47,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The metadata related to method, url, input_schema to used with the Tool.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPoliciesMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPoliciesMetaProperty Meta { get; set; }
 #endif
         /// <summary>The name of the tool.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,7 +117,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies_meta>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPoliciesMetaProperty>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPoliciesMetaProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "policies", n => { Policies = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "requires_auth", n => { RequiresAuth = n.GetBoolValue(); } },
@@ -138,7 +138,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPolicies_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceToolWithPoliciesMetaProperty>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy>("policies", Policies);
             writer.WriteBoolValue("requires_auth", RequiresAuth);

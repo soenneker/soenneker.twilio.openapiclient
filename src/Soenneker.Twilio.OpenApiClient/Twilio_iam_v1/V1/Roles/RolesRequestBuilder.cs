@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Roles
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("RoleSid", position);
+                urlTplParams.Add("roleSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Roles.Item.WithRoleSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

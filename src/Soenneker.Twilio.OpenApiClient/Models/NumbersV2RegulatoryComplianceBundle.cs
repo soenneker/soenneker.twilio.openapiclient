@@ -45,10 +45,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of the Assigned Items of the Bundle resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceBundle_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceBundleLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceBundle_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceBundleLinks Links { get; set; }
 #endif
         /// <summary>The unique string of a regulation that is associated to the Bundle resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -116,7 +116,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceBundle_links>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceBundle_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceBundleLinks>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceBundleLinks.CreateFromDiscriminatorValue); } },
                 { "regulation_sid", n => { RegulationSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BundleEnumStatus>(); } },
@@ -137,7 +137,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceBundle_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceBundleLinks>("links", Links);
             writer.WriteStringValue("regulation_sid", RegulationSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BundleEnumStatus>("status", Status);

@@ -26,10 +26,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Nested filter conditions. Always use `op` and `expressions`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinition_filters>? Filters { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItem>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinition_filters> Filters { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItem> Filters { get; set; }
 #endif
         /// <summary>Array of measures to retrieve, representing quantitative values or metrics to be calculated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,10 +42,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Specifications for sorting the query results by specific fields in ascending or descending order</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinition_orderBy>? OrderBy { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionOrderByItem>? OrderBy { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinition_orderBy> OrderBy { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionOrderByItem> OrderBy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinition"/> and sets the default values.
@@ -73,9 +73,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dimensions", n => { Dimensions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinition_filters>(global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinition_filters.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItem>(global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "measures", n => { Measures = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "orderBy", n => { OrderBy = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinition_orderBy>(global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinition_orderBy.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "orderBy", n => { OrderBy = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionOrderByItem>(global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionOrderByItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -86,9 +86,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("dimensions", Dimensions);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinition_filters>("filters", Filters);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItem>("filters", Filters);
             writer.WriteCollectionOfPrimitiveValues<string>("measures", Measures);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinition_orderBy>("orderBy", OrderBy);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionOrderByItem>("orderBy", OrderBy);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

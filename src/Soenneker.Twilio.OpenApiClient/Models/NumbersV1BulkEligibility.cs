@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;The result set that contains the eligibility check response for each requested number, each result has at least the following attributes:  phone_number: The requested phone number ,hosting_account_sid: The account sid where the phone number will be hosted, country: Phone number’s country, eligibility_status: Indicates the eligibility status of the PN (Eligible/Ineligible), eligibility_sub_status: Indicates the sub status of the eligibility , ineligibility_reason: Reason for number&apos;s ineligibility (if applicable), next_step: Suggested next step in the hosting process based on the eligibility status.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibility_results>? Results { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibilityResultsItem>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibility_results> Results { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibilityResultsItem> Results { get; set; }
 #endif
         /// <summary>&quot;This is the status of the bulk eligibility check request. (Example: COMPLETE, IN_PROGRESS)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,7 +87,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "request_id", n => { RequestId = n.GetStringValue(); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibility_results>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibility_results.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibilityResultsItem>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibilityResultsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -103,7 +103,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("request_id", RequestId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibility_results>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibilityResultsItem>("results", Results);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

@@ -34,10 +34,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The value of a trait. Can be a string, integer, boolean, or an array of these types (arrays cannot contain nested arrays).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FullTrait_value? Value { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FullTraitValue? Value { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FullTrait_value Value { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FullTraitValue Value { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -60,7 +60,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
                 { "traitGroup", n => { TraitGroup = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FullTrait_value>(global::Soenneker.Twilio.OpenApiClient.Models.FullTrait_value.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FullTraitValue>(global::Soenneker.Twilio.OpenApiClient.Models.FullTraitValue.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -73,7 +73,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteStringValue("traitGroup", TraitGroup);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FullTrait_value>("value", Value);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FullTraitValue>("value", Value);
         }
     }
 }

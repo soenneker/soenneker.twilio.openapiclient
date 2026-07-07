@@ -61,7 +61,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Sid { get; set; }
 #endif
         /// <summary>The HTTP method we use to call `status_callback_url`. Either `GET` or `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunk_status_callback_method? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunkStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>The URL that we call to pass status parameters (such as call ended) to your application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,7 +79,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Url { get; set; }
 #endif
         /// <summary>&quot;The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunk_voice_fallback_method? VoiceFallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunkVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>The URL that we call when an error occurs while retrieving or executing the TwiML requested from `voice_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,7 +89,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string VoiceFallbackUrl { get; set; }
 #endif
         /// <summary>&quot;The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunk_voice_method? VoiceMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunkVoiceMethod? VoiceMethod { get; set; }
         /// <summary>The URL we call using the `voice_method` when the BYOC Trunk receives a call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -131,12 +131,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "from_domain_sid", n => { FromDomainSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunk_status_callback_method>(); } },
+                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunkStatusCallbackMethod>(); } },
                 { "status_callback_url", n => { StatusCallbackUrl = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "voice_fallback_method", n => { VoiceFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunk_voice_fallback_method>(); } },
+                { "voice_fallback_method", n => { VoiceFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunkVoiceFallbackMethod>(); } },
                 { "voice_fallback_url", n => { VoiceFallbackUrl = n.GetStringValue(); } },
-                { "voice_method", n => { VoiceMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunk_voice_method>(); } },
+                { "voice_method", n => { VoiceMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunkVoiceMethod>(); } },
                 { "voice_url", n => { VoiceUrl = n.GetStringValue(); } },
             };
         }
@@ -155,12 +155,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("from_domain_sid", FromDomainSid);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunk_status_callback_method>("status_callback_method", StatusCallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunkStatusCallbackMethod>("status_callback_method", StatusCallbackMethod);
             writer.WriteStringValue("status_callback_url", StatusCallbackUrl);
             writer.WriteStringValue("url", Url);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunk_voice_fallback_method>("voice_fallback_method", VoiceFallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunkVoiceFallbackMethod>("voice_fallback_method", VoiceFallbackMethod);
             writer.WriteStringValue("voice_fallback_url", VoiceFallbackUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunk_voice_method>("voice_method", VoiceMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunkVoiceMethod>("voice_method", VoiceMethod);
             writer.WriteStringValue("voice_url", VoiceUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

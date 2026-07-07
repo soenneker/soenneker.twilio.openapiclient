@@ -34,10 +34,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Metadata for the participants included in the Conversation when this Operator executed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetails_participants>? Participants { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem>? Participants { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetails_participants> Participants { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem> Participants { get; set; }
 #endif
         /// <summary>The context that was actually used by the operator during execution</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "channels", n => { Channels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "communications", n => { Communications = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications>(global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications.CreateFromDiscriminatorValue); } },
-                { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetails_participants>(global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetails_participants.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem>(global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resolvedContext", n => { ResolvedContext = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext>(global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext.CreateFromDiscriminatorValue); } },
                 { "trigger", n => { Trigger = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsTrigger>(global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsTrigger.CreateFromDiscriminatorValue); } },
             };
@@ -96,7 +96,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("channels", Channels);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications>("communications", Communications);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetails_participants>("participants", Participants);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem>("participants", Participants);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext>("resolvedContext", ResolvedContext);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsTrigger>("trigger", Trigger);
             writer.WriteAdditionalData(AdditionalData);

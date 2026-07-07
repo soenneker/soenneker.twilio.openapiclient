@@ -65,10 +65,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1User_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1User_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserLinks Links { get; set; }
 #endif
         /// <summary>The SID of a service-level [Role](https://www.twilio.com/docs/conversations/api/role-resource) assigned to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -128,7 +128,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "is_notifiable", n => { IsNotifiable = n.GetBoolValue(); } },
                 { "is_online", n => { IsOnline = n.GetBoolValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1User_links>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1User_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserLinks.CreateFromDiscriminatorValue); } },
                 { "role_sid", n => { RoleSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -150,7 +150,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("identity", Identity);
             writer.WriteBoolValue("is_notifiable", IsNotifiable);
             writer.WriteBoolValue("is_online", IsOnline);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1User_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserLinks>("links", Links);
             writer.WriteStringValue("role_sid", RoleSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);

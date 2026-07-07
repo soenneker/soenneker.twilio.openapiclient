@@ -9,7 +9,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "internal")]
         #pragma warning disable CS1591
-        Internal,
+        InternalValue,
         #pragma warning restore CS1591
         [EnumMember(Value = "beta")]
         #pragma warning disable CS1591

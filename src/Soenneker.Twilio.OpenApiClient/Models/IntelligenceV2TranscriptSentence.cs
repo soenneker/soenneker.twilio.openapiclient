@@ -61,10 +61,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Detailed information for each of the words of the given Sentence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentence_words>? Words { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentenceWordsItem>? Words { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentence_words> Words { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentenceWordsItem> Words { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentence"/> and sets the default values.
@@ -72,6 +72,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IntelligenceV2TranscriptSentence()
         {
             AdditionalData = new Dictionary<string, object>();
+            MediaChannel = 0;
+            SentenceIndex = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -98,7 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "start_time", n => { StartTime = n.GetStringValue(); } },
                 { "transcript", n => { Transcript = n.GetStringValue(); } },
-                { "words", n => { Words = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentence_words>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentence_words.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "words", n => { Words = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentenceWordsItem>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentenceWordsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -115,7 +117,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("start_time", StartTime);
             writer.WriteStringValue("transcript", Transcript);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentence_words>("words", Words);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentenceWordsItem>("words", Words);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

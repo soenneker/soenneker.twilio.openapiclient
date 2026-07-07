@@ -18,10 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of data cubes available in the domain, each containing measures and dimensions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponse_cubes>? Cubes { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponseCubesItem>? Cubes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponse_cubes> Cubes { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponseCubesItem> Cubes { get; set; }
 #endif
         /// <summary>The business domain name for which metadata is being provided</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cubes", n => { Cubes = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponse_cubes>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponse_cubes.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "cubes", n => { Cubes = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponseCubesItem>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponseCubesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponse_cubes>("cubes", Cubes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponseCubesItem>("cubes", Cubes);
             writer.WriteStringValue("domain", Domain);
             writer.WriteAdditionalData(AdditionalData);
         }

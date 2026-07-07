@@ -18,10 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of extracted entities from the Conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResultResult_entities>? Entities { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResultResultEntitiesItem>? Entities { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResultResult_entities> Entities { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResultResultEntitiesItem> Entities { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResultResult"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "entities", n => { Entities = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResultResult_entities>(global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResultResult_entities.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "entities", n => { Entities = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResultResultEntitiesItem>(global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResultResultEntitiesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResultResult_entities>("entities", Entities);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResultResultEntitiesItem>("entities", Entities);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

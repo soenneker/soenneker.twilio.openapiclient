@@ -88,6 +88,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public SupersimV1IpCommand()
         {
             AdditionalData = new Dictionary<string, object>();
+            DevicePort = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

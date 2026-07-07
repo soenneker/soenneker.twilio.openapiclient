@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.Item.OperatorResults
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_intelligence_v2\v2\Transcripts\{S-id}\OperatorResults
+    /// Builds and executes requests for operations under \twilio_intelligence_v2\v2\Transcripts\{s-id}\OperatorResults
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OperatorResultsRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.I
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("OperatorSid", position);
+                urlTplParams.Add("operatorSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.Item.OperatorResults.Item.WithOperatorSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -41,7 +41,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OperatorResultsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{S%2Did}/OperatorResults{?Page*,PageSize*,PageToken*,Redacted*}", pathParameters)
+        public OperatorResultsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{s%2Did}/OperatorResults{?Page*,PageSize*,PageToken*,Redacted*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OperatorResultsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{S%2Did}/OperatorResults{?Page*,PageSize*,PageToken*,Redacted*}", rawUrl)
+        public OperatorResultsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{s%2Did}/OperatorResults{?Page*,PageSize*,PageToken*,Redacted*}", rawUrl)
         {
         }
         /// <summary>

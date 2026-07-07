@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_pricing_v2.V2.Voice.Numbers
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("DestinationNumber", position);
+                urlTplParams.Add("destinationNumber", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_pricing_v2.V2.Voice.Numbers.Item.WithDestinationNumberItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

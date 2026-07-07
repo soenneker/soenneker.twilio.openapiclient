@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token
         /// <summary>
         /// Issues a new Access token (optionally identity_token &amp; refresh_token) in exchange of Oauth grant
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.V2Oauth2TokenResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.V2OAuth2TokenResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -44,11 +44,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.V2Oauth2TokenResponse?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioOauthV2CreateOauth2Token body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token.TokenRequestBuilder.TokenRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.V2OAuth2TokenResponse?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2CreateOAuth2TokenXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token.TokenRequestBuilder.TokenRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.V2Oauth2TokenResponse> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioOauthV2CreateOauth2Token body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token.TokenRequestBuilder.TokenRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.V2OAuth2TokenResponse> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2CreateOAuth2TokenXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token.TokenRequestBuilder.TokenRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -58,7 +58,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.V2Oauth2TokenResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.V2Oauth2TokenResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.V2OAuth2TokenResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.V2OAuth2TokenResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Issues a new Access token (optionally identity_token &amp; refresh_token) in exchange of Oauth grant
@@ -68,11 +68,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioOauthV2CreateOauth2Token body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token.TokenRequestBuilder.TokenRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2CreateOAuth2TokenXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token.TokenRequestBuilder.TokenRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioOauthV2CreateOauth2Token body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token.TokenRequestBuilder.TokenRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2CreateOAuth2TokenXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token.TokenRequestBuilder.TokenRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

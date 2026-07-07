@@ -47,10 +47,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains a list of all the individual hosting orders and their information, for this Bulk request. Each result object is grouped by its order status. To see a complete list of order status, please check &apos;https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/hosted-number-order-resource#status-values&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2BulkHostedNumberOrder_results>? Results { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2BulkHostedNumberOrderResultsItem>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2BulkHostedNumberOrder_results> Results { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2BulkHostedNumberOrderResultsItem> Results { get; set; }
 #endif
         /// <summary>The total count of phone numbers in this Bulk hosting request.</summary>
         public int? TotalCount { get; set; }
@@ -68,6 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public NumbersV2BulkHostedNumberOrder()
         {
             AdditionalData = new Dictionary<string, object>();
+            TotalCount = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -93,7 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "notification_email", n => { NotificationEmail = n.GetStringValue(); } },
                 { "request_status", n => { RequestStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BulkHostedNumberOrderEnumRequestStatus>(); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2BulkHostedNumberOrder_results>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2BulkHostedNumberOrder_results.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2BulkHostedNumberOrderResultsItem>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2BulkHostedNumberOrderResultsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total_count", n => { TotalCount = n.GetIntValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -111,7 +112,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("notification_email", NotificationEmail);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BulkHostedNumberOrderEnumRequestStatus>("request_status", RequestStatus);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2BulkHostedNumberOrder_results>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2BulkHostedNumberOrderResultsItem>("results", Results);
             writer.WriteIntValue("total_count", TotalCount);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;The result set that contains the eligibility check response for the requested number, each result has at least the following attributes:  phone_number: The requested phone number ,hosting_account_sid: The account sid where the phone number will be hosted, date_last_checked: Datetime (ISO 8601) when the PN was last checked for eligibility, country: Phone number’s country, eligibility_status: Indicates the eligibility status of the PN (Eligible/Ineligible), eligibility_sub_status: Indicates the sub status of the eligibility , ineligibility_reason: Reason for number&apos;s ineligibility (if applicable), next_step: Suggested next step in the hosting process based on the eligibility status.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1Eligibility_results>? Results { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1EligibilityResultsItem>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1Eligibility_results> Results { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1EligibilityResultsItem> Results { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1Eligibility"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1Eligibility_results>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1Eligibility_results.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1EligibilityResultsItem>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1EligibilityResultsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1Eligibility_results>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1EligibilityResultsItem>("results", Results);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

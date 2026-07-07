@@ -9,15 +9,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "ACTIVE")]
         #pragma warning disable CS1591
-        ACTIVE,
+        Active,
         #pragma warning restore CS1591
         [EnumMember(Value = "INACTIVE")]
         #pragma warning disable CS1591
-        INACTIVE,
+        Inactive,
         #pragma warning restore CS1591
         [EnumMember(Value = "CLOSED")]
         #pragma warning disable CS1591
-        CLOSED,
+        Closed,
         #pragma warning restore CS1591
     }
 }

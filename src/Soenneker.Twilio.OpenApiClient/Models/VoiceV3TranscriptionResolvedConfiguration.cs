@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Default participant configurations for the transcription</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration_participantDefaults>? ParticipantDefaults { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItem>? ParticipantDefaults { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration_participantDefaults> ParticipantDefaults { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItem> ParticipantDefaults { get; set; }
 #endif
         /// <summary>The speech model used for transcription (e.g., nova-2, nova-3, chirp_2)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,7 +89,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "conversationConfigurationId", n => { ConversationConfigurationId = n.GetStringValue(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
-                { "participantDefaults", n => { ParticipantDefaults = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration_participantDefaults>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration_participantDefaults.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "participantDefaults", n => { ParticipantDefaults = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItem>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "speechModel", n => { SpeechModel = n.GetStringValue(); } },
                 { "transcriptionEngine", n => { TranscriptionEngine = n.GetStringValue(); } },
                 { "transcriptionStatusCallback", n => { TranscriptionStatusCallback = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback.CreateFromDiscriminatorValue); } },
@@ -104,7 +104,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("conversationConfigurationId", ConversationConfigurationId);
             writer.WriteStringValue("language", Language);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration_participantDefaults>("participantDefaults", ParticipantDefaults);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItem>("participantDefaults", ParticipantDefaults);
             writer.WriteStringValue("speechModel", SpeechModel);
             writer.WriteStringValue("transcriptionEngine", TranscriptionEngine);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback>("transcriptionStatusCallback", TranscriptionStatusCallback);

@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileResponse_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileResponseMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileResponse_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileResponseMeta Meta { get; set; }
 #endif
         /// <summary>The network_access_profiles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileResponse_meta>(global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileResponse_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileResponseMeta.CreateFromDiscriminatorValue); } },
                 { "network_access_profiles", n => { NetworkAccessProfiles = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfile>(global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfile.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileResponse_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListNetworkAccessProfileResponseMeta>("meta", Meta);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfile>("network_access_profiles", NetworkAccessProfiles);
             writer.WriteAdditionalData(AdditionalData);
         }

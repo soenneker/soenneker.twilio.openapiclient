@@ -47,10 +47,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs to resources related the participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipantLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipantLinks Links { get; set; }
 #endif
         /// <summary>The phone number or short code (masked number) of the participant&apos;s partner. The participant will call or message the partner participant at this number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -131,7 +131,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "identifier", n => { Identifier = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant_links>(global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipantLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipantLinks.CreateFromDiscriminatorValue); } },
                 { "proxy_identifier", n => { ProxyIdentifier = n.GetStringValue(); } },
                 { "proxy_identifier_sid", n => { ProxyIdentifierSid = n.GetStringValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
@@ -153,7 +153,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("identifier", Identifier);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipantLinks>("links", Links);
             writer.WriteStringValue("proxy_identifier", ProxyIdentifier);
             writer.WriteStringValue("proxy_identifier_sid", ProxyIdentifierSid);
             writer.WriteStringValue("service_sid", ServiceSid);

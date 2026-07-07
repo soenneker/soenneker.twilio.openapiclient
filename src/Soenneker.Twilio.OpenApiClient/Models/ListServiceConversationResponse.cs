@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationResponse_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationResponseMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationResponse_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationResponseMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "conversations", n => { Conversations = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversation>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversation.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationResponse_meta>(global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationResponse_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationResponseMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversation>("conversations", Conversations);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationResponse_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceConversationResponseMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

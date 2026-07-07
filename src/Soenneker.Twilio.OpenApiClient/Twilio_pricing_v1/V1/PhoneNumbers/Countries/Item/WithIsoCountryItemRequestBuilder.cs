@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_pricing_v1.V1.PhoneNumbers.Count
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithIsoCountryItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v1/v1/PhoneNumbers/Countries/{IsoCountry}", pathParameters)
+        public WithIsoCountryItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v1/v1/PhoneNumbers/Countries/{isoCountry}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_pricing_v1.V1.PhoneNumbers.Count
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithIsoCountryItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v1/v1/PhoneNumbers/Countries/{IsoCountry}", rawUrl)
+        public WithIsoCountryItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v1/v1/PhoneNumbers/Countries/{isoCountry}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.PricingV1PhoneNumberPhoneNumberCountryInstance"/></returns>

@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The required information for creating an End-User. The required fields will change as regulatory needs change and will differ for businesses and individuals.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1EndUserType_fields>? Fields { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1EndUserTypeFieldsItem>? Fields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1EndUserType_fields> Fields { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1EndUserTypeFieldsItem> Fields { get; set; }
 #endif
         /// <summary>A human-readable description that is assigned to describe the End-User Type resource. Examples can include first name, last name, email, business name, etc</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,7 +79,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1EndUserType_fields>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1EndUserType_fields.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1EndUserTypeFieldsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1EndUserTypeFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "machine_name", n => { MachineName = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -93,7 +93,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1EndUserType_fields>("fields", Fields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1EndUserTypeFieldsItem>("fields", Fields);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("machine_name", MachineName);
             writer.WriteStringValue("sid", Sid);

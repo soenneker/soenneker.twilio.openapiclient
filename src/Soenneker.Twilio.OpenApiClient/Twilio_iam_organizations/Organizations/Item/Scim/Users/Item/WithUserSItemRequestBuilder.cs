@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.Item.Scim.Users.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_iam_organizations\Organizations\{OrganizationSid}\scim\Users\{UserSid}
+    /// Builds and executes requests for operations under \twilio_iam_organizations\Organizations\{organizationSid}\scim\Users\{userSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithUserSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithUserSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/scim/Users/{UserSid}", pathParameters)
+        public WithUserSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{organizationSid}/scim/Users/{userSid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithUserSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/scim/Users/{UserSid}", rawUrl)
+        public WithUserSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{organizationSid}/scim/Users/{userSid}", rawUrl)
         {
         }
         /// <summary>

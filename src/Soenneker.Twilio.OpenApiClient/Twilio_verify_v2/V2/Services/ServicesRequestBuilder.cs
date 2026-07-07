@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ServiceS%2Did", position);
+                urlTplParams.Add("serviceS%2Did", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.ServiceSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -49,20 +49,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services
         /// <summary>
         /// Retrieve a list of all Verification Services for an account.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListServiceResponseResponseApplicationJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListServiceResponseResponseJson11"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceResponseResponseApplicationJson?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.ServicesRequestBuilder.ServicesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceResponseResponseJson11?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.ServicesRequestBuilder.ServicesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceResponseResponseApplicationJson> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.ServicesRequestBuilder.ServicesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceResponseResponseJson11> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.ServicesRequestBuilder.ServicesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceResponseResponseApplicationJson>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListServiceResponseResponseApplicationJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceResponseResponseJson11>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListServiceResponseResponseJson11.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new Verification Service.
@@ -73,11 +73,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Service?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateService body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Service?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateServiceXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Service> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateService body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Service> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateServiceXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -111,11 +111,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateService body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateServiceXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateService body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateServiceXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

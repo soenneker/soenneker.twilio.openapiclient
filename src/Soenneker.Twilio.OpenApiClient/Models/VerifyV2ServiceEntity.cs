@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains a dictionary of URL links to nested resources of this Entity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntity_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntity_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityLinks Links { get; set; }
 #endif
         /// <summary>The unique SID identifier of the Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,7 +95,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntity_links>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntity_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityLinks.CreateFromDiscriminatorValue); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -112,7 +112,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntity_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityLinks>("links", Links);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);

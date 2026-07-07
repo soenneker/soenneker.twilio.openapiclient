@@ -10,11 +10,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "start_time")]
         #pragma warning disable CS1591
-        Start_time,
+        StartTime,
         #pragma warning restore CS1591
         [EnumMember(Value = "end_time")]
         #pragma warning disable CS1591
-        End_time,
+        EndTime,
         #pragma warning restore CS1591
     }
 }

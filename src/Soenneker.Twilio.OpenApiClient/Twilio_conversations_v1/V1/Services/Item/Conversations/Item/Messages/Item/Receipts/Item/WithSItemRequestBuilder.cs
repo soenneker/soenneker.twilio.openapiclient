@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Ite
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Services/{ChatServiceS%2Did}/Conversations/{ConversationS%2Did}/Messages/{MessageS%2Did}/Receipts/{Sid}", pathParameters)
+        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Services/{chatServiceS%2Did}/Conversations/{conversationS%2Did}/Messages/{messageS%2Did}/Receipts/{sid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Ite
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Services/{ChatServiceS%2Did}/Conversations/{ConversationS%2Did}/Messages/{MessageS%2Did}/Receipts/{Sid}", rawUrl)
+        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Services/{chatServiceS%2Did}/Conversations/{conversationS%2Did}/Messages/{messageS%2Did}/Receipts/{sid}", rawUrl)
         {
         }
         /// <summary>

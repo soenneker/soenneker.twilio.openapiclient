@@ -63,10 +63,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Details indicating why a campaign registration failed. These errors can indicate one or more fields that were incorrect or did not meet review requirements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPerson_errors>? Errors { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonErrorsItem>? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPerson_errors> Errors { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonErrorsItem> Errors { get; set; }
 #endif
         /// <summary>Indicate that this SMS campaign will send messages that contain links.</summary>
         public bool? HasEmbeddedLinks { get; set; }
@@ -209,7 +209,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "direct_lending", n => { DirectLending = n.GetBoolValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPerson_errors>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPerson_errors.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "has_embedded_links", n => { HasEmbeddedLinks = n.GetBoolValue(); } },
                 { "has_embedded_phone", n => { HasEmbeddedPhone = n.GetBoolValue(); } },
                 { "help_keywords", n => { HelpKeywords = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -246,7 +246,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("direct_lending", DirectLending);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPerson_errors>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonErrorsItem>("errors", Errors);
             writer.WriteBoolValue("has_embedded_links", HasEmbeddedLinks);
             writer.WriteBoolValue("has_embedded_phone", HasEmbeddedPhone);
             writer.WriteCollectionOfPrimitiveValues<string>("help_keywords", HelpKeywords);

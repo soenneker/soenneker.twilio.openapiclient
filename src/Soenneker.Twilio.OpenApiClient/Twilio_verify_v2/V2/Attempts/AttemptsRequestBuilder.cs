@@ -32,7 +32,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

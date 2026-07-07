@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item.Participants.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_insights_v1\v1\Video\Rooms\{RoomSid}\Participants\{ParticipantSid}
+    /// Builds and executes requests for operations under \twilio_insights_v1\v1\Video\Rooms\{roomSid}\Participants\{participantSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithParticipantSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithParticipantSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{RoomSid}/Participants/{ParticipantSid}", pathParameters)
+        public WithParticipantSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{roomSid}/Participants/{participantSid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithParticipantSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{RoomSid}/Participants/{ParticipantSid}", rawUrl)
+        public WithParticipantSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{roomSid}/Participants/{participantSid}", rawUrl)
         {
         }
         /// <summary>

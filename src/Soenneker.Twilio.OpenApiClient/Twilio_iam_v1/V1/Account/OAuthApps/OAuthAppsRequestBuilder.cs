@@ -49,33 +49,33 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Account.OAuthApps
         /// <summary>
         /// Creates an oauth app for the given AccountSid
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppCreateUpdateResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateUpdateResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOauthAppAccount400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOauthAppAccount401">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOauthAppAccount403">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOauthAppAccount500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOAuthAppAccount400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOAuthAppAccount401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOAuthAppAccount403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOAuthAppAccount500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppCreateUpdateResponse?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateUpdateResponse?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppCreateUpdateResponse> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateUpdateResponse> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOauthAppAccount400.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOauthAppAccount401.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOauthAppAccount403.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOauthAppAccount500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOAuthAppAccount400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOAuthAppAccount401Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOAuthAppAccount403Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateOAuthAppAccount500Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppCreateUpdateResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppCreateUpdateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateUpdateResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateUpdateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates an oauth app for the given AccountSid
@@ -85,11 +85,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Account.OAuthApps
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOauthAppCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

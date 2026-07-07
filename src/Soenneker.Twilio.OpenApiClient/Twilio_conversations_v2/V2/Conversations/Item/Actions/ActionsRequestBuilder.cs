@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.Actions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_conversations_v2\v2\Conversations\{Conversation-id}\Actions
+    /// Builds and executes requests for operations under \twilio_conversations_v2\v2\Conversations\{conversation-id}\Actions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActionsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversation
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ActionId", position);
+                urlTplParams.Add("actionId", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.Actions.Item.WithActionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversation
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{Conversation%2Did}/Actions", pathParameters)
+        public ActionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{conversation%2Did}/Actions", pathParameters)
         {
         }
         /// <summary>
@@ -43,41 +43,41 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversation
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{Conversation%2Did}/Actions", rawUrl)
+        public ActionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{conversation%2Did}/Actions", rawUrl)
         {
         }
         /// <summary>
         /// Creates an Action within a Conversation. Currently supports SEND_MESSAGE,which sends a message to recipients via the configured channel.Returns 202 Accepted with the Action in PENDING status. Poll`GET /v2/Conversations/{ConversationId}/Actions/{ActionId}` to check completion.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202429Error">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202500Error">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202503Error">When receiving a 503 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.BadRequestResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.NotFoundResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TooManyRequestsResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.InternalServerErrorResponse">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.ServiceUnavailableResponse">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202Response?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationActionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202Response> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationActionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202400Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202404Error.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202429Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202500Error.CreateFromDiscriminatorValue },
-                { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202503Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.BadRequestResponse.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.NotFoundResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TooManyRequestsResponse.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.InternalServerErrorResponse.CreateFromDiscriminatorValue },
+                { "503", global::Soenneker.Twilio.OpenApiClient.Models.ServiceUnavailableResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates an Action within a Conversation. Currently supports SEND_MESSAGE,which sends a message to recipients via the configured channel.Returns 202 Accepted with the Action in PENDING status. Poll`GET /v2/Conversations/{ConversationId}/Actions/{ActionId}` to check completion.
@@ -87,11 +87,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversation
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationActionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationActionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

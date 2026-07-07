@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistr
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SmsOtpRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/a2p/BrandRegistrations/{BrandRegistrationS%2Did}/SmsOtp", pathParameters)
+        public SmsOtpRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/a2p/BrandRegistrations/{brandRegistrationS%2Did}/SmsOtp", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistr
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SmsOtpRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/a2p/BrandRegistrations/{BrandRegistrationS%2Did}/SmsOtp", rawUrl)
+        public SmsOtpRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/a2p/BrandRegistrations/{brandRegistrationS%2Did}/SmsOtp", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsBrandRegistrationOtp"/></returns>

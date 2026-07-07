@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrations.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_numbers_v1\v1\SenderIdRegistrations\{BundleSid}
+    /// Builds and executes requests for operations under \twilio_numbers_v1\v1\SenderIdRegistrations\{bundleSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithBundleSItemRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithBundleSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/SenderIdRegistrations/{BundleSid}", pathParameters)
+        public WithBundleSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/SenderIdRegistrations/{bundleSid}", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithBundleSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/SenderIdRegistrations/{BundleSid}", rawUrl)
+        public WithBundleSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/SenderIdRegistrations/{bundleSid}", rawUrl)
         {
         }
     }

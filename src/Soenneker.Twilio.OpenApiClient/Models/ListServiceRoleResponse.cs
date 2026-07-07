@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListServiceRoleResponse_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListServiceRoleResponseMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListServiceRoleResponse_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListServiceRoleResponseMeta Meta { get; set; }
 #endif
         /// <summary>The roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceRoleResponse_meta>(global::Soenneker.Twilio.OpenApiClient.Models.ListServiceRoleResponse_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceRoleResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListServiceRoleResponseMeta.CreateFromDiscriminatorValue); } },
                 { "roles", n => { Roles = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceRole>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceRole.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceRoleResponse_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListServiceRoleResponseMeta>("meta", Meta);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceRole>("roles", Roles);
             writer.WriteAdditionalData(AdditionalData);
         }

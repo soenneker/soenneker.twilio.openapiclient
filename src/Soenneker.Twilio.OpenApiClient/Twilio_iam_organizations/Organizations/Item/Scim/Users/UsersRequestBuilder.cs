@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.Item.Scim.Users
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_iam_organizations\Organizations\{OrganizationSid}\scim\Users
+    /// Builds and executes requests for operations under \twilio_iam_organizations\Organizations\{organizationSid}\scim\Users
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UsersRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("UserSid", position);
+                urlTplParams.Add("userSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.Item.Scim.Users.Item.WithUserSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/scim/Users{?filter*}", pathParameters)
+        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{organizationSid}/scim/Users{?filter*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/scim/Users{?filter*}", rawUrl)
+        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{organizationSid}/scim/Users{?filter*}", rawUrl)
         {
         }
         /// <summary>

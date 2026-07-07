@@ -24,7 +24,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Address { get; set; }
 #endif
         /// <summary>Channel type for address resolution.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant_channel? Channel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipantChannel? Channel { get; set; }
         /// <summary>Participant ID to resolve address from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,7 +59,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetStringValue(); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant_channel>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipantChannel>(); } },
                 { "participantId", n => { ParticipantId = n.GetStringValue(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("address", Address);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant_channel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipantChannel>("channel", Channel);
             writer.WriteStringValue("participantId", ParticipantId);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -26,10 +26,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Parameter values used for Operator execution, provided by the Rule at runtime. This object contains a dictionary of parameter keys and their corresponding values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorReference_parameters? Parameters { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorReferenceParametersProperty? Parameters { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorReference_parameters Parameters { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorReferenceParametersProperty Parameters { get; set; }
 #endif
         /// <summary>Version of the Language Operator used to generate the Operator Result.</summary>
         public int? Version { get; set; }
@@ -59,7 +59,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorReference_parameters>(global::Soenneker.Twilio.OpenApiClient.Models.OperatorReference_parameters.CreateFromDiscriminatorValue); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorReferenceParametersProperty>(global::Soenneker.Twilio.OpenApiClient.Models.OperatorReferenceParametersProperty.CreateFromDiscriminatorValue); } },
                 { "version", n => { Version = n.GetIntValue(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorReference_parameters>("parameters", Parameters);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorReferenceParametersProperty>("parameters", Parameters);
             writer.WriteIntValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }

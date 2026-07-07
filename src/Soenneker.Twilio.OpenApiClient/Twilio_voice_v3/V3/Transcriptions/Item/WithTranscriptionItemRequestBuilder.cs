@@ -39,12 +39,12 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions.Item
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperationResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription401">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription403">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription429">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription404Response">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperationResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -57,12 +57,12 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription400.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription401.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription403.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription404.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription429.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription401Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription403Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription404Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3FetchTranscription500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperationResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperationResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

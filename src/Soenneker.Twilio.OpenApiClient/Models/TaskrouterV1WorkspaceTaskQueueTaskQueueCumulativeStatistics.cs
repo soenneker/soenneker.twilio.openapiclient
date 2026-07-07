@@ -112,6 +112,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatistics()
         {
             AdditionalData = new Dictionary<string, object>();
+            AvgTaskAcceptanceTime = 0;
+            ReservationsAccepted = 0;
+            ReservationsCanceled = 0;
+            ReservationsCreated = 0;
+            ReservationsRejected = 0;
+            ReservationsRescinded = 0;
+            ReservationsTimedOut = 0;
+            TasksCanceled = 0;
+            TasksCompleted = 0;
+            TasksDeleted = 0;
+            TasksEntered = 0;
+            TasksMoved = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProfiles.Item.Networks.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NetworksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/NetworkAccessProfiles/{NetworkAccessProfileS%2Did}/Networks{?Page*,PageSize*,PageToken*}", pathParameters)
+        public NetworksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/NetworkAccessProfiles/{networkAccessProfileS%2Did}/Networks{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NetworksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/NetworkAccessProfiles/{NetworkAccessProfileS%2Did}/Networks{?Page*,PageSize*,PageToken*}", rawUrl)
+        public NetworksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/NetworkAccessProfiles/{networkAccessProfileS%2Did}/Networks{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -73,11 +73,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileNetworkAccessProfileNetwork?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateNetworkAccessProfileNetwork body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileNetworkAccessProfileNetwork?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateNetworkAccessProfileNetworkXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileNetworkAccessProfileNetwork> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateNetworkAccessProfileNetwork body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileNetworkAccessProfileNetwork> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateNetworkAccessProfileNetworkXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -111,11 +111,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateNetworkAccessProfileNetwork body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateNetworkAccessProfileNetworkXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateNetworkAccessProfileNetwork body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateNetworkAccessProfileNetworkXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

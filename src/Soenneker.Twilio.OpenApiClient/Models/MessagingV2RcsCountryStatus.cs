@@ -9,19 +9,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "ONLINE")]
         #pragma warning disable CS1591
-        ONLINE,
+        Online,
         #pragma warning restore CS1591
         [EnumMember(Value = "OFFLINE")]
         #pragma warning disable CS1591
-        OFFLINE,
+        Offline,
         #pragma warning restore CS1591
         [EnumMember(Value = "TWILIO_REVIEW")]
         #pragma warning disable CS1591
-        TWILIO_REVIEW,
+        TwilioReview,
         #pragma warning restore CS1591
         [EnumMember(Value = "PENDING_VERIFICATION")]
         #pragma warning disable CS1591
-        PENDING_VERIFICATION,
+        PendingVerification,
         #pragma warning restore CS1591
     }
 }

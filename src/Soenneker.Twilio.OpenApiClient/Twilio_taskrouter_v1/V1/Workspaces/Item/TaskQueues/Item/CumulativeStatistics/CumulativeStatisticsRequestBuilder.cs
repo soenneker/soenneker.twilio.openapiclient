@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues.Item.CumulativeStatistics
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_taskrouter_v1\v1\Workspaces\{S-id}\TaskQueues\{S-id}\CumulativeStatistics
+    /// Builds and executes requests for operations under \twilio_taskrouter_v1\v1\Workspaces\{s-id}\TaskQueues\{s-id}\CumulativeStatistics
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CumulativeStatisticsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CumulativeStatisticsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{S%2Did}/TaskQueues/{S%2Did}/CumulativeStatistics{?EndDate*,Minutes*,SplitByWaitTime*,StartDate*,TaskChannel*}", pathParameters)
+        public CumulativeStatisticsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{s%2Did}/TaskQueues/{s%2Did}/CumulativeStatistics{?EndDate*,Minutes*,SplitByWaitTime*,StartDate*,TaskChannel*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CumulativeStatisticsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{S%2Did}/TaskQueues/{S%2Did}/CumulativeStatistics{?EndDate*,Minutes*,SplitByWaitTime*,StartDate*,TaskChannel*}", rawUrl)
+        public CumulativeStatisticsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{s%2Did}/TaskQueues/{s%2Did}/CumulativeStatistics{?EndDate*,Minutes*,SplitByWaitTime*,StartDate*,TaskChannel*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatistics"/></returns>

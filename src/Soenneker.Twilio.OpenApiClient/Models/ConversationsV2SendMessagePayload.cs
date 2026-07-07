@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Channel-specific parameters forwarded as-is to the downstream sending service.Allows passing backend-specific fields without requiring API changes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayload_channelSettings? ChannelSettings { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayloadChannelSettings? ChannelSettings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayload_channelSettings ChannelSettings { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayloadChannelSettings ChannelSettings { get; set; }
 #endif
         /// <summary>Content for a SEND_MESSAGE action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channelSettings", n => { ChannelSettings = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayload_channelSettings>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayload_channelSettings.CreateFromDiscriminatorValue); } },
+                { "channelSettings", n => { ChannelSettings = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayloadChannelSettings>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayloadChannelSettings.CreateFromDiscriminatorValue); } },
                 { "content", n => { Content = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent.CreateFromDiscriminatorValue); } },
                 { "from", n => { From = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant.CreateFromDiscriminatorValue); } },
                 { "to", n => { To = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -84,7 +84,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayload_channelSettings>("channelSettings", ChannelSettings);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayloadChannelSettings>("channelSettings", ChannelSettings);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent>("content", Content);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant>("from", From);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant>("to", To);

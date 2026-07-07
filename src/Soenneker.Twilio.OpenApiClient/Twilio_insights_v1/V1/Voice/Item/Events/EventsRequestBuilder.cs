@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item.Events
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_insights_v1\v1\Voice\{CallS-id}\Events
+    /// Builds and executes requests for operations under \twilio_insights_v1\v1\Voice\{callS-id}\Events
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item.Events
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EventsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Voice/{CallS%2Did}/Events{?Edge*,Page*,PageSize*,PageToken*}", pathParameters)
+        public EventsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Voice/{callS%2Did}/Events{?Edge*,Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item.Events
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EventsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Voice/{CallS%2Did}/Events{?Edge*,Page*,PageSize*,PageToken*}", rawUrl)
+        public EventsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Voice/{callS%2Did}/Events{?Edge*,Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

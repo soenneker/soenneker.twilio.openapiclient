@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v2.V2.Instances.Item.Users
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_flex_v2\v2\Instances\{InstanceSid}\Users
+    /// Builds and executes requests for operations under \twilio_flex_v2\v2\Instances\{instanceSid}\Users
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UsersRequestBuilder : BaseRequestBuilder
@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v2.V2.Instances.Item.Users
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("FlexUserSid", position);
+                urlTplParams.Add("flexUserSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v2.V2.Instances.Item.Users.Item.WithFlexUserSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -32,7 +32,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v2.V2.Instances.Item.Users
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v2/v2/Instances/{InstanceSid}/Users", pathParameters)
+        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v2/v2/Instances/{instanceSid}/Users", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v2.V2.Instances.Item.Users
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v2/v2/Instances/{InstanceSid}/Users", rawUrl)
+        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v2/v2/Instances/{instanceSid}/Users", rawUrl)
         {
         }
     }

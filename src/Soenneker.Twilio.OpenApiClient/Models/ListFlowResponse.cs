@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListFlowResponse_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListFlowResponseMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListFlowResponse_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListFlowResponseMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListFlowResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "flows", n => { Flows = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.StudioV1Flow>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV1Flow.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListFlowResponse_meta>(global::Soenneker.Twilio.OpenApiClient.Models.ListFlowResponse_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListFlowResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListFlowResponseMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.StudioV1Flow>("flows", Flows);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListFlowResponse_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListFlowResponseMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

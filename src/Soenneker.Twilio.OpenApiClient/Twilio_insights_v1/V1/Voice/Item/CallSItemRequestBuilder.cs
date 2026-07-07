@@ -16,7 +16,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_insights_v1\v1\Voice\{CallS-id}
+    /// Builds and executes requests for operations under \twilio_insights_v1\v1\Voice\{callS-id}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CallSItemRequestBuilder : BaseRequestBuilder
@@ -46,7 +46,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CallSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Voice/{CallS%2Did}", pathParameters)
+        public CallSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Voice/{callS%2Did}", pathParameters)
         {
         }
         /// <summary>
@@ -54,7 +54,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CallSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Voice/{CallS%2Did}", rawUrl)
+        public CallSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Voice/{callS%2Did}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1Call"/></returns>

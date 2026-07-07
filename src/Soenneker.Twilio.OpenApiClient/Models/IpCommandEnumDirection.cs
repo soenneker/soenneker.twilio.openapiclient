@@ -9,11 +9,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "to_sim")]
         #pragma warning disable CS1591
-        To_sim,
+        ToSim,
         #pragma warning restore CS1591
         [EnumMember(Value = "from_sim")]
         #pragma warning disable CS1591
-        From_sim,
+        FromSim,
         #pragma warning restore CS1591
     }
 }

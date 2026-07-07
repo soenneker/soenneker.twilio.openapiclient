@@ -39,6 +39,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string PreviousToken { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Meta"/> and sets the default values.
+        /// </summary>
+        public TwilioMemoryV1Meta()
+        {
+            PageSize = 50;
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Meta"/></returns>

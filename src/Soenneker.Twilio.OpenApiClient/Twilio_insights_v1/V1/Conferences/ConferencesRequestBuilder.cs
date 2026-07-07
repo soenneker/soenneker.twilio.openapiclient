@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Conferences
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ConferenceSid", position);
+                urlTplParams.Add("conferenceSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Conferences.Item.WithConferenceSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

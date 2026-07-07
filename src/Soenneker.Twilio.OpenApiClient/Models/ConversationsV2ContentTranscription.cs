@@ -31,7 +31,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscription Transcription { get; set; }
 #endif
         /// <summary>Content type discriminator.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscription_type? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscription"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "transcription", n => { Transcription = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscription>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscription.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscription_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("text", Text);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscription>("transcription", Transcription);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscription_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

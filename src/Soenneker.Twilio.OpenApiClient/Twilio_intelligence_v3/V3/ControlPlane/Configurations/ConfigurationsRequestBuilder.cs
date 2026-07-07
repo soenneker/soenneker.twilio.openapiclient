@@ -49,56 +49,56 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.
         /// <summary>
         /// Retrieve a list of Intelligence Configurations
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations429">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.Configurations.ConfigurationsRequestBuilder.ConfigurationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.Configurations.ConfigurationsRequestBuilder.ConfigurationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.Configurations.ConfigurationsRequestBuilder.ConfigurationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.Configurations.ConfigurationsRequestBuilder.ConfigurationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations429.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations500.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations500Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Create an Intelligence Configuration to control how and when language operators analyze conversations.You must include the `rules` field in the request. You can pass an empty array (`\&quot;rules\&quot;: []`), but an Intelligence Configuration with an empty `rules` array doesn&apos;t execute any language operators. To add rules later, make a `PUT /v3/ControlPlane/Configurations/{id}` request.After creating an Intelligence Configuration, you must attach it to a Conversations Configuration by using the Conversations API.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.Configurations.ConfigurationsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration201Response"/></returns>
         /// <param name="body">Request body for creating a new Intelligence Configuration.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration429">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.Configurations.ConfigurationsPostResponse?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration201Response?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfigurationRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.Configurations.ConfigurationsPostResponse> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration201Response> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfigurationRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration400.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration429.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration400Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration500Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.Configurations.ConfigurationsPostResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.Configurations.ConfigurationsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration201Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration201Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of Intelligence Configurations
@@ -127,11 +127,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfigurationRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfigurationRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

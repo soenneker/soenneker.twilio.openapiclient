@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.V1.Sims.Item.DataSes
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DataSessionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_wireless_v1/v1/Sims/{S%2Did}/DataSessions{?Page*,PageSize*,PageToken*}", pathParameters)
+        public DataSessionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_wireless_v1/v1/Sims/{s%2Did}/DataSessions{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.V1.Sims.Item.DataSes
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DataSessionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_wireless_v1/v1/Sims/{S%2Did}/DataSessions{?Page*,PageSize*,PageToken*}", rawUrl)
+        public DataSessionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_wireless_v1/v1/Sims/{s%2Did}/DataSessions{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListDataSessionResponse"/></returns>

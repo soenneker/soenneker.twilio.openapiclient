@@ -10,51 +10,51 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "invalid_requested_region")]
         #pragma warning disable CS1591
-        Invalid_requested_region,
+        InvalidRequestedRegion,
         #pragma warning restore CS1591
         [EnumMember(Value = "duplicate_identity")]
         #pragma warning disable CS1591
-        Duplicate_identity,
+        DuplicateIdentity,
         #pragma warning restore CS1591
         [EnumMember(Value = "start_failure")]
         #pragma warning disable CS1591
-        Start_failure,
+        StartFailure,
         #pragma warning restore CS1591
         [EnumMember(Value = "region_configuration_issues")]
         #pragma warning disable CS1591
-        Region_configuration_issues,
+        RegionConfigurationIssues,
         #pragma warning restore CS1591
         [EnumMember(Value = "quality_warnings")]
         #pragma warning disable CS1591
-        Quality_warnings,
+        QualityWarnings,
         #pragma warning restore CS1591
         [EnumMember(Value = "participant_behavior_issues")]
         #pragma warning disable CS1591
-        Participant_behavior_issues,
+        ParticipantBehaviorIssues,
         #pragma warning restore CS1591
         [EnumMember(Value = "high_packet_loss")]
         #pragma warning disable CS1591
-        High_packet_loss,
+        HighPacketLoss,
         #pragma warning restore CS1591
         [EnumMember(Value = "high_jitter")]
         #pragma warning disable CS1591
-        High_jitter,
+        HighJitter,
         #pragma warning restore CS1591
         [EnumMember(Value = "high_latency")]
         #pragma warning disable CS1591
-        High_latency,
+        HighLatency,
         #pragma warning restore CS1591
         [EnumMember(Value = "low_mos")]
         #pragma warning disable CS1591
-        Low_mos,
+        LowMos,
         #pragma warning restore CS1591
         [EnumMember(Value = "detected_silence")]
         #pragma warning disable CS1591
-        Detected_silence,
+        DetectedSilence,
         #pragma warning restore CS1591
         [EnumMember(Value = "no_concurrent_participants")]
         #pragma warning disable CS1591
-        No_concurrent_participants,
+        NoConcurrentParticipants,
         #pragma warning restore CS1591
     }
 }

@@ -133,7 +133,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails SmsCampaignDetails { get; set; }
 #endif
         /// <summary>The state of the application.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplication_state? State { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationState? State { get; set; }
         /// <summary>The identity of the user who last updated the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -200,7 +200,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "setup", n => { Setup = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSetup>(global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSetup.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sms_campaign_details", n => { SmsCampaignDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails>(global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails.CreateFromDiscriminatorValue); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplication_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationState>(); } },
                 { "updated_by", n => { UpdatedBy = n.GetStringValue(); } },
                 { "user_sign_up", n => { UserSignUp = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationUserSignUp>(global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationUserSignUp.CreateFromDiscriminatorValue); } },
                 { "zendesk_ticket_id", n => { ZendeskTicketId = n.GetStringValue(); } },
@@ -230,7 +230,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSetup>("setup", Setup);
             writer.WriteStringValue("sid", Sid);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails>("sms_campaign_details", SmsCampaignDetails);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplication_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationState>("state", State);
             writer.WriteStringValue("updated_by", UpdatedBy);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationUserSignUp>("user_sign_up", UserSignUp);
             writer.WriteStringValue("zendesk_ticket_id", ZendeskTicketId);

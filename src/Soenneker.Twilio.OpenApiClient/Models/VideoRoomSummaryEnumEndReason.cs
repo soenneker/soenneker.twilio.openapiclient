@@ -10,7 +10,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "room_ended_via_api")]
         #pragma warning disable CS1591
-        Room_ended_via_api,
+        RoomEndedViaApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "timeout")]
         #pragma warning disable CS1591

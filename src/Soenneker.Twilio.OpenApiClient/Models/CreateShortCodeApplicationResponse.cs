@@ -133,7 +133,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSmsCampaignDetails SmsCampaignDetails { get; set; }
 #endif
         /// <summary>The state of the application.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_state? State { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseState? State { get; set; }
         /// <summary>The identity of the user who last updated the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -200,7 +200,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "setup", n => { Setup = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sms_campaign_details", n => { SmsCampaignDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSmsCampaignDetails>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSmsCampaignDetails.CreateFromDiscriminatorValue); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseState>(); } },
                 { "updated_by", n => { UpdatedBy = n.GetStringValue(); } },
                 { "user_sign_up", n => { UserSignUp = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp>(global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp.CreateFromDiscriminatorValue); } },
                 { "zendesk_ticket_id", n => { ZendeskTicketId = n.GetStringValue(); } },
@@ -230,7 +230,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup>("setup", Setup);
             writer.WriteStringValue("sid", Sid);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSmsCampaignDetails>("sms_campaign_details", SmsCampaignDetails);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseState>("state", State);
             writer.WriteStringValue("updated_by", UpdatedBy);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp>("user_sign_up", UserSignUp);
             writer.WriteStringValue("zendesk_ticket_id", ZendeskTicketId);

@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.Item.Accounts
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_iam_organizations\Organizations\{OrganizationSid}\Accounts
+    /// Builds and executes requests for operations under \twilio_iam_organizations\Organizations\{organizationSid}\Accounts
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccountsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("AccountSid", position);
+                urlTplParams.Add("accountSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.Item.Accounts.Item.WithAccountSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AccountsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/Accounts{?PageSize*,PageToken*}", pathParameters)
+        public AccountsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{organizationSid}/Accounts{?PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AccountsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/Accounts{?PageSize*,PageToken*}", rawUrl)
+        public AccountsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{organizationSid}/Accounts{?PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -52,8 +52,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.PublicApiAccountResponsePage"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListOrganizationAccounts403">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListOrganizationAccounts404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListOrganizationAccounts403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListOrganizationAccounts404Response">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiAccountResponsePage?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.Item.Accounts.AccountsRequestBuilder.AccountsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -66,8 +66,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListOrganizationAccounts403.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListOrganizationAccounts404.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListOrganizationAccounts403Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListOrganizationAccounts404Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiAccountResponsePage>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.PublicApiAccountResponsePage.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

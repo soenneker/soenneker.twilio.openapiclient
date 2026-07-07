@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of errors that occurred during the registering RC Bundle</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocument_errors>? Errors { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentErrorsItem>? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocument_errors> Errors { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentErrorsItem> Errors { get; set; }
 #endif
         /// <summary>The failure reason of the Supporting Document Resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -121,7 +121,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "attributes", n => { Attributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocument_errors>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocument_errors.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "failure_reason", n => { FailureReason = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "mime_type", n => { MimeType = n.GetStringValue(); } },
@@ -142,7 +142,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("attributes", Attributes);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocument_errors>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentErrorsItem>("errors", Errors);
             writer.WriteStringValue("failure_reason", FailureReason);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("mime_type", MimeType);

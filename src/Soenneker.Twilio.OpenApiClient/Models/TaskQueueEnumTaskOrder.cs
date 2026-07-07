@@ -9,11 +9,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "FIFO")]
         #pragma warning disable CS1591
-        FIFO,
+        Fifo,
         #pragma warning restore CS1591
         [EnumMember(Value = "LIFO")]
         #pragma warning disable CS1591
-        LIFO,
+        Lifo,
         #pragma warning restore CS1591
     }
 }

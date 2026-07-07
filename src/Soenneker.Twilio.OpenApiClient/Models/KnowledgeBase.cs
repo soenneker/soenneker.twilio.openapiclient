@@ -39,7 +39,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The provisioning status of the Knowledge Base</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBase_status? Status { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBaseStatus? Status { get; set; }
         /// <summary>The ISO 8601 timestamp when the Knowledge Base was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The current version number of the Knowledge Base. Incremented on each successful mutable update.</summary>
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBase_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBaseStatus>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "version", n => { Version = n.GetIntValue(); } },
             };
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("displayName", DisplayName);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBase_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBaseStatus>("status", Status);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteIntValue("version", Version);
         }

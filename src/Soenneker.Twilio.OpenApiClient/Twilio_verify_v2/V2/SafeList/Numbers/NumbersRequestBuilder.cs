@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.SafeList.Numbers
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("PhoneNumber", position);
+                urlTplParams.Add("phoneNumber", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.SafeList.Numbers.Item.WithPhoneNumberItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -55,11 +55,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.SafeList.Numbers
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Safelist?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateSafelist body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Safelist?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateSafelistXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Safelist> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateSafelist body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Safelist> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateSafelistXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -74,11 +74,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.SafeList.Numbers
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateSafelist body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateSafelistXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateSafelist body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateSafelistXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

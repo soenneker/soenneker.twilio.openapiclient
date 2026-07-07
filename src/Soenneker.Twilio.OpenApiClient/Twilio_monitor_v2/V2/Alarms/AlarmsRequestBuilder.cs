@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -174,7 +174,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms
 #else
             public string PageToken { get; set; }
 #endif
-            public global::Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.GetSortOrderQueryParameterType? SortOrder { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2ListAlarmsSortOrderParameter? SortOrder { get; set; }
         }
     }
 }

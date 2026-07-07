@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.LinkShortening.MessagingServices.Item.Domain
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_messaging_v1\v1\LinkShortening\MessagingServices\{MessagingServiceSid}\Domain
+    /// Builds and executes requests for operations under \twilio_messaging_v1\v1\LinkShortening\MessagingServices\{messagingServiceSid}\Domain
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DomainRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.LinkShortening.M
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DomainRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/MessagingServices/{MessagingServiceSid}/Domain", pathParameters)
+        public DomainRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/MessagingServices/{messagingServiceSid}/Domain", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.LinkShortening.M
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DomainRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/MessagingServices/{MessagingServiceSid}/Domain", rawUrl)
+        public DomainRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/MessagingServices/{messagingServiceSid}/Domain", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1LinkshorteningMessagingServiceDomainAssociation"/></returns>

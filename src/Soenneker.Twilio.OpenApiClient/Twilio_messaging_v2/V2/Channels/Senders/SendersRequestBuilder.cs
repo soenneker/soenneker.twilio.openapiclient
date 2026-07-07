@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.Channels.Senders
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.Channels.Senders.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.Channels.Senders
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SendersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v2/v2/Channels/Senders?Channel={Channel}{&Page*,PageSize*,PageToken*}", pathParameters)
+        public SendersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v2/v2/Channels/Senders{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.Channels.Senders
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SendersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v2/v2/Channels/Senders?Channel={Channel}{&Page*,PageSize*,PageToken*}", rawUrl)
+        public SendersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v2/v2/Channels/Senders{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.Channels.Senders
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.Channels.Senders.SendersRequestBuilder.SendersRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/twilio_messaging_v2/v2/Channels/Senders?Channel={Channel}{&Page*,PageSize*,PageToken*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -119,7 +119,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.Channels.Senders
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/twilio_messaging_v2/v2/Channels/Senders", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

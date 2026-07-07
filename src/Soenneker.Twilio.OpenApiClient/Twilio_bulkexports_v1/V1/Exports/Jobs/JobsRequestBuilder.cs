@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Jobs
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("JobSid", position);
+                urlTplParams.Add("jobSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Jobs.Item.WithJobSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

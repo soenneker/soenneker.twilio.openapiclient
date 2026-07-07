@@ -75,10 +75,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains a dictionary of URL links to nested resources of this Challenge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityChallenge_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityChallengeLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityChallenge_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityChallengeLinks Links { get; set; }
 #endif
         /// <summary>&quot;Custom metadata associated with the challenge. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{\&quot;os\&quot;: \&quot;Android\&quot;}`. Can be up to 1024 characters in length.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -152,7 +152,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "factor_type", n => { FactorType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ChallengeEnumFactorTypes>(); } },
                 { "hidden_details", n => { HiddenDetails = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityChallenge_links>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityChallenge_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityChallengeLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityChallengeLinks.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "responded_reason", n => { RespondedReason = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ChallengeEnumChallengeReasons>(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
@@ -179,7 +179,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ChallengeEnumFactorTypes>("factor_type", FactorType);
             writer.WriteObjectValue<UntypedNode>("hidden_details", HiddenDetails);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityChallenge_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityChallengeLinks>("links", Links);
             writer.WriteObjectValue<UntypedNode>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ChallengeEnumChallengeReasons>("responded_reason", RespondedReason);
             writer.WriteStringValue("service_sid", ServiceSid);

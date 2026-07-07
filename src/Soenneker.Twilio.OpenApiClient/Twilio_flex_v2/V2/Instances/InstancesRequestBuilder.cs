@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v2.V2.Instances
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("InstanceSid", position);
+                urlTplParams.Add("instanceSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v2.V2.Instances.Item.WithInstanceSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

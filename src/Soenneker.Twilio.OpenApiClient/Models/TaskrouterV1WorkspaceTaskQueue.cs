@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueue_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueue_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueLinks Links { get; set; }
 #endif
         /// <summary>The maximum number of Workers to reserve for the assignment of a task in the queue. Can be an integer between 1 and 50, inclusive and defaults to 1.</summary>
         public int? MaxReservedWorkers { get; set; }
@@ -116,6 +116,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public TaskrouterV1WorkspaceTaskQueue()
         {
             AdditionalData = new Dictionary<string, object>();
+            MaxReservedWorkers = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -141,7 +142,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueue_links>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueue_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueLinks.CreateFromDiscriminatorValue); } },
                 { "max_reserved_workers", n => { MaxReservedWorkers = n.GetIntValue(); } },
                 { "reservation_activity_name", n => { ReservationActivityName = n.GetStringValue(); } },
                 { "reservation_activity_sid", n => { ReservationActivitySid = n.GetStringValue(); } },
@@ -165,7 +166,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueue_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueLinks>("links", Links);
             writer.WriteIntValue("max_reserved_workers", MaxReservedWorkers);
             writer.WriteStringValue("reservation_activity_name", ReservationActivityName);
             writer.WriteStringValue("reservation_activity_sid", ReservationActivitySid);

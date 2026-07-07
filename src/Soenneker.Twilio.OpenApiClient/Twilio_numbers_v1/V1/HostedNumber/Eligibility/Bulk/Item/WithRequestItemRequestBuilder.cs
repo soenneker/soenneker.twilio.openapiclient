@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.HostedNumber.Eligibility.Bulk.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_numbers_v1\v1\HostedNumber\Eligibility\Bulk\{RequestId}
+    /// Builds and executes requests for operations under \twilio_numbers_v1\v1\HostedNumber\Eligibility\Bulk\{requestId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithRequestItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.HostedNumber.Eligi
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRequestItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/HostedNumber/Eligibility/Bulk/{RequestId}", pathParameters)
+        public WithRequestItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/HostedNumber/Eligibility/Bulk/{requestId}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.HostedNumber.Eligi
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRequestItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/HostedNumber/Eligibility/Bulk/{RequestId}", rawUrl)
+        public WithRequestItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/HostedNumber/Eligibility/Bulk/{requestId}", rawUrl)
         {
         }
         /// <summary>

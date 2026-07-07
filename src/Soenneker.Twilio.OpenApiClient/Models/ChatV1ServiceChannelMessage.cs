@@ -100,6 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public ChatV1ServiceChannelMessage()
         {
             AdditionalData = new Dictionary<string, object>();
+            Index = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

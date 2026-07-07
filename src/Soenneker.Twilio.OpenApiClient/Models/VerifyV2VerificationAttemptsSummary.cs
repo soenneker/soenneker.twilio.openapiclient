@@ -42,6 +42,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public VerifyV2VerificationAttemptsSummary()
         {
             AdditionalData = new Dictionary<string, object>();
+            TotalAttempts = 0;
+            TotalConverted = 0;
+            TotalUnconverted = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

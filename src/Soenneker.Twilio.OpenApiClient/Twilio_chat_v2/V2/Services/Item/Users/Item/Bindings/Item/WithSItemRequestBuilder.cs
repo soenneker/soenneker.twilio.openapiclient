@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v2.V2.Services.Item.Users.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v2/v2/Services/{ServiceS%2Did}/Users/{S%2Did}/Bindings/{Sid}", pathParameters)
+        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v2/v2/Services/{serviceS%2Did}/Users/{s%2Did}/Bindings/{sid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v2.V2.Services.Item.Users.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v2/v2/Services/{ServiceS%2Did}/Users/{S%2Did}/Bindings/{Sid}", rawUrl)
+        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v2/v2/Services/{serviceS%2Did}/Users/{s%2Did}/Bindings/{sid}", rawUrl)
         {
         }
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>

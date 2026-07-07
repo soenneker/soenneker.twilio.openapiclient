@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_notify_v1.V1.Services.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_notify_v1\v1\Services\{ServiceS-id}
+    /// Builds and executes requests for operations under \twilio_notify_v1\v1\Services\{serviceS-id}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ServiceSItemRequestBuilder : BaseRequestBuilder
@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_notify_v1.V1.Services.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ServiceSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_notify_v1/v1/Services/{ServiceS%2Did}", pathParameters)
+        public ServiceSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_notify_v1/v1/Services/{serviceS%2Did}", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_notify_v1.V1.Services.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ServiceSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_notify_v1/v1/Services/{ServiceS%2Did}", rawUrl)
+        public ServiceSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_notify_v1/v1/Services/{serviceS%2Did}", rawUrl)
         {
         }
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -80,11 +80,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_notify_v1.V1.Services.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1Service?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1UpdateService body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1Service?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1UpdateServiceXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1Service> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1UpdateService body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1Service> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1UpdateServiceXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -128,11 +128,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_notify_v1.V1.Services.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1UpdateService body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1UpdateServiceXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1UpdateService body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1UpdateServiceXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

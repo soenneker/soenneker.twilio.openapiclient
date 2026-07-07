@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.Item.Evaluations
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_numbers_v2\v2\RegulatoryCompliance\Bundles\{BundleS-id}\Evaluations
+    /// Builds and executes requests for operations under \twilio_numbers_v2\v2\RegulatoryCompliance\Bundles\{bundleS-id}\Evaluations
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EvaluationsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.Item.Evaluations.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EvaluationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{BundleS%2Did}/Evaluations{?Page*,PageSize*,PageToken*}", pathParameters)
+        public EvaluationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{bundleS%2Did}/Evaluations{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EvaluationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{BundleS%2Did}/Evaluations{?Page*,PageSize*,PageToken*}", rawUrl)
+        public EvaluationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{bundleS%2Did}/Evaluations{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

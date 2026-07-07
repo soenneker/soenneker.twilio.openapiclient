@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The content of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessage_content? Content { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessageContentProperty? Content { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessage_content Content { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessageContentProperty Content { get; set; }
 #endif
         /// <summary>The date and time in GMT when the Message was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -61,10 +61,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The metadata of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessage_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessageMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessage_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessageMetaProperty Meta { get; set; }
 #endif
         /// <summary>The role of the user associated with the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,12 +109,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "assistant_id", n => { AssistantId = n.GetStringValue(); } },
-                { "content", n => { Content = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessage_content>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessage_content.CreateFromDiscriminatorValue); } },
+                { "content", n => { Content = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessageContentProperty>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessageContentProperty.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessage_meta>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessage_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessageMetaProperty>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessageMetaProperty.CreateFromDiscriminatorValue); } },
                 { "role", n => { Role = n.GetStringValue(); } },
                 { "session_id", n => { SessionId = n.GetStringValue(); } },
             };
@@ -128,12 +128,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("assistant_id", AssistantId);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessage_content>("content", Content);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessageContentProperty>("content", Content);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessage_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceMessageMetaProperty>("meta", Meta);
             writer.WriteStringValue("role", Role);
             writer.WriteStringValue("session_id", SessionId);
             writer.WriteAdditionalData(AdditionalData);

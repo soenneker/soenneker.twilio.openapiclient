@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EmbeddedSessionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/SenderIdRegistrations/{BundleSid}/EmbeddedSessions", pathParameters)
+        public EmbeddedSessionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/SenderIdRegistrations/{bundleSid}/EmbeddedSessions", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EmbeddedSessionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/SenderIdRegistrations/{BundleSid}/EmbeddedSessions", rawUrl)
+        public EmbeddedSessionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/SenderIdRegistrations/{bundleSid}/EmbeddedSessions", rawUrl)
         {
         }
         /// <summary>
@@ -40,10 +40,10 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession409">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession404Response">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession409Response">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionResponse?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -57,10 +57,10 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession400.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession404.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession409.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession400Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession404Response.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession409Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

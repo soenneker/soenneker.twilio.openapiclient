@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListSupportingDocumentTypeResponse_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListSupportingDocumentTypeResponseMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListSupportingDocumentTypeResponse_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListSupportingDocumentTypeResponseMeta Meta { get; set; }
 #endif
         /// <summary>The supporting_document_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListSupportingDocumentTypeResponse_meta>(global::Soenneker.Twilio.OpenApiClient.Models.ListSupportingDocumentTypeResponse_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListSupportingDocumentTypeResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListSupportingDocumentTypeResponseMeta.CreateFromDiscriminatorValue); } },
                 { "supporting_document_types", n => { SupportingDocumentTypes = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentType>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentType.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListSupportingDocumentTypeResponse_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListSupportingDocumentTypeResponseMeta>("meta", Meta);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentType>("supporting_document_types", SupportingDocumentTypes);
             writer.WriteAdditionalData(AdditionalData);
         }

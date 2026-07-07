@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("RoomSid", position);
+                urlTplParams.Add("roomSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item.WithRoomSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

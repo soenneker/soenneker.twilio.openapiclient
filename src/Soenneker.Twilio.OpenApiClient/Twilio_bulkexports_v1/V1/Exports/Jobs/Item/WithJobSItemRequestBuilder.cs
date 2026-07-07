@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Jobs.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_bulkexports_v1\v1\Exports\Jobs\{JobSid}
+    /// Builds and executes requests for operations under \twilio_bulkexports_v1\v1\Exports\Jobs\{jobSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithJobSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Jobs.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithJobSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/Jobs/{JobSid}", pathParameters)
+        public WithJobSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/Jobs/{jobSid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Jobs.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithJobSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/Jobs/{JobSid}", rawUrl)
+        public WithJobSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/Jobs/{jobSid}", rawUrl)
         {
         }
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>

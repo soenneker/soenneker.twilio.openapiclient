@@ -17,50 +17,50 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON object for providing listing specific configuration. Contains button setup, notification url, among others.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_configuration? Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementConfiguration? Configuration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_configuration Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementConfiguration Configuration { get; set; }
 #endif
         /// <summary>A JSON object describing the module and is displayed under the Description tab of the Module detail page. You can define the main body of the description, highlight key features or aspects of the module and if applicable, provide code samples for developers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_description? Description { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDescription? Description { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_description Description { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDescription Description { get; set; }
 #endif
         /// <summary>A JSON object for providing comprehensive information, instructions, and resources related to the module</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_documentation? Documentation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDocumentation? Documentation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_documentation Documentation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDocumentation Documentation { get; set; }
 #endif
         /// <summary>A JSON object containing essential attributes that define a module. This information is presented on the Module detail page in the Twilio Marketplace Catalog. You can pass the following attributes in the JSON object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_module_info? ModuleInfo { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementModuleInfo? ModuleInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_module_info ModuleInfo { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementModuleInfo ModuleInfo { get; set; }
 #endif
         /// <summary>A JSON object describing the module&apos;s privacy and legal policies and is displayed under the Policies tab of the Module detail page. The maximum file size for Policies is 5MB</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_policies? Policies { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPolicies? Policies { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_policies Policies { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPolicies Policies { get; set; }
 #endif
         /// <summary>A JSON object for providing Listing specific pricing information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_pricing? Pricing { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPricing? Pricing { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_pricing Pricing { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPricing Pricing { get; set; }
 #endif
         /// <summary>ModuleSid that identifies this Listing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,10 +73,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON object containing information on how customers can obtain support for the module. Use this parameter to provide details such as contact information and support description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_support? Support { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupport? Support { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_support Support { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupport Support { get; set; }
 #endif
         /// <summary>URL to query the subresource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,14 +111,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_configuration>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_configuration.CreateFromDiscriminatorValue); } },
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_description>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_description.CreateFromDiscriminatorValue); } },
-                { "documentation", n => { Documentation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_documentation>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_documentation.CreateFromDiscriminatorValue); } },
-                { "module_info", n => { ModuleInfo = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_module_info>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_module_info.CreateFromDiscriminatorValue); } },
-                { "policies", n => { Policies = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_policies>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_policies.CreateFromDiscriminatorValue); } },
-                { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_pricing>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_pricing.CreateFromDiscriminatorValue); } },
+                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementConfiguration.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDescription>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDescription.CreateFromDiscriminatorValue); } },
+                { "documentation", n => { Documentation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDocumentation>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDocumentation.CreateFromDiscriminatorValue); } },
+                { "module_info", n => { ModuleInfo = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementModuleInfo>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementModuleInfo.CreateFromDiscriminatorValue); } },
+                { "policies", n => { Policies = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPolicies>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPolicies.CreateFromDiscriminatorValue); } },
+                { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPricing>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPricing.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "support", n => { Support = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_support>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_support.CreateFromDiscriminatorValue); } },
+                { "support", n => { Support = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupport>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupport.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -129,14 +129,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_configuration>("configuration", Configuration);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_description>("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_documentation>("documentation", Documentation);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_module_info>("module_info", ModuleInfo);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_policies>("policies", Policies);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_pricing>("pricing", Pricing);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementConfiguration>("configuration", Configuration);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDescription>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDocumentation>("documentation", Documentation);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementModuleInfo>("module_info", ModuleInfo);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPolicies>("policies", Policies);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPricing>("pricing", Pricing);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement_support>("support", Support);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupport>("support", Support);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

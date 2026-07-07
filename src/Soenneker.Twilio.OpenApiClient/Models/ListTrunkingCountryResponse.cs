@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListTrunkingCountryResponse_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListTrunkingCountryResponseMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListTrunkingCountryResponse_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListTrunkingCountryResponseMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListTrunkingCountryResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "countries", n => { Countries = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountry>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountry.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListTrunkingCountryResponse_meta>(global::Soenneker.Twilio.OpenApiClient.Models.ListTrunkingCountryResponse_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListTrunkingCountryResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListTrunkingCountryResponseMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountry>("countries", Countries);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListTrunkingCountryResponse_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListTrunkingCountryResponseMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

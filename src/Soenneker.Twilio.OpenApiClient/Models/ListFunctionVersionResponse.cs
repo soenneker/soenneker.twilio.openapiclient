@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListFunctionVersionResponse_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListFunctionVersionResponseMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListFunctionVersionResponse_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListFunctionVersionResponseMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListFunctionVersionResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "function_versions", n => { FunctionVersions = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersion>(global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersion.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListFunctionVersionResponse_meta>(global::Soenneker.Twilio.OpenApiClient.Models.ListFunctionVersionResponse_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListFunctionVersionResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListFunctionVersionResponseMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersion>("function_versions", FunctionVersions);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListFunctionVersionResponse_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListFunctionVersionResponseMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

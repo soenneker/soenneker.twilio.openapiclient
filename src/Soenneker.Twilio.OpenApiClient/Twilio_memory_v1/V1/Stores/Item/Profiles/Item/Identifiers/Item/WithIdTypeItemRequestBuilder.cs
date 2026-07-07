@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <summary>
         /// Asynchronously remove stored values for the identifier type. The optional `removeAll` query parameter allows bulk removal; otherwise the service selects a single value to delete using the identifier settings `limitPolicy`.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteProfileIdentifier202"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteProfileIdentifier202Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 400 status code</exception>
@@ -48,11 +48,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteProfileIdentifier202?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Identifiers.Item.WithIdTypeItemRequestBuilder.WithIdTypeItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteProfileIdentifier202Response?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Identifiers.Item.WithIdTypeItemRequestBuilder.WithIdTypeItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteProfileIdentifier202> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Identifiers.Item.WithIdTypeItemRequestBuilder.WithIdTypeItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteProfileIdentifier202Response> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Identifiers.Item.WithIdTypeItemRequestBuilder.WithIdTypeItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteProfileIdentifier202>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteProfileIdentifier202.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteProfileIdentifier202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteProfileIdentifier202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve all stored values for a specific identifier type on a profile. Values are normalized according to the configured identifier settings and returned in the order determined by its `limitPolicy`.
@@ -106,7 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <summary>
         /// Asynchronously replace one of the stored values associated with theidentifier type on a profile. `newValue` is normalized according tothe configured identifier settings. If the new identifier already exists and points to another profile,merge processes may apply.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchProfileIdentifier202"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchProfileIdentifier202Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -120,11 +120,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchProfileIdentifier202?> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.IdentifierUpdate body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchProfileIdentifier202Response?> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.IdentifierUpdate body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchProfileIdentifier202> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.IdentifierUpdate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchProfileIdentifier202Response> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.IdentifierUpdate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -140,7 +140,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchProfileIdentifier202>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchProfileIdentifier202.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchProfileIdentifier202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchProfileIdentifier202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Asynchronously remove stored values for the identifier type. The optional `removeAll` query parameter allows bulk removal; otherwise the service selects a single value to delete using the identifier settings `limitPolicy`.

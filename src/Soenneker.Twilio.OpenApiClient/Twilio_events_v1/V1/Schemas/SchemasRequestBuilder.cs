@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Schemas
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Id", position);
+                urlTplParams.Add("id", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Schemas.Item.SchemasItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

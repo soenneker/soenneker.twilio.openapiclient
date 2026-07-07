@@ -13,11 +13,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "not_needed")]
         #pragma warning disable CS1591
-        Not_needed,
+        NotNeeded,
         #pragma warning restore CS1591
         [EnumMember(Value = "not_requested")]
         #pragma warning disable CS1591
-        Not_requested,
+        NotRequested,
         #pragma warning restore CS1591
     }
 }

@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.Days
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_bulkexports_v1\v1\Exports\{ResourceType}\Days
+    /// Builds and executes requests for operations under \twilio_bulkexports_v1\v1\Exports\{resourceType}\Days
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DaysRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.D
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Day", position);
+                urlTplParams.Add("day", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.Days.Item.WithDayItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.D
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DaysRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{ResourceType}/Days{?Page*,PageSize*,PageToken*}", pathParameters)
+        public DaysRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{resourceType}/Days{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.D
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DaysRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{ResourceType}/Days{?Page*,PageSize*,PageToken*}", rawUrl)
+        public DaysRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{resourceType}/Days{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

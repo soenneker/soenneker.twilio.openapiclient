@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v2.V2.Services.Item.Channel
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_chat_v2.V2.Services.Item.Channels.Item.Webhooks.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v2.V2.Services.Item.Channel
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WebhooksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v2/v2/Services/{ServiceS%2Did}/Channels/{ChannelS%2Did}/Webhooks{?Page*,PageSize*,PageToken*}", pathParameters)
+        public WebhooksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v2/v2/Services/{serviceS%2Did}/Channels/{channelS%2Did}/Webhooks{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v2.V2.Services.Item.Channel
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WebhooksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v2/v2/Services/{ServiceS%2Did}/Channels/{ChannelS%2Did}/Webhooks{?Page*,PageSize*,PageToken*}", rawUrl)
+        public WebhooksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v2/v2/Services/{serviceS%2Did}/Channels/{channelS%2Did}/Webhooks{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListChannelWebhookResponse"/></returns>
@@ -67,11 +67,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v2.V2.Services.Item.Channel
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceChannelChannelWebhook?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhook body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceChannelChannelWebhook?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhookXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceChannelChannelWebhook> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhook body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceChannelChannelWebhook> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhookXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -99,11 +99,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v2.V2.Services.Item.Channel
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhook body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhookXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhook body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhookXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

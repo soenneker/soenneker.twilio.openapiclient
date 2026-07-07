@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1EventType_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1EventTypeLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1EventType_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1EventTypeLinks Links { get; set; }
 #endif
         /// <summary>A string that uniquely identifies the Schema this Event Type adheres to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,7 +103,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "documentation_url", n => { DocumentationUrl = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1EventType_links>(global::Soenneker.Twilio.OpenApiClient.Models.EventsV1EventType_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1EventTypeLinks>(global::Soenneker.Twilio.OpenApiClient.Models.EventsV1EventTypeLinks.CreateFromDiscriminatorValue); } },
                 { "schema_id", n => { SchemaId = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -121,7 +121,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("documentation_url", DocumentationUrl);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1EventType_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1EventTypeLinks>("links", Links);
             writer.WriteStringValue("schema_id", SchemaId);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("type", Type);

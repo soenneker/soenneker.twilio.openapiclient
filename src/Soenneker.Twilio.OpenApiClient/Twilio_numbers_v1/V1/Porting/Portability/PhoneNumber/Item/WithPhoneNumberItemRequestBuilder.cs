@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Portability.PhoneNumber.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_numbers_v1\v1\Porting\Portability\PhoneNumber\{PhoneNumber}
+    /// Builds and executes requests for operations under \twilio_numbers_v1\v1\Porting\Portability\PhoneNumber\{phoneNumber}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithPhoneNumberItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Portabilit
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPhoneNumberItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/Porting/Portability/PhoneNumber/{PhoneNumber}{?AddressSid*,TargetAccountSid*}", pathParameters)
+        public WithPhoneNumberItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/Porting/Portability/PhoneNumber/{phoneNumber}{?AddressSid*,TargetAccountSid*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Portabilit
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPhoneNumberItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/Porting/Portability/PhoneNumber/{PhoneNumber}{?AddressSid*,TargetAccountSid*}", rawUrl)
+        public WithPhoneNumberItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/Porting/Portability/PhoneNumber/{phoneNumber}{?AddressSid*,TargetAccountSid*}", rawUrl)
         {
         }
         /// <summary>

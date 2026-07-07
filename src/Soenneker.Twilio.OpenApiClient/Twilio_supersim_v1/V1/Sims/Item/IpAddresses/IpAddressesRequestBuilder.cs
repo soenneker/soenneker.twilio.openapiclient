@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.Sims.Item.IpAddre
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IpAddressesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/Sims/{S%2Did}/IpAddresses{?Page*,PageSize*,PageToken*}", pathParameters)
+        public IpAddressesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/Sims/{s%2Did}/IpAddresses{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.Sims.Item.IpAddre
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IpAddressesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/Sims/{S%2Did}/IpAddresses{?Page*,PageSize*,PageToken*}", rawUrl)
+        public IpAddressesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/Sims/{s%2Did}/IpAddresses{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

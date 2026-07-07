@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.RateLimits.Fields
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Field", position);
+                urlTplParams.Add("field", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.RateLimits.Fields.Item.WithFieldItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

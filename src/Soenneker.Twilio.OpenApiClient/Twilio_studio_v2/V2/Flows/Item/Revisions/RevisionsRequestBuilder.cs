@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Revision
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Revision", position);
+                urlTplParams.Add("revision", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Revisions.Item.WithRevisionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Revision
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RevisionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{FlowS%2Did}/Revisions{?Page*,PageSize*,PageToken*}", pathParameters)
+        public RevisionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowS%2Did}/Revisions{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Revision
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RevisionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{FlowS%2Did}/Revisions{?Page*,PageSize*,PageToken*}", rawUrl)
+        public RevisionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowS%2Did}/Revisions{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

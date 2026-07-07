@@ -54,6 +54,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public BulkexportsV1ExportDay()
         {
             AdditionalData = new Dictionary<string, object>();
+            Size = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

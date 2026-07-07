@@ -28,7 +28,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPhoneNumberItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{PhoneNumber}{?AddressCountryCode*,AddressLine1*,AddressLine2*,City*,CountryCode*,DateOfBirth*,Fields*,FirstName*,LastName*,LastVerifiedDate*,NationalId*,PartnerSubId*,PostalCode*,State*,VerificationSid*}", pathParameters)
+        public WithPhoneNumberItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{phoneNumber}{?AddressCountryCode*,AddressLine1*,AddressLine2*,City*,CountryCode*,DateOfBirth*,Fields*,FirstName*,LastName*,LastVerifiedDate*,NationalId*,PartnerSubId*,PostalCode*,State*,VerificationSid*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPhoneNumberItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{PhoneNumber}{?AddressCountryCode*,AddressLine1*,AddressLine2*,City*,CountryCode*,DateOfBirth*,Fields*,FirstName*,LastName*,LastVerifiedDate*,NationalId*,PartnerSubId*,PostalCode*,State*,VerificationSid*}", rawUrl)
+        public WithPhoneNumberItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{phoneNumber}{?AddressCountryCode*,AddressLine1*,AddressLine2*,City*,CountryCode*,DateOfBirth*,Fields*,FirstName*,LastName*,LastVerifiedDate*,NationalId*,PartnerSubId*,PostalCode*,State*,VerificationSid*}", rawUrl)
         {
         }
         /// <summary>

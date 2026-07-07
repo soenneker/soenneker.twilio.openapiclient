@@ -9,23 +9,23 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "TAX_ID")]
         #pragma warning disable CS1591
-        TAX_ID,
+        TaxId,
         #pragma warning restore CS1591
         [EnumMember(Value = "STOCK_SYMBOL")]
         #pragma warning disable CS1591
-        STOCK_SYMBOL,
+        StockSymbol,
         #pragma warning restore CS1591
         [EnumMember(Value = "NONPROFIT")]
         #pragma warning disable CS1591
-        NONPROFIT,
+        Nonprofit,
         #pragma warning restore CS1591
         [EnumMember(Value = "GOVERNMENT_ENTITY")]
         #pragma warning disable CS1591
-        GOVERNMENT_ENTITY,
+        GovernmentEntity,
         #pragma warning restore CS1591
         [EnumMember(Value = "OTHERS")]
         #pragma warning disable CS1591
-        OTHERS,
+        Others,
         #pragma warning restore CS1591
     }
 }

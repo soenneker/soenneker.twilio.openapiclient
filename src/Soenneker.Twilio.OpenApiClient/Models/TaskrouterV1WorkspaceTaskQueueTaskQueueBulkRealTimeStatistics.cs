@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;The real-time statistics for each requested TaskQueue SID. `task_queue_data` returns the following attributes:`task_queue_sid`: The SID of the TaskQueue from which these statistics were calculated.`total_available_workers`: The total number of Workers available for Tasks in the TaskQueue.`total_eligible_workers`: The total number of Workers eligible for Tasks in the TaskQueue, regardless of their Activity state.`total_tasks`: The total number of Tasks.`longest_task_waiting_age`: The age of the longest waiting Task.`longest_task_waiting_sid`: The SID of the longest waiting Task.`tasks_by_status`: The number of Tasks grouped by their current status.`tasks_by_priority`: The number of Tasks grouped by priority.`activity_statistics`: The number of current Workers grouped by Activity.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatistics_task_queue_data>? TaskQueueData { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatisticsTaskQueueDataItem>? TaskQueueData { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatistics_task_queue_data> TaskQueueData { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatisticsTaskQueueDataItem> TaskQueueData { get; set; }
 #endif
         /// <summary>The number of TaskQueue statistics received in task_queue_data.</summary>
         public int? TaskQueueResponseCount { get; set; }
@@ -54,6 +54,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatistics()
         {
             AdditionalData = new Dictionary<string, object>();
+            TaskQueueResponseCount = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -74,7 +75,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "task_queue_data", n => { TaskQueueData = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatistics_task_queue_data>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatistics_task_queue_data.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "task_queue_data", n => { TaskQueueData = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatisticsTaskQueueDataItem>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatisticsTaskQueueDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "task_queue_response_count", n => { TaskQueueResponseCount = n.GetIntValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "workspace_sid", n => { WorkspaceSid = n.GetStringValue(); } },
@@ -88,7 +89,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatistics_task_queue_data>("task_queue_data", TaskQueueData);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatisticsTaskQueueDataItem>("task_queue_data", TaskQueueData);
             writer.WriteIntValue("task_queue_response_count", TaskQueueResponseCount);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("workspace_sid", WorkspaceSid);

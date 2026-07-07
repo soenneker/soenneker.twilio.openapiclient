@@ -29,10 +29,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskTaskReservation_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskTaskReservationLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskTaskReservation_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskTaskReservationLinks Links { get; set; }
 #endif
         /// <summary>&quot;The current status of the reservation. Can be: `pending`, `accepted`, `rejected`, or `timeout`.&quot;</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumStatus? ReservationStatus { get; set; }
@@ -112,7 +112,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskTaskReservation_links>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskTaskReservation_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskTaskReservationLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskTaskReservationLinks.CreateFromDiscriminatorValue); } },
                 { "reservation_status", n => { ReservationStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumStatus>(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "task_sid", n => { TaskSid = n.GetStringValue(); } },
@@ -132,7 +132,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskTaskReservation_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskTaskReservationLinks>("links", Links);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumStatus>("reservation_status", ReservationStatus);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("task_sid", TaskSid);

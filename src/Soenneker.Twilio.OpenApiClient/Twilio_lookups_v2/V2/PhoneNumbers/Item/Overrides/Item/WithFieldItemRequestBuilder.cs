@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.Overrides.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_lookups_v2\v2\PhoneNumbers\{PhoneNumber}\Overrides\{Field}
+    /// Builds and executes requests for operations under \twilio_lookups_v2\v2\PhoneNumbers\{phoneNumber}\Overrides\{field}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithFieldItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFieldItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{PhoneNumber}/Overrides/{Field}", pathParameters)
+        public WithFieldItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{phoneNumber}/Overrides/{field}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFieldItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{PhoneNumber}/Overrides/{Field}", rawUrl)
+        public WithFieldItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{phoneNumber}/Overrides/{field}", rawUrl)
         {
         }
         /// <summary>
@@ -39,7 +39,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2DeleteLookupPhoneNumberOverrides400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2DeleteLookupPhoneNumberOverrides400Response">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2DeleteLookupPhoneNumberOverrides400.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2DeleteLookupPhoneNumberOverrides400Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -62,8 +62,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupPhoneNumberOverrides400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupPhoneNumberOverrides404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupPhoneNumberOverrides400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupPhoneNumberOverrides404Response">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -76,8 +76,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupPhoneNumberOverrides400.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupPhoneNumberOverrides404.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupPhoneNumberOverrides400Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupPhoneNumberOverrides404Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -88,7 +88,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2CreateLookupPhoneNumberOverrides400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2CreateLookupPhoneNumberOverrides400Response">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.OverridesRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -102,7 +102,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2CreateLookupPhoneNumberOverrides400.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2CreateLookupPhoneNumberOverrides400Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -113,8 +113,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2UpdateLookupPhoneNumberOverrides400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2UpdateLookupPhoneNumberOverrides404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2UpdateLookupPhoneNumberOverrides400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2UpdateLookupPhoneNumberOverrides404Response">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse?> PutAsync(global::Soenneker.Twilio.OpenApiClient.Models.OverridesRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -128,8 +128,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2UpdateLookupPhoneNumberOverrides400.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2UpdateLookupPhoneNumberOverrides404.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2UpdateLookupPhoneNumberOverrides400Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2UpdateLookupPhoneNumberOverrides404Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

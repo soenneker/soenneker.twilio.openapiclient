@@ -9,7 +9,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "DATASET")]
         #pragma warning disable CS1591
-        DATASET,
+        Dataset,
         #pragma warning restore CS1591
     }
 }

@@ -69,10 +69,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinks Links { get; set; }
 #endif
         /// <summary>The rate_plan_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +91,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Sid { get; set; }
 #endif
         /// <summary>The sms_fallback_method property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_sms_fallback_method? SmsFallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimSmsFallbackMethod? SmsFallbackMethod { get; set; }
         /// <summary>The sms_fallback_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,7 +101,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string SmsFallbackUrl { get; set; }
 #endif
         /// <summary>The sms_method property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_sms_method? SmsMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimSmsMethod? SmsMethod { get; set; }
         /// <summary>The sms_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -135,7 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Url { get; set; }
 #endif
         /// <summary>The voice_fallback_method property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_voice_fallback_method? VoiceFallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>The voice_fallback_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -145,7 +145,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string VoiceFallbackUrl { get; set; }
 #endif
         /// <summary>The voice_method property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_voice_method? VoiceMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimVoiceMethod? VoiceMethod { get; set; }
         /// <summary>The voice_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -187,19 +187,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "e_id", n => { EId = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "iccid", n => { Iccid = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_links>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinks>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinks.CreateFromDiscriminatorValue); } },
                 { "rate_plan_sid", n => { RatePlanSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "sms_fallback_method", n => { SmsFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_sms_fallback_method>(); } },
+                { "sms_fallback_method", n => { SmsFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimSmsFallbackMethod>(); } },
                 { "sms_fallback_url", n => { SmsFallbackUrl = n.GetStringValue(); } },
-                { "sms_method", n => { SmsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_sms_method>(); } },
+                { "sms_method", n => { SmsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimSmsMethod>(); } },
                 { "sms_url", n => { SmsUrl = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "voice_fallback_method", n => { VoiceFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_voice_fallback_method>(); } },
+                { "voice_fallback_method", n => { VoiceFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimVoiceFallbackMethod>(); } },
                 { "voice_fallback_url", n => { VoiceFallbackUrl = n.GetStringValue(); } },
-                { "voice_method", n => { VoiceMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_voice_method>(); } },
+                { "voice_method", n => { VoiceMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimVoiceMethod>(); } },
                 { "voice_url", n => { VoiceUrl = n.GetStringValue(); } },
             };
         }
@@ -218,19 +218,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("e_id", EId);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("iccid", Iccid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinks>("links", Links);
             writer.WriteStringValue("rate_plan_sid", RatePlanSid);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_sms_fallback_method>("sms_fallback_method", SmsFallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimSmsFallbackMethod>("sms_fallback_method", SmsFallbackMethod);
             writer.WriteStringValue("sms_fallback_url", SmsFallbackUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_sms_method>("sms_method", SmsMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimSmsMethod>("sms_method", SmsMethod);
             writer.WriteStringValue("sms_url", SmsUrl);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("unique_name", UniqueName);
             writer.WriteStringValue("url", Url);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_voice_fallback_method>("voice_fallback_method", VoiceFallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimVoiceFallbackMethod>("voice_fallback_method", VoiceFallbackMethod);
             writer.WriteStringValue("voice_fallback_url", VoiceFallbackUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSim_voice_method>("voice_method", VoiceMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimVoiceMethod>("voice_method", VoiceMethod);
             writer.WriteStringValue("voice_url", VoiceUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

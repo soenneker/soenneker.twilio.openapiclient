@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains absolute API resource URLs to access conversations, users, roles, bindings and configuration of this service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Service_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Service_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceLinks Links { get; set; }
 #endif
         /// <summary>A 34 character string that uniquely identifies this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,7 +87,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Service_links>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Service_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceLinks.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -103,7 +103,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Service_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceLinks>("links", Links);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

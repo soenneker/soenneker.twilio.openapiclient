@@ -51,10 +51,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTask_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTask_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskLinks Links { get; set; }
 #endif
         /// <summary>The current priority score of the Task as assigned to a Worker by the workflow. Tasks with higher priority values will be assigned before Tasks with lower values.</summary>
         public int? Priority { get; set; }
@@ -158,6 +158,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public TaskrouterV1WorkspaceTask()
         {
             AdditionalData = new Dictionary<string, object>();
+            Age = 0;
+            Priority = 0;
+            Timeout = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -185,7 +188,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "ignore_capacity", n => { IgnoreCapacity = n.GetBoolValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTask_links>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTask_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskLinks.CreateFromDiscriminatorValue); } },
                 { "priority", n => { Priority = n.GetIntValue(); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
                 { "routing_target", n => { RoutingTarget = n.GetStringValue(); } },
@@ -218,7 +221,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteBoolValue("ignore_capacity", IgnoreCapacity);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTask_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskLinks>("links", Links);
             writer.WriteIntValue("priority", Priority);
             writer.WriteStringValue("reason", Reason);
             writer.WriteStringValue("routing_target", RoutingTarget);

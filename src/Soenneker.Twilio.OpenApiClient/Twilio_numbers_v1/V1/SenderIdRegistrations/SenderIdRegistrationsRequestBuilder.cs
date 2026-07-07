@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("BundleSid", position);
+                urlTplParams.Add("bundleSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrations.Item.WithBundleSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -53,8 +53,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistration400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistration500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistration400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistration500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponse?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -68,8 +68,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistration400.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistration500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistration400Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistration500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

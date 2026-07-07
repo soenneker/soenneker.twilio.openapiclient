@@ -55,10 +55,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An array of verification attempt objects containing the channel attempted and the channel-specific transaction SID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerification_send_code_attempts>? SendCodeAttempts { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSendCodeAttemptsItem>? SendCodeAttempts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerification_send_code_attempts> SendCodeAttempts { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSendCodeAttemptsItem> SendCodeAttempts { get; set; }
 #endif
         /// <summary>The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -142,7 +142,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "lookup", n => { Lookup = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "payee", n => { Payee = n.GetStringValue(); } },
-                { "send_code_attempts", n => { SendCodeAttempts = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerification_send_code_attempts>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerification_send_code_attempts.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "send_code_attempts", n => { SendCodeAttempts = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSendCodeAttemptsItem>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSendCodeAttemptsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sna", n => { Sna = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -166,7 +166,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteObjectValue<UntypedNode>("lookup", Lookup);
             writer.WriteStringValue("payee", Payee);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerification_send_code_attempts>("send_code_attempts", SendCodeAttempts);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSendCodeAttemptsItem>("send_code_attempts", SendCodeAttempts);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteObjectValue<UntypedNode>("sna", Sna);

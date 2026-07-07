@@ -9,19 +9,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "SELF_DECLARED")]
         #pragma warning disable CS1591
-        SELF_DECLARED,
+        SelfDeclared,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNVERIFIED")]
         #pragma warning disable CS1591
-        UNVERIFIED,
+        Unverified,
         #pragma warning restore CS1591
         [EnumMember(Value = "VERIFIED")]
         #pragma warning disable CS1591
-        VERIFIED,
+        Verified,
         #pragma warning restore CS1591
         [EnumMember(Value = "VETTED_VERIFIED")]
         #pragma warning disable CS1591
-        VETTED_VERIFIED,
+        VettedVerified,
         #pragma warning restore CS1591
     }
 }

@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Answer rate for each device type.`voip`, `mobile`, `landline`, `unknown`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport_answer_rate_device_type? AnswerRateDeviceType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnswerRateDeviceTypeProperty? AnswerRateDeviceType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport_answer_rate_device_type AnswerRateDeviceType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnswerRateDeviceTypeProperty AnswerRateDeviceType { get; set; }
 #endif
         /// <summary>Percentage of blocked calls by carrier per country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -43,10 +43,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Number of calls made with each device type.`voip`, `mobile`, `landline`, `unknown`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport_calls_by_device_type? CallsByDeviceType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty? CallsByDeviceType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport_calls_by_device_type CallsByDeviceType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty CallsByDeviceType { get; set; }
 #endif
         /// <summary>Percentage of calls made in each state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,12 +99,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "answer_rate_device_type", n => { AnswerRateDeviceType = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport_answer_rate_device_type>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport_answer_rate_device_type.CreateFromDiscriminatorValue); } },
+                { "answer_rate_device_type", n => { AnswerRateDeviceType = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnswerRateDeviceTypeProperty>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnswerRateDeviceTypeProperty.CreateFromDiscriminatorValue); } },
                 { "answering_machine_detection", n => { AnsweringMachineDetection = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection.CreateFromDiscriminatorValue); } },
                 { "blocked_calls_by_carrier", n => { BlockedCallsByCarrier = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue>(global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "call_answer_score", n => { CallAnswerScore = n.GetFloatValue(); } },
                 { "call_state_percentage", n => { CallStatePercentage = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallStatePercentage>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallStatePercentage.CreateFromDiscriminatorValue); } },
-                { "calls_by_device_type", n => { CallsByDeviceType = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport_calls_by_device_type>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport_calls_by_device_type.CreateFromDiscriminatorValue); } },
+                { "calls_by_device_type", n => { CallsByDeviceType = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty.CreateFromDiscriminatorValue); } },
                 { "handle", n => { Handle = n.GetStringValue(); } },
                 { "long_duration_calls_percentage", n => { LongDurationCallsPercentage = n.GetFloatValue(); } },
                 { "potential_robocalls_percentage", n => { PotentialRobocallsPercentage = n.GetFloatValue(); } },
@@ -121,10 +121,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection>("answering_machine_detection", AnsweringMachineDetection);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport_answer_rate_device_type>("answer_rate_device_type", AnswerRateDeviceType);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnswerRateDeviceTypeProperty>("answer_rate_device_type", AnswerRateDeviceType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue>("blocked_calls_by_carrier", BlockedCallsByCarrier);
             writer.WriteFloatValue("call_answer_score", CallAnswerScore);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport_calls_by_device_type>("calls_by_device_type", CallsByDeviceType);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty>("calls_by_device_type", CallsByDeviceType);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallStatePercentage>("call_state_percentage", CallStatePercentage);
             writer.WriteStringValue("handle", Handle);
             writer.WriteFloatValue("long_duration_calls_percentage", LongDurationCallsPercentage);

@@ -9,15 +9,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "inbound_track")]
         #pragma warning disable CS1591
-        Inbound_track,
+        InboundTrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "outbound_track")]
         #pragma warning disable CS1591
-        Outbound_track,
+        OutboundTrack,
         #pragma warning restore CS1591
         [EnumMember(Value = "both_tracks")]
         #pragma warning disable CS1591
-        Both_tracks,
+        BothTracks,
         #pragma warning restore CS1591
     }
 }

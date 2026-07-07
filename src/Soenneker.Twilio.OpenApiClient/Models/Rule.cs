@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of Operators to be executed by the Rule. Maximum of five (5) Operators allowed per Rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.Operator>? Operators { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.OperatorType>? Operators { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.Operator> Operators { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.OperatorType> Operators { get; set; }
 #endif
         /// <summary>List of Triggers that determine when to activate the Rule. Maximum of one (1) Trigger allowed per Rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ActionObject>(global::Soenneker.Twilio.OpenApiClient.Models.ActionObject.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "context", n => { Context = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.Context>(global::Soenneker.Twilio.OpenApiClient.Models.Context.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "operators", n => { Operators = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.Operator>(global::Soenneker.Twilio.OpenApiClient.Models.Operator.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "operators", n => { Operators = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.OperatorType>(global::Soenneker.Twilio.OpenApiClient.Models.OperatorType.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "triggers", n => { Triggers = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.Trigger>(global::Soenneker.Twilio.OpenApiClient.Models.Trigger.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -96,7 +96,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ActionObject>("actions", Actions);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.Context>("context", Context);
             writer.WriteStringValue("id", Id);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.Operator>("operators", Operators);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.OperatorType>("operators", Operators);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.Trigger>("triggers", Triggers);
             writer.WriteAdditionalData(AdditionalData);
         }

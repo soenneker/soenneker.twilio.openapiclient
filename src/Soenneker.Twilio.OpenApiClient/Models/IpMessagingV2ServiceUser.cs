@@ -59,10 +59,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUser_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUser_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserLinks Links { get; set; }
 #endif
         /// <summary>The role_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -102,6 +102,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IpMessagingV2ServiceUser()
         {
             AdditionalData = new Dictionary<string, object>();
+            JoinedChannelsCount = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -130,7 +131,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "is_notifiable", n => { IsNotifiable = n.GetBoolValue(); } },
                 { "is_online", n => { IsOnline = n.GetBoolValue(); } },
                 { "joined_channels_count", n => { JoinedChannelsCount = n.GetIntValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUser_links>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUser_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserLinks>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserLinks.CreateFromDiscriminatorValue); } },
                 { "role_sid", n => { RoleSid = n.GetStringValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -153,7 +154,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("is_notifiable", IsNotifiable);
             writer.WriteBoolValue("is_online", IsOnline);
             writer.WriteIntValue("joined_channels_count", JoinedChannelsCount);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUser_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserLinks>("links", Links);
             writer.WriteStringValue("role_sid", RoleSid);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);

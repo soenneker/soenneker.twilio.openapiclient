@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Operators.Pre
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Operators.PreBuilt.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

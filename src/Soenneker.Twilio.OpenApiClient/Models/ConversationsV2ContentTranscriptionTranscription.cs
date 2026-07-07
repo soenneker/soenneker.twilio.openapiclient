@@ -30,10 +30,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Word-level transcription data with timing information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscription_words>? Words { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscriptionWordsItem>? Words { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscription_words> Words { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscriptionWordsItem> Words { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscription"/> and sets the default values.
@@ -63,7 +63,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "channel", n => { Channel = n.GetIntValue(); } },
                 { "confidence", n => { Confidence = n.GetFloatValue(); } },
                 { "engine", n => { Engine = n.GetStringValue(); } },
-                { "words", n => { Words = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscription_words>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscription_words.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "words", n => { Words = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscriptionWordsItem>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscriptionWordsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -76,7 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("channel", Channel);
             writer.WriteFloatValue("confidence", Confidence);
             writer.WriteStringValue("engine", Engine);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscription_words>("words", Words);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscriptionTranscriptionWordsItem>("words", Words);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -68,6 +68,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public VerifyV2ServiceRateLimitBucket()
         {
             AdditionalData = new Dictionary<string, object>();
+            Interval = 0;
+            Max = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

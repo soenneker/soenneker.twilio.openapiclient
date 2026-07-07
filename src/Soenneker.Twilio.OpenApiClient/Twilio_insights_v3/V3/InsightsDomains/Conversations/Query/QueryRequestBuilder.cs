@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public QueryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/InsightsDomains/Conversations/Query?pageToken={pageToken}{&pageSize*}", pathParameters)
+        public QueryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/InsightsDomains/Conversations/Query{?pageSize*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public QueryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/InsightsDomains/Conversations/Query?pageToken={pageToken}{&pageSize*}", rawUrl)
+        public QueryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/InsightsDomains/Conversations/Query{?pageSize*}", rawUrl)
         {
         }
         /// <summary>
@@ -39,9 +39,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults429">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.Conversations.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -54,9 +54,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults400.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults429.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults400Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchQueryResults500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -67,9 +67,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults429">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryRequest body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.Conversations.Query.QueryRequestBuilder.QueryRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -83,9 +83,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults400.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults429.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults400Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateQueryResults500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -124,7 +124,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/twilio_insights_v3/v3/InsightsDomains/Conversations/Query{?pageSize*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

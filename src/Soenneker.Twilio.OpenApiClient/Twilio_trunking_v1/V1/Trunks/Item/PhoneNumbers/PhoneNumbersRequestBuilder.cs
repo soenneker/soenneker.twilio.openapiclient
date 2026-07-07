@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.Phone
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.PhoneNumbers.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.Phone
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PhoneNumbersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{S%2Did}/PhoneNumbers{?Page*,PageSize*,PageToken*}", pathParameters)
+        public PhoneNumbersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{s%2Did}/PhoneNumbers{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,23 +43,23 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.Phone
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PhoneNumbersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{S%2Did}/PhoneNumbers{?Page*,PageSize*,PageToken*}", rawUrl)
+        public PhoneNumbersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{s%2Did}/PhoneNumbers{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberResponseResponseApplicationJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberResponseResponseJson2"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberResponseResponseApplicationJson?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.PhoneNumbers.PhoneNumbersRequestBuilder.PhoneNumbersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberResponseResponseJson2?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.PhoneNumbers.PhoneNumbersRequestBuilder.PhoneNumbersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberResponseResponseApplicationJson> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.PhoneNumbers.PhoneNumbersRequestBuilder.PhoneNumbersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberResponseResponseJson2> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.PhoneNumbers.PhoneNumbersRequestBuilder.PhoneNumbersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberResponseResponseApplicationJson>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberResponseResponseApplicationJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberResponseResponseJson2>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberResponseResponseJson2.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumber"/></returns>
         /// <param name="body">The request body</param>
@@ -67,11 +67,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.Phone
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumber?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreatePhoneNumber body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumber?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreatePhoneNumberXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumber> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreatePhoneNumber body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumber> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreatePhoneNumberXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -99,11 +99,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.Phone
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreatePhoneNumber body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreatePhoneNumberXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreatePhoneNumber body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreatePhoneNumberXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

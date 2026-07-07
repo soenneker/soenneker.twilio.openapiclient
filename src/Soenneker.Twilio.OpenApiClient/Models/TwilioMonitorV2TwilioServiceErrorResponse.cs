@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The params property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse_params? Params { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponseParamsProperty? Params { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse_params Params { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponseParamsProperty Params { get; set; }
 #endif
         /// <summary>HTTP status code</summary>
         public int? Status { get; set; }
@@ -79,7 +79,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "http_status_code", n => { HttpStatusCode = n.GetIntValue(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
                 { "more_info", n => { MoreInfo = n.GetStringValue(); } },
-                { "params", n => { Params = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse_params>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse_params.CreateFromDiscriminatorValue); } },
+                { "params", n => { Params = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponseParamsProperty>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponseParamsProperty.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetIntValue(); } },
                 { "user_error", n => { UserError = n.GetBoolValue(); } },
             };
@@ -95,7 +95,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("http_status_code", HttpStatusCode);
             writer.WriteStringValue("message", MessageEscaped);
             writer.WriteStringValue("more_info", MoreInfo);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse_params>("params", Params);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponseParamsProperty>("params", Params);
             writer.WriteIntValue("status", Status);
             writer.WriteBoolValue("user_error", UserError);
             writer.WriteAdditionalData(AdditionalData);

@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Recordings
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Recordings.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

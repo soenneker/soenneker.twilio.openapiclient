@@ -39,9 +39,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.OperatorResul
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult429">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult404Response">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -54,9 +54,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.OperatorResul
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult404.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult429.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult500.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult404Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3DeleteOperatorResult500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -66,9 +66,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.OperatorResul
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult429">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult404Response">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -81,9 +81,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.OperatorResul
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult404.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult429.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult500.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult404Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorResult500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

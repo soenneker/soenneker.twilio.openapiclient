@@ -63,10 +63,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of errors that occurred during the brand registration process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations_errors>? Errors { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsErrorsItem>? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations_errors> Errors { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsErrorsItem> Errors { get; set; }
 #endif
         /// <summary>DEPRECATED. A reason why brand registration has failed. Only applicable when status is FAILED.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,10 +83,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinks Links { get; set; }
 #endif
         /// <summary>A boolean that specifies whether brand should be a mock or not. If true, brand will be registered as a mock brand. Defaults to false if no value is provided.</summary>
         public bool? Mock { get; set; }
@@ -161,11 +161,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "customer_profile_bundle_sid", n => { CustomerProfileBundleSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations_errors>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations_errors.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "failure_reason", n => { FailureReason = n.GetStringValue(); } },
                 { "government_entity", n => { GovernmentEntity = n.GetBoolValue(); } },
                 { "identity_status", n => { IdentityStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumIdentityStatus>(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations_links>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinks>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinks.CreateFromDiscriminatorValue); } },
                 { "mock", n => { Mock = n.GetBoolValue(); } },
                 { "russell_3000", n => { Russell3000 = n.GetBoolValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -191,11 +191,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("customer_profile_bundle_sid", CustomerProfileBundleSid);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations_errors>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsErrorsItem>("errors", Errors);
             writer.WriteStringValue("failure_reason", FailureReason);
             writer.WriteBoolValue("government_entity", GovernmentEntity);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumIdentityStatus>("identity_status", IdentityStatus);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinks>("links", Links);
             writer.WriteBoolValue("mock", Mock);
             writer.WriteBoolValue("russell_3000", Russell3000);
             writer.WriteStringValue("sid", Sid);

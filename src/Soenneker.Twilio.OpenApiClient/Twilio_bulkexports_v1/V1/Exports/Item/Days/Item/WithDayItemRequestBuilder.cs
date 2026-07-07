@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.Days.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_bulkexports_v1\v1\Exports\{ResourceType}\Days\{Day}
+    /// Builds and executes requests for operations under \twilio_bulkexports_v1\v1\Exports\{resourceType}\Days\{day}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithDayItemRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.D
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDayItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{ResourceType}/Days/{Day}", pathParameters)
+        public WithDayItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{resourceType}/Days/{day}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.D
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDayItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{ResourceType}/Days/{Day}", rawUrl)
+        public WithDayItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_bulkexports_v1/v1/Exports/{resourceType}/Days/{day}", rawUrl)
         {
         }
         /// <summary>

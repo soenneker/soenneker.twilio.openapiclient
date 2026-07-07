@@ -29,7 +29,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ResourceType", position);
+                urlTplParams.Add("resourceType", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_bulkexports_v1.V1.Exports.Item.WithResourceTypeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

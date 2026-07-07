@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "peer_to_peer")]
         #pragma warning disable CS1591
-        Peer_to_peer,
+        PeerToPeer,
         #pragma warning restore CS1591
         [EnumMember(Value = "group")]
         #pragma warning disable CS1591
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "group_small")]
         #pragma warning disable CS1591
-        Group_small,
+        GroupSmall,
         #pragma warning restore CS1591
     }
 }

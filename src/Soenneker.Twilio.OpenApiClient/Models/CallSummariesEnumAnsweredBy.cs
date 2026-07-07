@@ -14,19 +14,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "machine_start")]
         #pragma warning disable CS1591
-        Machine_start,
+        MachineStart,
         #pragma warning restore CS1591
         [EnumMember(Value = "machine_end_beep")]
         #pragma warning disable CS1591
-        Machine_end_beep,
+        MachineEndBeep,
         #pragma warning restore CS1591
         [EnumMember(Value = "machine_end_silence")]
         #pragma warning disable CS1591
-        Machine_end_silence,
+        MachineEndSilence,
         #pragma warning restore CS1591
         [EnumMember(Value = "machine_end_other")]
         #pragma warning disable CS1591
-        Machine_end_other,
+        MachineEndOther,
         #pragma warning restore CS1591
         [EnumMember(Value = "human")]
         #pragma warning disable CS1591

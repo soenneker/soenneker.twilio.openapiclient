@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v3.V3.Services.Item.Channels
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_chat_v3\v3\Services\{ServiceSid}\Channels
+    /// Builds and executes requests for operations under \twilio_chat_v3\v3\Services\{serviceSid}\Channels
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChannelsRequestBuilder : BaseRequestBuilder
@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v3.V3.Services.Item.Channel
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_chat_v3.V3.Services.Item.Channels.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -32,7 +32,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v3.V3.Services.Item.Channel
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v3/v3/Services/{ServiceSid}/Channels", pathParameters)
+        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v3/v3/Services/{serviceSid}/Channels", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v3.V3.Services.Item.Channel
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v3/v3/Services/{ServiceSid}/Channels", rawUrl)
+        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v3/v3/Services/{serviceSid}/Channels", rawUrl)
         {
         }
     }

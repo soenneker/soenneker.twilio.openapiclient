@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.LinkShortening.Domains.Item.MessagingServices.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_messaging_v1\v1\LinkShortening\Domains\{DomainSid}\MessagingServices\{MessagingServiceSid}
+    /// Builds and executes requests for operations under \twilio_messaging_v1\v1\LinkShortening\Domains\{domainSid}\MessagingServices\{messagingServiceSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithMessagingServiceSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.LinkShortening.D
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithMessagingServiceSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/Domains/{DomainSid}/MessagingServices/{MessagingServiceSid}", pathParameters)
+        public WithMessagingServiceSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/Domains/{domainSid}/MessagingServices/{messagingServiceSid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.LinkShortening.D
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithMessagingServiceSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/Domains/{DomainSid}/MessagingServices/{MessagingServiceSid}", rawUrl)
+        public WithMessagingServiceSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/LinkShortening/Domains/{domainSid}/MessagingServices/{messagingServiceSid}", rawUrl)
         {
         }
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>

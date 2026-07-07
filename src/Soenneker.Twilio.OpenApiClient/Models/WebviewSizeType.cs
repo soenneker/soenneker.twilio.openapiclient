@@ -10,19 +10,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "TALL")]
         #pragma warning disable CS1591
-        TALL,
+        Tall,
         #pragma warning restore CS1591
         [EnumMember(Value = "FULL")]
         #pragma warning disable CS1591
-        FULL,
+        Full,
         #pragma warning restore CS1591
         [EnumMember(Value = "HALF")]
         #pragma warning disable CS1591
-        HALF,
+        Half,
         #pragma warning restore CS1591
         [EnumMember(Value = "NONE")]
         #pragma warning disable CS1591
-        NONE,
+        None,
         #pragma warning restore CS1591
     }
 }

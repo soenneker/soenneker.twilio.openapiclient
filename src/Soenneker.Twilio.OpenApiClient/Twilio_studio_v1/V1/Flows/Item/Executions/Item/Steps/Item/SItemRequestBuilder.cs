@@ -28,7 +28,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Executio
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{FlowS%2Did}/Executions/{ExecutionS%2Did}/Steps/{S%2Did}", pathParameters)
+        public SItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{flowS%2Did}/Executions/{executionS%2Did}/Steps/{s%2Did}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Executio
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{FlowS%2Did}/Executions/{ExecutionS%2Did}/Steps/{S%2Did}", rawUrl)
+        public SItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{flowS%2Did}/Executions/{executionS%2Did}/Steps/{s%2Did}", rawUrl)
         {
         }
         /// <summary>

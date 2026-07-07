@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item.Channels.Item.Invites.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_ip_messaging_v1\v1\Services\{ServiceS-id}\Channels\{ChannelS-id}\Invites\{Sid}
+    /// Builds and executes requests for operations under \twilio_ip_messaging_v1\v1\Services\{serviceS-id}\Channels\{channelS-id}\Invites\{sid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v1/v1/Services/{ServiceS%2Did}/Channels/{ChannelS%2Did}/Invites/{Sid}", pathParameters)
+        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v1/v1/Services/{serviceS%2Did}/Channels/{channelS%2Did}/Invites/{sid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v1/v1/Services/{ServiceS%2Did}/Channels/{ChannelS%2Did}/Invites/{Sid}", rawUrl)
+        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v1/v1/Services/{serviceS%2Did}/Channels/{channelS%2Did}/Invites/{sid}", rawUrl)
         {
         }
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>

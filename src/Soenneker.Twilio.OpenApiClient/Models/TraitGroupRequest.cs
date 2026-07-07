@@ -32,10 +32,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Map of traits belonging to this Trait Group, keyed by trait name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TraitGroupRequest_traits? Traits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TraitGroupRequestTraitsProperty? Traits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TraitGroupRequest_traits Traits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TraitGroupRequestTraitsProperty Traits { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -57,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
-                { "traits", n => { Traits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TraitGroupRequest_traits>(global::Soenneker.Twilio.OpenApiClient.Models.TraitGroupRequest_traits.CreateFromDiscriminatorValue); } },
+                { "traits", n => { Traits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TraitGroupRequestTraitsProperty>(global::Soenneker.Twilio.OpenApiClient.Models.TraitGroupRequestTraitsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("displayName", DisplayName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TraitGroupRequest_traits>("traits", Traits);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TraitGroupRequestTraitsProperty>("traits", Traits);
         }
     }
 }

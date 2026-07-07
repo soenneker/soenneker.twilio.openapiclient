@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The results of the Evaluation which includes the valid and invalid attributes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductTrustProductEvaluation_results>? Results { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductTrustProductEvaluationResultsItem>? Results { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductTrustProductEvaluation_results> Results { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductTrustProductEvaluationResultsItem> Results { get; set; }
 #endif
         /// <summary>The unique string that identifies the Evaluation resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,7 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "policy_sid", n => { PolicySid = n.GetStringValue(); } },
-                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductTrustProductEvaluation_results>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductTrustProductEvaluation_results.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "results", n => { Results = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductTrustProductEvaluationResultsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductTrustProductEvaluationResultsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TrustProductEvaluationEnumStatus>(); } },
                 { "trust_product_sid", n => { TrustProductSid = n.GetStringValue(); } },
@@ -111,7 +111,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteStringValue("policy_sid", PolicySid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductTrustProductEvaluation_results>("results", Results);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductTrustProductEvaluationResultsItem>("results", Results);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TrustProductEvaluationEnumStatus>("status", Status);
             writer.WriteStringValue("trust_product_sid", TrustProductSid);

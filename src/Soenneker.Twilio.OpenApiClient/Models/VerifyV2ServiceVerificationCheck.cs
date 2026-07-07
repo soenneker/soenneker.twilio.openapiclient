@@ -63,10 +63,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of error codes as a result of attempting a verification using the `sna` channel. The error codes are chronologically ordered, from the first attempt to the latest attempt. This will be an empty list if no errors occured or `null` if the last channel used wasn&apos;t `sna`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationCheck_sna_attempts_error_codes>? SnaAttemptsErrorCodes { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationCheckSnaAttemptsErrorCodesItem>? SnaAttemptsErrorCodes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationCheck_sna_attempts_error_codes> SnaAttemptsErrorCodes { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationCheckSnaAttemptsErrorCodesItem> SnaAttemptsErrorCodes { get; set; }
 #endif
         /// <summary>&quot;The status of the verification. Can be: `pending`, `approved`, `canceled`, `max_attempts_reached`, `deleted`, `failed` or `expired`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -119,7 +119,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "payee", n => { Payee = n.GetStringValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "sna_attempts_error_codes", n => { SnaAttemptsErrorCodes = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationCheck_sna_attempts_error_codes>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationCheck_sna_attempts_error_codes.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "sna_attempts_error_codes", n => { SnaAttemptsErrorCodes = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationCheckSnaAttemptsErrorCodesItem>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationCheckSnaAttemptsErrorCodesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "to", n => { To = n.GetStringValue(); } },
                 { "valid", n => { Valid = n.GetBoolValue(); } },
@@ -140,7 +140,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("payee", Payee);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationCheck_sna_attempts_error_codes>("sna_attempts_error_codes", SnaAttemptsErrorCodes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationCheckSnaAttemptsErrorCodesItem>("sna_attempts_error_codes", SnaAttemptsErrorCodes);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("to", To);
             writer.WriteBoolValue("valid", Valid);

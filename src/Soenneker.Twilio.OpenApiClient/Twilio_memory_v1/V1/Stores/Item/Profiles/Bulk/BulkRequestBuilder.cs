@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <summary>
         /// Create or update up to 1000 profiles in a single asynchronous batch. Each profile body follows the same structure as single profile creation. If a profile already exists its traits are merged (new keys added, existing keys overwritten). Large batches may take time to process; the 202 response indicates the batch has been accepted. Monitor downstream telemetry or audit logs to confirm completion.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk202"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk202Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -49,11 +49,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk202?> PutAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk202Response?> PutAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulkRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk202> PutAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk202Response> PutAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulkRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -68,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk202>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk202.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create or update up to 1000 profiles in a single asynchronous batch. Each profile body follows the same structure as single profile creation. If a profile already exists its traits are merged (new keys added, existing keys overwritten). Large batches may take time to process; the 202 response indicates the batch has been accepted. Monitor downstream telemetry or audit logs to confirm completion.
@@ -78,11 +78,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulkRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulk body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1UpdateProfilesBulkRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

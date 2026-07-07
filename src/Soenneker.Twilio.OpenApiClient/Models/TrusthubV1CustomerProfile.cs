@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The error codes associated with the rejection of the Customer-Profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile_errors>? Errors { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileErrorsItem>? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile_errors> Errors { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileErrorsItem> Errors { get; set; }
 #endif
         /// <summary>The string that you assigned to describe the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of the Assigned Items of the Customer-Profile resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileLinks Links { get; set; }
 #endif
         /// <summary>The unique string of a policy that is associated to the Customer-Profile resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,9 +123,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile_errors>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile_errors.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile_links>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileLinks.CreateFromDiscriminatorValue); } },
                 { "policy_sid", n => { PolicySid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CustomerProfileEnumStatus>(); } },
@@ -145,9 +145,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("email", Email);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile_errors>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileErrorsItem>("errors", Errors);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfile_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileLinks>("links", Links);
             writer.WriteStringValue("policy_sid", PolicySid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CustomerProfileEnumStatus>("status", Status);

@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The details of a job which is an object that contains an array of status grouped by `status` state.  Each `status` object has a `status` string, a count which is the number of days in that `status`, and list of days in that `status`. The day strings are in the format yyyy-MM-dd. As an example, a currently running job may have a status object for COMPLETED and a `status` object for SUBMITTED each with its own count and list of days.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportJob_details>? Details { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportJobDetailsItem>? Details { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportJob_details> Details { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportJobDetailsItem> Details { get; set; }
 #endif
         /// <summary>The optional email to send the completion notification to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -135,7 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportJob_details>(global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportJob_details.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportJobDetailsItem>(global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportJobDetailsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "end_day", n => { EndDay = n.GetStringValue(); } },
                 { "estimated_completion_time", n => { EstimatedCompletionTime = n.GetStringValue(); } },
@@ -156,7 +156,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportJob_details>("details", Details);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportJobDetailsItem>("details", Details);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("end_day", EndDay);
             writer.WriteStringValue("estimated_completion_time", EstimatedCompletionTime);

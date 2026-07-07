@@ -58,10 +58,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The emails of the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_emails>? Emails { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseEmailsItem>? Emails { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_emails> Emails { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseEmailsItem> Emails { get; set; }
 #endif
         /// <summary>The logo URL of the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,10 +82,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The phone numbers of the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_phone_numbers>? PhoneNumbers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponsePhoneNumbersItem>? PhoneNumbers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_phone_numbers> PhoneNumbers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponsePhoneNumbersItem> PhoneNumbers { get; set; }
 #endif
         /// <summary>The privacy URL of the sender. Must be a publicly accessible HTTP or HTTPS URI associated with the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,7 +104,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string TermsOfServiceUrl { get; set; }
 #endif
         /// <summary>The messaging use case type for the RCS sender. Allowed values are `PROMOTIONAL`, `TRANSACTIONAL`, `OTP`, `MULTI_USE`. Defaults to `MULTI_USE` if not provided. Cannot be modified after launch.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_use_case? UseCase { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseUseCase? UseCase { get; set; }
         /// <summary>The vertical of the sender. Allowed values are:- `Alcohol`- `Automotive`- `Beauty, Spa and Salon`- `Clothing and Apparel`- `Education`- `Entertainment`- `Event Planning and Service`- `Finance and Banking`- `Food and Grocery`- `Hotel and Lodging`- `Matrimony Service`- `Medical and Health`- `Non-profit`- `Online Gambling`- `OTC Drugs`- `Other`- `Physical Gambling`- `Professional Services`- `Public Service`- `Restaurant`- `Shopping and Retail`- `Travel and Transportation`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -116,10 +116,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The websites of the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_websites>? Websites { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseWebsitesItem>? Websites { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_websites> Websites { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseWebsitesItem> Websites { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse"/> and sets the default values.
@@ -151,15 +151,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "banner_url", n => { BannerUrl = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "emails", n => { Emails = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_emails>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_emails.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "emails", n => { Emails = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseEmailsItem>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseEmailsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "logo_url", n => { LogoUrl = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "phone_numbers", n => { PhoneNumbers = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_phone_numbers>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_phone_numbers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "phone_numbers", n => { PhoneNumbers = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponsePhoneNumbersItem>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponsePhoneNumbersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "privacy_url", n => { PrivacyUrl = n.GetStringValue(); } },
                 { "terms_of_service_url", n => { TermsOfServiceUrl = n.GetStringValue(); } },
-                { "use_case", n => { UseCase = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_use_case>(); } },
+                { "use_case", n => { UseCase = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseUseCase>(); } },
                 { "vertical", n => { Vertical = n.GetStringValue(); } },
-                { "websites", n => { Websites = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_websites>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_websites.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "websites", n => { Websites = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseWebsitesItem>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseWebsitesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -174,15 +174,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("address", Address);
             writer.WriteStringValue("banner_url", BannerUrl);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_emails>("emails", Emails);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseEmailsItem>("emails", Emails);
             writer.WriteStringValue("logo_url", LogoUrl);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_phone_numbers>("phone_numbers", PhoneNumbers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponsePhoneNumbersItem>("phone_numbers", PhoneNumbers);
             writer.WriteStringValue("privacy_url", PrivacyUrl);
             writer.WriteStringValue("terms_of_service_url", TermsOfServiceUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_use_case>("use_case", UseCase);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseUseCase>("use_case", UseCase);
             writer.WriteStringValue("vertical", Vertical);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse_websites>("websites", Websites);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponseWebsitesItem>("websites", Websites);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

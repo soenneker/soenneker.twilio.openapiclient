@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// <summary>
         /// Deletes the Trait Group and all associated Traits from the Memory Store.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteTraitGroup202"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteTraitGroup202Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 400 status code</exception>
@@ -47,11 +47,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteTraitGroup202?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteTraitGroup202Response?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteTraitGroup202> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteTraitGroup202Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -64,12 +64,12 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteTraitGroup202>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteTraitGroup202.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteTraitGroup202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1DeleteTraitGroup202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a specific Trait Group by its unique name for this Memory Store, with optional traits information.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1FetchTraitGroup200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1FetchTraitGroup200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 400 status code</exception>
@@ -79,11 +79,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1FetchTraitGroup200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores.Item.TraitGroups.Item.WithTraitGroupNameItemRequestBuilder.WithTraitGroupNameItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1FetchTraitGroup200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores.Item.TraitGroups.Item.WithTraitGroupNameItemRequestBuilder.WithTraitGroupNameItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1FetchTraitGroup200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores.Item.TraitGroups.Item.WithTraitGroupNameItemRequestBuilder.WithTraitGroupNameItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1FetchTraitGroup200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores.Item.TraitGroups.Item.WithTraitGroupNameItemRequestBuilder.WithTraitGroupNameItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -95,12 +95,12 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1FetchTraitGroup200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1FetchTraitGroup200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1FetchTraitGroup200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1FetchTraitGroup200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Partially updates a Trait Group. Only the fields provided in the request body will be updated. For traits:existing traits with matching keys will be updated, new keys will be added. To remove a trait, set its dataType toan empty string (&quot;&quot;) - this serves as an explicit deletion marker.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup202"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup202Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -111,11 +111,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup202?> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup202Response?> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup202> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup202Response> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -128,7 +128,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup202>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup202.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes the Trait Group and all associated Traits from the Memory Store.
@@ -176,11 +176,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroup body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -210,7 +210,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
             public bool? IncludeTraits { get; set; }
             /// <summary>Either &apos;ASC&apos; or &apos;DESC&apos; to sort results ascending or descending respectively.</summary>
             [QueryParameter("orderBy")]
-            public global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores.Item.TraitGroups.Item.GetOrderByQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1OrderBy? OrderBy { get; set; }
             /// <summary>The maximum number of items to return per page, maximum of 100.</summary>
             [QueryParameter("pageSize")]
             public int? PageSize { get; set; }

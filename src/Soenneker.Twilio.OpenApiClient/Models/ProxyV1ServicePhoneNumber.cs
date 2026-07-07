@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The capabilities of the phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServicePhoneNumber_capabilities? Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServicePhoneNumberCapabilities? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServicePhoneNumber_capabilities Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServicePhoneNumberCapabilities Capabilities { get; set; }
 #endif
         /// <summary>The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -92,6 +92,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public ProxyV1ServicePhoneNumber()
         {
             AdditionalData = new Dictionary<string, object>();
+            InUse = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -112,7 +113,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServicePhoneNumber_capabilities>(global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServicePhoneNumber_capabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServicePhoneNumberCapabilities>(global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServicePhoneNumberCapabilities.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
@@ -133,7 +134,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServicePhoneNumber_capabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServicePhoneNumberCapabilities>("capabilities", Capabilities);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.Item.Media
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_intelligence_v2\v2\Transcripts\{S-id}\Media
+    /// Builds and executes requests for operations under \twilio_intelligence_v2\v2\Transcripts\{s-id}\Media
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MediaRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MediaRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{S%2Did}/Media{?Redacted*}", pathParameters)
+        public MediaRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{s%2Did}/Media{?Redacted*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MediaRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{S%2Did}/Media{?Redacted*}", rawUrl)
+        public MediaRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{s%2Did}/Media{?Redacted*}", rawUrl)
         {
         }
         /// <summary>

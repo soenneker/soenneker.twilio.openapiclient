@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains the whatsapp approval information for the Content resource, with fields such as approval status, rejection reason, and category, amongst others.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetch_whatsapp? Whatsapp { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetchWhatsapp? Whatsapp { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetch_whatsapp Whatsapp { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetchWhatsapp Whatsapp { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetch"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "whatsapp", n => { Whatsapp = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetch_whatsapp>(global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetch_whatsapp.CreateFromDiscriminatorValue); } },
+                { "whatsapp", n => { Whatsapp = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetchWhatsapp>(global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetchWhatsapp.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetch_whatsapp>("whatsapp", Whatsapp);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetchWhatsapp>("whatsapp", Whatsapp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

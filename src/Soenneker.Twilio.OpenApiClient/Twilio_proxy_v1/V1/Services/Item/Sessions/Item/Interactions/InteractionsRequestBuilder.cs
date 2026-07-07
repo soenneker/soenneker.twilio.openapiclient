@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessions.Item.Interactions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_proxy_v1\v1\Services\{ServiceS-id}\Sessions\{SessionS-id}\Interactions
+    /// Builds and executes requests for operations under \twilio_proxy_v1\v1\Services\{serviceS-id}\Sessions\{sessionS-id}\Interactions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InteractionsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessio
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessions.Item.Interactions.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessio
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InteractionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{ServiceS%2Did}/Sessions/{SessionS%2Did}/Interactions{?Page*,PageSize*,PageToken*}", pathParameters)
+        public InteractionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{serviceS%2Did}/Sessions/{sessionS%2Did}/Interactions{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessio
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InteractionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{ServiceS%2Did}/Sessions/{SessionS%2Did}/Interactions{?Page*,PageSize*,PageToken*}", rawUrl)
+        public InteractionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{serviceS%2Did}/Sessions/{sessionS%2Did}/Interactions{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

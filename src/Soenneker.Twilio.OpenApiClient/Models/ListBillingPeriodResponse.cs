@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListBillingPeriodResponse_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListBillingPeriodResponseMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListBillingPeriodResponse_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListBillingPeriodResponseMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListBillingPeriodResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing_periods", n => { BillingPeriods = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimBillingPeriod>(global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimBillingPeriod.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListBillingPeriodResponse_meta>(global::Soenneker.Twilio.OpenApiClient.Models.ListBillingPeriodResponse_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListBillingPeriodResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListBillingPeriodResponseMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimBillingPeriod>("billing_periods", BillingPeriods);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListBillingPeriodResponse_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListBillingPeriodResponseMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

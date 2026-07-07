@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;The HTTP method we use to call `commands_callback_url`.  Can be: `POST` or `GET`. Default is `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_commands_callback_method? CommandsCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimCommandsCallbackMethod? CommandsCallbackMethod { get; set; }
         /// <summary>The URL we call using the `commands_callback_method` when the SIM originates a machine-to-machine [Command](https://www.twilio.com/docs/iot/wireless/api/command-resource). Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,10 +71,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related subresources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinks Links { get; set; }
 #endif
         /// <summary>The SID of the [RatePlan resource](https://www.twilio.com/docs/iot/wireless/api/rateplan-resource) to which the Sim resource is assigned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,7 +95,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Sid { get; set; }
 #endif
         /// <summary>Deprecated.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_sms_fallback_method? SmsFallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimSmsFallbackMethod? SmsFallbackMethod { get; set; }
         /// <summary>Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,7 +105,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string SmsFallbackUrl { get; set; }
 #endif
         /// <summary>Deprecated.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_sms_method? SmsMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimSmsMethod? SmsMethod { get; set; }
         /// <summary>Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -133,7 +133,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Url { get; set; }
 #endif
         /// <summary>&quot;Deprecated. The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`. Default is `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_voice_fallback_method? VoiceFallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>Deprecated. The URL we call using the `voice_fallback_method` when an error occurs while retrieving or executing the TwiML requested from `voice_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -143,7 +143,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string VoiceFallbackUrl { get; set; }
 #endif
         /// <summary>&quot;Deprecated. The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`. Default is `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_voice_method? VoiceMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimVoiceMethod? VoiceMethod { get; set; }
         /// <summary>Deprecated. The URL we call using the `voice_method` when the SIM-connected device makes a voice call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -178,7 +178,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "commands_callback_method", n => { CommandsCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_commands_callback_method>(); } },
+                { "commands_callback_method", n => { CommandsCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimCommandsCallbackMethod>(); } },
                 { "commands_callback_url", n => { CommandsCallbackUrl = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
@@ -186,20 +186,20 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "iccid", n => { Iccid = n.GetStringValue(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_links>(global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinks>(global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinks.CreateFromDiscriminatorValue); } },
                 { "rate_plan_sid", n => { RatePlanSid = n.GetStringValue(); } },
                 { "reset_status", n => { ResetStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SimEnumResetStatus>(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "sms_fallback_method", n => { SmsFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_sms_fallback_method>(); } },
+                { "sms_fallback_method", n => { SmsFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimSmsFallbackMethod>(); } },
                 { "sms_fallback_url", n => { SmsFallbackUrl = n.GetStringValue(); } },
-                { "sms_method", n => { SmsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_sms_method>(); } },
+                { "sms_method", n => { SmsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimSmsMethod>(); } },
                 { "sms_url", n => { SmsUrl = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1SimEnumStatus>(); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "voice_fallback_method", n => { VoiceFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_voice_fallback_method>(); } },
+                { "voice_fallback_method", n => { VoiceFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimVoiceFallbackMethod>(); } },
                 { "voice_fallback_url", n => { VoiceFallbackUrl = n.GetStringValue(); } },
-                { "voice_method", n => { VoiceMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_voice_method>(); } },
+                { "voice_method", n => { VoiceMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimVoiceMethod>(); } },
                 { "voice_url", n => { VoiceUrl = n.GetStringValue(); } },
             };
         }
@@ -211,7 +211,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_commands_callback_method>("commands_callback_method", CommandsCallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimCommandsCallbackMethod>("commands_callback_method", CommandsCallbackMethod);
             writer.WriteStringValue("commands_callback_url", CommandsCallbackUrl);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
@@ -219,20 +219,20 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("iccid", Iccid);
             writer.WriteStringValue("ip_address", IpAddress);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinks>("links", Links);
             writer.WriteStringValue("rate_plan_sid", RatePlanSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SimEnumResetStatus>("reset_status", ResetStatus);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_sms_fallback_method>("sms_fallback_method", SmsFallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimSmsFallbackMethod>("sms_fallback_method", SmsFallbackMethod);
             writer.WriteStringValue("sms_fallback_url", SmsFallbackUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_sms_method>("sms_method", SmsMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimSmsMethod>("sms_method", SmsMethod);
             writer.WriteStringValue("sms_url", SmsUrl);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1SimEnumStatus>("status", Status);
             writer.WriteStringValue("unique_name", UniqueName);
             writer.WriteStringValue("url", Url);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_voice_fallback_method>("voice_fallback_method", VoiceFallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimVoiceFallbackMethod>("voice_fallback_method", VoiceFallbackMethod);
             writer.WriteStringValue("voice_fallback_url", VoiceFallbackUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1Sim_voice_method>("voice_method", VoiceMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimVoiceMethod>("voice_method", VoiceMethod);
             writer.WriteStringValue("voice_url", VoiceUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

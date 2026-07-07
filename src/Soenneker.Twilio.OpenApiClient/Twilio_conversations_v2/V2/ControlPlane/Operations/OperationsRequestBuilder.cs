@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.ControlPlane
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.ControlPlane.Operations.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

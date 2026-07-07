@@ -9,11 +9,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "SELF")]
         #pragma warning disable CS1591
-        SELF,
+        Self,
         #pragma warning restore CS1591
         [EnumMember(Value = "TWILIO")]
         #pragma warning disable CS1591
-        TWILIO,
+        Twilio,
         #pragma warning restore CS1591
     }
 }

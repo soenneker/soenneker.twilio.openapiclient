@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.I
         /// <summary>
         /// Retrieve a paginated list of all processed content chunks from a specific knowledge source.  Chunks are smaller segments of content that have been extracted and processed from the original  knowledge source. Each chunk contains content text and associated metadata that can be used  for semantic search and retrieval operations.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2ListKnowledgeChunks200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2ListKnowledgeChunks200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioError">When receiving a 400 status code</exception>
@@ -48,11 +48,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.I
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2ListKnowledgeChunks200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.Item.Knowledge.Item.Chunks.ChunksRequestBuilder.ChunksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2ListKnowledgeChunks200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.Item.Knowledge.Item.Chunks.ChunksRequestBuilder.ChunksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2ListKnowledgeChunks200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.Item.Knowledge.Item.Chunks.ChunksRequestBuilder.ChunksRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2ListKnowledgeChunks200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.Item.Knowledge.Item.Chunks.ChunksRequestBuilder.ChunksRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.I
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2ListKnowledgeChunks200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2ListKnowledgeChunks200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2ListKnowledgeChunks200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2ListKnowledgeChunks200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a paginated list of all processed content chunks from a specific knowledge source.  Chunks are smaller segments of content that have been extracted and processed from the original  knowledge source. Each chunk contains content text and associated metadata that can be used  for semantic search and retrieval operations.

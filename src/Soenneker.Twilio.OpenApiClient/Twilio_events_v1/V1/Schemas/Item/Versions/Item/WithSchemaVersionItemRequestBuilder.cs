@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Schemas.Item.Versio
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSchemaVersionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Schemas/{Id}/Versions/{SchemaVersion}", pathParameters)
+        public WithSchemaVersionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Schemas/{id}/Versions/{schemaVersion}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Schemas.Item.Versio
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSchemaVersionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Schemas/{Id}/Versions/{SchemaVersion}", rawUrl)
+        public WithSchemaVersionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_events_v1/v1/Schemas/{id}/Versions/{schemaVersion}", rawUrl)
         {
         }
         /// <summary>

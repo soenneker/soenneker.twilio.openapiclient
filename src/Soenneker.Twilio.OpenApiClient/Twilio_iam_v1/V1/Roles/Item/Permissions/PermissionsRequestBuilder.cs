@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Roles.Item.Permissions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_iam_v1\v1\Roles\{RoleSid}\Permissions
+    /// Builds and executes requests for operations under \twilio_iam_v1\v1\Roles\{roleSid}\Permissions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PermissionsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Roles.Item.Permissions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PermissionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_v1/v1/Roles/{RoleSid}/Permissions{?Page*,PageSize*,PageToken*}", pathParameters)
+        public PermissionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_v1/v1/Roles/{roleSid}/Permissions{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Roles.Item.Permissions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PermissionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_v1/v1/Roles/{RoleSid}/Permissions{?Page*,PageSize*,PageToken*}", rawUrl)
+        public PermissionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_v1/v1/Roles/{roleSid}/Permissions{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

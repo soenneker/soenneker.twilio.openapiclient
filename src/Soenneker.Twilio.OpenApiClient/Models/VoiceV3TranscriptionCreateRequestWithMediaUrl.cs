@@ -17,7 +17,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The start time of the audio recording</summary>
         public DateTimeOffset? AudioStartedAt { get; set; }
         /// <summary>Discriminator indicating the input source type</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl_inputSource? InputSource { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrlInputSource? InputSource { get; set; }
         /// <summary>URL to the media file to transcribe</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "audioStartedAt", n => { AudioStartedAt = n.GetDateTimeOffsetValue(); } },
-                { "inputSource", n => { InputSource = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl_inputSource>(); } },
+                { "inputSource", n => { InputSource = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrlInputSource>(); } },
                 { "mediaUrl", n => { MediaUrl = n.GetStringValue(); } },
                 { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "transcriptionConfigurationId", n => { TranscriptionConfigurationId = n.GetStringValue(); } },
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("audioStartedAt", AudioStartedAt);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl_inputSource>("inputSource", InputSource);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrlInputSource>("inputSource", InputSource);
             writer.WriteStringValue("mediaUrl", MediaUrl);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>("participants", Participants);
             writer.WriteStringValue("transcriptionConfigurationId", TranscriptionConfigurationId);

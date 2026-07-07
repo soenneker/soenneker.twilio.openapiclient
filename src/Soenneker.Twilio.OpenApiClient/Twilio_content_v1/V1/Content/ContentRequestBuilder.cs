@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_content_v1.V1.Content
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ContentS%2Did", position);
+                urlTplParams.Add("contentS%2Did", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_content_v1.V1.Content.Item.ContentSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

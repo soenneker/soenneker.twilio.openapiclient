@@ -31,10 +31,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The details of the knowledge source based on the type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceUpdateKnowledgeRequest_knowledge_source_details? KnowledgeSourceDetails { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceUpdateKnowledgeRequestKnowledgeSourceDetailsProperty? KnowledgeSourceDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceUpdateKnowledgeRequest_knowledge_source_details KnowledgeSourceDetails { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceUpdateKnowledgeRequestKnowledgeSourceDetailsProperty KnowledgeSourceDetails { get; set; }
 #endif
         /// <summary>The name of the knowledge source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "embedding_model", n => { EmbeddingModel = n.GetStringValue(); } },
-                { "knowledge_source_details", n => { KnowledgeSourceDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceUpdateKnowledgeRequest_knowledge_source_details>(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceUpdateKnowledgeRequest_knowledge_source_details.CreateFromDiscriminatorValue); } },
+                { "knowledge_source_details", n => { KnowledgeSourceDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceUpdateKnowledgeRequestKnowledgeSourceDetailsProperty>(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceUpdateKnowledgeRequestKnowledgeSourceDetailsProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "policy", n => { Policy = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreatePolicyRequest>(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreatePolicyRequest.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -95,7 +95,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("embedding_model", EmbeddingModel);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceUpdateKnowledgeRequest_knowledge_source_details>("knowledge_source_details", KnowledgeSourceDetails);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceUpdateKnowledgeRequestKnowledgeSourceDetailsProperty>("knowledge_source_details", KnowledgeSourceDetails);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreatePolicyRequest>("policy", Policy);
             writer.WriteStringValue("type", Type);

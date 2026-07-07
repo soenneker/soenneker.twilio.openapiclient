@@ -118,6 +118,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public WirelessV1SimDataSession()
         {
             AdditionalData = new Dictionary<string, object>();
+            PacketsDownloaded = 0;
+            PacketsUploaded = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

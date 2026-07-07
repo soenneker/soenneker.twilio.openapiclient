@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Types
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Type", position);
+                urlTplParams.Add("type", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Types.Item.WithTypeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

@@ -29,7 +29,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateUpdated { get; set; }
         /// <summary>&quot;The HTTP method we use to call `fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Service_fallback_method? FallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceFallbackMethod? FallbackMethod { get; set; }
         /// <summary>[OBSOLETE] Former feature used to fallback to long code sender after certain short code message failures.</summary>
         public bool? FallbackToLongCode { get; set; }
         /// <summary>The URL that we call using `fallback_method` if an error occurs while retrieving or executing the TwiML from the Inbound Request URL. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `fallback_url` defined for the Messaging Service.</summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string FriendlyName { get; set; }
 #endif
         /// <summary>The HTTP method we use to call `inbound_request_url`. Can be `GET` or `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Service_inbound_method? InboundMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceInboundMethod? InboundMethod { get; set; }
         /// <summary>The URL we call using `inbound_method` when a message is received by any phone number or short code in the Service. When this property is `null`, receiving inbound messages is disabled. All messages sent to the Twilio phone number or short code will not be logged and received on the Account. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `inbound_request_url` defined for the Messaging Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,10 +61,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The absolute URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Service_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Service_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinks Links { get; set; }
 #endif
         /// <summary>Whether to enable the [MMS Converter](https://www.twilio.com/docs/messaging/services#mms-converter) for messages sent through the Service instance.</summary>
         public bool? MmsConverter { get; set; }
@@ -120,6 +120,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public MessagingV1Service()
         {
             AdditionalData = new Dictionary<string, object>();
+            ValidityPeriod = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -143,13 +144,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "area_code_geomatch", n => { AreaCodeGeomatch = n.GetBoolValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "fallback_method", n => { FallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Service_fallback_method>(); } },
+                { "fallback_method", n => { FallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceFallbackMethod>(); } },
                 { "fallback_to_long_code", n => { FallbackToLongCode = n.GetBoolValue(); } },
                 { "fallback_url", n => { FallbackUrl = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "inbound_method", n => { InboundMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Service_inbound_method>(); } },
+                { "inbound_method", n => { InboundMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceInboundMethod>(); } },
                 { "inbound_request_url", n => { InboundRequestUrl = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Service_links>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Service_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinks.CreateFromDiscriminatorValue); } },
                 { "mms_converter", n => { MmsConverter = n.GetBoolValue(); } },
                 { "scan_message_content", n => { ScanMessageContent = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumScanMessageContent>(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -175,13 +176,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("area_code_geomatch", AreaCodeGeomatch);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Service_fallback_method>("fallback_method", FallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceFallbackMethod>("fallback_method", FallbackMethod);
             writer.WriteBoolValue("fallback_to_long_code", FallbackToLongCode);
             writer.WriteStringValue("fallback_url", FallbackUrl);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Service_inbound_method>("inbound_method", InboundMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceInboundMethod>("inbound_method", InboundMethod);
             writer.WriteStringValue("inbound_request_url", InboundRequestUrl);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Service_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinks>("links", Links);
             writer.WriteBoolValue("mms_converter", MmsConverter);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumScanMessageContent>("scan_message_content", ScanMessageContent);
             writer.WriteStringValue("sid", Sid);

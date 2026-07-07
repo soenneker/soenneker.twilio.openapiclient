@@ -9,7 +9,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "CAMPAIGN_VERIFY")]
         #pragma warning disable CS1591
-        CAMPAIGN_VERIFY,
+        CampaignVerify,
         #pragma warning restore CS1591
     }
 }

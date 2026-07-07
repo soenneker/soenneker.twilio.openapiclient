@@ -36,20 +36,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.Item.C
         /// <summary>
         /// List knowledge chunks
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponseResponseApplicationJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponseResponseJson"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponseResponseApplicationJson?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.Item.Chunks.ChunksRequestBuilder.ChunksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponseResponseJson?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.Item.Chunks.ChunksRequestBuilder.ChunksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponseResponseApplicationJson> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.Item.Chunks.ChunksRequestBuilder.ChunksRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponseResponseJson> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.Item.Chunks.ChunksRequestBuilder.ChunksRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponseResponseApplicationJson>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponseResponseApplicationJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponseResponseJson>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponseResponseJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List knowledge chunks

@@ -18,10 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Knowledge source IDs with their respective knowledge base ID that was accessed and used by the LLM to generate the result.null if no knowledge was accessed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext_knowledge? Knowledge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge? Knowledge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext_knowledge Knowledge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge Knowledge { get; set; }
 #endif
         /// <summary>The customer profile that was accessed. null if no memory was accessed.Either observations and/or traits from the profile were used by the LLM to generate the result.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "knowledge", n => { Knowledge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext_knowledge>(global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext_knowledge.CreateFromDiscriminatorValue); } },
+                { "knowledge", n => { Knowledge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge>(global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge.CreateFromDiscriminatorValue); } },
                 { "memory", n => { Memory = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory>(global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext_knowledge>("knowledge", Knowledge);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge>("knowledge", Knowledge);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory>("memory", Memory);
             writer.WriteAdditionalData(AdditionalData);
         }

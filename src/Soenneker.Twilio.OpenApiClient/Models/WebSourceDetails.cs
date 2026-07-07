@@ -16,9 +16,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The maximum depth to crawl from the source URL</summary>
         public int? CrawlDepth { get; set; }
         /// <summary>Frequency of re-crawling the website for updated content</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetails_crawlPeriod? CrawlPeriod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod? CrawlPeriod { get; set; }
         /// <summary>Web based knowledge sources</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetails_type? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsType? Type { get; set; }
         /// <summary>The URL to crawl for web content</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -32,7 +32,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// </summary>
         public WebSourceDetails()
         {
-            CrawlPeriod = global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetails_crawlPeriod.NEVER;
+            CrawlDepth = 2;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -53,8 +53,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "crawlDepth", n => { CrawlDepth = n.GetIntValue(); } },
-                { "crawlPeriod", n => { CrawlPeriod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetails_crawlPeriod>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetails_type>(); } },
+                { "crawlPeriod", n => { CrawlPeriod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -66,8 +66,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("crawlDepth", CrawlDepth);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetails_crawlPeriod>("crawlPeriod", CrawlPeriod);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetails_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod>("crawlPeriod", CrawlPeriod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsType>("type", Type);
             writer.WriteStringValue("url", Url);
         }
     }

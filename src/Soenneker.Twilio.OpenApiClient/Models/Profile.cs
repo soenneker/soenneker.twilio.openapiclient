@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Multiple trait groups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.Profile_traits? Traits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProfileTraits? Traits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.Profile_traits Traits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProfileTraits Traits { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "traits", n => { Traits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.Profile_traits>(global::Soenneker.Twilio.OpenApiClient.Models.Profile_traits.CreateFromDiscriminatorValue); } },
+                { "traits", n => { Traits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfileTraits>(global::Soenneker.Twilio.OpenApiClient.Models.ProfileTraits.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.Profile_traits>("traits", Traits);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfileTraits>("traits", Traits);
         }
     }
 }

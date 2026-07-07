@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Room_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Room_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinks Links { get; set; }
 #endif
         /// <summary>The maximum number of published audio, video, and data tracks all participants combined are allowed to publish in the room at the same time. Check [Programmable Video Limits](https://www.twilio.com/docs/video/programmable-video-limits) for more details. If it is set to 0 it means unconstrained.</summary>
         public int? MaxConcurrentPublishedTracks { get; set; }
@@ -81,7 +81,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string StatusCallback { get; set; }
 #endif
         /// <summary>The HTTP method Twilio uses to call `status_callback`. Can be `POST` or `GET` and defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Room_status_callback_method? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>Type of room. Use `group` for new implementations. `go`, `peer-to-peer`, and `group-small` are deprecated.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumRoomType? Type { get; set; }
         /// <summary>An application-defined string that uniquely identifies the resource. It can be used as a `room_sid` in place of the resource&apos;s `sid` in the URL to address the resource, assuming it does not contain any [reserved characters](https://tools.ietf.org/html/rfc3986#section-2.2) that would need to be URL encoded. This value is unique for `in-progress` rooms. SDK clients can use this name to connect to the room. REST API clients can use this name in place of the Room SID to interact with the room as long as the room is `in-progress`.</summary>
@@ -116,6 +116,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public VideoV1Room()
         {
             AdditionalData = new Dictionary<string, object>();
+            EmptyRoomTimeout = 0;
+            MaxParticipantDuration = 0;
+            MaxParticipants = 0;
+            UnusedRoomTimeout = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -144,7 +148,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "enable_turn", n => { EnableTurn = n.GetBoolValue(); } },
                 { "end_time", n => { EndTime = n.GetDateTimeOffsetValue(); } },
                 { "large_room", n => { LargeRoom = n.GetBoolValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Room_links>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Room_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinks.CreateFromDiscriminatorValue); } },
                 { "max_concurrent_published_tracks", n => { MaxConcurrentPublishedTracks = n.GetIntValue(); } },
                 { "max_participant_duration", n => { MaxParticipantDuration = n.GetIntValue(); } },
                 { "max_participants", n => { MaxParticipants = n.GetIntValue(); } },
@@ -153,7 +157,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumRoomStatus>(); } },
                 { "status_callback", n => { StatusCallback = n.GetStringValue(); } },
-                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Room_status_callback_method>(); } },
+                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomStatusCallbackMethod>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumRoomType>(); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
                 { "unused_room_timeout", n => { UnusedRoomTimeout = n.GetIntValue(); } },
@@ -177,7 +181,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("enable_turn", EnableTurn);
             writer.WriteDateTimeOffsetValue("end_time", EndTime);
             writer.WriteBoolValue("large_room", LargeRoom);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Room_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinks>("links", Links);
             writer.WriteIntValue("max_concurrent_published_tracks", MaxConcurrentPublishedTracks);
             writer.WriteIntValue("max_participant_duration", MaxParticipantDuration);
             writer.WriteIntValue("max_participants", MaxParticipants);
@@ -186,7 +190,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumRoomStatus>("status", Status);
             writer.WriteStringValue("status_callback", StatusCallback);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Room_status_callback_method>("status_callback_method", StatusCallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomStatusCallbackMethod>("status_callback_method", StatusCallbackMethod);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumRoomType>("type", Type);
             writer.WriteStringValue("unique_name", UniqueName);
             writer.WriteIntValue("unused_room_timeout", UnusedRoomTimeout);

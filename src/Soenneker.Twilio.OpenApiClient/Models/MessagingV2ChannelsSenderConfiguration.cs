@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     public partial class MessagingV2ChannelsSenderConfiguration : IAdditionalDataHolder, IParsable
     {
         /// <summary>The account type for ISV Account Type Migration. Set to &apos;ISV&apos; or &apos;ISVSubAccount&apos; to configure, empty string to clear, or omit to preserve the existing value.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration_account_type? AccountType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfigurationAccountType? AccountType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The verification code.</summary>
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string VerificationCode { get; set; }
 #endif
         /// <summary>The verification method.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration_verification_method? VerificationMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfigurationVerificationMethod? VerificationMethod { get; set; }
         /// <summary>The SID of the Twilio Voice application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public MessagingV2ChannelsSenderConfiguration()
         {
             AdditionalData = new Dictionary<string, object>();
-            VerificationMethod = global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration_verification_method.Sms;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -69,9 +68,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_type", n => { AccountType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration_account_type>(); } },
+                { "account_type", n => { AccountType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfigurationAccountType>(); } },
                 { "verification_code", n => { VerificationCode = n.GetStringValue(); } },
-                { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration_verification_method>(); } },
+                { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfigurationVerificationMethod>(); } },
                 { "voice_application_sid", n => { VoiceApplicationSid = n.GetStringValue(); } },
                 { "waba_id", n => { WabaId = n.GetStringValue(); } },
             };
@@ -83,9 +82,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration_account_type>("account_type", AccountType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfigurationAccountType>("account_type", AccountType);
             writer.WriteStringValue("verification_code", VerificationCode);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration_verification_method>("verification_method", VerificationMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfigurationVerificationMethod>("verification_method", VerificationMethod);
             writer.WriteStringValue("voice_application_sid", VoiceApplicationSid);
             writer.WriteStringValue("waba_id", WabaId);
             writer.WriteAdditionalData(AdditionalData);

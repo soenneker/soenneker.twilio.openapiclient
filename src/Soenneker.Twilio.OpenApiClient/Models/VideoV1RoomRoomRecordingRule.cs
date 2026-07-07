@@ -29,10 +29,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A collection of Recording Rules that describe how to include or exclude matching tracks for recording</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomRecordingRule_rules>? Rules { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomRecordingRuleRulesItem>? Rules { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomRecordingRule_rules> Rules { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomRecordingRuleRulesItem> Rules { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomRecordingRule"/> and sets the default values.
@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "room_sid", n => { RoomSid = n.GetStringValue(); } },
-                { "rules", n => { Rules = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomRecordingRule_rules>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomRecordingRule_rules.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "rules", n => { Rules = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomRecordingRuleRulesItem>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomRecordingRuleRulesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("room_sid", RoomSid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomRecordingRule_rules>("rules", Rules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomRecordingRuleRulesItem>("rules", Rules);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

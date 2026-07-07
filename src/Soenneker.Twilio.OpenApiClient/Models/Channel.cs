@@ -9,35 +9,35 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "VOICE")]
         #pragma warning disable CS1591
-        VOICE,
+        Voice,
         #pragma warning restore CS1591
         [EnumMember(Value = "SMS")]
         #pragma warning disable CS1591
-        SMS,
+        Sms,
         #pragma warning restore CS1591
         [EnumMember(Value = "RCS")]
         #pragma warning disable CS1591
-        RCS,
+        Rcs,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMAIL")]
         #pragma warning disable CS1591
-        EMAIL,
+        Email,
         #pragma warning restore CS1591
         [EnumMember(Value = "WHATSAPP")]
         #pragma warning disable CS1591
-        WHATSAPP,
+        Whatsapp,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHAT")]
         #pragma warning disable CS1591
-        CHAT,
+        Chat,
         #pragma warning restore CS1591
         [EnumMember(Value = "API")]
         #pragma warning disable CS1591
-        API,
+        Api,
         #pragma warning restore CS1591
         [EnumMember(Value = "SYSTEM")]
         #pragma warning disable CS1591
-        SYSTEM,
+        System,
         #pragma warning restore CS1591
     }
 }

@@ -118,6 +118,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public FlexV1PluginConfigurationConfiguredPlugin()
         {
             AdditionalData = new Dictionary<string, object>();
+            Phase = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

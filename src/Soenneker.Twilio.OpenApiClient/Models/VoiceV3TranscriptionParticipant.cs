@@ -33,7 +33,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The role of this participant in the conversation.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant_type? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipantType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant"/> and sets the default values.
         /// </summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "audioChannelIndex", n => { AudioChannelIndex = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipantType>(); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("address", Address);
             writer.WriteIntValue("audioChannelIndex", AudioChannelIndex);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipantType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

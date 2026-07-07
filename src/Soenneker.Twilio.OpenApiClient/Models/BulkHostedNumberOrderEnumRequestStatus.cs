@@ -9,15 +9,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "QUEUED")]
         #pragma warning disable CS1591
-        QUEUED,
+        Queued,
         #pragma warning restore CS1591
         [EnumMember(Value = "IN_PROGRESS")]
         #pragma warning disable CS1591
-        IN_PROGRESS,
+        InProgress,
         #pragma warning restore CS1591
         [EnumMember(Value = "PROCESSED")]
         #pragma warning disable CS1591
-        PROCESSED,
+        Processed,
         #pragma warning restore CS1591
     }
 }

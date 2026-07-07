@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberCountryResponse_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberCountryResponseMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberCountryResponse_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberCountryResponseMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberCountryResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "countries", n => { Countries = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV1PhoneNumberPhoneNumberCountry>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV1PhoneNumberPhoneNumberCountry.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberCountryResponse_meta>(global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberCountryResponse_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberCountryResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberCountryResponseMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV1PhoneNumberPhoneNumberCountry>("countries", Countries);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberCountryResponse_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListPhoneNumberCountryResponseMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

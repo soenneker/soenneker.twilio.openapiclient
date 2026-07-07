@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <summary>
         /// Multiple events can be added to a profile in a single request.The maximum number of events per request is 1000 and they will be processed asynchronously.Any traits that are configured for identifier promotion will be set as an identifier value on the profile.Types of events:- `twilio-communication-event` - Twilio communication event, used for tracking multi-channel communications.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfileEvents202"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfileEvents202Response"/></returns>
         /// <param name="body">Request body for adding events to a specific profile. This request can contain multiple events.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -47,11 +47,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfileEvents202?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfileEvents202Response?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfileEvents202> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfileEvents202Response> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -64,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfileEvents202>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfileEvents202.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfileEvents202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateProfileEvents202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Multiple events can be added to a profile in a single request.The maximum number of events per request is 1000 and they will be processed asynchronously.Any traits that are configured for identifier promotion will be set as an identifier value on the profile.Types of events:- `twilio-communication-event` - Twilio communication event, used for tracking multi-channel communications.

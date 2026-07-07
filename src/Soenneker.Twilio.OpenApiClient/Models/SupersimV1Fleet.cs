@@ -33,7 +33,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateUpdated { get; set; }
         /// <summary>A string representing the HTTP method to use when making a request to `ip_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1Fleet_ip_commands_method? IpCommandsMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetIpCommandsMethod? IpCommandsMethod { get; set; }
         /// <summary>The URL that will receive a webhook when a Super SIM in the Fleet is used to send an IP Command from your device to a special IP address. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,7 +61,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Defines whether SIMs in the Fleet are capable of sending and receiving machine-to-machine SMS via Commands. Defaults to `false`.</summary>
         public bool? SmsCommandsEnabled { get; set; }
         /// <summary>A string representing the HTTP method to use when making a request to `sms_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1Fleet_sms_commands_method? SmsCommandsMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetSmsCommandsMethod? SmsCommandsMethod { get; set; }
         /// <summary>The URL that will receive a webhook when a Super SIM in the Fleet is used to send an SMS from your device to the SMS Commands number. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,6 +92,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public SupersimV1Fleet()
         {
             AdditionalData = new Dictionary<string, object>();
+            DataLimit = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -117,12 +118,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "data_metering", n => { DataMetering = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FleetEnumDataMetering>(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "ip_commands_method", n => { IpCommandsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1Fleet_ip_commands_method>(); } },
+                { "ip_commands_method", n => { IpCommandsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetIpCommandsMethod>(); } },
                 { "ip_commands_url", n => { IpCommandsUrl = n.GetStringValue(); } },
                 { "network_access_profile_sid", n => { NetworkAccessProfileSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sms_commands_enabled", n => { SmsCommandsEnabled = n.GetBoolValue(); } },
-                { "sms_commands_method", n => { SmsCommandsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1Fleet_sms_commands_method>(); } },
+                { "sms_commands_method", n => { SmsCommandsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetSmsCommandsMethod>(); } },
                 { "sms_commands_url", n => { SmsCommandsUrl = n.GetStringValue(); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -141,12 +142,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FleetEnumDataMetering>("data_metering", DataMetering);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1Fleet_ip_commands_method>("ip_commands_method", IpCommandsMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetIpCommandsMethod>("ip_commands_method", IpCommandsMethod);
             writer.WriteStringValue("ip_commands_url", IpCommandsUrl);
             writer.WriteStringValue("network_access_profile_sid", NetworkAccessProfileSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteBoolValue("sms_commands_enabled", SmsCommandsEnabled);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1Fleet_sms_commands_method>("sms_commands_method", SmsCommandsMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetSmsCommandsMethod>("sms_commands_method", SmsCommandsMethod);
             writer.WriteStringValue("sms_commands_url", SmsCommandsUrl);
             writer.WriteStringValue("unique_name", UniqueName);
             writer.WriteStringValue("url", Url);

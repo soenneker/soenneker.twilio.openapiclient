@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.LinkShortening.D
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("DomainSid", position);
+                urlTplParams.Add("domainSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.LinkShortening.Domains.Item.WithDomainSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

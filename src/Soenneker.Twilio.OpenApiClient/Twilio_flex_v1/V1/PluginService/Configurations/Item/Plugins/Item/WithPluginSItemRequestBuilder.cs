@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configurations.Item.Plugins.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_flex_v1\v1\PluginService\Configurations\{ConfigurationS-id}\Plugins\{PluginSid}
+    /// Builds and executes requests for operations under \twilio_flex_v1\v1\PluginService\Configurations\{configurationS-id}\Plugins\{pluginSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithPluginSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configu
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPluginSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/PluginService/Configurations/{ConfigurationS%2Did}/Plugins/{PluginSid}", pathParameters)
+        public WithPluginSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/PluginService/Configurations/{configurationS%2Did}/Plugins/{pluginSid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configu
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPluginSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/PluginService/Configurations/{ConfigurationS%2Did}/Plugins/{PluginSid}", rawUrl)
+        public WithPluginSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/PluginService/Configurations/{configurationS%2Did}/Plugins/{pluginSid}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.FlexV1PluginConfigurationConfiguredPlugin"/></returns>

@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// <summary>
         /// Create a new data mapping to connect an external data source to this Memory Store.For DATASET types, validates that all mapped Trait Groups and traits existand that dataset field data types match their respective mapped trait data types.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateDataMapping202"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateDataMapping202Response"/></returns>
         /// <param name="body">A data mapping connects external data sources to a Memory Store, enabling automaticingestion and mapping of data to profile traits.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -92,11 +92,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateDataMapping202?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.CreateDataMappingInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateDataMapping202Response?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.CreateDataMappingInput body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateDataMapping202> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.CreateDataMappingInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateDataMapping202Response> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.CreateDataMappingInput body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateDataMapping202>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateDataMapping202.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateDataMapping202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateDataMapping202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a list of data mappings configured for this Memory Store.
@@ -170,7 +170,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         {
             /// <summary>Either &apos;ASC&apos; or &apos;DESC&apos; to sort results ascending or descending respectively.</summary>
             [QueryParameter("orderBy")]
-            public global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores.Item.DataMappings.GetOrderByQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1OrderBy? OrderBy { get; set; }
             /// <summary>The maximum number of items to return per page, maximum of 100.</summary>
             [QueryParameter("pageSize")]
             public int? PageSize { get; set; }

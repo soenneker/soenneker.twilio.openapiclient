@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOn_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOn_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnLinks Links { get; set; }
 #endif
         /// <summary>How customers are charged for using this Add-on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "configuration_schema", n => { ConfigurationSchema = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOn_links>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOn_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnLinks>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnLinks.CreateFromDiscriminatorValue); } },
                 { "pricing_type", n => { PricingType = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -114,7 +114,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("configuration_schema", ConfigurationSchema);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOn_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnLinks>("links", Links);
             writer.WriteStringValue("pricing_type", PricingType);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);

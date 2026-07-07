@@ -87,7 +87,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string CustomerName { get; set; }
 #endif
         /// <summary>&quot;The type of customer account in the losing carrier. This should either be: &apos;Individual&apos; or &apos;Business&apos;.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation_customer_type? CustomerType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformationCustomerType? CustomerType { get; set; }
         /// <summary>The katakana_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -138,7 +138,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "authorized_representative_katakana", n => { AuthorizedRepresentativeKatakana = n.GetStringValue(); } },
                 { "building", n => { Building = n.GetStringValue(); } },
                 { "customer_name", n => { CustomerName = n.GetStringValue(); } },
-                { "customer_type", n => { CustomerType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation_customer_type>(); } },
+                { "customer_type", n => { CustomerType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformationCustomerType>(); } },
                 { "katakana_name", n => { KatakanaName = n.GetStringValue(); } },
                 { "sub_municipality", n => { SubMunicipality = n.GetStringValue(); } },
             };
@@ -159,7 +159,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("authorized_representative_katakana", AuthorizedRepresentativeKatakana);
             writer.WriteStringValue("building", Building);
             writer.WriteStringValue("customer_name", CustomerName);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation_customer_type>("customer_type", CustomerType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformationCustomerType>("customer_type", CustomerType);
             writer.WriteStringValue("katakana_name", KatakanaName);
             writer.WriteStringValue("sub_municipality", SubMunicipality);
             writer.WriteAdditionalData(AdditionalData);

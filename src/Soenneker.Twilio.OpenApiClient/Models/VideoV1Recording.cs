@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Recording_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Recording_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks Links { get; set; }
 #endif
         /// <summary>The URL of the media file associated with the recording when stored externally. See [External S3 Recordings](/docs/video/api/external-s3-recordings) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string StatusCallback { get; set; }
 #endif
         /// <summary>&quot;The HTTP method used to call `status_callback`. Can be: `POST` or `GET`, defaults to `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Recording_status_callback_method? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>The name that was given to the source track of the recording. If no name is given, the `source_sid` is used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -135,7 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
                 { "grouping_sids", n => { GroupingSids = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Recording_links>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Recording_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks.CreateFromDiscriminatorValue); } },
                 { "media_external_location", n => { MediaExternalLocation = n.GetStringValue(); } },
                 { "offset", n => { Offset = n.GetLongValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -143,7 +143,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "source_sid", n => { SourceSid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1RecordingEnumStatus>(); } },
                 { "status_callback", n => { StatusCallback = n.GetStringValue(); } },
-                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Recording_status_callback_method>(); } },
+                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingStatusCallbackMethod>(); } },
                 { "track_name", n => { TrackName = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -162,7 +162,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteIntValue("duration", Duration);
             writer.WriteObjectValue<UntypedNode>("grouping_sids", GroupingSids);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Recording_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks>("links", Links);
             writer.WriteStringValue("media_external_location", MediaExternalLocation);
             writer.WriteLongValue("offset", Offset);
             writer.WriteStringValue("sid", Sid);
@@ -170,7 +170,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("source_sid", SourceSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1RecordingEnumStatus>("status", Status);
             writer.WriteStringValue("status_callback", StatusCallback);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Recording_status_callback_method>("status_callback_method", StatusCallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingStatusCallbackMethod>("status_callback_method", StatusCallbackMethod);
             writer.WriteStringValue("track_name", TrackName);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumType>("type", Type);
             writer.WriteStringValue("url", Url);

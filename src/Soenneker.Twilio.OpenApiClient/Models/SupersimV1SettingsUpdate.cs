@@ -31,10 +31,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Array containing the different Settings Packages that will be applied to the SIM after the update completes. Each object within the array indicates the name and the version of the Settings Package that will be on the SIM if the update is successful.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SettingsUpdate_packages>? Packages { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SettingsUpdatePackagesItem>? Packages { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SettingsUpdate_packages> Packages { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SettingsUpdatePackagesItem> Packages { get; set; }
 #endif
         /// <summary>The unique identifier of this Settings Update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,7 +83,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "iccid", n => { Iccid = n.GetStringValue(); } },
-                { "packages", n => { Packages = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SettingsUpdate_packages>(global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SettingsUpdate_packages.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "packages", n => { Packages = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SettingsUpdatePackagesItem>(global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SettingsUpdatePackagesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sim_sid", n => { SimSid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SettingsUpdateEnumStatus>(); } },
@@ -100,7 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("iccid", Iccid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SettingsUpdate_packages>("packages", Packages);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SettingsUpdatePackagesItem>("packages", Packages);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("sim_sid", SimSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SettingsUpdateEnumStatus>("status", Status);

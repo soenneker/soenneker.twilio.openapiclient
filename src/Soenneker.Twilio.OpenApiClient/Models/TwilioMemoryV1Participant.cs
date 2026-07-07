@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Address { get; set; }
 #endif
         /// <summary>The channel on which the message originated</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Participant_channel? Channel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ParticipantChannel? Channel { get; set; }
         /// <summary>Participant identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,7 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetStringValue(); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Participant_channel>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ParticipantChannel>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "profileId", n => { ProfileId = n.GetStringValue(); } },
@@ -91,7 +91,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("address", Address);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Participant_channel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ParticipantChannel>("channel", Channel);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("profileId", ProfileId);

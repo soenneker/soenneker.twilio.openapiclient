@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The metadata of the chunk.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceKnowledgeChunk_metadata? Metadata { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceKnowledgeChunkMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceKnowledgeChunk_metadata Metadata { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceKnowledgeChunkMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceKnowledgeChunk"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceKnowledgeChunk_metadata>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceKnowledgeChunk_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceKnowledgeChunkMetadataProperty>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceKnowledgeChunkMetadataProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("content", Content);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceKnowledgeChunk_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceKnowledgeChunkMetadataProperty>("metadata", Metadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Human readable use case details (usecase, description and purpose) of Messaging Service Use Cases.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Usecase_usecases>? Usecases { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1UsecaseUsecasesItem>? Usecases { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Usecase_usecases> Usecases { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1UsecaseUsecasesItem> Usecases { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Usecase"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "usecases", n => { Usecases = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Usecase_usecases>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Usecase_usecases.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "usecases", n => { Usecases = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1UsecaseUsecasesItem>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1UsecaseUsecasesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1Usecase_usecases>("usecases", Usecases);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1UsecaseUsecasesItem>("usecases", Usecases);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

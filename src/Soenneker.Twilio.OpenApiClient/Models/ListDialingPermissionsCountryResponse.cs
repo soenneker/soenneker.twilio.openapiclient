@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsCountryResponse_meta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsCountryResponseMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsCountryResponse_meta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsCountryResponseMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsCountryResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "content", n => { Content = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountry>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountry.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsCountryResponse_meta>(global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsCountryResponse_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsCountryResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsCountryResponseMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountry>("content", Content);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsCountryResponse_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListDialingPermissionsCountryResponseMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

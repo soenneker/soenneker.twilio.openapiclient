@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Human readable name, code, description and post_approval_required (indicates whether or not post approval is required for this Use Case) of A2P Campaign Use Cases.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecase_us_app_to_person_usecases>? UsAppToPersonUsecases { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecaseUsAppToPersonUsecasesItem>? UsAppToPersonUsecases { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecase_us_app_to_person_usecases> UsAppToPersonUsecases { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecaseUsAppToPersonUsecasesItem> UsAppToPersonUsecases { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecase"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "us_app_to_person_usecases", n => { UsAppToPersonUsecases = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecase_us_app_to_person_usecases>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecase_us_app_to_person_usecases.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "us_app_to_person_usecases", n => { UsAppToPersonUsecases = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecaseUsAppToPersonUsecasesItem>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecaseUsAppToPersonUsecasesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecase_us_app_to_person_usecases>("us_app_to_person_usecases", UsAppToPersonUsecases);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecaseUsAppToPersonUsecasesItem>("us_app_to_person_usecases", UsAppToPersonUsecases);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

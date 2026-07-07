@@ -31,7 +31,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string ApiVersion { get; set; }
 #endif
         /// <summary>&quot;The HTTP method we use to call `callback_url`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageTrigger_callback_method? CallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageTriggerCallbackMethod? CallbackMethod { get; set; }
         /// <summary>The URL we call using the `callback_method` when the trigger fires.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -151,7 +151,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "api_version", n => { ApiVersion = n.GetStringValue(); } },
-                { "callback_method", n => { CallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageTrigger_callback_method>(); } },
+                { "callback_method", n => { CallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageTriggerCallbackMethod>(); } },
                 { "callback_url", n => { CallbackUrl = n.GetStringValue(); } },
                 { "current_value", n => { CurrentValue = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetStringValue(); } },
@@ -176,7 +176,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("api_version", ApiVersion);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageTrigger_callback_method>("callback_method", CallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageTriggerCallbackMethod>("callback_method", CallbackMethod);
             writer.WriteStringValue("callback_url", CallbackUrl);
             writer.WriteStringValue("current_value", CurrentValue);
             writer.WriteStringValue("date_created", DateCreated);

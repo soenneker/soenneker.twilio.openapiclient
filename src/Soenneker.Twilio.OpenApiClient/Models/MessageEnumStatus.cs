@@ -53,7 +53,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "partially_delivered")]
         #pragma warning disable CS1591
-        Partially_delivered,
+        PartiallyDelivered,
         #pragma warning restore CS1591
         [EnumMember(Value = "canceled")]
         #pragma warning disable CS1591

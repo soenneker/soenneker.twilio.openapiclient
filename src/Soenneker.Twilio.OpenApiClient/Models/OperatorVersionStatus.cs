@@ -9,19 +9,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "PREVIEW")]
         #pragma warning disable CS1591
-        PREVIEW,
+        Preview,
         #pragma warning restore CS1591
         [EnumMember(Value = "ACTIVE")]
         #pragma warning disable CS1591
-        ACTIVE,
+        Active,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEPRECATED")]
         #pragma warning disable CS1591
-        DEPRECATED,
+        Deprecated,
         #pragma warning restore CS1591
         [EnumMember(Value = "RETIRED")]
         #pragma warning disable CS1591
-        RETIRED,
+        Retired,
         #pragma warning restore CS1591
     }
 }

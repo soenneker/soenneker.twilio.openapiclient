@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configurations.Item.Plugins
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_flex_v1\v1\PluginService\Configurations\{ConfigurationS-id}\Plugins
+    /// Builds and executes requests for operations under \twilio_flex_v1\v1\PluginService\Configurations\{configurationS-id}\Plugins
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PluginsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configu
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("PluginSid", position);
+                urlTplParams.Add("pluginSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configurations.Item.Plugins.Item.WithPluginSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configu
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PluginsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/PluginService/Configurations/{ConfigurationS%2Did}/Plugins{?Page*,PageSize*,PageToken*}", pathParameters)
+        public PluginsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/PluginService/Configurations/{configurationS%2Did}/Plugins{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configu
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PluginsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/PluginService/Configurations/{ConfigurationS%2Did}/Plugins{?Page*,PageSize*,PageToken*}", rawUrl)
+        public PluginsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/PluginService/Configurations/{configurationS%2Did}/Plugins{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListConfiguredPluginResponse"/></returns>

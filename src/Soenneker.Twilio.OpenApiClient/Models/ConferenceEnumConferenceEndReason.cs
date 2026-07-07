@@ -10,23 +10,23 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "last_participant_left")]
         #pragma warning disable CS1591
-        Last_participant_left,
+        LastParticipantLeft,
         #pragma warning restore CS1591
         [EnumMember(Value = "conference_ended_via_api")]
         #pragma warning disable CS1591
-        Conference_ended_via_api,
+        ConferenceEndedViaApi,
         #pragma warning restore CS1591
         [EnumMember(Value = "participant_with_end_conference_on_exit_left")]
         #pragma warning disable CS1591
-        Participant_with_end_conference_on_exit_left,
+        ParticipantWithEndConferenceOnExitLeft,
         #pragma warning restore CS1591
         [EnumMember(Value = "last_participant_kicked")]
         #pragma warning disable CS1591
-        Last_participant_kicked,
+        LastParticipantKicked,
         #pragma warning restore CS1591
         [EnumMember(Value = "participant_with_end_conference_on_exit_kicked")]
         #pragma warning disable CS1591
-        Participant_with_end_conference_on_exit_kicked,
+        ParticipantWithEndConferenceOnExitKicked,
         #pragma warning restore CS1591
     }
 }

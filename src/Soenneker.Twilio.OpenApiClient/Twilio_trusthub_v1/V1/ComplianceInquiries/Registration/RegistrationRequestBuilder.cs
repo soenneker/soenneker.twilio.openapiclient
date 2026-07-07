@@ -29,7 +29,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiri
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("RegistrationId", position);
+                urlTplParams.Add("registrationId", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiries.Registration.Item.WithRegistrationItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

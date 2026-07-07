@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The details of the policy based on the type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy_policy_details? PolicyDetails { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicyPolicyDetailsProperty? PolicyDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy_policy_details PolicyDetails { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicyPolicyDetailsProperty PolicyDetails { get; set; }
 #endif
         /// <summary>The type of the policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,7 +105,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "policy_details", n => { PolicyDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy_policy_details>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy_policy_details.CreateFromDiscriminatorValue); } },
+                { "policy_details", n => { PolicyDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicyPolicyDetailsProperty>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicyPolicyDetailsProperty.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "user_sid", n => { UserSid = n.GetStringValue(); } },
             };
@@ -123,7 +123,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicy_policy_details>("policy_details", PolicyDetails);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServicePolicyPolicyDetailsProperty>("policy_details", PolicyDetails);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("user_sid", UserSid);
             writer.WriteAdditionalData(AdditionalData);

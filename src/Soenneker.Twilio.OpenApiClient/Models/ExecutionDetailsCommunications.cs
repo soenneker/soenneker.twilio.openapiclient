@@ -15,21 +15,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The first property</summary>
+        /// <summary>Communication `id` from the attached Conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications_first? First { get; set; }
+        public string? First { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications_first First { get; set; }
+        public string First { get; set; }
 #endif
-        /// <summary>The last property</summary>
+        /// <summary>Communication `id` from the attached Conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications_last? Last { get; set; }
+        public string? Last { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications_last Last { get; set; }
+        public string Last { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "first", n => { First = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications_first>(global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications_first.CreateFromDiscriminatorValue); } },
-                { "last", n => { Last = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications_last>(global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications_last.CreateFromDiscriminatorValue); } },
+                { "first", n => { First = n.GetStringValue(); } },
+                { "last", n => { Last = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications_first>("first", First);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications_last>("last", Last);
+            writer.WriteStringValue("first", First);
+            writer.WriteStringValue("last", Last);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

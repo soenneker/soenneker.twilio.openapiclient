@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are  `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_capabilities? Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberCapabilities? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_capabilities Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberCapabilities Capabilities { get; set; }
 #endif
         /// <summary>The date and time in GMT that the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -135,7 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string SmsApplicationSid { get; set; }
 #endif
         /// <summary>&quot;The HTTP method we use to call `sms_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_sms_fallback_method? SmsFallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberSmsFallbackMethod? SmsFallbackMethod { get; set; }
         /// <summary>The URL that we call when an error occurs while retrieving or executing the TwiML from `sms_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -145,7 +145,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string SmsFallbackUrl { get; set; }
 #endif
         /// <summary>&quot;The HTTP method we use to call `sms_url`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_sms_method? SmsMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberSmsMethod? SmsMethod { get; set; }
         /// <summary>The URL we call when the phone number receives an incoming SMS message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -171,7 +171,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string StatusCallback { get; set; }
 #endif
         /// <summary>&quot;The HTTP method we use to call `status_callback`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_status_callback_method? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>The SID of the Trunk that handles calls to the phone number. If a `trunk_sid` is present, we ignore all of the voice urls and voice applications and use those set on the Trunk. Setting a `trunk_sid` will automatically delete your `voice_application_sid` and vice versa.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -207,7 +207,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;Whether we look up the caller&apos;s caller-ID name from the CNAM database ($0.01 per look up). Can be: `true` or `false`.&quot;</summary>
         public bool? VoiceCallerIdLookup { get; set; }
         /// <summary>&quot;The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_voice_fallback_method? VoiceFallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>The URL that we call when an error occurs retrieving or executing the TwiML requested by `url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -217,7 +217,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string VoiceFallbackUrl { get; set; }
 #endif
         /// <summary>&quot;The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_voice_method? VoiceMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberVoiceMethod? VoiceMethod { get; set; }
         /// <summary>The voice_receive_mode property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.IncomingPhoneNumberEnumVoiceReceiveMode? VoiceReceiveMode { get; set; }
         /// <summary>The URL we call when the phone number receives a call. The `voice_url` will not be used if a `voice_application_sid` or a `trunk_sid` is set.</summary>
@@ -259,7 +259,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "api_version", n => { ApiVersion = n.GetStringValue(); } },
                 { "beta", n => { Beta = n.GetBoolValue(); } },
                 { "bundle_sid", n => { BundleSid = n.GetStringValue(); } },
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_capabilities>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_capabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberCapabilities>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberCapabilities.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetStringValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetStringValue(); } },
                 { "emergency_address_sid", n => { EmergencyAddressSid = n.GetStringValue(); } },
@@ -271,21 +271,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sms_application_sid", n => { SmsApplicationSid = n.GetStringValue(); } },
-                { "sms_fallback_method", n => { SmsFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_sms_fallback_method>(); } },
+                { "sms_fallback_method", n => { SmsFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberSmsFallbackMethod>(); } },
                 { "sms_fallback_url", n => { SmsFallbackUrl = n.GetStringValue(); } },
-                { "sms_method", n => { SmsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_sms_method>(); } },
+                { "sms_method", n => { SmsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberSmsMethod>(); } },
                 { "sms_url", n => { SmsUrl = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "status_callback", n => { StatusCallback = n.GetStringValue(); } },
-                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_status_callback_method>(); } },
+                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberStatusCallbackMethod>(); } },
                 { "trunk_sid", n => { TrunkSid = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "uri", n => { Uri = n.GetStringValue(); } },
                 { "voice_application_sid", n => { VoiceApplicationSid = n.GetStringValue(); } },
                 { "voice_caller_id_lookup", n => { VoiceCallerIdLookup = n.GetBoolValue(); } },
-                { "voice_fallback_method", n => { VoiceFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_voice_fallback_method>(); } },
+                { "voice_fallback_method", n => { VoiceFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberVoiceFallbackMethod>(); } },
                 { "voice_fallback_url", n => { VoiceFallbackUrl = n.GetStringValue(); } },
-                { "voice_method", n => { VoiceMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_voice_method>(); } },
+                { "voice_method", n => { VoiceMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberVoiceMethod>(); } },
                 { "voice_receive_mode", n => { VoiceReceiveMode = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IncomingPhoneNumberEnumVoiceReceiveMode>(); } },
                 { "voice_url", n => { VoiceUrl = n.GetStringValue(); } },
             };
@@ -303,7 +303,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("api_version", ApiVersion);
             writer.WriteBoolValue("beta", Beta);
             writer.WriteStringValue("bundle_sid", BundleSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_capabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberCapabilities>("capabilities", Capabilities);
             writer.WriteStringValue("date_created", DateCreated);
             writer.WriteStringValue("date_updated", DateUpdated);
             writer.WriteStringValue("emergency_address_sid", EmergencyAddressSid);
@@ -315,21 +315,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("phone_number", PhoneNumber);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("sms_application_sid", SmsApplicationSid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_sms_fallback_method>("sms_fallback_method", SmsFallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberSmsFallbackMethod>("sms_fallback_method", SmsFallbackMethod);
             writer.WriteStringValue("sms_fallback_url", SmsFallbackUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_sms_method>("sms_method", SmsMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberSmsMethod>("sms_method", SmsMethod);
             writer.WriteStringValue("sms_url", SmsUrl);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("status_callback", StatusCallback);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_status_callback_method>("status_callback_method", StatusCallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberStatusCallbackMethod>("status_callback_method", StatusCallbackMethod);
             writer.WriteStringValue("trunk_sid", TrunkSid);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("uri", Uri);
             writer.WriteStringValue("voice_application_sid", VoiceApplicationSid);
             writer.WriteBoolValue("voice_caller_id_lookup", VoiceCallerIdLookup);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_voice_fallback_method>("voice_fallback_method", VoiceFallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberVoiceFallbackMethod>("voice_fallback_method", VoiceFallbackMethod);
             writer.WriteStringValue("voice_fallback_url", VoiceFallbackUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumber_voice_method>("voice_method", VoiceMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberVoiceMethod>("voice_method", VoiceMethod);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IncomingPhoneNumberEnumVoiceReceiveMode>("voice_receive_mode", VoiceReceiveMode);
             writer.WriteStringValue("voice_url", VoiceUrl);
             writer.WriteAdditionalData(AdditionalData);

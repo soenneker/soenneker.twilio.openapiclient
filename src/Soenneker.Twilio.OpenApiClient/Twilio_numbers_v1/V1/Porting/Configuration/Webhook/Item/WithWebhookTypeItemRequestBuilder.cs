@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Configuration.Webhook.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_numbers_v1\v1\Porting\Configuration\Webhook\{WebhookType}
+    /// Builds and executes requests for operations under \twilio_numbers_v1\v1\Porting\Configuration\Webhook\{webhookType}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithWebhookTypeItemRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Configurat
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithWebhookTypeItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/Porting/Configuration/Webhook/{WebhookType}", pathParameters)
+        public WithWebhookTypeItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/Porting/Configuration/Webhook/{webhookType}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Configurat
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithWebhookTypeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/Porting/Configuration/Webhook/{WebhookType}", rawUrl)
+        public WithWebhookTypeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v1/v1/Porting/Configuration/Webhook/{webhookType}", rawUrl)
         {
         }
         /// <summary>

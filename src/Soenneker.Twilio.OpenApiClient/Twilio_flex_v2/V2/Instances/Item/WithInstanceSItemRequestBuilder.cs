@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v2.V2.Instances.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_flex_v2\v2\Instances\{InstanceSid}
+    /// Builds and executes requests for operations under \twilio_flex_v2\v2\Instances\{instanceSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithInstanceSItemRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v2.V2.Instances.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithInstanceSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v2/v2/Instances/{InstanceSid}", pathParameters)
+        public WithInstanceSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v2/v2/Instances/{instanceSid}", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v2.V2.Instances.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithInstanceSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v2/v2/Instances/{InstanceSid}", rawUrl)
+        public WithInstanceSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v2/v2/Instances/{instanceSid}", rawUrl)
         {
         }
     }

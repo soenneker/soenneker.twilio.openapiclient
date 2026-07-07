@@ -57,10 +57,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of resources related to the Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1Service_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1Service_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceLinks Links { get; set; }
 #endif
         /// <summary>&quot;The preference for Proxy Number selection in the Service instance. Can be: `prefer-sticky` or `avoid-sticky`. `prefer-sticky` means that we will try and select the same Proxy Number for a given participant if they have previous [Sessions](https://www.twilio.com/docs/proxy/api/session), but we will not fail if that Proxy Number cannot be used.  `avoid-sticky` means that we will try to use different Proxy Numbers as long as that is possible within a given pool rather than try and use a previously assigned number.&quot;</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumNumberSelectionBehavior? NumberSelectionBehavior { get; set; }
@@ -102,6 +102,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public ProxyV1Service()
         {
             AdditionalData = new Dictionary<string, object>();
+            DefaultTtl = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -129,7 +130,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "default_ttl", n => { DefaultTtl = n.GetIntValue(); } },
                 { "geo_match_level", n => { GeoMatchLevel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumGeoMatchLevel>(); } },
                 { "intercept_callback_url", n => { InterceptCallbackUrl = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1Service_links>(global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1Service_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceLinks.CreateFromDiscriminatorValue); } },
                 { "number_selection_behavior", n => { NumberSelectionBehavior = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumNumberSelectionBehavior>(); } },
                 { "out_of_session_callback_url", n => { OutOfSessionCallbackUrl = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -152,7 +153,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("default_ttl", DefaultTtl);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumGeoMatchLevel>("geo_match_level", GeoMatchLevel);
             writer.WriteStringValue("intercept_callback_url", InterceptCallbackUrl);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1Service_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceLinks>("links", Links);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumNumberSelectionBehavior>("number_selection_behavior", NumberSelectionBehavior);
             writer.WriteStringValue("out_of_session_callback_url", OutOfSessionCallbackUrl);
             writer.WriteStringValue("sid", Sid);

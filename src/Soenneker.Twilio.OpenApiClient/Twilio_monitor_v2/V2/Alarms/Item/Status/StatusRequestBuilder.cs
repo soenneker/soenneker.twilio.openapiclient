@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.Item.Status
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_monitor_v2\v2\Alarms\{Sid}\status
+    /// Builds and executes requests for operations under \twilio_monitor_v2\v2\Alarms\{sid}\status
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StatusRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.Item.Status
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StatusRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_monitor_v2/v2/Alarms/{Sid}/status", pathParameters)
+        public StatusRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_monitor_v2/v2/Alarms/{sid}/status", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.Item.Status
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StatusRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_monitor_v2/v2/Alarms/{Sid}/status", rawUrl)
+        public StatusRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_monitor_v2/v2/Alarms/{sid}/status", rawUrl)
         {
         }
         /// <summary>

@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The list of [InboundCallPrice](https://www.twilio.com/docs/voice/pricing#inbound-call-price) records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstance_inbound_call_prices>? InboundCallPrices { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstanceInboundCallPricesItem>? InboundCallPrices { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstance_inbound_call_prices> InboundCallPrices { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstanceInboundCallPricesItem> InboundCallPrices { get; set; }
 #endif
         /// <summary>The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The list of [OutboundPrefixPriceWithOrigin](https://www.twilio.com/docs/voice/pricing#outbound-prefix-price-with-origin) records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstance_outbound_prefix_prices>? OutboundPrefixPrices { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstanceOutboundPrefixPricesItem>? OutboundPrefixPrices { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstance_outbound_prefix_prices> OutboundPrefixPrices { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstanceOutboundPrefixPricesItem> OutboundPrefixPrices { get; set; }
 #endif
         /// <summary>The currency in which prices are measured, specified in [ISO 4127](https://www.iso.org/iso/home/standards/currency_codes.htm) format (e.g. `usd`, `eur`, `jpy`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,9 +88,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "country", n => { Country = n.GetStringValue(); } },
-                { "inbound_call_prices", n => { InboundCallPrices = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstance_inbound_call_prices>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstance_inbound_call_prices.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "inbound_call_prices", n => { InboundCallPrices = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstanceInboundCallPricesItem>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstanceInboundCallPricesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "iso_country", n => { IsoCountry = n.GetStringValue(); } },
-                { "outbound_prefix_prices", n => { OutboundPrefixPrices = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstance_outbound_prefix_prices>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstance_outbound_prefix_prices.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "outbound_prefix_prices", n => { OutboundPrefixPrices = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstanceOutboundPrefixPricesItem>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstanceOutboundPrefixPricesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "price_unit", n => { PriceUnit = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -103,9 +103,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("country", Country);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstance_inbound_call_prices>("inbound_call_prices", InboundCallPrices);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstanceInboundCallPricesItem>("inbound_call_prices", InboundCallPrices);
             writer.WriteStringValue("iso_country", IsoCountry);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstance_outbound_prefix_prices>("outbound_prefix_prices", OutboundPrefixPrices);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceCountryInstanceOutboundPrefixPricesItem>("outbound_prefix_prices", OutboundPrefixPrices);
             writer.WriteStringValue("price_unit", PriceUnit);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

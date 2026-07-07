@@ -30,6 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public VoiceV1DialingPermissionsDialingPermissionsCountryBulkUpdate()
         {
             AdditionalData = new Dictionary<string, object>();
+            UpdateCount = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

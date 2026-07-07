@@ -54,18 +54,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;Required for `JSON` output only. this will be set to a JSON Schema object describing the properties &amp; data types of the response. Please see https://platform.openai.com/docs/guides/structured-outputs#supported-schemas Will include the following keywords:- `type` : Must be set to `object`- `properties`:  An object containing the property names and their data types you would like the LLM to returnAdditional details on JSON output formatting:- The root level `type` of a JSON schema must be set to `object`- The following property data types are supported : `string`, `number`, `boolean`, `integer`, `object`, `array`, `anyOf`- Definitions with `$defs` / `$ref` are supported- Max 100 object properties and 10 levels of nesting are supported- Max 1000 enum values across all enum properties are supported- Notable JSON Schema keywords not supported include:  - For `strings`: `minLength`, `maxLength`  - For `objects`: `patternProperties`, `unevaluatedProperties`, `propertyNames`, `minProperties`, `maxProperties`  - For `arrays`: `unevaluatedItems`, `contains`, `minContains`, `maxContains`, `uniqueItems`- Structured Operator Results will be returned in the same order as the ordering of keys in the schema- In the event an Operator execution request is refused for safety reasons the Operator Result API response will include a new field called `refusal` to indicate that the LLM refused to fulfill the request- Twilio will automatically set `additionalProperties` to false and specify all provided fields as required (constraints of Structured Outputs). You don&apos;t need to pass these fields as part of your JSON schema. Twilio will automatically overwrite any user-provided values for these fields.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperator_outputSchema? OutputSchema { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperatorOutputSchema? OutputSchema { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperator_outputSchema OutputSchema { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperatorOutputSchema OutputSchema { get; set; }
 #endif
         /// <summary>Defines the schema of the parameters that are provided when running the operator, including required and optional values that determine the operator&apos;s behavior.The values of the parameters themselves are passed in by the attached Intelligence Configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperator_parameters? Parameters { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperatorParameters? Parameters { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperator_parameters Parameters { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperatorParameters Parameters { get; set; }
 #endif
         /// <summary>&quot;The natural language instructions used by the operator to analyze the conversation.Within the prompt, users can reference parameters using the `{{parameters.[param_name]}}` syntax. Parameter values are provided to the Operator by the Intelligence Configuration Rule at runtime.**Note**: Prompts will only be exposed for Custom Operators (`author` = `SELF`). Twilio-authored Operators (`author` = `TWILIO`) will have their prompts omitted from the API.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -116,8 +116,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "outputFormat", n => { OutputFormat = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorOutputFormat>(); } },
-                { "outputSchema", n => { OutputSchema = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperator_outputSchema>(global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperator_outputSchema.CreateFromDiscriminatorValue); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperator_parameters>(global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperator_parameters.CreateFromDiscriminatorValue); } },
+                { "outputSchema", n => { OutputSchema = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperatorOutputSchema>(global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperatorOutputSchema.CreateFromDiscriminatorValue); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperatorParameters>(global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperatorParameters.CreateFromDiscriminatorValue); } },
                 { "prompt", n => { Prompt = n.GetStringValue(); } },
                 { "trainingExamples", n => { TrainingExamples = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.OperatorTrainingExample>(global::Soenneker.Twilio.OpenApiClient.Models.OperatorTrainingExample.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "version", n => { Version = n.GetIntValue(); } },
@@ -135,8 +135,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("displayName", DisplayName);
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorOutputFormat>("outputFormat", OutputFormat);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperator_outputSchema>("outputSchema", OutputSchema);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperator_parameters>("parameters", Parameters);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperatorOutputSchema>("outputSchema", OutputSchema);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LanguageOperatorParameters>("parameters", Parameters);
             writer.WriteStringValue("prompt", Prompt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.OperatorTrainingExample>("trainingExamples", TrainingExamples);
             writer.WriteAdditionalData(AdditionalData);

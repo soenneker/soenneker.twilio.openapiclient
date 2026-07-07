@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives.Item.Calls.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_voice_v1\v1\Archives\{Date}\Calls\{Sid}
+    /// Builds and executes requests for operations under \twilio_voice_v1\v1\Archives\{date}\Calls\{sid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithSItemRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives.Item.Calls.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v1/v1/Archives/{Date}/Calls/{Sid}", pathParameters)
+        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v1/v1/Archives/{date}/Calls/{sid}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives.Item.Calls.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v1/v1/Archives/{Date}/Calls/{Sid}", rawUrl)
+        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v1/v1/Archives/{date}/Calls/{sid}", rawUrl)
         {
         }
         /// <summary>

@@ -23,10 +23,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The number of current Workers by Activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersRealTimeStatistics_activity_statistics>? ActivityStatistics { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersRealTimeStatisticsActivityStatisticsItem>? ActivityStatistics { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersRealTimeStatistics_activity_statistics> ActivityStatistics { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersRealTimeStatisticsActivityStatisticsItem> ActivityStatistics { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -54,6 +54,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public TaskrouterV1WorkspaceWorkerWorkersRealTimeStatistics()
         {
             AdditionalData = new Dictionary<string, object>();
+            TotalWorkers = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -74,7 +75,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "activity_statistics", n => { ActivityStatistics = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersRealTimeStatistics_activity_statistics>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersRealTimeStatistics_activity_statistics.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "activity_statistics", n => { ActivityStatistics = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersRealTimeStatisticsActivityStatisticsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersRealTimeStatisticsActivityStatisticsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total_workers", n => { TotalWorkers = n.GetIntValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "workspace_sid", n => { WorkspaceSid = n.GetStringValue(); } },
@@ -88,7 +89,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersRealTimeStatistics_activity_statistics>("activity_statistics", ActivityStatistics);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersRealTimeStatisticsActivityStatisticsItem>("activity_statistics", ActivityStatistics);
             writer.WriteIntValue("total_workers", TotalWorkers);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("workspace_sid", WorkspaceSid);

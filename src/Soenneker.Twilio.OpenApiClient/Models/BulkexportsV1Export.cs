@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains a dictionary of URL links to nested resources of this Export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1Export_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1Export_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportLinks Links { get; set; }
 #endif
         /// <summary>The type of communication – Messages, Calls, Conferences, and Participants</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1Export_links>(global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1Export_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportLinks>(global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportLinks.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1Export_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.BulkexportsV1ExportLinks>("links", Links);
             writer.WriteStringValue("resource_type", ResourceType);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

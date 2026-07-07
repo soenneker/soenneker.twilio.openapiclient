@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Sims.Item.Usage
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_preview\wireless\Sims\{S-id}\Usage
+    /// Builds and executes requests for operations under \twilio_preview\wireless\Sims\{s-id}\Usage
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UsageRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Sims.Item.Usage
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsageRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_preview/wireless/Sims/{S%2Did}/Usage{?End*,Start*}", pathParameters)
+        public UsageRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_preview/wireless/Sims/{s%2Did}/Usage{?End*,Start*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Sims.Item.Usage
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsageRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_preview/wireless/Sims/{S%2Did}/Usage{?End*,Start*}", rawUrl)
+        public UsageRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_preview/wireless/Sims/{s%2Did}/Usage{?End*,Start*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsage"/></returns>

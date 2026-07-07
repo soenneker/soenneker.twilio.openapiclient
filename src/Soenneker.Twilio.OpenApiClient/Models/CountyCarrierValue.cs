@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The carriers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue_carriers>? Carriers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValueCarriersItem>? Carriers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue_carriers> Carriers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValueCarriersItem> Carriers { get; set; }
 #endif
         /// <summary>The country property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "carriers", n => { Carriers = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue_carriers>(global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue_carriers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "carriers", n => { Carriers = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValueCarriersItem>(global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValueCarriersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue_carriers>("carriers", Carriers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValueCarriersItem>("carriers", Carriers);
             writer.WriteStringValue("country", Country);
             writer.WriteAdditionalData(AdditionalData);
         }

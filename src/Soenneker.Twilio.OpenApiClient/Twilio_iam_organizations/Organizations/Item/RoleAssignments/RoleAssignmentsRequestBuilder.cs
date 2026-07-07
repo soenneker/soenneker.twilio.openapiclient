@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.Item.RoleAssignments
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_iam_organizations\Organizations\{OrganizationSid}\RoleAssignments
+    /// Builds and executes requests for operations under \twilio_iam_organizations\Organizations\{organizationSid}\RoleAssignments
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RoleAssignmentsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("RoleAssignmentSid", position);
+                urlTplParams.Add("roleAssignmentSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.Item.RoleAssignments.Item.WithRoleAssignmentSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RoleAssignmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/RoleAssignments{?Identity*,PageSize*,PageToken*,ResourceId*,ResourceType*,Scope*}", pathParameters)
+        public RoleAssignmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{organizationSid}/RoleAssignments{?Identity*,PageSize*,PageToken*,ResourceId*,ResourceType*,Scope*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RoleAssignmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}/RoleAssignments{?Identity*,PageSize*,PageToken*,ResourceId*,ResourceType*,Scope*}", rawUrl)
+        public RoleAssignmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{organizationSid}/RoleAssignments{?Identity*,PageSize*,PageToken*,ResourceId*,ResourceType*,Scope*}", rawUrl)
         {
         }
         /// <summary>
@@ -52,8 +52,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListRoleAssignments400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListRoleAssignments403">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListRoleAssignments400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListRoleAssignments403Response">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.Item.RoleAssignments.RoleAssignmentsRequestBuilder.RoleAssignmentsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -66,8 +66,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListRoleAssignments400.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListRoleAssignments403.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListRoleAssignments400Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListRoleAssignments403Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

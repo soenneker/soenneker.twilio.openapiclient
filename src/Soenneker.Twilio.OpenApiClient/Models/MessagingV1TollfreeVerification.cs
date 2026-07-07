@@ -275,10 +275,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of rejection reasons and codes describing why a Tollfree Verification has been rejected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerification_rejection_reasons>? RejectionReasons { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationRejectionReasonsItem>? RejectionReasons { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerification_rejection_reasons> RejectionReasons { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationRejectionReasonsItem> RejectionReasons { get; set; }
 #endif
         /// <summary>The URLs of the documents associated with the Tollfree Verification resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -341,10 +341,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The category of the use case for the Tollfree Number. List as many as are applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.Verifications?>? UseCaseCategories { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TollfreeVerificationEnumUseCaseCategoriesItem?>? UseCaseCategories { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.Verifications?> UseCaseCategories { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TollfreeVerificationEnumUseCaseCategoriesItem?> UseCaseCategories { get; set; }
 #endif
         /// <summary>Use this to further explain how messaging is used by the business or organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -430,7 +430,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "production_message_sample", n => { ProductionMessageSample = n.GetStringValue(); } },
                 { "regulated_item_sid", n => { RegulatedItemSid = n.GetStringValue(); } },
                 { "rejection_reason", n => { RejectionReason = n.GetStringValue(); } },
-                { "rejection_reasons", n => { RejectionReasons = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerification_rejection_reasons>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerification_rejection_reasons.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "rejection_reasons", n => { RejectionReasons = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationRejectionReasonsItem>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationRejectionReasonsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resource_links", n => { ResourceLinks = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TollfreeVerificationEnumStatus>(); } },
@@ -439,7 +439,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "tollfree_phone_number_sid", n => { TollfreePhoneNumberSid = n.GetStringValue(); } },
                 { "trust_product_sid", n => { TrustProductSid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "use_case_categories", n => { UseCaseCategories = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.Verifications>()?.AsList(); } },
+                { "use_case_categories", n => { UseCaseCategories = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.TollfreeVerificationEnumUseCaseCategoriesItem>()?.AsList(); } },
                 { "use_case_summary", n => { UseCaseSummary = n.GetStringValue(); } },
                 { "vetting_id", n => { VettingId = n.GetStringValue(); } },
                 { "vetting_id_expiration", n => { VettingIdExpiration = n.GetDateTimeOffsetValue(); } },
@@ -492,7 +492,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("production_message_sample", ProductionMessageSample);
             writer.WriteStringValue("regulated_item_sid", RegulatedItemSid);
             writer.WriteStringValue("rejection_reason", RejectionReason);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerification_rejection_reasons>("rejection_reasons", RejectionReasons);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationRejectionReasonsItem>("rejection_reasons", RejectionReasons);
             writer.WriteObjectValue<UntypedNode>("resource_links", ResourceLinks);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TollfreeVerificationEnumStatus>("status", Status);
@@ -501,7 +501,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("tollfree_phone_number_sid", TollfreePhoneNumberSid);
             writer.WriteStringValue("trust_product_sid", TrustProductSid);
             writer.WriteStringValue("url", Url);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.Verifications>("use_case_categories", UseCaseCategories);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.TollfreeVerificationEnumUseCaseCategoriesItem>("use_case_categories", UseCaseCategories);
             writer.WriteStringValue("use_case_summary", UseCaseSummary);
             writer.WriteStringValue("vetting_id", VettingId);
             writer.WriteDateTimeOffsetValue("vetting_id_expiration", VettingIdExpiration);

@@ -57,10 +57,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains absolute API resource URLs to access the webhook and default service configurations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Configuration_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Configuration_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinks Links { get; set; }
 #endif
         /// <summary>An absolute API resource URL for this global configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "default_closed_timer", n => { DefaultClosedTimer = n.GetStringValue(); } },
                 { "default_inactive_timer", n => { DefaultInactiveTimer = n.GetStringValue(); } },
                 { "default_messaging_service_sid", n => { DefaultMessagingServiceSid = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Configuration_links>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Configuration_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinks.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -116,7 +116,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("default_closed_timer", DefaultClosedTimer);
             writer.WriteStringValue("default_inactive_timer", DefaultInactiveTimer);
             writer.WriteStringValue("default_messaging_service_sid", DefaultMessagingServiceSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Configuration_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinks>("links", Links);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

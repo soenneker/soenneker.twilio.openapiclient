@@ -45,10 +45,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of links related to the Content resource, such as approval_fetch and approval_create</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentLinks Links { get; set; }
 #endif
         /// <summary>The unique string that that we created to identify the Content resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -61,10 +61,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The [Content types](https://www.twilio.com/docs/content/content-types-overview) (e.g. twilio/text) for this Content resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_types? Types { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentTypes? Types { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_types Types { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentTypes Types { get; set; }
 #endif
         /// <summary>The URL of the resource, relative to `https://content.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -77,10 +77,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;Defines the default placeholder values for variables included in the Content resource. e.g. {\&quot;1\&quot;: \&quot;Customer_Name\&quot;}.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_variables? Variables { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentVariables? Variables { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_variables Variables { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentVariables Variables { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content"/> and sets the default values.
@@ -112,11 +112,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_links>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentLinks.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "types", n => { Types = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_types>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_types.CreateFromDiscriminatorValue); } },
+                { "types", n => { Types = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentTypes>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentTypes.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "variables", n => { Variables = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_variables>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_variables.CreateFromDiscriminatorValue); } },
+                { "variables", n => { Variables = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentVariables>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentVariables.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -131,11 +131,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("language", Language);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentLinks>("links", Links);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_types>("types", Types);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentTypes>("types", Types);
             writer.WriteStringValue("url", Url);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1Content_variables>("variables", Variables);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentVariables>("variables", Variables);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

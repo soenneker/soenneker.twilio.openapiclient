@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1PluginConfiguration_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1PluginConfigurationLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1PluginConfiguration_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1PluginConfigurationLinks Links { get; set; }
 #endif
         /// <summary>The name of this Flex Plugin Configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,7 +95,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "archived", n => { Archived = n.GetBoolValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1PluginConfiguration_links>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1PluginConfiguration_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1PluginConfigurationLinks>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1PluginConfigurationLinks.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -112,7 +112,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("archived", Archived);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1PluginConfiguration_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1PluginConfigurationLinks>("links", Links);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);

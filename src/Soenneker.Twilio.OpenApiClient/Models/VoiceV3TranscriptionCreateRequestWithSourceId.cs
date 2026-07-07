@@ -15,7 +15,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Discriminator indicating the input source type</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceId_inputSource? InputSource { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceIdInputSource? InputSource { get; set; }
         /// <summary>Array of participants in the conversation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inputSource", n => { InputSource = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceId_inputSource>(); } },
+                { "inputSource", n => { InputSource = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceIdInputSource>(); } },
                 { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "sourceId", n => { SourceId = n.GetStringValue(); } },
                 { "transcriptionConfigurationId", n => { TranscriptionConfigurationId = n.GetStringValue(); } },
@@ -78,7 +78,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceId_inputSource>("inputSource", InputSource);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceIdInputSource>("inputSource", InputSource);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>("participants", Participants);
             writer.WriteStringValue("sourceId", SourceId);
             writer.WriteStringValue("transcriptionConfigurationId", TranscriptionConfigurationId);

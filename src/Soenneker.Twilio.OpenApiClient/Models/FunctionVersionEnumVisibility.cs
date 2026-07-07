@@ -9,15 +9,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "public")]
         #pragma warning disable CS1591
-        Public,
+        PublicValue,
         #pragma warning restore CS1591
         [EnumMember(Value = "private")]
         #pragma warning disable CS1591
-        Private,
+        PrivateValue,
         #pragma warning restore CS1591
         [EnumMember(Value = "protected")]
         #pragma warning disable CS1591
-        Protected,
+        ProtectedValue,
         #pragma warning restore CS1591
     }
 }

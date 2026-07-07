@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An array representing the ephemeral credentials and the STUN and TURN server URIs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountToken_ice_servers>? IceServers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountTokenIceServersItem>? IceServers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountToken_ice_servers> IceServers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountTokenIceServersItem> IceServers { get; set; }
 #endif
         /// <summary>The temporary password that the username will use when authenticating with Twilio.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetStringValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetStringValue(); } },
-                { "ice_servers", n => { IceServers = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountToken_ice_servers>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountToken_ice_servers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "ice_servers", n => { IceServers = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountTokenIceServersItem>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountTokenIceServersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "password", n => { Password = n.GetStringValue(); } },
                 { "ttl", n => { Ttl = n.GetStringValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
@@ -114,7 +114,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("date_created", DateCreated);
             writer.WriteStringValue("date_updated", DateUpdated);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountToken_ice_servers>("ice_servers", IceServers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountTokenIceServersItem>("ice_servers", IceServers);
             writer.WriteStringValue("password", Password);
             writer.WriteStringValue("ttl", Ttl);
             writer.WriteStringValue("username", Username);

@@ -10,23 +10,23 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
-        UNKNOWN,
+        Unknown,
         #pragma warning restore CS1591
         [EnumMember(Value = "DEBUG")]
         #pragma warning disable CS1591
-        DEBUG,
+        Debug,
         #pragma warning restore CS1591
         [EnumMember(Value = "INFO")]
         #pragma warning disable CS1591
-        INFO,
+        Info,
         #pragma warning restore CS1591
         [EnumMember(Value = "WARNING")]
         #pragma warning disable CS1591
-        WARNING,
+        Warning,
         #pragma warning restore CS1591
         [EnumMember(Value = "ERROR")]
         #pragma warning disable CS1591
-        ERROR,
+        Error,
         #pragma warning restore CS1591
     }
 }

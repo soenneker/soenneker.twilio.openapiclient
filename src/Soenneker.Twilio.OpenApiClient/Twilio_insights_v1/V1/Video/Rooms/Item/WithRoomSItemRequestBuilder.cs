@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_insights_v1\v1\Video\Rooms\{RoomSid}
+    /// Builds and executes requests for operations under \twilio_insights_v1\v1\Video\Rooms\{roomSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithRoomSItemRequestBuilder : BaseRequestBuilder
@@ -28,7 +28,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRoomSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{RoomSid}", pathParameters)
+        public WithRoomSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{roomSid}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Video.Rooms.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRoomSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{RoomSid}", rawUrl)
+        public WithRoomSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v1/v1/Video/Rooms/{roomSid}", rawUrl)
         {
         }
         /// <summary>

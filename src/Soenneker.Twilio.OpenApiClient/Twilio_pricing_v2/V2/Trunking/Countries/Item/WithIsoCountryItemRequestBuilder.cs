@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_pricing_v2.V2.Trunking.Countries
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithIsoCountryItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v2/v2/Trunking/Countries/{IsoCountry}", pathParameters)
+        public WithIsoCountryItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v2/v2/Trunking/Countries/{isoCountry}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_pricing_v2.V2.Trunking.Countries
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithIsoCountryItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v2/v2/Trunking/Countries/{IsoCountry}", rawUrl)
+        public WithIsoCountryItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v2/v2/Trunking/Countries/{isoCountry}", rawUrl)
         {
         }
         /// <summary>

@@ -40,10 +40,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Variables to substitute into the content template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent_variables? Variables { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContentVariablesProperty? Variables { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent_variables Variables { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContentVariablesProperty Variables { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "contentId", n => { ContentId = n.GetStringValue(); } },
                 { "mediaUrls", n => { MediaUrls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "variables", n => { Variables = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent_variables>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent_variables.CreateFromDiscriminatorValue); } },
+                { "variables", n => { Variables = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContentVariablesProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContentVariablesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -79,7 +79,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("contentId", ContentId);
             writer.WriteCollectionOfPrimitiveValues<string>("mediaUrls", MediaUrls);
             writer.WriteStringValue("text", Text);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent_variables>("variables", Variables);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContentVariablesProperty>("variables", Variables);
         }
     }
 }

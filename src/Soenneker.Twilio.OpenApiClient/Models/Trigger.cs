@@ -15,7 +15,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;The conversational lifecycle event that will activate execution of the Rule.Available values are:- `COMMUNICATION`: Trigger the Rule on each communication within the Conversation.- `CONVERSATION_END`: Trigger the Rule when the Conversation moves to the `closed` state- `CONVERSATION_INACTIVE`: Trigger the Rule when the Conversation moves to `inactive` state&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.Trigger_on? On { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TriggerOn? On { get; set; }
         /// <summary>Additional configuration to modify Trigger behavior. Only applies to certain Trigger types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "on", n => { On = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.Trigger_on>(); } },
+                { "on", n => { On = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TriggerOn>(); } },
                 { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TriggerParameters>(global::Soenneker.Twilio.OpenApiClient.Models.TriggerParameters.CreateFromDiscriminatorValue); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.Trigger_on>("on", On);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TriggerOn>("on", On);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TriggerParameters>("parameters", Parameters);
             writer.WriteAdditionalData(AdditionalData);
         }

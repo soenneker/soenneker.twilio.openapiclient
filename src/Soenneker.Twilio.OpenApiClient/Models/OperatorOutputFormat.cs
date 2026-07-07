@@ -9,15 +9,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "TEXT")]
         #pragma warning disable CS1591
-        TEXT,
+        Text,
         #pragma warning restore CS1591
         [EnumMember(Value = "JSON")]
         #pragma warning disable CS1591
-        JSON,
+        Json,
         #pragma warning restore CS1591
         [EnumMember(Value = "CLASSIFICATION")]
         #pragma warning disable CS1591
-        CLASSIFICATION,
+        Classification,
         #pragma warning restore CS1591
     }
 }

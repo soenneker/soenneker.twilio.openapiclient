@@ -45,7 +45,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string IntelligenceServiceId { get; set; }
 #endif
         /// <summary>The current status of the Memory Store.  A store begins in the QUEUED state as it is scheduled for processing.  It then moves to PROVISIONING at the beginning of processing. It transitions to ACTIVE once all dependent resources are provisioned, including Conversational Intelligence capabilities.  If there is an issue provisioning resources, the store will move to the FAILED state.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.Store_status? Status { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StoreStatus? Status { get; set; }
         /// <summary>The current version number of the Memory Store. Incremented on each successful update.</summary>
         public int? Version { get; set; }
         /// <summary>
@@ -70,7 +70,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "intelligenceServiceId", n => { IntelligenceServiceId = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.Store_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.StoreStatus>(); } },
                 { "version", n => { Version = n.GetIntValue(); } },
             };
         }
@@ -85,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("displayName", DisplayName);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("intelligenceServiceId", IntelligenceServiceId);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.Store_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.StoreStatus>("status", Status);
             writer.WriteIntValue("version", Version);
         }
     }

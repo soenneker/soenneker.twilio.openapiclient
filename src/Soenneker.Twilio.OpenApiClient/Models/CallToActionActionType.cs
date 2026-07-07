@@ -10,23 +10,23 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "URL")]
         #pragma warning disable CS1591
-        URL,
+        Url,
         #pragma warning restore CS1591
         [EnumMember(Value = "PHONE_NUMBER")]
         #pragma warning disable CS1591
-        PHONE_NUMBER,
+        PhoneNumber,
         #pragma warning restore CS1591
         [EnumMember(Value = "COPY_CODE")]
         #pragma warning disable CS1591
-        COPY_CODE,
+        CopyCode,
         #pragma warning restore CS1591
         [EnumMember(Value = "VOICE_CALL")]
         #pragma warning disable CS1591
-        VOICE_CALL,
+        VoiceCall,
         #pragma warning restore CS1591
         [EnumMember(Value = "VOICE_CALL_REQUEST")]
         #pragma warning disable CS1591
-        VOICE_CALL_REQUEST,
+        VoiceCallRequest,
         #pragma warning restore CS1591
     }
 }

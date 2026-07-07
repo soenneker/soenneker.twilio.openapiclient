@@ -17,7 +17,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "not_participating")]
         #pragma warning disable CS1591
-        Not_participating,
+        NotParticipating,
         #pragma warning restore CS1591
     }
 }

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOns.Item.Usage
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_marketplace_v1\v1\InstalledAddOns\{InstalledAddOnS-id}\Usage
+    /// Builds and executes requests for operations under \twilio_marketplace_v1\v1\InstalledAddOns\{installedAddOnS-id}\Usage
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UsageRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOn
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsageRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_marketplace_v1/v1/InstalledAddOns/{InstalledAddOnS%2Did}/Usage", pathParameters)
+        public UsageRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_marketplace_v1/v1/InstalledAddOns/{installedAddOnS%2Did}/Usage", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOn
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsageRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_marketplace_v1/v1/InstalledAddOns/{InstalledAddOnS%2Did}/Usage", rawUrl)
+        public UsageRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_marketplace_v1/v1/InstalledAddOns/{installedAddOnS%2Did}/Usage", rawUrl)
         {
         }
         /// <summary>

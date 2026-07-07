@@ -10,7 +10,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "COPY_CODE")]
         #pragma warning disable CS1591
-        COPY_CODE,
+        CopyCode,
         #pragma warning restore CS1591
     }
 }

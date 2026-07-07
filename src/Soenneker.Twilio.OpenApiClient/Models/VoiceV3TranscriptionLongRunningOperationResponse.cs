@@ -24,7 +24,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string OperationId { get; set; }
 #endif
         /// <summary>&quot;Current status of the transcription operation.PENDING: accepted but not yet started.RUNNING: currently in progress.COMPLETED: successfully completed.FAILED: failed and cannot be completed.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperationResponse_status? Status { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperationResponseStatus? Status { get; set; }
         /// <summary>URL to poll for the latest operation status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "operationId", n => { OperationId = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperationResponse_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperationResponseStatus>(); } },
                 { "statusUrl", n => { StatusUrl = n.GetStringValue(); } },
                 { "transcription", n => { Transcription = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscription>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscription.CreateFromDiscriminatorValue); } },
             };
@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("operationId", OperationId);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperationResponse_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperationResponseStatus>("status", Status);
             writer.WriteStringValue("statusUrl", StatusUrl);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscription>("transcription", Transcription);
             writer.WriteAdditionalData(AdditionalData);

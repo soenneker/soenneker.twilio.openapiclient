@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Segments of a conversation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversations_segments>? Segments { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversationsSegmentsItem>? Segments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversations_segments> Segments { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversationsSegmentsItem> Segments { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversations"/> and sets the default values.
@@ -46,6 +46,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public FlexV1InsightsConversations()
         {
             AdditionalData = new Dictionary<string, object>();
+            SegmentCount = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -68,7 +69,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "conversation_id", n => { ConversationId = n.GetStringValue(); } },
                 { "segment_count", n => { SegmentCount = n.GetIntValue(); } },
-                { "segments", n => { Segments = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversations_segments>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversations_segments.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "segments", n => { Segments = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversationsSegmentsItem>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversationsSegmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -81,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_id", AccountId);
             writer.WriteStringValue("conversation_id", ConversationId);
             writer.WriteIntValue("segment_count", SegmentCount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversations_segments>("segments", Segments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversationsSegmentsItem>("segments", Segments);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

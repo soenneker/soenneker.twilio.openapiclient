@@ -9,15 +9,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "ERROR_CODE")]
         #pragma warning disable CS1591
-        ERROR_CODE,
+        ErrorCode,
         #pragma warning restore CS1591
         [EnumMember(Value = "LOG_LEVEL")]
         #pragma warning disable CS1591
-        LOG_LEVEL,
+        LogLevel,
         #pragma warning restore CS1591
         [EnumMember(Value = "ALL")]
         #pragma warning disable CS1591
-        ALL,
+        All,
         #pragma warning restore CS1591
     }
 }

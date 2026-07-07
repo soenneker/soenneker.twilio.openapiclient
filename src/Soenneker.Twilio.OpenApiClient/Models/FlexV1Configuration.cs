@@ -51,10 +51,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Settings for different limits for Flex Conversations channels attachments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_channel_configs>? ChannelConfigs { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationChannelConfigsItem>? ChannelConfigs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_channel_configs> ChannelConfigs { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationChannelConfigsItem> ChannelConfigs { get; set; }
 #endif
         /// <summary>The SID of the chat service this user belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -163,10 +163,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of objects that contain the configurations for the Integrations supported in this configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_integrations>? Integrations { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationIntegrationsItem>? Integrations { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_integrations> Integrations { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationIntegrationsItem> Integrations { get; set; }
 #endif
         /// <summary>Configurable parameters for Markdown.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -271,10 +271,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Skill description for TaskRouter workers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_taskrouter_skills>? TaskrouterSkills { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterSkillsItem>? TaskrouterSkills { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_taskrouter_skills> TaskrouterSkills { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterSkillsItem> TaskrouterSkills { get; set; }
 #endif
         /// <summary>The SID of the TaskRouter Target TaskQueue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -295,10 +295,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The list of TaskRouter TaskQueues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_taskrouter_taskqueues>? TaskrouterTaskqueues { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterTaskqueuesItem>? TaskrouterTaskqueues { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_taskrouter_taskqueues> TaskrouterTaskqueues { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterTaskqueuesItem> TaskrouterTaskqueues { get; set; }
 #endif
         /// <summary>The TaskRouter Worker attributes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -394,7 +394,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "attributes", n => { Attributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "call_recording_enabled", n => { CallRecordingEnabled = n.GetBoolValue(); } },
                 { "call_recording_webhook_url", n => { CallRecordingWebhookUrl = n.GetStringValue(); } },
-                { "channel_configs", n => { ChannelConfigs = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_channel_configs>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_channel_configs.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "channel_configs", n => { ChannelConfigs = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationChannelConfigsItem>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationChannelConfigsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "chat_service_instance_sid", n => { ChatServiceInstanceSid = n.GetStringValue(); } },
                 { "citrix_voice_vdi", n => { CitrixVoiceVdi = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "crm_attributes", n => { CrmAttributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -411,7 +411,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "flex_service_instance_sid", n => { FlexServiceInstanceSid = n.GetStringValue(); } },
                 { "flex_ui_status_report", n => { FlexUiStatusReport = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "flex_url", n => { FlexUrl = n.GetStringValue(); } },
-                { "integrations", n => { Integrations = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_integrations>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_integrations.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "integrations", n => { Integrations = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationIntegrationsItem>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationIntegrationsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "markdown", n => { Markdown = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "messaging_service_instance_sid", n => { MessagingServiceInstanceSid = n.GetStringValue(); } },
                 { "notifications", n => { Notifications = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -426,10 +426,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "service_version", n => { ServiceVersion = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationEnumStatus>(); } },
                 { "taskrouter_offline_activity_sid", n => { TaskrouterOfflineActivitySid = n.GetStringValue(); } },
-                { "taskrouter_skills", n => { TaskrouterSkills = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_taskrouter_skills>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_taskrouter_skills.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "taskrouter_skills", n => { TaskrouterSkills = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterSkillsItem>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterSkillsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "taskrouter_target_taskqueue_sid", n => { TaskrouterTargetTaskqueueSid = n.GetStringValue(); } },
                 { "taskrouter_target_workflow_sid", n => { TaskrouterTargetWorkflowSid = n.GetStringValue(); } },
-                { "taskrouter_taskqueues", n => { TaskrouterTaskqueues = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_taskrouter_taskqueues>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_taskrouter_taskqueues.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "taskrouter_taskqueues", n => { TaskrouterTaskqueues = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterTaskqueuesItem>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterTaskqueuesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "taskrouter_worker_attributes", n => { TaskrouterWorkerAttributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "taskrouter_worker_channels", n => { TaskrouterWorkerChannels = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "taskrouter_workspace_sid", n => { TaskrouterWorkspaceSid = n.GetStringValue(); } },
@@ -452,7 +452,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("attributes", Attributes);
             writer.WriteBoolValue("call_recording_enabled", CallRecordingEnabled);
             writer.WriteStringValue("call_recording_webhook_url", CallRecordingWebhookUrl);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_channel_configs>("channel_configs", ChannelConfigs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationChannelConfigsItem>("channel_configs", ChannelConfigs);
             writer.WriteStringValue("chat_service_instance_sid", ChatServiceInstanceSid);
             writer.WriteObjectValue<UntypedNode>("citrix_voice_vdi", CitrixVoiceVdi);
             writer.WriteObjectValue<UntypedNode>("crm_attributes", CrmAttributes);
@@ -469,7 +469,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("flex_service_instance_sid", FlexServiceInstanceSid);
             writer.WriteObjectValue<UntypedNode>("flex_ui_status_report", FlexUiStatusReport);
             writer.WriteStringValue("flex_url", FlexUrl);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_integrations>("integrations", Integrations);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationIntegrationsItem>("integrations", Integrations);
             writer.WriteObjectValue<UntypedNode>("markdown", Markdown);
             writer.WriteStringValue("messaging_service_instance_sid", MessagingServiceInstanceSid);
             writer.WriteObjectValue<UntypedNode>("notifications", Notifications);
@@ -484,10 +484,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("service_version", ServiceVersion);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationEnumStatus>("status", Status);
             writer.WriteStringValue("taskrouter_offline_activity_sid", TaskrouterOfflineActivitySid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_taskrouter_skills>("taskrouter_skills", TaskrouterSkills);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterSkillsItem>("taskrouter_skills", TaskrouterSkills);
             writer.WriteStringValue("taskrouter_target_taskqueue_sid", TaskrouterTargetTaskqueueSid);
             writer.WriteStringValue("taskrouter_target_workflow_sid", TaskrouterTargetWorkflowSid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1Configuration_taskrouter_taskqueues>("taskrouter_taskqueues", TaskrouterTaskqueues);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterTaskqueuesItem>("taskrouter_taskqueues", TaskrouterTaskqueues);
             writer.WriteObjectValue<UntypedNode>("taskrouter_worker_attributes", TaskrouterWorkerAttributes);
             writer.WriteObjectValue<UntypedNode>("taskrouter_worker_channels", TaskrouterWorkerChannels);
             writer.WriteStringValue("taskrouter_workspace_sid", TaskrouterWorkspaceSid);

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ClassificationResult"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResult"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.JSONResult"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TextResult"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ClassificationResult"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResult"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.JsonResult"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TextResult"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OperatorResultsResponseV1 : IComposedTypeWrapper, IParsable
@@ -29,13 +29,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResult ExtractionResult { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.JSONResult"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.JsonResult"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.JSONResult? JSONResult { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.JsonResult? JsonResult { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.JSONResult JSONResult { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.JsonResult JsonResult { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TextResult"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             }
             else if("JSON".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.JSONResult = new global::Soenneker.Twilio.OpenApiClient.Models.JSONResult();
+                result.JsonResult = new global::Soenneker.Twilio.OpenApiClient.Models.JsonResult();
             }
             else if("TEXT".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
@@ -87,9 +87,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 return ExtractionResult.GetFieldDeserializers();
             }
-            else if(JSONResult != null)
+            else if(JsonResult != null)
             {
-                return JSONResult.GetFieldDeserializers();
+                return JsonResult.GetFieldDeserializers();
             }
             else if(TextResult != null)
             {
@@ -112,9 +112,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResult>(null, ExtractionResult);
             }
-            else if(JSONResult != null)
+            else if(JsonResult != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.JSONResult>(null, JSONResult);
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.JsonResult>(null, JsonResult);
             }
             else if(TextResult != null)
             {

@@ -9,27 +9,27 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
-        UNKNOWN,
+        Unknown,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNLAUNCHED")]
         #pragma warning disable CS1591
-        UNLAUNCHED,
+        Unlaunched,
         #pragma warning restore CS1591
         [EnumMember(Value = "CARRIER_REVIEW")]
         #pragma warning disable CS1591
-        CARRIER_REVIEW,
+        CarrierReview,
         #pragma warning restore CS1591
         [EnumMember(Value = "APPROVED")]
         #pragma warning disable CS1591
-        APPROVED,
+        Approved,
         #pragma warning restore CS1591
         [EnumMember(Value = "REJECTED")]
         #pragma warning disable CS1591
-        REJECTED,
+        Rejected,
         #pragma warning restore CS1591
         [EnumMember(Value = "SUSPENDED")]
         #pragma warning disable CS1591
-        SUSPENDED,
+        Suspended,
         #pragma warning restore CS1591
     }
 }

@@ -9,7 +9,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "default")]
         #pragma warning disable CS1591
-        Default,
+        DefaultValue,
         #pragma warning restore CS1591
         [EnumMember(Value = "muted")]
         #pragma warning disable CS1591

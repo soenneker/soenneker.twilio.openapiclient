@@ -10,11 +10,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "GET")]
         #pragma warning disable CS1591
-        GET,
+        Get,
         #pragma warning restore CS1591
         [EnumMember(Value = "POST")]
         #pragma warning disable CS1591
-        POST,
+        Post,
         #pragma warning restore CS1591
     }
 }

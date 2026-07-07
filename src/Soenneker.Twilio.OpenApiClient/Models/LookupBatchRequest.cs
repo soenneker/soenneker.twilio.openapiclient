@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchRequest_fields?>? Fields { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchRequestFieldsItem?>? Fields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchRequest_fields?> Fields { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchRequestFieldsItem?> Fields { get; set; }
 #endif
         /// <summary>The identity_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,7 +97,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "correlation_id", n => { CorrelationId = n.GetStringValue(); } },
                 { "country_code", n => { CountryCode = n.GetStringValue(); } },
-                { "fields", n => { Fields = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchRequest_fields>()?.AsList(); } },
+                { "fields", n => { Fields = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchRequestFieldsItem>()?.AsList(); } },
                 { "identity_match", n => { IdentityMatch = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentityMatchParameters>(global::Soenneker.Twilio.OpenApiClient.Models.IdentityMatchParameters.CreateFromDiscriminatorValue); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
                 { "reassigned_number", n => { ReassignedNumber = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberParameters>(global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberParameters.CreateFromDiscriminatorValue); } },
@@ -113,7 +113,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("correlation_id", CorrelationId);
             writer.WriteStringValue("country_code", CountryCode);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchRequest_fields>("fields", Fields);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchRequestFieldsItem>("fields", Fields);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentityMatchParameters>("identity_match", IdentityMatch);
             writer.WriteStringValue("phone_number", PhoneNumber);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberParameters>("reassigned_number", ReassignedNumber);

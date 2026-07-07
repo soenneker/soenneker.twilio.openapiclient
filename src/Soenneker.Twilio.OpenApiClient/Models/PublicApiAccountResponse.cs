@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string OwnerSid { get; set; }
 #endif
         /// <summary>Account status</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.PublicApiAccountResponse_status? Status { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PublicApiAccountResponseStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.PublicApiAccountResponse"/> and sets the default values.
         /// </summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "owner_sid", n => { OwnerSid = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiAccountResponse_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiAccountResponseStatus>(); } },
             };
         }
         /// <summary>
@@ -86,7 +86,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("owner_sid", OwnerSid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiAccountResponse_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiAccountResponseStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

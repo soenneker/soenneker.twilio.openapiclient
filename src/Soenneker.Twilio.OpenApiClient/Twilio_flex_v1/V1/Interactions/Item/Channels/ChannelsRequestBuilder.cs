@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_flex_v1\v1\Interactions\{InteractionS-id}\Channels
+    /// Builds and executes requests for operations under \twilio_flex_v1\v1\Interactions\{interactionS-id}\Channels
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChannelsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ChannelS%2Did", position);
+                urlTplParams.Add("channelS%2Did", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.ChannelSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{InteractionS%2Did}/Channels{?Page*,PageSize*,PageToken*}", pathParameters)
+        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{interactionS%2Did}/Channels{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{InteractionS%2Did}/Channels{?Page*,PageSize*,PageToken*}", rawUrl)
+        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{interactionS%2Did}/Channels{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

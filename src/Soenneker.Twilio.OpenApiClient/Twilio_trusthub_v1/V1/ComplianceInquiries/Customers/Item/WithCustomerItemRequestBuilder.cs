@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiries.Customers.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_trusthub_v1\v1\ComplianceInquiries\Customers\{CustomerId}
+    /// Builds and executes requests for operations under \twilio_trusthub_v1\v1\ComplianceInquiries\Customers\{customerId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithCustomerItemRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiri
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithCustomerItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Customers/{CustomerId}", pathParameters)
+        public WithCustomerItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Customers/{customerId}", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiri
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithCustomerItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Customers/{CustomerId}", rawUrl)
+        public WithCustomerItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Customers/{customerId}", rawUrl)
         {
         }
     }

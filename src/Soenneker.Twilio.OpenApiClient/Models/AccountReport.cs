@@ -41,18 +41,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Number of calls terminating in each country (ISO alpha-2).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_callee_country_code? CalleeCountryCode { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCalleeCountryCodeProperty? CalleeCountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_callee_country_code CalleeCountryCode { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCalleeCountryCodeProperty CalleeCountryCode { get; set; }
 #endif
         /// <summary>Number of calls originating from each country (ISO alpha-2).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_caller_country_code? CallerCountryCode { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallerCountryCodeProperty? CallerCountryCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_caller_country_code CallerCountryCode { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallerCountryCodeProperty CallerCountryCode { get; set; }
 #endif
         /// <summary>Number of calls made in each state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,10 +73,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Know Your Traffic (KYT) metrics focused on outbound carrier performance and trust signals for the report period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKYT? KYT { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt? KYT { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKYT KYT { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt KYT { get; set; }
 #endif
         /// <summary>Network-quality indicators for SDK and Twilio Gateway traffic during the report period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,10 +93,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Number of calls made in each Twilio Edge location. Refer to [Public Edge Locations](https://www.twilio.com/docs/global-infrastructure/edge-locations#public-edge-locations) for more detail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_twilio_edge_location? TwilioEdgeLocation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty? TwilioEdgeLocation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_twilio_edge_location TwilioEdgeLocation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty TwilioEdgeLocation { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AccountReport"/> and sets the default values.
@@ -131,13 +131,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "call_direction", n => { CallDirection = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallDirection>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallDirection.CreateFromDiscriminatorValue); } },
                 { "call_state", n => { CallState = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallState>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallState.CreateFromDiscriminatorValue); } },
                 { "call_type", n => { CallType = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallType>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallType.CreateFromDiscriminatorValue); } },
-                { "callee_country_code", n => { CalleeCountryCode = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_callee_country_code>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_callee_country_code.CreateFromDiscriminatorValue); } },
-                { "caller_country_code", n => { CallerCountryCode = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_caller_country_code>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_caller_country_code.CreateFromDiscriminatorValue); } },
-                { "KYT", n => { KYT = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKYT>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKYT.CreateFromDiscriminatorValue); } },
+                { "callee_country_code", n => { CalleeCountryCode = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCalleeCountryCodeProperty>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCalleeCountryCodeProperty.CreateFromDiscriminatorValue); } },
+                { "caller_country_code", n => { CallerCountryCode = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallerCountryCodeProperty>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallerCountryCodeProperty.CreateFromDiscriminatorValue); } },
+                { "KYT", n => { KYT = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt.CreateFromDiscriminatorValue); } },
                 { "network_issues", n => { NetworkIssues = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues.CreateFromDiscriminatorValue); } },
                 { "silent_calls_percentage", n => { SilentCallsPercentage = n.GetFloatValue(); } },
                 { "total_calls", n => { TotalCalls = n.GetIntValue(); } },
-                { "twilio_edge_location", n => { TwilioEdgeLocation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_twilio_edge_location>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_twilio_edge_location.CreateFromDiscriminatorValue); } },
+                { "twilio_edge_location", n => { TwilioEdgeLocation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty>(global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -153,15 +153,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteFloatValue("call_answer_score", CallAnswerScore);
             writer.WriteFloatValue("call_deliverability_score", CallDeliverabilityScore);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallDirection>("call_direction", CallDirection);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_callee_country_code>("callee_country_code", CalleeCountryCode);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_caller_country_code>("caller_country_code", CallerCountryCode);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCalleeCountryCodeProperty>("callee_country_code", CalleeCountryCode);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallerCountryCodeProperty>("caller_country_code", CallerCountryCode);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallState>("call_state", CallState);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallType>("call_type", CallType);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKYT>("KYT", KYT);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt>("KYT", KYT);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues>("network_issues", NetworkIssues);
             writer.WriteFloatValue("silent_calls_percentage", SilentCallsPercentage);
             writer.WriteIntValue("total_calls", TotalCalls);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReport_twilio_edge_location>("twilio_edge_location", TwilioEdgeLocation);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty>("twilio_edge_location", TwilioEdgeLocation);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

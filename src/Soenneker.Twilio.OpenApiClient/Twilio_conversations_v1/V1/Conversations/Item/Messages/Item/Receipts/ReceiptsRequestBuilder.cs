@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversation
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.Messages.Item.Receipts.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversation
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReceiptsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Conversations/{ConversationS%2Did}/Messages/{MessageS%2Did}/Receipts{?Page*,PageSize*,PageToken*}", pathParameters)
+        public ReceiptsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Conversations/{conversationS%2Did}/Messages/{messageS%2Did}/Receipts{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversation
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReceiptsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Conversations/{ConversationS%2Did}/Messages/{MessageS%2Did}/Receipts{?Page*,PageSize*,PageToken*}", rawUrl)
+        public ReceiptsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Conversations/{conversationS%2Did}/Messages/{messageS%2Did}/Receipts{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

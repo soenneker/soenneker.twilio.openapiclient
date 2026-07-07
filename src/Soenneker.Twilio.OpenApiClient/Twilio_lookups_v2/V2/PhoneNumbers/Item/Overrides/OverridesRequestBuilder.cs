@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.Overrides
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_lookups_v2\v2\PhoneNumbers\{PhoneNumber}\Overrides
+    /// Builds and executes requests for operations under \twilio_lookups_v2\v2\PhoneNumbers\{phoneNumber}\Overrides
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OverridesRequestBuilder : BaseRequestBuilder
@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Field", position);
+                urlTplParams.Add("field", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.Overrides.Item.WithFieldItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -32,7 +32,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OverridesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{PhoneNumber}/Overrides", pathParameters)
+        public OverridesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{phoneNumber}/Overrides", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OverridesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{PhoneNumber}/Overrides", rawUrl)
+        public OverridesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v2/v2/PhoneNumbers/{phoneNumber}/Overrides", rawUrl)
         {
         }
     }

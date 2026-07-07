@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.LinkShortening.Domains.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_messaging_v2\v2\LinkShortening\Domains\{DomainSid}
+    /// Builds and executes requests for operations under \twilio_messaging_v2\v2\LinkShortening\Domains\{domainSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithDomainSItemRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.LinkShortening.D
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDomainSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v2/v2/LinkShortening/Domains/{DomainSid}", pathParameters)
+        public WithDomainSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v2/v2/LinkShortening/Domains/{domainSid}", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.LinkShortening.D
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDomainSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v2/v2/LinkShortening/Domains/{DomainSid}", rawUrl)
+        public WithDomainSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v2/v2/LinkShortening/Domains/{domainSid}", rawUrl)
         {
         }
     }

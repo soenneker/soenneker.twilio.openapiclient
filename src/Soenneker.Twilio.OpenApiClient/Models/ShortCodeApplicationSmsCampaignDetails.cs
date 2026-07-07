@@ -42,10 +42,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The campaign_frequency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails_campaign_frequency?>? CampaignFrequency { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCampaignFrequencyItem?>? CampaignFrequency { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails_campaign_frequency?> CampaignFrequency { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCampaignFrequencyItem?> CampaignFrequency { get; set; }
 #endif
         /// <summary>The campaign_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string CampaignName { get; set; }
 #endif
         /// <summary>The customer_care_channel property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails_customer_care_channel? CustomerCareChannel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCustomerCareChannel? CustomerCareChannel { get; set; }
         /// <summary>The customer_care_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -116,10 +116,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The sc_use_case_categories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails_sc_use_case_categories?>? ScUseCaseCategories { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsScUseCaseCategoriesItem?>? ScUseCaseCategories { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails_sc_use_case_categories?> ScUseCaseCategories { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsScUseCaseCategoriesItem?> ScUseCaseCategories { get; set; }
 #endif
         /// <summary>The sms_privacy_policy_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -173,9 +173,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "avg_monthly_messages_received_from_subscribers", n => { AvgMonthlyMessagesReceivedFromSubscribers = n.GetStringValue(); } },
                 { "avg_monthly_messages_sent_to_each_subscriber", n => { AvgMonthlyMessagesSentToEachSubscriber = n.GetStringValue(); } },
                 { "campaign_brand_website", n => { CampaignBrandWebsite = n.GetStringValue(); } },
-                { "campaign_frequency", n => { CampaignFrequency = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails_campaign_frequency>()?.AsList(); } },
+                { "campaign_frequency", n => { CampaignFrequency = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCampaignFrequencyItem>()?.AsList(); } },
                 { "campaign_name", n => { CampaignName = n.GetStringValue(); } },
-                { "customer_care_channel", n => { CustomerCareChannel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails_customer_care_channel>(); } },
+                { "customer_care_channel", n => { CustomerCareChannel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCustomerCareChannel>(); } },
                 { "customer_care_value", n => { CustomerCareValue = n.GetStringValue(); } },
                 { "duration_of_the_campaign", n => { DurationOfTheCampaign = n.GetStringValue(); } },
                 { "estimated_total_subscribers", n => { EstimatedTotalSubscribers = n.GetStringValue(); } },
@@ -183,7 +183,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "monthly_inbound_volume_expected", n => { MonthlyInboundVolumeExpected = n.GetStringValue(); } },
                 { "monthly_outbound_volume_expected", n => { MonthlyOutboundVolumeExpected = n.GetStringValue(); } },
                 { "planned_traffic_spikes", n => { PlannedTrafficSpikes = n.GetStringValue(); } },
-                { "sc_use_case_categories", n => { ScUseCaseCategories = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails_sc_use_case_categories>()?.AsList(); } },
+                { "sc_use_case_categories", n => { ScUseCaseCategories = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsScUseCaseCategoriesItem>()?.AsList(); } },
                 { "sms_privacy_policy_url", n => { SmsPrivacyPolicyUrl = n.GetStringValue(); } },
                 { "sms_terms_of_service_url", n => { SmsTermsOfServiceUrl = n.GetStringValue(); } },
                 { "spike_details", n => { SpikeDetails = n.GetStringValue(); } },
@@ -199,9 +199,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("avg_monthly_messages_received_from_subscribers", AvgMonthlyMessagesReceivedFromSubscribers);
             writer.WriteStringValue("avg_monthly_messages_sent_to_each_subscriber", AvgMonthlyMessagesSentToEachSubscriber);
             writer.WriteStringValue("campaign_brand_website", CampaignBrandWebsite);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails_campaign_frequency>("campaign_frequency", CampaignFrequency);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCampaignFrequencyItem>("campaign_frequency", CampaignFrequency);
             writer.WriteStringValue("campaign_name", CampaignName);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails_customer_care_channel>("customer_care_channel", CustomerCareChannel);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCustomerCareChannel>("customer_care_channel", CustomerCareChannel);
             writer.WriteStringValue("customer_care_value", CustomerCareValue);
             writer.WriteStringValue("duration_of_the_campaign", DurationOfTheCampaign);
             writer.WriteStringValue("estimated_total_subscribers", EstimatedTotalSubscribers);
@@ -209,7 +209,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("monthly_inbound_volume_expected", MonthlyInboundVolumeExpected);
             writer.WriteStringValue("monthly_outbound_volume_expected", MonthlyOutboundVolumeExpected);
             writer.WriteStringValue("planned_traffic_spikes", PlannedTrafficSpikes);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails_sc_use_case_categories>("sc_use_case_categories", ScUseCaseCategories);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsScUseCaseCategoriesItem>("sc_use_case_categories", ScUseCaseCategories);
             writer.WriteStringValue("sms_privacy_policy_url", SmsPrivacyPolicyUrl);
             writer.WriteStringValue("sms_terms_of_service_url", SmsTermsOfServiceUrl);
             writer.WriteStringValue("spike_details", SpikeDetails);

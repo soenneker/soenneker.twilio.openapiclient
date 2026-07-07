@@ -73,10 +73,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains absolute URLs to access the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource) and [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) of this conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceUserServiceUserConversation_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceUserServiceUserConversationLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceUserServiceUserConversation_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceUserServiceUserConversationLinks Links { get; set; }
 #endif
         /// <summary>The Notification Level of this User Conversation. One of `default` or `muted`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ServiceUserConversationEnumNotificationLevel? NotificationLevel { get; set; }
@@ -157,7 +157,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "last_read_message_index", n => { LastReadMessageIndex = n.GetIntValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceUserServiceUserConversation_links>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceUserServiceUserConversation_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceUserServiceUserConversationLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceUserServiceUserConversationLinks.CreateFromDiscriminatorValue); } },
                 { "notification_level", n => { NotificationLevel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceUserConversationEnumNotificationLevel>(); } },
                 { "participant_sid", n => { ParticipantSid = n.GetStringValue(); } },
                 { "timers", n => { Timers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -184,7 +184,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteIntValue("last_read_message_index", LastReadMessageIndex);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceUserServiceUserConversation_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceUserServiceUserConversationLinks>("links", Links);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceUserConversationEnumNotificationLevel>("notification_level", NotificationLevel);
             writer.WriteStringValue("participant_sid", ParticipantSid);
             writer.WriteObjectValue<UntypedNode>("timers", Timers);

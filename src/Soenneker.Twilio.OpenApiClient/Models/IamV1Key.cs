@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The \`Policy\` object is a collection that specifies the allowed Twilio permissions for the restricted key.For more information on the permissions available with restricted API keys, refer to the [Twilio documentation](https://www.twilio.com/docs/iam/api-keys/restricted-api-keys#permissions-available-with-restricted-api-keys).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1Key_policy? Policy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1KeyPolicy? Policy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1Key_policy Policy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1KeyPolicy Policy { get; set; }
 #endif
         /// <summary>The unique string that we created to identify the Key resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetStringValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "policy", n => { Policy = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1Key_policy>(global::Soenneker.Twilio.OpenApiClient.Models.IamV1Key_policy.CreateFromDiscriminatorValue); } },
+                { "policy", n => { Policy = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1KeyPolicy>(global::Soenneker.Twilio.OpenApiClient.Models.IamV1KeyPolicy.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
             };
         }
@@ -96,7 +96,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("date_created", DateCreated);
             writer.WriteStringValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1Key_policy>("policy", Policy);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1KeyPolicy>("policy", Policy);
             writer.WriteStringValue("sid", Sid);
             writer.WriteAdditionalData(AdditionalData);
         }

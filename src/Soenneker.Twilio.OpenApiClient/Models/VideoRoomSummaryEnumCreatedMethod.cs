@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "ad_hoc")]
         #pragma warning disable CS1591
-        Ad_hoc,
+        AdHoc,
         #pragma warning restore CS1591
         [EnumMember(Value = "api")]
         #pragma warning disable CS1591

@@ -9,19 +9,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "LOCAL")]
         #pragma warning disable CS1591
-        LOCAL,
+        Local,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
-        UNKNOWN,
+        Unknown,
         #pragma warning restore CS1591
         [EnumMember(Value = "MOBILE")]
         #pragma warning disable CS1591
-        MOBILE,
+        Mobile,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOLL-FREE")]
         #pragma warning disable CS1591
-        TOLLFREE,
+        TollFree,
         #pragma warning restore CS1591
     }
 }

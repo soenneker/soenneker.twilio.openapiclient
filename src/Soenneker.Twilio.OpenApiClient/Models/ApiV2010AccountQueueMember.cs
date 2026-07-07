@@ -56,6 +56,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public ApiV2010AccountQueueMember()
         {
             AdditionalData = new Dictionary<string, object>();
+            Position = 0;
+            WaitTime = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

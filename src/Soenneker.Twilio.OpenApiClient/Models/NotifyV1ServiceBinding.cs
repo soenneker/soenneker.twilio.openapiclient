@@ -69,10 +69,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceBinding_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceBindingLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceBinding_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceBindingLinks Links { get; set; }
 #endif
         /// <summary>The protocol version to use to send the notification. This defaults to the value of `default_xxxx_notification_protocol_version` in the [Service](https://www.twilio.com/docs/notify/api/service-resource) for the protocol. The current version is `&quot;3&quot;` for `apn`, `fcm`, and `gcm` type Bindings. The parameter is not applicable to `sms` and `facebook-messenger` type Bindings as the data format is fixed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -147,7 +147,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "endpoint", n => { Endpoint = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceBinding_links>(global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceBinding_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceBindingLinks>(global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceBindingLinks.CreateFromDiscriminatorValue); } },
                 { "notification_protocol_version", n => { NotificationProtocolVersion = n.GetStringValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -170,7 +170,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("endpoint", Endpoint);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceBinding_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceBindingLinks>("links", Links);
             writer.WriteStringValue("notification_protocol_version", NotificationProtocolVersion);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);

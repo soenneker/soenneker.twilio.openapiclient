@@ -9,7 +9,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "fixed")]
         #pragma warning disable CS1591
-        Fixed,
+        FixedValue,
         #pragma warning restore CS1591
     }
 }

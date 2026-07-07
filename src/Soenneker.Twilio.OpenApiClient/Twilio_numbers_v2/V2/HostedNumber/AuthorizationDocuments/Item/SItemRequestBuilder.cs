@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.AuthorizationDocuments.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_numbers_v2\v2\HostedNumber\AuthorizationDocuments\{S-id}
+    /// Builds and executes requests for operations under \twilio_numbers_v2\v2\HostedNumber\AuthorizationDocuments\{s-id}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SItemRequestBuilder : BaseRequestBuilder
@@ -28,7 +28,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Autho
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/HostedNumber/AuthorizationDocuments/{S%2Did}", pathParameters)
+        public SItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/HostedNumber/AuthorizationDocuments/{s%2Did}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Autho
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/HostedNumber/AuthorizationDocuments/{S%2Did}", rawUrl)
+        public SItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/HostedNumber/AuthorizationDocuments/{s%2Did}", rawUrl)
         {
         }
         /// <summary>

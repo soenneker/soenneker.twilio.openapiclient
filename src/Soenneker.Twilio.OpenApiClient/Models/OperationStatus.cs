@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string ResultUrl { get; set; }
 #endif
         /// <summary>The current status of the operation.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.OperationStatus_status? Status { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperationStatusStatus? Status { get; set; }
         /// <summary>URI to check operation status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "operationId", n => { OperationId = n.GetStringValue(); } },
                 { "result", n => { Result = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.OperationResult>(global::Soenneker.Twilio.OpenApiClient.Models.OperationResult.CreateFromDiscriminatorValue); } },
                 { "resultUrl", n => { ResultUrl = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperationStatus_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperationStatusStatus>(); } },
                 { "statusUrl", n => { StatusUrl = n.GetStringValue(); } },
             };
         }
@@ -99,7 +99,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("operationId", OperationId);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.OperationResult>("result", Result);
             writer.WriteStringValue("resultUrl", ResultUrl);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperationStatus_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperationStatusStatus>("status", Status);
             writer.WriteStringValue("statusUrl", StatusUrl);
         }
     }

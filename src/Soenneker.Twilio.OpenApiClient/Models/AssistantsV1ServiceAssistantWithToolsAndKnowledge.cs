@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Personalization and Perception Engine settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceAssistantWithToolsAndKnowledge_customer_ai? CustomerAi { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceAssistantWithToolsAndKnowledgeCustomerAiProperty? CustomerAi { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceAssistantWithToolsAndKnowledge_customer_ai CustomerAi { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceAssistantWithToolsAndKnowledgeCustomerAiProperty CustomerAi { get; set; }
 #endif
         /// <summary>The date and time in GMT when the Assistant was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -124,7 +124,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "customer_ai", n => { CustomerAi = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceAssistantWithToolsAndKnowledge_customer_ai>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceAssistantWithToolsAndKnowledge_customer_ai.CreateFromDiscriminatorValue); } },
+                { "customer_ai", n => { CustomerAi = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceAssistantWithToolsAndKnowledgeCustomerAiProperty>(global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceAssistantWithToolsAndKnowledgeCustomerAiProperty.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -145,7 +145,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceAssistantWithToolsAndKnowledge_customer_ai>("customer_ai", CustomerAi);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AssistantsV1ServiceAssistantWithToolsAndKnowledgeCustomerAiProperty>("customer_ai", CustomerAi);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("id", Id);

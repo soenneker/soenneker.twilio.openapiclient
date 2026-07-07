@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ScimPatchOperation_value? Value { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ScimPatchOperationValueProperty? Value { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ScimPatchOperation_value Value { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ScimPatchOperationValueProperty Value { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ScimPatchOperation"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "op", n => { Op = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ScimPatchOperation_value>(global::Soenneker.Twilio.OpenApiClient.Models.ScimPatchOperation_value.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ScimPatchOperationValueProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ScimPatchOperationValueProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("op", Op);
             writer.WriteStringValue("path", Path);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ScimPatchOperation_value>("value", Value);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ScimPatchOperationValueProperty>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

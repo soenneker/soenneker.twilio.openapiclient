@@ -94,6 +94,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public WirelessV1RatePlan()
         {
             AdditionalData = new Dictionary<string, object>();
+            DataLimit = 0;
+            InternationalRoamingDataLimit = 0;
+            NationalRoamingDataLimit = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

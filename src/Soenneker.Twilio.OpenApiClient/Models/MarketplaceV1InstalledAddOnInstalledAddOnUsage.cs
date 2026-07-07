@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The billable_items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsage_billable_items>? BillableItems { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsageBillableItemsItem>? BillableItems { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsage_billable_items> BillableItems { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsageBillableItemsItem> BillableItems { get; set; }
 #endif
         /// <summary>Total amount in local currency that was billed in this request. Aggregates all billable_items that were successfully submitted.</summary>
         public double? TotalSubmitted { get; private set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billable_items", n => { BillableItems = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsage_billable_items>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsage_billable_items.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "billable_items", n => { BillableItems = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsageBillableItemsItem>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsageBillableItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total_submitted", n => { TotalSubmitted = n.GetDoubleValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsage_billable_items>("billable_items", BillableItems);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsageBillableItemsItem>("billable_items", BillableItems);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

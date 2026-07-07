@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiries.Registration.Item.RegulatoryCompliance
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_trusthub_v1\v1\ComplianceInquiries\Registration\{RegistrationId}\RegulatoryCompliance
+    /// Builds and executes requests for operations under \twilio_trusthub_v1\v1\ComplianceInquiries\Registration\{registrationId}\RegulatoryCompliance
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RegulatoryComplianceRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiri
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RegulatoryComplianceRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Registration/{RegistrationId}/RegulatoryCompliance", pathParameters)
+        public RegulatoryComplianceRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Registration/{registrationId}/RegulatoryCompliance", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiri
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RegulatoryComplianceRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Registration/{RegistrationId}/RegulatoryCompliance", rawUrl)
+        public RegulatoryComplianceRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Registration/{registrationId}/RegulatoryCompliance", rawUrl)
         {
         }
     }

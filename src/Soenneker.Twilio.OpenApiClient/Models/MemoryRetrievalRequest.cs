@@ -49,6 +49,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public MemoryRetrievalRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            CommunicationsLimit = 0;
+            ObservationsLimit = 20;
+            RelevanceThreshold = 0;
+            SummariesLimit = 5;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

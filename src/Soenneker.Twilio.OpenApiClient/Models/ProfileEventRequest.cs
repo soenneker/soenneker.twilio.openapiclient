@@ -18,13 +18,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The events property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CommunicationLifecycleEvent>? Events { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequestEventsItem>? Events { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CommunicationLifecycleEvent> Events { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequestEventsItem> Events { get; set; }
 #endif
         /// <summary>The type of event being sent.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequest_type? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequestType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequest"/> and sets the default values.
         /// </summary>
@@ -50,8 +50,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "events", n => { Events = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CommunicationLifecycleEvent>(global::Soenneker.Twilio.OpenApiClient.Models.CommunicationLifecycleEvent.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequest_type>(); } },
+                { "events", n => { Events = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequestEventsItem>(global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequestEventsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequestType>(); } },
             };
         }
         /// <summary>
@@ -61,8 +61,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CommunicationLifecycleEvent>("events", Events);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequest_type>("type", Type);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequestEventsItem>("events", Events);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfileEventRequestType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

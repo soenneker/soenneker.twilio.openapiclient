@@ -69,10 +69,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkflow_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkflowLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkflow_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkflowLinks Links { get; set; }
 #endif
         /// <summary>The unique string that we created to identify the Workflow resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,6 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public TaskrouterV1WorkspaceWorkflow()
         {
             AdditionalData = new Dictionary<string, object>();
+            TaskReservationTimeout = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -133,7 +134,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "document_content_type", n => { DocumentContentType = n.GetStringValue(); } },
                 { "fallback_assignment_callback_url", n => { FallbackAssignmentCallbackUrl = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkflow_links>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkflow_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkflowLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkflowLinks.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "task_reservation_timeout", n => { TaskReservationTimeout = n.GetIntValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -155,7 +156,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("document_content_type", DocumentContentType);
             writer.WriteStringValue("fallback_assignment_callback_url", FallbackAssignmentCallbackUrl);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkflow_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkflowLinks>("links", Links);
             writer.WriteStringValue("sid", Sid);
             writer.WriteIntValue("task_reservation_timeout", TaskReservationTimeout);
             writer.WriteStringValue("url", Url);

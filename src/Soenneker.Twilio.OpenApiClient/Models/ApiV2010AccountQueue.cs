@@ -74,6 +74,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public ApiV2010AccountQueue()
         {
             AdditionalData = new Dictionary<string, object>();
+            AverageWaitTime = 0;
+            CurrentSize = 0;
+            MaxSize = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

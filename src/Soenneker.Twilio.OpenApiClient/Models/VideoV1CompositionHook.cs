@@ -79,7 +79,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string StatusCallback { get; set; }
 #endif
         /// <summary>The HTTP method we should use to call `status_callback`. Can be `POST` or `GET` and defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionHook_status_callback_method? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionHookStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>Whether intervals with no media are clipped, as specified in the POST request that created the CompositionHook resource. Compositions with `trim` enabled are shorter when the Room is created and no Participant joins for a while as well as if all the Participants leave the room and join later, because those gaps will be removed. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.</summary>
         public bool? Trim { get; set; }
         /// <summary>The absolute URL of the resource.</summary>
@@ -134,7 +134,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "resolution", n => { Resolution = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status_callback", n => { StatusCallback = n.GetStringValue(); } },
-                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionHook_status_callback_method>(); } },
+                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionHookStatusCallbackMethod>(); } },
                 { "trim", n => { Trim = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "video_layout", n => { VideoLayout = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -158,7 +158,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("resolution", Resolution);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("status_callback", StatusCallback);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionHook_status_callback_method>("status_callback_method", StatusCallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionHookStatusCallbackMethod>("status_callback_method", StatusCallbackMethod);
             writer.WriteBoolValue("trim", Trim);
             writer.WriteStringValue("url", Url);
             writer.WriteObjectValue<UntypedNode>("video_layout", VideoLayout);

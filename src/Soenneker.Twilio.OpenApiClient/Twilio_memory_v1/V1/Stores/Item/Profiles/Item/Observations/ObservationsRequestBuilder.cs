@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <summary>
         /// Retrieve a paginated list of transient observations for a specific profile. Observations are sorted by creation time in descending order by default. Results can be filtered by source parameter. Supports response compression for large datasets.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileObservations200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileObservations200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 400 status code</exception>
@@ -61,11 +61,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileObservations200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Observations.ObservationsRequestBuilder.ObservationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileObservations200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Observations.ObservationsRequestBuilder.ObservationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileObservations200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Observations.ObservationsRequestBuilder.ObservationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileObservations200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Observations.ObservationsRequestBuilder.ObservationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -79,7 +79,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileObservations200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileObservations200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileObservations200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileObservations200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create one or more transient observations associated with the specified profile. Supports both single observation creation and batch creation of up to 10 observations. Supports request compression for large batch operations and response compression for the response. All observations will be automatically indexed for semantic search capabilities. The content can be up to 4KB in length and should contain relevant information about the profile. The createdAt and updatedAt timestamps will be automatically set to the current time. Each observation will be created with a unique ID in Twilio Type ID (TTID) format.
@@ -182,7 +182,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
             public DateTimeOffset? CreatedBefore { get; set; }
             /// <summary>Either &apos;ASC&apos; or &apos;DESC&apos; to sort results ascending or descending respectively.</summary>
             [QueryParameter("orderBy")]
-            public global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Observations.GetOrderByQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1OrderBy? OrderBy { get; set; }
             /// <summary>The maximum number of items to return per page, maximum of 1000.</summary>
             [QueryParameter("pageSize")]
             public int? PageSize { get; set; }

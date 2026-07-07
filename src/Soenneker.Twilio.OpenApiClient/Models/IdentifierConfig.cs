@@ -25,21 +25,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Maximum number of historical values to retain.</summary>
         public int? Limit { get; set; }
         /// <summary>&quot;Removal policy to apply when the number of values exceeds the limit andis based on the timestamp of the request when the identifier was added.- `fifo`: First In First Out, removes the oldest values first.- `lifo`: Last In First Out, removes the most recent values first.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_limitPolicy? LimitPolicy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigLimitPolicy? LimitPolicy { get; set; }
         /// <summary>The algorithm to use for matching identifier values.   - `exact`, exact string match.  - `fuzzy`, low precision match allowing for some variations.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_matchingAlgo? MatchingAlgo { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigMatchingAlgo? MatchingAlgo { get; set; }
         /// <summary>The `fuzzy` matching threshold percentage.</summary>
         public int? MatchingThreshold { get; set; }
         /// <summary>&quot;Normalization to apply to the identifier value before storing and matching.- `phone`: Normalize phone numbers to E.164 format.- `email`: Normalize email addresses by coverting to lowercase and removing spaces.- `trim`: Removes spaces from both ends of the string.- `none`: No normalization.**Important Note for Phone Number Normalization:**When using the `phone` normalization option, please adhere to the following guidelines to ensure proper formatting:- All US numbers must be at least valid 10 digit phone numbers with area code. They may also include or omit the \&quot;+1\&quot; prefix.- Non-US numbers must include a 1-3 digit country code (a \&quot;+\&quot; prefix is optional). Non-US national formats are not supported and will be interpreted as US numbers.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_normalization? Normalization { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigNormalization? Normalization { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig"/> and sets the default values.
         /// </summary>
         public IdentifierConfig()
         {
-            LimitPolicy = global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_limitPolicy.Fifo;
-            MatchingAlgo = global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_matchingAlgo.Exact;
-            Normalization = global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_normalization.Trim;
+            EnforceUnique = true;
+            Limit = 100;
+            MatchingThreshold = 75;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -62,10 +62,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "enforceUnique", n => { EnforceUnique = n.GetBoolValue(); } },
                 { "idType", n => { IdType = n.GetStringValue(); } },
                 { "limit", n => { Limit = n.GetIntValue(); } },
-                { "limitPolicy", n => { LimitPolicy = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_limitPolicy>(); } },
-                { "matchingAlgo", n => { MatchingAlgo = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_matchingAlgo>(); } },
+                { "limitPolicy", n => { LimitPolicy = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigLimitPolicy>(); } },
+                { "matchingAlgo", n => { MatchingAlgo = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigMatchingAlgo>(); } },
                 { "matchingThreshold", n => { MatchingThreshold = n.GetIntValue(); } },
-                { "normalization", n => { Normalization = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_normalization>(); } },
+                { "normalization", n => { Normalization = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigNormalization>(); } },
             };
         }
         /// <summary>
@@ -78,10 +78,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("enforceUnique", EnforceUnique);
             writer.WriteStringValue("idType", IdType);
             writer.WriteIntValue("limit", Limit);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_limitPolicy>("limitPolicy", LimitPolicy);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_matchingAlgo>("matchingAlgo", MatchingAlgo);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigLimitPolicy>("limitPolicy", LimitPolicy);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigMatchingAlgo>("matchingAlgo", MatchingAlgo);
             writer.WriteIntValue("matchingThreshold", MatchingThreshold);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig_normalization>("normalization", Normalization);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigNormalization>("normalization", Normalization);
         }
     }
 }

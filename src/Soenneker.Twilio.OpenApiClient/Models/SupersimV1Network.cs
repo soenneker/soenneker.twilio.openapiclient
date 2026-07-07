@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Array of objects identifying the [MCC-MNCs](https://en.wikipedia.org/wiki/Mobile_country_code) that are included in the Network resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1Network_identifiers>? Identifiers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkIdentifiersItem>? Identifiers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1Network_identifiers> Identifiers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkIdentifiersItem> Identifiers { get; set; }
 #endif
         /// <summary>The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the Network resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "identifiers", n => { Identifiers = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1Network_identifiers>(global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1Network_identifiers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "identifiers", n => { Identifiers = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkIdentifiersItem>(global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkIdentifiersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "iso_country", n => { IsoCountry = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -94,7 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1Network_identifiers>("identifiers", Identifiers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkIdentifiersItem>("identifiers", Identifiers);
             writer.WriteStringValue("iso_country", IsoCountry);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);

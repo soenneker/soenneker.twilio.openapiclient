@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URL of the media file associated with the composition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Composition_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Composition_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinks Links { get; set; }
 #endif
         /// <summary>The URL of the media file associated with the composition when stored externally. See [External S3 Compositions](/docs/video/api/external-s3-compositions) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,7 +103,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string StatusCallback { get; set; }
 #endif
         /// <summary>&quot;The HTTP method used to call `status_callback`. Can be: `POST` or `GET`, defaults to `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Composition_status_callback_method? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>Whether to remove intervals with no media, as specified in the POST request that created the composition. Compositions with `trim` enabled are shorter when the Room is created and no Participant joins for a while as well as if all the Participants leave the room and join later, because those gaps will be removed. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.</summary>
         public bool? Trim { get; set; }
         /// <summary>The absolute URL of the resource.</summary>
@@ -128,6 +128,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public VideoV1Composition()
         {
             AdditionalData = new Dictionary<string, object>();
+            Bitrate = 0;
+            Duration = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -156,7 +158,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_deleted", n => { DateDeleted = n.GetDateTimeOffsetValue(); } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
                 { "format", n => { Format = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CompositionEnumFormat>(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Composition_links>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Composition_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinks.CreateFromDiscriminatorValue); } },
                 { "media_external_location", n => { MediaExternalLocation = n.GetStringValue(); } },
                 { "resolution", n => { Resolution = n.GetStringValue(); } },
                 { "room_sid", n => { RoomSid = n.GetStringValue(); } },
@@ -164,7 +166,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "size", n => { Size = n.GetLongValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CompositionEnumStatus>(); } },
                 { "status_callback", n => { StatusCallback = n.GetStringValue(); } },
-                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Composition_status_callback_method>(); } },
+                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionStatusCallbackMethod>(); } },
                 { "trim", n => { Trim = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "video_layout", n => { VideoLayout = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -186,7 +188,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_deleted", DateDeleted);
             writer.WriteIntValue("duration", Duration);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CompositionEnumFormat>("format", Format);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Composition_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinks>("links", Links);
             writer.WriteStringValue("media_external_location", MediaExternalLocation);
             writer.WriteStringValue("resolution", Resolution);
             writer.WriteStringValue("room_sid", RoomSid);
@@ -194,7 +196,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteLongValue("size", Size);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CompositionEnumStatus>("status", Status);
             writer.WriteStringValue("status_callback", StatusCallback);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Composition_status_callback_method>("status_callback_method", StatusCallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionStatusCallbackMethod>("status_callback_method", StatusCallbackMethod);
             writer.WriteBoolValue("trim", Trim);
             writer.WriteStringValue("url", Url);
             writer.WriteObjectValue<UntypedNode>("video_layout", VideoLayout);

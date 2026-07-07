@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Registration data echoed from the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponse_data? Data { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponseDataProperty? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponse_data Data { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponseDataProperty Data { get; set; }
 #endif
         /// <summary>Timestamp of creation.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -118,7 +118,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "comments", n => { Comments = n.GetStringValue(); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponse_data>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponse_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponseDataProperty>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponseDataProperty.CreateFromDiscriminatorValue); } },
                 { "dateCreated", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "dateUpdated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "embeddedSession", n => { EmbeddedSession = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1EmbeddedSession>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1EmbeddedSession.CreateFromDiscriminatorValue); } },
@@ -139,7 +139,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("comments", Comments);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponse_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponseDataProperty>("data", Data);
             writer.WriteDateTimeOffsetValue("dateCreated", DateCreated);
             writer.WriteDateTimeOffsetValue("dateUpdated", DateUpdated);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1EmbeddedSession>("embeddedSession", EmbeddedSession);

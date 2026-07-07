@@ -10,7 +10,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "QUICK_REPLY")]
         #pragma warning disable CS1591
-        QUICK_REPLY,
+        QuickReply,
         #pragma warning restore CS1591
     }
 }

@@ -71,10 +71,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The absolute URLs of the Service&apos;s [Channels](https://www.twilio.com/docs/chat/channels), [Roles](https://www.twilio.com/docs/chat/rest/role-resource), [Bindings](https://www.twilio.com/docs/chat/rest/binding-resource), and [Users](https://www.twilio.com/docs/chat/rest/user-resource).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2Service_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2Service_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLinks Links { get; set; }
 #endif
         /// <summary>An object that describes the properties of media that the service supports. The object contains the `size_limit_mb` property, which describes the size of the largest media file in MB; and the `compatibility_message` property, which contains the message text to send when a media message does not have any text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -156,6 +156,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public ChatV2Service()
         {
             AdditionalData = new Dictionary<string, object>();
+            ConsumptionReportInterval = 0;
+            PostWebhookRetryCount = 0;
+            PreWebhookRetryCount = 0;
+            TypingIndicatorTimeout = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -184,7 +188,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "default_service_role_sid", n => { DefaultServiceRoleSid = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "limits", n => { Limits = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2Service_links>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV2Service_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLinks.CreateFromDiscriminatorValue); } },
                 { "media", n => { Media = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "notifications", n => { Notifications = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "post_webhook_retry_count", n => { PostWebhookRetryCount = n.GetIntValue(); } },
@@ -216,7 +220,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("default_service_role_sid", DefaultServiceRoleSid);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteObjectValue<UntypedNode>("limits", Limits);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2Service_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLinks>("links", Links);
             writer.WriteObjectValue<UntypedNode>("media", Media);
             writer.WriteObjectValue<UntypedNode>("notifications", Notifications);
             writer.WriteIntValue("post_webhook_retry_count", PostWebhookRetryCount);

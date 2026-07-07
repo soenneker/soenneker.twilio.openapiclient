@@ -49,35 +49,35 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations
         /// <summary>
         /// Retrieve a list of Conversations processed by an Intelligence Configuration.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations401">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations403">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations429">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations404Response">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations.ConversationsRequestBuilder.ConversationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations.ConversationsRequestBuilder.ConversationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations.ConversationsRequestBuilder.ConversationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations.ConversationsRequestBuilder.ConversationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations400.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations401.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations403.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations404.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations429.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations401Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations403Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations404Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations500Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversations200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of Conversations processed by an Intelligence Configuration.
@@ -127,11 +127,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("channels")]
-            public global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations.GetChannelsQueryParameterType[]? Channels { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversationsChannelsParameterItem[]? Channels { get; set; }
 #nullable restore
 #else
             [QueryParameter("channels")]
-            public global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations.GetChannelsQueryParameterType[] Channels { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversationsChannelsParameterItem[] Channels { get; set; }
 #endif
             /// <summary>The configuration `id` used to generate the Conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -184,7 +184,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations
 #endif
             /// <summary>Filter by Conversation status.</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConversationsStatusParameter? Status { get; set; }
         }
     }
 }

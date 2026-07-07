@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "in_progress")]
         #pragma warning disable CS1591
-        In_progress,
+        InProgress,
         #pragma warning restore CS1591
         [EnumMember(Value = "timeout")]
         #pragma warning disable CS1591

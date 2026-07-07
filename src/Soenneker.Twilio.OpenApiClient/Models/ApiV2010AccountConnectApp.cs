@@ -39,7 +39,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string CompanyName { get; set; }
 #endif
         /// <summary>The HTTP method we use to call `deauthorize_callback_url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConnectApp_deauthorize_callback_method? DeauthorizeCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConnectAppDeauthorizeCallbackMethod? DeauthorizeCallbackMethod { get; set; }
         /// <summary>The URL we call using the `deauthorize_callback_method` to de-authorize the Connect App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -124,7 +124,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "authorize_redirect_url", n => { AuthorizeRedirectUrl = n.GetStringValue(); } },
                 { "company_name", n => { CompanyName = n.GetStringValue(); } },
-                { "deauthorize_callback_method", n => { DeauthorizeCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConnectApp_deauthorize_callback_method>(); } },
+                { "deauthorize_callback_method", n => { DeauthorizeCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConnectAppDeauthorizeCallbackMethod>(); } },
                 { "deauthorize_callback_url", n => { DeauthorizeCallbackUrl = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
@@ -144,7 +144,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("authorize_redirect_url", AuthorizeRedirectUrl);
             writer.WriteStringValue("company_name", CompanyName);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConnectApp_deauthorize_callback_method>("deauthorize_callback_method", DeauthorizeCallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConnectAppDeauthorizeCallbackMethod>("deauthorize_callback_method", DeauthorizeCallbackMethod);
             writer.WriteStringValue("deauthorize_callback_url", DeauthorizeCallbackUrl);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("friendly_name", FriendlyName);

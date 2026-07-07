@@ -77,7 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string SourceId { get; set; }
 #endif
         /// <summary>The current status of the transcription operation</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscription_status? Status { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatus? Status { get; set; }
         /// <summary>Unique identifier for a Transcription configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -131,7 +131,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resolvedConfiguration", n => { ResolvedConfiguration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration.CreateFromDiscriminatorValue); } },
                 { "sourceId", n => { SourceId = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscription_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatus>(); } },
                 { "transcriptionConfigurationId", n => { TranscriptionConfigurationId = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -154,7 +154,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>("participants", Participants);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration>("resolvedConfiguration", ResolvedConfiguration);
             writer.WriteStringValue("sourceId", SourceId);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscription_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatus>("status", Status);
             writer.WriteStringValue("transcriptionConfigurationId", TranscriptionConfigurationId);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("url", Url);

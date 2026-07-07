@@ -10,7 +10,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "VP8")]
         #pragma warning disable CS1591
-        VP8,
+        Vp8,
         #pragma warning restore CS1591
         [EnumMember(Value = "H264")]
         #pragma warning disable CS1591

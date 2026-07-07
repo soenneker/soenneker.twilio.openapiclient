@@ -87,18 +87,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains an absolute API resource URL to access the delivery &amp; read receipts of this message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessage_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessage_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageLinks Links { get; set; }
 #endif
         /// <summary>&quot;An array of objects that describe the Message&apos;s media, if the message contains media. Each object contains these fields: `content_type` with the MIME type of the media, `filename` with the name of the media, `sid` with the SID of the Media resource, and `size` with the media object&apos;s file size in bytes. If the Message has no media, this value is `null`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessage_media>? Media { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageMediaItem>? Media { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessage_media> Media { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageMediaItem> Media { get; set; }
 #endif
         /// <summary>The unique ID of messages&apos;s author participant. Null in case of `system` sent message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -130,6 +130,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public ConversationsV1ServiceServiceConversationServiceConversationMessage()
         {
             AdditionalData = new Dictionary<string, object>();
+            Index = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -160,8 +161,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "delivery", n => { Delivery = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "index", n => { Index = n.GetIntValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessage_links>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessage_links.CreateFromDiscriminatorValue); } },
-                { "media", n => { Media = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessage_media>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessage_media.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageLinks.CreateFromDiscriminatorValue); } },
+                { "media", n => { Media = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageMediaItem>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageMediaItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "participant_sid", n => { ParticipantSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -185,8 +186,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteObjectValue<UntypedNode>("delivery", Delivery);
             writer.WriteIntValue("index", Index);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessage_links>("links", Links);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessage_media>("media", Media);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageLinks>("links", Links);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageMediaItem>("media", Media);
             writer.WriteStringValue("participant_sid", ParticipantSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);

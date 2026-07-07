@@ -47,10 +47,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Room subresources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinks Links { get; set; }
 #endif
         /// <summary>Maximum number of participants allowed in the room at the same time allowed by the application settings.</summary>
         public int? MaxConcurrentParticipants { get; set; }
@@ -91,7 +91,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string StatusCallback { get; set; }
 #endif
         /// <summary>HTTP method provided for status callback URL.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary_status_callback_method? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>Combined amount of participant time in the room.</summary>
         public long? TotalParticipantDurationSec { get; set; }
         /// <summary>Combined amount of recorded seconds for participants in the room.</summary>
@@ -142,7 +142,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "edge_location", n => { EdgeLocation = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEdgeLocation>(); } },
                 { "end_reason", n => { EndReason = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEndReason>(); } },
                 { "end_time", n => { EndTime = n.GetDateTimeOffsetValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary_links>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinks>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinks.CreateFromDiscriminatorValue); } },
                 { "max_concurrent_participants", n => { MaxConcurrentParticipants = n.GetIntValue(); } },
                 { "max_participants", n => { MaxParticipants = n.GetIntValue(); } },
                 { "media_region", n => { MediaRegion = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumTwilioRealm>(); } },
@@ -153,7 +153,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "room_status", n => { RoomStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomStatus>(); } },
                 { "room_type", n => { RoomType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomType>(); } },
                 { "status_callback", n => { StatusCallback = n.GetStringValue(); } },
-                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary_status_callback_method>(); } },
+                { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryStatusCallbackMethod>(); } },
                 { "total_participant_duration_sec", n => { TotalParticipantDurationSec = n.GetLongValue(); } },
                 { "total_recording_duration_sec", n => { TotalRecordingDurationSec = n.GetLongValue(); } },
                 { "unique_participant_identities", n => { UniqueParticipantIdentities = n.GetIntValue(); } },
@@ -177,7 +177,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEdgeLocation>("edge_location", EdgeLocation);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEndReason>("end_reason", EndReason);
             writer.WriteDateTimeOffsetValue("end_time", EndTime);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinks>("links", Links);
             writer.WriteIntValue("max_concurrent_participants", MaxConcurrentParticipants);
             writer.WriteIntValue("max_participants", MaxParticipants);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumTwilioRealm>("media_region", MediaRegion);
@@ -188,7 +188,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomStatus>("room_status", RoomStatus);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomType>("room_type", RoomType);
             writer.WriteStringValue("status_callback", StatusCallback);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary_status_callback_method>("status_callback_method", StatusCallbackMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryStatusCallbackMethod>("status_callback_method", StatusCallbackMethod);
             writer.WriteLongValue("total_participant_duration_sec", TotalParticipantDurationSec);
             writer.WriteLongValue("total_recording_duration_sec", TotalRecordingDurationSec);
             writer.WriteIntValue("unique_participant_identities", UniqueParticipantIdentities);

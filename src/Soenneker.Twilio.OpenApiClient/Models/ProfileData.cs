@@ -16,10 +16,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Multiple trait groups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProfileData_traits? Traits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProfileDataTraits? Traits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProfileData_traits Traits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProfileDataTraits Traits { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +39,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "traits", n => { Traits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfileData_traits>(global::Soenneker.Twilio.OpenApiClient.Models.ProfileData_traits.CreateFromDiscriminatorValue); } },
+                { "traits", n => { Traits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfileDataTraits>(global::Soenneker.Twilio.OpenApiClient.Models.ProfileDataTraits.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfileData_traits>("traits", Traits);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfileDataTraits>("traits", Traits);
         }
     }
 }

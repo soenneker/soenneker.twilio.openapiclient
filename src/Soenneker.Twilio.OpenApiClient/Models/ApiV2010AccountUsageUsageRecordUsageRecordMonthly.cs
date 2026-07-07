@@ -88,10 +88,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of related resources identified by their URIs. For more information, see [List Subresources](https://www.twilio.com/docs/usage/api/usage-record#list-subresources).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageRecordUsageRecordMonthly_subresource_uris? SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageRecordUsageRecordMonthlySubresourceUris? SubresourceUris { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageRecordUsageRecordMonthly_subresource_uris SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageRecordUsageRecordMonthlySubresourceUris SubresourceUris { get; set; }
 #endif
         /// <summary>The URI of the resource, relative to `https://api.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -153,7 +153,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "price", n => { Price = n.GetDoubleValue(); } },
                 { "price_unit", n => { PriceUnit = n.GetStringValue(); } },
                 { "start_date", n => { StartDate = n.GetDateValue(); } },
-                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageRecordUsageRecordMonthly_subresource_uris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageRecordUsageRecordMonthly_subresource_uris.CreateFromDiscriminatorValue); } },
+                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageRecordUsageRecordMonthlySubresourceUris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageRecordUsageRecordMonthlySubresourceUris.CreateFromDiscriminatorValue); } },
                 { "uri", n => { Uri = n.GetStringValue(); } },
                 { "usage", n => { Usage = n.GetStringValue(); } },
                 { "usage_unit", n => { UsageUnit = n.GetStringValue(); } },
@@ -177,7 +177,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDoubleValue("price", Price);
             writer.WriteStringValue("price_unit", PriceUnit);
             writer.WriteDateValue("start_date", StartDate);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageRecordUsageRecordMonthly_subresource_uris>("subresource_uris", SubresourceUris);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageRecordUsageRecordMonthlySubresourceUris>("subresource_uris", SubresourceUris);
             writer.WriteStringValue("uri", Uri);
             writer.WriteStringValue("usage", Usage);
             writer.WriteStringValue("usage_unit", UsageUnit);

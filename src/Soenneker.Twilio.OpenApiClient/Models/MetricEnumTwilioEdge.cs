@@ -10,23 +10,23 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "unknown_edge")]
         #pragma warning disable CS1591
-        Unknown_edge,
+        UnknownEdge,
         #pragma warning restore CS1591
         [EnumMember(Value = "carrier_edge")]
         #pragma warning disable CS1591
-        Carrier_edge,
+        CarrierEdge,
         #pragma warning restore CS1591
         [EnumMember(Value = "sip_edge")]
         #pragma warning disable CS1591
-        Sip_edge,
+        SipEdge,
         #pragma warning restore CS1591
         [EnumMember(Value = "sdk_edge")]
         #pragma warning disable CS1591
-        Sdk_edge,
+        SdkEdge,
         #pragma warning restore CS1591
         [EnumMember(Value = "client_edge")]
         #pragma warning disable CS1591
-        Client_edge,
+        ClientEdge,
         #pragma warning restore CS1591
     }
 }

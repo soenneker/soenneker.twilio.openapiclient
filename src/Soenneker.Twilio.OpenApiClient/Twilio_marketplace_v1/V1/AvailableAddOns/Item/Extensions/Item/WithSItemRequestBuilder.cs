@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOns.Item.Extensions.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_marketplace_v1\v1\AvailableAddOns\{AvailableAddOnS-id}\Extensions\{Sid}
+    /// Builds and executes requests for operations under \twilio_marketplace_v1\v1\AvailableAddOns\{availableAddOnS-id}\Extensions\{sid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOn
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_marketplace_v1/v1/AvailableAddOns/{AvailableAddOnS%2Did}/Extensions/{Sid}", pathParameters)
+        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_marketplace_v1/v1/AvailableAddOns/{availableAddOnS%2Did}/Extensions/{sid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOn
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_marketplace_v1/v1/AvailableAddOns/{AvailableAddOnS%2Did}/Extensions/{Sid}", rawUrl)
+        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_marketplace_v1/v1/AvailableAddOns/{availableAddOnS%2Did}/Extensions/{sid}", rawUrl)
         {
         }
         /// <summary>

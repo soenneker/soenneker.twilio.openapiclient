@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Portabilit
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("PhoneNumber", position);
+                urlTplParams.Add("phoneNumber", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting.Portability.PhoneNumber.Item.WithPhoneNumberItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

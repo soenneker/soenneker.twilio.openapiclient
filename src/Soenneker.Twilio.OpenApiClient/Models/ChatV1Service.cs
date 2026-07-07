@@ -71,10 +71,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The absolute URLs of the Service&apos;s [Channels](https://www.twilio.com/docs/chat/api/channels), [Roles](https://www.twilio.com/docs/chat/api/roles), and [Users](https://www.twilio.com/docs/chat/api/users).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1Service_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1Service_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLinks Links { get; set; }
 #endif
         /// <summary>The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -152,6 +152,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public ChatV1Service()
         {
             AdditionalData = new Dictionary<string, object>();
+            ConsumptionReportInterval = 0;
+            TypingIndicatorTimeout = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -180,7 +182,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "default_service_role_sid", n => { DefaultServiceRoleSid = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "limits", n => { Limits = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1Service_links>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV1Service_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLinks.CreateFromDiscriminatorValue); } },
                 { "notifications", n => { Notifications = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "post_webhook_url", n => { PostWebhookUrl = n.GetStringValue(); } },
                 { "pre_webhook_url", n => { PreWebhookUrl = n.GetStringValue(); } },
@@ -210,7 +212,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("default_service_role_sid", DefaultServiceRoleSid);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteObjectValue<UntypedNode>("limits", Limits);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1Service_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLinks>("links", Links);
             writer.WriteObjectValue<UntypedNode>("notifications", Notifications);
             writer.WriteStringValue("post_webhook_url", PostWebhookUrl);
             writer.WriteStringValue("pre_webhook_url", PreWebhookUrl);

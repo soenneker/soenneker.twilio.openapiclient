@@ -10,7 +10,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "unknown_answered_by")]
         #pragma warning disable CS1591
-        Unknown_answered_by,
+        UnknownAnsweredBy,
         #pragma warning restore CS1591
         [EnumMember(Value = "human")]
         #pragma warning disable CS1591

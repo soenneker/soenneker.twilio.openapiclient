@@ -71,6 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public MonitorV2AlarmCreateObject()
         {
             AdditionalData = new Dictionary<string, object>();
+            Enabled = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

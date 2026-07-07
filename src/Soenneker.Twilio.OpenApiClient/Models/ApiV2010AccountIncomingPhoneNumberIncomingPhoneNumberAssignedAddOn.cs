@@ -81,10 +81,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of related resources identified by their relative URIs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOn_subresource_uris? SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnSubresourceUris? SubresourceUris { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOn_subresource_uris SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnSubresourceUris SubresourceUris { get; set; }
 #endif
         /// <summary>An application-defined string that uniquely identifies the resource. It can be used in place of the resource&apos;s `sid` in the URL to address the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -135,7 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "resource_sid", n => { ResourceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOn_subresource_uris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOn_subresource_uris.CreateFromDiscriminatorValue); } },
+                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnSubresourceUris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnSubresourceUris.CreateFromDiscriminatorValue); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
                 { "uri", n => { Uri = n.GetStringValue(); } },
             };
@@ -155,7 +155,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("resource_sid", ResourceSid);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOn_subresource_uris>("subresource_uris", SubresourceUris);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnSubresourceUris>("subresource_uris", SubresourceUris);
             writer.WriteStringValue("unique_name", UniqueName);
             writer.WriteStringValue("uri", Uri);
             writer.WriteAdditionalData(AdditionalData);

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_iam_organizations\Organizations\{OrganizationSid}
+    /// Builds and executes requests for operations under \twilio_iam_organizations\Organizations\{organizationSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithOrganizationSItemRequestBuilder : BaseRequestBuilder
@@ -37,7 +37,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithOrganizationSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}", pathParameters)
+        public WithOrganizationSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{organizationSid}", pathParameters)
         {
         }
         /// <summary>
@@ -45,7 +45,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithOrganizationSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{OrganizationSid}", rawUrl)
+        public WithOrganizationSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_iam_organizations/Organizations/{organizationSid}", rawUrl)
         {
         }
     }

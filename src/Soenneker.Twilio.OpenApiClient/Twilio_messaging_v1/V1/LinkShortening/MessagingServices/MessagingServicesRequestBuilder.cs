@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.LinkShortening.M
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("MessagingServiceSid", position);
+                urlTplParams.Add("messagingServiceSid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.LinkShortening.MessagingServices.Item.WithMessagingServiceSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

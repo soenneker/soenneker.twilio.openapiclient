@@ -38,6 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public InsightsV2CreatePhoneNumbersReportRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            Size = 1000;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

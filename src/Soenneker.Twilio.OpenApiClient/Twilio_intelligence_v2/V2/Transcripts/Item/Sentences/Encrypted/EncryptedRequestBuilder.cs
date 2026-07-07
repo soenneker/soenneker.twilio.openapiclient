@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.Item.Sentences.Encrypted
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_intelligence_v2\v2\Transcripts\{S-id}\Sentences\Encrypted
+    /// Builds and executes requests for operations under \twilio_intelligence_v2\v2\Transcripts\{s-id}\Sentences\Encrypted
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EncryptedRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EncryptedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{S%2Did}/Sentences/Encrypted{?Redacted*}", pathParameters)
+        public EncryptedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{s%2Did}/Sentences/Encrypted{?Redacted*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EncryptedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{S%2Did}/Sentences/Encrypted{?Redacted*}", rawUrl)
+        public EncryptedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Transcripts/{s%2Did}/Sentences/Encrypted{?Redacted*}", rawUrl)
         {
         }
         /// <summary>

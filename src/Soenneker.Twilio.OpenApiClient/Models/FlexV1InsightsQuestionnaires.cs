@@ -51,10 +51,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The list of questions with category for a questionnaire</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnaires_questions>? Questions { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionsItem>? Questions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnaires_questions> Questions { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionsItem> Questions { get; set; }
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,7 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "questionnaire_sid", n => { QuestionnaireSid = n.GetStringValue(); } },
-                { "questions", n => { Questions = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnaires_questions>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnaires_questions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "questions", n => { Questions = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionsItem>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("questionnaire_sid", QuestionnaireSid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnaires_questions>("questions", Questions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionsItem>("questions", Questions);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

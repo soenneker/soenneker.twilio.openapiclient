@@ -9,27 +9,27 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "TOO_SHORT")]
         #pragma warning disable CS1591
-        TOO_SHORT,
+        TooShort,
         #pragma warning restore CS1591
         [EnumMember(Value = "TOO_LONG")]
         #pragma warning disable CS1591
-        TOO_LONG,
+        TooLong,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_BUT_POSSIBLE")]
         #pragma warning disable CS1591
-        INVALID_BUT_POSSIBLE,
+        InvalidButPossible,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_COUNTRY_CODE")]
         #pragma warning disable CS1591
-        INVALID_COUNTRY_CODE,
+        InvalidCountryCode,
         #pragma warning restore CS1591
         [EnumMember(Value = "INVALID_LENGTH")]
         #pragma warning disable CS1591
-        INVALID_LENGTH,
+        InvalidLength,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOT_A_NUMBER")]
         #pragma warning disable CS1591
-        NOT_A_NUMBER,
+        NotANumber,
         #pragma warning restore CS1591
     }
 }

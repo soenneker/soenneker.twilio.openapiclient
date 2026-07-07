@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannel_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannel_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelLinks Links { get; set; }
 #endif
         /// <summary>The unique string created by Twilio to identify an Interaction Channel resource, prefixed with UO.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "error_code", n => { ErrorCode = n.GetIntValue(); } },
                 { "error_message", n => { ErrorMessage = n.GetStringValue(); } },
                 { "interaction_sid", n => { InteractionSid = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannel_links>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannel_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelLinks>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelLinks.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelEnumChannelStatus>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelEnumType>(); } },
@@ -105,7 +105,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("error_code", ErrorCode);
             writer.WriteStringValue("error_message", ErrorMessage);
             writer.WriteStringValue("interaction_sid", InteractionSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannel_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelLinks>("links", Links);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelEnumChannelStatus>("status", Status);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelEnumType>("type", Type);

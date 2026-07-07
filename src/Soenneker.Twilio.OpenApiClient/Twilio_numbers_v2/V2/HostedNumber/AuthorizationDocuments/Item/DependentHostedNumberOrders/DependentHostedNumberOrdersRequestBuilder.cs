@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.AuthorizationDocuments.Item.DependentHostedNumberOrders
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_numbers_v2\v2\HostedNumber\AuthorizationDocuments\{S-id}\DependentHostedNumberOrders
+    /// Builds and executes requests for operations under \twilio_numbers_v2\v2\HostedNumber\AuthorizationDocuments\{s-id}\DependentHostedNumberOrders
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DependentHostedNumberOrdersRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Autho
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DependentHostedNumberOrdersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/HostedNumber/AuthorizationDocuments/{S%2Did}/DependentHostedNumberOrders{?FriendlyName*,IncomingPhoneNumberSid*,Page*,PageSize*,PageToken*,PhoneNumber*,Status*}", pathParameters)
+        public DependentHostedNumberOrdersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/HostedNumber/AuthorizationDocuments/{s%2Did}/DependentHostedNumberOrders{?FriendlyName*,IncomingPhoneNumberSid*,Page*,PageSize*,PageToken*,PhoneNumber*,Status*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Autho
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DependentHostedNumberOrdersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/HostedNumber/AuthorizationDocuments/{S%2Did}/DependentHostedNumberOrders{?FriendlyName*,IncomingPhoneNumberSid*,Page*,PageSize*,PageToken*,PhoneNumber*,Status*}", rawUrl)
+        public DependentHostedNumberOrdersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/HostedNumber/AuthorizationDocuments/{s%2Did}/DependentHostedNumberOrders{?FriendlyName*,IncomingPhoneNumberSid*,Page*,PageSize*,PageToken*,PhoneNumber*,Status*}", rawUrl)
         {
         }
         /// <summary>

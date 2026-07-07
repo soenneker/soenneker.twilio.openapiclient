@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_pricing_v2.V2.Voice.Numbers.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDestinationNumberItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v2/v2/Voice/Numbers/{DestinationNumber}{?OriginationNumber*}", pathParameters)
+        public WithDestinationNumberItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v2/v2/Voice/Numbers/{destinationNumber}{?OriginationNumber*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_pricing_v2.V2.Voice.Numbers.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDestinationNumberItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v2/v2/Voice/Numbers/{DestinationNumber}{?OriginationNumber*}", rawUrl)
+        public WithDestinationNumberItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_pricing_v2/v2/Voice/Numbers/{destinationNumber}{?OriginationNumber*}", rawUrl)
         {
         }
         /// <summary>

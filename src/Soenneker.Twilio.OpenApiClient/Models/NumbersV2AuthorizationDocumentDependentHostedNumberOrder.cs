@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A mapping of capabilities this hosted phone number will have enabled on Twilio&apos;s platform.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocumentDependentHostedNumberOrder_capabilities? Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocumentDependentHostedNumberOrderCapabilities? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocumentDependentHostedNumberOrder_capabilities Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocumentDependentHostedNumberOrderCapabilities Capabilities { get; set; }
 #endif
         /// <summary>Email recipients who will be informed when an Authorization Document has been sent and signed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -168,7 +168,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "address_sid", n => { AddressSid = n.GetStringValue(); } },
                 { "bulk_hosting_request_sid", n => { BulkHostingRequestSid = n.GetStringValue(); } },
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocumentDependentHostedNumberOrder_capabilities>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocumentDependentHostedNumberOrder_capabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocumentDependentHostedNumberOrderCapabilities>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocumentDependentHostedNumberOrderCapabilities.CreateFromDiscriminatorValue); } },
                 { "cc_emails", n => { CcEmails = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "contact_phone_number", n => { ContactPhoneNumber = n.GetStringValue(); } },
                 { "contact_title", n => { ContactTitle = n.GetStringValue(); } },
@@ -195,7 +195,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("address_sid", AddressSid);
             writer.WriteStringValue("bulk_hosting_request_sid", BulkHostingRequestSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocumentDependentHostedNumberOrder_capabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2AuthorizationDocumentDependentHostedNumberOrderCapabilities>("capabilities", Capabilities);
             writer.WriteCollectionOfPrimitiveValues<string>("cc_emails", CcEmails);
             writer.WriteStringValue("contact_phone_number", ContactPhoneNumber);
             writer.WriteStringValue("contact_title", ContactTitle);

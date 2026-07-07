@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v1.V1.PhoneNumbers.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPhoneNumberItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v1/v1/PhoneNumbers/{PhoneNumber}{?AddOns*,AddOnsData*,CountryCode*,Type*}", pathParameters)
+        public WithPhoneNumberItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v1/v1/PhoneNumbers/{phoneNumber}{?AddOns*,AddOnsData*,CountryCode*,Type*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v1.V1.PhoneNumbers.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPhoneNumberItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v1/v1/PhoneNumbers/{PhoneNumber}{?AddOns*,AddOnsData*,CountryCode*,Type*}", rawUrl)
+        public WithPhoneNumberItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v1/v1/PhoneNumbers/{phoneNumber}{?AddOns*,AddOnsData*,CountryCode*,Type*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumber"/></returns>

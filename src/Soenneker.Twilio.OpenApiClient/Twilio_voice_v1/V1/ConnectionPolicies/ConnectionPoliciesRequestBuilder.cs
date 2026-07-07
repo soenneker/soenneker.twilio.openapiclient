@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.ConnectionPolicies
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ConnectionPolicyS%2Did", position);
+                urlTplParams.Add("connectionPolicyS%2Did", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.ConnectionPolicies.Item.ConnectionPolicySItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -67,11 +67,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.ConnectionPolicies
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ConnectionPolicy?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateConnectionPolicy body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ConnectionPolicy?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateConnectionPolicyXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ConnectionPolicy> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateConnectionPolicy body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ConnectionPolicy> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateConnectionPolicyXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -99,11 +99,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.ConnectionPolicies
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateConnectionPolicy body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateConnectionPolicyXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateConnectionPolicy body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateConnectionPolicyXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

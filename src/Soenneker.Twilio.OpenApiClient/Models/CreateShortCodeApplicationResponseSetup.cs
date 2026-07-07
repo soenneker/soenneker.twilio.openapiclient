@@ -28,7 +28,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The free_to_end_user property</summary>
         public bool? FreeToEndUser { get; set; }
         /// <summary>The lease_type property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_lease_type? LeaseType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupLeaseType? LeaseType { get; set; }
         /// <summary>The migrated_live_traffic property</summary>
         public bool? MigratedLiveTraffic { get; set; }
         /// <summary>The migrated_mms_enabled property</summary>
@@ -36,9 +36,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The mms_enabled property</summary>
         public bool? MmsEnabled { get; set; }
         /// <summary>The payment_frequency property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_payment_frequency? PaymentFrequency { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupPaymentFrequency? PaymentFrequency { get; set; }
         /// <summary>The request_type property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_request_type? RequestType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupRequestType? RequestType { get; set; }
         /// <summary>The short_code_preference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -48,7 +48,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string ShortCodePreference { get; set; }
 #endif
         /// <summary>The traffic_type property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_traffic_type? TrafficType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupTrafficType? TrafficType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup"/> and sets the default values.
         /// </summary>
@@ -77,14 +77,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "charges_apply", n => { ChargesApply = n.GetBoolValue(); } },
                 { "current_provider", n => { CurrentProvider = n.GetStringValue(); } },
                 { "free_to_end_user", n => { FreeToEndUser = n.GetBoolValue(); } },
-                { "lease_type", n => { LeaseType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_lease_type>(); } },
+                { "lease_type", n => { LeaseType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupLeaseType>(); } },
                 { "migrated_live_traffic", n => { MigratedLiveTraffic = n.GetBoolValue(); } },
                 { "migrated_mms_enabled", n => { MigratedMmsEnabled = n.GetBoolValue(); } },
                 { "mms_enabled", n => { MmsEnabled = n.GetBoolValue(); } },
-                { "payment_frequency", n => { PaymentFrequency = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_payment_frequency>(); } },
-                { "request_type", n => { RequestType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_request_type>(); } },
+                { "payment_frequency", n => { PaymentFrequency = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupPaymentFrequency>(); } },
+                { "request_type", n => { RequestType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupRequestType>(); } },
                 { "short_code_preference", n => { ShortCodePreference = n.GetStringValue(); } },
-                { "traffic_type", n => { TrafficType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_traffic_type>(); } },
+                { "traffic_type", n => { TrafficType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupTrafficType>(); } },
             };
         }
         /// <summary>
@@ -97,14 +97,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("charges_apply", ChargesApply);
             writer.WriteStringValue("current_provider", CurrentProvider);
             writer.WriteBoolValue("free_to_end_user", FreeToEndUser);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_lease_type>("lease_type", LeaseType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupLeaseType>("lease_type", LeaseType);
             writer.WriteBoolValue("migrated_live_traffic", MigratedLiveTraffic);
             writer.WriteBoolValue("migrated_mms_enabled", MigratedMmsEnabled);
             writer.WriteBoolValue("mms_enabled", MmsEnabled);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_payment_frequency>("payment_frequency", PaymentFrequency);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_request_type>("request_type", RequestType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupPaymentFrequency>("payment_frequency", PaymentFrequency);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupRequestType>("request_type", RequestType);
             writer.WriteStringValue("short_code_preference", ShortCodePreference);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup_traffic_type>("traffic_type", TrafficType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupTrafficType>("traffic_type", TrafficType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

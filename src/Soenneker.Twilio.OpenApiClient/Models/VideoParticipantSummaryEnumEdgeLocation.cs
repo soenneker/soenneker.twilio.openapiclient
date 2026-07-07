@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "sao_paulo")]
         #pragma warning disable CS1591
-        Sao_paulo,
+        SaoPaulo,
         #pragma warning restore CS1591
         [EnumMember(Value = "roaming")]
         #pragma warning disable CS1591

@@ -9,23 +9,23 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "FIVE_MINS")]
         #pragma warning disable CS1591
-        FIVE_MINS,
+        FiveMins,
         #pragma warning restore CS1591
         [EnumMember(Value = "FIFTEEN_MINS")]
         #pragma warning disable CS1591
-        FIFTEEN_MINS,
+        FifteenMins,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONE_HOUR")]
         #pragma warning disable CS1591
-        ONE_HOUR,
+        OneHour,
         #pragma warning restore CS1591
         [EnumMember(Value = "TWELVE_HOURS")]
         #pragma warning disable CS1591
-        TWELVE_HOURS,
+        TwelveHours,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONE_DAY")]
         #pragma warning disable CS1591
-        ONE_DAY,
+        OneDay,
         #pragma warning restore CS1591
     }
 }

@@ -76,10 +76,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The sign_up_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp_sign_up_options?>? SignUpOptions { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUpSignUpOptionsItem?>? SignUpOptions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp_sign_up_options?> SignUpOptions { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUpSignUpOptionsItem?> SignUpOptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp"/> and sets the default values.
@@ -114,7 +114,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "online_web_form_message", n => { OnlineWebFormMessage = n.GetStringValue(); } },
                 { "other_form_message", n => { OtherFormMessage = n.GetStringValue(); } },
                 { "sign_up_confirmation_message", n => { SignUpConfirmationMessage = n.GetStringValue(); } },
-                { "sign_up_options", n => { SignUpOptions = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp_sign_up_options>()?.AsList(); } },
+                { "sign_up_options", n => { SignUpOptions = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUpSignUpOptionsItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -132,7 +132,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("online_web_form_message", OnlineWebFormMessage);
             writer.WriteStringValue("other_form_message", OtherFormMessage);
             writer.WriteStringValue("sign_up_confirmation_message", SignUpConfirmationMessage);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUp_sign_up_options>("sign_up_options", SignUpOptions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUpSignUpOptionsItem>("sign_up_options", SignUpOptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Registration data organized by section (alphanumericSender, business, useCase, authorizedRepresentative, officer, businessAddress).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationRequest_data? Data { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationRequestDataProperty? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationRequest_data Data { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationRequestDataProperty Data { get; set; }
 #endif
         /// <summary>Human-readable name for the registration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "comments", n => { Comments = n.GetStringValue(); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationRequest_data>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationRequest_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationRequestDataProperty>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationRequestDataProperty.CreateFromDiscriminatorValue); } },
                 { "friendlyName", n => { FriendlyName = n.GetStringValue(); } },
                 { "regulationId", n => { RegulationId = n.GetStringValue(); } },
                 { "regulationVersion", n => { RegulationVersion = n.GetIntValue(); } },
@@ -115,7 +115,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("comments", Comments);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationRequest_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationRequestDataProperty>("data", Data);
             writer.WriteStringValue("friendlyName", FriendlyName);
             writer.WriteStringValue("regulationId", RegulationId);
             writer.WriteIntValue("regulationVersion", RegulationVersion);

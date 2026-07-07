@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.Marketplace.InstalledAddOns.Item.Extensions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_preview\marketplace\InstalledAddOns\{InstalledAddOnS-id}\Extensions
+    /// Builds and executes requests for operations under \twilio_preview\marketplace\InstalledAddOns\{installedAddOnS-id}\Extensions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExtensionsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.Marketplace.InstalledAdd
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Sid", position);
+                urlTplParams.Add("sid", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_preview.Marketplace.InstalledAddOns.Item.Extensions.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.Marketplace.InstalledAdd
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExtensionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_preview/marketplace/InstalledAddOns/{InstalledAddOnS%2Did}/Extensions{?Page*,PageSize*,PageToken*}", pathParameters)
+        public ExtensionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_preview/marketplace/InstalledAddOns/{installedAddOnS%2Did}/Extensions{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.Marketplace.InstalledAdd
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExtensionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_preview/marketplace/InstalledAddOns/{InstalledAddOnS%2Did}/Extensions{?Page*,PageSize*,PageToken*}", rawUrl)
+        public ExtensionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_preview/marketplace/InstalledAddOns/{installedAddOnS%2Did}/Extensions{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

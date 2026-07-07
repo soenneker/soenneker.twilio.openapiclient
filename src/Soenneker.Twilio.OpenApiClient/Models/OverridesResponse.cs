@@ -15,7 +15,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The original line type</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse_original_line_type? OriginalLineType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOriginalLineType? OriginalLineType { get; set; }
         /// <summary>The Account SID for the user who made the override</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -25,7 +25,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string OverriddenByAccountSid { get; set; }
 #endif
         /// <summary>The new line type after the override</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse_overridden_line_type? OverriddenLineType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOverriddenLineType? OverriddenLineType { get; set; }
         /// <summary>The reason for the override</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,9 +69,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "original_line_type", n => { OriginalLineType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse_original_line_type>(); } },
+                { "original_line_type", n => { OriginalLineType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOriginalLineType>(); } },
                 { "overridden_by_account_sid", n => { OverriddenByAccountSid = n.GetStringValue(); } },
-                { "overridden_line_type", n => { OverriddenLineType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse_overridden_line_type>(); } },
+                { "overridden_line_type", n => { OverriddenLineType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOverriddenLineType>(); } },
                 { "override_reason", n => { OverrideReason = n.GetStringValue(); } },
                 { "override_timestamp", n => { OverrideTimestamp = n.GetDateTimeOffsetValue(); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
@@ -84,9 +84,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse_original_line_type>("original_line_type", OriginalLineType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOriginalLineType>("original_line_type", OriginalLineType);
             writer.WriteStringValue("overridden_by_account_sid", OverriddenByAccountSid);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse_overridden_line_type>("overridden_line_type", OverriddenLineType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOverriddenLineType>("overridden_line_type", OverriddenLineType);
             writer.WriteStringValue("override_reason", OverrideReason);
             writer.WriteDateTimeOffsetValue("override_timestamp", OverrideTimestamp);
             writer.WriteStringValue("phone_number", PhoneNumber);

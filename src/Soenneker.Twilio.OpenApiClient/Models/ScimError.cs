@@ -44,7 +44,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public List<string> Schemas { get; set; }
 #endif
         /// <summary>A scimType error code as defined in RFC7644</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ScimError_scimType? ScimType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ScimErrorScimType? ScimType { get; set; }
         /// <summary>Http status code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "detail", n => { Detail = n.GetStringValue(); } },
                 { "moreInfo", n => { MoreInfo = n.GetStringValue(); } },
                 { "schemas", n => { Schemas = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "scimType", n => { ScimType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ScimError_scimType>(); } },
+                { "scimType", n => { ScimType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ScimErrorScimType>(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
             };
         }
@@ -97,7 +97,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("detail", Detail);
             writer.WriteStringValue("moreInfo", MoreInfo);
             writer.WriteCollectionOfPrimitiveValues<string>("schemas", Schemas);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ScimError_scimType>("scimType", ScimType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ScimErrorScimType>("scimType", ScimType);
             writer.WriteStringValue("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }

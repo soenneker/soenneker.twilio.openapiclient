@@ -9,7 +9,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "VP8")]
         #pragma warning disable CS1591
-        VP8,
+        Vp8,
         #pragma warning restore CS1591
         [EnumMember(Value = "H264")]
         #pragma warning disable CS1591
@@ -17,11 +17,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "OPUS")]
         #pragma warning disable CS1591
-        OPUS,
+        Opus,
         #pragma warning restore CS1591
         [EnumMember(Value = "PCMU")]
         #pragma warning disable CS1591
-        PCMU,
+        Pcmu,
         #pragma warning restore CS1591
     }
 }

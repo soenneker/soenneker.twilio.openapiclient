@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Services.Item.Operators.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_intelligence_v2\v2\Services\{ServiceS-id}\Operators\{OperatorSid}
+    /// Builds and executes requests for operations under \twilio_intelligence_v2\v2\Services\{serviceS-id}\Operators\{operatorSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithOperatorSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Services.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithOperatorSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Services/{ServiceS%2Did}/Operators/{OperatorSid}", pathParameters)
+        public WithOperatorSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Services/{serviceS%2Did}/Operators/{operatorSid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Services.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithOperatorSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Services/{ServiceS%2Did}/Operators/{OperatorSid}", rawUrl)
+        public WithOperatorSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_intelligence_v2/v2/Services/{serviceS%2Did}/Operators/{operatorSid}", rawUrl)
         {
         }
         /// <summary>

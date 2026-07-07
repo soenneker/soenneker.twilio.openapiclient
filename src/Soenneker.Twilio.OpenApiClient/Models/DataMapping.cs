@@ -61,6 +61,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The current version number of the DataMapping. Incremented on each successful update.</summary>
         public int? Version { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMapping"/> and sets the default values.
+        /// </summary>
+        public DataMapping()
+        {
+            IsEnabled = true;
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMapping"/></returns>

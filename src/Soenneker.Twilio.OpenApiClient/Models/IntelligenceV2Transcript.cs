@@ -65,10 +65,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2Transcript_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2Transcript_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptLinks Links { get; set; }
 #endif
         /// <summary>The date that this Transcript&apos;s media was started, given in ISO 8601 format.</summary>
         public DateTimeOffset? MediaStartTime { get; set; }
@@ -106,6 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IntelligenceV2Transcript()
         {
             AdditionalData = new Dictionary<string, object>();
+            Duration = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -134,7 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "duration", n => { Duration = n.GetIntValue(); } },
                 { "encryption_credential_sid", n => { EncryptionCredentialSid = n.GetStringValue(); } },
                 { "language_code", n => { LanguageCode = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2Transcript_links>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2Transcript_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptLinks>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptLinks.CreateFromDiscriminatorValue); } },
                 { "media_start_time", n => { MediaStartTime = n.GetDateTimeOffsetValue(); } },
                 { "redaction", n => { Redaction = n.GetBoolValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
@@ -159,7 +160,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("duration", Duration);
             writer.WriteStringValue("encryption_credential_sid", EncryptionCredentialSid);
             writer.WriteStringValue("language_code", LanguageCode);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2Transcript_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptLinks>("links", Links);
             writer.WriteDateTimeOffsetValue("media_start_time", MediaStartTime);
             writer.WriteBoolValue("redaction", Redaction);
             writer.WriteStringValue("service_sid", ServiceSid);

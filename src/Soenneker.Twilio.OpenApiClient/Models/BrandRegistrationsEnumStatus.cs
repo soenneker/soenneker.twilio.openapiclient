@@ -9,31 +9,31 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "PENDING")]
         #pragma warning disable CS1591
-        PENDING,
+        Pending,
         #pragma warning restore CS1591
         [EnumMember(Value = "APPROVED")]
         #pragma warning disable CS1591
-        APPROVED,
+        Approved,
         #pragma warning restore CS1591
         [EnumMember(Value = "FAILED")]
         #pragma warning disable CS1591
-        FAILED,
+        Failed,
         #pragma warning restore CS1591
         [EnumMember(Value = "IN_REVIEW")]
         #pragma warning disable CS1591
-        IN_REVIEW,
+        InReview,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELETION_PENDING")]
         #pragma warning disable CS1591
-        DELETION_PENDING,
+        DeletionPending,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELETION_FAILED")]
         #pragma warning disable CS1591
-        DELETION_FAILED,
+        DeletionFailed,
         #pragma warning restore CS1591
         [EnumMember(Value = "SUSPENDED")]
         #pragma warning disable CS1591
-        SUSPENDED,
+        Suspended,
         #pragma warning restore CS1591
     }
 }

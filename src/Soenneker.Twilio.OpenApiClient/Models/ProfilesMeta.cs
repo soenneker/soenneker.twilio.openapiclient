@@ -46,6 +46,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public ProfilesMeta()
         {
             AdditionalData = new Dictionary<string, object>();
+            PageSize = 50;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Twilio.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item.ExtensionsJson
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{AccountS-id}\IncomingPhoneNumbers\{ResourceS-id}\AssignedAddOns\{AssignedAddOnS-id}\Extensions.json
+    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{accountS-id}\IncomingPhoneNumbers\{resourceS-id}\AssignedAddOns\{assignedAddOnS-id}\Extensions.json
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExtensionsJsonRequestBuilder : BaseRequestBuilder
@@ -21,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExtensionsJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{AccountS%2Did}/IncomingPhoneNumbers/{ResourceS%2Did}/AssignedAddOns/{AssignedAddOnS%2Did}/Extensions.json{?Page*,PageSize*,PageToken*}", pathParameters)
+        public ExtensionsJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/IncomingPhoneNumbers/{resourceS%2Did}/AssignedAddOns/{assignedAddOnS%2Did}/Extensions.json{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,26 +30,26 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExtensionsJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{AccountS%2Did}/IncomingPhoneNumbers/{ResourceS%2Did}/AssignedAddOns/{AssignedAddOnS%2Did}/Extensions.json{?Page*,PageSize*,PageToken*}", rawUrl)
+        public ExtensionsJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/IncomingPhoneNumbers/{resourceS%2Did}/AssignedAddOns/{assignedAddOnS%2Did}/Extensions.json{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
         /// Retrieve a list of Extensions for the Assigned Add-on.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item.ExtensionsJson.ExtensionsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListIncomingPhoneNumberAssignedAddOnExtensionResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item.ExtensionsJson.ExtensionsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item.ExtensionsJson.ExtensionsJsonRequestBuilder.ExtensionsJsonRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListIncomingPhoneNumberAssignedAddOnExtensionResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item.ExtensionsJson.ExtensionsJsonRequestBuilder.ExtensionsJsonRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item.ExtensionsJson.ExtensionsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item.ExtensionsJson.ExtensionsJsonRequestBuilder.ExtensionsJsonRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.ListIncomingPhoneNumberAssignedAddOnExtensionResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item.ExtensionsJson.ExtensionsJsonRequestBuilder.ExtensionsJsonRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item.ExtensionsJson.ExtensionsGetResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item.ExtensionsJson.ExtensionsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListIncomingPhoneNumberAssignedAddOnExtensionResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListIncomingPhoneNumberAssignedAddOnExtensionResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of Extensions for the Assigned Add-on.

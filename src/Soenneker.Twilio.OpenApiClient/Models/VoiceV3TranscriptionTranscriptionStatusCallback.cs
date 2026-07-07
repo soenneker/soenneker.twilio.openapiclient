@@ -17,13 +17,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The transcription events that will trigger the callback</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback_events?>? Events { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallbackEventsItem?>? Events { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback_events?> Events { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallbackEventsItem?> Events { get; set; }
 #endif
         /// <summary>The HTTP method to use for the callback, currently only POST is supported</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback_method? Method { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallbackMethod? Method { get; set; }
         /// <summary>The URL to call when transcription status changes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,8 +57,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "events", n => { Events = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback_events>()?.AsList(); } },
-                { "method", n => { Method = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback_method>(); } },
+                { "events", n => { Events = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallbackEventsItem>()?.AsList(); } },
+                { "method", n => { Method = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallbackMethod>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -69,8 +69,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback_events>("events", Events);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback_method>("method", Method);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallbackEventsItem>("events", Events);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallbackMethod>("method", Method);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

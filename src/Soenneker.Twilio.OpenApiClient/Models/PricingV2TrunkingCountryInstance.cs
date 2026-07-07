@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The list of [OriginatingCallPrice](https://www.twilio.com/docs/voice/pricing#inbound-call-price) records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstance_originating_call_prices>? OriginatingCallPrices { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstanceOriginatingCallPricesItem>? OriginatingCallPrices { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstance_originating_call_prices> OriginatingCallPrices { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstanceOriginatingCallPricesItem> OriginatingCallPrices { get; set; }
 #endif
         /// <summary>The currency in which prices are measured, specified in [ISO 4127](https://www.iso.org/iso/home/standards/currency_codes.htm) format (e.g. `usd`, `eur`, `jpy`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The list of [TerminatingPrefixPrice](https://www.twilio.com/docs/voice/pricing#outbound-prefix-price-with-origin) records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstance_terminating_prefix_prices>? TerminatingPrefixPrices { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstanceTerminatingPrefixPricesItem>? TerminatingPrefixPrices { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstance_terminating_prefix_prices> TerminatingPrefixPrices { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstanceTerminatingPrefixPricesItem> TerminatingPrefixPrices { get; set; }
 #endif
         /// <summary>The absolute URL of the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,9 +89,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "iso_country", n => { IsoCountry = n.GetStringValue(); } },
-                { "originating_call_prices", n => { OriginatingCallPrices = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstance_originating_call_prices>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstance_originating_call_prices.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "originating_call_prices", n => { OriginatingCallPrices = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstanceOriginatingCallPricesItem>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstanceOriginatingCallPricesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "price_unit", n => { PriceUnit = n.GetStringValue(); } },
-                { "terminating_prefix_prices", n => { TerminatingPrefixPrices = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstance_terminating_prefix_prices>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstance_terminating_prefix_prices.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "terminating_prefix_prices", n => { TerminatingPrefixPrices = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstanceTerminatingPrefixPricesItem>(global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstanceTerminatingPrefixPricesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -104,9 +104,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("iso_country", IsoCountry);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstance_originating_call_prices>("originating_call_prices", OriginatingCallPrices);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstanceOriginatingCallPricesItem>("originating_call_prices", OriginatingCallPrices);
             writer.WriteStringValue("price_unit", PriceUnit);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstance_terminating_prefix_prices>("terminating_prefix_prices", TerminatingPrefixPrices);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2TrunkingCountryInstanceTerminatingPrefixPricesItem>("terminating_prefix_prices", TerminatingPrefixPrices);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -108,6 +108,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IntelligenceV2Service()
         {
             AdditionalData = new Dictionary<string, object>();
+            Version = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

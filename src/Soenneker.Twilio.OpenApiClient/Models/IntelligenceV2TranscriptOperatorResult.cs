@@ -107,10 +107,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of mapped utterance object which matches sentences.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResult_utterance_results>? UtteranceResults { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultUtteranceResultsItem>? UtteranceResults { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResult_utterance_results> UtteranceResults { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultUtteranceResultsItem> UtteranceResults { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResult"/> and sets the default values.
@@ -152,7 +152,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "transcript_sid", n => { TranscriptSid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "utterance_match", n => { UtteranceMatch = n.GetBoolValue(); } },
-                { "utterance_results", n => { UtteranceResults = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResult_utterance_results>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResult_utterance_results.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "utterance_results", n => { UtteranceResults = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultUtteranceResultsItem>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultUtteranceResultsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -177,7 +177,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("transcript_sid", TranscriptSid);
             writer.WriteStringValue("url", Url);
             writer.WriteBoolValue("utterance_match", UtteranceMatch);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResult_utterance_results>("utterance_results", UtteranceResults);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultUtteranceResultsItem>("utterance_results", UtteranceResults);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

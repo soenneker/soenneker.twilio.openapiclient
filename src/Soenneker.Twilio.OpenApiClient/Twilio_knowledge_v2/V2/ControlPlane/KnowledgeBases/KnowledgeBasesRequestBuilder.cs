@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.ControlPlane.Kno
         /// <summary>
         /// Create a new Knowledge Base for the Twilio account. Accounts can have multiple knowledge bases. Each knowledge base can contain multiple knowledge resources such as documents, websites, or text content that can be used for context and information retrieval.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,11 +91,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.ControlPlane.Kno
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBaseCore body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202Response?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBaseCore body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBaseCore body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202Response> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBaseCore body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -108,7 +108,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.ControlPlane.Kno
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a list of knowledge bases for the Twilio account.
@@ -168,7 +168,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.ControlPlane.Kno
         {
             /// <summary>Either &apos;ASC&apos; or &apos;DESC&apos; to sort results ascending or descending respectively.</summary>
             [QueryParameter("orderBy")]
-            public global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.ControlPlane.KnowledgeBases.GetOrderByQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.OrderBy? OrderBy { get; set; }
             /// <summary>The maximum number of items to return per page, maximum of 100.</summary>
             [QueryParameter("pageSize")]
             public int? PageSize { get; set; }

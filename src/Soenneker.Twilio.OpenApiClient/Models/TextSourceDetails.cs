@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Content { get; set; }
 #endif
         /// <summary>Raw text knowledge sources</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetails_type? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetailsType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "content", n => { Content = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetails_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetailsType>(); } },
             };
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("content", Content);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetails_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetailsType>("type", Type);
         }
     }
 }

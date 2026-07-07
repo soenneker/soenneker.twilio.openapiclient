@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.Services.Item.Compliance
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_messaging_v1\v1\Services\{MessagingServiceS-id}\Compliance
+    /// Builds and executes requests for operations under \twilio_messaging_v1\v1\Services\{messagingServiceS-id}\Compliance
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ComplianceRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.Services.Item.Co
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ComplianceRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/Services/{MessagingServiceS%2Did}/Compliance", pathParameters)
+        public ComplianceRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/Services/{messagingServiceS%2Did}/Compliance", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.Services.Item.Co
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ComplianceRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/Services/{MessagingServiceS%2Did}/Compliance", rawUrl)
+        public ComplianceRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/Services/{messagingServiceS%2Did}/Compliance", rawUrl)
         {
         }
     }

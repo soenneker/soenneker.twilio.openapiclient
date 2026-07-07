@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiries.Registration.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_trusthub_v1\v1\ComplianceInquiries\Registration\{RegistrationId}
+    /// Builds and executes requests for operations under \twilio_trusthub_v1\v1\ComplianceInquiries\Registration\{registrationId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithRegistrationItemRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiri
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRegistrationItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Registration/{RegistrationId}", pathParameters)
+        public WithRegistrationItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Registration/{registrationId}", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiri
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRegistrationItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Registration/{RegistrationId}", rawUrl)
+        public WithRegistrationItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/ComplianceInquiries/Registration/{registrationId}", rawUrl)
         {
         }
     }

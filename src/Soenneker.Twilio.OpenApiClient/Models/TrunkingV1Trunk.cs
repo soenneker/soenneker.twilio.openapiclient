@@ -45,7 +45,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.</summary>
         public DateTimeOffset? DateUpdated { get; set; }
         /// <summary>&quot;The HTTP method we use to call the `disaster_recovery_url`. Can be: `GET` or `POST`.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1Trunk_disaster_recovery_method? DisasterRecoveryMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkDisasterRecoveryMethod? DisasterRecoveryMethod { get; set; }
         /// <summary>The URL we call using the `disaster_recovery_method` if an error occurs while sending SIP traffic towards the configured Origination URL. We retrieve TwiML from this URL and execute the instructions like any other normal TwiML call. See [Disaster Recovery](https://www.twilio.com/docs/sip-trunking#disaster-recovery) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,10 +73,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1Trunk_links? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1Trunk_links Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkLinks Links { get; set; }
 #endif
         /// <summary>&quot;The recording settings for the trunk. Can be: `do-not-record`, `record-from-ringing`, `record-from-answer`. If set to `record-from-ringing` or `record-from-answer`, all calls going through the trunk will be recorded. The only way to change recording parameters is on a sub-resource of a Trunk after it has been created. e.g.`/Trunks/[Trunk_SID]/Recording -XPOST -d&apos;Mode=record-from-answer&apos;`. See [Recording](https://www.twilio.com/docs/sip-trunking#recording) for more information.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -141,11 +141,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "cnam_lookup_enabled", n => { CnamLookupEnabled = n.GetBoolValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "disaster_recovery_method", n => { DisasterRecoveryMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1Trunk_disaster_recovery_method>(); } },
+                { "disaster_recovery_method", n => { DisasterRecoveryMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkDisasterRecoveryMethod>(); } },
                 { "disaster_recovery_url", n => { DisasterRecoveryUrl = n.GetStringValue(); } },
                 { "domain_name", n => { DomainName = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1Trunk_links>(global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1Trunk_links.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkLinks.CreateFromDiscriminatorValue); } },
                 { "recording", n => { Recording = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "secure", n => { Secure = n.GetBoolValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -168,11 +168,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("cnam_lookup_enabled", CnamLookupEnabled);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1Trunk_disaster_recovery_method>("disaster_recovery_method", DisasterRecoveryMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkDisasterRecoveryMethod>("disaster_recovery_method", DisasterRecoveryMethod);
             writer.WriteStringValue("disaster_recovery_url", DisasterRecoveryUrl);
             writer.WriteStringValue("domain_name", DomainName);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1Trunk_links>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkLinks>("links", Links);
             writer.WriteObjectValue<UntypedNode>("recording", Recording);
             writer.WriteBoolValue("secure", Secure);
             writer.WriteStringValue("sid", Sid);

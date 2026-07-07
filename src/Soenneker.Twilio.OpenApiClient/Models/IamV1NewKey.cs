@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Collection of allow assertions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1NewKey_policy? Policy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1NewKeyPolicy? Policy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1NewKey_policy Policy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1NewKeyPolicy Policy { get; set; }
 #endif
         /// <summary>The secret your application uses to sign Access Tokens and to authenticate to the REST API (you will use this as the basic-auth `password`).  **Note that for security reasons, this field is ONLY returned when the API Key is first created.**</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,7 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetStringValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "policy", n => { Policy = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1NewKey_policy>(global::Soenneker.Twilio.OpenApiClient.Models.IamV1NewKey_policy.CreateFromDiscriminatorValue); } },
+                { "policy", n => { Policy = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1NewKeyPolicy>(global::Soenneker.Twilio.OpenApiClient.Models.IamV1NewKeyPolicy.CreateFromDiscriminatorValue); } },
                 { "secret", n => { Secret = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
             };
@@ -105,7 +105,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("date_created", DateCreated);
             writer.WriteStringValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1NewKey_policy>("policy", Policy);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1NewKeyPolicy>("policy", Policy);
             writer.WriteStringValue("secret", Secret);
             writer.WriteStringValue("sid", Sid);
             writer.WriteAdditionalData(AdditionalData);

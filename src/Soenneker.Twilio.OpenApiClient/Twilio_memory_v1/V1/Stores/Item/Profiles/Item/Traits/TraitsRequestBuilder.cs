@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <summary>
         /// Return a paginated, optionally filtered list of individual traits for a profile (flattened view). This is useful for UIs or tools that need to browse trait metadata (names, groups, timestamps). Use the optional `traitGroups` filter to scope results and the paging parameters to iterate through larger sets.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileTraits200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileTraits200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 400 status code</exception>
@@ -48,11 +48,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileTraits200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Traits.TraitsRequestBuilder.TraitsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileTraits200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Traits.TraitsRequestBuilder.TraitsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileTraits200> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Traits.TraitsRequestBuilder.TraitsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileTraits200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Traits.TraitsRequestBuilder.TraitsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileTraits200>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileTraits200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileTraits200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileTraits200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Return a paginated, optionally filtered list of individual traits for a profile (flattened view). This is useful for UIs or tools that need to browse trait metadata (names, groups, timestamps). Use the optional `traitGroups` filter to scope results and the paging parameters to iterate through larger sets.
@@ -104,7 +104,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         {
             /// <summary>Either &apos;ASC&apos; or &apos;DESC&apos; to sort results ascending or descending respectively.</summary>
             [QueryParameter("orderBy")]
-            public global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Traits.GetOrderByQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1OrderBy? OrderBy { get; set; }
             /// <summary>The maximum number of items to return per page, maximum of 1000.</summary>
             [QueryParameter("pageSize")]
             public int? PageSize { get; set; }

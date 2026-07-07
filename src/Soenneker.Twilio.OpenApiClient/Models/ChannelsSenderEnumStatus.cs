@@ -9,39 +9,39 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         [EnumMember(Value = "CREATING")]
         #pragma warning disable CS1591
-        CREATING,
+        Creating,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONLINE")]
         #pragma warning disable CS1591
-        ONLINE,
+        Online,
         #pragma warning restore CS1591
         [EnumMember(Value = "OFFLINE")]
         #pragma warning disable CS1591
-        OFFLINE,
+        Offline,
         #pragma warning restore CS1591
         [EnumMember(Value = "PENDING_VERIFICATION")]
         #pragma warning disable CS1591
-        PENDING_VERIFICATION,
+        PendingVerification,
         #pragma warning restore CS1591
         [EnumMember(Value = "VERIFYING")]
         #pragma warning disable CS1591
-        VERIFYING,
+        Verifying,
         #pragma warning restore CS1591
         [EnumMember(Value = "ONLINE:UPDATING")]
         #pragma warning disable CS1591
-        ONLINEUPDATING,
+        ONLINEColonUPDATING,
         #pragma warning restore CS1591
         [EnumMember(Value = "TWILIO_REVIEW")]
         #pragma warning disable CS1591
-        TWILIO_REVIEW,
+        TwilioReview,
         #pragma warning restore CS1591
         [EnumMember(Value = "DRAFT")]
         #pragma warning disable CS1591
-        DRAFT,
+        Draft,
         #pragma warning restore CS1591
         [EnumMember(Value = "STUBBED")]
         #pragma warning disable CS1591
-        STUBBED,
+        Stubbed,
         #pragma warning restore CS1591
     }
 }

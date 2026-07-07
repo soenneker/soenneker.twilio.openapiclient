@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessions.Item.Interactions.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_proxy_v1\v1\Services\{ServiceS-id}\Sessions\{SessionS-id}\Interactions\{Sid}
+    /// Builds and executes requests for operations under \twilio_proxy_v1\v1\Services\{serviceS-id}\Sessions\{sessionS-id}\Interactions\{sid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessio
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{ServiceS%2Did}/Sessions/{SessionS%2Did}/Interactions/{Sid}", pathParameters)
+        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{serviceS%2Did}/Sessions/{sessionS%2Did}/Interactions/{sid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.Sessio
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{ServiceS%2Did}/Sessions/{SessionS%2Did}/Interactions/{Sid}", rawUrl)
+        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{serviceS%2Did}/Sessions/{sessionS%2Did}/Interactions/{sid}", rawUrl)
         {
         }
         /// <summary>

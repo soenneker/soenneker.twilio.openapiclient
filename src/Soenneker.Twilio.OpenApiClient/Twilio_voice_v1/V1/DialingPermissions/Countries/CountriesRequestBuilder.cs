@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.DialingPermissions.C
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("IsoCode", position);
+                urlTplParams.Add("isoCode", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.DialingPermissions.Countries.Item.WithIsoCodeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

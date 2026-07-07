@@ -52,10 +52,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Communication recipients</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Communication_recipients>? Recipients { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CommunicationRecipientsItem>? Recipients { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Communication_recipients> Recipients { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CommunicationRecipientsItem> Recipients { get; set; }
 #endif
         /// <summary>When communication was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -89,7 +89,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "content", n => { Content = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CommunicationContent>(global::Soenneker.Twilio.OpenApiClient.Models.CommunicationContent.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Communication_recipients>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Communication_recipients.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CommunicationRecipientsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CommunicationRecipientsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -105,7 +105,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CommunicationContent>("content", Content);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Communication_recipients>("recipients", Recipients);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CommunicationRecipientsItem>("recipients", Recipients);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

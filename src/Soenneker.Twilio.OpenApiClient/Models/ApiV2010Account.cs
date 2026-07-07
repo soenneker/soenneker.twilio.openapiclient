@@ -67,10 +67,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A Map of various subresources available for the given Account Instance</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010Account_subresource_uris? SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSubresourceUris? SubresourceUris { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010Account_subresource_uris SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSubresourceUris SubresourceUris { get; set; }
 #endif
         /// <summary>The type of this account. Either `Trial` or `Full` if it&apos;s been upgraded</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.AccountEnumType? Type { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "owner_account_sid", n => { OwnerAccountSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountEnumStatus>(); } },
-                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010Account_subresource_uris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010Account_subresource_uris.CreateFromDiscriminatorValue); } },
+                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSubresourceUris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSubresourceUris.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountEnumType>(); } },
                 { "uri", n => { Uri = n.GetStringValue(); } },
             };
@@ -133,7 +133,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("owner_account_sid", OwnerAccountSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountEnumStatus>("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010Account_subresource_uris>("subresource_uris", SubresourceUris);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSubresourceUris>("subresource_uris", SubresourceUris);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountEnumType>("type", Type);
             writer.WriteStringValue("uri", Uri);
             writer.WriteAdditionalData(AdditionalData);

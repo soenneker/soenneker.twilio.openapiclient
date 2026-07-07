@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_routes_v2.V2.Trunks
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("SipTrunkDomain", position);
+                urlTplParams.Add("sipTrunkDomain", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_routes_v2.V2.Trunks.Item.WithSipTrunkDomainItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
