@@ -39,10 +39,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Information about the phone number being verified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Lookup { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationLookup? Lookup { get; set; }
 #nullable restore
 #else
-        public UntypedNode Lookup { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationLookup Lookup { get; set; }
 #endif
         /// <summary>The payee of the associated PSD2 compliant transaction. Requires the PSD2 Service flag enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,10 +79,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The set of fields used for a silent network auth (`sna`) verification. Contains a single field with the URL to be invoked to verify the phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Sna { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSna? Sna { get; set; }
 #nullable restore
 #else
-        public UntypedNode Sna { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSna Sna { get; set; }
 #endif
         /// <summary>&quot;The status of the verification. Can be: `pending`, `approved`, `canceled`, `max_attempts_reached`, `deleted`, `failed` or `expired`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -140,12 +140,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VerificationEnumChannel>(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "lookup", n => { Lookup = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "lookup", n => { Lookup = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationLookup>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationLookup.CreateFromDiscriminatorValue); } },
                 { "payee", n => { Payee = n.GetStringValue(); } },
                 { "send_code_attempts", n => { SendCodeAttempts = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSendCodeAttemptsItem>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSendCodeAttemptsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "sna", n => { Sna = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "sna", n => { Sna = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSna>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSna.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "to", n => { To = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -164,12 +164,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VerificationEnumChannel>("channel", Channel);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<UntypedNode>("lookup", Lookup);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationLookup>("lookup", Lookup);
             writer.WriteStringValue("payee", Payee);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSendCodeAttemptsItem>("send_code_attempts", SendCodeAttempts);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteObjectValue<UntypedNode>("sna", Sna);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationSna>("sna", Sna);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("to", To);
             writer.WriteStringValue("url", Url);

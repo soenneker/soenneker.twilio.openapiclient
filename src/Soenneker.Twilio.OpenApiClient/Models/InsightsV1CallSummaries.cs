@@ -25,20 +25,20 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;`object` Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Annotation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAnnotation? Annotation { get; set; }
 #nullable restore
 #else
-        public UntypedNode Annotation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAnnotation Annotation { get; set; }
 #endif
         /// <summary>The answered_by property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumAnsweredBy? AnsweredBy { get; set; }
         /// <summary>&quot;`object` Attributes capturing call-flow-specific details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#attributes-object) for the object properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Attributes { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAttributes? Attributes { get; set; }
 #nullable restore
 #else
-        public UntypedNode Attributes { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAttributes Attributes { get; set; }
 #endif
         /// <summary>The unique SID identifier of the Call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,18 +55,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;`object` Contains metrics and properties for the Twilio media gateway of a PSTN call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CarrierEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesCarrierEdge? CarrierEdge { get; set; }
 #nullable restore
 #else
-        public UntypedNode CarrierEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesCarrierEdge CarrierEdge { get; set; }
 #endif
         /// <summary>&quot;`object` Contains metrics and properties for the Twilio media gateway of a Client call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ClientEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesClientEdge? ClientEdge { get; set; }
 #nullable restore
 #else
-        public UntypedNode ClientEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesClientEdge ClientEdge { get; set; }
 #endif
         /// <summary>Duration between when the call was answered and when it ended</summary>
         public int? ConnectDuration { get; set; }
@@ -79,36 +79,36 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;`object` The calling party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? From { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesFrom? From { get; set; }
 #nullable restore
 #else
-        public UntypedNode From { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesFrom From { get; set; }
 #endif
         /// <summary>The processing_state property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumProcessingState? ProcessingState { get; set; }
         /// <summary>&quot;`object` Contains edge-agnostic call-level details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#properties-object) for the object properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Properties { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesProperties? Properties { get; set; }
 #nullable restore
 #else
-        public UntypedNode Properties { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesProperties Properties { get; set; }
 #endif
         /// <summary>&quot;`object` Contains metrics and properties for the SDK sensor library for Client calls. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SdkEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSdkEdge? SdkEdge { get; set; }
 #nullable restore
 #else
-        public UntypedNode SdkEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSdkEdge SdkEdge { get; set; }
 #endif
         /// <summary>&quot;`object` Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SipEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSipEdge? SipEdge { get; set; }
 #nullable restore
 #else
-        public UntypedNode SipEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSipEdge SipEdge { get; set; }
 #endif
         /// <summary>The time at which the Call was started, given in ISO 8601 format.</summary>
         public DateTimeOffset? StartTime { get; set; }
@@ -123,18 +123,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;`object` The called party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? To { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTo? To { get; set; }
 #nullable restore
 #else
-        public UntypedNode To { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTo To { get; set; }
 #endif
         /// <summary>&quot;`object` Contains trusted communications details including Branded Call and verified caller ID. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#trust-object) for the object properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Trust { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTrust? Trust { get; set; }
 #nullable restore
 #else
-        public UntypedNode Trust { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTrust Trust { get; set; }
 #endif
         /// <summary>The URL of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -170,27 +170,27 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "annotation", n => { Annotation = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "annotation", n => { Annotation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAnnotation>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAnnotation.CreateFromDiscriminatorValue); } },
                 { "answered_by", n => { AnsweredBy = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumAnsweredBy>(); } },
-                { "attributes", n => { Attributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAttributes>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAttributes.CreateFromDiscriminatorValue); } },
                 { "call_sid", n => { CallSid = n.GetStringValue(); } },
                 { "call_state", n => { CallState = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumCallState>(); } },
                 { "call_type", n => { CallType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumCallType>(); } },
-                { "carrier_edge", n => { CarrierEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "client_edge", n => { ClientEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "carrier_edge", n => { CarrierEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesCarrierEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesCarrierEdge.CreateFromDiscriminatorValue); } },
+                { "client_edge", n => { ClientEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesClientEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesClientEdge.CreateFromDiscriminatorValue); } },
                 { "connect_duration", n => { ConnectDuration = n.GetIntValue(); } },
                 { "created_time", n => { CreatedTime = n.GetDateTimeOffsetValue(); } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
                 { "end_time", n => { EndTime = n.GetDateTimeOffsetValue(); } },
-                { "from", n => { From = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "from", n => { From = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesFrom>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesFrom.CreateFromDiscriminatorValue); } },
                 { "processing_state", n => { ProcessingState = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumProcessingState>(); } },
-                { "properties", n => { Properties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "sdk_edge", n => { SdkEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "sip_edge", n => { SipEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesProperties>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesProperties.CreateFromDiscriminatorValue); } },
+                { "sdk_edge", n => { SdkEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSdkEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSdkEdge.CreateFromDiscriminatorValue); } },
+                { "sip_edge", n => { SipEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSipEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSipEdge.CreateFromDiscriminatorValue); } },
                 { "start_time", n => { StartTime = n.GetDateTimeOffsetValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "to", n => { To = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "trust", n => { Trust = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "to", n => { To = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTo>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTo.CreateFromDiscriminatorValue); } },
+                { "trust", n => { Trust = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTrust>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTrust.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -202,27 +202,27 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<UntypedNode>("annotation", Annotation);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAnnotation>("annotation", Annotation);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumAnsweredBy>("answered_by", AnsweredBy);
-            writer.WriteObjectValue<UntypedNode>("attributes", Attributes);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAttributes>("attributes", Attributes);
             writer.WriteStringValue("call_sid", CallSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumCallState>("call_state", CallState);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumCallType>("call_type", CallType);
-            writer.WriteObjectValue<UntypedNode>("carrier_edge", CarrierEdge);
-            writer.WriteObjectValue<UntypedNode>("client_edge", ClientEdge);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesCarrierEdge>("carrier_edge", CarrierEdge);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesClientEdge>("client_edge", ClientEdge);
             writer.WriteIntValue("connect_duration", ConnectDuration);
             writer.WriteDateTimeOffsetValue("created_time", CreatedTime);
             writer.WriteIntValue("duration", Duration);
             writer.WriteDateTimeOffsetValue("end_time", EndTime);
-            writer.WriteObjectValue<UntypedNode>("from", From);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesFrom>("from", From);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumProcessingState>("processing_state", ProcessingState);
-            writer.WriteObjectValue<UntypedNode>("properties", Properties);
-            writer.WriteObjectValue<UntypedNode>("sdk_edge", SdkEdge);
-            writer.WriteObjectValue<UntypedNode>("sip_edge", SipEdge);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesProperties>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSdkEdge>("sdk_edge", SdkEdge);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSipEdge>("sip_edge", SipEdge);
             writer.WriteDateTimeOffsetValue("start_time", StartTime);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteObjectValue<UntypedNode>("to", To);
-            writer.WriteObjectValue<UntypedNode>("trust", Trust);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTo>("to", To);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTrust>("trust", Trust);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

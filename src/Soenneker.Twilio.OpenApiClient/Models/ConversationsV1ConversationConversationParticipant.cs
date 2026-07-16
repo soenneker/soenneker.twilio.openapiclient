@@ -63,10 +63,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? MessagingBinding { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConversationConversationParticipantMessagingBinding? MessagingBinding { get; set; }
 #nullable restore
 #else
-        public UntypedNode MessagingBinding { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConversationConversationParticipantMessagingBinding MessagingBinding { get; set; }
 #endif
         /// <summary>The SID of a conversation-level [Role](https://www.twilio.com/docs/conversations/api/role-resource) to assign to the participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -125,7 +125,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "last_read_message_index", n => { LastReadMessageIndex = n.GetIntValue(); } },
                 { "last_read_timestamp", n => { LastReadTimestamp = n.GetStringValue(); } },
-                { "messaging_binding", n => { MessagingBinding = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "messaging_binding", n => { MessagingBinding = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConversationConversationParticipantMessagingBinding>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConversationConversationParticipantMessagingBinding.CreateFromDiscriminatorValue); } },
                 { "role_sid", n => { RoleSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -146,7 +146,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("identity", Identity);
             writer.WriteIntValue("last_read_message_index", LastReadMessageIndex);
             writer.WriteStringValue("last_read_timestamp", LastReadTimestamp);
-            writer.WriteObjectValue<UntypedNode>("messaging_binding", MessagingBinding);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConversationConversationParticipantMessagingBinding>("messaging_binding", MessagingBinding);
             writer.WriteStringValue("role_sid", RoleSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);

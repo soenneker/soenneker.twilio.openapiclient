@@ -77,10 +77,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that contains the summary of delivery statuses for the message to non-chat participants.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Delivery { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageDelivery? Delivery { get; set; }
 #nullable restore
 #else
-        public UntypedNode Delivery { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageDelivery Delivery { get; set; }
 #endif
         /// <summary>The index of the message within the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource).</summary>
         public int? Index { get; set; }
@@ -159,7 +159,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "conversation_sid", n => { ConversationSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "delivery", n => { Delivery = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "delivery", n => { Delivery = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageDelivery>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageDelivery.CreateFromDiscriminatorValue); } },
                 { "index", n => { Index = n.GetIntValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageLinks.CreateFromDiscriminatorValue); } },
                 { "media", n => { Media = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageMediaItem>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageMediaItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -184,7 +184,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("conversation_sid", ConversationSid);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<UntypedNode>("delivery", Delivery);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageDelivery>("delivery", Delivery);
             writer.WriteIntValue("index", Index);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageLinks>("links", Links);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationMessageMediaItem>("media", Media);

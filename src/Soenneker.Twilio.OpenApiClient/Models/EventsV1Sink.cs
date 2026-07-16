@@ -45,10 +45,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The information required for Twilio to connect to the provided Sink encoded as JSON.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SinkConfiguration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkSinkConfiguration? SinkConfiguration { get; set; }
 #nullable restore
 #else
-        public UntypedNode SinkConfiguration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkSinkConfiguration SinkConfiguration { get; set; }
 #endif
         /// <summary>The Sink type. Can only be &quot;kinesis&quot; or &quot;webhook&quot; currently.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType? SinkType { get; set; }
@@ -92,7 +92,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinks>(global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinks.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "sink_configuration", n => { SinkConfiguration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "sink_configuration", n => { SinkConfiguration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkSinkConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkSinkConfiguration.CreateFromDiscriminatorValue); } },
                 { "sink_type", n => { SinkType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType>(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumStatus>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinks>("links", Links);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteObjectValue<UntypedNode>("sink_configuration", SinkConfiguration);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkSinkConfiguration>("sink_configuration", SinkConfiguration);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType>("sink_type", SinkType);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumStatus>("status", Status);
             writer.WriteStringValue("url", Url);

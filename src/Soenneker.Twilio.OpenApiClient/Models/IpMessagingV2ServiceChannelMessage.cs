@@ -71,10 +71,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The media property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Media { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelMessageMedia? Media { get; set; }
 #nullable restore
 #else
-        public UntypedNode Media { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelMessageMedia Media { get; set; }
 #endif
         /// <summary>The service_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -153,7 +153,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "from", n => { From = n.GetStringValue(); } },
                 { "index", n => { Index = n.GetIntValue(); } },
                 { "last_updated_by", n => { LastUpdatedBy = n.GetStringValue(); } },
-                { "media", n => { Media = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "media", n => { Media = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelMessageMedia>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelMessageMedia.CreateFromDiscriminatorValue); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "to", n => { To = n.GetStringValue(); } },
@@ -178,7 +178,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("from", From);
             writer.WriteIntValue("index", Index);
             writer.WriteStringValue("last_updated_by", LastUpdatedBy);
-            writer.WriteObjectValue<UntypedNode>("media", Media);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelMessageMedia>("media", Media);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("to", To);

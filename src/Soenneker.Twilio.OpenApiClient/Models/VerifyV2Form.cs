@@ -17,18 +17,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Additional information for the available forms for this type. E.g. The separator string used for `binding` in a Factor push.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? FormMeta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2FormFormMeta? FormMeta { get; set; }
 #nullable restore
 #else
-        public UntypedNode FormMeta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2FormFormMeta FormMeta { get; set; }
 #endif
         /// <summary>Object that contains the available forms for this type. This available forms are given in the standard [JSON Schema](https://json-schema.org/) format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Forms { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2FormForms? Forms { get; set; }
 #nullable restore
 #else
-        public UntypedNode Forms { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2FormForms Forms { get; set; }
 #endif
         /// <summary>The Type of this Form. Currently only `form-push` is supported.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.FormEnumFormTypes? FormType { get; set; }
@@ -65,9 +65,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "form_meta", n => { FormMeta = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "form_meta", n => { FormMeta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2FormFormMeta>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2FormFormMeta.CreateFromDiscriminatorValue); } },
                 { "form_type", n => { FormType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FormEnumFormTypes>(); } },
-                { "forms", n => { Forms = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "forms", n => { Forms = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2FormForms>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2FormForms.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -78,8 +78,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<UntypedNode>("form_meta", FormMeta);
-            writer.WriteObjectValue<UntypedNode>("forms", Forms);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2FormFormMeta>("form_meta", FormMeta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2FormForms>("forms", Forms);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FormEnumFormTypes>("form_type", FormType);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

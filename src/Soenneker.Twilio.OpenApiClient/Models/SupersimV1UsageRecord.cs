@@ -65,10 +65,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The time period for which the usage is reported. The period is represented as a pair of `start_time` and `end_time` timestamps specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Period { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1UsageRecordPeriod? Period { get; set; }
 #nullable restore
 #else
-        public UntypedNode Period { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1UsageRecordPeriod Period { get; set; }
 #endif
         /// <summary>SID of a Sim resource to which the UsageRecord belongs. Value will only be present when either a value for the `Sim` query parameter is provided or when UsageRecords are grouped by `sim`. Otherwise, the value will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,7 +112,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "fleet_sid", n => { FleetSid = n.GetStringValue(); } },
                 { "iso_country", n => { IsoCountry = n.GetStringValue(); } },
                 { "network_sid", n => { NetworkSid = n.GetStringValue(); } },
-                { "period", n => { Period = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "period", n => { Period = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1UsageRecordPeriod>(global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1UsageRecordPeriod.CreateFromDiscriminatorValue); } },
                 { "sim_sid", n => { SimSid = n.GetStringValue(); } },
             };
         }
@@ -132,7 +132,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("fleet_sid", FleetSid);
             writer.WriteStringValue("iso_country", IsoCountry);
             writer.WriteStringValue("network_sid", NetworkSid);
-            writer.WriteObjectValue<UntypedNode>("period", Period);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1UsageRecordPeriod>("period", Period);
             writer.WriteStringValue("sim_sid", SimSid);
             writer.WriteAdditionalData(AdditionalData);
         }

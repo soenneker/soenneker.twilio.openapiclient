@@ -63,10 +63,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The limits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Limits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLimits? Limits { get; set; }
 #nullable restore
 #else
-        public UntypedNode Limits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLimits Limits { get; set; }
 #endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,10 +79,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The notifications property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Notifications { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceNotifications? Notifications { get; set; }
 #nullable restore
 #else
-        public UntypedNode Notifications { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceNotifications Notifications { get; set; }
 #endif
         /// <summary>The post_webhook_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -141,10 +141,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The webhooks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Webhooks { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceWebhooks? Webhooks { get; set; }
 #nullable restore
 #else
-        public UntypedNode Webhooks { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceWebhooks Webhooks { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1Service"/> and sets the default values.
@@ -181,9 +181,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "default_channel_role_sid", n => { DefaultChannelRoleSid = n.GetStringValue(); } },
                 { "default_service_role_sid", n => { DefaultServiceRoleSid = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "limits", n => { Limits = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLimits>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLimits.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinks.CreateFromDiscriminatorValue); } },
-                { "notifications", n => { Notifications = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "notifications", n => { Notifications = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceNotifications>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceNotifications.CreateFromDiscriminatorValue); } },
                 { "post_webhook_url", n => { PostWebhookUrl = n.GetStringValue(); } },
                 { "pre_webhook_url", n => { PreWebhookUrl = n.GetStringValue(); } },
                 { "reachability_enabled", n => { ReachabilityEnabled = n.GetBoolValue(); } },
@@ -193,7 +193,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "webhook_filters", n => { WebhookFilters = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "webhook_method", n => { WebhookMethod = n.GetStringValue(); } },
-                { "webhooks", n => { Webhooks = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "webhooks", n => { Webhooks = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceWebhooks>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceWebhooks.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -211,9 +211,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("default_channel_role_sid", DefaultChannelRoleSid);
             writer.WriteStringValue("default_service_role_sid", DefaultServiceRoleSid);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<UntypedNode>("limits", Limits);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLimits>("limits", Limits);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinks>("links", Links);
-            writer.WriteObjectValue<UntypedNode>("notifications", Notifications);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceNotifications>("notifications", Notifications);
             writer.WriteStringValue("post_webhook_url", PostWebhookUrl);
             writer.WriteStringValue("pre_webhook_url", PreWebhookUrl);
             writer.WriteBoolValue("reachability_enabled", ReachabilityEnabled);
@@ -223,7 +223,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("url", Url);
             writer.WriteCollectionOfPrimitiveValues<string>("webhook_filters", WebhookFilters);
             writer.WriteStringValue("webhook_method", WebhookMethod);
-            writer.WriteObjectValue<UntypedNode>("webhooks", Webhooks);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceWebhooks>("webhooks", Webhooks);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -235072,14 +235072,12 @@
                     },
                     "config": {
                       "description": "An object that contains configurations specific to a `factor_type`.",
-                      "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Configurations for a `factor_type`."
                       }
                     },
                     "metadata": {
                       "description": "Custom metadata associated with the factor.",
-                      "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Metadata of the factor.",
                         "pii": {
@@ -235381,14 +235379,11 @@
                     },
                     "binding": {
                       "description": "Contains the `factor_type` specific secret and metadata. The Binding property is ONLY returned upon Factor creation.",
-                      "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Binding of the factor"
                       }
                     },
-                    "options": {
-                      "nullable": true
-                    },
+                    "options": { },
                     "date_created": {
                       "type": "string",
                       "description": "The date that this Factor was created, given in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
@@ -235441,14 +235436,12 @@
                     },
                     "config": {
                       "description": "An object that contains configurations specific to a `factor_type`.",
-                      "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Configurations for a `factor_type`."
                       }
                     },
                     "metadata": {
                       "description": "Custom metadata associated with the factor.",
-                      "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Metadata of the factor.",
                         "pii": {
@@ -235786,7 +235779,6 @@
                     },
                     "details": {
                       "description": "Details provided to give context about the Challenge.",
-                      "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Details about the Challenge.",
                         "pii": {
@@ -235797,7 +235789,6 @@
                     },
                     "hidden_details": {
                       "description": "Details provided to give context about the Challenge.",
-                      "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Hidden details about the Challenge",
                         "pii": {
@@ -235808,7 +235799,6 @@
                     },
                     "metadata": {
                       "description": "Custom metadata associated with the challenge.",
-                      "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Metadata of the challenge.",
                         "pii": {
@@ -236264,7 +236254,6 @@
                     },
                     "details": {
                       "description": "Details provided to give context about the Challenge.",
-                      "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Details about the Challenge.",
                         "pii": {
@@ -236275,7 +236264,6 @@
                     },
                     "hidden_details": {
                       "description": "Details provided to give context about the Challenge.",
-                      "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Hidden details about the Challenge",
                         "pii": {
@@ -236286,7 +236274,6 @@
                     },
                     "metadata": {
                       "description": "Custom metadata associated with the challenge.",
-                      "nullable": true,
                       "x-twilio": {
                         "shortDescription": "Metadata of the challenge.",
                         "pii": {
@@ -251030,7 +251017,6 @@
         "properties": {
           "items": {
             "description": "A list of objects where each object represents the result of processing a `correlation_id`. Each object contains the following fields: `correlation_id`, a unique 32-character UUID that maps the response to the original request; `error_code`, an integer where 0 indicates success and any non-zero value represents an error; and `error_messages`, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -251045,7 +251031,6 @@
         "properties": {
           "items": {
             "description": "A list of objects where each object represents the result of processing a `correlation_id`. Each object contains the following fields: `correlation_id`, a unique 32-character UUID that maps the response to the original request; `error_code`, an integer where 0 indicates success and any non-zero value represents an error; and `error_messages`, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -251162,8 +251147,7 @@
         "type": "object",
         "properties": {
           "permissions": {
-            "description": "A list of objects where each object represents the result of processing a messaging Geo Permission. Each object contains the following fields: `country_code`, the country code of the country for which the permission was updated; `type`, the type of the permission i.e. country; `enabled`, true if the permission is enabled else false; `error_code`, an integer where 0 indicates success and any non-zero value represents an error; and `error_messages`, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.",
-            "nullable": true
+            "description": "A list of objects where each object represents the result of processing a messaging Geo Permission. Each object contains the following fields: `country_code`, the country code of the country for which the permission was updated; `type`, the type of the permission i.e. country; `enabled`, true if the permission is enabled else false; `error_code`, an integer where 0 indicates success and any non-zero value represents an error; and `error_messages`, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty."
           }
         }
       },
@@ -252568,7 +252552,6 @@
         "properties": {
           "request": {
             "description": "Contains a dictionary representing the request of the call.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "sensitive",
@@ -252578,7 +252561,6 @@
           },
           "response": {
             "description": "Contains a dictionary representing the call response, including a list of the call events.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "sensitive",
@@ -252865,8 +252847,7 @@
             "nullable": true
           },
           "encryption_details": {
-            "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature.",
-            "nullable": true
+            "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature."
           },
           "price_unit": {
             "type": "string",
@@ -253112,8 +253093,7 @@
             "nullable": true
           },
           "encryption_details": {
-            "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature.",
-            "nullable": true
+            "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature."
           },
           "uri": {
             "type": "string",
@@ -253391,8 +253371,7 @@
             "$ref": "#/components/schemas/dependent_phone_number_enum_address_requirement"
           },
           "capabilities": {
-            "description": "The set of Boolean properties that indicates whether a phone number can receive calls or messages.  Capabilities are  `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.",
-            "nullable": true
+            "description": "The set of Boolean properties that indicates whether a phone number can receive calls or messages.  Capabilities are  `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`."
           },
           "status_callback": {
             "type": "string",
@@ -253813,8 +253792,7 @@
             "nullable": true
           },
           "configuration": {
-            "description": "A JSON string that represents the current configuration of this Add-on installation.",
-            "nullable": true
+            "description": "A JSON string that represents the current configuration of this Add-on installation."
           },
           "unique_name": {
             "type": "string",
@@ -255934,8 +255912,7 @@
             "nullable": true
           },
           "encryption_details": {
-            "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature.",
-            "nullable": true
+            "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature."
           },
           "subresource_uris": {
             "type": "object",
@@ -260235,12 +260212,10 @@
             "default": 0
           },
           "limits": {
-            "description": "An object that describes the limits of the service instance. The `limits` object contains  `channel_members` to describe the members/channel limit and `user_channels` to describe the channels/user limit. `channel_members` can be 1,000 or less, with a default of 250. `user_channels` can be 1,000 or less, with a default value of 100.",
-            "nullable": true
+            "description": "An object that describes the limits of the service instance. The `limits` object contains  `channel_members` to describe the members/channel limit and `user_channels` to describe the channels/user limit. `channel_members` can be 1,000 or less, with a default of 250. `user_channels` can be 1,000 or less, with a default value of 100."
           },
           "webhooks": {
-            "description": "An object that contains information about the webhooks configured for this service.",
-            "nullable": true
+            "description": "An object that contains information about the webhooks configured for this service."
           },
           "pre_webhook_url": {
             "type": "string",
@@ -260266,8 +260241,7 @@
             "nullable": true
           },
           "notifications": {
-            "description": "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more information.",
-            "nullable": true
+            "description": "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more information."
           },
           "url": {
             "type": "string",
@@ -260732,8 +260706,7 @@
             "nullable": true
           },
           "configuration": {
-            "description": "The JSON string that describes how the channel webhook is configured. The configuration object contains the `url`, `method`, `filters`, and `retry_count` values that are configured by the create and update actions.",
-            "nullable": true
+            "description": "The JSON string that describes how the channel webhook is configured. The configuration object contains the `url`, `method`, `filters`, and `retry_count` values that are configured by the create and update actions."
           },
           "date_created": {
             "type": "string",
@@ -261130,7 +261103,6 @@
           },
           "media": {
             "description": "An object that describes the Message's media, if the message contains media. The object contains these fields: `content_type` with the MIME type of the media, `filename` with the name of the media, `sid` with the SID of the Media resource, and `size` with the media object's file size in bytes. If the Message has no media, this value is `null`.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -261324,8 +261296,7 @@
             "default": 0
           },
           "limits": {
-            "description": "An object that describes the limits of the service instance. The `limits` object contains  `channel_members` to describe the members/channel limit and `user_channels` to describe the channels/user limit. `channel_members` can be 1,000 or less, with a default of 250. `user_channels` can be 1,000 or less, with a default value of 100.",
-            "nullable": true
+            "description": "An object that describes the limits of the service instance. The `limits` object contains  `channel_members` to describe the members/channel limit and `user_channels` to describe the channels/user limit. `channel_members` can be 1,000 or less, with a default of 250. `user_channels` can be 1,000 or less, with a default value of 100."
           },
           "pre_webhook_url": {
             "type": "string",
@@ -261361,12 +261332,10 @@
             "default": 0
           },
           "notifications": {
-            "description": "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.",
-            "nullable": true
+            "description": "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info."
           },
           "media": {
-            "description": "An object that describes the properties of media that the service supports. The object contains the `size_limit_mb` property, which describes the size of the largest media file in MB; and the `compatibility_message` property, which contains the message text to send when a media message does not have any text.",
-            "nullable": true
+            "description": "An object that describes the properties of media that the service supports. The object contains the `size_limit_mb` property, which describes the size of the largest media file in MB; and the `compatibility_message` property, which contains the message text to send when a media message does not have any text."
           },
           "url": {
             "type": "string",
@@ -262884,8 +262853,7 @@
             "nullable": true
           },
           "whatsapp": {
-            "description": "Contains the whatsapp approval information for the Content resource, with fields such as approval status, rejection reason, and category, amongst others.",
-            "nullable": true
+            "description": "Contains the whatsapp approval information for the Content resource, with fields such as approval status, rejection reason, and category, amongst others."
           },
           "url": {
             "type": "string",
@@ -263060,12 +263028,10 @@
             "nullable": true
           },
           "variables": {
-            "description": "Defines the default placeholder values for variables included in the Content resource. e.g. {\"1\": \"Customer_Name\"}.",
-            "nullable": true
+            "description": "Defines the default placeholder values for variables included in the Content resource. e.g. {\"1\": \"Customer_Name\"}."
           },
           "types": {
-            "description": "The [Content types](https://www.twilio.com/docs/content/content-types-overview) (e.g. twilio/text) for this Content resource.",
-            "nullable": true
+            "description": "The [Content types](https://www.twilio.com/docs/content/content-types-overview) (e.g. twilio/text) for this Content resource."
           },
           "legacy_template_name": {
             "type": "string",
@@ -263177,8 +263143,7 @@
             "nullable": true
           },
           "auto_creation": {
-            "description": "Auto Creation configuration for the address.",
-            "nullable": true
+            "description": "Auto Creation configuration for the address."
           },
           "date_created": {
             "type": "string",
@@ -263377,8 +263342,7 @@
             "nullable": true
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "description": "Timer date values representing state update for this conversation."
           },
           "url": {
             "type": "string",
@@ -263392,9 +263356,7 @@
             "format": "uri-map",
             "nullable": true
           },
-          "bindings": {
-            "nullable": true
-          }
+          "bindings": { }
         }
       },
       "conversation_enum_webhook_enabled_type": {
@@ -263518,8 +263480,7 @@
             "nullable": true
           },
           "delivery": {
-            "description": "An object that contains the summary of delivery statuses for the message to non-chat participants.",
-            "nullable": true
+            "description": "An object that contains the summary of delivery statuses for the message to non-chat participants."
           },
           "links": {
             "type": "object",
@@ -263692,7 +263653,6 @@
           },
           "messaging_binding": {
             "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -263784,8 +263744,7 @@
             "nullable": true
           },
           "configuration": {
-            "description": "The configuration of this webhook. Is defined based on target.",
-            "nullable": true
+            "description": "The configuration of this webhook. Is defined based on target."
           },
           "date_created": {
             "type": "string",
@@ -263917,8 +263876,7 @@
             "nullable": true
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "description": "Timer date values representing state update for this conversation."
           },
           "links": {
             "type": "object",
@@ -263926,9 +263884,7 @@
             "format": "uri-map",
             "nullable": true
           },
-          "bindings": {
-            "nullable": true
-          },
+          "bindings": { },
           "url": {
             "type": "string",
             "description": "An absolute API resource URL for this conversation.",
@@ -264069,7 +264025,6 @@
           },
           "participant_messaging_binding": {
             "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -264139,8 +264094,7 @@
             "$ref": "#/components/schemas/participant_conversation_enum_state"
           },
           "conversation_timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "description": "Timer date values representing state update for this conversation."
           },
           "links": {
             "type": "object",
@@ -264528,8 +264482,7 @@
             "nullable": true
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "description": "Timer date values representing state update for this conversation."
           },
           "url": {
             "type": "string",
@@ -264543,9 +264496,7 @@
             "format": "uri-map",
             "nullable": true
           },
-          "bindings": {
-            "nullable": true
-          }
+          "bindings": { }
         }
       },
       "service_conversation_enum_webhook_enabled_type": {
@@ -264671,8 +264622,7 @@
             "nullable": true
           },
           "delivery": {
-            "description": "An object that contains the summary of delivery statuses for the message to non-chat participants.",
-            "nullable": true
+            "description": "An object that contains the summary of delivery statuses for the message to non-chat participants."
           },
           "url": {
             "type": "string",
@@ -264867,7 +264817,6 @@
           },
           "messaging_binding": {
             "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -264967,8 +264916,7 @@
             "nullable": true
           },
           "configuration": {
-            "description": "The configuration of this webhook. Is defined based on target.",
-            "nullable": true
+            "description": "The configuration of this webhook. Is defined based on target."
           },
           "date_created": {
             "type": "string",
@@ -265084,8 +265032,7 @@
             "nullable": true
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "description": "Timer date values representing state update for this conversation."
           },
           "links": {
             "type": "object",
@@ -265093,9 +265040,7 @@
             "format": "uri-map",
             "nullable": true
           },
-          "bindings": {
-            "nullable": true
-          },
+          "bindings": { },
           "url": {
             "type": "string",
             "description": "An absolute API resource URL for this conversation.",
@@ -265141,16 +265086,13 @@
             "nullable": true
           },
           "new_message": {
-            "description": "The Push Notification configuration for New Messages.",
-            "nullable": true
+            "description": "The Push Notification configuration for New Messages."
           },
           "added_to_conversation": {
-            "description": "The Push Notification configuration for being added to a Conversation.",
-            "nullable": true
+            "description": "The Push Notification configuration for being added to a Conversation."
           },
           "removed_from_conversation": {
-            "description": "The Push Notification configuration for being removed from a Conversation.",
-            "nullable": true
+            "description": "The Push Notification configuration for being removed from a Conversation."
           },
           "log_enabled": {
             "type": "boolean",
@@ -265213,7 +265155,6 @@
           },
           "participant_messaging_binding": {
             "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -265283,8 +265224,7 @@
             "$ref": "#/components/schemas/service_participant_conversation_enum_state"
           },
           "conversation_timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "description": "Timer date values representing state update for this conversation."
           },
           "links": {
             "type": "object",
@@ -265566,8 +265506,7 @@
             "$ref": "#/components/schemas/service_user_conversation_enum_state"
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "description": "Timer date values representing state update for this conversation."
           },
           "attributes": {
             "type": "string",
@@ -265884,8 +265823,7 @@
             "$ref": "#/components/schemas/user_conversation_enum_state"
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "description": "Timer date values representing state update for this conversation."
           },
           "attributes": {
             "type": "string",
@@ -267516,8 +267454,7 @@
             "nullable": true
           },
           "sink_configuration": {
-            "description": "The information required for Twilio to connect to the provided Sink encoded as JSON.",
-            "nullable": true
+            "description": "The information required for Twilio to connect to the provided Sink encoded as JSON."
           },
           "sink_type": {
             "$ref": "#/components/schemas/sink_enum_sink_type"
@@ -267807,8 +267744,7 @@
             "nullable": true
           },
           "attributes": {
-            "description": "An object that contains application-specific data.",
-            "nullable": true
+            "description": "An object that contains application-specific data."
           },
           "status": {
             "$ref": "#/components/schemas/configuration_enum_status"
@@ -267850,12 +267786,10 @@
             "nullable": true
           },
           "taskrouter_worker_channels": {
-            "description": "The TaskRouter default channel capacities and availability for workers.",
-            "nullable": true
+            "description": "The TaskRouter default channel capacities and availability for workers."
           },
           "taskrouter_worker_attributes": {
-            "description": "The TaskRouter Worker attributes.",
-            "nullable": true
+            "description": "The TaskRouter Worker attributes."
           },
           "taskrouter_offline_activity_sid": {
             "maxLength": 34,
@@ -267908,12 +267842,10 @@
             "nullable": true
           },
           "ui_attributes": {
-            "description": "The object that describes Flex UI characteristics and settings.",
-            "nullable": true
+            "description": "The object that describes Flex UI characteristics and settings."
           },
           "ui_dependencies": {
-            "description": "The object that defines the NPM packages and versions to be used in Hosted Flex.",
-            "nullable": true
+            "description": "The object that defines the NPM packages and versions to be used in Hosted Flex."
           },
           "ui_version": {
             "type": "string",
@@ -267956,12 +267888,10 @@
             "nullable": true
           },
           "crm_attributes": {
-            "description": "An object that contains the CRM attributes.",
-            "nullable": true
+            "description": "An object that contains the CRM attributes."
           },
           "public_attributes": {
-            "description": "The list of public attributes, which are visible to unauthenticated clients.",
-            "nullable": true
+            "description": "The list of public attributes, which are visible to unauthenticated clients."
           },
           "plugin_service_enabled": {
             "type": "boolean",
@@ -267969,8 +267899,7 @@
             "nullable": true
           },
           "plugin_service_attributes": {
-            "description": "The plugin service attributes.",
-            "nullable": true
+            "description": "The plugin service attributes."
           },
           "integrations": {
             "type": "array",
@@ -267979,8 +267908,7 @@
             "nullable": true
           },
           "outbound_call_flows": {
-            "description": "The list of outbound call flows.",
-            "nullable": true
+            "description": "The list of outbound call flows."
           },
           "serverless_service_sids": {
             "type": "array",
@@ -267994,16 +267922,13 @@
             "nullable": true
           },
           "queue_stats_configuration": {
-            "description": "Configurable parameters for Queues Statistics.",
-            "nullable": true
+            "description": "Configurable parameters for Queues Statistics."
           },
           "notifications": {
-            "description": "Configurable parameters for Notifications.",
-            "nullable": true
+            "description": "Configurable parameters for Notifications."
           },
           "markdown": {
-            "description": "Configurable parameters for Markdown.",
-            "nullable": true
+            "description": "Configurable parameters for Markdown."
           },
           "url": {
             "type": "string",
@@ -268012,8 +267937,7 @@
             "nullable": true
           },
           "flex_insights_hr": {
-            "description": "Object with enabled/disabled flag with list of workspaces.",
-            "nullable": true
+            "description": "Object with enabled/disabled flag with list of workspaces."
           },
           "flex_insights_drilldown": {
             "type": "boolean",
@@ -268032,24 +267956,19 @@
             "nullable": true
           },
           "debugger_integration": {
-            "description": "Configurable parameters for Debugger Integration.",
-            "nullable": true
+            "description": "Configurable parameters for Debugger Integration."
           },
           "flex_ui_status_report": {
-            "description": "Configurable parameters for Flex UI Status report.",
-            "nullable": true
+            "description": "Configurable parameters for Flex UI Status report."
           },
           "agent_conv_end_methods": {
-            "description": "Agent conversation end methods.",
-            "nullable": true
+            "description": "Agent conversation end methods."
           },
           "citrix_voice_vdi": {
-            "description": "Citrix voice vdi configuration and settings.",
-            "nullable": true
+            "description": "Citrix voice vdi configuration and settings."
           },
           "offline_config": {
-            "description": "Presence and presence ttl configuration",
-            "nullable": true
+            "description": "Presence and presence ttl configuration"
           }
         }
       },
@@ -268240,8 +268159,7 @@
             "$ref": "#/components/schemas/flex_flow_enum_integration_type"
           },
           "integration": {
-            "description": "An object that contains specific parameters for the integration.",
-            "nullable": true
+            "description": "An object that contains specific parameters for the integration."
           },
           "long_lived": {
             "type": "boolean",
@@ -268579,8 +268497,7 @@
             "nullable": true
           },
           "assessment": {
-            "description": "Assessment Details associated with an assessment",
-            "nullable": true
+            "description": "Assessment Details associated with an assessment"
           },
           "timestamp": {
             "type": "string",
@@ -268613,8 +268530,7 @@
             "nullable": true
           },
           "comment": {
-            "description": "The comment added for assessment.",
-            "nullable": true
+            "description": "The comment added for assessment."
           },
           "offset": {
             "type": "string",
@@ -268863,8 +268779,7 @@
             "nullable": true
           },
           "category": {
-            "description": "The Category for the question.",
-            "nullable": true
+            "description": "The Category for the question."
           },
           "answer_set_id": {
             "type": "string",
@@ -268882,8 +268797,7 @@
             "default": 0
           },
           "answer_set": {
-            "description": "Set of answers for the question",
-            "nullable": true
+            "description": "Set of answers for the question"
           },
           "url": {
             "type": "string",
@@ -268984,16 +268898,13 @@
             "nullable": true
           },
           "media": {
-            "description": "The media identifiers of the conversation.",
-            "nullable": true
+            "description": "The media identifiers of the conversation."
           },
           "assessment_type": {
-            "description": "The type of the assessment.",
-            "nullable": true
+            "description": "The type of the assessment."
           },
           "assessment_percentage": {
-            "description": "The percentage scored on the Assessments.",
-            "nullable": true
+            "description": "The percentage scored on the Assessments."
           },
           "url": {
             "type": "string",
@@ -269045,16 +268956,13 @@
             "nullable": true
           },
           "answer_sets": {
-            "description": "The lis of answer sets",
-            "nullable": true
+            "description": "The lis of answer sets"
           },
           "answer_set_categories": {
-            "description": "The list of answer set categories",
-            "nullable": true
+            "description": "The list of answer set categories"
           },
           "not_applicable": {
-            "description": "The details for not applicable answer set",
-            "nullable": true
+            "description": "The details for not applicable answer set"
           },
           "url": {
             "type": "string",
@@ -269074,9 +268982,7 @@
             "description": "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Flex Insights resource and owns this resource.",
             "nullable": true
           },
-          "comments": {
-            "nullable": true
-          },
+          "comments": { },
           "url": {
             "type": "string",
             "format": "uri",
@@ -269114,12 +269020,10 @@
             "nullable": true
           },
           "channel": {
-            "description": "A JSON object that defines the Interaction’s communication channel and includes details about the channel. See the [Outbound SMS](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) and [inbound (API-initiated)](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#api-initiated-contact) Channel object examples.",
-            "nullable": true
+            "description": "A JSON object that defines the Interaction’s communication channel and includes details about the channel. See the [Outbound SMS](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) and [inbound (API-initiated)](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#api-initiated-contact) Channel object examples."
           },
           "routing": {
-            "description": "A JSON Object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality. \n All attributes in the Routing object on your Interaction request body are added “as is” to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes).",
-            "nullable": true
+            "description": "A JSON Object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality. \n All attributes in the Routing object on your Interaction request body are added “as is” to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes)."
           },
           "url": {
             "type": "string",
@@ -269282,8 +269186,7 @@
             "nullable": true
           },
           "routing": {
-            "description": "A JSON object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality. \n All attributes in the Routing object on your Interaction request body are added “as is” to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes).",
-            "nullable": true
+            "description": "A JSON object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality. \n All attributes in the Routing object on your Interaction request body are added “as is” to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes)."
           },
           "url": {
             "type": "string",
@@ -269341,8 +269244,7 @@
             "nullable": true
           },
           "routing_properties": {
-            "description": "The Participant's routing properties.",
-            "nullable": true
+            "description": "The Participant's routing properties."
           }
         }
       },
@@ -273433,7 +273335,6 @@
           },
           "from": {
             "description": "`object` The calling party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -273443,7 +273344,6 @@
           },
           "to": {
             "description": "`object` The called party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -273452,20 +273352,16 @@
             }
           },
           "carrier_edge": {
-            "description": "`object` Contains metrics and properties for the Twilio media gateway of a PSTN call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains metrics and properties for the Twilio media gateway of a PSTN call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           },
           "client_edge": {
-            "description": "`object` Contains metrics and properties for the Twilio media gateway of a Client call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains metrics and properties for the Twilio media gateway of a Client call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           },
           "sdk_edge": {
-            "description": "`object` Contains metrics and properties for the SDK sensor library for Client calls. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains metrics and properties for the SDK sensor library for Client calls. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           },
           "sip_edge": {
-            "description": "`object` Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           },
           "tags": {
             "type": "array",
@@ -273482,20 +273378,16 @@
             "nullable": true
           },
           "attributes": {
-            "description": "`object` Attributes capturing call-flow-specific details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#attributes-object) for the object properties.",
-            "nullable": true
+            "description": "`object` Attributes capturing call-flow-specific details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#attributes-object) for the object properties."
           },
           "properties": {
-            "description": "`object` Contains edge-agnostic call-level details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#properties-object) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains edge-agnostic call-level details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#properties-object) for the object properties."
           },
           "trust": {
-            "description": "`object` Contains trusted communications details including Branded Call and verified caller ID. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#trust-object) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains trusted communications details including Branded Call and verified caller ID. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#trust-object) for the object properties."
           },
           "annotation": {
-            "description": "`object` Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties.",
-            "nullable": true
+            "description": "`object` Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties."
           }
         }
       },
@@ -273666,8 +273558,7 @@
             "nullable": true
           },
           "detected_issues": {
-            "description": "Potential issues detected by Twilio during the conference.",
-            "nullable": true
+            "description": "Potential issues detected by Twilio during the conference."
           },
           "tags": {
             "type": "array",
@@ -273678,8 +273569,7 @@
             "nullable": true
           },
           "tag_info": {
-            "description": "Object. Contains details about conference tags including severity.",
-            "nullable": true
+            "description": "Object. Contains details about conference tags including severity."
           },
           "processing_state": {
             "$ref": "#/components/schemas/conference_enum_processing_state"
@@ -273896,16 +273786,13 @@
             "$ref": "#/components/schemas/conference_participant_enum_processing_state"
           },
           "properties": {
-            "description": "Participant properties and metadata.",
-            "nullable": true
+            "description": "Participant properties and metadata."
           },
           "events": {
-            "description": "Object containing information of actions taken by participants. Contains a dictionary of URL links to nested resources of this Conference Participant.",
-            "nullable": true
+            "description": "Object containing information of actions taken by participants. Contains a dictionary of URL links to nested resources of this Conference Participant."
           },
           "metrics": {
-            "description": "Object. Contains participant call quality metrics.",
-            "nullable": true
+            "description": "Object. Contains participant call quality metrics."
           },
           "url": {
             "type": "string",
@@ -274014,20 +273901,16 @@
             "nullable": true
           },
           "carrier_edge": {
-            "description": "`object` Represents the connection between Twilio and our immediate carrier partners. The events here describe the call lifecycle as reported by Twilio's carrier media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Represents the connection between Twilio and our immediate carrier partners. The events here describe the call lifecycle as reported by Twilio's carrier media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           },
           "sip_edge": {
-            "description": "`object` Represents the Twilio media gateway for SIP interface and SIP trunking calls. The events here describe the call lifecycle as reported by Twilio's public media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Represents the Twilio media gateway for SIP interface and SIP trunking calls. The events here describe the call lifecycle as reported by Twilio's public media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           },
           "sdk_edge": {
-            "description": "`object` Represents the Voice SDK running locally in the browser or in the Android/iOS application. The events here are emitted by the Voice SDK in response to certain call progress events, network changes, or call quality conditions. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Represents the Voice SDK running locally in the browser or in the Android/iOS application. The events here are emitted by the Voice SDK in response to certain call progress events, network changes, or call quality conditions. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           },
           "client_edge": {
-            "description": "`object` Represents the Twilio media gateway for Client calls. The events here describe the call lifecycle as reported by Twilio's Voice SDK media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Represents the Twilio media gateway for Client calls. The events here describe the call lifecycle as reported by Twilio's Voice SDK media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           }
         }
       },
@@ -274381,20 +274264,16 @@
             "$ref": "#/components/schemas/metric_enum_stream_direction"
           },
           "carrier_edge": {
-            "description": "Contains metrics and properties for the Twilio media gateway of a PSTN call.",
-            "nullable": true
+            "description": "Contains metrics and properties for the Twilio media gateway of a PSTN call."
           },
           "sip_edge": {
-            "description": "Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call.",
-            "nullable": true
+            "description": "Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call."
           },
           "sdk_edge": {
-            "description": "Contains metrics and properties for the SDK sensor library for Client calls.",
-            "nullable": true
+            "description": "Contains metrics and properties for the SDK sensor library for Client calls."
           },
           "client_edge": {
-            "description": "Contains metrics and properties for the Twilio media gateway of a Client call.",
-            "nullable": true
+            "description": "Contains metrics and properties for the Twilio media gateway of a Client call."
           }
         }
       },
@@ -274478,7 +274357,6 @@
           },
           "from": {
             "description": "`object` The calling party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -274488,7 +274366,6 @@
           },
           "to": {
             "description": "`object` The called party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -274497,20 +274374,16 @@
             }
           },
           "carrier_edge": {
-            "description": "`object` Contains metrics and properties for the Twilio media gateway of a PSTN call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains metrics and properties for the Twilio media gateway of a PSTN call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           },
           "client_edge": {
-            "description": "`object` Contains metrics and properties for the Twilio media gateway of a Client call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains metrics and properties for the Twilio media gateway of a Client call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           },
           "sdk_edge": {
-            "description": "`object` Contains metrics and properties for the SDK sensor library for Client calls. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains metrics and properties for the SDK sensor library for Client calls. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           },
           "sip_edge": {
-            "description": "`object` Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties."
           },
           "tags": {
             "type": "array",
@@ -274527,20 +274400,16 @@
             "nullable": true
           },
           "attributes": {
-            "description": "`object` Attributes capturing call-flow-specific details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#attributes-object) for the object properties.",
-            "nullable": true
+            "description": "`object` Attributes capturing call-flow-specific details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#attributes-object) for the object properties."
           },
           "properties": {
-            "description": "`object` Contains edge-agnostic call-level details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#properties-object) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains edge-agnostic call-level details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#properties-object) for the object properties."
           },
           "trust": {
-            "description": "`object` Contains trusted communications details including Branded Call and verified caller ID. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#trust-object) for the object properties.",
-            "nullable": true
+            "description": "`object` Contains trusted communications details including Branded Call and verified caller ID. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#trust-object) for the object properties."
           },
           "annotation": {
-            "description": "`object` Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties.",
-            "nullable": true
+            "description": "`object` Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties."
           }
         }
       },
@@ -274666,15 +274535,13 @@
             "$ref": "#/components/schemas/video_participant_summary_enum_twilio_realm"
           },
           "properties": {
-            "description": "Object containing information about the participant's data from the room. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#properties) for more information.",
-            "nullable": true
+            "description": "Object containing information about the participant's data from the room. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#properties) for more information."
           },
           "edge_location": {
             "$ref": "#/components/schemas/video_participant_summary_enum_edge_location"
           },
           "publisher_info": {
-            "description": "Object containing information about the SDK name and version. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#publisher_info) for more information.",
-            "nullable": true
+            "description": "Object containing information about the SDK name and version. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#publisher_info) for more information."
           },
           "url": {
             "type": "string",
@@ -276316,8 +276183,7 @@
             "$ref": "#/components/schemas/custom_operator_enum_availability"
           },
           "config": {
-            "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Operators created by the Account.",
-            "nullable": true
+            "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Operators created by the Account."
           },
           "date_created": {
             "type": "string",
@@ -276489,8 +276355,7 @@
             "$ref": "#/components/schemas/operator_enum_availability"
           },
           "config": {
-            "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Custom Operators created by the Account.",
-            "nullable": true
+            "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Custom Operators created by the Account."
           },
           "date_created": {
             "type": "string",
@@ -276637,20 +276502,15 @@
             "nullable": true
           },
           "label_probabilities": {
-            "description": "The labels probabilities. This might be available on conversation classify model outputs.",
-            "nullable": true
+            "description": "The labels probabilities. This might be available on conversation classify model outputs."
           },
           "extract_results": {
-            "description": "List of text extraction results. This might be available on classify-extract model outputs.",
-            "nullable": true
+            "description": "List of text extraction results. This might be available on classify-extract model outputs."
           },
           "text_generation_results": {
-            "description": "Output of a text generation operator for example Conversation Sumamary.",
-            "nullable": true
+            "description": "Output of a text generation operator for example Conversation Sumamary."
           },
-          "json_results": {
-            "nullable": true
-          },
+          "json_results": { },
           "transcript_sid": {
             "maxLength": 34,
             "minLength": 34,
@@ -276735,8 +276595,7 @@
             "nullable": true
           },
           "config_schema": {
-            "description": "JSON Schema for configuring an Operator with this Operator Type. Following https://json-schema.org/",
-            "nullable": true
+            "description": "JSON Schema for configuring an Operator with this Operator Type. Following https://json-schema.org/"
           },
           "date_created": {
             "type": "string",
@@ -276837,8 +276696,7 @@
             "$ref": "#/components/schemas/prebuilt_operator_enum_availability"
           },
           "config": {
-            "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Custom Operators created by the Account, will be empty for Pre-Built Operators.",
-            "nullable": true
+            "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Custom Operators created by the Account, will be empty for Pre-Built Operators."
           },
           "date_created": {
             "type": "string",
@@ -277080,8 +276938,7 @@
             "$ref": "#/components/schemas/transcript_enum_status"
           },
           "channel": {
-            "description": "Media Channel describing Transcript Source and Participant Mapping",
-            "nullable": true
+            "description": "Media Channel describing Transcript Source and Participant Mapping"
           },
           "data_logging": {
             "type": "boolean",
@@ -279541,12 +279398,8 @@
             "type": "integer",
             "default": 0
           },
-          "limits": {
-            "nullable": true
-          },
-          "webhooks": {
-            "nullable": true
-          },
+          "limits": { },
+          "webhooks": { },
           "pre_webhook_url": {
             "type": "string",
             "nullable": true
@@ -279566,9 +279419,7 @@
             },
             "nullable": true
           },
-          "notifications": {
-            "nullable": true
-          },
+          "notifications": { },
           "url": {
             "type": "string",
             "format": "uri",
@@ -279921,9 +279772,7 @@
             "format": "uri",
             "nullable": true
           },
-          "configuration": {
-            "nullable": true
-          },
+          "configuration": { },
           "date_created": {
             "type": "string",
             "format": "date-time",
@@ -280222,9 +280071,7 @@
             "type": "string",
             "nullable": true
           },
-          "media": {
-            "nullable": true
-          },
+          "media": { },
           "url": {
             "type": "string",
             "format": "uri",
@@ -280376,9 +280223,7 @@
             "type": "integer",
             "default": 0
           },
-          "limits": {
-            "nullable": true
-          },
+          "limits": { },
           "pre_webhook_url": {
             "type": "string",
             "nullable": true
@@ -280406,12 +280251,8 @@
             "type": "integer",
             "default": 0
           },
-          "notifications": {
-            "nullable": true
-          },
-          "media": {
-            "nullable": true
-          },
+          "notifications": { },
+          "media": { },
           "url": {
             "type": "string",
             "format": "uri",
@@ -281779,7 +281620,6 @@
         "properties": {
           "caller_name": {
             "description": "The name of the phone number's owner. If `null`, that information was not available.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -281822,12 +281662,10 @@
             }
           },
           "carrier": {
-            "description": "The telecom company that provides the phone number.",
-            "nullable": true
+            "description": "The telecom company that provides the phone number."
           },
           "add_ons": {
             "description": "A JSON string with the results of the Add-ons you specified in the `add_ons` parameters. For the format of the object, see [Using Add-ons](https://www.twilio.com/docs/add-ons).",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -282007,12 +281845,8 @@
           "sms_pumping_risk": {
             "$ref": "#/components/schemas/SmsPumpingRiskInfo"
           },
-          "phone_number_quality_score": {
-            "nullable": true
-          },
-          "pre_fill": {
-            "nullable": true
-          }
+          "phone_number_quality_score": { },
+          "pre_fill": { }
         }
       },
       "LookupJobRequest": {
@@ -285782,8 +285616,7 @@
             "nullable": true
           },
           "cert_in_validation": {
-            "description": "Optional JSON field describing the status and upload date of a new certificate in the process of validation",
-            "nullable": true
+            "description": "Optional JSON field describing the status and upload date of a new certificate in the process of validation"
           }
         }
       },
@@ -286723,8 +286556,7 @@
             "nullable": true
           },
           "resource_links": {
-            "description": "The URLs of the documents associated with the Tollfree Verification resource.",
-            "nullable": true
+            "description": "The URLs of the documents associated with the Tollfree Verification resource."
           },
           "external_reference_id": {
             "type": "string",
@@ -286942,8 +286774,7 @@
             "nullable": true
           },
           "rate_limits": {
-            "description": "Rate limit and/or classification set by each carrier, Ex. AT&T or T-Mobile.",
-            "nullable": true
+            "description": "Rate limit and/or classification set by each carrier, Ex. AT&T or T-Mobile."
           },
           "message_flow": {
             "type": "string",
@@ -287130,8 +286961,7 @@
             "nullable": true
           },
           "rate_limits": {
-            "description": "Rate limit and/or classification set by each carrier, Ex. AT&T or T-Mobile.",
-            "nullable": true
+            "description": "Rate limit and/or classification set by each carrier, Ex. AT&T or T-Mobile."
           },
           "message_flow": {
             "type": "string",
@@ -287897,8 +287727,7 @@
             "nullable": true
           },
           "cert_in_validation": {
-            "description": "Optional JSON field describing the status and upload date of a new certificate in the process of validation",
-            "nullable": true
+            "description": "Optional JSON field describing the status and upload date of a new certificate in the process of validation"
           }
         }
       },
@@ -288806,8 +288635,7 @@
             "nullable": true
           },
           "event_data": {
-            "description": "An object with additional data about the event. The  contents depend on `event_type`. For example, event-types of the form `RESOURCE.updated`, this value contains a `resource_properties` dictionary that describes the previous and updated properties of the resource.",
-            "nullable": true
+            "description": "An object with additional data about the event. The  contents depend on `event_type`. For example, event-types of the form `RESOURCE.updated`, this value contains a `resource_properties` dictionary that describes the previous and updated properties of the resource."
           },
           "event_date": {
             "type": "string",
@@ -289415,32 +289243,25 @@
             "nullable": true
           },
           "data": {
-            "description": "The custom key-value pairs of the notification's payload. For FCM and GCM, this value translates to `data` in the FCM and GCM payloads. FCM and GCM [reserve certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref) that cannot be used in those channels. For APNS, attributes of `data` are inserted into the APNS payload as custom properties outside of the `aps` dictionary. In all channels, we reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed and are rejected as 400 Bad request with no delivery attempted. For SMS, this parameter is not supported and is omitted from deliveries to those channels.",
-            "nullable": true
+            "description": "The custom key-value pairs of the notification's payload. For FCM and GCM, this value translates to `data` in the FCM and GCM payloads. FCM and GCM [reserve certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref) that cannot be used in those channels. For APNS, attributes of `data` are inserted into the APNS payload as custom properties outside of the `aps` dictionary. In all channels, we reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed and are rejected as 400 Bad request with no delivery attempted. For SMS, this parameter is not supported and is omitted from deliveries to those channels."
           },
           "apn": {
-            "description": "The APNS-specific payload that overrides corresponding attributes in the generic payload for APNS Bindings. This property maps to the APNS `Payload` item, therefore the `aps` key must be used to change standard attributes. Adds custom key-value pairs to the root of the dictionary. See the [APNS documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html) for more details. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed.",
-            "nullable": true
+            "description": "The APNS-specific payload that overrides corresponding attributes in the generic payload for APNS Bindings. This property maps to the APNS `Payload` item, therefore the `aps` key must be used to change standard attributes. Adds custom key-value pairs to the root of the dictionary. See the [APNS documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html) for more details. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed."
           },
           "gcm": {
-            "description": "The GCM-specific payload that overrides corresponding attributes in the generic payload for GCM Bindings.  This property maps to the root JSON dictionary. Target parameters `to`, `registration_ids`, and `notification_key` are not allowed. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed.",
-            "nullable": true
+            "description": "The GCM-specific payload that overrides corresponding attributes in the generic payload for GCM Bindings.  This property maps to the root JSON dictionary. Target parameters `to`, `registration_ids`, and `notification_key` are not allowed. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed."
           },
           "fcm": {
-            "description": "The FCM-specific payload that overrides corresponding attributes in the generic payload for FCM Bindings. This property maps to the root JSON dictionary. See the [FCM documentation](https://firebase.google.com/docs/cloud-messaging/http-server-ref#downstream) for more details. Target parameters `to`, `registration_ids`, `condition`, and `notification_key` are not allowed in this parameter. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed. FCM also [reserves certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref), which cannot be used in that channel.",
-            "nullable": true
+            "description": "The FCM-specific payload that overrides corresponding attributes in the generic payload for FCM Bindings. This property maps to the root JSON dictionary. See the [FCM documentation](https://firebase.google.com/docs/cloud-messaging/http-server-ref#downstream) for more details. Target parameters `to`, `registration_ids`, `condition`, and `notification_key` are not allowed in this parameter. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed. FCM also [reserves certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref), which cannot be used in that channel."
           },
           "sms": {
-            "description": "The SMS-specific payload that overrides corresponding attributes in the generic payload for SMS Bindings.  Each attribute in this value maps to the corresponding `form` parameter of the Twilio [Message](https://www.twilio.com/docs/sms/api/message-resource) resource.  These parameters of the Message resource are supported in snake case format: `body`, `media_urls`, `status_callback`, and `max_price`.  The `status_callback` parameter overrides the corresponding parameter in the messaging service, if configured. The `media_urls` property expects a JSON array.",
-            "nullable": true
+            "description": "The SMS-specific payload that overrides corresponding attributes in the generic payload for SMS Bindings.  Each attribute in this value maps to the corresponding `form` parameter of the Twilio [Message](https://www.twilio.com/docs/sms/api/message-resource) resource.  These parameters of the Message resource are supported in snake case format: `body`, `media_urls`, `status_callback`, and `max_price`.  The `status_callback` parameter overrides the corresponding parameter in the messaging service, if configured. The `media_urls` property expects a JSON array."
           },
           "facebook_messenger": {
-            "description": "Deprecated.",
-            "nullable": true
+            "description": "Deprecated."
           },
           "alexa": {
-            "description": "Deprecated.",
-            "nullable": true
+            "description": "Deprecated."
           }
         }
       },
@@ -292152,7 +291973,6 @@
           },
           "attributes": {
             "description": "The set of parameters that are the attributes of the End Users resource which are listed in the End User Types.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -292584,8 +292404,7 @@
             "$ref": "#/components/schemas/regulation_enum_end_user_type"
           },
           "requirements": {
-            "description": "The SID of an object that holds the regulatory information of the phone number country, phone number type, and end user type.",
-            "nullable": true
+            "description": "The SID of an object that holds the regulatory information of the phone number country, phone number type, and end user type."
           },
           "url": {
             "type": "string",
@@ -292741,7 +292560,6 @@
           },
           "attributes": {
             "description": "The set of parameters that are the attributes of the Supporting Documents resource which are listed in the Supporting Document Types.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -295443,8 +295261,7 @@
             "nullable": true
           },
           "configuration_schema": {
-            "description": "The JSON object with the configuration that must be provided when installing a given Add-on.",
-            "nullable": true
+            "description": "The JSON object with the configuration that must be provided when installing a given Add-on."
           },
           "url": {
             "type": "string",
@@ -295532,8 +295349,7 @@
             "nullable": true
           },
           "configuration": {
-            "description": "The JSON object that represents the current configuration of installed Add-on.",
-            "nullable": true
+            "description": "The JSON object that represents the current configuration of installed Add-on."
           },
           "unique_name": {
             "type": "string",
@@ -295902,21 +295718,11 @@
             "type": "string",
             "nullable": true
           },
-          "period": {
-            "nullable": true
-          },
-          "commands_usage": {
-            "nullable": true
-          },
-          "commands_costs": {
-            "nullable": true
-          },
-          "data_usage": {
-            "nullable": true
-          },
-          "data_costs": {
-            "nullable": true
-          },
+          "period": { },
+          "commands_usage": { },
+          "commands_costs": { },
+          "data_usage": { },
+          "data_costs": { },
           "url": {
             "type": "string",
             "format": "uri",
@@ -298626,8 +298432,7 @@
             "nullable": true
           },
           "context": {
-            "description": "The current state of the execution flow. As your flow executes, we save the state in a flow context. Your widgets can access the data in the flow context as variables, either in configuration fields or in text areas as variable substitution.",
-            "nullable": true
+            "description": "The current state of the execution flow. As your flow executes, we save the state in a flow context. Your widgets can access the data in the flow context as variables, either in configuration fields or in text areas as variable substitution."
           },
           "status": {
             "$ref": "#/components/schemas/engagement_enum_status"
@@ -298678,8 +298483,7 @@
             "nullable": true
           },
           "context": {
-            "description": "As your flow executes, we save the state in what's called the Flow Context. Any data in the flow context can be accessed by your widgets as variables, either in configuration fields or in text areas as variable substitution.",
-            "nullable": true
+            "description": "As your flow executes, we save the state in what's called the Flow Context. Any data in the flow context can be accessed by your widgets as variables, either in configuration fields or in text areas as variable substitution."
           },
           "engagement_sid": {
             "maxLength": 34,
@@ -298753,7 +298557,6 @@
           },
           "context": {
             "description": "The current state of the Flow's Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -298811,7 +298614,6 @@
           },
           "context": {
             "description": "The current state of the Flow's Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -298893,7 +298695,6 @@
           },
           "context": {
             "description": "The current state of the Flow's Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -298955,7 +298756,6 @@
           },
           "context": {
             "description": "The current state of the Flow's Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -299103,7 +298903,6 @@
           },
           "context": {
             "description": "The current state of the Flow's Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -299173,7 +298972,6 @@
           },
           "context": {
             "description": "The current state of the Flow's Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -299266,7 +299064,6 @@
           },
           "context": {
             "description": "The current state of the Flow's Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -299329,7 +299126,6 @@
           },
           "context": {
             "description": "The current state of the Flow's Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -299411,7 +299207,6 @@
           },
           "context": {
             "description": "The current state of the Flow's Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -299473,7 +299268,6 @@
           },
           "context": {
             "description": "The current state of the Flow's Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -299546,8 +299340,7 @@
             "nullable": true
           },
           "definition": {
-            "description": "JSON representation of flow definition.",
-            "nullable": true
+            "description": "JSON representation of flow definition."
           },
           "status": {
             "$ref": "#/components/schemas/twilio_studio_v2_flow_enum_status"
@@ -299651,8 +299444,7 @@
             "nullable": true
           },
           "definition": {
-            "description": "JSON representation of flow definition.",
-            "nullable": true
+            "description": "JSON representation of flow definition."
           },
           "status": {
             "$ref": "#/components/schemas/flow_revision_enum_status"
@@ -300562,8 +300354,7 @@
             "nullable": true
           },
           "period": {
-            "description": "The time period for which the usage is reported. The period is represented as a pair of `start_time` and `end_time` timestamps specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
-            "nullable": true
+            "description": "The time period for which the usage is reported. The period is represented as a pair of `start_time` and `end_time` timestamps specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format."
           },
           "data_upload": {
             "type": "integer",
@@ -300678,7 +300469,6 @@
           },
           "data": {
             "description": "An arbitrary, schema-less object that the Sync Document stores. Can be up to 16 KiB in length.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "sensitive",
@@ -300883,7 +300673,6 @@
           },
           "data": {
             "description": "An arbitrary, schema-less object that contains the Stream Message body. Can be up to 4 KiB in length.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "sensitive",
@@ -301024,7 +300813,6 @@
           },
           "data": {
             "description": "An arbitrary, schema-less object that the List Item stores. Can be up to 16 KiB in length.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "sensitive",
@@ -301275,7 +301063,6 @@
           },
           "data": {
             "description": "An arbitrary, schema-less object that the Map Item stores. Can be up to 16 KiB in length.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "sensitive",
@@ -301568,8 +301355,7 @@
             "nullable": true
           },
           "event_data": {
-            "description": "Data about the event. For more information, see [Event types](https://www.twilio.com/docs/taskrouter/api/event#event-types).",
-            "nullable": true
+            "description": "Data about the event. For more information, see [Event types](https://www.twilio.com/docs/taskrouter/api/event#event-types)."
           },
           "event_date": {
             "type": "string",
@@ -302082,8 +301868,7 @@
             "default": 0
           },
           "split_by_wait_time": {
-            "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds.",
-            "nullable": true
+            "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds."
           },
           "task_queue_sid": {
             "maxLength": 34,
@@ -302094,16 +301879,13 @@
             "nullable": true
           },
           "wait_duration_until_accepted": {
-            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks accepted while in the TaskQueue. Calculation is based on the time when the Tasks were created. For transfers, the wait duration is counted from the moment ***the Task was created***, and not from when the transfer was initiated.",
-            "nullable": true
+            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks accepted while in the TaskQueue. Calculation is based on the time when the Tasks were created. For transfers, the wait duration is counted from the moment ***the Task was created***, and not from when the transfer was initiated."
           },
           "wait_duration_until_canceled": {
-            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks canceled while in the TaskQueue.",
-            "nullable": true
+            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks canceled while in the TaskQueue."
           },
           "wait_duration_in_queue_until_accepted": {
-            "description": "The relative wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks accepted while in the TaskQueue. Calculation is based on the time when the Tasks entered the TaskQueue.",
-            "nullable": true
+            "description": "The relative wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks accepted while in the TaskQueue. Calculation is based on the time when the Tasks entered the TaskQueue."
           },
           "tasks_canceled": {
             "type": "integer",
@@ -302198,12 +301980,10 @@
             "nullable": true
           },
           "tasks_by_priority": {
-            "description": "The number of Tasks by priority. For example: `{\"0\": \"10\", \"99\": \"5\"}` shows 10 Tasks at priority 0 and 5 at priority 99.",
-            "nullable": true
+            "description": "The number of Tasks by priority. For example: `{\"0\": \"10\", \"99\": \"5\"}` shows 10 Tasks at priority 0 and 5 at priority 99."
           },
           "tasks_by_status": {
-            "description": "The number of Tasks by their current status. For example: `{\"pending\": \"1\", \"reserved\": \"3\", \"assigned\": \"2\", \"completed\": \"5\"}`.",
-            "nullable": true
+            "description": "The number of Tasks by their current status. For example: `{\"pending\": \"1\", \"reserved\": \"3\", \"assigned\": \"2\", \"completed\": \"5\"}`."
           },
           "total_available_workers": {
             "type": "integer",
@@ -302248,12 +302028,10 @@
             "nullable": true
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the TaskQueue.",
-            "nullable": true
+            "description": "An object that contains the cumulative statistics for the TaskQueue."
           },
           "realtime": {
-            "description": "An object that contains the real-time statistics for the TaskQueue.",
-            "nullable": true
+            "description": "An object that contains the real-time statistics for the TaskQueue."
           },
           "task_queue_sid": {
             "maxLength": 34,
@@ -302291,12 +302069,10 @@
             "nullable": true
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the TaskQueues.",
-            "nullable": true
+            "description": "An object that contains the cumulative statistics for the TaskQueues."
           },
           "realtime": {
-            "description": "An object that contains the real-time statistics for the TaskQueues.",
-            "nullable": true
+            "description": "An object that contains the real-time statistics for the TaskQueues."
           },
           "task_queue_sid": {
             "maxLength": 34,
@@ -302635,8 +302411,7 @@
             "nullable": true
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the Worker.",
-            "nullable": true
+            "description": "An object that contains the cumulative statistics for the Worker."
           },
           "worker_sid": {
             "maxLength": 34,
@@ -302778,12 +302553,10 @@
         "type": "object",
         "properties": {
           "realtime": {
-            "description": "An object that contains the real-time statistics for the Worker.",
-            "nullable": true
+            "description": "An object that contains the real-time statistics for the Worker."
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the Worker.",
-            "nullable": true
+            "description": "An object that contains the cumulative statistics for the Worker."
           },
           "account_sid": {
             "maxLength": 34,
@@ -303072,16 +302845,13 @@
             "default": 0
           },
           "split_by_wait_time": {
-            "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds.",
-            "nullable": true
+            "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds."
           },
           "wait_duration_until_accepted": {
-            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks that were accepted.",
-            "nullable": true
+            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks that were accepted."
           },
           "wait_duration_until_canceled": {
-            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks that were canceled.",
-            "nullable": true
+            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks that were canceled."
           },
           "tasks_canceled": {
             "type": "integer",
@@ -303162,12 +302932,10 @@
             "nullable": true
           },
           "tasks_by_priority": {
-            "description": "The number of Tasks by priority. For example: `{\"0\": \"10\", \"99\": \"5\"}` shows 10 Tasks at priority 0 and 5 at priority 99.",
-            "nullable": true
+            "description": "The number of Tasks by priority. For example: `{\"0\": \"10\", \"99\": \"5\"}` shows 10 Tasks at priority 0 and 5 at priority 99."
           },
           "tasks_by_status": {
-            "description": "The number of Tasks by their current status. For example: `{\"pending\": \"1\", \"reserved\": \"3\", \"assigned\": \"2\", \"completed\": \"5\"}`.",
-            "nullable": true
+            "description": "The number of Tasks by their current status. For example: `{\"pending\": \"1\", \"reserved\": \"3\", \"assigned\": \"2\", \"completed\": \"5\"}`."
           },
           "total_tasks": {
             "type": "integer",
@@ -303210,12 +302978,10 @@
             "nullable": true
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the Workflow.",
-            "nullable": true
+            "description": "An object that contains the cumulative statistics for the Workflow."
           },
           "realtime": {
-            "description": "An object that contains the real-time statistics for the Workflow.",
-            "nullable": true
+            "description": "An object that contains the real-time statistics for the Workflow."
           },
           "workflow_sid": {
             "maxLength": 34,
@@ -303409,16 +303175,13 @@
             "default": 0
           },
           "split_by_wait_time": {
-            "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds.",
-            "nullable": true
+            "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds."
           },
           "wait_duration_until_accepted": {
-            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks that were accepted.",
-            "nullable": true
+            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks that were accepted."
           },
           "wait_duration_until_canceled": {
-            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks that were canceled.",
-            "nullable": true
+            "description": "The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks that were canceled."
           },
           "tasks_canceled": {
             "type": "integer",
@@ -303497,12 +303260,10 @@
             "nullable": true
           },
           "tasks_by_priority": {
-            "description": "The number of Tasks by priority. For example: `{\"0\": \"10\", \"99\": \"5\"}` shows 10 Tasks at priority 0 and 5 at priority 99.",
-            "nullable": true
+            "description": "The number of Tasks by priority. For example: `{\"0\": \"10\", \"99\": \"5\"}` shows 10 Tasks at priority 0 and 5 at priority 99."
           },
           "tasks_by_status": {
-            "description": "The number of Tasks by their current status. For example: `{\"pending\": \"1\", \"reserved\": \"3\", \"assigned\": \"2\", \"completed\": \"5\"}`.",
-            "nullable": true
+            "description": "The number of Tasks by their current status. For example: `{\"pending\": \"1\", \"reserved\": \"3\", \"assigned\": \"2\", \"completed\": \"5\"}`."
           },
           "total_tasks": {
             "type": "integer",
@@ -303534,12 +303295,10 @@
         "type": "object",
         "properties": {
           "realtime": {
-            "description": "An object that contains the real-time statistics for the Workspace.",
-            "nullable": true
+            "description": "An object that contains the real-time statistics for the Workspace."
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the Workspace.",
-            "nullable": true
+            "description": "An object that contains the cumulative statistics for the Workspace."
           },
           "account_sid": {
             "maxLength": 34,
@@ -304042,8 +303801,7 @@
             "nullable": true
           },
           "recording": {
-            "description": "The recording settings for the trunk. Can be: `do-not-record`, `record-from-ringing`, `record-from-answer`. If set to `record-from-ringing` or `record-from-answer`, all calls going through the trunk will be recorded. The only way to change recording parameters is on a sub-resource of a Trunk after it has been created. e.g.`/Trunks/[Trunk_SID]/Recording -XPOST -d'Mode=record-from-answer'`. See [Recording](https://www.twilio.com/docs/sip-trunking#recording) for more information.",
-            "nullable": true
+            "description": "The recording settings for the trunk. Can be: `do-not-record`, `record-from-ringing`, `record-from-answer`. If set to `record-from-ringing` or `record-from-answer`, all calls going through the trunk will be recorded. The only way to change recording parameters is on a sub-resource of a Trunk after it has been created. e.g.`/Trunks/[Trunk_SID]/Recording -XPOST -d'Mode=record-from-answer'`. See [Recording](https://www.twilio.com/docs/sip-trunking#recording) for more information."
           },
           "transfer_mode": {
             "$ref": "#/components/schemas/trunk_enum_transfer_setting"
@@ -304572,7 +304330,6 @@
           },
           "attributes": {
             "description": "The set of parameters that are the attributes of the End Users resource which are listed in the End User Types.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -304652,8 +304409,7 @@
             "nullable": true
           },
           "requirements": {
-            "description": "The SID of an object that holds the policy information",
-            "nullable": true
+            "description": "The SID of an object that holds the policy information"
           },
           "url": {
             "type": "string",
@@ -304709,7 +304465,6 @@
           },
           "attributes": {
             "description": "The set of parameters that are the attributes of the Supporting Documents resource which are listed in the Supporting Document Types.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -305281,7 +305036,6 @@
           },
           "details": {
             "description": "Details provided to give context about the Challenge. Intended to be shown to the end user.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -305291,7 +305045,6 @@
           },
           "hidden_details": {
             "description": "Details provided to give context about the Challenge. Intended to be hidden from the end user. It must be a stringified JSON with only strings values eg. `{\"ip\": \"172.168.1.234\"}`",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -305301,7 +305054,6 @@
           },
           "metadata": {
             "description": "Custom metadata associated with the challenge. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{\"os\": \"Android\"}`. Can be up to 1024 characters in length.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -305495,12 +305247,10 @@
             "$ref": "#/components/schemas/factor_enum_factor_types"
           },
           "config": {
-            "description": "An object that contains configurations specific to a `factor_type`.",
-            "nullable": true
+            "description": "An object that contains configurations specific to a `factor_type`."
           },
           "metadata": {
             "description": "Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{\"os\": \"Android\"}`. Can be up to 1024 characters in length.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -305556,12 +305306,10 @@
             "$ref": "#/components/schemas/form_enum_form_types"
           },
           "forms": {
-            "description": "Object that contains the available forms for this type. This available forms are given in the standard [JSON Schema](https://json-schema.org/) format",
-            "nullable": true
+            "description": "Object that contains the available forms for this type. This available forms are given in the standard [JSON Schema](https://json-schema.org/) format"
           },
           "form_meta": {
-            "description": "Additional information for the available forms for this type. E.g. The separator string used for `binding` in a Factor push.",
-            "nullable": true
+            "description": "Additional information for the available forms for this type. E.g. The separator string used for `binding` in a Factor push."
           },
           "url": {
             "type": "string",
@@ -305677,12 +305425,9 @@
             }
           },
           "binding": {
-            "description": "Contains the `factor_type` specific secret and metadata.\nFor push, this is `binding.public_key` and `binding.alg`.\nFor totp, this is `binding.secret` and `binding.uri`. The `binding.uri` property is generated following the [google authenticator key URI format](https://github.com/google/google-authenticator/wiki/Key-Uri-Format), and `Factor.friendly_name` is used for the “accountname” value and `Service.friendly_name` or `Service.totp.issuer` is used for the `issuer` value.\n\n\nThe Binding property is ONLY returned upon Factor creation.",
-            "nullable": true
+            "description": "Contains the `factor_type` specific secret and metadata.\nFor push, this is `binding.public_key` and `binding.alg`.\nFor totp, this is `binding.secret` and `binding.uri`. The `binding.uri` property is generated following the [google authenticator key URI format](https://github.com/google/google-authenticator/wiki/Key-Uri-Format), and `Factor.friendly_name` is used for the “accountname” value and `Service.friendly_name` or `Service.totp.issuer` is used for the `issuer` value.\n\n\nThe Binding property is ONLY returned upon Factor creation."
           },
-          "options": {
-            "nullable": true
-          },
+          "options": { },
           "date_created": {
             "type": "string",
             "description": "The date that this Factor was created, given in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
@@ -305707,12 +305452,10 @@
             "$ref": "#/components/schemas/new_factor_enum_factor_types"
           },
           "config": {
-            "description": "An object that contains configurations specific to a `factor_type`.",
-            "nullable": true
+            "description": "An object that contains configurations specific to a `factor_type`."
           },
           "metadata": {
             "description": "Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{\"os\": \"Android\"}`. Can be up to 1024 characters in length.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -305991,12 +305734,10 @@
             "nullable": true
           },
           "push": {
-            "description": "Configurations for the Push factors (channel) created under this Service.",
-            "nullable": true
+            "description": "Configurations for the Push factors (channel) created under this Service."
           },
           "totp": {
-            "description": "Configurations for the TOTP factors (channel) created under this Service.",
-            "nullable": true
+            "description": "Configurations for the TOTP factors (channel) created under this Service."
           },
           "default_template_sid": {
             "maxLength": 34,
@@ -306005,12 +305746,8 @@
             "type": "string",
             "nullable": true
           },
-          "whatsapp": {
-            "nullable": true
-          },
-          "passkeys": {
-            "nullable": true
-          },
+          "whatsapp": { },
+          "passkeys": { },
           "verify_event_subscription_enabled": {
             "type": "boolean",
             "description": "Whether to allow verifications from the service to reach the stream-events sinks if configured",
@@ -306094,8 +305831,7 @@
             "nullable": true
           },
           "lookup": {
-            "description": "Information about the phone number being verified.",
-            "nullable": true
+            "description": "Information about the phone number being verified."
           },
           "amount": {
             "type": "string",
@@ -306138,8 +305874,7 @@
             "nullable": true
           },
           "sna": {
-            "description": "The set of fields used for a silent network auth (`sna`) verification. Contains a single field with the URL to be invoked to verify the phone number.",
-            "nullable": true
+            "description": "The set of fields used for a silent network auth (`sna`) verification. Contains a single field with the URL to be invoked to verify the phone number."
           },
           "url": {
             "type": "string",
@@ -306230,12 +305965,10 @@
             "$ref": "#/components/schemas/verification_attempt_enum_channels"
           },
           "price": {
-            "description": "An object containing the charge for this verification attempt related to the channel costs and the currency used. The costs related to the succeeded verifications are not included. May not be immediately available. More information on pricing is available [here](https://www.twilio.com/en-us/verify/pricing).",
-            "nullable": true
+            "description": "An object containing the charge for this verification attempt related to the channel costs and the currency used. The costs related to the succeeded verifications are not included. May not be immediately available. More information on pricing is available [here](https://www.twilio.com/en-us/verify/pricing)."
           },
           "channel_data": {
-            "description": "An object containing the channel specific information for an attempt.",
-            "nullable": true
+            "description": "An object containing the channel specific information for an attempt."
           },
           "url": {
             "type": "string",
@@ -306479,8 +306212,7 @@
             "nullable": true
           },
           "translations": {
-            "description": "An object that contains the different translations of the template. Every translation is identified by the language short name and contains its respective information as the approval status, text and created/modified date.",
-            "nullable": true
+            "description": "An object that contains the different translations of the template. Every translation is identified by the language short name and contains its respective information as the approval status, text and created/modified date."
           }
         }
       },
@@ -306661,7 +306393,6 @@
           },
           "video_layout": {
             "description": "An object that describes the video layout of the composition in terms of regions. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -306824,7 +306555,6 @@
           },
           "video_layout": {
             "description": "A JSON object that describes the video layout of the composition in terms of regions as specified in the HTTP POST request that created the CompositionHook resource. See [POST Parameters](https://www.twilio.com/docs/video/api/compositions-resource#http-post-parameters) for more information. Please, be aware that either video_layout or audio_sources have to be provided to get a valid creation request",
-            "nullable": true,
             "x-twilio": {
               "pii": {
                 "handling": "standard",
@@ -306996,8 +306726,7 @@
             "$ref": "#/components/schemas/recording_enum_codec"
           },
           "grouping_sids": {
-            "description": "A list of SIDs related to the recording. Includes the `room_sid` and `participant_sid`.",
-            "nullable": true
+            "description": "A list of SIDs related to the recording. Includes the `room_sid` and `participant_sid`."
           },
           "track_name": {
             "type": "string",
@@ -307745,8 +307474,7 @@
             "$ref": "#/components/schemas/room_recording_enum_codec"
           },
           "grouping_sids": {
-            "description": "A list of SIDs related to the Recording. Includes the `room_sid` and `participant_sid`.",
-            "nullable": true
+            "description": "A list of SIDs related to the Recording. Includes the `room_sid` and `participant_sid`."
           },
           "track_name": {
             "type": "string",
@@ -309155,16 +308883,13 @@
             "nullable": true
           },
           "period": {
-            "description": "The time period for which usage is reported. Contains `start` and `end` properties that describe the period using GMT date-time values specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
-            "nullable": true
+            "description": "The time period for which usage is reported. Contains `start` and `end` properties that describe the period using GMT date-time values specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format."
           },
           "commands": {
-            "description": "An object that describes the aggregated Commands usage for all SIMs during the specified period. See [Commands Usage Object](https://www.twilio.com/docs/iot/wireless/api/account-usagerecord-resource#commands-usage-object).",
-            "nullable": true
+            "description": "An object that describes the aggregated Commands usage for all SIMs during the specified period. See [Commands Usage Object](https://www.twilio.com/docs/iot/wireless/api/account-usagerecord-resource#commands-usage-object)."
           },
           "data": {
-            "description": "An object that describes the aggregated Data usage for all SIMs over the period. See [Data Usage Object](https://www.twilio.com/docs/iot/wireless/api/account-usagerecord-resource#data-usage-object).",
-            "nullable": true
+            "description": "An object that describes the aggregated Data usage for all SIMs over the period. See [Data Usage Object](https://www.twilio.com/docs/iot/wireless/api/account-usagerecord-resource#data-usage-object)."
           }
         }
       },
@@ -309339,8 +309064,7 @@
             "nullable": true
           },
           "cell_location_estimate": {
-            "description": "An object that describes the estimated location in latitude and longitude where the device's Data Session took place. The location is derived from the `cell_id` when the Data Session was last updated. See [Cell Location Estimate Object](https://www.twilio.com/docs/iot/wireless/api/datasession-resource#cell-location-estimate-object). ",
-            "nullable": true
+            "description": "An object that describes the estimated location in latitude and longitude where the device's Data Session took place. The location is derived from the `cell_id` when the Data Session was last updated. See [Cell Location Estimate Object](https://www.twilio.com/docs/iot/wireless/api/datasession-resource#cell-location-estimate-object). "
           },
           "packets_uploaded": {
             "type": "integer",
@@ -309702,16 +309426,13 @@
             "nullable": true
           },
           "period": {
-            "description": "The time period for which the usage is reported. Contains `start` and `end` datetime values given as GMT in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
-            "nullable": true
+            "description": "The time period for which the usage is reported. Contains `start` and `end` datetime values given as GMT in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format."
           },
           "commands": {
-            "description": "An object that describes the SIM's usage of Commands during the specified period. See [Commands Usage Object](https://www.twilio.com/docs/iot/wireless/api/sim-usagerecord-resource#commands-usage-object).",
-            "nullable": true
+            "description": "An object that describes the SIM's usage of Commands during the specified period. See [Commands Usage Object](https://www.twilio.com/docs/iot/wireless/api/sim-usagerecord-resource#commands-usage-object)."
           },
           "data": {
-            "description": "An object that describes the SIM's data usage during the specified period. See [Data Usage Object](https://www.twilio.com/docs/iot/wireless/api/sim-usagerecord-resource#data-usage-object).",
-            "nullable": true
+            "description": "An object that describes the SIM's data usage during the specified period. See [Data Usage Object](https://www.twilio.com/docs/iot/wireless/api/sim-usagerecord-resource#data-usage-object)."
           }
         }
       },

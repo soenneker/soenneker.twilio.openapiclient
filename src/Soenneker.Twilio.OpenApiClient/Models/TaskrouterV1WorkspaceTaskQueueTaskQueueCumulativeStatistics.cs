@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SplitByWaitTime { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsSplitByWaitTime? SplitByWaitTime { get; set; }
 #nullable restore
 #else
-        public UntypedNode SplitByWaitTime { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsSplitByWaitTime SplitByWaitTime { get; set; }
 #endif
         /// <summary>The beginning of the interval during which these statistics were calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? StartTime { get; set; }
@@ -77,26 +77,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The relative wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks accepted while in the TaskQueue. Calculation is based on the time when the Tasks entered the TaskQueue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? WaitDurationInQueueUntilAccepted { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationInQueueUntilAccepted? WaitDurationInQueueUntilAccepted { get; set; }
 #nullable restore
 #else
-        public UntypedNode WaitDurationInQueueUntilAccepted { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationInQueueUntilAccepted WaitDurationInQueueUntilAccepted { get; set; }
 #endif
         /// <summary>The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks accepted while in the TaskQueue. Calculation is based on the time when the Tasks were created. For transfers, the wait duration is counted from the moment ***the Task was created***, and not from when the transfer was initiated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? WaitDurationUntilAccepted { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilAccepted? WaitDurationUntilAccepted { get; set; }
 #nullable restore
 #else
-        public UntypedNode WaitDurationUntilAccepted { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilAccepted WaitDurationUntilAccepted { get; set; }
 #endif
         /// <summary>The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks canceled while in the TaskQueue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? WaitDurationUntilCanceled { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilCanceled? WaitDurationUntilCanceled { get; set; }
 #nullable restore
 #else
-        public UntypedNode WaitDurationUntilCanceled { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilCanceled WaitDurationUntilCanceled { get; set; }
 #endif
         /// <summary>The SID of the Workspace that contains the TaskQueue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -152,7 +152,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "reservations_rejected", n => { ReservationsRejected = n.GetIntValue(); } },
                 { "reservations_rescinded", n => { ReservationsRescinded = n.GetIntValue(); } },
                 { "reservations_timed_out", n => { ReservationsTimedOut = n.GetIntValue(); } },
-                { "split_by_wait_time", n => { SplitByWaitTime = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "split_by_wait_time", n => { SplitByWaitTime = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsSplitByWaitTime>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsSplitByWaitTime.CreateFromDiscriminatorValue); } },
                 { "start_time", n => { StartTime = n.GetDateTimeOffsetValue(); } },
                 { "task_queue_sid", n => { TaskQueueSid = n.GetStringValue(); } },
                 { "tasks_canceled", n => { TasksCanceled = n.GetIntValue(); } },
@@ -161,9 +161,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "tasks_entered", n => { TasksEntered = n.GetIntValue(); } },
                 { "tasks_moved", n => { TasksMoved = n.GetIntValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "wait_duration_in_queue_until_accepted", n => { WaitDurationInQueueUntilAccepted = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "wait_duration_until_accepted", n => { WaitDurationUntilAccepted = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "wait_duration_until_canceled", n => { WaitDurationUntilCanceled = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "wait_duration_in_queue_until_accepted", n => { WaitDurationInQueueUntilAccepted = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationInQueueUntilAccepted>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationInQueueUntilAccepted.CreateFromDiscriminatorValue); } },
+                { "wait_duration_until_accepted", n => { WaitDurationUntilAccepted = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilAccepted>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilAccepted.CreateFromDiscriminatorValue); } },
+                { "wait_duration_until_canceled", n => { WaitDurationUntilCanceled = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilCanceled>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilCanceled.CreateFromDiscriminatorValue); } },
                 { "workspace_sid", n => { WorkspaceSid = n.GetStringValue(); } },
             };
         }
@@ -183,7 +183,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("reservations_rejected", ReservationsRejected);
             writer.WriteIntValue("reservations_rescinded", ReservationsRescinded);
             writer.WriteIntValue("reservations_timed_out", ReservationsTimedOut);
-            writer.WriteObjectValue<UntypedNode>("split_by_wait_time", SplitByWaitTime);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsSplitByWaitTime>("split_by_wait_time", SplitByWaitTime);
             writer.WriteDateTimeOffsetValue("start_time", StartTime);
             writer.WriteStringValue("task_queue_sid", TaskQueueSid);
             writer.WriteIntValue("tasks_canceled", TasksCanceled);
@@ -192,9 +192,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("tasks_entered", TasksEntered);
             writer.WriteIntValue("tasks_moved", TasksMoved);
             writer.WriteStringValue("url", Url);
-            writer.WriteObjectValue<UntypedNode>("wait_duration_in_queue_until_accepted", WaitDurationInQueueUntilAccepted);
-            writer.WriteObjectValue<UntypedNode>("wait_duration_until_accepted", WaitDurationUntilAccepted);
-            writer.WriteObjectValue<UntypedNode>("wait_duration_until_canceled", WaitDurationUntilCanceled);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationInQueueUntilAccepted>("wait_duration_in_queue_until_accepted", WaitDurationInQueueUntilAccepted);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilAccepted>("wait_duration_until_accepted", WaitDurationUntilAccepted);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilCanceled>("wait_duration_until_canceled", WaitDurationUntilCanceled);
             writer.WriteStringValue("workspace_sid", WorkspaceSid);
             writer.WriteAdditionalData(AdditionalData);
         }

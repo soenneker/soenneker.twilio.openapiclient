@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The current state of the execution flow. As your flow executes, we save the state in a flow context. Your widgets can access the data in the flow context as variables, either in configuration fields or in text areas as variable substitution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Context { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV1FlowEngagementContext? Context { get; set; }
 #nullable restore
 #else
-        public UntypedNode Context { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV1FlowEngagementContext Context { get; set; }
 #endif
         /// <summary>The date and time in GMT when the Engagement was created in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -112,7 +112,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "contact_channel_address", n => { ContactChannelAddress = n.GetStringValue(); } },
                 { "contact_sid", n => { ContactSid = n.GetStringValue(); } },
-                { "context", n => { Context = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV1FlowEngagementContext>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV1FlowEngagementContext.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "flow_sid", n => { FlowSid = n.GetStringValue(); } },
@@ -132,7 +132,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("contact_channel_address", ContactChannelAddress);
             writer.WriteStringValue("contact_sid", ContactSid);
-            writer.WriteObjectValue<UntypedNode>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV1FlowEngagementContext>("context", Context);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("flow_sid", FlowSid);

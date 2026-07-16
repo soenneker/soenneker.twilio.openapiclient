@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The comment added for assessment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Comment { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsAssessmentsCommentComment? Comment { get; set; }
 #nullable restore
 #else
-        public UntypedNode Comment { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsAssessmentsCommentComment Comment { get; set; }
 #endif
         /// <summary>The offset</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -132,7 +132,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "agent_id", n => { AgentId = n.GetStringValue(); } },
                 { "assessment_sid", n => { AssessmentSid = n.GetStringValue(); } },
-                { "comment", n => { Comment = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsAssessmentsCommentComment>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsAssessmentsCommentComment.CreateFromDiscriminatorValue); } },
                 { "offset", n => { Offset = n.GetStringValue(); } },
                 { "report", n => { Report = n.GetBoolValue(); } },
                 { "segment_id", n => { SegmentId = n.GetStringValue(); } },
@@ -153,7 +153,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("agent_id", AgentId);
             writer.WriteStringValue("assessment_sid", AssessmentSid);
-            writer.WriteObjectValue<UntypedNode>("comment", Comment);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsAssessmentsCommentComment>("comment", Comment);
             writer.WriteStringValue("offset", Offset);
             writer.WriteBoolValue("report", Report);
             writer.WriteStringValue("segment_id", SegmentId);

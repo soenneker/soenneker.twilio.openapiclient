@@ -45,10 +45,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>JSON representation of flow definition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Definition { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowFlowRevisionDefinition? Definition { get; set; }
 #nullable restore
 #else
-        public UntypedNode Definition { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowFlowRevisionDefinition Definition { get; set; }
 #endif
         /// <summary>List of error in the flow definition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -119,7 +119,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "commit_message", n => { CommitMessage = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "definition", n => { Definition = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "definition", n => { Definition = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowFlowRevisionDefinition>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowFlowRevisionDefinition.CreateFromDiscriminatorValue); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowFlowRevisionErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowFlowRevisionErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "revision", n => { Revision = n.GetIntValue(); } },
@@ -141,7 +141,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("commit_message", CommitMessage);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<UntypedNode>("definition", Definition);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowFlowRevisionDefinition>("definition", Definition);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowFlowRevisionErrorsItem>("errors", Errors);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteIntValue("revision", Revision);

@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Auto Creation configuration for the address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AutoCreation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationAddressAutoCreation? AutoCreation { get; set; }
 #nullable restore
 #else
-        public UntypedNode AutoCreation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationAddressAutoCreation AutoCreation { get; set; }
 #endif
         /// <summary>The date that this resource was created.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "address_country", n => { AddressCountry = n.GetStringValue(); } },
-                { "auto_creation", n => { AutoCreation = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "auto_creation", n => { AutoCreation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationAddressAutoCreation>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationAddressAutoCreation.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
@@ -129,7 +129,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("address", Address);
             writer.WriteStringValue("address_country", AddressCountry);
-            writer.WriteObjectValue<UntypedNode>("auto_creation", AutoCreation);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationAddressAutoCreation>("auto_creation", AutoCreation);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);

@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of SIDs related to the recording. Includes the `room_sid` and `participant_sid`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? GroupingSids { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingGroupingSids? GroupingSids { get; set; }
 #nullable restore
 #else
-        public UntypedNode GroupingSids { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingGroupingSids GroupingSids { get; set; }
 #endif
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,7 +134,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "container_format", n => { ContainerFormat = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumFormat>(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
-                { "grouping_sids", n => { GroupingSids = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "grouping_sids", n => { GroupingSids = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingGroupingSids>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingGroupingSids.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks.CreateFromDiscriminatorValue); } },
                 { "media_external_location", n => { MediaExternalLocation = n.GetStringValue(); } },
                 { "offset", n => { Offset = n.GetLongValue(); } },
@@ -161,7 +161,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumFormat>("container_format", ContainerFormat);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteIntValue("duration", Duration);
-            writer.WriteObjectValue<UntypedNode>("grouping_sids", GroupingSids);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingGroupingSids>("grouping_sids", GroupingSids);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks>("links", Links);
             writer.WriteStringValue("media_external_location", MediaExternalLocation);
             writer.WriteLongValue("offset", Offset);

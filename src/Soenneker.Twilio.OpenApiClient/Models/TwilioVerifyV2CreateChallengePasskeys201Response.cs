@@ -31,10 +31,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Details provided to give context about the Challenge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Details { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseDetails? Details { get; set; }
 #nullable restore
 #else
-        public UntypedNode Details { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseDetails Details { get; set; }
 #endif
         /// <summary>The unique SID identifier of the Entity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,10 +59,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Details provided to give context about the Challenge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? HiddenDetails { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseHiddenDetails? HiddenDetails { get; set; }
 #nullable restore
 #else
-        public UntypedNode HiddenDetails { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseHiddenDetails HiddenDetails { get; set; }
 #endif
         /// <summary>Customer unique identity for the Entity owner of the Challenge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,10 +83,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Custom metadata associated with the challenge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Metadata { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public UntypedNode Metadata { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseMetadata Metadata { get; set; }
 #endif
         /// <summary>An object that contains challenge options. Currently only used for `passkeys`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -153,15 +153,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_responded", n => { DateResponded = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "details", n => { Details = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseDetails>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseDetails.CreateFromDiscriminatorValue); } },
                 { "entity_sid", n => { EntitySid = n.GetStringValue(); } },
                 { "expiration_date", n => { ExpirationDate = n.GetDateTimeOffsetValue(); } },
                 { "factor_sid", n => { FactorSid = n.GetStringValue(); } },
                 { "factor_type", n => { FactorType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseFactorType>(); } },
-                { "hidden_details", n => { HiddenDetails = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "hidden_details", n => { HiddenDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseHiddenDetails>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseHiddenDetails.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseLinks.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseMetadata>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "options", n => { Options = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseOptions>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseOptions.CreateFromDiscriminatorValue); } },
                 { "responded_reason", n => { RespondedReason = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseRespondedReason>(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
@@ -181,15 +181,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_responded", DateResponded);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<UntypedNode>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseDetails>("details", Details);
             writer.WriteStringValue("entity_sid", EntitySid);
             writer.WriteDateTimeOffsetValue("expiration_date", ExpirationDate);
             writer.WriteStringValue("factor_sid", FactorSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseFactorType>("factor_type", FactorType);
-            writer.WriteObjectValue<UntypedNode>("hidden_details", HiddenDetails);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseHiddenDetails>("hidden_details", HiddenDetails);
             writer.WriteStringValue("identity", Identity);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseLinks>("links", Links);
-            writer.WriteObjectValue<UntypedNode>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseOptions>("options", Options);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengePasskeys201ResponseRespondedReason>("responded_reason", RespondedReason);
             writer.WriteStringValue("service_sid", ServiceSid);

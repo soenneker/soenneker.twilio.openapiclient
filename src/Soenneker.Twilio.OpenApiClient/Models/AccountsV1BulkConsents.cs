@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;A list of objects where each object represents the result of processing a `correlation_id`. Each object contains the following fields: `correlation_id`, a unique 32-character UUID that maps the response to the original request; `error_code`, an integer where 0 indicates success and any non-zero value represents an error; and `error_messages`, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Items { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1BulkConsentsItems? Items { get; set; }
 #nullable restore
 #else
-        public UntypedNode Items { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1BulkConsentsItems Items { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1BulkConsents"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "items", n => { Items = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "items", n => { Items = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1BulkConsentsItems>(global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1BulkConsentsItems.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<UntypedNode>("items", Items);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1BulkConsentsItems>("items", Items);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

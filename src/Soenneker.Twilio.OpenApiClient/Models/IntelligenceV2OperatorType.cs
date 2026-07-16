@@ -19,10 +19,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>JSON Schema for configuring an Operator with this Operator Type. Following https://json-schema.org/</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ConfigSchema { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2OperatorTypeConfigSchema? ConfigSchema { get; set; }
 #nullable restore
 #else
-        public UntypedNode ConfigSchema { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2OperatorTypeConfigSchema ConfigSchema { get; set; }
 #endif
         /// <summary>Operators can be created from configurable Operator Types.</summary>
         public bool? Configurable { get; set; }
@@ -116,7 +116,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "availability", n => { Availability = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorTypeEnumAvailability>(); } },
-                { "config_schema", n => { ConfigSchema = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "config_schema", n => { ConfigSchema = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2OperatorTypeConfigSchema>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2OperatorTypeConfigSchema.CreateFromDiscriminatorValue); } },
                 { "configurable", n => { Configurable = n.GetBoolValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
@@ -139,7 +139,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorTypeEnumAvailability>("availability", Availability);
-            writer.WriteObjectValue<UntypedNode>("config_schema", ConfigSchema);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2OperatorTypeConfigSchema>("config_schema", ConfigSchema);
             writer.WriteBoolValue("configurable", Configurable);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);

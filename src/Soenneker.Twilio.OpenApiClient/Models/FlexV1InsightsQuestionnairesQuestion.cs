@@ -27,10 +27,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Set of answers for the question</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AnswerSet { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionAnswerSet? AnswerSet { get; set; }
 #nullable restore
 #else
-        public UntypedNode AnswerSet { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionAnswerSet AnswerSet { get; set; }
 #endif
         /// <summary>The answer_set for the question.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -43,10 +43,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Category for the question.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Category { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionCategory? Category { get; set; }
 #nullable restore
 #else
-        public UntypedNode Category { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionCategory Category { get; set; }
 #endif
         /// <summary>The description for the question.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,9 +110,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "allow_na", n => { AllowNa = n.GetBoolValue(); } },
-                { "answer_set", n => { AnswerSet = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "answer_set", n => { AnswerSet = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionAnswerSet>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionAnswerSet.CreateFromDiscriminatorValue); } },
                 { "answer_set_id", n => { AnswerSetId = n.GetStringValue(); } },
-                { "category", n => { Category = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "category", n => { Category = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionCategory>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionCategory.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "question", n => { Question = n.GetStringValue(); } },
                 { "question_sid", n => { QuestionSid = n.GetStringValue(); } },
@@ -129,9 +129,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteBoolValue("allow_na", AllowNa);
-            writer.WriteObjectValue<UntypedNode>("answer_set", AnswerSet);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionAnswerSet>("answer_set", AnswerSet);
             writer.WriteStringValue("answer_set_id", AnswerSetId);
-            writer.WriteObjectValue<UntypedNode>("category", Category);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnairesQuestionCategory>("category", Category);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("question", Question);
             writer.WriteStringValue("question_sid", QuestionSid);

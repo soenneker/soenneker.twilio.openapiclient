@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that contains configurations specific to a `factor_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Config { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityFactorConfig? Config { get; set; }
 #nullable restore
 #else
-        public UntypedNode Config { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityFactorConfig Config { get; set; }
 #endif
         /// <summary>The date that this Factor was created, given in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -63,10 +63,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{\&quot;os\&quot;: \&quot;Android\&quot;}`. Can be up to 1024 characters in length.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Metadata { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityFactorMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public UntypedNode Metadata { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityFactorMetadata Metadata { get; set; }
 #endif
         /// <summary>The unique SID identifier of the Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -120,14 +120,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "config", n => { Config = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "config", n => { Config = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityFactorConfig>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityFactorConfig.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "entity_sid", n => { EntitySid = n.GetStringValue(); } },
                 { "factor_type", n => { FactorType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FactorEnumFactorTypes>(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityFactorMetadata>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityFactorMetadata.CreateFromDiscriminatorValue); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FactorEnumFactorStatuses>(); } },
@@ -142,14 +142,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<UntypedNode>("config", Config);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityFactorConfig>("config", Config);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("entity_sid", EntitySid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FactorEnumFactorTypes>("factor_type", FactorType);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<UntypedNode>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityFactorMetadata>("metadata", Metadata);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FactorEnumFactorStatuses>("status", Status);

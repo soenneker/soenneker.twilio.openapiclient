@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Optional JSON field describing the status and upload date of a new certificate in the process of validation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CertInValidation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1DomainCertV4CertInValidation? CertInValidation { get; set; }
 #nullable restore
 #else
-        public UntypedNode CertInValidation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1DomainCertV4CertInValidation CertInValidation { get; set; }
 #endif
         /// <summary>Date that this Domain was registered to the Twilio platform to create a new Domain object.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -85,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cert_in_validation", n => { CertInValidation = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "cert_in_validation", n => { CertInValidation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1DomainCertV4CertInValidation>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1DomainCertV4CertInValidation.CreateFromDiscriminatorValue); } },
                 { "certificate_sid", n => { CertificateSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_expires", n => { DateExpires = n.GetDateTimeOffsetValue(); } },
@@ -103,7 +103,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("certificate_sid", CertificateSid);
-            writer.WriteObjectValue<UntypedNode>("cert_in_validation", CertInValidation);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1DomainCertV4CertInValidation>("cert_in_validation", CertInValidation);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_expires", DateExpires);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);

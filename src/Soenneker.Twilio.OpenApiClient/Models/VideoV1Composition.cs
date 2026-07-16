@@ -117,10 +117,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that describes the video layout of the composition in terms of regions. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? VideoLayout { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionVideoLayout? VideoLayout { get; set; }
 #nullable restore
 #else
-        public UntypedNode VideoLayout { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionVideoLayout VideoLayout { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VideoV1Composition"/> and sets the default values.
@@ -169,7 +169,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "status_callback_method", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionStatusCallbackMethod>(); } },
                 { "trim", n => { Trim = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "video_layout", n => { VideoLayout = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "video_layout", n => { VideoLayout = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionVideoLayout>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionVideoLayout.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -199,7 +199,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionStatusCallbackMethod>("status_callback_method", StatusCallbackMethod);
             writer.WriteBoolValue("trim", Trim);
             writer.WriteStringValue("url", Url);
-            writer.WriteObjectValue<UntypedNode>("video_layout", VideoLayout);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionVideoLayout>("video_layout", VideoLayout);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

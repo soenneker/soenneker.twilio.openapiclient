@@ -27,10 +27,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object containing the channel specific information for an attempt.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ChannelData { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptChannelData? ChannelData { get; set; }
 #nullable restore
 #else
-        public UntypedNode ChannelData { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptChannelData ChannelData { get; set; }
 #endif
         /// <summary>A string specifying the conversion status of the verification. A conversion happens when the user is able to provide the correct code. Possible values are `CONVERTED` and `UNCONVERTED`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.VerificationAttemptEnumConversionStatus? ConversionStatus { get; set; }
@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object containing the charge for this verification attempt related to the channel costs and the currency used. The costs related to the succeeded verifications are not included. May not be immediately available. More information on pricing is available [here](https://www.twilio.com/en-us/verify/pricing).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Price { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptPrice? Price { get; set; }
 #nullable restore
 #else
-        public UntypedNode Price { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptPrice Price { get; set; }
 #endif
         /// <summary>The SID of the [Service](https://www.twilio.com/docs/verify/api/service) used to generate the attempt.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,11 +105,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VerificationAttemptEnumChannels>(); } },
-                { "channel_data", n => { ChannelData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "channel_data", n => { ChannelData = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptChannelData>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptChannelData.CreateFromDiscriminatorValue); } },
                 { "conversion_status", n => { ConversionStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VerificationAttemptEnumConversionStatus>(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "price", n => { Price = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "price", n => { Price = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptPrice>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptPrice.CreateFromDiscriminatorValue); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -125,11 +125,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VerificationAttemptEnumChannels>("channel", Channel);
-            writer.WriteObjectValue<UntypedNode>("channel_data", ChannelData);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptChannelData>("channel_data", ChannelData);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VerificationAttemptEnumConversionStatus>("conversion_status", ConversionStatus);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<UntypedNode>("price", Price);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationAttemptPrice>("price", Price);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);

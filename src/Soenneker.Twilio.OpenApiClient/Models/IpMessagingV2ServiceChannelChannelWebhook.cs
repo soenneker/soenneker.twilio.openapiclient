@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The configuration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelChannelWebhookConfiguration? Configuration { get; set; }
 #nullable restore
 #else
-        public UntypedNode Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelChannelWebhookConfiguration Configuration { get; set; }
 #endif
         /// <summary>The date_created property</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -101,7 +101,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "channel_sid", n => { ChannelSid = n.GetStringValue(); } },
-                { "configuration", n => { Configuration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelChannelWebhookConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelChannelWebhookConfiguration.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
@@ -119,7 +119,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("channel_sid", ChannelSid);
-            writer.WriteObjectValue<UntypedNode>("configuration", Configuration);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceChannelChannelWebhookConfiguration>("configuration", Configuration);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("service_sid", ServiceSid);

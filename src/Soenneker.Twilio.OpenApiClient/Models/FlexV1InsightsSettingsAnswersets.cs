@@ -25,26 +25,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The list of answer set categories</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AnswerSetCategories { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsAnswerSetCategories? AnswerSetCategories { get; set; }
 #nullable restore
 #else
-        public UntypedNode AnswerSetCategories { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsAnswerSetCategories AnswerSetCategories { get; set; }
 #endif
         /// <summary>The lis of answer sets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AnswerSets { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsAnswerSets? AnswerSets { get; set; }
 #nullable restore
 #else
-        public UntypedNode AnswerSets { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsAnswerSets AnswerSets { get; set; }
 #endif
         /// <summary>The details for not applicable answer set</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NotApplicable { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsNotApplicable? NotApplicable { get; set; }
 #nullable restore
 #else
-        public UntypedNode NotApplicable { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsNotApplicable NotApplicable { get; set; }
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,9 +80,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "answer_set_categories", n => { AnswerSetCategories = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "answer_sets", n => { AnswerSets = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "not_applicable", n => { NotApplicable = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "answer_set_categories", n => { AnswerSetCategories = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsAnswerSetCategories>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsAnswerSetCategories.CreateFromDiscriminatorValue); } },
+                { "answer_sets", n => { AnswerSets = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsAnswerSets>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsAnswerSets.CreateFromDiscriminatorValue); } },
+                { "not_applicable", n => { NotApplicable = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsNotApplicable>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsNotApplicable.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -94,9 +94,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<UntypedNode>("answer_set_categories", AnswerSetCategories);
-            writer.WriteObjectValue<UntypedNode>("answer_sets", AnswerSets);
-            writer.WriteObjectValue<UntypedNode>("not_applicable", NotApplicable);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsAnswerSetCategories>("answer_set_categories", AnswerSetCategories);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsAnswerSets>("answer_sets", AnswerSets);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsAnswersetsNotApplicable>("not_applicable", NotApplicable);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

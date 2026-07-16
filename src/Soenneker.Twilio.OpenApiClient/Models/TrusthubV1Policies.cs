@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID of an object that holds the policy information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Requirements { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1PoliciesRequirements? Requirements { get; set; }
 #nullable restore
 #else
-        public UntypedNode Requirements { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1PoliciesRequirements Requirements { get; set; }
 #endif
         /// <summary>The unique string that identifies the Policy resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "requirements", n => { Requirements = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1PoliciesRequirements>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1PoliciesRequirements.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -85,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<UntypedNode>("requirements", Requirements);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1PoliciesRequirements>("requirements", Requirements);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

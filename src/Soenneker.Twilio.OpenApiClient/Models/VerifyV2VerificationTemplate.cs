@@ -49,10 +49,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that contains the different translations of the template. Every translation is identified by the language short name and contains its respective information as the approval status, text and created/modified date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Translations { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationTemplateTranslations? Translations { get; set; }
 #nullable restore
 #else
-        public UntypedNode Translations { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationTemplateTranslations Translations { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationTemplate"/> and sets the default values.
@@ -83,7 +83,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "channels", n => { Channels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "translations", n => { Translations = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "translations", n => { Translations = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationTemplateTranslations>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationTemplateTranslations.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -97,7 +97,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("channels", Channels);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteObjectValue<UntypedNode>("translations", Translations);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2VerificationTemplateTranslations>("translations", Translations);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

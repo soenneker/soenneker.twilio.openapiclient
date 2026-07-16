@@ -49,10 +49,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object with additional data about the event. The  contents depend on `event_type`. For example, event-types of the form `RESOURCE.updated`, this value contains a `resource_properties` dictionary that describes the previous and updated properties of the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? EventData { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventEventData? EventData { get; set; }
 #nullable restore
 #else
-        public UntypedNode EventData { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventEventData EventData { get; set; }
 #endif
         /// <summary>The date and time in GMT when the event was recorded specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? EventDate { get; set; }
@@ -149,7 +149,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "actor_sid", n => { ActorSid = n.GetStringValue(); } },
                 { "actor_type", n => { ActorType = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "event_data", n => { EventData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "event_data", n => { EventData = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventEventData>(global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventEventData.CreateFromDiscriminatorValue); } },
                 { "event_date", n => { EventDate = n.GetDateTimeOffsetValue(); } },
                 { "event_type", n => { EventType = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinks>(global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinks.CreateFromDiscriminatorValue); } },
@@ -172,7 +172,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("actor_sid", ActorSid);
             writer.WriteStringValue("actor_type", ActorType);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<UntypedNode>("event_data", EventData);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventEventData>("event_data", EventData);
             writer.WriteDateTimeOffsetValue("event_date", EventDate);
             writer.WriteStringValue("event_type", EventType);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinks>("links", Links);

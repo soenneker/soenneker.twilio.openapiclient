@@ -43,18 +43,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;The number of Tasks by priority. For example: `{\&quot;0\&quot;: \&quot;10\&quot;, \&quot;99\&quot;: \&quot;5\&quot;}` shows 10 Tasks at priority 0 and 5 at priority 99.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TasksByPriority { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByPriority? TasksByPriority { get; set; }
 #nullable restore
 #else
-        public UntypedNode TasksByPriority { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByPriority TasksByPriority { get; set; }
 #endif
         /// <summary>&quot;The number of Tasks by their current status. For example: `{\&quot;pending\&quot;: \&quot;1\&quot;, \&quot;reserved\&quot;: \&quot;3\&quot;, \&quot;assigned\&quot;: \&quot;2\&quot;, \&quot;completed\&quot;: \&quot;5\&quot;}`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TasksByStatus { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByStatus? TasksByStatus { get; set; }
 #nullable restore
 #else
-        public UntypedNode TasksByStatus { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByStatus TasksByStatus { get; set; }
 #endif
         /// <summary>The total number of Tasks.</summary>
         public int? TotalTasks { get; set; }
@@ -108,8 +108,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "activity_statistics", n => { ActivityStatistics = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsActivityStatisticsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsActivityStatisticsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "longest_task_waiting_age", n => { LongestTaskWaitingAge = n.GetIntValue(); } },
                 { "longest_task_waiting_sid", n => { LongestTaskWaitingSid = n.GetStringValue(); } },
-                { "tasks_by_priority", n => { TasksByPriority = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "tasks_by_status", n => { TasksByStatus = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "tasks_by_priority", n => { TasksByPriority = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByPriority>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByPriority.CreateFromDiscriminatorValue); } },
+                { "tasks_by_status", n => { TasksByStatus = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByStatus>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByStatus.CreateFromDiscriminatorValue); } },
                 { "total_tasks", n => { TotalTasks = n.GetIntValue(); } },
                 { "total_workers", n => { TotalWorkers = n.GetIntValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -127,8 +127,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsActivityStatisticsItem>("activity_statistics", ActivityStatistics);
             writer.WriteIntValue("longest_task_waiting_age", LongestTaskWaitingAge);
             writer.WriteStringValue("longest_task_waiting_sid", LongestTaskWaitingSid);
-            writer.WriteObjectValue<UntypedNode>("tasks_by_priority", TasksByPriority);
-            writer.WriteObjectValue<UntypedNode>("tasks_by_status", TasksByStatus);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByPriority>("tasks_by_priority", TasksByPriority);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByStatus>("tasks_by_status", TasksByStatus);
             writer.WriteIntValue("total_tasks", TotalTasks);
             writer.WriteIntValue("total_workers", TotalWorkers);
             writer.WriteStringValue("url", Url);

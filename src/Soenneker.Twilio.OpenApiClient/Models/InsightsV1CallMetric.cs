@@ -33,18 +33,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains metrics and properties for the Twilio media gateway of a PSTN call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CarrierEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricCarrierEdge? CarrierEdge { get; set; }
 #nullable restore
 #else
-        public UntypedNode CarrierEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricCarrierEdge CarrierEdge { get; set; }
 #endif
         /// <summary>Contains metrics and properties for the Twilio media gateway of a Client call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ClientEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricClientEdge? ClientEdge { get; set; }
 #nullable restore
 #else
-        public UntypedNode ClientEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricClientEdge ClientEdge { get; set; }
 #endif
         /// <summary>The direction property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumStreamDirection? Direction { get; set; }
@@ -53,18 +53,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains metrics and properties for the SDK sensor library for Client calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SdkEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricSdkEdge? SdkEdge { get; set; }
 #nullable restore
 #else
-        public UntypedNode SdkEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricSdkEdge SdkEdge { get; set; }
 #endif
         /// <summary>Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SipEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricSipEdge? SipEdge { get; set; }
 #nullable restore
 #else
-        public UntypedNode SipEdge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricSipEdge SipEdge { get; set; }
 #endif
         /// <summary>Timestamp of metric sample. Samples are taken every 10 seconds and contain the metrics for the previous 10 seconds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,12 +101,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "call_sid", n => { CallSid = n.GetStringValue(); } },
-                { "carrier_edge", n => { CarrierEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "client_edge", n => { ClientEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "carrier_edge", n => { CarrierEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricCarrierEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricCarrierEdge.CreateFromDiscriminatorValue); } },
+                { "client_edge", n => { ClientEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricClientEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricClientEdge.CreateFromDiscriminatorValue); } },
                 { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumStreamDirection>(); } },
                 { "edge", n => { Edge = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumTwilioEdge>(); } },
-                { "sdk_edge", n => { SdkEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "sip_edge", n => { SipEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "sdk_edge", n => { SdkEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricSdkEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricSdkEdge.CreateFromDiscriminatorValue); } },
+                { "sip_edge", n => { SipEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricSipEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricSipEdge.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetStringValue(); } },
             };
         }
@@ -119,12 +119,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("call_sid", CallSid);
-            writer.WriteObjectValue<UntypedNode>("carrier_edge", CarrierEdge);
-            writer.WriteObjectValue<UntypedNode>("client_edge", ClientEdge);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricCarrierEdge>("carrier_edge", CarrierEdge);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricClientEdge>("client_edge", ClientEdge);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumStreamDirection>("direction", Direction);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumTwilioEdge>("edge", Edge);
-            writer.WriteObjectValue<UntypedNode>("sdk_edge", SdkEdge);
-            writer.WriteObjectValue<UntypedNode>("sip_edge", SipEdge);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricSdkEdge>("sdk_edge", SdkEdge);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallMetricSipEdge>("sip_edge", SipEdge);
             writer.WriteStringValue("timestamp", Timestamp);
             writer.WriteAdditionalData(AdditionalData);
         }

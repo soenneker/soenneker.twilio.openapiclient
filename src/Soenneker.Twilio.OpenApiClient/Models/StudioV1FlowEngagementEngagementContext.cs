@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>As your flow executes, we save the state in what&apos;s called the Flow Context. Any data in the flow context can be accessed by your widgets as variables, either in configuration fields or in text areas as variable substitution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Context { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV1FlowEngagementEngagementContextContext? Context { get; set; }
 #nullable restore
 #else
-        public UntypedNode Context { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV1FlowEngagementEngagementContextContext Context { get; set; }
 #endif
         /// <summary>The SID of the Engagement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "context", n => { Context = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV1FlowEngagementEngagementContextContext>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV1FlowEngagementEngagementContextContext.CreateFromDiscriminatorValue); } },
                 { "engagement_sid", n => { EngagementSid = n.GetStringValue(); } },
                 { "flow_sid", n => { FlowSid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -94,7 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<UntypedNode>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV1FlowEngagementEngagementContextContext>("context", Context);
             writer.WriteStringValue("engagement_sid", EngagementSid);
             writer.WriteStringValue("flow_sid", FlowSid);
             writer.WriteStringValue("url", Url);

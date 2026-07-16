@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The JSON object that represents the current configuration of installed Add-on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceInstalledAddOnConfiguration? Configuration { get; set; }
 #nullable restore
 #else
-        public UntypedNode Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceInstalledAddOnConfiguration Configuration { get; set; }
 #endif
         /// <summary>The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -108,7 +108,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "configuration", n => { Configuration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceInstalledAddOnConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceInstalledAddOnConfiguration.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -127,7 +127,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<UntypedNode>("configuration", Configuration);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceInstalledAddOnConfiguration>("configuration", Configuration);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("description", Description);

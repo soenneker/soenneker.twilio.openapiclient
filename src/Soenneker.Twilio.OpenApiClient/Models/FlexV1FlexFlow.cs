@@ -57,10 +57,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that contains specific parameters for the integration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Integration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1FlexFlowIntegration? Integration { get; set; }
 #nullable restore
 #else
-        public UntypedNode Integration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1FlexFlowIntegration Integration { get; set; }
 #endif
         /// <summary>&quot;The software that will handle inbound messages. [Integration Type](https://www.twilio.com/docs/flex/developer/messaging/manage-flows#integration-types) can be: `studio`, `external`,  or `task`.&quot;</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.FlexFlowEnumIntegrationType? IntegrationType { get; set; }
@@ -117,7 +117,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "integration", n => { Integration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "integration", n => { Integration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1FlexFlowIntegration>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1FlexFlowIntegration.CreateFromDiscriminatorValue); } },
                 { "integration_type", n => { IntegrationType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexFlowEnumIntegrationType>(); } },
                 { "janitor_enabled", n => { JanitorEnabled = n.GetBoolValue(); } },
                 { "long_lived", n => { LongLived = n.GetBoolValue(); } },
@@ -140,7 +140,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<UntypedNode>("integration", Integration);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1FlexFlowIntegration>("integration", Integration);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexFlowEnumIntegrationType>("integration_type", IntegrationType);
             writer.WriteBoolValue("janitor_enabled", JanitorEnabled);
             writer.WriteBoolValue("long_lived", LongLived);

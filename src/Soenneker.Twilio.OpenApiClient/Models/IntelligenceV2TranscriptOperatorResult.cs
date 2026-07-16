@@ -19,26 +19,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of text extraction results. This might be available on classify-extract model outputs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ExtractResults { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultExtractResults? ExtractResults { get; set; }
 #nullable restore
 #else
-        public UntypedNode ExtractResults { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultExtractResults ExtractResults { get; set; }
 #endif
         /// <summary>The json_results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? JsonResults { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultJsonResults? JsonResults { get; set; }
 #nullable restore
 #else
-        public UntypedNode JsonResults { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultJsonResults JsonResults { get; set; }
 #endif
         /// <summary>The labels probabilities. This might be available on conversation classify model outputs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? LabelProbabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultLabelProbabilities? LabelProbabilities { get; set; }
 #nullable restore
 #else
-        public UntypedNode LabelProbabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultLabelProbabilities LabelProbabilities { get; set; }
 #endif
         /// <summary>Percentage of &apos;matching&apos; class needed to consider a sentence matches</summary>
         public double? MatchProbability { get; set; }
@@ -81,10 +81,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Output of a text generation operator for example Conversation Sumamary.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TextGenerationResults { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultTextGenerationResults? TextGenerationResults { get; set; }
 #nullable restore
 #else
-        public UntypedNode TextGenerationResults { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultTextGenerationResults TextGenerationResults { get; set; }
 #endif
         /// <summary>A 34 character string that uniquely identifies this Transcript.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -138,9 +138,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "extract_match", n => { ExtractMatch = n.GetBoolValue(); } },
-                { "extract_results", n => { ExtractResults = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "json_results", n => { JsonResults = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "label_probabilities", n => { LabelProbabilities = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "extract_results", n => { ExtractResults = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultExtractResults>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultExtractResults.CreateFromDiscriminatorValue); } },
+                { "json_results", n => { JsonResults = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultJsonResults>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultJsonResults.CreateFromDiscriminatorValue); } },
+                { "label_probabilities", n => { LabelProbabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultLabelProbabilities>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultLabelProbabilities.CreateFromDiscriminatorValue); } },
                 { "match_probability", n => { MatchProbability = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "normalized_result", n => { NormalizedResult = n.GetStringValue(); } },
@@ -148,7 +148,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "operator_type", n => { OperatorType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultEnumOperatorType>(); } },
                 { "predicted_label", n => { PredictedLabel = n.GetStringValue(); } },
                 { "predicted_probability", n => { PredictedProbability = n.GetDoubleValue(); } },
-                { "text_generation_results", n => { TextGenerationResults = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "text_generation_results", n => { TextGenerationResults = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultTextGenerationResults>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultTextGenerationResults.CreateFromDiscriminatorValue); } },
                 { "transcript_sid", n => { TranscriptSid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "utterance_match", n => { UtteranceMatch = n.GetBoolValue(); } },
@@ -163,9 +163,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("extract_match", ExtractMatch);
-            writer.WriteObjectValue<UntypedNode>("extract_results", ExtractResults);
-            writer.WriteObjectValue<UntypedNode>("json_results", JsonResults);
-            writer.WriteObjectValue<UntypedNode>("label_probabilities", LabelProbabilities);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultExtractResults>("extract_results", ExtractResults);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultJsonResults>("json_results", JsonResults);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultLabelProbabilities>("label_probabilities", LabelProbabilities);
             writer.WriteDoubleValue("match_probability", MatchProbability);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("normalized_result", NormalizedResult);
@@ -173,7 +173,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultEnumOperatorType>("operator_type", OperatorType);
             writer.WriteStringValue("predicted_label", PredictedLabel);
             writer.WriteDoubleValue("predicted_probability", PredictedProbability);
-            writer.WriteObjectValue<UntypedNode>("text_generation_results", TextGenerationResults);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptOperatorResultTextGenerationResults>("text_generation_results", TextGenerationResults);
             writer.WriteStringValue("transcript_sid", TranscriptSid);
             writer.WriteStringValue("url", Url);
             writer.WriteBoolValue("utterance_match", UtteranceMatch);

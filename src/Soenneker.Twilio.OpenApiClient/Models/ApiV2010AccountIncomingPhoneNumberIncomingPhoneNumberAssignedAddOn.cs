@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON string that represents the current configuration of this Add-on installation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnConfiguration? Configuration { get; set; }
 #nullable restore
 #else
-        public UntypedNode Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnConfiguration Configuration { get; set; }
 #endif
         /// <summary>The date and time in GMT that the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -128,7 +128,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "configuration", n => { Configuration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnConfiguration.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetStringValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -148,7 +148,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<UntypedNode>("configuration", Configuration);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnConfiguration>("configuration", Configuration);
             writer.WriteStringValue("date_created", DateCreated);
             writer.WriteStringValue("date_updated", DateUpdated);
             writer.WriteStringValue("description", Description);

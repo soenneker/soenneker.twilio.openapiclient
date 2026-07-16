@@ -75,10 +75,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? EncryptionDetails { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallRecordingEncryptionDetails? EncryptionDetails { get; set; }
 #nullable restore
 #else
-        public UntypedNode EncryptionDetails { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallRecordingEncryptionDetails EncryptionDetails { get; set; }
 #endif
         /// <summary>The error code that describes why the recording is `absent`. The error code is described in our [Error Dictionary](https://www.twilio.com/docs/api/errors). This value is null if the recording `status` is not `absent`.</summary>
         public int? ErrorCode { get; set; }
@@ -162,7 +162,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetStringValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetStringValue(); } },
                 { "duration", n => { Duration = n.GetStringValue(); } },
-                { "encryption_details", n => { EncryptionDetails = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "encryption_details", n => { EncryptionDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallRecordingEncryptionDetails>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallRecordingEncryptionDetails.CreateFromDiscriminatorValue); } },
                 { "error_code", n => { ErrorCode = n.GetIntValue(); } },
                 { "price", n => { Price = n.GetDoubleValue(); } },
                 { "price_unit", n => { PriceUnit = n.GetStringValue(); } },
@@ -189,7 +189,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("date_created", DateCreated);
             writer.WriteStringValue("date_updated", DateUpdated);
             writer.WriteStringValue("duration", Duration);
-            writer.WriteObjectValue<UntypedNode>("encryption_details", EncryptionDetails);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallRecordingEncryptionDetails>("encryption_details", EncryptionDetails);
             writer.WriteIntValue("error_code", ErrorCode);
             writer.WriteDoubleValue("price", Price);
             writer.WriteStringValue("price_unit", PriceUnit);

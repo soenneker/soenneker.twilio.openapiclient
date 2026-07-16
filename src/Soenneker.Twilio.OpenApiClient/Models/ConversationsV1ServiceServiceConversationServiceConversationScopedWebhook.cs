@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The configuration of this webhook. Is defined based on target.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationScopedWebhookConfiguration? Configuration { get; set; }
 #nullable restore
 #else
-        public UntypedNode Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationScopedWebhookConfiguration Configuration { get; set; }
 #endif
         /// <summary>The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,7 +101,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "chat_service_sid", n => { ChatServiceSid = n.GetStringValue(); } },
-                { "configuration", n => { Configuration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationScopedWebhookConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationScopedWebhookConfiguration.CreateFromDiscriminatorValue); } },
                 { "conversation_sid", n => { ConversationSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
@@ -119,7 +119,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("chat_service_sid", ChatServiceSid);
-            writer.WriteObjectValue<UntypedNode>("configuration", Configuration);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationServiceConversationScopedWebhookConfiguration>("configuration", Configuration);
             writer.WriteStringValue("conversation_sid", ConversationSid);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);

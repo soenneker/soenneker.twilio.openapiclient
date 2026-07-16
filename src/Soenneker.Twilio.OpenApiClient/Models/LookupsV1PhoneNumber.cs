@@ -17,26 +17,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON string with the results of the Add-ons you specified in the `add_ons` parameters. For the format of the object, see [Using Add-ons](https://www.twilio.com/docs/add-ons).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AddOns { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberAddOns? AddOns { get; set; }
 #nullable restore
 #else
-        public UntypedNode AddOns { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberAddOns AddOns { get; set; }
 #endif
         /// <summary>The name of the phone number&apos;s owner. If `null`, that information was not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CallerName { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberCallerName? CallerName { get; set; }
 #nullable restore
 #else
-        public UntypedNode CallerName { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberCallerName CallerName { get; set; }
 #endif
         /// <summary>The telecom company that provides the phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Carrier { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberCarrier? Carrier { get; set; }
 #nullable restore
 #else
-        public UntypedNode Carrier { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberCarrier Carrier { get; set; }
 #endif
         /// <summary>The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) for the phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,9 +95,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "add_ons", n => { AddOns = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "caller_name", n => { CallerName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "carrier", n => { Carrier = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "add_ons", n => { AddOns = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberAddOns>(global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberAddOns.CreateFromDiscriminatorValue); } },
+                { "caller_name", n => { CallerName = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberCallerName>(global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberCallerName.CreateFromDiscriminatorValue); } },
+                { "carrier", n => { Carrier = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberCarrier>(global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberCarrier.CreateFromDiscriminatorValue); } },
                 { "country_code", n => { CountryCode = n.GetStringValue(); } },
                 { "national_format", n => { NationalFormat = n.GetStringValue(); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
@@ -111,9 +111,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<UntypedNode>("add_ons", AddOns);
-            writer.WriteObjectValue<UntypedNode>("caller_name", CallerName);
-            writer.WriteObjectValue<UntypedNode>("carrier", Carrier);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberAddOns>("add_ons", AddOns);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberCallerName>("caller_name", CallerName);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumberCarrier>("carrier", Carrier);
             writer.WriteStringValue("country_code", CountryCode);
             writer.WriteStringValue("national_format", NationalFormat);
             writer.WriteStringValue("phone_number", PhoneNumber);

@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The comments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Comments { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsCommentComments? Comments { get; set; }
 #nullable restore
 #else
-        public UntypedNode Comments { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsCommentComments Comments { get; set; }
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "comments", n => { Comments = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "comments", n => { Comments = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsCommentComments>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsCommentComments.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<UntypedNode>("comments", Comments);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSettingsCommentComments>("comments", Comments);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

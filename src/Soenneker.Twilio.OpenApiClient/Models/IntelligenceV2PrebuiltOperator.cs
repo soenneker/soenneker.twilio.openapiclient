@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Operator configuration, following the schema defined by the Operator Type. Only available on Custom Operators created by the Account, will be empty for Pre-Built Operators.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Config { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2PrebuiltOperatorConfig? Config { get; set; }
 #nullable restore
 #else
-        public UntypedNode Config { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2PrebuiltOperatorConfig Config { get; set; }
 #endif
         /// <summary>The date that this Pre-built Operator was created, given in ISO 8601 format.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -115,7 +115,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "author", n => { Author = n.GetStringValue(); } },
                 { "availability", n => { Availability = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PrebuiltOperatorEnumAvailability>(); } },
-                { "config", n => { Config = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "config", n => { Config = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2PrebuiltOperatorConfig>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2PrebuiltOperatorConfig.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -136,7 +136,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("author", Author);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PrebuiltOperatorEnumAvailability>("availability", Availability);
-            writer.WriteObjectValue<UntypedNode>("config", Config);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2PrebuiltOperatorConfig>("config", Config);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("description", Description);

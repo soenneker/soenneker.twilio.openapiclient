@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that describes the estimated location in latitude and longitude where the device&apos;s Data Session took place. The location is derived from the `cell_id` when the Data Session was last updated. See [Cell Location Estimate Object](https://www.twilio.com/docs/iot/wireless/api/datasession-resource#cell-location-estimate-object). </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CellLocationEstimate { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimDataSessionCellLocationEstimate? CellLocationEstimate { get; set; }
 #nullable restore
 #else
-        public UntypedNode CellLocationEstimate { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimDataSessionCellLocationEstimate CellLocationEstimate { get; set; }
 #endif
         /// <summary>The date that the record ended, given as GMT in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.</summary>
         public DateTimeOffset? End { get; set; }
@@ -141,7 +141,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "cell_id", n => { CellId = n.GetStringValue(); } },
-                { "cell_location_estimate", n => { CellLocationEstimate = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "cell_location_estimate", n => { CellLocationEstimate = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimDataSessionCellLocationEstimate>(global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimDataSessionCellLocationEstimate.CreateFromDiscriminatorValue); } },
                 { "end", n => { End = n.GetDateTimeOffsetValue(); } },
                 { "imei", n => { Imei = n.GetStringValue(); } },
                 { "last_updated", n => { LastUpdated = n.GetDateTimeOffsetValue(); } },
@@ -166,7 +166,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("cell_id", CellId);
-            writer.WriteObjectValue<UntypedNode>("cell_location_estimate", CellLocationEstimate);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimDataSessionCellLocationEstimate>("cell_location_estimate", CellLocationEstimate);
             writer.WriteDateTimeOffsetValue("end", End);
             writer.WriteStringValue("imei", Imei);
             writer.WriteDateTimeOffsetValue("last_updated", LastUpdated);

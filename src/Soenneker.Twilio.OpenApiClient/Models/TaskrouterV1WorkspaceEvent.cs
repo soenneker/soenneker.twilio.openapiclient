@@ -57,10 +57,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Data about the event. For more information, see [Event types](https://www.twilio.com/docs/taskrouter/api/event#event-types).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? EventData { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceEventEventData? EventData { get; set; }
 #nullable restore
 #else
-        public UntypedNode EventData { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceEventEventData EventData { get; set; }
 #endif
         /// <summary>The time the event was sent, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? EventDate { get; set; }
@@ -168,7 +168,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "actor_type", n => { ActorType = n.GetStringValue(); } },
                 { "actor_url", n => { ActorUrl = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "event_data", n => { EventData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "event_data", n => { EventData = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceEventEventData>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceEventEventData.CreateFromDiscriminatorValue); } },
                 { "event_date", n => { EventDate = n.GetDateTimeOffsetValue(); } },
                 { "event_date_ms", n => { EventDateMs = n.GetLongValue(); } },
                 { "event_type", n => { EventType = n.GetStringValue(); } },
@@ -194,7 +194,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("actor_type", ActorType);
             writer.WriteStringValue("actor_url", ActorUrl);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<UntypedNode>("event_data", EventData);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceEventEventData>("event_data", EventData);
             writer.WriteDateTimeOffsetValue("event_date", EventDate);
             writer.WriteLongValue("event_date_ms", EventDateMs);
             writer.WriteStringValue("event_type", EventType);

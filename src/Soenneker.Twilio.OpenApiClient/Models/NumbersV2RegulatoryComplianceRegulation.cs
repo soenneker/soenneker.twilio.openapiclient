@@ -43,10 +43,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID of an object that holds the regulatory information of the phone number country, phone number type, and end user type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Requirements { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceRegulationRequirements? Requirements { get; set; }
 #nullable restore
 #else
-        public UntypedNode Requirements { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceRegulationRequirements Requirements { get; set; }
 #endif
         /// <summary>The unique string that identifies the Regulation resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,7 +93,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "iso_country", n => { IsoCountry = n.GetStringValue(); } },
                 { "number_type", n => { NumberType = n.GetStringValue(); } },
-                { "requirements", n => { Requirements = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceRegulationRequirements>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceRegulationRequirements.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -109,7 +109,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("iso_country", IsoCountry);
             writer.WriteStringValue("number_type", NumberType);
-            writer.WriteObjectValue<UntypedNode>("requirements", Requirements);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceRegulationRequirements>("requirements", Requirements);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Participant&apos;s routing properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RoutingProperties { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelInteractionChannelParticipantRoutingProperties? RoutingProperties { get; set; }
 #nullable restore
 #else
-        public UntypedNode RoutingProperties { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelInteractionChannelParticipantRoutingProperties RoutingProperties { get; set; }
 #endif
         /// <summary>The unique string created by Twilio to identify an Interaction Channel Participant resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,7 +83,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "channel_sid", n => { ChannelSid = n.GetStringValue(); } },
                 { "interaction_sid", n => { InteractionSid = n.GetStringValue(); } },
-                { "routing_properties", n => { RoutingProperties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "routing_properties", n => { RoutingProperties = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelInteractionChannelParticipantRoutingProperties>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelInteractionChannelParticipantRoutingProperties.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel_sid", ChannelSid);
             writer.WriteStringValue("interaction_sid", InteractionSid);
-            writer.WriteObjectValue<UntypedNode>("routing_properties", RoutingProperties);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelInteractionChannelParticipantRoutingProperties>("routing_properties", RoutingProperties);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType>("type", Type);
             writer.WriteStringValue("url", Url);

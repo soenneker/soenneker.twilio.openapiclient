@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;A list of objects where each object represents the result of processing a messaging Geo Permission. Each object contains the following fields: `country_code`, the country code of the country for which the permission was updated; `type`, the type of the permission i.e. country; `enabled`, true if the permission is enabled else false; `error_code`, an integer where 0 indicates success and any non-zero value represents an error; and `error_messages`, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Permissions { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1MessagingGeopermissionsPermissions? Permissions { get; set; }
 #nullable restore
 #else
-        public UntypedNode Permissions { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1MessagingGeopermissionsPermissions Permissions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1MessagingGeopermissions"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "permissions", n => { Permissions = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1MessagingGeopermissionsPermissions>(global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1MessagingGeopermissionsPermissions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<UntypedNode>("permissions", Permissions);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1MessagingGeopermissionsPermissions>("permissions", Permissions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

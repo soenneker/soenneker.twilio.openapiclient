@@ -97,18 +97,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The phone_number_quality_score property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PhoneNumberQualityScore { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchResponsePhoneNumberQualityScore? PhoneNumberQualityScore { get; set; }
 #nullable restore
 #else
-        public UntypedNode PhoneNumberQualityScore { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchResponsePhoneNumberQualityScore PhoneNumberQualityScore { get; set; }
 #endif
         /// <summary>The pre_fill property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PreFill { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchResponsePreFill? PreFill { get; set; }
 #nullable restore
 #else
-        public UntypedNode PreFill { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchResponsePreFill PreFill { get; set; }
 #endif
         /// <summary>The reassigned_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -181,8 +181,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "line_type_intelligence", n => { LineTypeIntelligence = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo>(global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo.CreateFromDiscriminatorValue); } },
                 { "national_format", n => { NationalFormat = n.GetStringValue(); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
-                { "phone_number_quality_score", n => { PhoneNumberQualityScore = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "pre_fill", n => { PreFill = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "phone_number_quality_score", n => { PhoneNumberQualityScore = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchResponsePhoneNumberQualityScore>(global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchResponsePhoneNumberQualityScore.CreateFromDiscriminatorValue); } },
+                { "pre_fill", n => { PreFill = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchResponsePreFill>(global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchResponsePreFill.CreateFromDiscriminatorValue); } },
                 { "reassigned_number", n => { ReassignedNumber = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo>(global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo.CreateFromDiscriminatorValue); } },
                 { "sim_swap", n => { SimSwap = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo>(global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo.CreateFromDiscriminatorValue); } },
                 { "sms_pumping_risk", n => { SmsPumpingRisk = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo>(global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo.CreateFromDiscriminatorValue); } },
@@ -208,8 +208,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo>("line_type_intelligence", LineTypeIntelligence);
             writer.WriteStringValue("national_format", NationalFormat);
             writer.WriteStringValue("phone_number", PhoneNumber);
-            writer.WriteObjectValue<UntypedNode>("phone_number_quality_score", PhoneNumberQualityScore);
-            writer.WriteObjectValue<UntypedNode>("pre_fill", PreFill);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchResponsePhoneNumberQualityScore>("phone_number_quality_score", PhoneNumberQualityScore);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LookupBatchResponsePreFill>("pre_fill", PreFill);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo>("reassigned_number", ReassignedNumber);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo>("sim_swap", SimSwap);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo>("sms_pumping_risk", SmsPumpingRisk);

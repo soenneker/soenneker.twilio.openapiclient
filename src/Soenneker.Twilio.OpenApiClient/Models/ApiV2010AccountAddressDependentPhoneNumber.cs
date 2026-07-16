@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;The set of Boolean properties that indicates whether a phone number can receive calls or messages.  Capabilities are  `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAddressDependentPhoneNumberCapabilities? Capabilities { get; set; }
 #nullable restore
 #else
-        public UntypedNode Capabilities { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAddressDependentPhoneNumberCapabilities Capabilities { get; set; }
 #endif
         /// <summary>The date and time in GMT that the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -202,7 +202,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "address_requirements", n => { AddressRequirements = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.DependentPhoneNumberEnumAddressRequirement>(); } },
                 { "api_version", n => { ApiVersion = n.GetStringValue(); } },
-                { "capabilities", n => { Capabilities = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAddressDependentPhoneNumberCapabilities>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAddressDependentPhoneNumberCapabilities.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetStringValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetStringValue(); } },
                 { "emergency_address_sid", n => { EmergencyAddressSid = n.GetStringValue(); } },
@@ -237,7 +237,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.DependentPhoneNumberEnumAddressRequirement>("address_requirements", AddressRequirements);
             writer.WriteStringValue("api_version", ApiVersion);
-            writer.WriteObjectValue<UntypedNode>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAddressDependentPhoneNumberCapabilities>("capabilities", Capabilities);
             writer.WriteStringValue("date_created", DateCreated);
             writer.WriteStringValue("date_updated", DateUpdated);
             writer.WriteStringValue("emergency_address_sid", EmergencyAddressSid);

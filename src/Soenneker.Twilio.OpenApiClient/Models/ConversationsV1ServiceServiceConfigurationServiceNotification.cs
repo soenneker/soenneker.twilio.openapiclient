@@ -23,10 +23,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Push Notification configuration for being added to a Conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AddedToConversation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationAddedToConversation? AddedToConversation { get; set; }
 #nullable restore
 #else
-        public UntypedNode AddedToConversation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationAddedToConversation AddedToConversation { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -43,18 +43,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Push Notification configuration for New Messages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NewMessage { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationNewMessage? NewMessage { get; set; }
 #nullable restore
 #else
-        public UntypedNode NewMessage { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationNewMessage NewMessage { get; set; }
 #endif
         /// <summary>The Push Notification configuration for being removed from a Conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RemovedFromConversation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationRemovedFromConversation? RemovedFromConversation { get; set; }
 #nullable restore
 #else
-        public UntypedNode RemovedFromConversation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationRemovedFromConversation RemovedFromConversation { get; set; }
 #endif
         /// <summary>An absolute API resource URL for this configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,11 +90,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "added_to_conversation", n => { AddedToConversation = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "added_to_conversation", n => { AddedToConversation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationAddedToConversation>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationAddedToConversation.CreateFromDiscriminatorValue); } },
                 { "chat_service_sid", n => { ChatServiceSid = n.GetStringValue(); } },
                 { "log_enabled", n => { LogEnabled = n.GetBoolValue(); } },
-                { "new_message", n => { NewMessage = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "removed_from_conversation", n => { RemovedFromConversation = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "new_message", n => { NewMessage = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationNewMessage>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationNewMessage.CreateFromDiscriminatorValue); } },
+                { "removed_from_conversation", n => { RemovedFromConversation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationRemovedFromConversation>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationRemovedFromConversation.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -106,11 +106,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<UntypedNode>("added_to_conversation", AddedToConversation);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationAddedToConversation>("added_to_conversation", AddedToConversation);
             writer.WriteStringValue("chat_service_sid", ChatServiceSid);
             writer.WriteBoolValue("log_enabled", LogEnabled);
-            writer.WriteObjectValue<UntypedNode>("new_message", NewMessage);
-            writer.WriteObjectValue<UntypedNode>("removed_from_conversation", RemovedFromConversation);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationNewMessage>("new_message", NewMessage);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationServiceNotificationRemovedFromConversation>("removed_from_conversation", RemovedFromConversation);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

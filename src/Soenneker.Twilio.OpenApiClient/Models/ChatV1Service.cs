@@ -63,10 +63,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that describes the limits of the service instance. The `limits` object contains  `channel_members` to describe the members/channel limit and `user_channels` to describe the channels/user limit. `channel_members` can be 1,000 or less, with a default of 250. `user_channels` can be 1,000 or less, with a default value of 100.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Limits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLimits? Limits { get; set; }
 #nullable restore
 #else
-        public UntypedNode Limits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLimits Limits { get; set; }
 #endif
         /// <summary>The absolute URLs of the Service&apos;s [Channels](https://www.twilio.com/docs/chat/api/channels), [Roles](https://www.twilio.com/docs/chat/api/roles), and [Users](https://www.twilio.com/docs/chat/api/users).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,10 +79,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Notifications { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceNotifications? Notifications { get; set; }
 #nullable restore
 #else
-        public UntypedNode Notifications { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceNotifications Notifications { get; set; }
 #endif
         /// <summary>The URL for post-event webhooks, which are called by using the `webhook_method`. See [Webhook Events](https://www.twilio.com/docs/api/chat/webhooks) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -141,10 +141,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that contains information about the webhooks configured for this service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Webhooks { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceWebhooks? Webhooks { get; set; }
 #nullable restore
 #else
-        public UntypedNode Webhooks { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceWebhooks Webhooks { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ChatV1Service"/> and sets the default values.
@@ -181,9 +181,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "default_channel_role_sid", n => { DefaultChannelRoleSid = n.GetStringValue(); } },
                 { "default_service_role_sid", n => { DefaultServiceRoleSid = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "limits", n => { Limits = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLimits>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLimits.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLinks.CreateFromDiscriminatorValue); } },
-                { "notifications", n => { Notifications = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "notifications", n => { Notifications = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceNotifications>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceNotifications.CreateFromDiscriminatorValue); } },
                 { "post_webhook_url", n => { PostWebhookUrl = n.GetStringValue(); } },
                 { "pre_webhook_url", n => { PreWebhookUrl = n.GetStringValue(); } },
                 { "reachability_enabled", n => { ReachabilityEnabled = n.GetBoolValue(); } },
@@ -193,7 +193,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "webhook_filters", n => { WebhookFilters = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "webhook_method", n => { WebhookMethod = n.GetStringValue(); } },
-                { "webhooks", n => { Webhooks = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "webhooks", n => { Webhooks = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceWebhooks>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceWebhooks.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -211,9 +211,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("default_channel_role_sid", DefaultChannelRoleSid);
             writer.WriteStringValue("default_service_role_sid", DefaultServiceRoleSid);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<UntypedNode>("limits", Limits);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLimits>("limits", Limits);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceLinks>("links", Links);
-            writer.WriteObjectValue<UntypedNode>("notifications", Notifications);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceNotifications>("notifications", Notifications);
             writer.WriteStringValue("post_webhook_url", PostWebhookUrl);
             writer.WriteStringValue("pre_webhook_url", PreWebhookUrl);
             writer.WriteBoolValue("reachability_enabled", ReachabilityEnabled);
@@ -223,7 +223,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("url", Url);
             writer.WriteCollectionOfPrimitiveValues<string>("webhook_filters", WebhookFilters);
             writer.WriteStringValue("webhook_method", WebhookMethod);
-            writer.WriteObjectValue<UntypedNode>("webhooks", Webhooks);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceWebhooks>("webhooks", Webhooks);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

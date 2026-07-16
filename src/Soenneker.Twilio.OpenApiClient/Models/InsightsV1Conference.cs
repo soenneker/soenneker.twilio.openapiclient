@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Potential issues detected by Twilio during the conference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? DetectedIssues { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceDetectedIssues? DetectedIssues { get; set; }
 #nullable restore
 #else
-        public UntypedNode DetectedIssues { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceDetectedIssues DetectedIssues { get; set; }
 #endif
         /// <summary>Conference duration in seconds.</summary>
         public int? DurationSeconds { get; set; }
@@ -91,10 +91,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Object. Contains details about conference tags including severity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TagInfo { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceTagInfo? TagInfo { get; set; }
 #nullable restore
 #else
-        public UntypedNode TagInfo { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceTagInfo TagInfo { get; set; }
 #endif
         /// <summary>Tags for detected conference conditions and participant behaviors which may be of interest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -143,7 +143,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "conference_sid", n => { ConferenceSid = n.GetStringValue(); } },
                 { "connect_duration_seconds", n => { ConnectDurationSeconds = n.GetIntValue(); } },
                 { "create_time", n => { CreateTime = n.GetDateTimeOffsetValue(); } },
-                { "detected_issues", n => { DetectedIssues = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "detected_issues", n => { DetectedIssues = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceDetectedIssues>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceDetectedIssues.CreateFromDiscriminatorValue); } },
                 { "duration_seconds", n => { DurationSeconds = n.GetIntValue(); } },
                 { "end_reason", n => { EndReason = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumConferenceEndReason>(); } },
                 { "end_time", n => { EndTime = n.GetDateTimeOffsetValue(); } },
@@ -158,7 +158,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "recording_enabled", n => { RecordingEnabled = n.GetBoolValue(); } },
                 { "start_time", n => { StartTime = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumConferenceStatus>(); } },
-                { "tag_info", n => { TagInfo = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "tag_info", n => { TagInfo = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceTagInfo>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceTagInfo.CreateFromDiscriminatorValue); } },
                 { "tags", n => { Tags = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumTag>()?.AsList(); } },
                 { "unique_participants", n => { UniqueParticipants = n.GetIntValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -175,7 +175,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("conference_sid", ConferenceSid);
             writer.WriteIntValue("connect_duration_seconds", ConnectDurationSeconds);
             writer.WriteDateTimeOffsetValue("create_time", CreateTime);
-            writer.WriteObjectValue<UntypedNode>("detected_issues", DetectedIssues);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceDetectedIssues>("detected_issues", DetectedIssues);
             writer.WriteIntValue("duration_seconds", DurationSeconds);
             writer.WriteStringValue("ended_by", EndedBy);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumConferenceEndReason>("end_reason", EndReason);
@@ -190,7 +190,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("recording_enabled", RecordingEnabled);
             writer.WriteDateTimeOffsetValue("start_time", StartTime);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumConferenceStatus>("status", Status);
-            writer.WriteObjectValue<UntypedNode>("tag_info", TagInfo);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceTagInfo>("tag_info", TagInfo);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumTag>("tags", Tags);
             writer.WriteIntValue("unique_participants", UniqueParticipants);
             writer.WriteStringValue("url", Url);

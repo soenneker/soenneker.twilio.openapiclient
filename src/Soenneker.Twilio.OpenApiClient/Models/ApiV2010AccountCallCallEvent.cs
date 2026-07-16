@@ -17,18 +17,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains a dictionary representing the request of the call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Request { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallEventRequest? Request { get; set; }
 #nullable restore
 #else
-        public UntypedNode Request { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallEventRequest Request { get; set; }
 #endif
         /// <summary>Contains a dictionary representing the call response, including a list of the call events.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Response { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallEventResponse? Response { get; set; }
 #nullable restore
 #else
-        public UntypedNode Response { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallEventResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallEvent"/> and sets the default values.
@@ -55,8 +55,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "request", n => { Request = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "response", n => { Response = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "request", n => { Request = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallEventRequest>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallEventRequest.CreateFromDiscriminatorValue); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallEventResponse>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallEventResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<UntypedNode>("request", Request);
-            writer.WriteObjectValue<UntypedNode>("response", Response);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallEventRequest>("request", Request);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallCallEventResponse>("response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

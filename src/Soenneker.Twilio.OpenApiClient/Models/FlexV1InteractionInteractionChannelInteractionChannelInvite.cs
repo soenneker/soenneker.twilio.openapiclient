@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality.  All attributes in the Routing object on your Interaction request body are added “as is” to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Routing { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelInteractionChannelInviteRouting? Routing { get; set; }
 #nullable restore
 #else
-        public UntypedNode Routing { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelInteractionChannelInviteRouting Routing { get; set; }
 #endif
         /// <summary>The unique string created by Twilio to identify an Interaction Channel Invite resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,7 +81,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "channel_sid", n => { ChannelSid = n.GetStringValue(); } },
                 { "interaction_sid", n => { InteractionSid = n.GetStringValue(); } },
-                { "routing", n => { Routing = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "routing", n => { Routing = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelInteractionChannelInviteRouting>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelInteractionChannelInviteRouting.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -95,7 +95,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel_sid", ChannelSid);
             writer.WriteStringValue("interaction_sid", InteractionSid);
-            writer.WriteObjectValue<UntypedNode>("routing", Routing);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionInteractionChannelInteractionChannelInviteRouting>("routing", Routing);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

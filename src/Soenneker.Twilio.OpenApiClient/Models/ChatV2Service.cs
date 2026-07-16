@@ -63,10 +63,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that describes the limits of the service instance. The `limits` object contains  `channel_members` to describe the members/channel limit and `user_channels` to describe the channels/user limit. `channel_members` can be 1,000 or less, with a default of 250. `user_channels` can be 1,000 or less, with a default value of 100.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Limits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLimits? Limits { get; set; }
 #nullable restore
 #else
-        public UntypedNode Limits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLimits Limits { get; set; }
 #endif
         /// <summary>The absolute URLs of the Service&apos;s [Channels](https://www.twilio.com/docs/chat/channels), [Roles](https://www.twilio.com/docs/chat/rest/role-resource), [Bindings](https://www.twilio.com/docs/chat/rest/binding-resource), and [Users](https://www.twilio.com/docs/chat/rest/user-resource).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,18 +79,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that describes the properties of media that the service supports. The object contains the `size_limit_mb` property, which describes the size of the largest media file in MB; and the `compatibility_message` property, which contains the message text to send when a media message does not have any text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Media { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceMedia? Media { get; set; }
 #nullable restore
 #else
-        public UntypedNode Media { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceMedia Media { get; set; }
 #endif
         /// <summary>The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Notifications { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceNotifications? Notifications { get; set; }
 #nullable restore
 #else
-        public UntypedNode Notifications { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceNotifications Notifications { get; set; }
 #endif
         /// <summary>The number of times to retry a call to the `post_webhook_url` if the request times out (after 5 seconds) or it receives a 429, 503, or 504 HTTP response. The default is 0, which means the call won&apos;t be retried.</summary>
         public int? PostWebhookRetryCount { get; set; }
@@ -187,10 +187,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "default_channel_role_sid", n => { DefaultChannelRoleSid = n.GetStringValue(); } },
                 { "default_service_role_sid", n => { DefaultServiceRoleSid = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "limits", n => { Limits = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLimits>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLimits.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLinks.CreateFromDiscriminatorValue); } },
-                { "media", n => { Media = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "notifications", n => { Notifications = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "media", n => { Media = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceMedia>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceMedia.CreateFromDiscriminatorValue); } },
+                { "notifications", n => { Notifications = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceNotifications>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceNotifications.CreateFromDiscriminatorValue); } },
                 { "post_webhook_retry_count", n => { PostWebhookRetryCount = n.GetIntValue(); } },
                 { "post_webhook_url", n => { PostWebhookUrl = n.GetStringValue(); } },
                 { "pre_webhook_retry_count", n => { PreWebhookRetryCount = n.GetIntValue(); } },
@@ -219,10 +219,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("default_channel_role_sid", DefaultChannelRoleSid);
             writer.WriteStringValue("default_service_role_sid", DefaultServiceRoleSid);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<UntypedNode>("limits", Limits);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLimits>("limits", Limits);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceLinks>("links", Links);
-            writer.WriteObjectValue<UntypedNode>("media", Media);
-            writer.WriteObjectValue<UntypedNode>("notifications", Notifications);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceMedia>("media", Media);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceNotifications>("notifications", Notifications);
             writer.WriteIntValue("post_webhook_retry_count", PostWebhookRetryCount);
             writer.WriteStringValue("post_webhook_url", PostWebhookUrl);
             writer.WriteIntValue("pre_webhook_retry_count", PreWebhookRetryCount);

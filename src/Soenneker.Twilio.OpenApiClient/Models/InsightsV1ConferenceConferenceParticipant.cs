@@ -67,10 +67,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Object containing information of actions taken by participants. Contains a dictionary of URL links to nested resources of this Conference Participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Events { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantEvents? Events { get; set; }
 #nullable restore
 #else
-        public UntypedNode Events { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantEvents Events { get; set; }
 #endif
         /// <summary>Caller ID of the calling party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,10 +101,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Object. Contains participant call quality metrics.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Metrics { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantMetrics? Metrics { get; set; }
 #nullable restore
 #else
-        public UntypedNode Metrics { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantMetrics Metrics { get; set; }
 #endif
         /// <summary>Add Participant API only. Estimated time in queue at call creation.</summary>
         public int? OutboundQueueLength { get; set; }
@@ -125,10 +125,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Participant properties and metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Properties { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantProperties? Properties { get; set; }
 #nullable restore
 #else
-        public UntypedNode Properties { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantProperties Properties { get; set; }
 #endif
         /// <summary>Called party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -181,7 +181,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "conference_sid", n => { ConferenceSid = n.GetStringValue(); } },
                 { "country_code", n => { CountryCode = n.GetStringValue(); } },
                 { "duration_seconds", n => { DurationSeconds = n.GetIntValue(); } },
-                { "events", n => { Events = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "events", n => { Events = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantEvents>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantEvents.CreateFromDiscriminatorValue); } },
                 { "from", n => { From = n.GetStringValue(); } },
                 { "is_coach", n => { IsCoach = n.GetBoolValue(); } },
                 { "is_moderator", n => { IsModerator = n.GetBoolValue(); } },
@@ -189,13 +189,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "join_time", n => { JoinTime = n.GetDateTimeOffsetValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "leave_time", n => { LeaveTime = n.GetDateTimeOffsetValue(); } },
-                { "metrics", n => { Metrics = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantMetrics>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantMetrics.CreateFromDiscriminatorValue); } },
                 { "outbound_queue_length", n => { OutboundQueueLength = n.GetIntValue(); } },
                 { "outbound_time_in_queue", n => { OutboundTimeInQueue = n.GetIntValue(); } },
                 { "participant_region", n => { ParticipantRegion = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion>(); } },
                 { "participant_sid", n => { ParticipantSid = n.GetStringValue(); } },
                 { "processing_state", n => { ProcessingState = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumProcessingState>(); } },
-                { "properties", n => { Properties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantProperties>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantProperties.CreateFromDiscriminatorValue); } },
                 { "to", n => { To = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -217,7 +217,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("conference_sid", ConferenceSid);
             writer.WriteStringValue("country_code", CountryCode);
             writer.WriteIntValue("duration_seconds", DurationSeconds);
-            writer.WriteObjectValue<UntypedNode>("events", Events);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantEvents>("events", Events);
             writer.WriteStringValue("from", From);
             writer.WriteBoolValue("is_coach", IsCoach);
             writer.WriteBoolValue("is_moderator", IsModerator);
@@ -225,13 +225,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("join_time", JoinTime);
             writer.WriteStringValue("label", Label);
             writer.WriteDateTimeOffsetValue("leave_time", LeaveTime);
-            writer.WriteObjectValue<UntypedNode>("metrics", Metrics);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantMetrics>("metrics", Metrics);
             writer.WriteIntValue("outbound_queue_length", OutboundQueueLength);
             writer.WriteIntValue("outbound_time_in_queue", OutboundTimeInQueue);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion>("participant_region", ParticipantRegion);
             writer.WriteStringValue("participant_sid", ParticipantSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumProcessingState>("processing_state", ProcessingState);
-            writer.WriteObjectValue<UntypedNode>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipantProperties>("properties", Properties);
             writer.WriteStringValue("to", To);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

@@ -77,18 +77,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Object containing information about the participant&apos;s data from the room. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#properties) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Properties { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryVideoParticipantSummaryProperties? Properties { get; set; }
 #nullable restore
 #else
-        public UntypedNode Properties { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryVideoParticipantSummaryProperties Properties { get; set; }
 #endif
         /// <summary>Object containing information about the SDK name and version. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#publisher_info) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PublisherInfo { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryVideoParticipantSummaryPublisherInfo? PublisherInfo { get; set; }
 #nullable restore
 #else
-        public UntypedNode PublisherInfo { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryVideoParticipantSummaryPublisherInfo PublisherInfo { get; set; }
 #endif
         /// <summary>Unique identifier for the room.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -145,8 +145,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "media_region", n => { MediaRegion = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumTwilioRealm>(); } },
                 { "participant_identity", n => { ParticipantIdentity = n.GetStringValue(); } },
                 { "participant_sid", n => { ParticipantSid = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "publisher_info", n => { PublisherInfo = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryVideoParticipantSummaryProperties>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryVideoParticipantSummaryProperties.CreateFromDiscriminatorValue); } },
+                { "publisher_info", n => { PublisherInfo = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryVideoParticipantSummaryPublisherInfo>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryVideoParticipantSummaryPublisherInfo.CreateFromDiscriminatorValue); } },
                 { "room_sid", n => { RoomSid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumRoomStatus>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -171,8 +171,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumTwilioRealm>("media_region", MediaRegion);
             writer.WriteStringValue("participant_identity", ParticipantIdentity);
             writer.WriteStringValue("participant_sid", ParticipantSid);
-            writer.WriteObjectValue<UntypedNode>("properties", Properties);
-            writer.WriteObjectValue<UntypedNode>("publisher_info", PublisherInfo);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryVideoParticipantSummaryProperties>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryVideoParticipantSummaryPublisherInfo>("publisher_info", PublisherInfo);
             writer.WriteStringValue("room_sid", RoomSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumRoomStatus>("status", Status);
             writer.WriteStringValue("url", Url);

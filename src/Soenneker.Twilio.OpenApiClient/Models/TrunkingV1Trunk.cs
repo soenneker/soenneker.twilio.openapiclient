@@ -81,10 +81,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;The recording settings for the trunk. Can be: `do-not-record`, `record-from-ringing`, `record-from-answer`. If set to `record-from-ringing` or `record-from-answer`, all calls going through the trunk will be recorded. The only way to change recording parameters is on a sub-resource of a Trunk after it has been created. e.g.`/Trunks/[Trunk_SID]/Recording -XPOST -d&apos;Mode=record-from-answer&apos;`. See [Recording](https://www.twilio.com/docs/sip-trunking#recording) for more information.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Recording { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkRecordingProperty? Recording { get; set; }
 #nullable restore
 #else
-        public UntypedNode Recording { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkRecordingProperty Recording { get; set; }
 #endif
         /// <summary>Whether Secure Trunking is enabled for the trunk. If enabled, all calls going through the trunk will be secure using SRTP for media and TLS for signaling. If disabled, then RTP will be used for media. See [Secure Trunking](https://www.twilio.com/docs/sip-trunking#securetrunking) for more information.</summary>
         public bool? Secure { get; set; }
@@ -146,7 +146,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "domain_name", n => { DomainName = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkLinks.CreateFromDiscriminatorValue); } },
-                { "recording", n => { Recording = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "recording", n => { Recording = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkRecordingProperty>(global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkRecordingProperty.CreateFromDiscriminatorValue); } },
                 { "secure", n => { Secure = n.GetBoolValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "symmetric_rtp_enabled", n => { SymmetricRtpEnabled = n.GetBoolValue(); } },
@@ -173,7 +173,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("domain_name", DomainName);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkLinks>("links", Links);
-            writer.WriteObjectValue<UntypedNode>("recording", Recording);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkRecordingProperty>("recording", Recording);
             writer.WriteBoolValue("secure", Secure);
             writer.WriteStringValue("sid", Sid);
             writer.WriteBoolValue("symmetric_rtp_enabled", SymmetricRtpEnabled);

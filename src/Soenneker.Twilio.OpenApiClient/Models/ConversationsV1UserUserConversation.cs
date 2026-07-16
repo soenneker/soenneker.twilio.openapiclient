@@ -91,10 +91,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Timer date values representing state update for this conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Timers { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserUserConversationTimers? Timers { get; set; }
 #nullable restore
 #else
-        public UntypedNode Timers { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserUserConversationTimers Timers { get; set; }
 #endif
         /// <summary>An application-defined string that uniquely identifies the Conversation resource. It can be used to address the resource in place of the resource&apos;s `conversation_sid` in the URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -160,7 +160,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserUserConversationLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserUserConversationLinks.CreateFromDiscriminatorValue); } },
                 { "notification_level", n => { NotificationLevel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.UserConversationEnumNotificationLevel>(); } },
                 { "participant_sid", n => { ParticipantSid = n.GetStringValue(); } },
-                { "timers", n => { Timers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "timers", n => { Timers = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserUserConversationTimers>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserUserConversationTimers.CreateFromDiscriminatorValue); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
                 { "unread_messages_count", n => { UnreadMessagesCount = n.GetIntValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -187,7 +187,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserUserConversationLinks>("links", Links);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.UserConversationEnumNotificationLevel>("notification_level", NotificationLevel);
             writer.WriteStringValue("participant_sid", ParticipantSid);
-            writer.WriteObjectValue<UntypedNode>("timers", Timers);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1UserUserConversationTimers>("timers", Timers);
             writer.WriteStringValue("unique_name", UniqueName);
             writer.WriteIntValue("unread_messages_count", UnreadMessagesCount);
             writer.WriteStringValue("url", Url);

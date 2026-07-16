@@ -73,18 +73,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The percentage scored on the Assessments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AssessmentPercentage { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsAssessmentPercentage? AssessmentPercentage { get; set; }
 #nullable restore
 #else
-        public UntypedNode AssessmentPercentage { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsAssessmentPercentage AssessmentPercentage { get; set; }
 #endif
         /// <summary>The type of the assessment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AssessmentType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsAssessmentType? AssessmentType { get; set; }
 #nullable restore
 #else
-        public UntypedNode AssessmentType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsAssessmentType AssessmentType { get; set; }
 #endif
         /// <summary>The link to the customer conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -153,10 +153,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The media identifiers of the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Media { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsMedia? Media { get; set; }
 #nullable restore
 #else
-        public UntypedNode Media { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsMedia Media { get; set; }
 #endif
         /// <summary>The queue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -222,8 +222,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "agent_phone", n => { AgentPhone = n.GetStringValue(); } },
                 { "agent_team_name", n => { AgentTeamName = n.GetStringValue(); } },
                 { "agent_team_name_in_hierarchy", n => { AgentTeamNameInHierarchy = n.GetStringValue(); } },
-                { "assessment_percentage", n => { AssessmentPercentage = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "assessment_type", n => { AssessmentType = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "assessment_percentage", n => { AssessmentPercentage = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsAssessmentPercentage>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsAssessmentPercentage.CreateFromDiscriminatorValue); } },
+                { "assessment_type", n => { AssessmentType = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsAssessmentType>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsAssessmentType.CreateFromDiscriminatorValue); } },
                 { "customer_link", n => { CustomerLink = n.GetStringValue(); } },
                 { "customer_name", n => { CustomerName = n.GetStringValue(); } },
                 { "customer_phone", n => { CustomerPhone = n.GetStringValue(); } },
@@ -232,7 +232,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "external_segment_link", n => { ExternalSegmentLink = n.GetStringValue(); } },
                 { "external_segment_link_id", n => { ExternalSegmentLinkId = n.GetStringValue(); } },
-                { "media", n => { Media = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "media", n => { Media = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsMedia>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsMedia.CreateFromDiscriminatorValue); } },
                 { "queue", n => { Queue = n.GetStringValue(); } },
                 { "segment_id", n => { SegmentId = n.GetStringValue(); } },
                 { "segment_recording_offset", n => { SegmentRecordingOffset = n.GetStringValue(); } },
@@ -253,8 +253,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("agent_phone", AgentPhone);
             writer.WriteStringValue("agent_team_name", AgentTeamName);
             writer.WriteStringValue("agent_team_name_in_hierarchy", AgentTeamNameInHierarchy);
-            writer.WriteObjectValue<UntypedNode>("assessment_percentage", AssessmentPercentage);
-            writer.WriteObjectValue<UntypedNode>("assessment_type", AssessmentType);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsAssessmentPercentage>("assessment_percentage", AssessmentPercentage);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsAssessmentType>("assessment_type", AssessmentType);
             writer.WriteStringValue("customer_link", CustomerLink);
             writer.WriteStringValue("customer_name", CustomerName);
             writer.WriteStringValue("customer_phone", CustomerPhone);
@@ -263,7 +263,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteStringValue("external_segment_link", ExternalSegmentLink);
             writer.WriteStringValue("external_segment_link_id", ExternalSegmentLinkId);
-            writer.WriteObjectValue<UntypedNode>("media", Media);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSegmentsMedia>("media", Media);
             writer.WriteStringValue("queue", Queue);
             writer.WriteStringValue("segment_id", SegmentId);
             writer.WriteStringValue("segment_recording_offset", SegmentRecordingOffset);

@@ -25,18 +25,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that contains the cumulative statistics for the TaskQueue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Cumulative { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsCumulative? Cumulative { get; set; }
 #nullable restore
 #else
-        public UntypedNode Cumulative { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsCumulative Cumulative { get; set; }
 #endif
         /// <summary>An object that contains the real-time statistics for the TaskQueue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Realtime { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsRealtime? Realtime { get; set; }
 #nullable restore
 #else
-        public UntypedNode Realtime { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsRealtime Realtime { get; set; }
 #endif
         /// <summary>The SID of the TaskQueue from which these statistics were calculated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,8 +88,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "cumulative", n => { Cumulative = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "realtime", n => { Realtime = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "cumulative", n => { Cumulative = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsCumulative>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsCumulative.CreateFromDiscriminatorValue); } },
+                { "realtime", n => { Realtime = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsRealtime>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsRealtime.CreateFromDiscriminatorValue); } },
                 { "task_queue_sid", n => { TaskQueueSid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "workspace_sid", n => { WorkspaceSid = n.GetStringValue(); } },
@@ -103,8 +103,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<UntypedNode>("cumulative", Cumulative);
-            writer.WriteObjectValue<UntypedNode>("realtime", Realtime);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsCumulative>("cumulative", Cumulative);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsRealtime>("realtime", Realtime);
             writer.WriteStringValue("task_queue_sid", TaskQueueSid);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("workspace_sid", WorkspaceSid);

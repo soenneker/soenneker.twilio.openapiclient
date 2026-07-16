@@ -151,10 +151,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Rate limit and/or classification set by each carrier, Ex. AT&amp;T or T-Mobile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RateLimits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonRateLimits? RateLimits { get; set; }
 #nullable restore
 #else
-        public UntypedNode RateLimits { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonRateLimits RateLimits { get; set; }
 #endif
         /// <summary>The unique string that identifies a US A2P Compliance resource `QE2c6890da8086d771620e9b13fadeba0b`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -223,7 +223,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "opt_in_message", n => { OptInMessage = n.GetStringValue(); } },
                 { "opt_out_keywords", n => { OptOutKeywords = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "opt_out_message", n => { OptOutMessage = n.GetStringValue(); } },
-                { "rate_limits", n => { RateLimits = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "rate_limits", n => { RateLimits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonRateLimits>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonRateLimits.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "subscriber_opt_in", n => { SubscriberOptIn = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -260,7 +260,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("opt_in_message", OptInMessage);
             writer.WriteCollectionOfPrimitiveValues<string>("opt_out_keywords", OptOutKeywords);
             writer.WriteStringValue("opt_out_message", OptOutMessage);
-            writer.WriteObjectValue<UntypedNode>("rate_limits", RateLimits);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonRateLimits>("rate_limits", RateLimits);
             writer.WriteStringValue("sid", Sid);
             writer.WriteBoolValue("subscriber_opt_in", SubscriberOptIn);
             writer.WriteStringValue("url", Url);

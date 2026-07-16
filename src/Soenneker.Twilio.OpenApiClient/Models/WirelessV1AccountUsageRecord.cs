@@ -25,26 +25,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that describes the aggregated Commands usage for all SIMs during the specified period. See [Commands Usage Object](https://www.twilio.com/docs/iot/wireless/api/account-usagerecord-resource#commands-usage-object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Commands { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordCommands? Commands { get; set; }
 #nullable restore
 #else
-        public UntypedNode Commands { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordCommands Commands { get; set; }
 #endif
         /// <summary>An object that describes the aggregated Data usage for all SIMs over the period. See [Data Usage Object](https://www.twilio.com/docs/iot/wireless/api/account-usagerecord-resource#data-usage-object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Data { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordData? Data { get; set; }
 #nullable restore
 #else
-        public UntypedNode Data { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordData Data { get; set; }
 #endif
         /// <summary>The time period for which usage is reported. Contains `start` and `end` properties that describe the period using GMT date-time values specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Period { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordPeriod? Period { get; set; }
 #nullable restore
 #else
-        public UntypedNode Period { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordPeriod Period { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecord"/> and sets the default values.
@@ -72,9 +72,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "commands", n => { Commands = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "data", n => { Data = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "period", n => { Period = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "commands", n => { Commands = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordCommands>(global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordCommands.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordData>(global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordData.CreateFromDiscriminatorValue); } },
+                { "period", n => { Period = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordPeriod>(global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordPeriod.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,9 +85,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<UntypedNode>("commands", Commands);
-            writer.WriteObjectValue<UntypedNode>("data", Data);
-            writer.WriteObjectValue<UntypedNode>("period", Period);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordCommands>("commands", Commands);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordData>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1AccountUsageRecordPeriod>("period", Period);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

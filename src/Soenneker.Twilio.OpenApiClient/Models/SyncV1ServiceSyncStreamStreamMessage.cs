@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An arbitrary, schema-less object that contains the Stream Message body. Can be up to 4 KiB in length.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Data { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceSyncStreamStreamMessageData? Data { get; set; }
 #nullable restore
 #else
-        public UntypedNode Data { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceSyncStreamStreamMessageData Data { get; set; }
 #endif
         /// <summary>The unique string that we created to identify the Stream Message resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceSyncStreamStreamMessageData>(global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceSyncStreamStreamMessageData.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<UntypedNode>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceSyncStreamStreamMessageData>("data", Data);
             writer.WriteStringValue("sid", Sid);
             writer.WriteAdditionalData(AdditionalData);
         }

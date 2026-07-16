@@ -63,20 +63,20 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The passkeys property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Passkeys { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePasskeys? Passkeys { get; set; }
 #nullable restore
 #else
-        public UntypedNode Passkeys { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePasskeys Passkeys { get; set; }
 #endif
         /// <summary>Whether to pass PSD2 transaction parameters when starting a verification.</summary>
         public bool? Psd2Enabled { get; set; }
         /// <summary>Configurations for the Push factors (channel) created under this Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Push { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePush? Push { get; set; }
 #nullable restore
 #else
-        public UntypedNode Push { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePush Push { get; set; }
 #endif
         /// <summary>The unique string that we created to identify the Service resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,10 +91,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Configurations for the TOTP factors (channel) created under this Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Totp { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceTotp? Totp { get; set; }
 #nullable restore
 #else
-        public UntypedNode Totp { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceTotp Totp { get; set; }
 #endif
         /// <summary>The name of an alternative text-to-speech service to use in phone calls. Applies only to TTS languages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,10 +117,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The whatsapp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Whatsapp { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceWhatsapp? Whatsapp { get; set; }
 #nullable restore
 #else
-        public UntypedNode Whatsapp { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceWhatsapp Whatsapp { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Service"/> and sets the default values.
@@ -159,16 +159,16 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinks.CreateFromDiscriminatorValue); } },
                 { "lookup_enabled", n => { LookupEnabled = n.GetBoolValue(); } },
-                { "passkeys", n => { Passkeys = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "passkeys", n => { Passkeys = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePasskeys>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePasskeys.CreateFromDiscriminatorValue); } },
                 { "psd2_enabled", n => { Psd2Enabled = n.GetBoolValue(); } },
-                { "push", n => { Push = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "push", n => { Push = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePush>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePush.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "skip_sms_to_landlines", n => { SkipSmsToLandlines = n.GetBoolValue(); } },
-                { "totp", n => { Totp = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "totp", n => { Totp = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceTotp>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceTotp.CreateFromDiscriminatorValue); } },
                 { "tts_name", n => { TtsName = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "verify_event_subscription_enabled", n => { VerifyEventSubscriptionEnabled = n.GetBoolValue(); } },
-                { "whatsapp", n => { Whatsapp = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "whatsapp", n => { Whatsapp = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceWhatsapp>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceWhatsapp.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -189,16 +189,16 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinks>("links", Links);
             writer.WriteBoolValue("lookup_enabled", LookupEnabled);
-            writer.WriteObjectValue<UntypedNode>("passkeys", Passkeys);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePasskeys>("passkeys", Passkeys);
             writer.WriteBoolValue("psd2_enabled", Psd2Enabled);
-            writer.WriteObjectValue<UntypedNode>("push", Push);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePush>("push", Push);
             writer.WriteStringValue("sid", Sid);
             writer.WriteBoolValue("skip_sms_to_landlines", SkipSmsToLandlines);
-            writer.WriteObjectValue<UntypedNode>("totp", Totp);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceTotp>("totp", Totp);
             writer.WriteStringValue("tts_name", TtsName);
             writer.WriteStringValue("url", Url);
             writer.WriteBoolValue("verify_event_subscription_enabled", VerifyEventSubscriptionEnabled);
-            writer.WriteObjectValue<UntypedNode>("whatsapp", Whatsapp);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceWhatsapp>("whatsapp", Whatsapp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -153569,14 +153569,7 @@
         "type": "object",
         "properties": {
           "items": {
-            "description": "\u0022A list of objects where each object represents the result of processing a \u0060correlation_id\u0060. Each object contains the following fields: \u0060correlation_id\u0060, a unique 32-character UUID that maps the response to the original request; \u0060error_code\u0060, an integer where 0 indicates success and any non-zero value represents an error; and \u0060error_messages\u0060, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.\u0022",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/AccountsV1BulkConsentsItems"
           }
         }
       },
@@ -153584,14 +153577,7 @@
         "type": "object",
         "properties": {
           "items": {
-            "description": "\u0022A list of objects where each object represents the result of processing a \u0060correlation_id\u0060. Each object contains the following fields: \u0060correlation_id\u0060, a unique 32-character UUID that maps the response to the original request; \u0060error_code\u0060, an integer where 0 indicates success and any non-zero value represents an error; and \u0060error_messages\u0060, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.\u0022",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/AccountsV1BulkContactsItems"
           }
         }
       },
@@ -153702,8 +153688,7 @@
         "type": "object",
         "properties": {
           "permissions": {
-            "description": "\u0022A list of objects where each object represents the result of processing a messaging Geo Permission. Each object contains the following fields: \u0060country_code\u0060, the country code of the country for which the permission was updated; \u0060type\u0060, the type of the permission i.e. country; \u0060enabled\u0060, true if the permission is enabled else false; \u0060error_code\u0060, an integer where 0 indicates success and any non-zero value represents an error; and \u0060error_messages\u0060, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/AccountsV1MessagingGeopermissionsPermissions"
           }
         }
       },
@@ -155049,24 +155034,10 @@
         "type": "object",
         "properties": {
           "request": {
-            "description": "Contains a dictionary representing the request of the call.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "sensitive",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/ApiV2010AccountCallCallEventRequest"
           },
           "response": {
-            "description": "Contains a dictionary representing the call response, including a list of the call events.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "sensitive",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/ApiV2010AccountCallCallEventResponse"
           }
         }
       },
@@ -155333,8 +155304,7 @@
             "nullable": true
           },
           "encryption_details": {
-            "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature.",
-            "nullable": true
+            "$ref": "#/components/schemas/ApiV2010AccountCallCallRecordingEncryptionDetails"
           },
           "price_unit": {
             "type": "string",
@@ -155684,8 +155654,7 @@
             "nullable": true
           },
           "encryption_details": {
-            "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature.",
-            "nullable": true
+            "$ref": "#/components/schemas/ApiV2010AccountConferenceConferenceRecordingEncryptionDetails"
           },
           "uri": {
             "type": "string",
@@ -155993,8 +155962,7 @@
             "$ref": "#/components/schemas/DependentPhoneNumberEnumAddressRequirement"
           },
           "capabilities": {
-            "description": "\u0022The set of Boolean properties that indicates whether a phone number can receive calls or messages.  Capabilities are  \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/ApiV2010AccountAddressDependentPhoneNumberCapabilities"
           },
           "status_callback": {
             "type": "string",
@@ -156445,8 +156413,7 @@
             "nullable": true
           },
           "configuration": {
-            "description": "A JSON string that represents the current configuration of this Add-on installation.",
-            "nullable": true
+            "$ref": "#/components/schemas/ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnConfiguration"
           },
           "unique_name": {
             "type": "string",
@@ -158951,8 +158918,7 @@
             "nullable": true
           },
           "encryption_details": {
-            "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature.",
-            "nullable": true
+            "$ref": "#/components/schemas/ApiV2010AccountRecordingEncryptionDetails"
           },
           "subresource_uris": {
             "$ref": "#/components/schemas/ApiV2010AccountRecordingSubresourceUris"
@@ -163584,12 +163550,10 @@
             "default": 0
           },
           "limits": {
-            "description": "An object that describes the limits of the service instance. The \u0060limits\u0060 object contains  \u0060channel_members\u0060 to describe the members/channel limit and \u0060user_channels\u0060 to describe the channels/user limit. \u0060channel_members\u0060 can be 1,000 or less, with a default of 250. \u0060user_channels\u0060 can be 1,000 or less, with a default value of 100.",
-            "nullable": true
+            "$ref": "#/components/schemas/ChatV1ServiceLimits"
           },
           "webhooks": {
-            "description": "An object that contains information about the webhooks configured for this service.",
-            "nullable": true
+            "$ref": "#/components/schemas/ChatV1ServiceWebhooks"
           },
           "pre_webhook_url": {
             "type": "string",
@@ -163615,8 +163579,7 @@
             "nullable": true
           },
           "notifications": {
-            "description": "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more information.",
-            "nullable": true
+            "$ref": "#/components/schemas/ChatV1ServiceNotifications"
           },
           "url": {
             "type": "string",
@@ -164134,8 +164097,7 @@
             "nullable": true
           },
           "configuration": {
-            "description": "The JSON string that describes how the channel webhook is configured. The configuration object contains the \u0060url\u0060, \u0060method\u0060, \u0060filters\u0060, and \u0060retry_count\u0060 values that are configured by the create and update actions.",
-            "nullable": true
+            "$ref": "#/components/schemas/ChatV2ServiceChannelChannelWebhookConfiguration"
           },
           "date_created": {
             "type": "string",
@@ -164599,14 +164561,7 @@
             "nullable": true
           },
           "media": {
-            "description": "\u0022An object that describes the Message\u0027s media, if the message contains media. The object contains these fields: \u0060content_type\u0060 with the MIME type of the media, \u0060filename\u0060 with the name of the media, \u0060sid\u0060 with the SID of the Media resource, and \u0060size\u0060 with the media object\u0027s file size in bytes. If the Message has no media, this value is \u0060null\u0060.\u0022",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/ChatV2ServiceChannelMessageMedia"
           },
           "url": {
             "type": "string",
@@ -164839,8 +164794,7 @@
             "default": 0
           },
           "limits": {
-            "description": "An object that describes the limits of the service instance. The \u0060limits\u0060 object contains  \u0060channel_members\u0060 to describe the members/channel limit and \u0060user_channels\u0060 to describe the channels/user limit. \u0060channel_members\u0060 can be 1,000 or less, with a default of 250. \u0060user_channels\u0060 can be 1,000 or less, with a default value of 100.",
-            "nullable": true
+            "$ref": "#/components/schemas/ChatV2ServiceLimits"
           },
           "pre_webhook_url": {
             "type": "string",
@@ -164876,12 +164830,10 @@
             "default": 0
           },
           "notifications": {
-            "description": "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.",
-            "nullable": true
+            "$ref": "#/components/schemas/ChatV2ServiceNotifications"
           },
           "media": {
-            "description": "An object that describes the properties of media that the service supports. The object contains the \u0060size_limit_mb\u0060 property, which describes the size of the largest media file in MB; and the \u0060compatibility_message\u0060 property, which contains the message text to send when a media message does not have any text.",
-            "nullable": true
+            "$ref": "#/components/schemas/ChatV2ServiceMedia"
           },
           "url": {
             "type": "string",
@@ -166627,8 +166579,7 @@
             "nullable": true
           },
           "whatsapp": {
-            "description": "Contains the whatsapp approval information for the Content resource, with fields such as approval status, rejection reason, and category, amongst others.",
-            "nullable": true
+            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentApprovalFetchWhatsapp"
           },
           "url": {
             "type": "string",
@@ -166790,12 +166741,10 @@
             "nullable": true
           },
           "variables": {
-            "description": "\u0022Defines the default placeholder values for variables included in the Content resource. e.g. {\\\u00221\\\u0022: \\\u0022Customer_Name\\\u0022}.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/TwilioContentV2ContentV1LegacyContentVariables"
           },
           "types": {
-            "description": "The [Content types](https://www.twilio.com/docs/content/content-types-overview) (e.g. twilio/text) for this Content resource.",
-            "nullable": true
+            "$ref": "#/components/schemas/TwilioContentV2ContentV1LegacyContentTypes"
           },
           "legacy_template_name": {
             "type": "string",
@@ -166904,8 +166853,7 @@
             "nullable": true
           },
           "auto_creation": {
-            "description": "Auto Creation configuration for the address.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ConfigurationAddressAutoCreation"
           },
           "date_created": {
             "type": "string",
@@ -167207,8 +167155,7 @@
             "nullable": true
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ConversationTimers"
           },
           "url": {
             "type": "string",
@@ -167220,7 +167167,7 @@
             "$ref": "#/components/schemas/ConversationsV1ConversationLinks"
           },
           "bindings": {
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ConversationBindings"
           }
         }
       },
@@ -167385,8 +167332,7 @@
             "nullable": true
           },
           "delivery": {
-            "description": "An object that contains the summary of delivery statuses for the message to non-chat participants.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ConversationConversationMessageDelivery"
           },
           "links": {
             "$ref": "#/components/schemas/ConversationsV1ConversationConversationMessageLinks"
@@ -167612,14 +167558,7 @@
             }
           },
           "messaging_binding": {
-            "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/ConversationsV1ConversationConversationParticipantMessagingBinding"
           },
           "role_sid": {
             "maxLength": 34,
@@ -167720,8 +167659,7 @@
             "nullable": true
           },
           "configuration": {
-            "description": "The configuration of this webhook. Is defined based on target.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ConversationConversationScopedWebhookConfiguration"
           },
           "date_created": {
             "type": "string",
@@ -167917,14 +167855,13 @@
             "nullable": true
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ConversationWithParticipantsTimers"
           },
           "links": {
             "$ref": "#/components/schemas/ConversationsV1ConversationWithParticipantsLinks"
           },
           "bindings": {
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ConversationWithParticipantsBindings"
           },
           "url": {
             "type": "string",
@@ -168122,14 +168059,7 @@
             }
           },
           "participant_messaging_binding": {
-            "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/ConversationsV1ParticipantConversationParticipantMessagingBinding"
           },
           "conversation_sid": {
             "maxLength": 34,
@@ -168193,8 +168123,7 @@
             "$ref": "#/components/schemas/ParticipantConversationEnumState"
           },
           "conversation_timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ParticipantConversationConversationTimers"
           },
           "links": {
             "$ref": "#/components/schemas/ConversationsV1ParticipantConversationLinks"
@@ -168630,8 +168559,7 @@
             "nullable": true
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationTimers"
           },
           "url": {
             "type": "string",
@@ -168643,7 +168571,7 @@
             "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationLinks"
           },
           "bindings": {
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationBindings"
           }
         }
       },
@@ -168810,8 +168738,7 @@
             "nullable": true
           },
           "delivery": {
-            "description": "An object that contains the summary of delivery statuses for the message to non-chat participants.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationServiceConversationMessageDelivery"
           },
           "url": {
             "type": "string",
@@ -169059,14 +168986,7 @@
             }
           },
           "messaging_binding": {
-            "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationServiceConversationParticipantMessagingBinding"
           },
           "role_sid": {
             "maxLength": 34,
@@ -169175,8 +169095,7 @@
             "nullable": true
           },
           "configuration": {
-            "description": "The configuration of this webhook. Is defined based on target.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationServiceConversationScopedWebhookConfiguration"
           },
           "date_created": {
             "type": "string",
@@ -169326,14 +169245,13 @@
             "nullable": true
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationWithParticipantsTimers"
           },
           "links": {
             "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationWithParticipantsLinks"
           },
           "bindings": {
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationWithParticipantsBindings"
           },
           "url": {
             "type": "string",
@@ -169418,16 +169336,13 @@
             "nullable": true
           },
           "new_message": {
-            "description": "The Push Notification configuration for New Messages.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConfigurationServiceNotificationNewMessage"
           },
           "added_to_conversation": {
-            "description": "The Push Notification configuration for being added to a Conversation.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConfigurationServiceNotificationAddedToConversation"
           },
           "removed_from_conversation": {
-            "description": "The Push Notification configuration for being removed from a Conversation.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConfigurationServiceNotificationRemovedFromConversation"
           },
           "log_enabled": {
             "type": "boolean",
@@ -169489,14 +169404,7 @@
             }
           },
           "participant_messaging_binding": {
-            "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceParticipantConversationParticipantMessagingBinding"
           },
           "conversation_sid": {
             "maxLength": 34,
@@ -169560,8 +169468,7 @@
             "$ref": "#/components/schemas/ServiceParticipantConversationEnumState"
           },
           "conversation_timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceParticipantConversationConversationTimers"
           },
           "links": {
             "$ref": "#/components/schemas/ConversationsV1ServiceServiceParticipantConversationLinks"
@@ -169902,8 +169809,7 @@
             "$ref": "#/components/schemas/ServiceUserConversationEnumState"
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceUserServiceUserConversationTimers"
           },
           "attributes": {
             "type": "string",
@@ -170290,8 +170196,7 @@
             "$ref": "#/components/schemas/UserConversationEnumState"
           },
           "timers": {
-            "description": "Timer date values representing state update for this conversation.",
-            "nullable": true
+            "$ref": "#/components/schemas/ConversationsV1UserUserConversationTimers"
           },
           "attributes": {
             "type": "string",
@@ -171672,8 +171577,7 @@
             "nullable": true
           },
           "sink_configuration": {
-            "description": "The information required for Twilio to connect to the provided Sink encoded as JSON.",
-            "nullable": true
+            "$ref": "#/components/schemas/EventsV1SinkSinkConfiguration"
           },
           "sink_type": {
             "$ref": "#/components/schemas/SinkEnumSinkType"
@@ -172004,8 +171908,7 @@
             "nullable": true
           },
           "attributes": {
-            "description": "An object that contains application-specific data.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationAttributes"
           },
           "status": {
             "$ref": "#/components/schemas/ConfigurationEnumStatus"
@@ -172051,12 +171954,10 @@
             "nullable": true
           },
           "taskrouter_worker_channels": {
-            "description": "The TaskRouter default channel capacities and availability for workers.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationTaskrouterWorkerChannels"
           },
           "taskrouter_worker_attributes": {
-            "description": "The TaskRouter Worker attributes.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationTaskrouterWorkerAttributes"
           },
           "taskrouter_offline_activity_sid": {
             "maxLength": 34,
@@ -172109,12 +172010,10 @@
             "nullable": true
           },
           "ui_attributes": {
-            "description": "The object that describes Flex UI characteristics and settings.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationUiAttributes"
           },
           "ui_dependencies": {
-            "description": "The object that defines the NPM packages and versions to be used in Hosted Flex.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationUiDependencies"
           },
           "ui_version": {
             "type": "string",
@@ -172157,12 +172056,10 @@
             "nullable": true
           },
           "crm_attributes": {
-            "description": "An object that contains the CRM attributes.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationCrmAttributes"
           },
           "public_attributes": {
-            "description": "The list of public attributes, which are visible to unauthenticated clients.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationPublicAttributes"
           },
           "plugin_service_enabled": {
             "type": "boolean",
@@ -172170,8 +172067,7 @@
             "nullable": true
           },
           "plugin_service_attributes": {
-            "description": "The plugin service attributes.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationPluginServiceAttributes"
           },
           "integrations": {
             "type": "array",
@@ -172182,8 +172078,7 @@
             "nullable": true
           },
           "outbound_call_flows": {
-            "description": "The list of outbound call flows.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationOutboundCallFlows"
           },
           "serverless_service_sids": {
             "type": "array",
@@ -172197,16 +172092,13 @@
             "nullable": true
           },
           "queue_stats_configuration": {
-            "description": "Configurable parameters for Queues Statistics.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationQueueStatsConfiguration"
           },
           "notifications": {
-            "description": "Configurable parameters for Notifications.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationNotifications"
           },
           "markdown": {
-            "description": "Configurable parameters for Markdown.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationMarkdown"
           },
           "url": {
             "type": "string",
@@ -172215,8 +172107,7 @@
             "nullable": true
           },
           "flex_insights_hr": {
-            "description": "Object with enabled/disabled flag with list of workspaces.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationFlexInsightsHr"
           },
           "flex_insights_drilldown": {
             "type": "boolean",
@@ -172237,24 +172128,19 @@
             "nullable": true
           },
           "debugger_integration": {
-            "description": "Configurable parameters for Debugger Integration.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationDebuggerIntegration"
           },
           "flex_ui_status_report": {
-            "description": "Configurable parameters for Flex UI Status report.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationFlexUiStatusReport"
           },
           "agent_conv_end_methods": {
-            "description": "Agent conversation end methods.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationAgentConvEndMethods"
           },
           "citrix_voice_vdi": {
-            "description": "Citrix voice vdi configuration and settings.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationCitrixVoiceVdi"
           },
           "offline_config": {
-            "description": "Presence and presence ttl configuration",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1ConfigurationOfflineConfig"
           }
         }
       },
@@ -172464,8 +172350,7 @@
             "$ref": "#/components/schemas/FlexFlowEnumIntegrationType"
           },
           "integration": {
-            "description": "An object that contains specific parameters for the integration.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1FlexFlowIntegration"
           },
           "long_lived": {
             "type": "boolean",
@@ -172959,8 +172844,7 @@
             "nullable": true
           },
           "assessment": {
-            "description": "Assessment Details associated with an assessment",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InsightsAssessmentsAssessment"
           },
           "timestamp": {
             "type": "string",
@@ -172993,8 +172877,7 @@
             "nullable": true
           },
           "comment": {
-            "description": "The comment added for assessment.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InsightsAssessmentsCommentComment"
           },
           "offset": {
             "type": "string",
@@ -173402,8 +173285,7 @@
             "nullable": true
           },
           "category": {
-            "description": "The Category for the question.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InsightsQuestionnairesQuestionCategory"
           },
           "answer_set_id": {
             "type": "string",
@@ -173421,8 +173303,7 @@
             "default": 0
           },
           "answer_set": {
-            "description": "Set of answers for the question",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InsightsQuestionnairesQuestionAnswerSet"
           },
           "url": {
             "type": "string",
@@ -173523,16 +173404,13 @@
             "nullable": true
           },
           "media": {
-            "description": "The media identifiers of the conversation.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InsightsSegmentsMedia"
           },
           "assessment_type": {
-            "description": "The type of the assessment.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InsightsSegmentsAssessmentType"
           },
           "assessment_percentage": {
-            "description": "The percentage scored on the Assessments.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InsightsSegmentsAssessmentPercentage"
           },
           "url": {
             "type": "string",
@@ -173584,16 +173462,13 @@
             "nullable": true
           },
           "answer_sets": {
-            "description": "The lis of answer sets",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InsightsSettingsAnswersetsAnswerSets"
           },
           "answer_set_categories": {
-            "description": "The list of answer set categories",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InsightsSettingsAnswersetsAnswerSetCategories"
           },
           "not_applicable": {
-            "description": "The details for not applicable answer set",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InsightsSettingsAnswersetsNotApplicable"
           },
           "url": {
             "type": "string",
@@ -173614,7 +173489,7 @@
             "nullable": true
           },
           "comments": {
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InsightsSettingsCommentComments"
           },
           "url": {
             "type": "string",
@@ -173653,12 +173528,10 @@
             "nullable": true
           },
           "channel": {
-            "description": "A JSON object that defines the Interaction\u2019s communication channel and includes details about the channel. See the [Outbound SMS](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) and [inbound (API-initiated)](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#api-initiated-contact) Channel object examples.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InteractionChannel"
           },
           "routing": {
-            "description": "A JSON Object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality. \n All attributes in the Routing object on your Interaction request body are added \u201Cas is\u201D to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes).",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InteractionRouting"
           },
           "url": {
             "type": "string",
@@ -173979,8 +173852,7 @@
             "nullable": true
           },
           "routing": {
-            "description": "A JSON object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality. \n All attributes in the Routing object on your Interaction request body are added \u201Cas is\u201D to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes).",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InteractionInteractionChannelInteractionChannelInviteRouting"
           },
           "url": {
             "type": "string",
@@ -174064,8 +173936,7 @@
             "nullable": true
           },
           "routing_properties": {
-            "description": "The Participant\u0027s routing properties.",
-            "nullable": true
+            "$ref": "#/components/schemas/FlexV1InteractionInteractionChannelInteractionChannelParticipantRoutingProperties"
           }
         }
       },
@@ -177978,40 +177849,22 @@
             "nullable": true
           },
           "from": {
-            "description": "\u0022\u0060object\u0060 The calling party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.\u0022",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/InsightsV1CallSummariesFrom"
           },
           "to": {
-            "description": "\u0022\u0060object\u0060 The called party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.\u0022",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/InsightsV1CallSummariesTo"
           },
           "carrier_edge": {
-            "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a PSTN call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummariesCarrierEdge"
           },
           "client_edge": {
-            "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a Client call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummariesClientEdge"
           },
           "sdk_edge": {
-            "description": "\u0022\u0060object\u0060 Contains metrics and properties for the SDK sensor library for Client calls. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummariesSdkEdge"
           },
           "sip_edge": {
-            "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummariesSipEdge"
           },
           "tags": {
             "type": "array",
@@ -178028,20 +177881,16 @@
             "nullable": true
           },
           "attributes": {
-            "description": "\u0022\u0060object\u0060 Attributes capturing call-flow-specific details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#attributes-object) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummariesAttributes"
           },
           "properties": {
-            "description": "\u0022\u0060object\u0060 Contains edge-agnostic call-level details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#properties-object) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummariesProperties"
           },
           "trust": {
-            "description": "\u0022\u0060object\u0060 Contains trusted communications details including Branded Call and verified caller ID. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#trust-object) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummariesTrust"
           },
           "annotation": {
-            "description": "\u0022\u0060object\u0060 Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummariesAnnotation"
           }
         }
       },
@@ -178393,8 +178242,7 @@
             "nullable": true
           },
           "detected_issues": {
-            "description": "Potential issues detected by Twilio during the conference.",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1ConferenceDetectedIssues"
           },
           "tags": {
             "type": "array",
@@ -178405,8 +178253,7 @@
             "nullable": true
           },
           "tag_info": {
-            "description": "Object. Contains details about conference tags including severity.",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1ConferenceTagInfo"
           },
           "processing_state": {
             "$ref": "#/components/schemas/ConferenceEnumProcessingState"
@@ -178787,16 +178634,13 @@
             "$ref": "#/components/schemas/ConferenceParticipantEnumProcessingState"
           },
           "properties": {
-            "description": "Participant properties and metadata.",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1ConferenceConferenceParticipantProperties"
           },
           "events": {
-            "description": "Object containing information of actions taken by participants. Contains a dictionary of URL links to nested resources of this Conference Participant.",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1ConferenceConferenceParticipantEvents"
           },
           "metrics": {
-            "description": "Object. Contains participant call quality metrics.",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1ConferenceConferenceParticipantMetrics"
           },
           "url": {
             "type": "string",
@@ -179059,20 +178903,16 @@
             "nullable": true
           },
           "carrier_edge": {
-            "description": "\u0022\u0060object\u0060 Represents the connection between Twilio and our immediate carrier partners. The events here describe the call lifecycle as reported by Twilio\u0027s carrier media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallEventCarrierEdge"
           },
           "sip_edge": {
-            "description": "\u0022\u0060object\u0060 Represents the Twilio media gateway for SIP interface and SIP trunking calls. The events here describe the call lifecycle as reported by Twilio\u0027s public media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallEventSipEdge"
           },
           "sdk_edge": {
-            "description": "\u0022\u0060object\u0060 Represents the Voice SDK running locally in the browser or in the Android/iOS application. The events here are emitted by the Voice SDK in response to certain call progress events, network changes, or call quality conditions. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallEventSdkEdge"
           },
           "client_edge": {
-            "description": "\u0022\u0060object\u0060 Represents the Twilio media gateway for Client calls. The events here describe the call lifecycle as reported by Twilio\u0027s Voice SDK media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallEventClientEdge"
           }
         }
       },
@@ -179446,20 +179286,16 @@
             "$ref": "#/components/schemas/MetricEnumStreamDirection"
           },
           "carrier_edge": {
-            "description": "Contains metrics and properties for the Twilio media gateway of a PSTN call.",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallMetricCarrierEdge"
           },
           "sip_edge": {
-            "description": "Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call.",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallMetricSipEdge"
           },
           "sdk_edge": {
-            "description": "Contains metrics and properties for the SDK sensor library for Client calls.",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallMetricSdkEdge"
           },
           "client_edge": {
-            "description": "Contains metrics and properties for the Twilio media gateway of a Client call.",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallMetricClientEdge"
           }
         }
       },
@@ -179592,40 +179428,22 @@
             "nullable": true
           },
           "from": {
-            "description": "\u0022\u0060object\u0060 The calling party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.\u0022",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/InsightsV1CallSummaryFrom"
           },
           "to": {
-            "description": "\u0022\u0060object\u0060 The called party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.\u0022",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/InsightsV1CallSummaryTo"
           },
           "carrier_edge": {
-            "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a PSTN call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummaryCarrierEdge"
           },
           "client_edge": {
-            "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a Client call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummaryClientEdge"
           },
           "sdk_edge": {
-            "description": "\u0022\u0060object\u0060 Contains metrics and properties for the SDK sensor library for Client calls. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummarySdkEdge"
           },
           "sip_edge": {
-            "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummarySipEdge"
           },
           "tags": {
             "type": "array",
@@ -179642,20 +179460,16 @@
             "nullable": true
           },
           "attributes": {
-            "description": "\u0022\u0060object\u0060 Attributes capturing call-flow-specific details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#attributes-object) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummaryAttributes"
           },
           "properties": {
-            "description": "\u0022\u0060object\u0060 Contains edge-agnostic call-level details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#properties-object) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummaryProperties"
           },
           "trust": {
-            "description": "\u0022\u0060object\u0060 Contains trusted communications details including Branded Call and verified caller ID. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#trust-object) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummaryTrust"
           },
           "annotation": {
-            "description": "\u0022\u0060object\u0060 Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1CallSummaryAnnotation"
           }
         }
       },
@@ -179897,15 +179711,13 @@
             "$ref": "#/components/schemas/VideoParticipantSummaryEnumTwilioRealm"
           },
           "properties": {
-            "description": "Object containing information about the participant\u0027s data from the room. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#properties) for more information.",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1VideoRoomSummaryVideoParticipantSummaryProperties"
           },
           "edge_location": {
             "$ref": "#/components/schemas/VideoParticipantSummaryEnumEdgeLocation"
           },
           "publisher_info": {
-            "description": "Object containing information about the SDK name and version. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#publisher_info) for more information.",
-            "nullable": true
+            "$ref": "#/components/schemas/InsightsV1VideoRoomSummaryVideoParticipantSummaryPublisherInfo"
           },
           "url": {
             "type": "string",
@@ -181283,8 +181095,7 @@
             "$ref": "#/components/schemas/CustomOperatorEnumAvailability"
           },
           "config": {
-            "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Operators created by the Account.",
-            "nullable": true
+            "$ref": "#/components/schemas/IntelligenceV2CustomOperatorConfig"
           },
           "date_created": {
             "type": "string",
@@ -181487,8 +181298,7 @@
             "$ref": "#/components/schemas/OperatorEnumAvailability"
           },
           "config": {
-            "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Custom Operators created by the Account.",
-            "nullable": true
+            "$ref": "#/components/schemas/IntelligenceV2OperatorConfig"
           },
           "date_created": {
             "type": "string",
@@ -181668,19 +181478,16 @@
             "nullable": true
           },
           "label_probabilities": {
-            "description": "The labels probabilities. This might be available on conversation classify model outputs.",
-            "nullable": true
+            "$ref": "#/components/schemas/IntelligenceV2TranscriptOperatorResultLabelProbabilities"
           },
           "extract_results": {
-            "description": "List of text extraction results. This might be available on classify-extract model outputs.",
-            "nullable": true
+            "$ref": "#/components/schemas/IntelligenceV2TranscriptOperatorResultExtractResults"
           },
           "text_generation_results": {
-            "description": "Output of a text generation operator for example Conversation Sumamary.",
-            "nullable": true
+            "$ref": "#/components/schemas/IntelligenceV2TranscriptOperatorResultTextGenerationResults"
           },
           "json_results": {
-            "nullable": true
+            "$ref": "#/components/schemas/IntelligenceV2TranscriptOperatorResultJsonResults"
           },
           "transcript_sid": {
             "maxLength": 34,
@@ -181801,8 +181608,7 @@
             "nullable": true
           },
           "config_schema": {
-            "description": "JSON Schema for configuring an Operator with this Operator Type. Following https://json-schema.org/",
-            "nullable": true
+            "$ref": "#/components/schemas/IntelligenceV2OperatorTypeConfigSchema"
           },
           "date_created": {
             "type": "string",
@@ -181976,8 +181782,7 @@
             "$ref": "#/components/schemas/PrebuiltOperatorEnumAvailability"
           },
           "config": {
-            "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Custom Operators created by the Account, will be empty for Pre-Built Operators.",
-            "nullable": true
+            "$ref": "#/components/schemas/IntelligenceV2PrebuiltOperatorConfig"
           },
           "date_created": {
             "type": "string",
@@ -182267,8 +182072,7 @@
             "$ref": "#/components/schemas/TranscriptEnumStatus"
           },
           "channel": {
-            "description": "Media Channel describing Transcript Source and Participant Mapping",
-            "nullable": true
+            "$ref": "#/components/schemas/IntelligenceV2TranscriptChannel"
           },
           "data_logging": {
             "type": "boolean",
@@ -184738,10 +184542,10 @@
             "default": 0
           },
           "limits": {
-            "nullable": true
+            "$ref": "#/components/schemas/IpMessagingV1ServiceLimits"
           },
           "webhooks": {
-            "nullable": true
+            "$ref": "#/components/schemas/IpMessagingV1ServiceWebhooks"
           },
           "pre_webhook_url": {
             "type": "string",
@@ -184763,7 +184567,7 @@
             "nullable": true
           },
           "notifications": {
-            "nullable": true
+            "$ref": "#/components/schemas/IpMessagingV1ServiceNotifications"
           },
           "url": {
             "type": "string",
@@ -185176,7 +184980,7 @@
             "nullable": true
           },
           "configuration": {
-            "nullable": true
+            "$ref": "#/components/schemas/IpMessagingV2ServiceChannelChannelWebhookConfiguration"
           },
           "date_created": {
             "type": "string",
@@ -185545,7 +185349,7 @@
             "nullable": true
           },
           "media": {
-            "nullable": true
+            "$ref": "#/components/schemas/IpMessagingV2ServiceChannelMessageMedia"
           },
           "url": {
             "type": "string",
@@ -185744,7 +185548,7 @@
             "default": 0
           },
           "limits": {
-            "nullable": true
+            "$ref": "#/components/schemas/IpMessagingV2ServiceLimits"
           },
           "pre_webhook_url": {
             "type": "string",
@@ -185774,10 +185578,10 @@
             "default": 0
           },
           "notifications": {
-            "nullable": true
+            "$ref": "#/components/schemas/IpMessagingV2ServiceNotifications"
           },
           "media": {
-            "nullable": true
+            "$ref": "#/components/schemas/IpMessagingV2ServiceMedia"
           },
           "url": {
             "type": "string",
@@ -187196,14 +187000,7 @@
         "type": "object",
         "properties": {
           "caller_name": {
-            "description": "The name of the phone number\u0027s owner. If \u0060null\u0060, that information was not available.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/LookupsV1PhoneNumberCallerName"
           },
           "country_code": {
             "type": "string",
@@ -187240,18 +187037,10 @@
             }
           },
           "carrier": {
-            "description": "The telecom company that provides the phone number.",
-            "nullable": true
+            "$ref": "#/components/schemas/LookupsV1PhoneNumberCarrier"
           },
           "add_ons": {
-            "description": "A JSON string with the results of the Add-ons you specified in the \u0060add_ons\u0060 parameters. For the format of the object, see [Using Add-ons](https://www.twilio.com/docs/add-ons).",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/LookupsV1PhoneNumberAddOns"
           },
           "url": {
             "type": "string",
@@ -187435,10 +187224,10 @@
             "$ref": "#/components/schemas/SmsPumpingRiskInfo"
           },
           "phone_number_quality_score": {
-            "nullable": true
+            "$ref": "#/components/schemas/LookupBatchResponsePhoneNumberQualityScore"
           },
           "pre_fill": {
-            "nullable": true
+            "$ref": "#/components/schemas/LookupBatchResponsePreFill"
           }
         }
       },
@@ -191141,8 +190930,7 @@
             "nullable": true
           },
           "cert_in_validation": {
-            "description": "Optional JSON field describing the status and upload date of a new certificate in the process of validation",
-            "nullable": true
+            "$ref": "#/components/schemas/MessagingV1DomainCertV4CertInValidation"
           }
         }
       },
@@ -192086,8 +191874,7 @@
             "nullable": true
           },
           "resource_links": {
-            "description": "The URLs of the documents associated with the Tollfree Verification resource.",
-            "nullable": true
+            "$ref": "#/components/schemas/MessagingV1TollfreeVerificationResourceLinks"
           },
           "external_reference_id": {
             "type": "string",
@@ -192481,8 +192268,7 @@
             "nullable": true
           },
           "rate_limits": {
-            "description": "Rate limit and/or classification set by each carrier, Ex. AT\u0026T or T-Mobile.",
-            "nullable": true
+            "$ref": "#/components/schemas/MessagingV1ServiceUsAppToPersonRateLimits"
           },
           "message_flow": {
             "type": "string",
@@ -192673,8 +192459,7 @@
             "nullable": true
           },
           "rate_limits": {
-            "description": "Rate limit and/or classification set by each carrier, Ex. AT\u0026T or T-Mobile.",
-            "nullable": true
+            "$ref": "#/components/schemas/MessagingV1ServiceUsAppToPersonV2RateLimits"
           },
           "message_flow": {
             "type": "string",
@@ -193542,8 +193327,7 @@
             "nullable": true
           },
           "cert_in_validation": {
-            "description": "Optional JSON field describing the status and upload date of a new certificate in the process of validation",
-            "nullable": true
+            "$ref": "#/components/schemas/MessagingV2DomainCertV4CertInValidation"
           }
         }
       },
@@ -194347,8 +194131,7 @@
             "nullable": true
           },
           "event_data": {
-            "description": "An object with additional data about the event. The  contents depend on \u0060event_type\u0060. For example, event-types of the form \u0060RESOURCE.updated\u0060, this value contains a \u0060resource_properties\u0060 dictionary that describes the previous and updated properties of the resource.",
-            "nullable": true
+            "$ref": "#/components/schemas/MonitorV1EventEventData"
           },
           "event_date": {
             "type": "string",
@@ -195073,32 +194856,25 @@
             "nullable": true
           },
           "data": {
-            "description": "The custom key-value pairs of the notification\u0027s payload. For FCM and GCM, this value translates to \u0060data\u0060 in the FCM and GCM payloads. FCM and GCM [reserve certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref) that cannot be used in those channels. For APNS, attributes of \u0060data\u0060 are inserted into the APNS payload as custom properties outside of the \u0060aps\u0060 dictionary. In all channels, we reserve keys that start with \u0060twi_\u0060 for future use. Custom keys that start with \u0060twi_\u0060 are not allowed and are rejected as 400 Bad request with no delivery attempted. For SMS, this parameter is not supported and is omitted from deliveries to those channels.",
-            "nullable": true
+            "$ref": "#/components/schemas/NotifyV1ServiceNotificationData"
           },
           "apn": {
-            "description": "The APNS-specific payload that overrides corresponding attributes in the generic payload for APNS Bindings. This property maps to the APNS \u0060Payload\u0060 item, therefore the \u0060aps\u0060 key must be used to change standard attributes. Adds custom key-value pairs to the root of the dictionary. See the [APNS documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html) for more details. We reserve keys that start with \u0060twi_\u0060 for future use. Custom keys that start with \u0060twi_\u0060 are not allowed.",
-            "nullable": true
+            "$ref": "#/components/schemas/NotifyV1ServiceNotificationApn"
           },
           "gcm": {
-            "description": "The GCM-specific payload that overrides corresponding attributes in the generic payload for GCM Bindings.  This property maps to the root JSON dictionary. Target parameters \u0060to\u0060, \u0060registration_ids\u0060, and \u0060notification_key\u0060 are not allowed. We reserve keys that start with \u0060twi_\u0060 for future use. Custom keys that start with \u0060twi_\u0060 are not allowed.",
-            "nullable": true
+            "$ref": "#/components/schemas/NotifyV1ServiceNotificationGcm"
           },
           "fcm": {
-            "description": "The FCM-specific payload that overrides corresponding attributes in the generic payload for FCM Bindings. This property maps to the root JSON dictionary. See the [FCM documentation](https://firebase.google.com/docs/cloud-messaging/http-server-ref#downstream) for more details. Target parameters \u0060to\u0060, \u0060registration_ids\u0060, \u0060condition\u0060, and \u0060notification_key\u0060 are not allowed in this parameter. We reserve keys that start with \u0060twi_\u0060 for future use. Custom keys that start with \u0060twi_\u0060 are not allowed. FCM also [reserves certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref), which cannot be used in that channel.",
-            "nullable": true
+            "$ref": "#/components/schemas/NotifyV1ServiceNotificationFcm"
           },
           "sms": {
-            "description": "\u0022The SMS-specific payload that overrides corresponding attributes in the generic payload for SMS Bindings.  Each attribute in this value maps to the corresponding \u0060form\u0060 parameter of the Twilio [Message](https://www.twilio.com/docs/sms/api/message-resource) resource.  These parameters of the Message resource are supported in snake case format: \u0060body\u0060, \u0060media_urls\u0060, \u0060status_callback\u0060, and \u0060max_price\u0060.  The \u0060status_callback\u0060 parameter overrides the corresponding parameter in the messaging service, if configured. The \u0060media_urls\u0060 property expects a JSON array.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/NotifyV1ServiceNotificationSms"
           },
           "facebook_messenger": {
-            "description": "Deprecated.",
-            "nullable": true
+            "$ref": "#/components/schemas/NotifyV1ServiceNotificationFacebookMessenger"
           },
           "alexa": {
-            "description": "Deprecated.",
-            "nullable": true
+            "$ref": "#/components/schemas/NotifyV1ServiceNotificationAlexa"
           }
         }
       },
@@ -198175,14 +197951,7 @@
             "$ref": "#/components/schemas/EndUserEnumType"
           },
           "attributes": {
-            "description": "The set of parameters that are the attributes of the End Users resource which are listed in the End User Types.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/NumbersV2RegulatoryComplianceEndUserAttributes"
           },
           "date_created": {
             "type": "string",
@@ -198682,8 +198451,7 @@
             "$ref": "#/components/schemas/RegulationEnumEndUserType"
           },
           "requirements": {
-            "description": "The SID of an object that holds the regulatory information of the phone number country, phone number type, and end user type.",
-            "nullable": true
+            "$ref": "#/components/schemas/NumbersV2RegulatoryComplianceRegulationRequirements"
           },
           "url": {
             "type": "string",
@@ -198901,14 +198669,7 @@
             "nullable": true
           },
           "attributes": {
-            "description": "The set of parameters that are the attributes of the Supporting Documents resource which are listed in the Supporting Document Types.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/NumbersV2RegulatoryComplianceSupportingDocumentAttributes"
           },
           "date_created": {
             "type": "string",
@@ -201229,8 +200990,7 @@
             "nullable": true
           },
           "configuration_schema": {
-            "description": "The JSON object with the configuration that must be provided when installing a given Add-on.",
-            "nullable": true
+            "$ref": "#/components/schemas/PreviewMarketplaceAvailableAddOnConfigurationSchema"
           },
           "url": {
             "type": "string",
@@ -201315,8 +201075,7 @@
             "nullable": true
           },
           "configuration": {
-            "description": "The JSON object that represents the current configuration of installed Add-on.",
-            "nullable": true
+            "$ref": "#/components/schemas/PreviewMarketplaceInstalledAddOnConfiguration"
           },
           "unique_name": {
             "type": "string",
@@ -201657,19 +201416,19 @@
             "nullable": true
           },
           "period": {
-            "nullable": true
+            "$ref": "#/components/schemas/PreviewWirelessSimUsagePeriod"
           },
           "commands_usage": {
-            "nullable": true
+            "$ref": "#/components/schemas/PreviewWirelessSimUsageCommandsUsage"
           },
           "commands_costs": {
-            "nullable": true
+            "$ref": "#/components/schemas/PreviewWirelessSimUsageCommandsCosts"
           },
           "data_usage": {
-            "nullable": true
+            "$ref": "#/components/schemas/PreviewWirelessSimUsageDataUsage"
           },
           "data_costs": {
-            "nullable": true
+            "$ref": "#/components/schemas/PreviewWirelessSimUsageDataCosts"
           },
           "url": {
             "type": "string",
@@ -204416,8 +204175,7 @@
             "nullable": true
           },
           "context": {
-            "description": "The current state of the execution flow. As your flow executes, we save the state in a flow context. Your widgets can access the data in the flow context as variables, either in configuration fields or in text areas as variable substitution.",
-            "nullable": true
+            "$ref": "#/components/schemas/StudioV1FlowEngagementContext"
           },
           "status": {
             "$ref": "#/components/schemas/EngagementEnumStatus"
@@ -204480,8 +204238,7 @@
             "nullable": true
           },
           "context": {
-            "description": "As your flow executes, we save the state in what\u0027s called the Flow Context. Any data in the flow context can be accessed by your widgets as variables, either in configuration fields or in text areas as variable substitution.",
-            "nullable": true
+            "$ref": "#/components/schemas/StudioV1FlowEngagementEngagementContextContext"
           },
           "engagement_sid": {
             "maxLength": 34,
@@ -204554,14 +204311,7 @@
             }
           },
           "context": {
-            "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/StudioV1FlowExecutionContext"
           },
           "status": {
             "$ref": "#/components/schemas/ExecutionEnumStatus"
@@ -204624,14 +204374,7 @@
             "nullable": true
           },
           "context": {
-            "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/StudioV1FlowExecutionExecutionContextContext"
           },
           "flow_sid": {
             "maxLength": 34,
@@ -204706,14 +204449,7 @@
             "nullable": true
           },
           "context": {
-            "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/StudioV1FlowExecutionExecutionStepContext"
           },
           "transitioned_from": {
             "type": "string",
@@ -204765,14 +204501,7 @@
             "nullable": true
           },
           "context": {
-            "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/StudioV1FlowExecutionExecutionStepExecutionStepContextContext"
           },
           "execution_sid": {
             "maxLength": 34,
@@ -204925,14 +204654,7 @@
             "nullable": true
           },
           "context": {
-            "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/StudioV1FlowEngagementStepContext"
           },
           "parent_step_sid": {
             "maxLength": 34,
@@ -204992,14 +204714,7 @@
             "nullable": true
           },
           "context": {
-            "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/StudioV1FlowEngagementStepStepContextContext"
           },
           "engagement_sid": {
             "maxLength": 34,
@@ -205085,14 +204800,7 @@
             "nullable": true
           },
           "context": {
-            "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/StudioV2FlowExecutionContext"
           },
           "status": {
             "$ref": "#/components/schemas/TwilioStudioV2ExecutionEnumStatus"
@@ -205160,14 +204868,7 @@
             "nullable": true
           },
           "context": {
-            "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/StudioV2FlowExecutionExecutionContextContext"
           },
           "flow_sid": {
             "maxLength": 34,
@@ -205242,14 +204943,7 @@
             "nullable": true
           },
           "context": {
-            "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/StudioV2FlowExecutionExecutionStepContext"
           },
           "transitioned_from": {
             "type": "string",
@@ -205301,14 +204995,7 @@
             "nullable": true
           },
           "context": {
-            "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/StudioV2FlowExecutionExecutionStepExecutionStepContextContext"
           },
           "execution_sid": {
             "maxLength": 34,
@@ -205375,8 +205062,7 @@
             "nullable": true
           },
           "definition": {
-            "description": "JSON representation of flow definition.",
-            "nullable": true
+            "$ref": "#/components/schemas/StudioV2FlowDefinition"
           },
           "status": {
             "$ref": "#/components/schemas/TwilioStudioV2FlowEnumStatus"
@@ -205496,8 +205182,7 @@
             "nullable": true
           },
           "definition": {
-            "description": "JSON representation of flow definition.",
-            "nullable": true
+            "$ref": "#/components/schemas/StudioV2FlowFlowRevisionDefinition"
           },
           "status": {
             "$ref": "#/components/schemas/FlowRevisionEnumStatus"
@@ -206649,8 +206334,7 @@
             "nullable": true
           },
           "period": {
-            "description": "The time period for which the usage is reported. The period is represented as a pair of \u0060start_time\u0060 and \u0060end_time\u0060 timestamps specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
-            "nullable": true
+            "$ref": "#/components/schemas/SupersimV1UsageRecordPeriod"
           },
           "data_upload": {
             "type": "integer",
@@ -206814,14 +206498,7 @@
             "nullable": true
           },
           "data": {
-            "description": "An arbitrary, schema-less object that the Sync Document stores. Can be up to 16 KiB in length.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "sensitive",
-                "deleteSla": 7
-              }
-            }
+            "$ref": "#/components/schemas/SyncV1ServiceDocumentData"
           },
           "date_expires": {
             "type": "string",
@@ -207016,14 +206693,7 @@
             "nullable": true
           },
           "data": {
-            "description": "An arbitrary, schema-less object that contains the Stream Message body. Can be up to 4 KiB in length.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "sensitive",
-                "deleteSla": 0
-              }
-            }
+            "$ref": "#/components/schemas/SyncV1ServiceSyncStreamStreamMessageData"
           }
         }
       },
@@ -207154,14 +206824,7 @@
             "nullable": true
           },
           "data": {
-            "description": "An arbitrary, schema-less object that the List Item stores. Can be up to 16 KiB in length.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "sensitive",
-                "deleteSla": 7
-              }
-            }
+            "$ref": "#/components/schemas/SyncV1ServiceSyncListSyncListItemData"
           },
           "date_expires": {
             "type": "string",
@@ -207432,14 +207095,7 @@
             "nullable": true
           },
           "data": {
-            "description": "An arbitrary, schema-less object that the Map Item stores. Can be up to 16 KiB in length.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "sensitive",
-                "deleteSla": 7
-              }
-            }
+            "$ref": "#/components/schemas/SyncV1ServiceSyncMapSyncMapItemData"
           },
           "date_expires": {
             "type": "string",
@@ -207751,8 +207407,7 @@
             "nullable": true
           },
           "event_data": {
-            "description": "Data about the event. For more information, see [Event types](https://www.twilio.com/docs/taskrouter/api/event#event-types).",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceEventEventData"
           },
           "event_date": {
             "type": "string",
@@ -208304,8 +207959,7 @@
             "default": 0
           },
           "split_by_wait_time": {
-            "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsSplitByWaitTime"
           },
           "task_queue_sid": {
             "maxLength": 34,
@@ -208316,16 +207970,13 @@
             "nullable": true
           },
           "wait_duration_until_accepted": {
-            "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks accepted while in the TaskQueue. Calculation is based on the time when the Tasks were created. For transfers, the wait duration is counted from the moment ***the Task was created***, and not from when the transfer was initiated.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilAccepted"
           },
           "wait_duration_until_canceled": {
-            "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks canceled while in the TaskQueue.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilCanceled"
           },
           "wait_duration_in_queue_until_accepted": {
-            "description": "The relative wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks accepted while in the TaskQueue. Calculation is based on the time when the Tasks entered the TaskQueue.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationInQueueUntilAccepted"
           },
           "tasks_canceled": {
             "type": "integer",
@@ -208422,12 +208073,10 @@
             "nullable": true
           },
           "tasks_by_priority": {
-            "description": "\u0022The number of Tasks by priority. For example: \u0060{\\\u00220\\\u0022: \\\u002210\\\u0022, \\\u002299\\\u0022: \\\u00225\\\u0022}\u0060 shows 10 Tasks at priority 0 and 5 at priority 99.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueTaskQueueRealTimeStatisticsTasksByPriority"
           },
           "tasks_by_status": {
-            "description": "\u0022The number of Tasks by their current status. For example: \u0060{\\\u0022pending\\\u0022: \\\u00221\\\u0022, \\\u0022reserved\\\u0022: \\\u00223\\\u0022, \\\u0022assigned\\\u0022: \\\u00222\\\u0022, \\\u0022completed\\\u0022: \\\u00225\\\u0022}\u0060.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueTaskQueueRealTimeStatisticsTasksByStatus"
           },
           "total_available_workers": {
             "type": "integer",
@@ -208472,12 +208121,10 @@
             "nullable": true
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the TaskQueue.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsCumulative"
           },
           "realtime": {
-            "description": "An object that contains the real-time statistics for the TaskQueue.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsRealtime"
           },
           "task_queue_sid": {
             "maxLength": 34,
@@ -208515,12 +208162,10 @@
             "nullable": true
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the TaskQueues.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueTaskQueuesStatisticsCumulative"
           },
           "realtime": {
-            "description": "An object that contains the real-time statistics for the TaskQueues.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueTaskQueuesStatisticsRealtime"
           },
           "task_queue_sid": {
             "maxLength": 34,
@@ -208969,8 +208614,7 @@
             "nullable": true
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the Worker.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkerWorkerInstanceStatisticsCumulative"
           },
           "worker_sid": {
             "maxLength": 34,
@@ -209206,12 +208850,10 @@
         "type": "object",
         "properties": {
           "realtime": {
-            "description": "An object that contains the real-time statistics for the Worker.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkerWorkerStatisticsRealtime"
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the Worker.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkerWorkerStatisticsCumulative"
           },
           "account_sid": {
             "maxLength": 34,
@@ -209501,16 +209143,13 @@
             "default": 0
           },
           "split_by_wait_time": {
-            "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkflowWorkflowCumulativeStatisticsSplitByWaitTime"
           },
           "wait_duration_until_accepted": {
-            "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks that were accepted.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkflowWorkflowCumulativeStatisticsWaitDurationUntilAccepted"
           },
           "wait_duration_until_canceled": {
-            "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks that were canceled.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkflowWorkflowCumulativeStatisticsWaitDurationUntilCanceled"
           },
           "tasks_canceled": {
             "type": "integer",
@@ -209591,12 +209230,10 @@
             "nullable": true
           },
           "tasks_by_priority": {
-            "description": "\u0022The number of Tasks by priority. For example: \u0060{\\\u00220\\\u0022: \\\u002210\\\u0022, \\\u002299\\\u0022: \\\u00225\\\u0022}\u0060 shows 10 Tasks at priority 0 and 5 at priority 99.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkflowWorkflowRealTimeStatisticsTasksByPriority"
           },
           "tasks_by_status": {
-            "description": "\u0022The number of Tasks by their current status. For example: \u0060{\\\u0022pending\\\u0022: \\\u00221\\\u0022, \\\u0022reserved\\\u0022: \\\u00223\\\u0022, \\\u0022assigned\\\u0022: \\\u00222\\\u0022, \\\u0022completed\\\u0022: \\\u00225\\\u0022}\u0060.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkflowWorkflowRealTimeStatisticsTasksByStatus"
           },
           "total_tasks": {
             "type": "integer",
@@ -209639,12 +209276,10 @@
             "nullable": true
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the Workflow.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkflowWorkflowStatisticsCumulative"
           },
           "realtime": {
-            "description": "An object that contains the real-time statistics for the Workflow.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkflowWorkflowStatisticsRealtime"
           },
           "workflow_sid": {
             "maxLength": 34,
@@ -209850,16 +209485,13 @@
             "default": 0
           },
           "split_by_wait_time": {
-            "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkspaceCumulativeStatisticsSplitByWaitTime"
           },
           "wait_duration_until_accepted": {
-            "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks that were accepted.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkspaceCumulativeStatisticsWaitDurationUntilAccepted"
           },
           "wait_duration_until_canceled": {
-            "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks that were canceled.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkspaceCumulativeStatisticsWaitDurationUntilCanceled"
           },
           "tasks_canceled": {
             "type": "integer",
@@ -209940,12 +209572,10 @@
             "nullable": true
           },
           "tasks_by_priority": {
-            "description": "\u0022The number of Tasks by priority. For example: \u0060{\\\u00220\\\u0022: \\\u002210\\\u0022, \\\u002299\\\u0022: \\\u00225\\\u0022}\u0060 shows 10 Tasks at priority 0 and 5 at priority 99.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByPriority"
           },
           "tasks_by_status": {
-            "description": "\u0022The number of Tasks by their current status. For example: \u0060{\\\u0022pending\\\u0022: \\\u00221\\\u0022, \\\u0022reserved\\\u0022: \\\u00223\\\u0022, \\\u0022assigned\\\u0022: \\\u00222\\\u0022, \\\u0022completed\\\u0022: \\\u00225\\\u0022}\u0060.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByStatus"
           },
           "total_tasks": {
             "type": "integer",
@@ -209977,12 +209607,10 @@
         "type": "object",
         "properties": {
           "realtime": {
-            "description": "An object that contains the real-time statistics for the Workspace.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkspaceStatisticsRealtime"
           },
           "cumulative": {
-            "description": "An object that contains the cumulative statistics for the Workspace.",
-            "nullable": true
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkspaceStatisticsCumulative"
           },
           "account_sid": {
             "maxLength": 34,
@@ -210487,8 +210115,7 @@
             "nullable": true
           },
           "recording": {
-            "description": "\u0022The recording settings for the trunk. Can be: \u0060do-not-record\u0060, \u0060record-from-ringing\u0060, \u0060record-from-answer\u0060. If set to \u0060record-from-ringing\u0060 or \u0060record-from-answer\u0060, all calls going through the trunk will be recorded. The only way to change recording parameters is on a sub-resource of a Trunk after it has been created. e.g.\u0060/Trunks/[Trunk_SID]/Recording -XPOST -d\u0027Mode=record-from-answer\u0027\u0060. See [Recording](https://www.twilio.com/docs/sip-trunking#recording) for more information.\u0022",
-            "nullable": true
+            "$ref": "#/components/schemas/TrunkingV1TrunkRecordingProperty"
           },
           "transfer_mode": {
             "$ref": "#/components/schemas/TrunkEnumTransferSetting"
@@ -211248,14 +210875,7 @@
             "nullable": true
           },
           "attributes": {
-            "description": "The set of parameters that are the attributes of the End Users resource which are listed in the End User Types.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/TrusthubV1EndUserAttributes"
           },
           "date_created": {
             "type": "string",
@@ -211331,8 +210951,7 @@
             "nullable": true
           },
           "requirements": {
-            "description": "The SID of an object that holds the policy information",
-            "nullable": true
+            "$ref": "#/components/schemas/TrusthubV1PoliciesRequirements"
           },
           "url": {
             "type": "string",
@@ -211402,14 +211021,7 @@
             "nullable": true
           },
           "attributes": {
-            "description": "The set of parameters that are the attributes of the Supporting Documents resource which are listed in the Supporting Document Types.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/TrusthubV1SupportingDocumentAttributes"
           },
           "date_created": {
             "type": "string",
@@ -212076,34 +211688,13 @@
             "$ref": "#/components/schemas/ChallengeEnumChallengeReasons"
           },
           "details": {
-            "description": "Details provided to give context about the Challenge. Intended to be shown to the end user.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/VerifyV2ServiceEntityChallengeDetails"
           },
           "hidden_details": {
-            "description": "\u0022Details provided to give context about the Challenge. Intended to be hidden from the end user. It must be a stringified JSON with only strings values eg. \u0060{\\\u0022ip\\\u0022: \\\u0022172.168.1.234\\\u0022}\u0060\u0022",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/VerifyV2ServiceEntityChallengeHiddenDetails"
           },
           "metadata": {
-            "description": "\u0022Custom metadata associated with the challenge. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. \u0060{\\\u0022os\\\u0022: \\\u0022Android\\\u0022}\u0060. Can be up to 1024 characters in length.\u0022",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/VerifyV2ServiceEntityChallengeMetadata"
           },
           "factor_type": {
             "$ref": "#/components/schemas/ChallengeEnumFactorTypes"
@@ -212361,18 +211952,10 @@
             "$ref": "#/components/schemas/FactorEnumFactorTypes"
           },
           "config": {
-            "description": "An object that contains configurations specific to a \u0060factor_type\u0060.",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2ServiceEntityFactorConfig"
           },
           "metadata": {
-            "description": "\u0022Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. \u0060{\\\u0022os\\\u0022: \\\u0022Android\\\u0022}\u0060. Can be up to 1024 characters in length.\u0022",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/VerifyV2ServiceEntityFactorMetadata"
           },
           "url": {
             "type": "string",
@@ -212494,12 +212077,10 @@
             "$ref": "#/components/schemas/FormEnumFormTypes"
           },
           "forms": {
-            "description": "Object that contains the available forms for this type. This available forms are given in the standard [JSON Schema](https://json-schema.org/) format",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2FormForms"
           },
           "form_meta": {
-            "description": "Additional information for the available forms for this type. E.g. The separator string used for \u0060binding\u0060 in a Factor push.",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2FormFormMeta"
           },
           "url": {
             "type": "string",
@@ -212626,11 +212207,10 @@
             }
           },
           "binding": {
-            "description": "Contains the \u0060factor_type\u0060 specific secret and metadata.\nFor push, this is \u0060binding.public_key\u0060 and \u0060binding.alg\u0060.\nFor totp, this is \u0060binding.secret\u0060 and \u0060binding.uri\u0060. The \u0060binding.uri\u0060 property is generated following the [google authenticator key URI format](https://github.com/google/google-authenticator/wiki/Key-Uri-Format), and \u0060Factor.friendly_name\u0060 is used for the \u201Caccountname\u201D value and \u0060Service.friendly_name\u0060 or \u0060Service.totp.issuer\u0060 is used for the \u0060issuer\u0060 value.\n\n\nThe Binding property is ONLY returned upon Factor creation.",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2ServiceEntityNewFactorBinding"
           },
           "options": {
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2ServiceEntityNewFactorOptions"
           },
           "date_created": {
             "type": "string",
@@ -212656,18 +212236,10 @@
             "$ref": "#/components/schemas/NewFactorEnumFactorTypes"
           },
           "config": {
-            "description": "An object that contains configurations specific to a \u0060factor_type\u0060.",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2ServiceEntityNewFactorConfig"
           },
           "metadata": {
-            "description": "\u0022Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. \u0060{\\\u0022os\\\u0022: \\\u0022Android\\\u0022}\u0060. Can be up to 1024 characters in length.\u0022",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/VerifyV2ServiceEntityNewFactorMetadata"
           },
           "url": {
             "type": "string",
@@ -213009,12 +212581,10 @@
             "nullable": true
           },
           "push": {
-            "description": "Configurations for the Push factors (channel) created under this Service.",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2ServicePush"
           },
           "totp": {
-            "description": "Configurations for the TOTP factors (channel) created under this Service.",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2ServiceTotp"
           },
           "default_template_sid": {
             "maxLength": 34,
@@ -213024,10 +212594,10 @@
             "nullable": true
           },
           "whatsapp": {
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2ServiceWhatsapp"
           },
           "passkeys": {
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2ServicePasskeys"
           },
           "verify_event_subscription_enabled": {
             "type": "boolean",
@@ -213109,8 +212679,7 @@
             "nullable": true
           },
           "lookup": {
-            "description": "Information about the phone number being verified.",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2ServiceVerificationLookup"
           },
           "amount": {
             "type": "string",
@@ -213155,8 +212724,7 @@
             "nullable": true
           },
           "sna": {
-            "description": "The set of fields used for a silent network auth (\u0060sna\u0060) verification. Contains a single field with the URL to be invoked to verify the phone number.",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2ServiceVerificationSna"
           },
           "url": {
             "type": "string",
@@ -213304,12 +212872,10 @@
             "$ref": "#/components/schemas/VerificationAttemptEnumChannels"
           },
           "price": {
-            "description": "An object containing the charge for this verification attempt related to the channel costs and the currency used. The costs related to the succeeded verifications are not included. May not be immediately available. More information on pricing is available [here](https://www.twilio.com/en-us/verify/pricing).",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2VerificationAttemptPrice"
           },
           "channel_data": {
-            "description": "An object containing the channel specific information for an attempt.",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2VerificationAttemptChannelData"
           },
           "url": {
             "type": "string",
@@ -213768,8 +213334,7 @@
             "nullable": true
           },
           "translations": {
-            "description": "An object that contains the different translations of the template. Every translation is identified by the language short name and contains its respective information as the approval status, text and created/modified date.",
-            "nullable": true
+            "$ref": "#/components/schemas/VerifyV2VerificationTemplateTranslations"
           }
         }
       },
@@ -213994,14 +213559,7 @@
             }
           },
           "video_layout": {
-            "description": "An object that describes the video layout of the composition in terms of regions. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/VideoV1CompositionVideoLayout"
           },
           "resolution": {
             "type": "string",
@@ -214189,14 +213747,7 @@
             }
           },
           "video_layout": {
-            "description": "A JSON object that describes the video layout of the composition in terms of regions as specified in the HTTP POST request that created the CompositionHook resource. See [POST Parameters](https://www.twilio.com/docs/video/api/compositions-resource#http-post-parameters) for more information. Please, be aware that either video_layout or audio_sources have to be provided to get a valid creation request",
-            "nullable": true,
-            "x-twilio": {
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/VideoV1CompositionHookVideoLayout"
           },
           "resolution": {
             "type": "string",
@@ -214370,8 +213921,7 @@
             "$ref": "#/components/schemas/RecordingEnumCodec"
           },
           "grouping_sids": {
-            "description": "A list of SIDs related to the recording. Includes the \u0060room_sid\u0060 and \u0060participant_sid\u0060.",
-            "nullable": true
+            "$ref": "#/components/schemas/VideoV1RecordingGroupingSids"
           },
           "track_name": {
             "type": "string",
@@ -215276,8 +214826,7 @@
             "$ref": "#/components/schemas/RoomRecordingEnumCodec"
           },
           "grouping_sids": {
-            "description": "A list of SIDs related to the Recording. Includes the \u0060room_sid\u0060 and \u0060participant_sid\u0060.",
-            "nullable": true
+            "$ref": "#/components/schemas/VideoV1RoomRoomRecordingGroupingSids"
           },
           "track_name": {
             "type": "string",
@@ -216901,16 +216450,13 @@
             "nullable": true
           },
           "period": {
-            "description": "The time period for which usage is reported. Contains \u0060start\u0060 and \u0060end\u0060 properties that describe the period using GMT date-time values specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
-            "nullable": true
+            "$ref": "#/components/schemas/WirelessV1AccountUsageRecordPeriod"
           },
           "commands": {
-            "description": "An object that describes the aggregated Commands usage for all SIMs during the specified period. See [Commands Usage Object](https://www.twilio.com/docs/iot/wireless/api/account-usagerecord-resource#commands-usage-object).",
-            "nullable": true
+            "$ref": "#/components/schemas/WirelessV1AccountUsageRecordCommands"
           },
           "data": {
-            "description": "An object that describes the aggregated Data usage for all SIMs over the period. See [Data Usage Object](https://www.twilio.com/docs/iot/wireless/api/account-usagerecord-resource#data-usage-object).",
-            "nullable": true
+            "$ref": "#/components/schemas/WirelessV1AccountUsageRecordData"
           }
         }
       },
@@ -217176,8 +216722,7 @@
             "nullable": true
           },
           "cell_location_estimate": {
-            "description": "An object that describes the estimated location in latitude and longitude where the device\u0027s Data Session took place. The location is derived from the \u0060cell_id\u0060 when the Data Session was last updated. See [Cell Location Estimate Object](https://www.twilio.com/docs/iot/wireless/api/datasession-resource#cell-location-estimate-object). ",
-            "nullable": true
+            "$ref": "#/components/schemas/WirelessV1SimDataSessionCellLocationEstimate"
           },
           "packets_uploaded": {
             "type": "integer",
@@ -217566,16 +217111,13 @@
             "nullable": true
           },
           "period": {
-            "description": "The time period for which the usage is reported. Contains \u0060start\u0060 and \u0060end\u0060 datetime values given as GMT in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
-            "nullable": true
+            "$ref": "#/components/schemas/WirelessV1SimUsageRecordPeriod"
           },
           "commands": {
-            "description": "An object that describes the SIM\u0027s usage of Commands during the specified period. See [Commands Usage Object](https://www.twilio.com/docs/iot/wireless/api/sim-usagerecord-resource#commands-usage-object).",
-            "nullable": true
+            "$ref": "#/components/schemas/WirelessV1SimUsageRecordCommands"
           },
           "data": {
-            "description": "An object that describes the SIM\u0027s data usage during the specified period. See [Data Usage Object](https://www.twilio.com/docs/iot/wireless/api/sim-usagerecord-resource#data-usage-object).",
-            "nullable": true
+            "$ref": "#/components/schemas/WirelessV1SimUsageRecordData"
           }
         }
       },
@@ -247105,22 +246647,10 @@
             "$ref": "#/components/schemas/TwilioVerifyV2UpdatePasskeysFactor200ResponseFactorType"
           },
           "config": {
-            "description": "An object that contains configurations specific to a \u0060factor_type\u0060.",
-            "nullable": true,
-            "x-twilio": {
-              "shortDescription": "Configurations for a \u0060factor_type\u0060."
-            }
+            "$ref": "#/components/schemas/TwilioVerifyV2UpdatePasskeysFactor200ResponseConfig"
           },
           "metadata": {
-            "description": "Custom metadata associated with the factor.",
-            "nullable": true,
-            "x-twilio": {
-              "shortDescription": "Metadata of the factor.",
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/TwilioVerifyV2UpdatePasskeysFactor200ResponseMetadata"
           },
           "url": {
             "type": "string",
@@ -247212,14 +246742,10 @@
             }
           },
           "binding": {
-            "description": "Contains the \u0060factor_type\u0060 specific secret and metadata. The Binding property is ONLY returned upon Factor creation.",
-            "nullable": true,
-            "x-twilio": {
-              "shortDescription": "Binding of the factor"
-            }
+            "$ref": "#/components/schemas/TwilioVerifyV2CreateNewFactorPasskey201ResponseBinding"
           },
           "options": {
-            "nullable": true
+            "$ref": "#/components/schemas/TwilioVerifyV2CreateNewFactorPasskey201ResponseOptions"
           },
           "date_created": {
             "type": "string",
@@ -247254,22 +246780,10 @@
             "$ref": "#/components/schemas/TwilioVerifyV2CreateNewFactorPasskey201ResponseFactorType"
           },
           "config": {
-            "description": "An object that contains configurations specific to a \u0060factor_type\u0060.",
-            "nullable": true,
-            "x-twilio": {
-              "shortDescription": "Configurations for a \u0060factor_type\u0060."
-            }
+            "$ref": "#/components/schemas/TwilioVerifyV2CreateNewFactorPasskey201ResponseConfig"
           },
           "metadata": {
-            "description": "Custom metadata associated with the factor.",
-            "nullable": true,
-            "x-twilio": {
-              "shortDescription": "Metadata of the factor.",
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/TwilioVerifyV2CreateNewFactorPasskey201ResponseMetadata"
           },
           "url": {
             "type": "string",
@@ -247407,37 +246921,13 @@
             "$ref": "#/components/schemas/TwilioVerifyV2CreateChallengePasskeys201ResponseRespondedReason"
           },
           "details": {
-            "description": "Details provided to give context about the Challenge.",
-            "nullable": true,
-            "x-twilio": {
-              "shortDescription": "Details about the Challenge.",
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/TwilioVerifyV2CreateChallengePasskeys201ResponseDetails"
           },
           "hidden_details": {
-            "description": "Details provided to give context about the Challenge.",
-            "nullable": true,
-            "x-twilio": {
-              "shortDescription": "Hidden details about the Challenge",
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/TwilioVerifyV2CreateChallengePasskeys201ResponseHiddenDetails"
           },
           "metadata": {
-            "description": "Custom metadata associated with the challenge.",
-            "nullable": true,
-            "x-twilio": {
-              "shortDescription": "Metadata of the challenge.",
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/TwilioVerifyV2CreateChallengePasskeys201ResponseMetadata"
           },
           "factor_type": {
             "$ref": "#/components/schemas/TwilioVerifyV2CreateChallengePasskeys201ResponseFactorType"
@@ -247601,37 +247091,13 @@
             "$ref": "#/components/schemas/TwilioVerifyV2UpdateChallengePasskeys200ResponseRespondedReason"
           },
           "details": {
-            "description": "Details provided to give context about the Challenge.",
-            "nullable": true,
-            "x-twilio": {
-              "shortDescription": "Details about the Challenge.",
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/TwilioVerifyV2UpdateChallengePasskeys200ResponseDetails"
           },
           "hidden_details": {
-            "description": "Details provided to give context about the Challenge.",
-            "nullable": true,
-            "x-twilio": {
-              "shortDescription": "Hidden details about the Challenge",
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/TwilioVerifyV2UpdateChallengePasskeys200ResponseHiddenDetails"
           },
           "metadata": {
-            "description": "Custom metadata associated with the challenge.",
-            "nullable": true,
-            "x-twilio": {
-              "shortDescription": "Metadata of the challenge.",
-              "pii": {
-                "handling": "standard",
-                "deleteSla": 30
-              }
-            }
+            "$ref": "#/components/schemas/TwilioVerifyV2UpdateChallengePasskeys200ResponseMetadata"
           },
           "factor_type": {
             "$ref": "#/components/schemas/TwilioVerifyV2UpdateChallengePasskeys200ResponseFactorType"
@@ -253719,6 +253185,70 @@
         ],
         "description": "The content of the Communication using type field for discrimination."
       },
+      "AccountsV1BulkConsentsItems": {
+        "type": "object",
+        "description": "\u0022A list of objects where each object represents the result of processing a \u0060correlation_id\u0060. Each object contains the following fields: \u0060correlation_id\u0060, a unique 32-character UUID that maps the response to the original request; \u0060error_code\u0060, an integer where 0 indicates success and any non-zero value represents an error; and \u0060error_messages\u0060, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.\u0022",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "AccountsV1BulkContactsItems": {
+        "type": "object",
+        "description": "\u0022A list of objects where each object represents the result of processing a \u0060correlation_id\u0060. Each object contains the following fields: \u0060correlation_id\u0060, a unique 32-character UUID that maps the response to the original request; \u0060error_code\u0060, an integer where 0 indicates success and any non-zero value represents an error; and \u0060error_messages\u0060, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.\u0022",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "AccountsV1MessagingGeopermissionsPermissions": {
+        "type": "object",
+        "description": "\u0022A list of objects where each object represents the result of processing a messaging Geo Permission. Each object contains the following fields: \u0060country_code\u0060, the country code of the country for which the permission was updated; \u0060type\u0060, the type of the permission i.e. country; \u0060enabled\u0060, true if the permission is enabled else false; \u0060error_code\u0060, an integer where 0 indicates success and any non-zero value represents an error; and \u0060error_messages\u0060, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.\u0022"
+      },
+      "ApiV2010AccountCallCallEventRequest": {
+        "type": "object",
+        "description": "Contains a dictionary representing the request of the call.",
+        "x-twilio": {
+          "pii": {
+            "handling": "sensitive",
+            "deleteSla": 30
+          }
+        }
+      },
+      "ApiV2010AccountCallCallEventResponse": {
+        "type": "object",
+        "description": "Contains a dictionary representing the call response, including a list of the call events.",
+        "x-twilio": {
+          "pii": {
+            "handling": "sensitive",
+            "deleteSla": 30
+          }
+        }
+      },
+      "ApiV2010AccountCallCallRecordingEncryptionDetails": {
+        "type": "object",
+        "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature."
+      },
+      "ApiV2010AccountConferenceConferenceRecordingEncryptionDetails": {
+        "type": "object",
+        "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature."
+      },
+      "ApiV2010AccountAddressDependentPhoneNumberCapabilities": {
+        "type": "object",
+        "description": "\u0022The set of Boolean properties that indicates whether a phone number can receive calls or messages.  Capabilities are  \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.\u0022"
+      },
+      "ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnConfiguration": {
+        "type": "object",
+        "description": "A JSON string that represents the current configuration of this Add-on installation."
+      },
+      "ApiV2010AccountRecordingEncryptionDetails": {
+        "type": "object",
+        "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature."
+      },
       "AssistantsV1ServiceAssistantCustomerAiProperty": {
         "type": "object",
         "description": "The Personalization and Perception Engine settings."
@@ -253784,6 +253314,44 @@
       "BulkexportsV1ExportJobDetailsItem": {
         "type": "object"
       },
+      "ChatV1ServiceLimits": {
+        "type": "object",
+        "description": "An object that describes the limits of the service instance. The \u0060limits\u0060 object contains  \u0060channel_members\u0060 to describe the members/channel limit and \u0060user_channels\u0060 to describe the channels/user limit. \u0060channel_members\u0060 can be 1,000 or less, with a default of 250. \u0060user_channels\u0060 can be 1,000 or less, with a default value of 100."
+      },
+      "ChatV1ServiceWebhooks": {
+        "type": "object",
+        "description": "An object that contains information about the webhooks configured for this service."
+      },
+      "ChatV1ServiceNotifications": {
+        "type": "object",
+        "description": "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more information."
+      },
+      "ChatV2ServiceChannelChannelWebhookConfiguration": {
+        "type": "object",
+        "description": "The JSON string that describes how the channel webhook is configured. The configuration object contains the \u0060url\u0060, \u0060method\u0060, \u0060filters\u0060, and \u0060retry_count\u0060 values that are configured by the create and update actions."
+      },
+      "ChatV2ServiceChannelMessageMedia": {
+        "type": "object",
+        "description": "\u0022An object that describes the Message\u0027s media, if the message contains media. The object contains these fields: \u0060content_type\u0060 with the MIME type of the media, \u0060filename\u0060 with the name of the media, \u0060sid\u0060 with the SID of the Media resource, and \u0060size\u0060 with the media object\u0027s file size in bytes. If the Message has no media, this value is \u0060null\u0060.\u0022",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "ChatV2ServiceLimits": {
+        "type": "object",
+        "description": "An object that describes the limits of the service instance. The \u0060limits\u0060 object contains  \u0060channel_members\u0060 to describe the members/channel limit and \u0060user_channels\u0060 to describe the channels/user limit. \u0060channel_members\u0060 can be 1,000 or less, with a default of 250. \u0060user_channels\u0060 can be 1,000 or less, with a default value of 100."
+      },
+      "ChatV2ServiceNotifications": {
+        "type": "object",
+        "description": "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info."
+      },
+      "ChatV2ServiceMedia": {
+        "type": "object",
+        "description": "An object that describes the properties of media that the service supports. The object contains the \u0060size_limit_mb\u0060 property, which describes the size of the largest media file in MB; and the \u0060compatibility_message\u0060 property, which contains the message text to send when a media message does not have any text."
+      },
       "ContentCreateRequestVariablesProperty": {
         "type": "object",
         "additionalProperties": {
@@ -253798,11 +253366,139 @@
         },
         "description": "Key value pairs of variable name to value"
       },
+      "TwilioContentV2ContentV1ContentApprovalFetchWhatsapp": {
+        "type": "object",
+        "description": "Contains the whatsapp approval information for the Content resource, with fields such as approval status, rejection reason, and category, amongst others."
+      },
+      "TwilioContentV2ContentV1LegacyContentVariables": {
+        "type": "object",
+        "description": "\u0022Defines the default placeholder values for variables included in the Content resource. e.g. {\\\u00221\\\u0022: \\\u0022Customer_Name\\\u0022}.\u0022"
+      },
+      "TwilioContentV2ContentV1LegacyContentTypes": {
+        "type": "object",
+        "description": "The [Content types](https://www.twilio.com/docs/content/content-types-overview) (e.g. twilio/text) for this Content resource."
+      },
+      "ConversationsV1ConfigurationAddressAutoCreation": {
+        "type": "object",
+        "description": "Auto Creation configuration for the address."
+      },
+      "ConversationsV1ConversationTimers": {
+        "type": "object",
+        "description": "Timer date values representing state update for this conversation."
+      },
+      "ConversationsV1ConversationBindings": {
+        "type": "object"
+      },
       "ConversationsV1ConversationConversationMessageMediaItem": {
+        "type": "object"
+      },
+      "ConversationsV1ConversationConversationMessageDelivery": {
+        "type": "object",
+        "description": "An object that contains the summary of delivery statuses for the message to non-chat participants."
+      },
+      "ConversationsV1ConversationConversationParticipantMessagingBinding": {
+        "type": "object",
+        "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "ConversationsV1ConversationConversationScopedWebhookConfiguration": {
+        "type": "object",
+        "description": "The configuration of this webhook. Is defined based on target."
+      },
+      "ConversationsV1ConversationWithParticipantsTimers": {
+        "type": "object",
+        "description": "Timer date values representing state update for this conversation."
+      },
+      "ConversationsV1ConversationWithParticipantsBindings": {
+        "type": "object"
+      },
+      "ConversationsV1ParticipantConversationParticipantMessagingBinding": {
+        "type": "object",
+        "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "ConversationsV1ParticipantConversationConversationTimers": {
+        "type": "object",
+        "description": "Timer date values representing state update for this conversation."
+      },
+      "ConversationsV1ServiceServiceConversationTimers": {
+        "type": "object",
+        "description": "Timer date values representing state update for this conversation."
+      },
+      "ConversationsV1ServiceServiceConversationBindings": {
         "type": "object"
       },
       "ConversationsV1ServiceServiceConversationServiceConversationMessageMediaItem": {
         "type": "object"
+      },
+      "ConversationsV1ServiceServiceConversationServiceConversationMessageDelivery": {
+        "type": "object",
+        "description": "An object that contains the summary of delivery statuses for the message to non-chat participants."
+      },
+      "ConversationsV1ServiceServiceConversationServiceConversationParticipantMessagingBinding": {
+        "type": "object",
+        "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "ConversationsV1ServiceServiceConversationServiceConversationScopedWebhookConfiguration": {
+        "type": "object",
+        "description": "The configuration of this webhook. Is defined based on target."
+      },
+      "ConversationsV1ServiceServiceConversationWithParticipantsTimers": {
+        "type": "object",
+        "description": "Timer date values representing state update for this conversation."
+      },
+      "ConversationsV1ServiceServiceConversationWithParticipantsBindings": {
+        "type": "object"
+      },
+      "ConversationsV1ServiceServiceConfigurationServiceNotificationNewMessage": {
+        "type": "object",
+        "description": "The Push Notification configuration for New Messages."
+      },
+      "ConversationsV1ServiceServiceConfigurationServiceNotificationAddedToConversation": {
+        "type": "object",
+        "description": "The Push Notification configuration for being added to a Conversation."
+      },
+      "ConversationsV1ServiceServiceConfigurationServiceNotificationRemovedFromConversation": {
+        "type": "object",
+        "description": "The Push Notification configuration for being removed from a Conversation."
+      },
+      "ConversationsV1ServiceServiceParticipantConversationParticipantMessagingBinding": {
+        "type": "object",
+        "description": "Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "ConversationsV1ServiceServiceParticipantConversationConversationTimers": {
+        "type": "object",
+        "description": "Timer date values representing state update for this conversation."
+      },
+      "ConversationsV1ServiceServiceUserServiceUserConversationTimers": {
+        "type": "object",
+        "description": "Timer date values representing state update for this conversation."
+      },
+      "ConversationsV1UserUserConversationTimers": {
+        "type": "object",
+        "description": "Timer date values representing state update for this conversation."
       },
       "ConversationsV2SendMessagePayloadChannelSettings": {
         "type": "object",
@@ -253843,23 +253539,162 @@
         },
         "description": "Additional matching criteria for the capture rule. For voice calls, can include \u0060callType\u0060 (\u0060PSTN\u0060, \u0060SIP\u0060, and similar)."
       },
+      "EventsV1SinkSinkConfiguration": {
+        "type": "object",
+        "description": "The information required for Twilio to connect to the provided Sink encoded as JSON."
+      },
+      "FlexV1ConfigurationAttributes": {
+        "type": "object",
+        "description": "An object that contains application-specific data."
+      },
       "FlexV1ConfigurationTaskrouterTaskqueuesItem": {
         "type": "object"
       },
       "FlexV1ConfigurationTaskrouterSkillsItem": {
         "type": "object"
       },
+      "FlexV1ConfigurationTaskrouterWorkerChannels": {
+        "type": "object",
+        "description": "The TaskRouter default channel capacities and availability for workers."
+      },
+      "FlexV1ConfigurationTaskrouterWorkerAttributes": {
+        "type": "object",
+        "description": "The TaskRouter Worker attributes."
+      },
+      "FlexV1ConfigurationUiAttributes": {
+        "type": "object",
+        "description": "The object that describes Flex UI characteristics and settings."
+      },
+      "FlexV1ConfigurationUiDependencies": {
+        "type": "object",
+        "description": "The object that defines the NPM packages and versions to be used in Hosted Flex."
+      },
+      "FlexV1ConfigurationCrmAttributes": {
+        "type": "object",
+        "description": "An object that contains the CRM attributes."
+      },
+      "FlexV1ConfigurationPublicAttributes": {
+        "type": "object",
+        "description": "The list of public attributes, which are visible to unauthenticated clients."
+      },
+      "FlexV1ConfigurationPluginServiceAttributes": {
+        "type": "object",
+        "description": "The plugin service attributes."
+      },
       "FlexV1ConfigurationIntegrationsItem": {
         "type": "object"
       },
+      "FlexV1ConfigurationOutboundCallFlows": {
+        "type": "object",
+        "description": "The list of outbound call flows."
+      },
+      "FlexV1ConfigurationQueueStatsConfiguration": {
+        "type": "object",
+        "description": "Configurable parameters for Queues Statistics."
+      },
+      "FlexV1ConfigurationNotifications": {
+        "type": "object",
+        "description": "Configurable parameters for Notifications."
+      },
+      "FlexV1ConfigurationMarkdown": {
+        "type": "object",
+        "description": "Configurable parameters for Markdown."
+      },
+      "FlexV1ConfigurationFlexInsightsHr": {
+        "type": "object",
+        "description": "Object with enabled/disabled flag with list of workspaces."
+      },
       "FlexV1ConfigurationChannelConfigsItem": {
         "type": "object"
+      },
+      "FlexV1ConfigurationDebuggerIntegration": {
+        "type": "object",
+        "description": "Configurable parameters for Debugger Integration."
+      },
+      "FlexV1ConfigurationFlexUiStatusReport": {
+        "type": "object",
+        "description": "Configurable parameters for Flex UI Status report."
+      },
+      "FlexV1ConfigurationAgentConvEndMethods": {
+        "type": "object",
+        "description": "Agent conversation end methods."
+      },
+      "FlexV1ConfigurationCitrixVoiceVdi": {
+        "type": "object",
+        "description": "Citrix voice vdi configuration and settings."
+      },
+      "FlexV1ConfigurationOfflineConfig": {
+        "type": "object",
+        "description": "Presence and presence ttl configuration"
+      },
+      "FlexV1FlexFlowIntegration": {
+        "type": "object",
+        "description": "An object that contains specific parameters for the integration."
+      },
+      "FlexV1InsightsAssessmentsAssessment": {
+        "type": "object",
+        "description": "Assessment Details associated with an assessment"
+      },
+      "FlexV1InsightsAssessmentsCommentComment": {
+        "type": "object",
+        "description": "The comment added for assessment."
       },
       "FlexV1InsightsConversationsSegmentsItem": {
         "type": "object"
       },
       "FlexV1InsightsQuestionnairesQuestionsItem": {
         "type": "object"
+      },
+      "FlexV1InsightsQuestionnairesQuestionCategory": {
+        "type": "object",
+        "description": "The Category for the question."
+      },
+      "FlexV1InsightsQuestionnairesQuestionAnswerSet": {
+        "type": "object",
+        "description": "Set of answers for the question"
+      },
+      "FlexV1InsightsSegmentsMedia": {
+        "type": "object",
+        "description": "The media identifiers of the conversation."
+      },
+      "FlexV1InsightsSegmentsAssessmentType": {
+        "type": "object",
+        "description": "The type of the assessment."
+      },
+      "FlexV1InsightsSegmentsAssessmentPercentage": {
+        "type": "object",
+        "description": "The percentage scored on the Assessments."
+      },
+      "FlexV1InsightsSettingsAnswersetsAnswerSets": {
+        "type": "object",
+        "description": "The lis of answer sets"
+      },
+      "FlexV1InsightsSettingsAnswersetsAnswerSetCategories": {
+        "type": "object",
+        "description": "The list of answer set categories"
+      },
+      "FlexV1InsightsSettingsAnswersetsNotApplicable": {
+        "type": "object",
+        "description": "The details for not applicable answer set"
+      },
+      "FlexV1InsightsSettingsCommentComments": {
+        "type": "object"
+      },
+      "FlexV1InteractionChannel": {
+        "type": "object",
+        "description": "A JSON object that defines the Interaction\u2019s communication channel and includes details about the channel. See the [Outbound SMS](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) and [inbound (API-initiated)](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#api-initiated-contact) Channel object examples."
+      },
+      "FlexV1InteractionRouting": {
+        "type": "object",
+        "description": "A JSON Object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality. \n All attributes in the Routing object on your Interaction request body are added \u201Cas is\u201D to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes)."
+      },
+      "FlexV1InteractionInteractionChannelInteractionChannelInviteRouting": {
+        "type": "object",
+        "description": "A JSON object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality. \n All attributes in the Routing object on your Interaction request body are added \u201Cas is\u201D to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes)."
+      },
+      "FlexV1InteractionInteractionChannelInteractionChannelParticipantRoutingProperties": {
+        "type": "object",
+        "description": "The Participant\u0027s routing properties."
       },
       "ScimPatchOperationValueProperty": {
         "type": "object"
@@ -253893,6 +253728,94 @@
         },
         "description": "\u0022A polymorphic result object. Fields vary depending on the operation.\nCommon fields include:\n  - \u0060resourceId\u0060: string\n\u0022"
       },
+      "InsightsV1CallSummariesFrom": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 The calling party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.\u0022",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "InsightsV1CallSummariesTo": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 The called party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.\u0022",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "InsightsV1CallSummariesCarrierEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a PSTN call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummariesClientEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a Client call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummariesSdkEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains metrics and properties for the SDK sensor library for Client calls. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummariesSipEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummariesAttributes": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Attributes capturing call-flow-specific details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#attributes-object) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummariesProperties": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains edge-agnostic call-level details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#properties-object) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummariesTrust": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains trusted communications details including Branded Call and verified caller ID. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#trust-object) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummariesAnnotation": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties.\u0022"
+      },
+      "InsightsV1ConferenceDetectedIssues": {
+        "type": "object",
+        "description": "Potential issues detected by Twilio during the conference."
+      },
+      "InsightsV1ConferenceTagInfo": {
+        "type": "object",
+        "description": "Object. Contains details about conference tags including severity."
+      },
+      "InsightsV1ConferenceConferenceParticipantProperties": {
+        "type": "object",
+        "description": "Participant properties and metadata."
+      },
+      "InsightsV1ConferenceConferenceParticipantEvents": {
+        "type": "object",
+        "description": "Object containing information of actions taken by participants. Contains a dictionary of URL links to nested resources of this Conference Participant."
+      },
+      "InsightsV1ConferenceConferenceParticipantMetrics": {
+        "type": "object",
+        "description": "Object. Contains participant call quality metrics."
+      },
+      "InsightsV1CallEventCarrierEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Represents the connection between Twilio and our immediate carrier partners. The events here describe the call lifecycle as reported by Twilio\u0027s carrier media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
+      "InsightsV1CallEventSipEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Represents the Twilio media gateway for SIP interface and SIP trunking calls. The events here describe the call lifecycle as reported by Twilio\u0027s public media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
+      "InsightsV1CallEventSdkEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Represents the Voice SDK running locally in the browser or in the Android/iOS application. The events here are emitted by the Voice SDK in response to certain call progress events, network changes, or call quality conditions. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
+      "InsightsV1CallEventClientEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Represents the Twilio media gateway for Client calls. The events here describe the call lifecycle as reported by Twilio\u0027s Voice SDK media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
       "ConfigurationEventConfigurationsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -253906,6 +253829,82 @@
           "$ref": "#/components/schemas/ConfigurationEventLanguagesAdditionalProperties"
         },
         "description": "Key-value pairs for language configurations."
+      },
+      "InsightsV1CallMetricCarrierEdge": {
+        "type": "object",
+        "description": "Contains metrics and properties for the Twilio media gateway of a PSTN call."
+      },
+      "InsightsV1CallMetricSipEdge": {
+        "type": "object",
+        "description": "Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call."
+      },
+      "InsightsV1CallMetricSdkEdge": {
+        "type": "object",
+        "description": "Contains metrics and properties for the SDK sensor library for Client calls."
+      },
+      "InsightsV1CallMetricClientEdge": {
+        "type": "object",
+        "description": "Contains metrics and properties for the Twilio media gateway of a Client call."
+      },
+      "InsightsV1CallSummaryFrom": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 The calling party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.\u0022",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "InsightsV1CallSummaryTo": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 The called party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.\u0022",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "InsightsV1CallSummaryCarrierEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a PSTN call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummaryClientEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a Client call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummarySdkEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains metrics and properties for the SDK sensor library for Client calls. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummarySipEdge": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummaryAttributes": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Attributes capturing call-flow-specific details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#attributes-object) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummaryProperties": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains edge-agnostic call-level details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#properties-object) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummaryTrust": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Contains trusted communications details including Branded Call and verified caller ID. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#trust-object) for the object properties.\u0022"
+      },
+      "InsightsV1CallSummaryAnnotation": {
+        "type": "object",
+        "description": "\u0022\u0060object\u0060 Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties.\u0022"
+      },
+      "InsightsV1VideoRoomSummaryVideoParticipantSummaryProperties": {
+        "type": "object",
+        "description": "Object containing information about the participant\u0027s data from the room. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#properties) for more information."
+      },
+      "InsightsV1VideoRoomSummaryVideoParticipantSummaryPublisherInfo": {
+        "type": "object",
+        "description": "Object containing information about the SDK name and version. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#publisher_info) for more information."
       },
       "InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty": {
         "type": "object",
@@ -253950,11 +253949,46 @@
         },
         "description": "Query result object with dynamic properties based on requested measures and dimensions."
       },
+      "IntelligenceV2CustomOperatorConfig": {
+        "type": "object",
+        "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Operators created by the Account."
+      },
+      "IntelligenceV2OperatorConfig": {
+        "type": "object",
+        "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Custom Operators created by the Account."
+      },
       "IntelligenceV2TranscriptOperatorResultUtteranceResultsItem": {
         "type": "object"
       },
+      "IntelligenceV2TranscriptOperatorResultLabelProbabilities": {
+        "type": "object",
+        "description": "The labels probabilities. This might be available on conversation classify model outputs."
+      },
+      "IntelligenceV2TranscriptOperatorResultExtractResults": {
+        "type": "object",
+        "description": "List of text extraction results. This might be available on classify-extract model outputs."
+      },
+      "IntelligenceV2TranscriptOperatorResultTextGenerationResults": {
+        "type": "object",
+        "description": "Output of a text generation operator for example Conversation Sumamary."
+      },
+      "IntelligenceV2TranscriptOperatorResultJsonResults": {
+        "type": "object"
+      },
+      "IntelligenceV2OperatorTypeConfigSchema": {
+        "type": "object",
+        "description": "JSON Schema for configuring an Operator with this Operator Type. Following https://json-schema.org/"
+      },
+      "IntelligenceV2PrebuiltOperatorConfig": {
+        "type": "object",
+        "description": "Operator configuration, following the schema defined by the Operator Type. Only available on Custom Operators created by the Account, will be empty for Pre-Built Operators."
+      },
       "IntelligenceV2TranscriptSentenceWordsItem": {
         "type": "object"
+      },
+      "IntelligenceV2TranscriptChannel": {
+        "type": "object",
+        "description": "Media Channel describing Transcript Source and Participant Mapping"
       },
       "JsonResultResultProperty": {
         "type": "object",
@@ -254005,6 +254039,30 @@
         "type": "object",
         "description": "\u0022Default value to use in the prompt if no value is provided by the Intelligence Configuration.\nNote: knowledge_base_and_source_ids does not support the default attribute, but all other param types do allow for a default value.\u0022"
       },
+      "IpMessagingV1ServiceLimits": {
+        "type": "object"
+      },
+      "IpMessagingV1ServiceWebhooks": {
+        "type": "object"
+      },
+      "IpMessagingV1ServiceNotifications": {
+        "type": "object"
+      },
+      "IpMessagingV2ServiceChannelChannelWebhookConfiguration": {
+        "type": "object"
+      },
+      "IpMessagingV2ServiceChannelMessageMedia": {
+        "type": "object"
+      },
+      "IpMessagingV2ServiceLimits": {
+        "type": "object"
+      },
+      "IpMessagingV2ServiceNotifications": {
+        "type": "object"
+      },
+      "IpMessagingV2ServiceMedia": {
+        "type": "object"
+      },
       "KnowledgeV1ServiceKnowledgeKnowledgeSourceDetailsProperty": {
         "type": "object",
         "description": "The details of the knowledge source based on the type."
@@ -254026,6 +254084,36 @@
         "description": "The metadata of the chunk."
       },
       "KnowledgeV1ServiceCreatePolicyRequestPolicyDetails": {
+        "type": "object"
+      },
+      "LookupsV1PhoneNumberCallerName": {
+        "type": "object",
+        "description": "The name of the phone number\u0027s owner. If \u0060null\u0060, that information was not available.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "LookupsV1PhoneNumberCarrier": {
+        "type": "object",
+        "description": "The telecom company that provides the phone number."
+      },
+      "LookupsV1PhoneNumberAddOns": {
+        "type": "object",
+        "description": "A JSON string with the results of the Add-ons you specified in the \u0060add_ons\u0060 parameters. For the format of the object, see [Using Add-ons](https://www.twilio.com/docs/add-ons).",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "LookupBatchResponsePhoneNumberQualityScore": {
+        "type": "object"
+      },
+      "LookupBatchResponsePreFill": {
         "type": "object"
       },
       "LookupResponsePhoneNumberQualityScore": {
@@ -254120,14 +254208,30 @@
       "MessagingV1BrandRegistrationsErrorsItem": {
         "type": "object"
       },
+      "MessagingV1DomainCertV4CertInValidation": {
+        "type": "object",
+        "description": "Optional JSON field describing the status and upload date of a new certificate in the process of validation"
+      },
       "MessagingV1TollfreeVerificationRejectionReasonsItem": {
         "type": "object"
+      },
+      "MessagingV1TollfreeVerificationResourceLinks": {
+        "type": "object",
+        "description": "The URLs of the documents associated with the Tollfree Verification resource."
+      },
+      "MessagingV1ServiceUsAppToPersonRateLimits": {
+        "type": "object",
+        "description": "Rate limit and/or classification set by each carrier, Ex. AT\u0026T or T-Mobile."
       },
       "MessagingV1ServiceUsAppToPersonErrorsItem": {
         "type": "object"
       },
       "MessagingV1ServiceUsAppToPersonUsecaseUsAppToPersonUsecasesItem": {
         "type": "object"
+      },
+      "MessagingV1ServiceUsAppToPersonV2RateLimits": {
+        "type": "object",
+        "description": "Rate limit and/or classification set by each carrier, Ex. AT\u0026T or T-Mobile."
       },
       "MessagingV1ServiceUsAppToPersonV2ErrorsItem": {
         "type": "object"
@@ -254147,6 +254251,10 @@
         "type": "object",
         "description": "The phone numbers of the sender."
       },
+      "MessagingV2DomainCertV4CertInValidation": {
+        "type": "object",
+        "description": "Optional JSON field describing the status and upload date of a new certificate in the process of validation"
+      },
       "MessagingV2PresignedUrlResponseUploadFieldsProperty": {
         "type": "object"
       },
@@ -254156,6 +254264,10 @@
           "type": "string"
         },
         "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "MonitorV1EventEventData": {
+        "type": "object",
+        "description": "An object with additional data about the event. The  contents depend on \u0060event_type\u0060. For example, event-types of the form \u0060RESOURCE.updated\u0060, this value contains a \u0060resource_properties\u0060 dictionary that describes the previous and updated properties of the resource."
       },
       "TwilioMonitorV2TwilioServiceErrorResponseParamsProperty": {
         "type": "object",
@@ -254169,6 +254281,34 @@
           "type": "string"
         },
         "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "NotifyV1ServiceNotificationData": {
+        "type": "object",
+        "description": "The custom key-value pairs of the notification\u0027s payload. For FCM and GCM, this value translates to \u0060data\u0060 in the FCM and GCM payloads. FCM and GCM [reserve certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref) that cannot be used in those channels. For APNS, attributes of \u0060data\u0060 are inserted into the APNS payload as custom properties outside of the \u0060aps\u0060 dictionary. In all channels, we reserve keys that start with \u0060twi_\u0060 for future use. Custom keys that start with \u0060twi_\u0060 are not allowed and are rejected as 400 Bad request with no delivery attempted. For SMS, this parameter is not supported and is omitted from deliveries to those channels."
+      },
+      "NotifyV1ServiceNotificationApn": {
+        "type": "object",
+        "description": "The APNS-specific payload that overrides corresponding attributes in the generic payload for APNS Bindings. This property maps to the APNS \u0060Payload\u0060 item, therefore the \u0060aps\u0060 key must be used to change standard attributes. Adds custom key-value pairs to the root of the dictionary. See the [APNS documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html) for more details. We reserve keys that start with \u0060twi_\u0060 for future use. Custom keys that start with \u0060twi_\u0060 are not allowed."
+      },
+      "NotifyV1ServiceNotificationGcm": {
+        "type": "object",
+        "description": "The GCM-specific payload that overrides corresponding attributes in the generic payload for GCM Bindings.  This property maps to the root JSON dictionary. Target parameters \u0060to\u0060, \u0060registration_ids\u0060, and \u0060notification_key\u0060 are not allowed. We reserve keys that start with \u0060twi_\u0060 for future use. Custom keys that start with \u0060twi_\u0060 are not allowed."
+      },
+      "NotifyV1ServiceNotificationFcm": {
+        "type": "object",
+        "description": "The FCM-specific payload that overrides corresponding attributes in the generic payload for FCM Bindings. This property maps to the root JSON dictionary. See the [FCM documentation](https://firebase.google.com/docs/cloud-messaging/http-server-ref#downstream) for more details. Target parameters \u0060to\u0060, \u0060registration_ids\u0060, \u0060condition\u0060, and \u0060notification_key\u0060 are not allowed in this parameter. We reserve keys that start with \u0060twi_\u0060 for future use. Custom keys that start with \u0060twi_\u0060 are not allowed. FCM also [reserves certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref), which cannot be used in that channel."
+      },
+      "NotifyV1ServiceNotificationSms": {
+        "type": "object",
+        "description": "\u0022The SMS-specific payload that overrides corresponding attributes in the generic payload for SMS Bindings.  Each attribute in this value maps to the corresponding \u0060form\u0060 parameter of the Twilio [Message](https://www.twilio.com/docs/sms/api/message-resource) resource.  These parameters of the Message resource are supported in snake case format: \u0060body\u0060, \u0060media_urls\u0060, \u0060status_callback\u0060, and \u0060max_price\u0060.  The \u0060status_callback\u0060 parameter overrides the corresponding parameter in the messaging service, if configured. The \u0060media_urls\u0060 property expects a JSON array.\u0022"
+      },
+      "NotifyV1ServiceNotificationFacebookMessenger": {
+        "type": "object",
+        "description": "Deprecated."
+      },
+      "NotifyV1ServiceNotificationAlexa": {
+        "type": "object",
+        "description": "Deprecated."
       },
       "NumbersV1BulkEligibilityResultsItem": {
         "type": "object"
@@ -254191,19 +254331,66 @@
       "NumbersV2BulkHostedNumberOrderResultsItem": {
         "type": "object"
       },
+      "NumbersV2RegulatoryComplianceEndUserAttributes": {
+        "type": "object",
+        "description": "The set of parameters that are the attributes of the End Users resource which are listed in the End User Types.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
       "NumbersV2RegulatoryComplianceEndUserTypeFieldsItem": {
         "type": "object"
       },
       "NumbersV2RegulatoryComplianceBundleEvaluationResultsItem": {
         "type": "object"
       },
+      "NumbersV2RegulatoryComplianceRegulationRequirements": {
+        "type": "object",
+        "description": "The SID of an object that holds the regulatory information of the phone number country, phone number type, and end user type."
+      },
       "NumbersV2RegulatoryComplianceSupportingDocumentErrorsItem": {
         "type": "object"
+      },
+      "NumbersV2RegulatoryComplianceSupportingDocumentAttributes": {
+        "type": "object",
+        "description": "The set of parameters that are the attributes of the Supporting Documents resource which are listed in the Supporting Document Types.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
       },
       "NumbersV2RegulatoryComplianceSupportingDocumentTypeFieldsItem": {
         "type": "object"
       },
       "SenderIdRegistrationRegistrationInfoItemProperty": {
+        "type": "object"
+      },
+      "PreviewMarketplaceAvailableAddOnConfigurationSchema": {
+        "type": "object",
+        "description": "The JSON object with the configuration that must be provided when installing a given Add-on."
+      },
+      "PreviewMarketplaceInstalledAddOnConfiguration": {
+        "type": "object",
+        "description": "The JSON object that represents the current configuration of installed Add-on."
+      },
+      "PreviewWirelessSimUsagePeriod": {
+        "type": "object"
+      },
+      "PreviewWirelessSimUsageCommandsUsage": {
+        "type": "object"
+      },
+      "PreviewWirelessSimUsageCommandsCosts": {
+        "type": "object"
+      },
+      "PreviewWirelessSimUsageDataUsage": {
+        "type": "object"
+      },
+      "PreviewWirelessSimUsageDataCosts": {
         "type": "object"
       },
       "ServerlessV1ServiceBuildAssetVersionsItem": {
@@ -254215,11 +254402,127 @@
       "ServerlessV1ServiceBuildDependenciesItem": {
         "type": "object"
       },
+      "StudioV1FlowEngagementContext": {
+        "type": "object",
+        "description": "The current state of the execution flow. As your flow executes, we save the state in a flow context. Your widgets can access the data in the flow context as variables, either in configuration fields or in text areas as variable substitution."
+      },
+      "StudioV1FlowEngagementEngagementContextContext": {
+        "type": "object",
+        "description": "As your flow executes, we save the state in what\u0027s called the Flow Context. Any data in the flow context can be accessed by your widgets as variables, either in configuration fields or in text areas as variable substitution."
+      },
+      "StudioV1FlowExecutionContext": {
+        "type": "object",
+        "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "StudioV1FlowExecutionExecutionContextContext": {
+        "type": "object",
+        "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "StudioV1FlowExecutionExecutionStepContext": {
+        "type": "object",
+        "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "StudioV1FlowExecutionExecutionStepExecutionStepContextContext": {
+        "type": "object",
+        "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "StudioV1FlowEngagementStepContext": {
+        "type": "object",
+        "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "StudioV1FlowEngagementStepStepContextContext": {
+        "type": "object",
+        "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "StudioV2FlowExecutionContext": {
+        "type": "object",
+        "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "StudioV2FlowExecutionExecutionContextContext": {
+        "type": "object",
+        "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "StudioV2FlowExecutionExecutionStepContext": {
+        "type": "object",
+        "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "StudioV2FlowExecutionExecutionStepExecutionStepContextContext": {
+        "type": "object",
+        "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "StudioV2FlowDefinition": {
+        "type": "object",
+        "description": "JSON representation of flow definition."
+      },
       "StudioV2FlowErrorsItem": {
         "type": "object"
       },
       "StudioV2FlowWarningsItem": {
         "type": "object"
+      },
+      "StudioV2FlowFlowRevisionDefinition": {
+        "type": "object",
+        "description": "JSON representation of flow definition."
       },
       "StudioV2FlowFlowRevisionErrorsItem": {
         "type": "object"
@@ -254233,11 +254536,111 @@
       "SupersimV1SettingsUpdatePackagesItem": {
         "type": "object"
       },
+      "SupersimV1UsageRecordPeriod": {
+        "type": "object",
+        "description": "The time period for which the usage is reported. The period is represented as a pair of \u0060start_time\u0060 and \u0060end_time\u0060 timestamps specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format."
+      },
+      "SyncV1ServiceDocumentData": {
+        "type": "object",
+        "description": "An arbitrary, schema-less object that the Sync Document stores. Can be up to 16 KiB in length.",
+        "x-twilio": {
+          "pii": {
+            "handling": "sensitive",
+            "deleteSla": 7
+          }
+        }
+      },
+      "SyncV1ServiceSyncStreamStreamMessageData": {
+        "type": "object",
+        "description": "An arbitrary, schema-less object that contains the Stream Message body. Can be up to 4 KiB in length.",
+        "x-twilio": {
+          "pii": {
+            "handling": "sensitive",
+            "deleteSla": 0
+          }
+        }
+      },
+      "SyncV1ServiceSyncListSyncListItemData": {
+        "type": "object",
+        "description": "An arbitrary, schema-less object that the List Item stores. Can be up to 16 KiB in length.",
+        "x-twilio": {
+          "pii": {
+            "handling": "sensitive",
+            "deleteSla": 7
+          }
+        }
+      },
+      "SyncV1ServiceSyncMapSyncMapItemData": {
+        "type": "object",
+        "description": "An arbitrary, schema-less object that the Map Item stores. Can be up to 16 KiB in length.",
+        "x-twilio": {
+          "pii": {
+            "handling": "sensitive",
+            "deleteSla": 7
+          }
+        }
+      },
+      "TaskrouterV1WorkspaceEventEventData": {
+        "type": "object",
+        "description": "Data about the event. For more information, see [Event types](https://www.twilio.com/docs/taskrouter/api/event#event-types)."
+      },
       "TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatisticsTaskQueueDataItem": {
         "type": "object"
       },
+      "TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsSplitByWaitTime": {
+        "type": "object",
+        "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds."
+      },
+      "TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilAccepted": {
+        "type": "object",
+        "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks accepted while in the TaskQueue. Calculation is based on the time when the Tasks were created. For transfers, the wait duration is counted from the moment ***the Task was created***, and not from when the transfer was initiated."
+      },
+      "TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationUntilCanceled": {
+        "type": "object",
+        "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks canceled while in the TaskQueue."
+      },
+      "TaskrouterV1WorkspaceTaskQueueTaskQueueCumulativeStatisticsWaitDurationInQueueUntilAccepted": {
+        "type": "object",
+        "description": "The relative wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks accepted while in the TaskQueue. Calculation is based on the time when the Tasks entered the TaskQueue."
+      },
       "TaskrouterV1WorkspaceTaskQueueTaskQueueRealTimeStatisticsActivityStatisticsItem": {
         "type": "object"
+      },
+      "TaskrouterV1WorkspaceTaskQueueTaskQueueRealTimeStatisticsTasksByPriority": {
+        "type": "object",
+        "description": "\u0022The number of Tasks by priority. For example: \u0060{\\\u00220\\\u0022: \\\u002210\\\u0022, \\\u002299\\\u0022: \\\u00225\\\u0022}\u0060 shows 10 Tasks at priority 0 and 5 at priority 99.\u0022"
+      },
+      "TaskrouterV1WorkspaceTaskQueueTaskQueueRealTimeStatisticsTasksByStatus": {
+        "type": "object",
+        "description": "\u0022The number of Tasks by their current status. For example: \u0060{\\\u0022pending\\\u0022: \\\u00221\\\u0022, \\\u0022reserved\\\u0022: \\\u00223\\\u0022, \\\u0022assigned\\\u0022: \\\u00222\\\u0022, \\\u0022completed\\\u0022: \\\u00225\\\u0022}\u0060.\u0022"
+      },
+      "TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsCumulative": {
+        "type": "object",
+        "description": "An object that contains the cumulative statistics for the TaskQueue."
+      },
+      "TaskrouterV1WorkspaceTaskQueueTaskQueueStatisticsRealtime": {
+        "type": "object",
+        "description": "An object that contains the real-time statistics for the TaskQueue."
+      },
+      "TaskrouterV1WorkspaceTaskQueueTaskQueuesStatisticsCumulative": {
+        "type": "object",
+        "description": "An object that contains the cumulative statistics for the TaskQueues."
+      },
+      "TaskrouterV1WorkspaceTaskQueueTaskQueuesStatisticsRealtime": {
+        "type": "object",
+        "description": "An object that contains the real-time statistics for the TaskQueues."
+      },
+      "TaskrouterV1WorkspaceWorkerWorkerInstanceStatisticsCumulative": {
+        "type": "object",
+        "description": "An object that contains the cumulative statistics for the Worker."
+      },
+      "TaskrouterV1WorkspaceWorkerWorkerStatisticsRealtime": {
+        "type": "object",
+        "description": "An object that contains the real-time statistics for the Worker."
+      },
+      "TaskrouterV1WorkspaceWorkerWorkerStatisticsCumulative": {
+        "type": "object",
+        "description": "An object that contains the cumulative statistics for the Worker."
       },
       "TaskrouterV1WorkspaceWorkerWorkersCumulativeStatisticsActivityDurationsItem": {
         "type": "object"
@@ -254245,8 +254648,68 @@
       "TaskrouterV1WorkspaceWorkerWorkersRealTimeStatisticsActivityStatisticsItem": {
         "type": "object"
       },
+      "TaskrouterV1WorkspaceWorkflowWorkflowCumulativeStatisticsSplitByWaitTime": {
+        "type": "object",
+        "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds."
+      },
+      "TaskrouterV1WorkspaceWorkflowWorkflowCumulativeStatisticsWaitDurationUntilAccepted": {
+        "type": "object",
+        "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks that were accepted."
+      },
+      "TaskrouterV1WorkspaceWorkflowWorkflowCumulativeStatisticsWaitDurationUntilCanceled": {
+        "type": "object",
+        "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks that were canceled."
+      },
+      "TaskrouterV1WorkspaceWorkflowWorkflowRealTimeStatisticsTasksByPriority": {
+        "type": "object",
+        "description": "\u0022The number of Tasks by priority. For example: \u0060{\\\u00220\\\u0022: \\\u002210\\\u0022, \\\u002299\\\u0022: \\\u00225\\\u0022}\u0060 shows 10 Tasks at priority 0 and 5 at priority 99.\u0022"
+      },
+      "TaskrouterV1WorkspaceWorkflowWorkflowRealTimeStatisticsTasksByStatus": {
+        "type": "object",
+        "description": "\u0022The number of Tasks by their current status. For example: \u0060{\\\u0022pending\\\u0022: \\\u00221\\\u0022, \\\u0022reserved\\\u0022: \\\u00223\\\u0022, \\\u0022assigned\\\u0022: \\\u00222\\\u0022, \\\u0022completed\\\u0022: \\\u00225\\\u0022}\u0060.\u0022"
+      },
+      "TaskrouterV1WorkspaceWorkflowWorkflowStatisticsCumulative": {
+        "type": "object",
+        "description": "An object that contains the cumulative statistics for the Workflow."
+      },
+      "TaskrouterV1WorkspaceWorkflowWorkflowStatisticsRealtime": {
+        "type": "object",
+        "description": "An object that contains the real-time statistics for the Workflow."
+      },
+      "TaskrouterV1WorkspaceWorkspaceCumulativeStatisticsSplitByWaitTime": {
+        "type": "object",
+        "description": "A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds."
+      },
+      "TaskrouterV1WorkspaceWorkspaceCumulativeStatisticsWaitDurationUntilAccepted": {
+        "type": "object",
+        "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks that were accepted."
+      },
+      "TaskrouterV1WorkspaceWorkspaceCumulativeStatisticsWaitDurationUntilCanceled": {
+        "type": "object",
+        "description": "The wait duration statistics (\u0060avg\u0060, \u0060min\u0060, \u0060max\u0060, \u0060total\u0060) for Tasks that were canceled."
+      },
       "TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsActivityStatisticsItem": {
         "type": "object"
+      },
+      "TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByPriority": {
+        "type": "object",
+        "description": "\u0022The number of Tasks by priority. For example: \u0060{\\\u00220\\\u0022: \\\u002210\\\u0022, \\\u002299\\\u0022: \\\u00225\\\u0022}\u0060 shows 10 Tasks at priority 0 and 5 at priority 99.\u0022"
+      },
+      "TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByStatus": {
+        "type": "object",
+        "description": "\u0022The number of Tasks by their current status. For example: \u0060{\\\u0022pending\\\u0022: \\\u00221\\\u0022, \\\u0022reserved\\\u0022: \\\u00223\\\u0022, \\\u0022assigned\\\u0022: \\\u00222\\\u0022, \\\u0022completed\\\u0022: \\\u00225\\\u0022}\u0060.\u0022"
+      },
+      "TaskrouterV1WorkspaceWorkspaceStatisticsRealtime": {
+        "type": "object",
+        "description": "An object that contains the real-time statistics for the Workspace."
+      },
+      "TaskrouterV1WorkspaceWorkspaceStatisticsCumulative": {
+        "type": "object",
+        "description": "An object that contains the cumulative statistics for the Workspace."
+      },
+      "TrunkingV1TrunkRecordingProperty": {
+        "type": "object",
+        "description": "\u0022The recording settings for the trunk. Can be: \u0060do-not-record\u0060, \u0060record-from-ringing\u0060, \u0060record-from-answer\u0060. If set to \u0060record-from-ringing\u0060 or \u0060record-from-answer\u0060, all calls going through the trunk will be recorded. The only way to change recording parameters is on a sub-resource of a Trunk after it has been created. e.g.\u0060/Trunks/[Trunk_SID]/Recording -XPOST -d\u0027Mode=record-from-answer\u0027\u0060. See [Recording](https://www.twilio.com/docs/sip-trunking#recording) for more information.\u0022"
       },
       "TrusthubV1CustomerProfileErrorsItem": {
         "type": "object"
@@ -254254,8 +254717,32 @@
       "TrusthubV1CustomerProfileCustomerProfileEvaluationResultsItem": {
         "type": "object"
       },
+      "TrusthubV1EndUserAttributes": {
+        "type": "object",
+        "description": "The set of parameters that are the attributes of the End Users resource which are listed in the End User Types.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
       "TrusthubV1EndUserTypeFieldsItem": {
         "type": "object"
+      },
+      "TrusthubV1PoliciesRequirements": {
+        "type": "object",
+        "description": "The SID of an object that holds the policy information"
+      },
+      "TrusthubV1SupportingDocumentAttributes": {
+        "type": "object",
+        "description": "The set of parameters that are the attributes of the Supporting Documents resource which are listed in the Supporting Document Types.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
       },
       "TrusthubV1SupportingDocumentTypeFieldsItem": {
         "type": "object"
@@ -254266,17 +254753,180 @@
       "TrusthubV1TrustProductTrustProductEvaluationResultsItem": {
         "type": "object"
       },
+      "VerifyV2ServiceEntityChallengeDetails": {
+        "type": "object",
+        "description": "Details provided to give context about the Challenge. Intended to be shown to the end user.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "VerifyV2ServiceEntityChallengeHiddenDetails": {
+        "type": "object",
+        "description": "\u0022Details provided to give context about the Challenge. Intended to be hidden from the end user. It must be a stringified JSON with only strings values eg. \u0060{\\\u0022ip\\\u0022: \\\u0022172.168.1.234\\\u0022}\u0060\u0022",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "VerifyV2ServiceEntityChallengeMetadata": {
+        "type": "object",
+        "description": "\u0022Custom metadata associated with the challenge. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. \u0060{\\\u0022os\\\u0022: \\\u0022Android\\\u0022}\u0060. Can be up to 1024 characters in length.\u0022",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "VerifyV2ServiceEntityFactorConfig": {
+        "type": "object",
+        "description": "An object that contains configurations specific to a \u0060factor_type\u0060."
+      },
+      "VerifyV2ServiceEntityFactorMetadata": {
+        "type": "object",
+        "description": "\u0022Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. \u0060{\\\u0022os\\\u0022: \\\u0022Android\\\u0022}\u0060. Can be up to 1024 characters in length.\u0022",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "VerifyV2FormForms": {
+        "type": "object",
+        "description": "Object that contains the available forms for this type. This available forms are given in the standard [JSON Schema](https://json-schema.org/) format"
+      },
+      "VerifyV2FormFormMeta": {
+        "type": "object",
+        "description": "Additional information for the available forms for this type. E.g. The separator string used for \u0060binding\u0060 in a Factor push."
+      },
+      "VerifyV2ServiceEntityNewFactorBinding": {
+        "type": "object",
+        "description": "Contains the \u0060factor_type\u0060 specific secret and metadata.\nFor push, this is \u0060binding.public_key\u0060 and \u0060binding.alg\u0060.\nFor totp, this is \u0060binding.secret\u0060 and \u0060binding.uri\u0060. The \u0060binding.uri\u0060 property is generated following the [google authenticator key URI format](https://github.com/google/google-authenticator/wiki/Key-Uri-Format), and \u0060Factor.friendly_name\u0060 is used for the \u201Caccountname\u201D value and \u0060Service.friendly_name\u0060 or \u0060Service.totp.issuer\u0060 is used for the \u0060issuer\u0060 value.\n\n\nThe Binding property is ONLY returned upon Factor creation."
+      },
+      "VerifyV2ServiceEntityNewFactorOptions": {
+        "type": "object"
+      },
+      "VerifyV2ServiceEntityNewFactorConfig": {
+        "type": "object",
+        "description": "An object that contains configurations specific to a \u0060factor_type\u0060."
+      },
+      "VerifyV2ServiceEntityNewFactorMetadata": {
+        "type": "object",
+        "description": "\u0022Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. \u0060{\\\u0022os\\\u0022: \\\u0022Android\\\u0022}\u0060. Can be up to 1024 characters in length.\u0022",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "VerifyV2ServicePush": {
+        "type": "object",
+        "description": "Configurations for the Push factors (channel) created under this Service."
+      },
+      "VerifyV2ServiceTotp": {
+        "type": "object",
+        "description": "Configurations for the TOTP factors (channel) created under this Service."
+      },
+      "VerifyV2ServiceWhatsapp": {
+        "type": "object"
+      },
+      "VerifyV2ServicePasskeys": {
+        "type": "object"
+      },
+      "VerifyV2ServiceVerificationLookup": {
+        "type": "object",
+        "description": "Information about the phone number being verified."
+      },
       "VerifyV2ServiceVerificationSendCodeAttemptsItem": {
         "type": "object"
       },
+      "VerifyV2ServiceVerificationSna": {
+        "type": "object",
+        "description": "The set of fields used for a silent network auth (\u0060sna\u0060) verification. Contains a single field with the URL to be invoked to verify the phone number."
+      },
+      "VerifyV2VerificationAttemptPrice": {
+        "type": "object",
+        "description": "An object containing the charge for this verification attempt related to the channel costs and the currency used. The costs related to the succeeded verifications are not included. May not be immediately available. More information on pricing is available [here](https://www.twilio.com/en-us/verify/pricing)."
+      },
+      "VerifyV2VerificationAttemptChannelData": {
+        "type": "object",
+        "description": "An object containing the channel specific information for an attempt."
+      },
       "VerifyV2ServiceVerificationCheckSnaAttemptsErrorCodesItem": {
         "type": "object"
+      },
+      "VerifyV2VerificationTemplateTranslations": {
+        "type": "object",
+        "description": "An object that contains the different translations of the template. Every translation is identified by the language short name and contains its respective information as the approval status, text and created/modified date."
+      },
+      "VideoV1CompositionVideoLayout": {
+        "type": "object",
+        "description": "An object that describes the video layout of the composition in terms of regions. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "VideoV1CompositionHookVideoLayout": {
+        "type": "object",
+        "description": "A JSON object that describes the video layout of the composition in terms of regions as specified in the HTTP POST request that created the CompositionHook resource. See [POST Parameters](https://www.twilio.com/docs/video/api/compositions-resource#http-post-parameters) for more information. Please, be aware that either video_layout or audio_sources have to be provided to get a valid creation request",
+        "x-twilio": {
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "VideoV1RecordingGroupingSids": {
+        "type": "object",
+        "description": "A list of SIDs related to the recording. Includes the \u0060room_sid\u0060 and \u0060participant_sid\u0060."
+      },
+      "VideoV1RoomRoomRecordingGroupingSids": {
+        "type": "object",
+        "description": "A list of SIDs related to the Recording. Includes the \u0060room_sid\u0060 and \u0060participant_sid\u0060."
       },
       "ConnectorPageMetaProperty2": {
         "type": "object"
       },
       "PhoneNumberPageMetaProperty": {
         "type": "object"
+      },
+      "WirelessV1AccountUsageRecordPeriod": {
+        "type": "object",
+        "description": "The time period for which usage is reported. Contains \u0060start\u0060 and \u0060end\u0060 properties that describe the period using GMT date-time values specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format."
+      },
+      "WirelessV1AccountUsageRecordCommands": {
+        "type": "object",
+        "description": "An object that describes the aggregated Commands usage for all SIMs during the specified period. See [Commands Usage Object](https://www.twilio.com/docs/iot/wireless/api/account-usagerecord-resource#commands-usage-object)."
+      },
+      "WirelessV1AccountUsageRecordData": {
+        "type": "object",
+        "description": "An object that describes the aggregated Data usage for all SIMs over the period. See [Data Usage Object](https://www.twilio.com/docs/iot/wireless/api/account-usagerecord-resource#data-usage-object)."
+      },
+      "WirelessV1SimDataSessionCellLocationEstimate": {
+        "type": "object",
+        "description": "An object that describes the estimated location in latitude and longitude where the device\u0027s Data Session took place. The location is derived from the \u0060cell_id\u0060 when the Data Session was last updated. See [Cell Location Estimate Object](https://www.twilio.com/docs/iot/wireless/api/datasession-resource#cell-location-estimate-object). "
+      },
+      "WirelessV1SimUsageRecordPeriod": {
+        "type": "object",
+        "description": "The time period for which the usage is reported. Contains \u0060start\u0060 and \u0060end\u0060 datetime values given as GMT in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format."
+      },
+      "WirelessV1SimUsageRecordCommands": {
+        "type": "object",
+        "description": "An object that describes the SIM\u0027s usage of Commands during the specified period. See [Commands Usage Object](https://www.twilio.com/docs/iot/wireless/api/sim-usagerecord-resource#commands-usage-object)."
+      },
+      "WirelessV1SimUsageRecordData": {
+        "type": "object",
+        "description": "An object that describes the SIM\u0027s data usage during the specified period. See [Data Usage Object](https://www.twilio.com/docs/iot/wireless/api/sim-usagerecord-resource#data-usage-object)."
       },
       "ConversationsV2ConversationConfigurationChannelSettings": {
         "type": "object",
@@ -264767,6 +265417,24 @@
         },
         "description": "The result of a WebAuthn credential registration via \u0060navigator.credentials.create()\u0060, as specified in [AuthenticatorAttestationResponse](https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse)."
       },
+      "TwilioVerifyV2UpdatePasskeysFactor200ResponseConfig": {
+        "type": "object",
+        "description": "An object that contains configurations specific to a \u0060factor_type\u0060.",
+        "x-twilio": {
+          "shortDescription": "Configurations for a \u0060factor_type\u0060."
+        }
+      },
+      "TwilioVerifyV2UpdatePasskeysFactor200ResponseMetadata": {
+        "type": "object",
+        "description": "Custom metadata associated with the factor.",
+        "x-twilio": {
+          "shortDescription": "Metadata of the factor.",
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
       "TwilioVerifyV2CreateNewFactorPasskeyRequestConfig": {
         "type": "object",
         "properties": {
@@ -264781,6 +265449,67 @@
           },
           "user_verification": {
             "$ref": "#/components/schemas/TwilioVerifyV2CreateNewFactorPasskeyRequestConfigUserVerification"
+          }
+        }
+      },
+      "TwilioVerifyV2CreateNewFactorPasskey201ResponseBinding": {
+        "type": "object",
+        "description": "Contains the \u0060factor_type\u0060 specific secret and metadata. The Binding property is ONLY returned upon Factor creation.",
+        "x-twilio": {
+          "shortDescription": "Binding of the factor"
+        }
+      },
+      "TwilioVerifyV2CreateNewFactorPasskey201ResponseOptions": {
+        "type": "object"
+      },
+      "TwilioVerifyV2CreateNewFactorPasskey201ResponseConfig": {
+        "type": "object",
+        "description": "An object that contains configurations specific to a \u0060factor_type\u0060.",
+        "x-twilio": {
+          "shortDescription": "Configurations for a \u0060factor_type\u0060."
+        }
+      },
+      "TwilioVerifyV2CreateNewFactorPasskey201ResponseMetadata": {
+        "type": "object",
+        "description": "Custom metadata associated with the factor.",
+        "x-twilio": {
+          "shortDescription": "Metadata of the factor.",
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "TwilioVerifyV2CreateChallengePasskeys201ResponseDetails": {
+        "type": "object",
+        "description": "Details provided to give context about the Challenge.",
+        "x-twilio": {
+          "shortDescription": "Details about the Challenge.",
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "TwilioVerifyV2CreateChallengePasskeys201ResponseHiddenDetails": {
+        "type": "object",
+        "description": "Details provided to give context about the Challenge.",
+        "x-twilio": {
+          "shortDescription": "Hidden details about the Challenge",
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "TwilioVerifyV2CreateChallengePasskeys201ResponseMetadata": {
+        "type": "object",
+        "description": "Custom metadata associated with the challenge.",
+        "x-twilio": {
+          "shortDescription": "Metadata of the challenge.",
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
           }
         }
       },
@@ -264826,6 +265555,39 @@
           }
         },
         "description": "The result of a WebAuthn authentication via a \u0060navigator.credentials.get()\u0060 request, as specified in [AuthenticatorAttestationResponse](https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse)."
+      },
+      "TwilioVerifyV2UpdateChallengePasskeys200ResponseDetails": {
+        "type": "object",
+        "description": "Details provided to give context about the Challenge.",
+        "x-twilio": {
+          "shortDescription": "Details about the Challenge.",
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "TwilioVerifyV2UpdateChallengePasskeys200ResponseHiddenDetails": {
+        "type": "object",
+        "description": "Details provided to give context about the Challenge.",
+        "x-twilio": {
+          "shortDescription": "Hidden details about the Challenge",
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
+      },
+      "TwilioVerifyV2UpdateChallengePasskeys200ResponseMetadata": {
+        "type": "object",
+        "description": "Custom metadata associated with the challenge.",
+        "x-twilio": {
+          "shortDescription": "Metadata of the challenge.",
+          "pii": {
+            "handling": "standard",
+            "deleteSla": 30
+          }
+        }
       },
       "TwilioVerifyV2UpdateChallengePasskeys200ResponseLinks": {
         "type": "object",

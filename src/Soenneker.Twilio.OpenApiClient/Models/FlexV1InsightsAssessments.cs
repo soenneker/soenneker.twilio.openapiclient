@@ -49,10 +49,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Assessment Details associated with an assessment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Assessment { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsAssessmentsAssessment? Assessment { get; set; }
 #nullable restore
 #else
-        public UntypedNode Assessment { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsAssessmentsAssessment Assessment { get; set; }
 #endif
         /// <summary>The SID of the assessment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -149,7 +149,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "agent_id", n => { AgentId = n.GetStringValue(); } },
                 { "answer_id", n => { AnswerId = n.GetStringValue(); } },
                 { "answer_text", n => { AnswerText = n.GetStringValue(); } },
-                { "assessment", n => { Assessment = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "assessment", n => { Assessment = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsAssessmentsAssessment>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsAssessmentsAssessment.CreateFromDiscriminatorValue); } },
                 { "assessment_sid", n => { AssessmentSid = n.GetStringValue(); } },
                 { "offset", n => { Offset = n.GetStringValue(); } },
                 { "report", n => { Report = n.GetBoolValue(); } },
@@ -172,7 +172,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("agent_id", AgentId);
             writer.WriteStringValue("answer_id", AnswerId);
             writer.WriteStringValue("answer_text", AnswerText);
-            writer.WriteObjectValue<UntypedNode>("assessment", Assessment);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsAssessmentsAssessment>("assessment", Assessment);
             writer.WriteStringValue("assessment_sid", AssessmentSid);
             writer.WriteStringValue("offset", Offset);
             writer.WriteBoolValue("report", Report);

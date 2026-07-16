@@ -25,18 +25,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that contains the cumulative statistics for the Worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Cumulative { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkerStatisticsCumulative? Cumulative { get; set; }
 #nullable restore
 #else
-        public UntypedNode Cumulative { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkerStatisticsCumulative Cumulative { get; set; }
 #endif
         /// <summary>An object that contains the real-time statistics for the Worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Realtime { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkerStatisticsRealtime? Realtime { get; set; }
 #nullable restore
 #else
-        public UntypedNode Realtime { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkerStatisticsRealtime Realtime { get; set; }
 #endif
         /// <summary>The absolute URL of the Worker statistics resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,8 +80,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "cumulative", n => { Cumulative = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "realtime", n => { Realtime = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "cumulative", n => { Cumulative = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkerStatisticsCumulative>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkerStatisticsCumulative.CreateFromDiscriminatorValue); } },
+                { "realtime", n => { Realtime = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkerStatisticsRealtime>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkerStatisticsRealtime.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "workspace_sid", n => { WorkspaceSid = n.GetStringValue(); } },
             };
@@ -94,8 +94,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<UntypedNode>("cumulative", Cumulative);
-            writer.WriteObjectValue<UntypedNode>("realtime", Realtime);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkerStatisticsCumulative>("cumulative", Cumulative);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkerStatisticsRealtime>("realtime", Realtime);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("workspace_sid", WorkspaceSid);
             writer.WriteAdditionalData(AdditionalData);

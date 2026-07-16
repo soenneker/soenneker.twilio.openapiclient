@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The bindings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Bindings { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationWithParticipantsBindings? Bindings { get; set; }
 #nullable restore
 #else
-        public UntypedNode Bindings { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationWithParticipantsBindings Bindings { get; set; }
 #endif
         /// <summary>The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) this conversation belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,10 +87,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Timer date values representing state update for this conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Timers { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationWithParticipantsTimers? Timers { get; set; }
 #nullable restore
 #else
-        public UntypedNode Timers { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationWithParticipantsTimers Timers { get; set; }
 #endif
         /// <summary>An application-defined string that uniquely identifies the resource. It can be used to address the resource in place of the resource&apos;s `sid` in the URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -135,7 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "attributes", n => { Attributes = n.GetStringValue(); } },
-                { "bindings", n => { Bindings = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "bindings", n => { Bindings = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationWithParticipantsBindings>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationWithParticipantsBindings.CreateFromDiscriminatorValue); } },
                 { "chat_service_sid", n => { ChatServiceSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
@@ -144,7 +144,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "messaging_service_sid", n => { MessagingServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "state", n => { State = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceConversationWithParticipantsEnumState>(); } },
-                { "timers", n => { Timers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "timers", n => { Timers = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationWithParticipantsTimers>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationWithParticipantsTimers.CreateFromDiscriminatorValue); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -158,7 +158,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("attributes", Attributes);
-            writer.WriteObjectValue<UntypedNode>("bindings", Bindings);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationWithParticipantsBindings>("bindings", Bindings);
             writer.WriteStringValue("chat_service_sid", ChatServiceSid);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
@@ -167,7 +167,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("messaging_service_sid", MessagingServiceSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceConversationWithParticipantsEnumState>("state", State);
-            writer.WriteObjectValue<UntypedNode>("timers", Timers);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConversationWithParticipantsTimers>("timers", Timers);
             writer.WriteStringValue("unique_name", UniqueName);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
