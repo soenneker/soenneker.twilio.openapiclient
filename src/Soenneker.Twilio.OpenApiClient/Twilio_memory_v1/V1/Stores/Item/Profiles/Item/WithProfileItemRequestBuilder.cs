@@ -5,7 +5,6 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Models;
 using Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.ConversationSummaries;
-using Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Events;
 using Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Identifiers;
 using Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Observations;
 using Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Recall;
@@ -27,11 +26,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         public global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.ConversationSummaries.ConversationSummariesRequestBuilder ConversationSummaries
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.ConversationSummaries.ConversationSummariesRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The Events property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Events.EventsRequestBuilder Events
-        {
-            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Events.EventsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The Identifiers property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profiles.Item.Identifiers.IdentifiersRequestBuilder Identifiers
