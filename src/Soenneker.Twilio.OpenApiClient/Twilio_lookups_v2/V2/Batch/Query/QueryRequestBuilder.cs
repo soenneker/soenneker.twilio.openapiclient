@@ -36,22 +36,22 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.Batch.Query
         /// <summary>
         /// Discussions made regarding how to help the customer to correlation request and response objects:- Respecting the natural order (requests vs. response)- Using phone numbers as unique key- Adding a correlation_id key
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseResponseJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseSchema"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseResponseJson?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2CreateBulkLookupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseSchema?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2CreateBulkLookupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseResponseJson> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2CreateBulkLookupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseSchema> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2CreateBulkLookupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseResponseJson>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseResponseJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseSchema>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseSchema.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Discussions made regarding how to help the customer to correlation request and response objects:- Respecting the natural order (requests vs. response)- Using phone numbers as unique key- Adding a correlation_id key

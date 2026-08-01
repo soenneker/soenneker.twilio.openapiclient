@@ -14,21 +14,53 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The meta property</summary>
+        /// <summary>The end property</summary>
+        public int? End { get; set; }
+        /// <summary>The first_page_uri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListParticipantResponseMeta? Meta { get; set; }
+        public string? FirstPageUri { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListParticipantResponseMeta Meta { get; set; }
+        public string FirstPageUri { get; set; }
 #endif
+        /// <summary>The next_page_uri property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? NextPageUri { get; set; }
+#nullable restore
+#else
+        public string NextPageUri { get; set; }
+#endif
+        /// <summary>The page property</summary>
+        public int? Page { get; set; }
+        /// <summary>The page_size property</summary>
+        public int? PageSize { get; set; }
         /// <summary>The participants property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant>? Participants { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceParticipant>? Participants { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant> Participants { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceParticipant> Participants { get; set; }
+#endif
+        /// <summary>The previous_page_uri property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PreviousPageUri { get; set; }
+#nullable restore
+#else
+        public string PreviousPageUri { get; set; }
+#endif
+        /// <summary>The start property</summary>
+        public int? Start { get; set; }
+        /// <summary>The uri property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Uri { get; set; }
+#nullable restore
+#else
+        public string Uri { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListParticipantResponse"/> and sets the default values.
@@ -55,8 +87,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListParticipantResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListParticipantResponseMeta.CreateFromDiscriminatorValue); } },
-                { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant>(global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "end", n => { End = n.GetIntValue(); } },
+                { "first_page_uri", n => { FirstPageUri = n.GetStringValue(); } },
+                { "next_page_uri", n => { NextPageUri = n.GetStringValue(); } },
+                { "page", n => { Page = n.GetIntValue(); } },
+                { "page_size", n => { PageSize = n.GetIntValue(); } },
+                { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceParticipant>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "previous_page_uri", n => { PreviousPageUri = n.GetStringValue(); } },
+                { "start", n => { Start = n.GetIntValue(); } },
+                { "uri", n => { Uri = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +105,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListParticipantResponseMeta>("meta", Meta);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionParticipant>("participants", Participants);
+            writer.WriteIntValue("end", End);
+            writer.WriteStringValue("first_page_uri", FirstPageUri);
+            writer.WriteStringValue("next_page_uri", NextPageUri);
+            writer.WriteIntValue("page", Page);
+            writer.WriteIntValue("page_size", PageSize);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceParticipant>("participants", Participants);
+            writer.WriteStringValue("previous_page_uri", PreviousPageUri);
+            writer.WriteIntValue("start", Start);
+            writer.WriteStringValue("uri", Uri);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

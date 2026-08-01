@@ -17,18 +17,50 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The conferences property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1Conference>? Conferences { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConference>? Conferences { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1Conference> Conferences { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConference> Conferences { get; set; }
 #endif
-        /// <summary>The meta property</summary>
+        /// <summary>The end property</summary>
+        public int? End { get; set; }
+        /// <summary>The first_page_uri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListConferenceResponseMeta? Meta { get; set; }
+        public string? FirstPageUri { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListConferenceResponseMeta Meta { get; set; }
+        public string FirstPageUri { get; set; }
+#endif
+        /// <summary>The next_page_uri property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? NextPageUri { get; set; }
+#nullable restore
+#else
+        public string NextPageUri { get; set; }
+#endif
+        /// <summary>The page property</summary>
+        public int? Page { get; set; }
+        /// <summary>The page_size property</summary>
+        public int? PageSize { get; set; }
+        /// <summary>The previous_page_uri property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PreviousPageUri { get; set; }
+#nullable restore
+#else
+        public string PreviousPageUri { get; set; }
+#endif
+        /// <summary>The start property</summary>
+        public int? Start { get; set; }
+        /// <summary>The uri property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Uri { get; set; }
+#nullable restore
+#else
+        public string Uri { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListConferenceResponse"/> and sets the default values.
@@ -55,8 +87,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "conferences", n => { Conferences = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1Conference>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1Conference.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListConferenceResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ListConferenceResponseMeta.CreateFromDiscriminatorValue); } },
+                { "conferences", n => { Conferences = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConference>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConference.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "end", n => { End = n.GetIntValue(); } },
+                { "first_page_uri", n => { FirstPageUri = n.GetStringValue(); } },
+                { "next_page_uri", n => { NextPageUri = n.GetStringValue(); } },
+                { "page", n => { Page = n.GetIntValue(); } },
+                { "page_size", n => { PageSize = n.GetIntValue(); } },
+                { "previous_page_uri", n => { PreviousPageUri = n.GetStringValue(); } },
+                { "start", n => { Start = n.GetIntValue(); } },
+                { "uri", n => { Uri = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +105,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1Conference>("conferences", Conferences);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ListConferenceResponseMeta>("meta", Meta);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConference>("conferences", Conferences);
+            writer.WriteIntValue("end", End);
+            writer.WriteStringValue("first_page_uri", FirstPageUri);
+            writer.WriteStringValue("next_page_uri", NextPageUri);
+            writer.WriteIntValue("page", Page);
+            writer.WriteIntValue("page_size", PageSize);
+            writer.WriteStringValue("previous_page_uri", PreviousPageUri);
+            writer.WriteIntValue("start", Start);
+            writer.WriteStringValue("uri", Uri);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
