@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ObservationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_memory_v1/v1/Stores/{storeId}/Profiles/{profileId}/Observations{?createdAfter*,createdBefore*,orderBy*,pageSize*,pageToken*,source*}", pathParameters)
+        public ObservationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_memory_v1/v1/Stores/{storeId}/Profiles/{profileId}/Observations{?conversationId*,createdAfter*,createdBefore*,orderBy*,pageSize*,pageToken*,source*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ObservationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_memory_v1/v1/Stores/{storeId}/Profiles/{profileId}/Observations{?createdAfter*,createdBefore*,orderBy*,pageSize*,pageToken*,source*}", rawUrl)
+        public ObservationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_memory_v1/v1/Stores/{storeId}/Profiles/{profileId}/Observations{?conversationId*,createdAfter*,createdBefore*,orderBy*,pageSize*,pageToken*,source*}", rawUrl)
         {
         }
         /// <summary>
@@ -174,6 +174,16 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ObservationsRequestBuilderGetQueryParameters 
         {
+            /// <summary>Filter by conversation ID. Returns only items associated with the specified conversation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("conversationId")]
+            public string? ConversationId { get; set; }
+#nullable restore
+#else
+            [QueryParameter("conversationId")]
+            public string ConversationId { get; set; }
+#endif
             /// <summary>Filter observations created after this timestamp (inclusive).</summary>
             [QueryParameter("createdAfter")]
             public DateTimeOffset? CreatedAfter { get; set; }

@@ -28,7 +28,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string NextToken { get; set; }
 #endif
-        /// <summary>The pageSize property</summary>
+        /// <summary>The number of items returned in this page of results.</summary>
         public int? PageSize { get; set; }
         /// <summary>The previousToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -38,13 +38,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string PreviousToken { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Meta"/> and sets the default values.
-        /// </summary>
-        public TwilioMemoryV1Meta()
-        {
-            PageSize = 50;
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>

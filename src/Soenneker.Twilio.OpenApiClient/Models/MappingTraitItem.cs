@@ -21,15 +21,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Expression { get; set; }
 #endif
-        /// <summary>The name of the field/column in the source. Deprecated in favor of expression.</summary>
-        [Obsolete("")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? FieldName { get; set; }
-#nullable restore
-#else
-        public string FieldName { get; set; }
-#endif
         /// <summary>The name of the Trait Group to map to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,7 +56,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expression", n => { Expression = n.GetStringValue(); } },
-                { "fieldName", n => { FieldName = n.GetStringValue(); } },
                 { "traitGroup", n => { TraitGroup = n.GetStringValue(); } },
                 { "traitName", n => { TraitName = n.GetStringValue(); } },
             };
@@ -78,7 +68,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("expression", Expression);
-            writer.WriteStringValue("fieldName", FieldName);
             writer.WriteStringValue("traitGroup", TraitGroup);
             writer.WriteStringValue("traitName", TraitName);
         }

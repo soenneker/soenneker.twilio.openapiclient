@@ -46,6 +46,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
+        /// <summary>The PKCE code verifier used to generate the code_challenge in the authorization request.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CodeVerifier { get; set; }
+#nullable restore
+#else
+        public string CodeVerifier { get; set; }
+#endif
         /// <summary>Grant type is a credential representing resource owner&apos;s authorization which can be used by client to obtain access token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -107,6 +115,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "code", n => { Code = n.GetStringValue(); } },
+                { "code_verifier", n => { CodeVerifier = n.GetStringValue(); } },
                 { "grant_type", n => { GrantType = n.GetStringValue(); } },
                 { "redirect_uri", n => { RedirectUri = n.GetStringValue(); } },
                 { "refresh_token", n => { RefreshToken = n.GetStringValue(); } },
@@ -124,6 +133,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("client_id", ClientId);
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteStringValue("code", Code);
+            writer.WriteStringValue("code_verifier", CodeVerifier);
             writer.WriteStringValue("grant_type", GrantType);
             writer.WriteStringValue("redirect_uri", RedirectUri);
             writer.WriteStringValue("refresh_token", RefreshToken);

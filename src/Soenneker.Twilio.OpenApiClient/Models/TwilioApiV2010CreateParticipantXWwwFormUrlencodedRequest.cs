@@ -144,6 +144,70 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>&quot;Whether to allow an agent to hear the state of the outbound call, including ringing or disconnect messages. Can be: `true` or `false` and defaults to `true`.&quot;</summary>
         public bool? EarlyMedia { get; set; }
+        /// <summary>&quot;The emergency caller&apos;s street address including street number and street name.Note: If the value exceeds 60 characters, only the first 60 characters will be used.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmergencyAddress { get; set; }
+#nullable restore
+#else
+        public string EmergencyAddress { get; set; }
+#endif
+        /// <summary>&quot;The emergency caller&apos;s physical location description within a building or facility.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmergencyCallerLocation { get; set; }
+#nullable restore
+#else
+        public string EmergencyCallerLocation { get; set; }
+#endif
+        /// <summary>&quot;The emergency caller&apos;s GPS coordinates in decimal degrees format.Format: \&quot;latitude longitude\&quot; (space-separated)- Latitude: decimal degrees, range -90.0 to +90.0 (negative for South, positive for North)- Longitude: decimal degrees, range -180.0 to +180.0 (negative for West, positive for East)- Precision: up to 6 decimal places recommended for meter-level accuracyNote: If the value exceeds 150 characters, only the first 150 characters will be used.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmergencyCallerPosition { get; set; }
+#nullable restore
+#else
+        public string EmergencyCallerPosition { get; set; }
+#endif
+        /// <summary>&quot;The emergency caller&apos;s city or municipality name.Should be the official city name as recognized by local authorities.Used in combination with state and country for emergency call routing.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmergencyCity { get; set; }
+#nullable restore
+#else
+        public string EmergencyCity { get; set; }
+#endif
+        /// <summary>&quot;The emergency caller&apos;s country. Currently supported US and CA only.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmergencyCountry { get; set; }
+#nullable restore
+#else
+        public string EmergencyCountry { get; set; }
+#endif
+        /// <summary>&quot;The emergency caller&apos;s organization or entity name.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmergencyName { get; set; }
+#nullable restore
+#else
+        public string EmergencyName { get; set; }
+#endif
+        /// <summary>&quot;The emergency caller&apos;s state or province.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmergencyState { get; set; }
+#nullable restore
+#else
+        public string EmergencyState { get; set; }
+#endif
+        /// <summary>&quot;The emergency caller&apos;s postal code or ZIP code.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmergencyZipCode { get; set; }
+#nullable restore
+#else
+        public string EmergencyZipCode { get; set; }
+#endif
         /// <summary>&quot;Whether to end the conference when the participant leaves. Can be: `true` or `false` and defaults to `false`.&quot;</summary>
         public bool? EndConferenceOnExit { get; set; }
         /// <summary>The phone number, Client identifier, or username portion of SIP address that made this call. Phone numbers are in [E.164](https://www.twilio.com/docs/glossary/what-e164) format (e.g., +16175551212). Client identifiers are formatted `client:name`. If using a phone number, it must be a Twilio number or a Verified [outgoing caller id](https://www.twilio.com/docs/voice/api/outgoing-caller-ids) for your account. If the `to` parameter is a phone number, `from` must also be a phone number. If `to` is sip address, this value of `from` should be a username portion to be used to populate the P-Asserted-Identity header that is passed to the SIP endpoint.</summary>
@@ -190,6 +254,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public int? MaxParticipants { get; set; }
         /// <summary>Whether the agent is muted in the conference. Can be `true` or `false` and the default is `false`.</summary>
         public bool? Muted { get; set; }
+        /// <summary>The STIR/SHAKEN passport for this call, provided as a base64 encoded string. Multiple passports (at max 5) are comma separated and provided as base64 encoded string</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Passports { get; set; }
+#nullable restore
+#else
+        public string Passports { get; set; }
+#endif
         /// <summary>Whether to record the participant and their conferences, including the time between conferences. Can be `true` or `false` and the default is `false`.</summary>
         public bool? Record { get; set; }
         /// <summary>&quot;The recording channels for the final recording. Can be: `mono` or `dual` and the default is `mono`.&quot;</summary>
@@ -353,6 +425,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "ConferenceStatusCallbackMethod", n => { ConferenceStatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateParticipantXWwwFormUrlencodedRequestConferenceStatusCallbackMethod>(); } },
                 { "ConferenceTrim", n => { ConferenceTrim = n.GetStringValue(); } },
                 { "EarlyMedia", n => { EarlyMedia = n.GetBoolValue(); } },
+                { "EmergencyAddress", n => { EmergencyAddress = n.GetStringValue(); } },
+                { "EmergencyCallerLocation", n => { EmergencyCallerLocation = n.GetStringValue(); } },
+                { "EmergencyCallerPosition", n => { EmergencyCallerPosition = n.GetStringValue(); } },
+                { "EmergencyCity", n => { EmergencyCity = n.GetStringValue(); } },
+                { "EmergencyCountry", n => { EmergencyCountry = n.GetStringValue(); } },
+                { "EmergencyName", n => { EmergencyName = n.GetStringValue(); } },
+                { "EmergencyState", n => { EmergencyState = n.GetStringValue(); } },
+                { "EmergencyZipCode", n => { EmergencyZipCode = n.GetStringValue(); } },
                 { "EndConferenceOnExit", n => { EndConferenceOnExit = n.GetBoolValue(); } },
                 { "From", n => { From = n.GetStringValue(); } },
                 { "JitterBufferSize", n => { JitterBufferSize = n.GetStringValue(); } },
@@ -364,6 +444,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "MachineDetectionTimeout", n => { MachineDetectionTimeout = n.GetIntValue(); } },
                 { "MaxParticipants", n => { MaxParticipants = n.GetIntValue(); } },
                 { "Muted", n => { Muted = n.GetBoolValue(); } },
+                { "Passports", n => { Passports = n.GetStringValue(); } },
                 { "Record", n => { Record = n.GetBoolValue(); } },
                 { "RecordingChannels", n => { RecordingChannels = n.GetStringValue(); } },
                 { "RecordingConfigurationId", n => { RecordingConfigurationId = n.GetStringValue(); } },
@@ -413,6 +494,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateParticipantXWwwFormUrlencodedRequestConferenceStatusCallbackMethod>("ConferenceStatusCallbackMethod", ConferenceStatusCallbackMethod);
             writer.WriteStringValue("ConferenceTrim", ConferenceTrim);
             writer.WriteBoolValue("EarlyMedia", EarlyMedia);
+            writer.WriteStringValue("EmergencyAddress", EmergencyAddress);
+            writer.WriteStringValue("EmergencyCallerLocation", EmergencyCallerLocation);
+            writer.WriteStringValue("EmergencyCallerPosition", EmergencyCallerPosition);
+            writer.WriteStringValue("EmergencyCity", EmergencyCity);
+            writer.WriteStringValue("EmergencyCountry", EmergencyCountry);
+            writer.WriteStringValue("EmergencyName", EmergencyName);
+            writer.WriteStringValue("EmergencyState", EmergencyState);
+            writer.WriteStringValue("EmergencyZipCode", EmergencyZipCode);
             writer.WriteBoolValue("EndConferenceOnExit", EndConferenceOnExit);
             writer.WriteStringValue("From", From);
             writer.WriteStringValue("JitterBufferSize", JitterBufferSize);
@@ -424,6 +513,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("MachineDetectionTimeout", MachineDetectionTimeout);
             writer.WriteIntValue("MaxParticipants", MaxParticipants);
             writer.WriteBoolValue("Muted", Muted);
+            writer.WriteStringValue("Passports", Passports);
             writer.WriteBoolValue("Record", Record);
             writer.WriteStringValue("RecordingChannels", RecordingChannels);
             writer.WriteStringValue("RecordingConfigurationId", RecordingConfigurationId);

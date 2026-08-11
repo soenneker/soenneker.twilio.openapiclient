@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Address { get; set; }
 #endif
-        /// <summary>The channel property</summary>
+        /// <summary>Channel type for a Communication address.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2UpdateParticipantInConversationRequestAddressesItemChannel? Channel { get; set; }
         /// <summary>The channelId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

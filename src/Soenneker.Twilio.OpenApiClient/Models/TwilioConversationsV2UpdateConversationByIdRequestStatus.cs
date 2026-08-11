@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>The state of the Conversation.</summary>
+    /// <summary>Lifecycle status of a Conversation.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TwilioConversationsV2UpdateConversationByIdRequestStatus
     {

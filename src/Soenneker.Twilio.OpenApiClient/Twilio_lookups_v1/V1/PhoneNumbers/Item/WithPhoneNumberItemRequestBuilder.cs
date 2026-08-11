@@ -33,6 +33,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v1.V1.PhoneNumbers.Item
         public WithPhoneNumberItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_lookups_v1/v1/PhoneNumbers/{phoneNumber}{?AddOns*,AddOnsData*,CountryCode*,Type*}", rawUrl)
         {
         }
+        /// <summary>
+        /// Fetch information about a phone number. You can use this endpoint to retrieve the carrier and caller name for a phone number, as well as any installed Add-ons.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumber"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -48,6 +51,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v1.V1.PhoneNumbers.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumber>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumber.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Fetch information about a phone number. You can use this endpoint to retrieve the carrier and caller name for a phone number, as well as any installed Add-ons.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,10 +79,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v1.V1.PhoneNumbers.Item
         {
             return new global::Soenneker.Twilio.OpenApiClient.Twilio_lookups_v1.V1.PhoneNumbers.Item.WithPhoneNumberItemRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// Fetch information about a phone number. You can use this endpoint to retrieve the carrier and caller name for a phone number, as well as any installed Add-ons.
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class WithPhoneNumberItemRequestBuilderGetQueryParameters 
-        #pragma warning restore CS1591
         {
             /// <summary>The `unique_name` of an Add-on you would like to invoke. Can be the `unique_name` of an Add-on that is installed on your account. You can specify multiple instances of this parameter to invoke multiple Add-ons. For more information about  Add-ons, see the [Add-ons documentation](https://www.twilio.com/docs/add-ons).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

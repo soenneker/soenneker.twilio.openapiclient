@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequest"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequest"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequest"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TypingIndicatorRequest : IComposedTypeWrapper, IParsable
@@ -20,6 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest AppleTypingIndicatorRequest { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequest"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequest? RcsTypingIndicatorRequest { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequest RcsTypingIndicatorRequest { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequest"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -43,6 +51,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 result.AppleTypingIndicatorRequest = new global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest();
             }
+            else if("RCS".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RcsTypingIndicatorRequest = new global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequest();
+            }
             else if("WHATSAPP".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.WhatsAppTypingIndicatorRequest = new global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequest();
@@ -58,6 +70,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(AppleTypingIndicatorRequest != null)
             {
                 return AppleTypingIndicatorRequest.GetFieldDeserializers();
+            }
+            else if(RcsTypingIndicatorRequest != null)
+            {
+                return RcsTypingIndicatorRequest.GetFieldDeserializers();
             }
             else if(WhatsAppTypingIndicatorRequest != null)
             {
@@ -75,6 +91,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(AppleTypingIndicatorRequest != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest>(null, AppleTypingIndicatorRequest);
+            }
+            else if(RcsTypingIndicatorRequest != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequest>(null, RcsTypingIndicatorRequest);
             }
             else if(WhatsAppTypingIndicatorRequest != null)
             {

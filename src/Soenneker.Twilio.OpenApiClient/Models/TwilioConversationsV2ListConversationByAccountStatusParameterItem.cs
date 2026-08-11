@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
+    /// <summary>Lifecycle status of a Conversation.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum TwilioConversationsV2ListConversationByAccountStatusParameterItem
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "ACTIVE")]
         #pragma warning disable CS1591

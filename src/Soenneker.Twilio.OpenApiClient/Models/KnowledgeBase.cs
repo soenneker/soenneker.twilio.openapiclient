@@ -9,9 +9,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class KnowledgeBase : IParsable
+    public partial class KnowledgeBase : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ISO 8601 timestamp when the Knowledge Base was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>A human readable description of this resource, up to 128 characters.</summary>
@@ -44,6 +46,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The current version number of the Knowledge Base. Incremented on each successful mutable update.</summary>
         public int? Version { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBase"/> and sets the default values.
+        /// </summary>
+        public KnowledgeBase()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -85,6 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBaseStatus>("status", Status);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteIntValue("version", Version);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

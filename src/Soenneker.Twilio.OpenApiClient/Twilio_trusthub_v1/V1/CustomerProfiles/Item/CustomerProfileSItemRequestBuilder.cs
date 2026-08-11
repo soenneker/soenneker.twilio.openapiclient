@@ -7,6 +7,7 @@ using Soenneker.Twilio.OpenApiClient.Models;
 using Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.Item.ChannelEndpointAssignments;
 using Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.Item.EntityAssignments;
 using Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.Item.Evaluations;
+using Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.Item.ProvisionalCopy;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -34,6 +35,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.
         public global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.Item.Evaluations.EvaluationsRequestBuilder Evaluations
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.Item.Evaluations.EvaluationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The ProvisionalCopy property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.Item.ProvisionalCopy.ProvisionalCopyRequestBuilder ProvisionalCopy
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.Item.ProvisionalCopy.ProvisionalCopyRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.Item.CustomerProfileSItemRequestBuilder"/> and sets the default values.

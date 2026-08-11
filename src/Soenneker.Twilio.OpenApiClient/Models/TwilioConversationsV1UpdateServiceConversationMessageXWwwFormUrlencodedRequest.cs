@@ -38,9 +38,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Body { get; set; }
 #endif
-        /// <summary>The date that this resource was created.</summary>
+        /// <summary>The date that this resource was created. If you set this parameter, Twilio ignores any milliseconds in the timestamp.</summary>
         public DateTimeOffset? DateCreated { get; set; }
-        /// <summary>The date that this resource was last updated. `null` if the message has not been edited.</summary>
+        /// <summary>The date that this resource was last updated. `null` if the message has not been edited. If you set this parameter, Twilio ignores any milliseconds in the timestamp.</summary>
         public DateTimeOffset? DateUpdated { get; set; }
         /// <summary>The subject of the message, can be up to 256 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

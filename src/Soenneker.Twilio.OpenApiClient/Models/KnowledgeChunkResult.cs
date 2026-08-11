@@ -14,6 +14,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>0-based position of this chunk within its source document for a single ingestion run.</summary>
+        public int? ChunkIndex { get; set; }
         /// <summary>The chunk content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,6 +26,24 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The date and time in GMT when the Chunk was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>Physical page number (1-based). PDF sources only; omitted for all other source types.</summary>
+        public int? DocumentNumber { get; set; }
+        /// <summary>&quot;Human-readable title of the source document.Web: HTML &lt;title&gt; from the crawled page.File: filename from Unstructured metadata.Text: knowledge name from the knowledge source.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DocumentTitle { get; set; }
+#nullable restore
+#else
+        public string DocumentTitle { get; set; }
+#endif
+        /// <summary>Specific page URL this chunk was crawled from. Web sources only; null for File and Text sources.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DocumentUrl { get; set; }
+#nullable restore
+#else
+        public string DocumentUrl { get; set; }
+#endif
         /// <summary>The unique identifier of knowledge source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,8 +79,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "chunkIndex", n => { ChunkIndex = n.GetIntValue(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "documentNumber", n => { DocumentNumber = n.GetIntValue(); } },
+                { "documentTitle", n => { DocumentTitle = n.GetStringValue(); } },
+                { "documentUrl", n => { DocumentUrl = n.GetStringValue(); } },
                 { "knowledgeId", n => { KnowledgeId = n.GetStringValue(); } },
                 { "score", n => { Score = n.GetFloatValue(); } },
             };
@@ -72,8 +96,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteIntValue("chunkIndex", ChunkIndex);
             writer.WriteStringValue("content", Content);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
+            writer.WriteIntValue("documentNumber", DocumentNumber);
+            writer.WriteStringValue("documentTitle", DocumentTitle);
+            writer.WriteStringValue("documentUrl", DocumentUrl);
             writer.WriteStringValue("knowledgeId", KnowledgeId);
             writer.WriteFloatValue("score", Score);
             writer.WriteAdditionalData(AdditionalData);

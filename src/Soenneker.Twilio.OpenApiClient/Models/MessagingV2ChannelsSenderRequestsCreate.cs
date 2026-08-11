@@ -22,6 +22,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration Configuration { get; set; }
 #endif
+        /// <summary>Optional display label for the sender in the Twilio Console.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FriendlyName { get; set; }
+#nullable restore
+#else
+        public string FriendlyName { get; set; }
+#endif
         /// <summary>The profile information for the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,6 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration.CreateFromDiscriminatorValue); } },
+                { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "profile", n => { Profile = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfile>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfile.CreateFromDiscriminatorValue); } },
                 { "sender_id", n => { SenderId = n.GetStringValue(); } },
                 { "webhook", n => { Webhook = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhook>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhook.CreateFromDiscriminatorValue); } },
@@ -85,6 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration>("configuration", Configuration);
+            writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfile>("profile", Profile);
             writer.WriteStringValue("sender_id", SenderId);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhook>("webhook", Webhook);

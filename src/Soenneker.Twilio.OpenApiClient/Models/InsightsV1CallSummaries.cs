@@ -22,6 +22,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>&quot;`array[object]` List of agent session summaries for conversation relay. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#conversation-relay-object) for the object properties.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryAgentSessionSummary>? AgentSessionSummaries { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryAgentSessionSummary> AgentSessionSummaries { get; set; }
+#endif
         /// <summary>&quot;`object` Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -170,6 +178,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
+                { "agent_session_summaries", n => { AgentSessionSummaries = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryAgentSessionSummary>(global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryAgentSessionSummary.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "annotation", n => { Annotation = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAnnotation>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAnnotation.CreateFromDiscriminatorValue); } },
                 { "answered_by", n => { AnsweredBy = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumAnsweredBy>(); } },
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAttributes>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAttributes.CreateFromDiscriminatorValue); } },
@@ -202,6 +211,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryAgentSessionSummary>("agent_session_summaries", AgentSessionSummaries);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAnnotation>("annotation", Annotation);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumAnsweredBy>("answered_by", AnsweredBy);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAttributes>("attributes", Attributes);

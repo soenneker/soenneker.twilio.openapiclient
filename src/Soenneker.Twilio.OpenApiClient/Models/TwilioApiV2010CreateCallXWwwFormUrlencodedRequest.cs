@@ -116,6 +116,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public int? MachineDetectionTimeout { get; set; }
         /// <summary>&quot;The HTTP method we should use when calling the `url` parameter&apos;s value. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.&quot;</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallXWwwFormUrlencodedRequestMethod? Method { get; set; }
+        /// <summary>The STIR/SHAKEN passport for this call, provided as a base64 encoded string. Multiple passports (at max 5) are comma separated and provided as base64 encoded string</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Passports { get; set; }
+#nullable restore
+#else
+        public string Passports { get; set; }
+#endif
         /// <summary>Whether to record the call. Can be `true` to record the phone call, or `false` to not. The default is `false`. The `recording_url` is sent to the `status_callback` URL.</summary>
         public bool? Record { get; set; }
         /// <summary>&quot;The number of channels in the final recording. Can be: `mono` or `dual`. The default is `mono`. `mono` records both legs of the call in a single channel of the recording file. `dual` records each leg to a separate channel of the recording file. The first channel of a dual-channel recording contains the parent call and the second channel contains the child call.&quot;</summary>
@@ -281,6 +289,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "MachineDetectionSpeechThreshold", n => { MachineDetectionSpeechThreshold = n.GetIntValue(); } },
                 { "MachineDetectionTimeout", n => { MachineDetectionTimeout = n.GetIntValue(); } },
                 { "Method", n => { Method = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallXWwwFormUrlencodedRequestMethod>(); } },
+                { "Passports", n => { Passports = n.GetStringValue(); } },
                 { "Record", n => { Record = n.GetBoolValue(); } },
                 { "RecordingChannels", n => { RecordingChannels = n.GetStringValue(); } },
                 { "RecordingConfigurationId", n => { RecordingConfigurationId = n.GetStringValue(); } },
@@ -327,6 +336,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("MachineDetectionSpeechThreshold", MachineDetectionSpeechThreshold);
             writer.WriteIntValue("MachineDetectionTimeout", MachineDetectionTimeout);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallXWwwFormUrlencodedRequestMethod>("Method", Method);
+            writer.WriteStringValue("Passports", Passports);
             writer.WriteBoolValue("Record", Record);
             writer.WriteStringValue("RecordingChannels", RecordingChannels);
             writer.WriteStringValue("RecordingConfigurationId", RecordingConfigurationId);

@@ -64,8 +64,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Participant> Participants { get; set; }
 #endif
-        /// <summary>Conversation status.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemStatus? Status { get; set; }
+        /// <summary>Lifecycle status of a Conversation.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationStatus? Status { get; set; }
         /// <summary>Timestamp when this Conversation was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
@@ -100,7 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Participant>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Participant.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemStatus>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationStatus>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -118,7 +118,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Participant>("participants", Participants);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationStatus>("status", Status);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

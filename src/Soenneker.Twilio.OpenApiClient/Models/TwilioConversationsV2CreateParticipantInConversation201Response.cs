@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string ProfileId { get; set; }
 #endif
         /// <summary>Type of Participant in the Conversation.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateParticipantInConversation201ResponseType? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ParticipantType? Type { get; set; }
         /// <summary>Timestamp when this Participant was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
@@ -100,7 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "profileId", n => { ProfileId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateParticipantInConversation201ResponseType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ParticipantType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -118,7 +118,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("profileId", ProfileId);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateParticipantInConversation201ResponseType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ParticipantType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

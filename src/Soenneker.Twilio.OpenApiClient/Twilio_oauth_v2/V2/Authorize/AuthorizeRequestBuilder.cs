@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Twilio.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Authorize
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AuthorizeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_oauth_v2/v2/authorize{?client_id*,redirect_uri*,response_type*,scope*,state*}", pathParameters)
+        public AuthorizeRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_oauth_v2/v2/authorize{?client_id*,code_challenge*,code_challenge_method*,redirect_uri*,response_type*,scope*,state*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Authorize
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AuthorizeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_oauth_v2/v2/authorize{?client_id*,redirect_uri*,response_type*,scope*,state*}", rawUrl)
+        public AuthorizeRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_oauth_v2/v2/authorize{?client_id*,code_challenge*,code_challenge_method*,redirect_uri*,response_type*,scope*,state*}", rawUrl)
         {
         }
         /// <summary>
@@ -37,6 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Authorize
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.Error">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Authorize.AuthorizeRequestBuilder.AuthorizeRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -47,7 +49,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Authorize
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+            };
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves authorize uri
@@ -92,6 +98,17 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Authorize
             [QueryParameter("client_id")]
             public string ClientId { get; set; }
 #endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("code_challenge")]
+            public string? CodeChallenge { get; set; }
+#nullable restore
+#else
+            [QueryParameter("code_challenge")]
+            public string CodeChallenge { get; set; }
+#endif
+            [QueryParameter("code_challenge_method")]
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2AuthorizeCodeChallengeMethodParameter? CodeChallengeMethod { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("redirect_uri")]

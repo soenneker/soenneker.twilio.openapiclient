@@ -22,10 +22,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Address { get; set; }
 #endif
-        /// <summary>Channel type for the Participant address.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ParticipantAddressChannel? Channel { get; set; }
-        /// <summary>Delivery status of the Communication to this recipient.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListCommunicationByConversation200ResponseCommunicationsItemRecipientsItemDeliveryStatus? DeliveryStatus { get; set; }
+        /// <summary>Channel type for a Communication address.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Channel? Channel { get; set; }
+        /// <summary>Delivery status of a Communication to a recipient.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2RecipientDeliveryStatus? DeliveryStatus { get; set; }
         /// <summary>Participant ID associated with this address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,8 +60,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetStringValue(); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ParticipantAddressChannel>(); } },
-                { "deliveryStatus", n => { DeliveryStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListCommunicationByConversation200ResponseCommunicationsItemRecipientsItemDeliveryStatus>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Channel>(); } },
+                { "deliveryStatus", n => { DeliveryStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2RecipientDeliveryStatus>(); } },
                 { "participantId", n => { ParticipantId = n.GetStringValue(); } },
             };
         }
@@ -73,8 +73,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("address", Address);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ParticipantAddressChannel>("channel", Channel);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListCommunicationByConversation200ResponseCommunicationsItemRecipientsItemDeliveryStatus>("deliveryStatus", DeliveryStatus);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Channel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2RecipientDeliveryStatus>("deliveryStatus", DeliveryStatus);
             writer.WriteStringValue("participantId", ParticipantId);
             writer.WriteAdditionalData(AdditionalData);
         }

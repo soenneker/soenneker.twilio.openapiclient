@@ -38,7 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ProfileId { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>Type of Participant in the Conversation.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateParticipantInConversationRequestType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateParticipantInConversationRequest"/> and sets the default values.

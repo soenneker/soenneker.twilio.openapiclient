@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The state of the Conversation.</summary>
+        /// <summary>Lifecycle status of a Conversation.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequest"/> and sets the default values.

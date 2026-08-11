@@ -8,36 +8,27 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Details of where to map data items from. Each data mapping from type has its own set of configurationparameters and source specific properties.
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class DataMappingFromTypes : IAdditionalDataHolder, IParsable
+    public partial class DataMappingFromTypes : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The unique identifier of the TDI dataset to connect.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatasetId { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv? DataMappingFromCsv { get; set; }
 #nullable restore
 #else
-        public string DatasetId { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv DataMappingFromCsv { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet? DataMappingFromDataSet { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet DataMappingFromDataSet { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromTypes"/> and sets the default values.
-        /// </summary>
-        public DataMappingFromTypes()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -46,7 +37,17 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromTypes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromTypes();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromTypes();
+            if("CSV".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DataMappingFromCsv = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv();
+            }
+            else if("DataMappingFromDataSet".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DataMappingFromDataSet = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -54,11 +55,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(DataMappingFromCsv != null)
             {
-                { "datasetId", n => { DatasetId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return DataMappingFromCsv.GetFieldDeserializers();
+            }
+            else if(DataMappingFromDataSet != null)
+            {
+                return DataMappingFromDataSet.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -67,9 +72,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("datasetId", DatasetId);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(DataMappingFromCsv != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv>(null, DataMappingFromCsv);
+            }
+            else if(DataMappingFromDataSet != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet>(null, DataMappingFromDataSet);
+            }
         }
     }
 }

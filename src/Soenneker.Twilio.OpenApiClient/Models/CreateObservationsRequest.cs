@@ -16,10 +16,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Array of observations to create in a single batch operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ObservationCore>? Observations { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ObservationCreateRequest>? Observations { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ObservationCore> Observations { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ObservationCreateRequest> Observations { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +39,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "observations", n => { Observations = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ObservationCore>(global::Soenneker.Twilio.OpenApiClient.Models.ObservationCore.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "observations", n => { Observations = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ObservationCreateRequest>(global::Soenneker.Twilio.OpenApiClient.Models.ObservationCreateRequest.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ObservationCore>("observations", Observations);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ObservationCreateRequest>("observations", Observations);
         }
     }
 }

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Twilio_oauth_v1.V1;
+using Soenneker.Twilio.OpenApiClient.Twilio_oauth_v1.WellKnown;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v1
         public global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v1.V1.V1RequestBuilder V1
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v1.V1.V1RequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The wellKnown property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v1.WellKnown.WellKnownRequestBuilder WellKnown
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v1.WellKnown.WellKnownRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_oauth_v1.Twilio_oauth_v1RequestBuilder"/> and sets the default values.

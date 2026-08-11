@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Second
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SecondaryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_accounts_v1/v1/AuthTokens/Secondary", pathParameters)
+        public SecondaryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_accounts_v1/v1/AuthTokens/Secondary{?SuppressEmailNotification*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Second
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SecondaryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_accounts_v1/v1/AuthTokens/Secondary", rawUrl)
+        public SecondaryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_accounts_v1/v1/AuthTokens/Secondary{?SuppressEmailNotification*}", rawUrl)
         {
         }
         /// <summary>
@@ -40,11 +40,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Second
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Secondary.SecondaryRequestBuilder.SecondaryRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Secondary.SecondaryRequestBuilder.SecondaryRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -54,18 +54,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Second
         /// Create a new secondary Auth Token
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1SecondaryAuthToken"/></returns>
+        /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1SecondaryAuthToken?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1SecondaryAuthToken?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateSecondaryAuthTokenXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1SecondaryAuthToken> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1SecondaryAuthToken> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateSecondaryAuthTokenXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            var requestInfo = ToPostRequestInformation(requestConfiguration);
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1SecondaryAuthToken>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1SecondaryAuthToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
@@ -75,11 +77,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Second
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Secondary.SecondaryRequestBuilder.SecondaryRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Secondary.SecondaryRequestBuilder.SecondaryRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
@@ -91,19 +93,22 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Second
         /// Create a new secondary Auth Token
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateSecondaryAuthTokenXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateSecondaryAuthTokenXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
             return requestInfo;
         }
         /// <summary>
@@ -114,6 +119,15 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Second
         public global::Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Secondary.SecondaryRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.AuthTokens.Secondary.SecondaryRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// Delete the secondary Auth Token from your account
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class SecondaryRequestBuilderDeleteQueryParameters 
+        {
+            /// <summary>Whether to suppress the email notification that Twilio sends to the owners and administrators of the account about this Auth Token change. Defaults to `false`, so Twilio sends the email. Set to `true` when rotating Auth Tokens across many subaccounts.</summary>
+            public bool? SuppressEmailNotification { get; set; }
         }
     }
 }

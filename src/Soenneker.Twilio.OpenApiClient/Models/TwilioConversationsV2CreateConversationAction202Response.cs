@@ -42,8 +42,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202ResponseRelated Related { get; set; }
 #endif
-        /// <summary>&quot;Current status of the Action.- PENDING: Action accepted, awaiting downstream confirmation- COMPLETED: Downstream backend confirmed the action- FAILED: Downstream backend reported a failure&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202ResponseStatus? Status { get; set; }
+        /// <summary>Lifecycle status of an Action.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ActionStatus? Status { get; set; }
         /// <summary>&quot;The type of action. Accepted values: SEND_MESSAGE.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,7 +84,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "related", n => { Related = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202ResponseRelated>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202ResponseRelated.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202ResponseStatus>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ActionStatus>(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
@@ -101,7 +101,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202ResponseRelated>("related", Related);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202ResponseStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ActionStatus>("status", Status);
             writer.WriteStringValue("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);

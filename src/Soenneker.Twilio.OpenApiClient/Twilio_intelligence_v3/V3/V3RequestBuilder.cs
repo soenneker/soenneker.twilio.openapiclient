@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane;
 using Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations;
 using Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.OperatorResults;
+using Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.RuleExecutions;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -31,6 +32,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3
         public global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.OperatorResults.OperatorResultsRequestBuilder OperatorResults
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.OperatorResults.OperatorResultsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The RuleExecutions property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.RuleExecutions.RuleExecutionsRequestBuilder RuleExecutions
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.RuleExecutions.RuleExecutionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.V3RequestBuilder"/> and sets the default values.

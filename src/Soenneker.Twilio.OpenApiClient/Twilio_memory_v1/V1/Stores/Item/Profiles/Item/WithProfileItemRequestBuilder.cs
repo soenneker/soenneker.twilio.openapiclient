@@ -134,7 +134,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Profile>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Profile.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Merge one or more trait groups into an existing profile. Only the traits provided are added or updated; unspecified traits remain unchanged. Only pre-defined trait groups and traits configured for the memory store can be patched. To remove a trait entirely, set its value to null.
+        /// Update or add specific traits to an existing profile. Only the traits provided are added or updated; unspecified traits remain unchanged. Only pre-defined trait groups and traits configured for the memory store can be patched. To remove a trait entirely, set its value to null.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchProfileTraits202Response"/></returns>
         /// <param name="body">The request body</param>
@@ -209,7 +209,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
             return requestInfo;
         }
         /// <summary>
-        /// Merge one or more trait groups into an existing profile. Only the traits provided are added or updated; unspecified traits remain unchanged. Only pre-defined trait groups and traits configured for the memory store can be patched. To remove a trait entirely, set its value to null.
+        /// Update or add specific traits to an existing profile. Only the traits provided are added or updated; unspecified traits remain unchanged. Only pre-defined trait groups and traits configured for the memory store can be patched. To remove a trait entirely, set its value to null.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

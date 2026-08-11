@@ -22,6 +22,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> Imports { get; set; }
 #endif
+        /// <summary>The meta property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileImportsV2200ResponseMeta? Meta { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileImportsV2200ResponseMeta Meta { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileImportsV2200Response"/> and sets the default values.
         /// </summary>
@@ -48,6 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "imports", n => { Imports = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileImportsV2200ResponseMeta>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileImportsV2200ResponseMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,6 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("imports", Imports);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1ListProfileImportsV2200ResponseMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProfilesMeta? Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IdentityProfilesMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProfilesMeta Meta { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IdentityProfilesMeta Meta { get; set; }
 #endif
         /// <summary>The profiles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfilesMeta>(global::Soenneker.Twilio.OpenApiClient.Models.ProfilesMeta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentityProfilesMeta>(global::Soenneker.Twilio.OpenApiClient.Models.IdentityProfilesMeta.CreateFromDiscriminatorValue); } },
                 { "profiles", n => { Profiles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProfilesMeta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentityProfilesMeta>("meta", Meta);
             writer.WriteCollectionOfPrimitiveValues<string>("profiles", Profiles);
             writer.WriteAdditionalData(AdditionalData);
         }

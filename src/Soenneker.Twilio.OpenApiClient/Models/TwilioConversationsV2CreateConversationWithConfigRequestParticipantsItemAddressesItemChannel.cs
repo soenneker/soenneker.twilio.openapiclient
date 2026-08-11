@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
+    /// <summary>Channel type for a Communication address.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum TwilioConversationsV2CreateConversationWithConfigRequestParticipantsItemAddressesItemChannel
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "VOICE")]
         #pragma warning disable CS1591
@@ -20,10 +19,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning disable CS1591
         Rcs,
         #pragma warning restore CS1591
-        [EnumMember(Value = "EMAIL")]
-        #pragma warning disable CS1591
-        Email,
-        #pragma warning restore CS1591
         [EnumMember(Value = "WHATSAPP")]
         #pragma warning disable CS1591
         Whatsapp,
@@ -31,14 +26,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         [EnumMember(Value = "CHAT")]
         #pragma warning disable CS1591
         Chat,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "API")]
-        #pragma warning disable CS1591
-        Api,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "SYSTEM")]
-        #pragma warning disable CS1591
-        System,
         #pragma warning restore CS1591
     }
 }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>Supported MIME types for knowledge file imports. Maximum file size for any file is 16MB (16 * 1024 * 1024 bytes). Extensions → MIME:  .csv → text/csv  .md → text/markdown  .mdx → text/mdx  .pdf → application/pdf  .tsv → text/tab-separated-values  .txt → text/plain</summary>
+    /// <summary>Supported MIME types for knowledge file imports. Maximum file size for any file is 16MB (16 * 1024 * 1024 bytes). Extensions → MIME:  .csv → text/csv  .md → text/markdown  .pdf → application/pdf  .tsv → text/tab-separated-values  .txt → text/plain</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SupportedFileMimeType
     {
@@ -14,10 +14,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         [EnumMember(Value = "text/markdown")]
         #pragma warning disable CS1591
         TextMarkdown,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "text/mdx")]
-        #pragma warning disable CS1591
-        TextMdx,
         #pragma warning restore CS1591
         [EnumMember(Value = "application/pdf")]
         #pragma warning disable CS1591

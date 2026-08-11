@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v3.V3.Indicators.Typin
         {
         }
         /// <summary>
-        /// &quot;Send a typing indicator to notify the recipient that you are composing a message. Supported channels: WhatsApp, Apple Messages for Business. The request body varies by channel — use the `channel` field as the discriminator.&quot;
+        /// &quot;Send a typing indicator to notify the recipient that you are composing a message. Supported channels: WhatsApp, Apple Messages for Business, RCS. The request body varies by channel — use the `channel` field as the discriminator.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator200Response"/></returns>
         /// <param name="body">Request body for sending a typing indicator. The schema varies by channel. Use the `channel` field to determine which properties are required.</param>
@@ -43,6 +43,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v3.V3.Indicators.Typin
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator400Response">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator401Response">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator404Response">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator200Response?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.TypingIndicatorRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -59,11 +61,13 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v3.V3.Indicators.Typin
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator403Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator404Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator429Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Send a typing indicator to notify the recipient that you are composing a message. Supported channels: WhatsApp, Apple Messages for Business. The request body varies by channel — use the `channel` field as the discriminator.&quot;
+        /// &quot;Send a typing indicator to notify the recipient that you are composing a message. Supported channels: WhatsApp, Apple Messages for Business, RCS. The request body varies by channel — use the `channel` field as the discriminator.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request body for sending a typing indicator. The schema varies by channel. Use the `channel` field to determine which properties are required.</param>

@@ -24,6 +24,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string CreatedBy { get; set; }
 #endif
+        /// <summary>The unique identifier (SID) of the user who created this OAuth app.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreatorSid { get; set; }
+#nullable restore
+#else
+        public string CreatorSid { get; set; }
+#endif
         /// <summary>The date_created property</summary>
         public DateTimeOffset? DateCreated { get; set; }
         /// <summary>The description property</summary>
@@ -109,6 +117,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "access_token_ttl", n => { AccessTokenTtl = n.GetIntValue(); } },
                 { "created_by", n => { CreatedBy = n.GetStringValue(); } },
+                { "creator_sid", n => { CreatorSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
@@ -128,6 +137,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("access_token_ttl", AccessTokenTtl);
             writer.WriteStringValue("created_by", CreatedBy);
+            writer.WriteStringValue("creator_sid", CreatorSid);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("friendly_name", FriendlyName);

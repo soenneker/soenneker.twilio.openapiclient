@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
         {
         }
         /// <summary>
-        /// Fetch Metadata for the Conversations domain.
+        /// Returns available cubes, measures, and dimensions for the Conversations domain.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -61,7 +61,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Fetch Metadata for the Conversations domain.
+        /// Returns available cubes, measures, and dimensions for the Conversations domain.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

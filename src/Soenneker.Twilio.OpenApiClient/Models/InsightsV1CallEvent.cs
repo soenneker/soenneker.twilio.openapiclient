@@ -46,6 +46,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventClientEdge ClientEdge { get; set; }
 #endif
+        /// <summary>Contains information about the Conversation Relay (CRelay) connection used in calls.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventConversationRelayData? ConversationRelayData { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventConversationRelayData ConversationRelayData { get; set; }
+#endif
         /// <summary>The edge property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.EventEnumTwilioEdge? Edge { get; set; }
         /// <summary>Event group.</summary>
@@ -119,6 +127,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "call_sid", n => { CallSid = n.GetStringValue(); } },
                 { "carrier_edge", n => { CarrierEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventCarrierEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventCarrierEdge.CreateFromDiscriminatorValue); } },
                 { "client_edge", n => { ClientEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventClientEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventClientEdge.CreateFromDiscriminatorValue); } },
+                { "conversation_relay_data", n => { ConversationRelayData = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventConversationRelayData>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventConversationRelayData.CreateFromDiscriminatorValue); } },
                 { "edge", n => { Edge = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.EventEnumTwilioEdge>(); } },
                 { "group", n => { Group = n.GetStringValue(); } },
                 { "level", n => { Level = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.EventEnumLevel>(); } },
@@ -139,6 +148,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("call_sid", CallSid);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventCarrierEdge>("carrier_edge", CarrierEdge);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventClientEdge>("client_edge", ClientEdge);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventConversationRelayData>("conversation_relay_data", ConversationRelayData);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.EventEnumTwilioEdge>("edge", Edge);
             writer.WriteStringValue("group", Group);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.EventEnumLevel>("level", Level);

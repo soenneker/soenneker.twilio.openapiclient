@@ -143,10 +143,10 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.Conversations
             [QueryParameter("conversationConfigurationId")]
             public string ConversationConfigurationId { get; set; }
 #endif
-            /// <summary>Filter by Conversations created after this timestamp.</summary>
+            /// <summary>Filter by Conversations created after this timestamp. The maximum allowed time range between `createdAtBefore` and `createdAtAfter` is 31 days.</summary>
             [QueryParameter("createdAtAfter")]
             public DateTimeOffset? CreatedAtAfter { get; set; }
-            /// <summary>Filter by Conversations created before this timestamp.</summary>
+            /// <summary>Filter by Conversations created before this timestamp. The maximum allowed time range between `createdAtBefore` and `createdAtAfter` is 31 days.</summary>
             [QueryParameter("createdAtBefore")]
             public DateTimeOffset? CreatedAtBefore { get; set; }
             /// <summary>Filters Conversations activated by one or more of the specified Intelligence Configuration IDs (`OR` match).</summary>

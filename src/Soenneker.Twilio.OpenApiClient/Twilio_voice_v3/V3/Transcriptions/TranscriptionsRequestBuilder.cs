@@ -56,6 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions400Response">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions401Response">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions422Response">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions429Response">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions500Response">When receiving a 500 status code</exception>
@@ -75,6 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions403Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions404Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions500Response.CreateFromDiscriminatorValue },

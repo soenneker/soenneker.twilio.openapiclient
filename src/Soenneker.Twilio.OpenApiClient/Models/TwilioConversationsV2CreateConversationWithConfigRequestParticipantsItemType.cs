@@ -19,5 +19,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning disable CS1591
         AiAgent,
         #pragma warning restore CS1591
+        [EnumMember(Value = "AGENT")]
+        #pragma warning disable CS1591
+        Agent,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "UNKNOWN")]
+        #pragma warning disable CS1591
+        Unknown,
+        #pragma warning restore CS1591
     }
 }

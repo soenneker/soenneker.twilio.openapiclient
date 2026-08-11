@@ -43,8 +43,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200ResponseRelated Related { get; set; }
 #endif
-        /// <summary>Current status of the operation.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200ResponseStatus? Status { get; set; }
+        /// <summary>Lifecycle status of a long-running operation.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2OperationStatusValue? Status { get; set; }
         /// <summary>URL to poll for operation status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,7 +83,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "error", n => { Error = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200ResponseError>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200ResponseError.CreateFromDiscriminatorValue); } },
                 { "operationId", n => { OperationId = n.GetStringValue(); } },
                 { "related", n => { Related = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200ResponseRelated>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200ResponseRelated.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200ResponseStatus>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2OperationStatusValue>(); } },
                 { "statusUrl", n => { StatusUrl = n.GetStringValue(); } },
             };
         }
@@ -99,7 +99,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200ResponseError>("error", Error);
             writer.WriteStringValue("operationId", OperationId);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200ResponseRelated>("related", Related);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200ResponseStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2OperationStatusValue>("status", Status);
             writer.WriteStringValue("statusUrl", StatusUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

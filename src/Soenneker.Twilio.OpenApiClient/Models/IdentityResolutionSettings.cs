@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig> IdentifierConfigs { get; set; }
 #endif
-        /// <summary>Priority list of identifiers to locate profiles to apply new data to, or for determining if two existing profiles should merge. Rules are evaluated in order.- If no rule matches against existing profiles, a new profile will be created. - If a rule matches to a single existing profile, the profile will be updated. - If a rule matches to multiple existing profiles, those existing profiles will be merged.</summary>
+        /// <summary>Priority list of identifiers to locate profiles to apply new data to, or for determining if two existing profiles should merge. Individual rules are evaluated with `OR` logic between them, meaning that satisfying any single rule will trigger a match. Each rule is a single identifier type; compound rules are not supported.Rules are evaluated in order.- If no rule matches against existing profiles, a new profile will be created. - If a rule matches to a single existing profile, the profile will be updated. - If a rule matches to multiple existing profiles, those existing profiles will be merged.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? MatchingRules { get; set; }

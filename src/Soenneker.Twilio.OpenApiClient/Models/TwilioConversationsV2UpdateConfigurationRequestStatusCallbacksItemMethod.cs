@@ -16,17 +16,5 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning disable CS1591
         Get,
         #pragma warning restore CS1591
-        [EnumMember(Value = "PUT")]
-        #pragma warning disable CS1591
-        Put,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "DELETE")]
-        #pragma warning disable CS1591
-        Delete,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "PATCH")]
-        #pragma warning disable CS1591
-        Patch,
-        #pragma warning restore CS1591
     }
 }

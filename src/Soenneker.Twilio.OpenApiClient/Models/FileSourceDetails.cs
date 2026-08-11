@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Configuration details for file based knowledge sources. Supported file formats (extension → MIME type):  .csv → text/csv  .md → text/markdown  .mdx → text/mdx  .pdf → application/pdf  .tsv → text/tab-separated-values  .txt → text/plainMaximum file size: 16MB (16 * 1024 * 1024 bytes).&quot;
+    /// &quot;Configuration details for file based knowledge sources. Supported file formats (extension → MIME type):  .csv → text/csv  .md → text/markdown  .pdf → application/pdf  .tsv → text/tab-separated-values  .txt → text/plainMaximum file size: 16MB (16 * 1024 * 1024 bytes).&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileSourceDetails : IParsable
@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Expected size of the file in bytes</summary>
         public int? FileSize { get; set; }
-        /// <summary>Presigned S3 URL for file upload (when status is SCHEDULED) or the permanent S3 location after upload completes.Use PUT method to upload the file to this URL when status is SCHEDULED.</summary>
+        /// <summary>Presigned S3 URL for file upload (when status is SCHEDULED). Use PUT method to upload the file to this URL when status is SCHEDULED.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ImportUrl { get; private set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ImportUrl { get; private set; }
 #endif
-        /// <summary>Supported MIME types for knowledge file imports. Maximum file size for any file is 16MB (16 * 1024 * 1024 bytes). Extensions → MIME:  .csv → text/csv  .md → text/markdown  .mdx → text/mdx  .pdf → application/pdf  .tsv → text/tab-separated-values  .txt → text/plain</summary>
+        /// <summary>Supported MIME types for knowledge file imports. Maximum file size for any file is 16MB (16 * 1024 * 1024 bytes). Extensions → MIME:  .csv → text/csv  .md → text/markdown  .pdf → application/pdf  .tsv → text/tab-separated-values  .txt → text/plain</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.SupportedFileMimeType? MimeType { get; set; }
         /// <summary>File based knowledge sources</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.FileSourceDetailsType? Type { get; set; }

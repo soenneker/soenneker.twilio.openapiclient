@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
         {
         }
         /// <summary>
-        /// Fetch semantic query results
+        /// Retrieve subsequent pages of a synchronous query using a page token.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -61,7 +61,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Execute a semantic query against the Conversations domain.
+        /// Execute a semantic query against the Conversations domain.Returns results inline. For long-running queries, use the QueryJobs endpoint.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -90,7 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Fetch semantic query results
+        /// Retrieve subsequent pages of a synchronous query using a page token.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -109,7 +109,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
             return requestInfo;
         }
         /// <summary>
-        /// Execute a semantic query against the Conversations domain.
+        /// Execute a semantic query against the Conversations domain.Returns results inline. For long-running queries, use the QueryJobs endpoint.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -140,7 +140,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
             return new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.Conversations.Query.QueryRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Fetch semantic query results
+        /// Retrieve subsequent pages of a synchronous query using a page token.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class QueryRequestBuilderGetQueryParameters 
@@ -157,7 +157,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
 #endif
         }
         /// <summary>
-        /// Execute a semantic query against the Conversations domain.
+        /// Execute a semantic query against the Conversations domain.Returns results inline. For long-running queries, use the QueryJobs endpoint.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class QueryRequestBuilderPostQueryParameters 

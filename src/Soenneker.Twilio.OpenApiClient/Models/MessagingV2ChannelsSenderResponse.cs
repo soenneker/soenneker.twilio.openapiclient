@@ -30,6 +30,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration Configuration { get; set; }
 #endif
+        /// <summary>Optional display label for the sender in the Twilio Console.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FriendlyName { get; set; }
+#nullable restore
+#else
+        public string FriendlyName { get; set; }
+#endif
         /// <summary>The reasons why the sender is offline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -115,6 +123,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "compliance", n => { Compliance = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceResponse>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceResponse.CreateFromDiscriminatorValue); } },
                 { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration.CreateFromDiscriminatorValue); } },
+                { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "offline_reasons", n => { OfflineReasons = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderOfflineReasonsItems>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderOfflineReasonsItems.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "profile", n => { Profile = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse.CreateFromDiscriminatorValue); } },
                 { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProperties>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProperties.CreateFromDiscriminatorValue); } },
@@ -134,6 +143,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceResponse>("compliance", Compliance);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration>("configuration", Configuration);
+            writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderOfflineReasonsItems>("offline_reasons", OfflineReasons);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse>("profile", Profile);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProperties>("properties", Properties);

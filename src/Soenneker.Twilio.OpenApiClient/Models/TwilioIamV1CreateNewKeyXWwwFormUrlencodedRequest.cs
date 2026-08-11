@@ -30,8 +30,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>The KeyType property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.NewKeyEnumKeytype? KeyType { get; set; }
+        /// <summary>&quot;The \`KeyType\` form parameter is used to specify the type of key you want to create.**Default Behavior**: If \`KeyType\` is not specified, the API will generate a standard key.**Restricted Key**: If \`KeyType\` is set to \`restricted\`, the API will create a new restricted key. In this case, a policy object is required to define the permissions.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? KeyType { get; set; }
+#nullable restore
+#else
+        public string KeyType { get; set; }
+#endif
         /// <summary>The \`Policy\` object is a collection that specifies the allowed Twilio permissions for the restricted key.For more information on the permissions available with restricted API keys, refer to the [Twilio documentation](https://www.twilio.com/docs/iam/api-keys/restricted-api-keys#permissions-available-with-restricted-api-keys).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +73,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "AccountSid", n => { AccountSid = n.GetStringValue(); } },
                 { "FriendlyName", n => { FriendlyName = n.GetStringValue(); } },
-                { "KeyType", n => { KeyType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NewKeyEnumKeytype>(); } },
+                { "KeyType", n => { KeyType = n.GetStringValue(); } },
                 { "Policy", n => { Policy = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateNewKeyXWwwFormUrlencodedRequestPolicy>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateNewKeyXWwwFormUrlencodedRequestPolicy.CreateFromDiscriminatorValue); } },
             };
         }
@@ -80,7 +86,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("AccountSid", AccountSid);
             writer.WriteStringValue("FriendlyName", FriendlyName);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NewKeyEnumKeytype>("KeyType", KeyType);
+            writer.WriteStringValue("KeyType", KeyType);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateNewKeyXWwwFormUrlencodedRequestPolicy>("Policy", Policy);
             writer.WriteAdditionalData(AdditionalData);
         }

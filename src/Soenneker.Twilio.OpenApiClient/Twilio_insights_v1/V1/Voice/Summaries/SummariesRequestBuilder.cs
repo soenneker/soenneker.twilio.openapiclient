@@ -241,7 +241,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries
             public bool? HasTag { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }
-            /// <summary>How many resources to return in each list page. The default is 50, and the maximum is 1000.</summary>
+            /// <summary>How many resources to return in each list page. The default is 25, and the maximum is 25.</summary>
             public long? PageSize { get; set; }
             /// <summary>The page token. This is provided by the API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

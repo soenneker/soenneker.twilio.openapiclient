@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.A2PBrandRegistrations;
+using Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.A2PCampaignRegistrations;
 using Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiries;
 using Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles;
 using Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.EndUserTypes;
@@ -22,6 +24,16 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class V1RequestBuilder : BaseRequestBuilder
     {
+        /// <summary>An A2P Brand Registration represents a brand registered with The Campaign Registry (TCR) for 10DLC messaging. This endpoint creates a new brand registration and initializes a Persona embeddable compliance session that the ISV&apos;s end user completes to submit brand information.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.A2PBrandRegistrations.A2PBrandRegistrationsRequestBuilder A2PBrandRegistrations
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.A2PBrandRegistrations.A2PBrandRegistrationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>An A2P Campaign Registration represents a campaign registered with The Campaign Registry (TCR) for 10DLC messaging, linked to an approved A2P Brand. This endpoint creates a new campaign registration and initializes a Persona embeddable compliance session that the ISV&apos;s end user completes to submit campaign use-case information.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.A2PCampaignRegistrations.A2PCampaignRegistrationsRequestBuilder A2PCampaignRegistrations
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.A2PCampaignRegistrations.A2PCampaignRegistrationsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The ComplianceInquiries property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.ComplianceInquiries.ComplianceInquiriesRequestBuilder ComplianceInquiries
         {

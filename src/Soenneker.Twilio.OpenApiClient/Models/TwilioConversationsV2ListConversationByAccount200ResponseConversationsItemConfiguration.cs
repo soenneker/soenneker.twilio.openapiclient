@@ -24,7 +24,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationChannelSettings ChannelSettings { get; set; }
 #endif
         /// <summary>&quot;Type of Conversation grouping strategy:- `GROUP_BY_PROFILE`: Groups Communications by resolved Profile from the Memory Store.  A Profile is looked up or created for `CUSTOMER` Participant types. All Communications from the same Profile are in the same Conversation, regardless of address or channel.- `GROUP_BY_PARTICIPANT_ADDRESSES`: Groups Communications by Participant addresses across all channels.  A customer using +18005550100 will be in the same Conversation whether they contact by SMS, WhatsApp, or RCS.- `GROUP_BY_PARTICIPANT_ADDRESSES_AND_CHANNEL_TYPE`: Groups Communications by both Participant addresses AND channel.  A customer using +18005550100 by SMS will be in a different Conversation than the same customer by Voice.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationConversationGroupingType? ConversationGroupingType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationGroupingType? ConversationGroupingType { get; set; }
         /// <summary>Configuration for Conversations V1 bridge. When set, messaging channels route through Conversations V1. Use this to integrate with existing Conversations V1 applications.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,7 +102,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "channelSettings", n => { ChannelSettings = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationChannelSettings>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationChannelSettings.CreateFromDiscriminatorValue); } },
-                { "conversationGroupingType", n => { ConversationGroupingType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationConversationGroupingType>(); } },
+                { "conversationGroupingType", n => { ConversationGroupingType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationGroupingType>(); } },
                 { "conversationsV1Bridge", n => { ConversationsV1Bridge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationsV1Bridge>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationsV1Bridge.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
@@ -120,7 +120,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationChannelSettings>("channelSettings", ChannelSettings);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationConversationGroupingType>("conversationGroupingType", ConversationGroupingType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationGroupingType>("conversationGroupingType", ConversationGroupingType);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationsV1Bridge>("conversationsV1Bridge", ConversationsV1Bridge);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("displayName", DisplayName);

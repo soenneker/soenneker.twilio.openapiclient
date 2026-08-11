@@ -39,5 +39,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning disable CS1591
         Node22,
         #pragma warning restore CS1591
+        [EnumMember(Value = "node24")]
+        #pragma warning disable CS1591
+        Node24,
+        #pragma warning restore CS1591
     }
 }

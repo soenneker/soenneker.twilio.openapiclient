@@ -7,6 +7,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum DataMappingType
     {
+        [EnumMember(Value = "CSV")]
+        #pragma warning disable CS1591
+        Csv,
+        #pragma warning restore CS1591
         [EnumMember(Value = "DATASET")]
         #pragma warning disable CS1591
         Dataset,

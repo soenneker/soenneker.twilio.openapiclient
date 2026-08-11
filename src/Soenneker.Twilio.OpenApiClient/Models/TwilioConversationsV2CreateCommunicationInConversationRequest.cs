@@ -38,6 +38,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent Content { get; set; }
 #endif
+        /// <summary>Timestamp when this Communication occurred. If omitted, the server uses the current time.</summary>
+        public DateTimeOffset? OccurredAt { get; set; }
         /// <summary>The recipients property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,6 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestAuthor>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestAuthor.CreateFromDiscriminatorValue); } },
                 { "channelId", n => { ChannelId = n.GetStringValue(); } },
                 { "content", n => { Content = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent.CreateFromDiscriminatorValue); } },
+                { "occurredAt", n => { OccurredAt = n.GetDateTimeOffsetValue(); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestRecipientsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestRecipientsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -87,6 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestAuthor>("author", Author);
             writer.WriteStringValue("channelId", ChannelId);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent>("content", Content);
+            writer.WriteDateTimeOffsetValue("occurredAt", OccurredAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestRecipientsItem>("recipients", Recipients);
             writer.WriteAdditionalData(AdditionalData);
         }

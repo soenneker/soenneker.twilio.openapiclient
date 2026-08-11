@@ -28,5 +28,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning disable CS1591
         VoiceCallRequest,
         #pragma warning restore CS1591
+        [EnumMember(Value = "REQUEST_CONTACT_INFO")]
+        #pragma warning disable CS1591
+        RequestContactInfo,
+        #pragma warning restore CS1591
     }
 }

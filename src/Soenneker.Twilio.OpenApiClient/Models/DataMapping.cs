@@ -9,9 +9,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class DataMapping : IParsable
+    public partial class DataMapping : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ISO 8601 timestamp when the  data mapping was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>A human readable description of this resource, up to 512 characters.</summary>
@@ -65,6 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// </summary>
         public DataMapping()
         {
+            AdditionalData = new Dictionary<string, object>();
             IsEnabled = true;
         }
         /// <summary>
@@ -112,6 +115,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingToTypes>("mappingTo", MappingTo);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteIntValue("version", Version);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }
