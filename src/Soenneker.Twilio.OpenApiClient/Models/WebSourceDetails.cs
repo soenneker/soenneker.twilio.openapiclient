@@ -17,6 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public int? CrawlDepth { get; set; }
         /// <summary>Frequency of re-crawling the website for updated content</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod? CrawlPeriod { get; set; }
+        /// <summary>Processing errors encountered during web crawling, grouped by title.Array of error groups, where each group has a title and list of error instances.Only present when crawl errors occurred.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup>? Errors { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup> Errors { get; set; }
+#endif
         /// <summary>Web based knowledge sources</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsType? Type { get; set; }
         /// <summary>The URL to crawl for web content</summary>
@@ -54,6 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "crawlDepth", n => { CrawlDepth = n.GetIntValue(); } },
                 { "crawlPeriod", n => { CrawlPeriod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod>(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup>(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -67,6 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("crawlDepth", CrawlDepth);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod>("crawlPeriod", CrawlPeriod);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup>("errors", Errors);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsType>("type", Type);
             writer.WriteStringValue("url", Url);
         }

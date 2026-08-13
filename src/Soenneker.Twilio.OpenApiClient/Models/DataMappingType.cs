@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>The type of data mapping defining how data flows into the Memory Store.</summary>
+    /// <summary>The type of data mapping defining how data flows into the Memory Store.`CSV` and `DATASET` are deprecated aliases being replaced by `INGRESS`,`DATASET_CLOUDAPP`, and `DATASET_WAREHOUSE` respectively.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum DataMappingType
     {
@@ -14,6 +14,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         [EnumMember(Value = "DATASET")]
         #pragma warning disable CS1591
         Dataset,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "INGRESS")]
+        #pragma warning disable CS1591
+        Ingress,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "DATASET_CLOUDAPP")]
+        #pragma warning disable CS1591
+        DatasetCloudapp,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "DATASET_WAREHOUSE")]
+        #pragma warning disable CS1591
+        DatasetWarehouse,
         #pragma warning restore CS1591
     }
 }

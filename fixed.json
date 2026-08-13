@@ -65640,441 +65640,6 @@
         }
       ]
     },
-    "/twilio_insights_v3/v3/InsightsDomains/Conversations/QueryJobs": {
-      "post": {
-        "tags": [
-          "TwilioInsightsAsync"
-        ],
-        "summary": "Submit an async query",
-        "description": "Submit a long-running semantic query. Returns 202 Accepted with an\noperationId that can be polled for status and results.\n",
-        "operationId": "TwilioInsightsV3CreateQueryJob",
-        "parameters": [
-          {
-            "name": "Idempotency-Key",
-            "in": "header",
-            "description": "Client-generated UUIDv7 key to ensure idempotent behavior.\nSubmitting the same key for identical requests returns the same operation\nwithout re-execution. Scoped to Account \u002B Region. Retained for 24 hours.\n",
-            "schema": {
-              "type": "string",
-              "format": "uuid",
-              "example": "01890a5d-aa0f-7c80-b8e6-0242ac140004"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/InsightsQueryRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "202": {
-            "description": "Async query accepted",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QueryJobSubmitResponse"
-                },
-                "example": {
-                  "operationId": "proc_job_01h9d8r0vte3hz8tykdj329t7r",
-                  "status": "PENDING",
-                  "statusUrl": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r",
-                  "createdAt": "2026-05-25T14:30:00Z"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3CreateQueryJob400Response"
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable content (idempotency key payload mismatch)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3CreateQueryJob422Response"
-                }
-              }
-            }
-          },
-          "429": {
-            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3CreateQueryJob429Response"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3CreateQueryJob500Response"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "twilio_insights_v3_basic_apikey_or_accountsid": []
-          }
-        ]
-      },
-      "get": {
-        "tags": [
-          "TwilioInsightsAsync"
-        ],
-        "summary": "List async queries for the account",
-        "description": "Returns a paginated list of async query operations for the authenticated account.\nOptionally filter by status.\n",
-        "operationId": "TwilioInsightsV3ListQueryJobs",
-        "parameters": [
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "The maximum number of resources to return",
-            "schema": {
-              "maximum": 1000,
-              "minimum": 1,
-              "type": "integer",
-              "default": 50
-            }
-          },
-          {
-            "name": "pageToken",
-            "in": "query",
-            "description": "Token for pagination",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "status",
-            "in": "query",
-            "description": "Filter by operation status.",
-            "schema": {
-              "$ref": "#/components/schemas/LongRunningOperationStatus"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Paginated list of async query operations",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QueryJobListResponse"
-                },
-                "example": {
-                  "items": [
-                    {
-                      "operationId": "proc_job_01h9d8r0vte3hz8tykdj329t7r",
-                      "status": "RUNNING",
-                      "createdAt": "2026-05-25T14:30:00Z",
-                      "statusUrl": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r"
-                    }
-                  ],
-                  "meta": {
-                    "key": "items",
-                    "pageSize": 1
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3ListQueryJobs400Response"
-                }
-              }
-            }
-          },
-          "429": {
-            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3ListQueryJobs429Response"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3ListQueryJobs500Response"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "twilio_insights_v3_basic_apikey_or_accountsid": []
-          }
-        ]
-      },
-      "servers": [
-        {
-          "url": "https://insights.twilio.com"
-        }
-      ]
-    },
-    "/twilio_insights_v3/v3/InsightsDomains/Conversations/QueryJobs/{operationId}": {
-      "get": {
-        "tags": [
-          "TwilioInsightsAsync"
-        ],
-        "summary": "Get async query status and results",
-        "description": "Poll operation status. When status is COMPLETED, the response includes\nquery results inline. When FAILED, the response includes error details\nconforming to the OperationError schema.\n",
-        "operationId": "TwilioInsightsV3FetchQueryJobStatus",
-        "parameters": [
-          {
-            "name": "operationId",
-            "in": "path",
-            "description": "The unique identifier for the async query operation (TTID format).",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "Proc_JobTtid",
-              "example": "proc_job_01h9d8r0vte3hz8tykdj329t7r"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation status (may include results if COMPLETED)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QueryJobStatusResponse"
-                },
-                "examples": {
-                  "running": {
-                    "summary": "Operation still running",
-                    "value": {
-                      "operationId": "proc_job_01h9d8r0vte3hz8tykdj329t7r",
-                      "status": "RUNNING",
-                      "createdAt": "2026-05-25T14:30:00Z",
-                      "statusUrl": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r"
-                    }
-                  },
-                  "completed": {
-                    "summary": "Operation completed",
-                    "value": {
-                      "operationId": "proc_job_01h9d8r0vte3hz8tykdj329t7r",
-                      "status": "COMPLETED",
-                      "createdAt": "2026-05-25T14:30:00Z",
-                      "completedAt": "2026-05-25T14:32:17Z",
-                      "statusUrl": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r",
-                      "resultRetentionPeriod": "P7D"
-                    }
-                  },
-                  "failed": {
-                    "summary": "Operation failed",
-                    "value": {
-                      "operationId": "proc_job_01h9d8r0vte3hz8tykdj329t7r",
-                      "status": "FAILED",
-                      "createdAt": "2026-05-25T14:30:00Z",
-                      "completedAt": "2026-05-25T14:30:12Z",
-                      "statusUrl": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r",
-                      "error": {
-                        "code": 50001,
-                        "message": "Query execution timeout exceeded",
-                        "httpStatusCode": 504,
-                        "detail": "ClickHouse query exceeded the 120s execution limit for this account."
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Resource not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobStatus404Response"
-                }
-              }
-            }
-          },
-          "429": {
-            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobStatus429Response"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobStatus500Response"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "twilio_insights_v3_basic_apikey_or_accountsid": []
-          }
-        ]
-      },
-      "servers": [
-        {
-          "url": "https://insights.twilio.com"
-        }
-      ]
-    },
-    "/twilio_insights_v3/v3/InsightsDomains/Conversations/QueryJobs/{operationId}/Results": {
-      "get": {
-        "tags": [
-          "TwilioInsightsAsync"
-        ],
-        "summary": "Fetch async query results",
-        "description": "Retrieve paginated results for a completed async query operation.\nThe resultUrl in the status response points to this endpoint.\nReturns 404 if the operation is not yet COMPLETED or has expired.\n",
-        "operationId": "TwilioInsightsV3FetchQueryJobResults",
-        "parameters": [
-          {
-            "name": "operationId",
-            "in": "path",
-            "description": "The unique identifier for the async query operation.",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "Proc_JobTtid",
-              "example": "proc_job_01h9d8r0vte3hz8tykdj329t7r"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "The maximum number of resources to return",
-            "schema": {
-              "maximum": 1000,
-              "minimum": 1,
-              "type": "integer",
-              "default": 50
-            }
-          },
-          {
-            "name": "pageToken",
-            "in": "query",
-            "description": "Token for pagination",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Query results",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InsightsQueryResponse"
-                },
-                "example": {
-                  "domain": "Conversations",
-                  "items": [
-                    {
-                      "Id": "conv1",
-                      "Languages": [
-                        "en"
-                      ],
-                      "Channels": [
-                        "voice"
-                      ],
-                      "OperatorResult.Value": "positive"
-                    },
-                    {
-                      "Id": "conv2",
-                      "Languages": [
-                        "en",
-                        "es"
-                      ],
-                      "Channels": [
-                        "chat"
-                      ],
-                      "OperatorResult.Value": "negative"
-                    }
-                  ],
-                  "meta": {
-                    "key": "items",
-                    "pageSize": 2,
-                    "nextToken": "eyJwYWdlIjoyLCJxdWVyeSI6ImJvb2tzIn0="
-                  }
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Resource not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobResults404Response"
-                }
-              }
-            }
-          },
-          "429": {
-            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobResults429Response"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobResults500Response"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "twilio_insights_v3_basic_apikey_or_accountsid": []
-          }
-        ]
-      },
-      "servers": [
-        {
-          "url": "https://insights.twilio.com"
-        }
-      ]
-    },
     "/twilio_intelligence_v2/v2/Operators/Custom": {
       "description": "",
       "post": {
@@ -96980,6 +96545,110 @@
         }
       ]
     },
+    "/twilio_numbers_v1/v1/CallerIds/SmsVerifications": {
+      "post": {
+        "tags": [
+          "V1CallerIds"
+        ],
+        "summary": "Initiate SMS verification for a caller ID",
+        "operationId": "TwilioNumbersV1CreateSmsVerification",
+        "responses": {
+          "201": {
+            "description": "SMS verification initiated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NumbersV1SmsVerification"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_numbers_v1_accountSid_authToken": []
+          }
+        ]
+      }
+    },
+    "/twilio_numbers_v1/v1/CallerIds/SmsVerificationChecks": {
+      "post": {
+        "tags": [
+          "V1CallerIds"
+        ],
+        "summary": "Check SMS verification code",
+        "operationId": "TwilioNumbersV1CreateSmsVerificationCheck",
+        "responses": {
+          "200": {
+            "description": "Verification check result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NumbersV1SmsVerificationCheck"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_numbers_v1_accountSid_authToken": []
+          }
+        ]
+      }
+    },
+    "/twilio_numbers_v1/v1/CallerIds/VoiceVerifications": {
+      "post": {
+        "tags": [
+          "V1CallerIds"
+        ],
+        "summary": "Initiate voice verification for a caller ID",
+        "operationId": "TwilioNumbersV1CreateVoiceVerification",
+        "responses": {
+          "201": {
+            "description": "Voice verification initiated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NumbersV1VoiceVerification"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_numbers_v1_accountSid_authToken": []
+          }
+        ]
+      }
+    },
+    "/twilio_numbers_v1/v1/CallerIds/VoiceVerificationChecks": {
+      "post": {
+        "tags": [
+          "V1CallerIds"
+        ],
+        "summary": "Check voice verification code",
+        "operationId": "TwilioNumbersV1CreateVoiceVerificationCheck",
+        "responses": {
+          "200": {
+            "description": "Verification check result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NumbersV1VoiceVerificationCheck"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_numbers_v1_accountSid_authToken": []
+          }
+        ]
+      }
+    },
     "/twilio_numbers_v2/v2/HostedNumber/AuthorizationDocuments/{sid}": {
       "description": "",
       "get": {
@@ -101758,6 +101427,108 @@
         ]
       }
     },
+    "/twilio_numbers_v2/v2/CallerIds": {
+      "get": {
+        "tags": [
+          "V2CallerIds"
+        ],
+        "summary": "List verified caller IDs for an account",
+        "operationId": "TwilioNumbersV2ListCallerIds",
+        "parameters": [
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "maximum": 1000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of caller IDs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioNumbersV2ListCallerIds200Response"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_numbers_v2_accountSid_authToken": []
+          }
+        ]
+      }
+    },
+    "/twilio_numbers_v2/v2/CallerIds/{callerIdSid}": {
+      "post": {
+        "tags": [
+          "V2CallerIds"
+        ],
+        "summary": "Update a caller ID",
+        "operationId": "TwilioNumbersV2UpdateCallerId",
+        "responses": {
+          "200": {
+            "description": "Updated caller ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NumbersV2CallerId"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_numbers_v2_accountSid_authToken": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "V2CallerIds"
+        ],
+        "summary": "Delete a caller ID",
+        "operationId": "TwilioNumbersV2DeleteCallerId",
+        "responses": {
+          "204": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioNumbersV2DeleteCallerId204Response"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_numbers_v2_accountSid_authToken": []
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "name": "callerIdSid",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^PN[0-9a-fA-F]{32}$",
+            "type": "string"
+          }
+        }
+      ]
+    },
     "/twilio_numbers_v3/v3/HostedNumbers/HostedNumberOrders": {
       "post": {
         "tags": [
@@ -102037,35 +101808,6 @@
         }
       ]
     },
-    "/twilio_oauth_v1/.well-known/oauth-authorization-server": {
-      "description": "RFC 8414 OAuth 2.0 Authorization Server Metadata",
-      "get": {
-        "tags": [
-          "OauthV1Metadata"
-        ],
-        "summary": "OAuth 2.0 Authorization Server Metadata",
-        "description": "Returns RFC 8414 Authorization Server Metadata for oauth.twilio.com",
-        "operationId": "TwilioOAuthV1FetchOAuthServerMetadata",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioOAuthV1FetchOAuthServerMetadata200Response"
-                }
-              }
-            }
-          }
-        },
-        "security": []
-      },
-      "servers": [
-        {
-          "url": "https://oauth.twilio.com"
-        }
-      ]
-    },
     "/twilio_oauth_v2/v2/token": {
       "post": {
         "tags": [
@@ -102219,6 +101961,35 @@
         },
         "security": []
       }
+    },
+    "/twilio_oauth_v2/.well-known/oauth-authorization-server": {
+      "description": "RFC 8414 OAuth 2.0 Authorization Server Metadata",
+      "get": {
+        "tags": [
+          "OauthV2Metadata"
+        ],
+        "summary": "OAuth 2.0 Authorization Server Metadata",
+        "description": "Returns RFC 8414 Authorization Server Metadata for oauth.twilio.com",
+        "operationId": "TwilioOAuthV2FetchOAuth2ServerMetadata",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioOAuthV2FetchOAuth2ServerMetadata200Response"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      },
+      "servers": [
+        {
+          "url": "https://oauth.twilio.com"
+        }
+      ]
     },
     "/twilio_preview/HostedNumbers/AuthorizationDocuments/{sid}": {
       "description": "",
@@ -166979,6 +166750,10 @@
           "category": {
             "type": "string",
             "description": "A WhatsApp recognized template category."
+          },
+          "send_ttl_seconds": {
+            "type": "integer",
+            "description": "Time-to-live in seconds for attempting to send a message with this Content"
           }
         },
         "description": "Content approval request body"
@@ -167103,6 +166878,12 @@
           },
           "allow_category_change": {
             "type": "boolean",
+            "nullable": true
+          },
+          "send_ttl_seconds": {
+            "type": "integer",
+            "description": "Time-to-live in seconds for attempting to send a message with this Content",
+            "format": "int32",
             "nullable": true
           }
         }
@@ -178736,6 +178517,222 @@
         },
         "description": "Request to disconnect a social identity provider from the authenticated user\u0027s account"
       },
+      "IamV1SubaccountBatchWorkflowType": {
+        "enum": [
+          "BULK_SUBACCOUNT_SUSPEND",
+          "BULK_SUBACCOUNT_UNSUSPEND",
+          "BULK_SUBACCOUNT_CLOSE"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "BULK_SUBACCOUNT_SUSPEND",
+        "x-ms-enum": {
+          "name": "IamV1SubaccountBatchWorkflowType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "BULK_SUBACCOUNT_SUSPEND",
+              "name": "BulkSubaccountSuspend"
+            },
+            {
+              "value": "BULK_SUBACCOUNT_UNSUSPEND",
+              "name": "BulkSubaccountUnsuspend"
+            },
+            {
+              "value": "BULK_SUBACCOUNT_CLOSE",
+              "name": "BulkSubaccountClose"
+            }
+          ]
+        }
+      },
+      "IamV1SubaccountBatchStatus": {
+        "enum": [
+          "SCHEDULED",
+          "PROCESSING",
+          "COMPLETED",
+          "FAILED",
+          "CANCELLED"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "PROCESSING",
+        "x-ms-enum": {
+          "name": "IamV1SubaccountBatchStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "SCHEDULED",
+              "name": "Scheduled"
+            },
+            {
+              "value": "PROCESSING",
+              "name": "Processing"
+            },
+            {
+              "value": "COMPLETED",
+              "name": "Completed"
+            },
+            {
+              "value": "FAILED",
+              "name": "Failed"
+            },
+            {
+              "value": "CANCELLED",
+              "name": "Cancelled"
+            }
+          ]
+        }
+      },
+      "IamV1SubaccountBatch": {
+        "required": [
+          "batchId",
+          "accountId",
+          "workflowType",
+          "status",
+          "actorUserId",
+          "dateCreated",
+          "dateUpdated"
+        ],
+        "type": "object",
+        "properties": {
+          "batchId": {
+            "maxLength": 40,
+            "minLength": 40,
+            "pattern": "^iam_operation_[0-9a-hjkmnp-tv-z]{26}$",
+            "type": "string",
+            "description": "The unique identifier for this batch operation, also used as the public Job ID.",
+            "example": "iam_operation_00000000000000000000000000"
+          },
+          "accountId": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^AC[0-9a-f]{32}$",
+            "type": "string",
+            "description": "The ID of the parent account that owns this batch.",
+            "example": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "workflowType": {
+            "$ref": "#/components/schemas/IamV1SubaccountBatchWorkflowType"
+          },
+          "status": {
+            "$ref": "#/components/schemas/IamV1SubaccountBatchStatus"
+          },
+          "actorUserId": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^US[0-9a-f]{32}$",
+            "type": "string",
+            "description": "The ID of the user who submitted the batch.",
+            "example": "USaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "actorUserEmail": {
+            "type": "string",
+            "description": "The email of the user who submitted the batch.",
+            "nullable": true,
+            "example": "someone@example.com"
+          },
+          "totalCount": {
+            "type": "integer",
+            "description": "The total number of subaccounts in the batch.",
+            "format": "int32",
+            "nullable": true,
+            "example": 250
+          },
+          "successCount": {
+            "type": "integer",
+            "description": "The number of subaccounts processed successfully.",
+            "format": "int32",
+            "nullable": true,
+            "example": 248
+          },
+          "failureCount": {
+            "type": "integer",
+            "description": "The number of subaccounts that failed processing.",
+            "format": "int32",
+            "nullable": true,
+            "example": 2
+          },
+          "dateCreated": {
+            "type": "string",
+            "description": "The date the batch was submitted, given in RFC 3339 format.",
+            "format": "date-time",
+            "example": "2026-07-27T12:00:00Z"
+          },
+          "dateUpdated": {
+            "type": "string",
+            "description": "The date the batch was last updated, given in RFC 3339 format.",
+            "format": "date-time",
+            "example": "2026-07-27T12:05:00Z"
+          },
+          "dateCompleted": {
+            "type": "string",
+            "description": "The date the batch reached a terminal state, given in RFC 3339 format.",
+            "format": "date-time",
+            "nullable": true,
+            "example": "2026-07-27T12:10:00Z"
+          }
+        }
+      },
+      "IamV1SubaccountBatchAccepted": {
+        "required": [
+          "batchId"
+        ],
+        "type": "object",
+        "properties": {
+          "batchId": {
+            "maxLength": 40,
+            "minLength": 40,
+            "pattern": "^iam_operation_[0-9a-hjkmnp-tv-z]{26}$",
+            "type": "string",
+            "description": "The generated batch identifier, also used as the public Job ID.",
+            "example": "iam_operation_00000000000000000000000000"
+          }
+        }
+      },
+      "IamV1CreateSubaccountBatchRequest": {
+        "required": [
+          "workflowType",
+          "subaccountIds"
+        ],
+        "type": "object",
+        "properties": {
+          "workflowType": {
+            "$ref": "#/components/schemas/IamV1SubaccountBatchWorkflowType"
+          },
+          "subaccountIds": {
+            "maxItems": 1000,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "maxLength": 34,
+              "minLength": 34,
+              "pattern": "^AC[0-9a-f]{32}$",
+              "type": "string"
+            },
+            "description": "The subaccount IDs to act on. A maximum of 1000 may be submitted per batch."
+          }
+        }
+      },
+      "IamV1BatchDownloadUrl": {
+        "required": [
+          "downloadUrl",
+          "expiresAt"
+        ],
+        "type": "object",
+        "properties": {
+          "downloadUrl": {
+            "type": "string",
+            "description": "A pre-signed, time-limited S3 URL for the CSV. The lifetime is short and server-configured; read \u0060expiresAt\u0060 rather than assuming a fixed duration.",
+            "example": "https://com-twilio-iam-prod-us1-icp-subaccount-batches.s3.amazonaws.com/results/iam_operation_00000000000000000000000000.csv?X-Amz-Signature=..."
+          },
+          "expiresAt": {
+            "type": "string",
+            "description": "The time the pre-signed URL stops being valid, given in RFC 3339 format.",
+            "format": "date-time",
+            "example": "2026-07-15T14:30:00Z"
+          }
+        }
+      },
       "InsightsV1AccountSettings": {
         "type": "object",
         "properties": {
@@ -182513,6 +182510,12 @@
             "nullable": true,
             "example": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r/Results"
           },
+          "resultId": {
+            "type": "string",
+            "description": "Identifier of the results resource. Present only when status is COMPLETED.\nEqual to operationId, since results are keyed by the operation ID.\n",
+            "nullable": true,
+            "example": "proc_job_01h9d8r0vte3hz8tykdj329t7r"
+          },
           "resultRetentionPeriod": {
             "type": "string",
             "description": "ISO 8601 duration for how long results are retained.",
@@ -183829,17 +183832,17 @@
       "TextResult": {
         "title": "Text result",
         "required": [
-          "referenceIds",
-          "operator",
-          "dateCreated",
-          "conversationId",
-          "intelligenceConfiguration",
-          "result",
-          "outputFormat",
           "id",
           "accountId",
+          "outputFormat",
           "executionDetails",
-          "metadata"
+          "referenceIds",
+          "metadata",
+          "result",
+          "operator",
+          "dateCreated",
+          "intelligenceConfiguration",
+          "conversationId"
         ],
         "type": "object",
         "properties": {
@@ -183899,17 +183902,17 @@
       "JsonResult": {
         "title": "JSON result",
         "required": [
-          "referenceIds",
-          "operator",
-          "dateCreated",
-          "conversationId",
-          "intelligenceConfiguration",
-          "result",
-          "outputFormat",
           "id",
           "accountId",
+          "outputFormat",
           "executionDetails",
-          "metadata"
+          "referenceIds",
+          "metadata",
+          "result",
+          "operator",
+          "dateCreated",
+          "intelligenceConfiguration",
+          "conversationId"
         ],
         "type": "object",
         "properties": {
@@ -183969,17 +183972,17 @@
       "ClassificationResult": {
         "title": "Classification result",
         "required": [
-          "referenceIds",
-          "operator",
-          "dateCreated",
-          "conversationId",
-          "intelligenceConfiguration",
-          "result",
-          "outputFormat",
           "id",
           "accountId",
+          "outputFormat",
           "executionDetails",
-          "metadata"
+          "referenceIds",
+          "metadata",
+          "result",
+          "operator",
+          "dateCreated",
+          "intelligenceConfiguration",
+          "conversationId"
         ],
         "type": "object",
         "properties": {
@@ -184039,17 +184042,17 @@
       "ExtractionResult": {
         "title": "Extraction result",
         "required": [
-          "referenceIds",
-          "operator",
-          "dateCreated",
-          "conversationId",
-          "intelligenceConfiguration",
-          "result",
-          "outputFormat",
           "id",
           "accountId",
+          "outputFormat",
           "executionDetails",
-          "metadata"
+          "referenceIds",
+          "metadata",
+          "result",
+          "operator",
+          "dateCreated",
+          "intelligenceConfiguration",
+          "conversationId"
         ],
         "type": "object",
         "properties": {
@@ -184676,8 +184679,8 @@
       },
       "LanguageOperatorVersion": {
         "required": [
-          "status",
-          "dateCreated"
+          "dateCreated",
+          "status"
         ],
         "type": "object",
         "properties": {
@@ -187944,11 +187947,11 @@
       },
       "Knowledge": {
         "required": [
-          "updatedAt",
-          "createdAt",
-          "status",
           "id",
-          "name"
+          "status",
+          "name",
+          "createdAt",
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -188161,6 +188164,64 @@
           }
         }
       },
+      "KnowledgeErrorInstance": {
+        "required": [
+          "type",
+          "code",
+          "instance"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "maxLength": 200,
+            "type": "string",
+            "description": "A URI reference identifying the problem type, resolving to human-readable documentation (e.g., https://www.twilio.com/docs/api/errors/420018).",
+            "example": "https://www.twilio.com/docs/api/errors/420018"
+          },
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific numeric error code for programmatic handling.",
+            "example": 420022
+          },
+          "instance": {
+            "maxLength": 500,
+            "type": "string",
+            "description": "The specific URL or resource that caused the error.",
+            "example": "https://docs.example.com/old-page"
+          },
+          "detail": {
+            "maxLength": 1000,
+            "type": "string",
+            "description": "Detailed explanation of the error.",
+            "example": "Page does not exist"
+          }
+        },
+        "description": "Represents a single error instance for a specific URL or resource."
+      },
+      "KnowledgeErrorGroup": {
+        "required": [
+          "title",
+          "instances"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "The error type or reason (e.g., \u0022404 Not Found\u0022, \u0022500 Internal Server Error\u0022).",
+            "example": "404 Not Found"
+          },
+          "instances": {
+            "maxItems": 3,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/KnowledgeErrorInstance"
+            },
+            "description": "Array of error instances for this error title. Required when an error group is present."
+          }
+        },
+        "description": "Groups error instances by error type/title."
+      },
       "WebSourceDetails": {
         "required": [
           "type",
@@ -188187,6 +188248,14 @@
           },
           "crawlPeriod": {
             "$ref": "#/components/schemas/WebSourceDetailsCrawlPeriod"
+          },
+          "errors": {
+            "maxItems": 2000,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/KnowledgeErrorGroup"
+            },
+            "description": "Processing errors encountered during web crawling, grouped by title.\nArray of error groups, where each group has a title and list of error instances.\nOnly present when crawl errors occurred."
           }
         },
         "additionalProperties": false,
@@ -188308,11 +188377,11 @@
       "KnowledgeBase": {
         "required": [
           "displayName",
-          "updatedAt",
-          "createdAt",
+          "id",
           "status",
           "version",
-          "id"
+          "createdAt",
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -190146,9 +190215,9 @@
       },
       "ObservationInfo": {
         "required": [
+          "id",
           "createdAt",
-          "updatedAt",
-          "id"
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -190241,12 +190310,12 @@
       },
       "SummaryInfo": {
         "required": [
-          "updatedAt",
-          "conversationId",
-          "createdAt",
           "occurredAt",
           "id",
-          "content"
+          "createdAt",
+          "updatedAt",
+          "content",
+          "conversationId"
         ],
         "type": "object",
         "properties": {
@@ -190892,10 +190961,10 @@
       "Store": {
         "required": [
           "displayName",
-          "intelligenceServiceId",
+          "id",
           "status",
           "version",
-          "id"
+          "intelligenceServiceId"
         ],
         "type": "object",
         "properties": {
@@ -191332,12 +191401,15 @@
       "DataMappingType": {
         "enum": [
           "CSV",
-          "DATASET"
+          "DATASET",
+          "INGRESS",
+          "DATASET_CLOUDAPP",
+          "DATASET_WAREHOUSE"
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The type of data mapping defining how data flows into the Memory Store.",
-        "example": "DATASET",
+        "description": "The type of data mapping defining how data flows into the Memory Store.\n\u0060CSV\u0060 and \u0060DATASET\u0060 are deprecated aliases being replaced by \u0060INGRESS\u0060,\n\u0060DATASET_CLOUDAPP\u0060, and \u0060DATASET_WAREHOUSE\u0060 respectively.",
+        "example": "DATASET_WAREHOUSE",
         "x-ms-enum": {
           "name": "DataMappingType",
           "modelAsString": false,
@@ -191349,6 +191421,18 @@
             {
               "value": "DATASET",
               "name": "Dataset"
+            },
+            {
+              "value": "INGRESS",
+              "name": "Ingress"
+            },
+            {
+              "value": "DATASET_CLOUDAPP",
+              "name": "DatasetCloudapp"
+            },
+            {
+              "value": "DATASET_WAREHOUSE",
+              "name": "DatasetWarehouse"
             }
           ]
         }
@@ -191363,7 +191447,16 @@
             "$ref": "#/components/schemas/DataMappingFromCsv"
           },
           {
+            "$ref": "#/components/schemas/DataMappingFromIngress"
+          },
+          {
             "$ref": "#/components/schemas/DataMappingFromDataSet"
+          },
+          {
+            "$ref": "#/components/schemas/DataMappingFromCloudAppDataSet"
+          },
+          {
+            "$ref": "#/components/schemas/DataMappingFromWarehouseDataSet"
           }
         ],
         "properties": {
@@ -191378,13 +191471,19 @@
           "propertyName": "type",
           "mapping": {
             "CSV": "#/components/schemas/DataMappingFromCsv",
+            "INGRESS": "#/components/schemas/DataMappingFromIngress",
             "DATASET": "#/components/schemas/DataMappingFromDataSet",
+            "DATASET_CLOUDAPP": "#/components/schemas/DataMappingFromCloudAppDataSet",
+            "DATASET_WAREHOUSE": "#/components/schemas/DataMappingFromWarehouseDataSet",
             "DataMappingFromCsv": "#/components/schemas/DataMappingFromCsv",
-            "DataMappingFromDataSet": "#/components/schemas/DataMappingFromDataSet"
+            "DataMappingFromIngress": "#/components/schemas/DataMappingFromIngress",
+            "DataMappingFromDataSet": "#/components/schemas/DataMappingFromDataSet",
+            "DataMappingFromCloudAppDataSet": "#/components/schemas/DataMappingFromCloudAppDataSet",
+            "DataMappingFromWarehouseDataSet": "#/components/schemas/DataMappingFromWarehouseDataSet"
           }
         },
         "example": {
-          "type": "DATASET",
+          "type": "DATASET_WAREHOUSE",
           "datasetId": "tdi_dataset_00000000000000000000000000"
         }
       },
@@ -191553,9 +191652,9 @@
       },
       "CreateDataMappingInput": {
         "required": [
+          "mappingFrom",
           "displayName",
-          "mappingTo",
-          "mappingFrom"
+          "mappingTo"
         ],
         "type": "object",
         "properties": {
@@ -191589,13 +191688,13 @@
       },
       "DataMapping": {
         "required": [
-          "displayName",
-          "updatedAt",
           "mappingTo",
-          "createdAt",
+          "id",
+          "displayName",
           "version",
           "mappingFrom",
-          "id"
+          "createdAt",
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -191669,11 +191768,11 @@
       },
       "RecallObservationInfo": {
         "required": [
-          "updatedAt",
-          "createdAt",
           "occurredAt",
           "id",
           "source",
+          "createdAt",
+          "updatedAt",
           "content"
         ],
         "type": "object",
@@ -191739,12 +191838,12 @@
       },
       "RecallSummaryInfo": {
         "required": [
-          "updatedAt",
-          "conversationId",
-          "createdAt",
           "occurredAt",
           "id",
-          "content"
+          "createdAt",
+          "updatedAt",
+          "content",
+          "conversationId"
         ],
         "type": "object",
         "properties": {
@@ -191960,9 +192059,9 @@
       },
       "ObservationCreateRequest": {
         "required": [
+          "occurredAt",
           "source",
-          "content",
-          "occurredAt"
+          "content"
         ],
         "type": "object",
         "properties": {
@@ -192229,6 +192328,71 @@
           }
         },
         "additionalProperties": false
+      },
+      "DataMappingFromIngress": {
+        "required": [
+          "type",
+          "columns"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/DataMappingFromIngressType"
+          },
+          "columns": {
+            "maxItems": 100,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "maxLength": 256,
+              "minLength": 1,
+              "type": "string"
+            },
+            "description": "The list of ingress column names that serve as the source fields."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Configuration for mapping from ingress column names provided directly in the request."
+      },
+      "DataMappingFromCloudAppDataSet": {
+        "required": [
+          "type",
+          "datasetId"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/DataMappingFromCloudAppDataSetType"
+          },
+          "datasetId": {
+            "pattern": "^tdi_dataset_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The unique identifier of the TDI dataset to connect.",
+            "example": "tdi_dataset_00000000000000000000000000"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Configuration for mapping from a TDI dataset backed by a cloud app (CRM) source."
+      },
+      "DataMappingFromWarehouseDataSet": {
+        "required": [
+          "type",
+          "datasetId"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/DataMappingFromWarehouseDataSetType"
+          },
+          "datasetId": {
+            "pattern": "^tdi_dataset_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The unique identifier of the TDI dataset to connect.",
+            "example": "tdi_dataset_00000000000000000000000000"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Configuration for mapping from a TDI dataset backed by a warehouse source."
       },
       "MessagingV1ServiceAlphaSender": {
         "type": "object",
@@ -198498,10 +198662,10 @@
       },
       "NumbersV1A2PRegistrationDetailsFetch": {
         "required": [
-          "accountSid",
-          "phoneNumber",
+          "externalPhoneNumberStatus",
           "phoneNumberSid",
-          "externalPhoneNumberStatus"
+          "phoneNumber",
+          "accountSid"
         ],
         "type": "object",
         "properties": {
@@ -198767,6 +198931,103 @@
           }
         }
       },
+      "NumbersV1SmsVerification": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string",
+            "description": "The phone number being verified in E.164 format."
+          },
+          "verificationSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^VE[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The unique SID of this verification resource."
+          },
+          "sendCodeAttempts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NumbersV1SmsVerificationSendCodeAttemptsItem"
+            },
+            "description": "An array of verification attempt objects."
+          }
+        }
+      },
+      "NumbersV1SmsVerificationCheck": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string",
+            "description": "The phone number that was verified in E.164 format."
+          },
+          "verificationSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^VE[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The unique SID of this verification resource."
+          },
+          "status": {
+            "type": "string",
+            "description": "The status of the verification (pending, approved, canceled)."
+          },
+          "callerIdSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^PN[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The Caller ID SID created upon successful verification.",
+            "nullable": true
+          }
+        }
+      },
+      "NumbersV1VoiceVerification": {
+        "type": "object",
+        "properties": {
+          "accountSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^AC[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The Account SID that owns this verification."
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "The phone number being verified in E.164 format."
+          },
+          "friendlyName": {
+            "type": "string",
+            "description": "A human-readable name for this caller ID.",
+            "nullable": true
+          },
+          "validationCode": {
+            "type": "string",
+            "description": "The 6-digit validation code to be entered during the call."
+          },
+          "callSid": {
+            "type": "string",
+            "description": "The Call SID for the verification call."
+          }
+        }
+      },
+      "NumbersV1VoiceVerificationCheck": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string",
+            "description": "The phone number that was verified in E.164 format."
+          },
+          "callerIdSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^PN[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The Caller ID SID created upon successful verification.",
+            "nullable": true
+          }
+        }
+      },
       "NumbersV2A2PRegistrationDetails": {
         "required": [
           "accountSid",
@@ -198845,10 +199106,10 @@
       },
       "NumbersV2A2PRegistrationDetailsFetch": {
         "required": [
-          "accountSid",
-          "phoneNumber",
+          "externalPhoneNumberStatus",
           "phoneNumberSid",
-          "externalPhoneNumberStatus"
+          "phoneNumber",
+          "accountSid"
         ],
         "type": "object",
         "properties": {
@@ -201652,6 +201913,47 @@
             "pattern": "^BU[0-9a-fA-F]{32}$",
             "type": "string",
             "description": "Bundle SID"
+          }
+        }
+      },
+      "NumbersV2CallerId": {
+        "type": "object",
+        "properties": {
+          "sid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^PN[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The unique SID of this Caller ID resource."
+          },
+          "accountSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^AC[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The Account SID that owns this Caller ID."
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "The phone number in E.164 format.",
+            "nullable": true
+          },
+          "friendlyName": {
+            "type": "string",
+            "description": "A human-readable name for this caller ID.",
+            "nullable": true
+          },
+          "dateCreated": {
+            "type": "string",
+            "description": "The date this resource was created.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dateUpdated": {
+            "type": "string",
+            "description": "The date this resource was last updated.",
+            "format": "date-time",
+            "nullable": true
           }
         }
       },
@@ -222774,10 +223076,10 @@
       },
       "TwilioMemoryV1CommunicationRecipientsItem": {
         "required": [
-          "name",
-          "channel",
           "address",
-          "id"
+          "name",
+          "id",
+          "channel"
         ],
         "type": "object",
         "properties": {
@@ -223184,6 +223486,17 @@
       "NumbersV1CreateEmbeddedRegistrationResponseData": {
         "type": "object",
         "description": "Registration data echoed from the request."
+      },
+      "NumbersV1SmsVerificationSendCodeAttemptsItem": {
+        "type": "object",
+        "properties": {
+          "attemptSid": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          }
+        }
       },
       "NumbersV2AddressSubresourceUris": {
         "type": "object",
@@ -236770,409 +237083,6 @@
           }
         }
       },
-      "TwilioInsightsV3CreateQueryJob400Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3CreateQueryJob400ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3CreateQueryJob422Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3CreateQueryJob422ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3CreateQueryJob429Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3CreateQueryJob429ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3CreateQueryJob500Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3CreateQueryJob500ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3ListQueryJobs400Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3ListQueryJobs400ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3ListQueryJobs429Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3ListQueryJobs429ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3ListQueryJobs500Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3ListQueryJobs500ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3FetchQueryJobStatus404Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobStatus404ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3FetchQueryJobStatus429Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobStatus429ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3FetchQueryJobStatus500Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobStatus500ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3FetchQueryJobResults404Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobResults404ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3FetchQueryJobResults429Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobResults429ResponseParams"
-          }
-        }
-      },
-      "TwilioInsightsV3FetchQueryJobResults500Response": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3FetchQueryJobResults500ResponseParams"
-          }
-        }
-      },
       "TwilioIntelligenceV2CreateCustomOperatorXWwwFormUrlencodedRequest": {
         "title": "CreateCustomOperatorRequest",
         "required": [
@@ -238801,8 +238711,8 @@
       },
       "TwilioIntelligenceV3FetchOperatorVersion200Response": {
         "required": [
-          "status",
-          "dateCreated"
+          "dateCreated",
+          "status"
         ],
         "type": "object",
         "properties": {
@@ -244948,47 +244858,6 @@
           }
         }
       },
-      "TwilioOAuthV1FetchOAuthServerMetadata200Response": {
-        "type": "object",
-        "properties": {
-          "issuer": {
-            "type": "string",
-            "format": "uri"
-          },
-          "authorization_endpoint": {
-            "type": "string",
-            "format": "uri"
-          },
-          "token_endpoint": {
-            "type": "string",
-            "format": "uri"
-          },
-          "response_types_supported": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TwilioOAuthV1FetchOAuthServerMetadata200ResponseResponseTypesSupportedItem"
-            }
-          },
-          "grant_types_supported": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TwilioOAuthV1FetchOAuthServerMetadata200ResponseGrantTypesSupportedItem"
-            }
-          },
-          "code_challenge_methods_supported": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TwilioOAuthV1FetchOAuthServerMetadata200ResponseCodeChallengeMethodsSupportedItem"
-            }
-          },
-          "token_endpoint_auth_methods_supported": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TwilioOAuthV1FetchOAuthServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem"
-            }
-          }
-        }
-      },
       "TwilioOAuthV2CreateOAuth2TokenXWwwFormUrlencodedRequest": {
         "title": "CreateTokenRequest",
         "type": "object",
@@ -245028,6 +244897,47 @@
           "code_verifier": {
             "type": "string",
             "description": "The PKCE code verifier used to generate the code_challenge in the authorization request."
+          }
+        }
+      },
+      "TwilioOAuthV2FetchOAuth2ServerMetadata200Response": {
+        "type": "object",
+        "properties": {
+          "issuer": {
+            "type": "string",
+            "format": "uri"
+          },
+          "authorization_endpoint": {
+            "type": "string",
+            "format": "uri"
+          },
+          "token_endpoint": {
+            "type": "string",
+            "format": "uri"
+          },
+          "response_types_supported": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseResponseTypesSupportedItem"
+            }
+          },
+          "grant_types_supported": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseGrantTypesSupportedItem"
+            }
+          },
+          "code_challenge_methods_supported": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseCodeChallengeMethodsSupportedItem"
+            }
+          },
+          "token_endpoint_auth_methods_supported": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem"
+            }
           }
         }
       },
@@ -257282,6 +257192,22 @@
         "type": "object",
         "description": "Default response schema"
       },
+      "TwilioNumbersV2ListCallerIds200Response": {
+        "type": "object",
+        "properties": {
+          "callerIds": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NumbersV2CallerId"
+            }
+          }
+        }
+      },
+      "TwilioNumbersV2DeleteCallerId204Response": {
+        "title": "DefaultResponse",
+        "type": "object",
+        "description": "Default response schema"
+      },
       "TwilioPreviewDeleteHostedNumbersHostedNumberOrder204Response": {
         "title": "DefaultResponse",
         "type": "object",
@@ -263477,97 +263403,6 @@
         "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
       },
       "TwilioInsightsV3FetchMetadata500ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3CreateQueryJob400ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3CreateQueryJob422ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3CreateQueryJob429ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3CreateQueryJob500ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3ListQueryJobs400ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3ListQueryJobs429ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3ListQueryJobs500ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3FetchQueryJobStatus404ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3FetchQueryJobStatus429ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3FetchQueryJobStatus500ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3FetchQueryJobResults404ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3FetchQueryJobResults429ResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "TwilioInsightsV3FetchQueryJobResults500ResponseParams": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
@@ -274342,6 +274177,63 @@
           ]
         }
       },
+      "DataMappingFromIngressType": {
+        "enum": [
+          "INGRESS"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The source data type, which determines the source of the data and the required configuration parameters.",
+        "example": "INGRESS",
+        "x-ms-enum": {
+          "name": "DataMappingFromIngressType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "INGRESS",
+              "name": "Ingress"
+            }
+          ]
+        }
+      },
+      "DataMappingFromCloudAppDataSetType": {
+        "enum": [
+          "DATASET_CLOUDAPP"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The source data type, which determines the source of the data and the required configuration parameters.",
+        "example": "DATASET_CLOUDAPP",
+        "x-ms-enum": {
+          "name": "DataMappingFromCloudAppDataSetType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "DATASET_CLOUDAPP",
+              "name": "DatasetCloudapp"
+            }
+          ]
+        }
+      },
+      "DataMappingFromWarehouseDataSetType": {
+        "enum": [
+          "DATASET_WAREHOUSE"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The source data type, which determines the source of the data and the required configuration parameters.",
+        "example": "DATASET_WAREHOUSE",
+        "x-ms-enum": {
+          "name": "DataMappingFromWarehouseDataSetType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "DATASET_WAREHOUSE",
+              "name": "DatasetWarehouse"
+            }
+          ]
+        }
+      },
       "MessagingV1ServiceInboundMethod": {
         "enum": [
           "GET",
@@ -280583,14 +280475,14 @@
           ]
         }
       },
-      "TwilioOAuthV1FetchOAuthServerMetadata200ResponseResponseTypesSupportedItem": {
+      "TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseResponseTypesSupportedItem": {
         "enum": [
           "code"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "TwilioOAuthV1FetchOAuthServerMetadata200ResponseResponseTypesSupportedItem",
+          "name": "TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseResponseTypesSupportedItem",
           "modelAsString": false,
           "values": [
             {
@@ -280600,7 +280492,7 @@
           ]
         }
       },
-      "TwilioOAuthV1FetchOAuthServerMetadata200ResponseGrantTypesSupportedItem": {
+      "TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseGrantTypesSupportedItem": {
         "enum": [
           "authorization_code",
           "client_credentials",
@@ -280609,7 +280501,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "TwilioOAuthV1FetchOAuthServerMetadata200ResponseGrantTypesSupportedItem",
+          "name": "TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseGrantTypesSupportedItem",
           "modelAsString": false,
           "values": [
             {
@@ -280627,14 +280519,14 @@
           ]
         }
       },
-      "TwilioOAuthV1FetchOAuthServerMetadata200ResponseCodeChallengeMethodsSupportedItem": {
+      "TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseCodeChallengeMethodsSupportedItem": {
         "enum": [
           "S256"
         ],
         "type": "string",
         "additionalProperties": false
       },
-      "TwilioOAuthV1FetchOAuthServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem": {
+      "TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem": {
         "enum": [
           "client_secret_post",
           "none"
@@ -280642,7 +280534,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "TwilioOAuthV1FetchOAuthServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem",
+          "name": "TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem",
           "modelAsString": false,
           "values": [
             {
@@ -287169,6 +287061,10 @@
       "description": "Send typing indicators to OTT channel recipients (WhatsApp, Apple Messages for Business, RCS).\n"
     },
     {
+      "name": "MessagingV3WhatsappBusinessAccount",
+      "description": "Retrieve the WhatsApp Business Account associated with a Twilio account."
+    },
+    {
       "name": "MonitorV1Alert"
     },
     {
@@ -287265,6 +287161,9 @@
       "name": "NumbersV1SenderIdRegistrationEmbeddedSession"
     },
     {
+      "name": "V1CallerIds"
+    },
+    {
       "name": "NumbersV2A2pRegistrationDetails"
     },
     {
@@ -287349,10 +287248,10 @@
       "name": "V2ShortCodeDocuments"
     },
     {
-      "name": "OauthV1Index"
+      "name": "V2CallerIds"
     },
     {
-      "name": "OauthV1Metadata"
+      "name": "OauthV1Index"
     },
     {
       "name": "OauthV1Version"

@@ -8,11 +8,19 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSet"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngress"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromWarehouseDataSet"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DataMappingFromTypes : IComposedTypeWrapper, IParsable
     {
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSet"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSet? DataMappingFromCloudAppDataSet { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSet DataMappingFromCloudAppDataSet { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,6 +37,22 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet DataMappingFromDataSet { get; set; }
 #endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngress"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngress? DataMappingFromIngress { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngress DataMappingFromIngress { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromWarehouseDataSet"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromWarehouseDataSet? DataMappingFromWarehouseDataSet { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromWarehouseDataSet DataMappingFromWarehouseDataSet { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -39,13 +63,25 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromTypes();
-            if("CSV".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("DataMappingFromCloudAppDataSet".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DataMappingFromCloudAppDataSet = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSet();
+            }
+            else if("CSV".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.DataMappingFromCsv = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv();
             }
             else if("DataMappingFromDataSet".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.DataMappingFromDataSet = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet();
+            }
+            else if("DataMappingFromIngress".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DataMappingFromIngress = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngress();
+            }
+            else if("DataMappingFromWarehouseDataSet".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DataMappingFromWarehouseDataSet = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromWarehouseDataSet();
             }
             return result;
         }
@@ -55,13 +91,25 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(DataMappingFromCsv != null)
+            if(DataMappingFromCloudAppDataSet != null)
+            {
+                return DataMappingFromCloudAppDataSet.GetFieldDeserializers();
+            }
+            else if(DataMappingFromCsv != null)
             {
                 return DataMappingFromCsv.GetFieldDeserializers();
             }
             else if(DataMappingFromDataSet != null)
             {
                 return DataMappingFromDataSet.GetFieldDeserializers();
+            }
+            else if(DataMappingFromIngress != null)
+            {
+                return DataMappingFromIngress.GetFieldDeserializers();
+            }
+            else if(DataMappingFromWarehouseDataSet != null)
+            {
+                return DataMappingFromWarehouseDataSet.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -72,13 +120,25 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(DataMappingFromCsv != null)
+            if(DataMappingFromCloudAppDataSet != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSet>(null, DataMappingFromCloudAppDataSet);
+            }
+            else if(DataMappingFromCsv != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv>(null, DataMappingFromCsv);
             }
             else if(DataMappingFromDataSet != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet>(null, DataMappingFromDataSet);
+            }
+            else if(DataMappingFromIngress != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngress>(null, DataMappingFromIngress);
+            }
+            else if(DataMappingFromWarehouseDataSet != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromWarehouseDataSet>(null, DataMappingFromWarehouseDataSet);
             }
         }
     }

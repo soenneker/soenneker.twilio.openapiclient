@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds;
 using Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.HostedNumber;
 using Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.Porting;
 using Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrations;
@@ -18,6 +19,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class V1RequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The CallerIds property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds.CallerIdsRequestBuilder CallerIds
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds.CallerIdsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The HostedNumber property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.HostedNumber.HostedNumberRequestBuilder HostedNumber
         {

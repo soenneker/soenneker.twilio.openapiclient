@@ -48,6 +48,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string RejectionReason { get; set; }
 #endif
+        /// <summary>Time-to-live in seconds for attempting to send a message with this Content</summary>
+        public int? SendTtlSeconds { get; set; }
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -86,6 +88,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "content_type", n => { ContentType = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "rejection_reason", n => { RejectionReason = n.GetStringValue(); } },
+                { "send_ttl_seconds", n => { SendTtlSeconds = n.GetIntValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
             };
         }
@@ -101,6 +104,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("content_type", ContentType);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("rejection_reason", RejectionReason);
+            writer.WriteIntValue("send_ttl_seconds", SendTtlSeconds);
             writer.WriteStringValue("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }

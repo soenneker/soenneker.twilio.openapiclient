@@ -8,47 +8,45 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Content approval request body
+    /// Groups error instances by error type/title.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ContentApprovalRequest : IAdditionalDataHolder, IParsable
+    public partial class KnowledgeErrorGroup : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A WhatsApp recognized template category.</summary>
+        /// <summary>Array of error instances for this error title. Required when an error group is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Category { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorInstance>? Instances { get; set; }
 #nullable restore
 #else
-        public string Category { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorInstance> Instances { get; set; }
 #endif
-        /// <summary>Name of the template.</summary>
+        /// <summary>The error type or reason (e.g., &quot;404 Not Found&quot;, &quot;500 Internal Server Error&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Title { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Title { get; set; }
 #endif
-        /// <summary>Time-to-live in seconds for attempting to send a message with this Content</summary>
-        public int? SendTtlSeconds { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ContentApprovalRequest"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup"/> and sets the default values.
         /// </summary>
-        public ContentApprovalRequest()
+        public KnowledgeErrorGroup()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ContentApprovalRequest"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Twilio.OpenApiClient.Models.ContentApprovalRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.ContentApprovalRequest();
+            return new global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,9 +56,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "category", n => { Category = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "send_ttl_seconds", n => { SendTtlSeconds = n.GetIntValue(); } },
+                { "instances", n => { Instances = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorInstance>(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorInstance.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "title", n => { Title = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -70,9 +67,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("category", Category);
-            writer.WriteStringValue("name", Name);
-            writer.WriteIntValue("send_ttl_seconds", SendTtlSeconds);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorInstance>("instances", Instances);
+            writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
