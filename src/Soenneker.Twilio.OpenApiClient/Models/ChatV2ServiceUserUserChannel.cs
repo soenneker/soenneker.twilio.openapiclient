@@ -48,7 +48,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string MemberSid { get; set; }
 #endif
-        /// <summary>&quot;The push notification level of the User for the Channel. Can be: `default` or `muted`.&quot;</summary>
+        /// <summary>The push notification level of the User for the Channel. Can be: `default` or `muted`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.UserChannelEnumNotificationLevel? NotificationLevel { get; set; }
         /// <summary>The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) the User Channel resource is associated with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,7 +58,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ServiceSid { get; set; }
 #endif
-        /// <summary>&quot;The status of the User on the Channel. Can be: `joined`, `invited`, or `notParticipating`.&quot;</summary>
+        /// <summary>The status of the User on the Channel. Can be: `joined`, `invited`, or `notParticipating`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2UserChannelEnumChannelStatus? Status { get; set; }
         /// <summary>The number of unread Messages in the Channel for the User. Note that retrieving messages on a client endpoint does not mean that messages are consumed or read. See [Consumption Horizon feature](https://www.twilio.com/docs/chat/consumption-horizon) to learn how to mark messages as consumed.</summary>
         public int? UnreadMessagesCount { get; set; }

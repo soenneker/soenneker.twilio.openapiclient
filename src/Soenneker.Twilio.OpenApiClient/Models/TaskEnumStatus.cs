@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The current status of the Task&apos;s assignment. Can be: `pending`, `reserved`, `assigned`, `canceled`, `wrapping`, or `completed`.&quot;</summary>
+    /// <summary>The current status of the Task&apos;s assignment. Can be: `pending`, `reserved`, `assigned`, `canceled`, `wrapping`, or `completed`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TaskEnumStatus
     {

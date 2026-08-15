@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;The number of Tasks by priority. For example: `{\&quot;0\&quot;: \&quot;10\&quot;, \&quot;99\&quot;: \&quot;5\&quot;}` shows 10 Tasks at priority 0 and 5 at priority 99.&quot;
+    /// The number of Tasks by priority. For example: `{&quot;0&quot;: &quot;10&quot;, &quot;99&quot;: &quot;5&quot;}` shows 10 Tasks at priority 0 and 5 at priority 99.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaskrouterV1WorkspaceTaskQueueTaskQueueRealTimeStatisticsTasksByPriority : IAdditionalDataHolder, IParsable

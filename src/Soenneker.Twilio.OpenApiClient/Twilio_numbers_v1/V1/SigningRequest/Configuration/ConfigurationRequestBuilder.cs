@@ -127,7 +127,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SigningRequest.Con
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ConfigurationRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;The country ISO code to apply this configuration, this is an optional field, Example: US, MX&quot;</summary>
+            /// <summary>The country ISO code to apply this configuration, this is an optional field, Example: US, MX</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string? Country { get; set; }
@@ -147,7 +147,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SigningRequest.Con
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;The product or service for which is requesting the signature, this is an optional field, Example: Porting, Hosting&quot;</summary>
+            /// <summary>The product or service for which is requesting the signature, this is an optional field, Example: Porting, Hosting</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string? Product { get; set; }

@@ -110,7 +110,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Services.Item
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

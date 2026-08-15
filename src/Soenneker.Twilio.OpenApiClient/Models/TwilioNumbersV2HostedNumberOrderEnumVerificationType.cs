@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The method used to verify ownership of the number to be hosted. Can be: `phone-call` or `phone-bill` and the default is `phone-call`.&quot;</summary>
+    /// <summary>The method used to verify ownership of the number to be hosted. Can be: `phone-call` or `phone-bill` and the default is `phone-call`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TwilioNumbersV2HostedNumberOrderEnumVerificationType
     {

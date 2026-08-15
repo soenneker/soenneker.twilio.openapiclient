@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The connectivity reset status of the SIM. Can be: null or `resetting`. When a connectivity reset is initiated on a SIM, this property is `resetting`. After the reset completes, it is null.&quot;</summary>
+    /// <summary>The connectivity reset status of the SIM. Can be: null or `resetting`. When a connectivity reset is initiated on a SIM, this property is `resetting`. After the reset completes, it is null.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SimEnumResetStatus
     {

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The track type. Can be: `audio`, `video` or `data`.&quot;</summary>
+    /// <summary>The track type. Can be: `audio`, `video` or `data`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RoomParticipantSubscribedTrackEnumKind
     {

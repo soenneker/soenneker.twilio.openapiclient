@@ -152,7 +152,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Configuratio
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;Filter the address configurations by its type. This value can be one of: `whatsapp`, `sms`.&quot;</summary>
+            /// <summary>Filter the address configurations by its type. This value can be one of: `whatsapp`, `sms`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string? Type { get; set; }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are  `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.&quot;
+    /// The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are  `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberTollFreeCapabilities : IAdditionalDataHolder, IParsable

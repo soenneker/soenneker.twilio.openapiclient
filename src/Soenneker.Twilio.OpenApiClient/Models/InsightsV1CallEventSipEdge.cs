@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;`object` Represents the Twilio media gateway for SIP interface and SIP trunking calls. The events here describe the call lifecycle as reported by Twilio&apos;s public media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;
+    /// `object` Represents the Twilio media gateway for SIP interface and SIP trunking calls. The events here describe the call lifecycle as reported by Twilio&apos;s public media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InsightsV1CallEventSipEdge : IAdditionalDataHolder, IParsable

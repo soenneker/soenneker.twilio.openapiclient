@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public DateTimeOffset? DateRetired { get; set; }
         /// <summary>Scheduled retirement date for this version. Present when status is `DEPRECATED`.</summary>
         public DateTimeOffset? RetirementDate { get; set; }
-        /// <summary>&quot;The lifecycle status of an Operator version.Available values:- `PREVIEW`: Available but restricted to internal/testing visibility. Normal execution.- `ACTIVE`: Available for normal use.- `DEPRECATED`: Still executes normally, but a Warn event is emitted via the Watch product lifecycle system. Customers should migrate to a newer version.- `RETIRED`: Hard failure on execution. An Error is logged in Watch. Customers must manually update their Intelligence Configuration to a valid version.&quot;</summary>
+        /// <summary>The lifecycle status of an Operator version.Available values:- `PREVIEW`: Available but restricted to internal/testing visibility. Normal execution.- `ACTIVE`: Available for normal use.- `DEPRECATED`: Still executes normally, but a Warn event is emitted via the Watch product lifecycle system. Customers should migrate to a newer version.- `RETIRED`: Hard failure on execution. An Error is logged in Watch. Customers must manually update their Intelligence Configuration to a valid version.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.OperatorVersionStatus? Status { get; set; }
         /// <summary>The numeric version number.</summary>
         public int? Version { get; set; }

@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public DateTimeOffset? DateCreated { get; set; }
         /// <summary>The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateUpdated { get; set; }
-        /// <summary>&quot;The array of events that this Webhook is subscribed to. Possible event types: `*, factor.deleted, factor.created, factor.verified, challenge.approved, challenge.denied`&quot;</summary>
+        /// <summary>The array of events that this Webhook is subscribed to. Possible event types: `*, factor.deleted, factor.created, factor.verified, challenge.approved, challenge.denied`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? EventTypes { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The webhook status. Default value is `enabled`. One of: `enabled` or `disabled`&quot;</summary>
+        /// <summary>The webhook status. Default value is `enabled`. One of: `enabled` or `disabled`</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WebhookEnumStatus? Status { get; set; }
         /// <summary>The absolute URL of the Webhook resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_pricing_v2.V2.Voice
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_pricing_v2\v2\Voice
+    /// Voice pricing
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VoiceRequestBuilder : BaseRequestBuilder

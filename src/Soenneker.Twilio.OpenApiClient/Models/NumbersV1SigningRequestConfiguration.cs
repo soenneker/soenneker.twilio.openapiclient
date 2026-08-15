@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Country { get; set; }
 #endif
-        /// <summary>&quot;Content of the email that the end client will receive ex: “This is a Hosting request from Twilio, please check the document and sign it”, maximum length of 5,000 characters.&quot;</summary>
+        /// <summary>Content of the email that the end client will receive ex: “This is a Hosting request from Twilio, please check the document and sign it”, maximum length of 5,000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmailMessage { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string EmailMessage { get; set; }
 #endif
-        /// <summary>&quot;Subject of the email that the end client will receive ex: “Twilio Hosting Request”, maximum length of 255 characters.&quot;</summary>
+        /// <summary>Subject of the email that the end client will receive ex: “Twilio Hosting Request”, maximum length of 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmailSubject { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>&quot;The SID of the document  that includes the logo that will appear in the LOA. To upload documents follow the following guide: https://www.twilio.com/docs/phone-numbers/regulatory/getting-started/create-new-bundle-public-rest-apis#supporting-document-create &quot;</summary>
+        /// <summary>The SID of the document  that includes the logo that will appear in the LOA. To upload documents follow the following guide: https://www.twilio.com/docs/phone-numbers/regulatory/getting-started/create-new-bundle-public-rest-apis#supporting-document-create </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LogoSid { get; set; }

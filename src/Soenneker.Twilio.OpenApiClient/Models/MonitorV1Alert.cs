@@ -52,7 +52,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ErrorCode { get; set; }
 #endif
-        /// <summary>&quot;The log level.  Can be: `error`, `warning`, `notice`, or `debug`.&quot;</summary>
+        /// <summary>The log level.  Can be: `error`, `warning`, `notice`, or `debug`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LogLevel { get; set; }

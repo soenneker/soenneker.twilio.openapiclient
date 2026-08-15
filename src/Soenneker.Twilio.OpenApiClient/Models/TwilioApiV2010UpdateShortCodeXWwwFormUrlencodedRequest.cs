@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The API version to use to start a new TwiML session. Can be: `2010-04-01` or `2008-08-01`.&quot;</summary>
+        /// <summary>The API version to use to start a new TwiML session. Can be: `2010-04-01` or `2008-08-01`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ApiVersion { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method that we should use to call the `sms_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method that we should use to call the `sms_fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateShortCodeXWwwFormUrlencodedRequestSmsFallbackMethod? SmsFallbackMethod { get; set; }
         /// <summary>The URL that we should call if an error occurs while retrieving or executing the TwiML from `sms_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SmsFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use when calling the `sms_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use when calling the `sms_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateShortCodeXWwwFormUrlencodedRequestSmsMethod? SmsMethod { get; set; }
         /// <summary>The URL we should call when receiving an incoming SMS message to this short code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -33,7 +33,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives.Item.Calls.
         {
         }
         /// <summary>
-        /// &quot;Delete an archived call record from Bulk Export. Note: this does not also delete the record from the Voice API.&quot;
+        /// Delete an archived call record from Bulk Export. Note: this does not also delete the record from the Voice API.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives.Item.Calls.
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Delete an archived call record from Bulk Export. Note: this does not also delete the record from the Voice API.&quot;
+        /// Delete an archived call record from Bulk Export. Note: this does not also delete the record from the Voice API.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -65,7 +65,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.Archives.Item.Calls.
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

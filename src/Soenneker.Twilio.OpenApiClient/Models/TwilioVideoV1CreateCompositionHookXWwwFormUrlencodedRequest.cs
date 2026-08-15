@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>&quot;A string that describes the columns (width) and rows (height) of the generated composed video in pixels. Defaults to `640x480`. The string&apos;s format is `{width}x{height}` where: * 16 &lt;= `{width}` &lt;= 1280* 16 &lt;= `{height}` &lt;= 1280* `{width}` * `{height}` &lt;= 921,600Typical values are: * HD = `1280x720`* PAL = `1024x576`* VGA = `640x480`* CIF = `320x240`Note that the `resolution` imposes an aspect ratio to the resulting composition. When the original video tracks are constrained by the aspect ratio, they are scaled to fit. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.&quot;</summary>
+        /// <summary>A string that describes the columns (width) and rows (height) of the generated composed video in pixels. Defaults to `640x480`. The string&apos;s format is `{width}x{height}` where: * 16 &lt;= `{width}` &lt;= 1280* 16 &lt;= `{height}` &lt;= 1280* `{width}` * `{height}` &lt;= 921,600Typical values are: * HD = `1280x720`* PAL = `1024x576`* VGA = `640x480`* CIF = `320x240`Note that the `resolution` imposes an aspect ratio to the resulting composition. When the original video tracks are constrained by the aspect ratio, they are scaled to fit. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Resolution { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `status_callback`. Can be: `POST` or `GET` and the default is `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `status_callback`. Can be: `POST` or `GET` and the default is `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateCompositionHookXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>Whether to clip the intervals where there is no active media in the Compositions triggered by the composition hook. The default is `true`. Compositions with `trim` enabled are shorter when the Room is created and no Participant joins for a while as well as if all the Participants leave the room and join later, because those gaps will be removed. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.</summary>
         public bool? Trim { get; set; }

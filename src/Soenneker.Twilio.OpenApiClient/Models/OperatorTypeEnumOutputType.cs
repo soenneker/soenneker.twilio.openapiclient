@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;Operator Results for this Operator Type will follow this format. Possible values: text-classification, text-extraction, text-extraction-normalized, text-generation.&quot;</summary>
+    /// <summary>Operator Results for this Operator Type will follow this format. Possible values: text-classification, text-extraction, text-extraction-normalized, text-generation.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum OperatorTypeEnumOutputType
     {

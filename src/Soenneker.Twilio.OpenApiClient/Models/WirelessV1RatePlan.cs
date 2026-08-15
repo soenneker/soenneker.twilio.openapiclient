@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public bool? DataEnabled { get; set; }
         /// <summary>The total data usage (download and upload combined) in Megabytes that the Network allows during one month on the home network (T-Mobile USA). The metering period begins the day of activation and ends on the same day in the following month. Can be up to 2TB.</summary>
         public int? DataLimit { get; set; }
-        /// <summary>&quot;The model used to meter data usage. Can be: `payg` and `quota-1`, `quota-10`, and `quota-50`. Learn more about the available [data metering models](https://www.twilio.com/docs/iot/wireless/api/rateplan-resource#payg-vs-quota-data-plans).&quot;</summary>
+        /// <summary>The model used to meter data usage. Can be: `payg` and `quota-1`, `quota-10`, and `quota-50`. Learn more about the available [data metering models](https://www.twilio.com/docs/iot/wireless/api/rateplan-resource#payg-vs-quota-data-plans).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DataMetering { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>&quot;The list of services that SIMs capable of using GPRS/3G/4G/LTE data connectivity can use outside of the United States. Can contain: `data` and `messaging`.&quot;</summary>
+        /// <summary>The list of services that SIMs capable of using GPRS/3G/4G/LTE data connectivity can use outside of the United States. Can contain: `data` and `messaging`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? InternationalRoaming { get; set; }

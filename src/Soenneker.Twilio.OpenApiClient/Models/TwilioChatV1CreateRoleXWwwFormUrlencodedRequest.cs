@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> Permission { get; set; }
 #endif
-        /// <summary>&quot;The type of role. Can be: `channel` for [Channel](https://www.twilio.com/docs/chat/api/channels) roles or `deployment` for [Service](https://www.twilio.com/docs/chat/api/services) roles.&quot;</summary>
+        /// <summary>The type of role. Can be: `channel` for [Channel](https://www.twilio.com/docs/chat/api/channels) roles or `deployment` for [Service](https://www.twilio.com/docs/chat/api/services) roles.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RoleEnumRoleType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1CreateRoleXWwwFormUrlencodedRequest"/> and sets the default values.

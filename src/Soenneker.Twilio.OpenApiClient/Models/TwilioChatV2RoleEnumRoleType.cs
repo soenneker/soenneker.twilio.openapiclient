@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of role. Can be: `channel` for [Channel](https://www.twilio.com/docs/chat/channels) roles or `deployment` for [Service](https://www.twilio.com/docs/chat/rest/service-resource) roles.&quot;</summary>
+    /// <summary>The type of role. Can be: `channel` for [Channel](https://www.twilio.com/docs/chat/channels) roles or `deployment` for [Service](https://www.twilio.com/docs/chat/rest/service-resource) roles.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TwilioChatV2RoleEnumRoleType
     {

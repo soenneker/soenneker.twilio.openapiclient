@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The set of permissions that you authorized for the Connect App.  Can be: `get-all` or `post-all`.&quot;</summary>
+    /// <summary>The set of permissions that you authorized for the Connect App.  Can be: `get-all` or `post-all`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum AuthorizedConnectAppEnumPermission
     {

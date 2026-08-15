@@ -14,9 +14,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     public partial class RcsTypingIndicatorRequest : IParsable
     {
         /// <summary>The messaging channel. Must be &quot;RCS&quot;.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequestChannel? Channel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.RcsChannel? Channel { get; set; }
         /// <summary>The type of typing event. Currently only &quot;START&quot; is supported for RCS, indicating the agent began typing. Defaults to &quot;START&quot;.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequestEvent? Event { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StartEvent? Event { get; set; }
         /// <summary>The RCS agent identifier of the sender (business).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -51,8 +51,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequestChannel>(); } },
-                { "event", n => { Event = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequestEvent>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RcsChannel>(); } },
+                { "event", n => { Event = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.StartEvent>(); } },
                 { "from", n => { From = n.GetStringValue(); } },
                 { "to", n => { To = n.GetStringValue(); } },
             };
@@ -64,8 +64,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequestChannel>("channel", Channel);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequestEvent>("event", Event);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RcsChannel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.StartEvent>("event", Event);
             writer.WriteStringValue("from", From);
             writer.WriteStringValue("to", To);
         }

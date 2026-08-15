@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of the Command. Can be: `queued`, `sent`, `delivered`, `received`, or `failed`. See [Status Values](https://www.twilio.com/docs/iot/wireless/api/command-resource#status-values) for a description of each state.&quot;</summary>
+    /// <summary>The status of the Command. Can be: `queued`, `sent`, `delivered`, `received`, or `failed`. See [Status Values](https://www.twilio.com/docs/iot/wireless/api/command-resource#status-values) for a description of each state.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CommandEnumStatus
     {

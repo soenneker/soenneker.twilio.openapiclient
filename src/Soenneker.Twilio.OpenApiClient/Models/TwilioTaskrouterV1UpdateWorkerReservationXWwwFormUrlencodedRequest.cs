@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Whether to play a notification beep when the participant joins or when to play a beep. Can be: `true`, `false`, `onEnter`, or `onExit`. The default value is `true`.&quot;</summary>
+        /// <summary>Whether to play a notification beep when the participant joins or when to play a beep. Can be: `true`, `false`, `onEnter`, or `onExit`. The default value is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Beep { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string CallUrl { get; set; }
 #endif
-        /// <summary>&quot;Whether to record the conference the participant is joining or when to record the conference. Can be: `true`, `false`, `record-from-start`, and `do-not-record`. The default value is `false`.&quot;</summary>
+        /// <summary>Whether to record the conference the participant is joining or when to record the conference. Can be: `true`, `false`, `record-from-start`, and `do-not-record`. The default value is `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConferenceRecord { get; set; }
@@ -84,7 +84,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ConferenceRecordingStatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `conference_recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `conference_recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateWorkerReservationXWwwFormUrlencodedRequestConferenceRecordingStatusCallbackMethod? ConferenceRecordingStatusCallbackMethod { get; set; }
         /// <summary>The URL we should call using the `conference_status_callback_method` when the conference events in `conference_status_callback_event` occur. Only the value set by the first participant to join the conference is used. Subsequent `conference_status_callback` values are ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,7 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ConferenceStatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The conference status events that we will send to `conference_status_callback`. Can be: `start`, `end`, `join`, `leave`, `mute`, `hold`, `speaker`.&quot;</summary>
+        /// <summary>The conference status events that we will send to `conference_status_callback`. Can be: `start`, `end`, `join`, `leave`, `mute`, `hold`, `speaker`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Twilio.OpenApiClient.Models.WorkerReservationEnumConferenceEvent?>? ConferenceStatusCallbackEvent { get; set; }
@@ -102,9 +102,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.WorkerReservationEnumConferenceEvent?> ConferenceStatusCallbackEvent { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `conference_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `conference_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateWorkerReservationXWwwFormUrlencodedRequestConferenceStatusCallbackMethod? ConferenceStatusCallbackMethod { get; set; }
-        /// <summary>&quot;Whether to trim leading and trailing silence from your recorded conference audio files. Can be: `trim-silence` or `do-not-trim` and defaults to `trim-silence`.&quot;</summary>
+        /// <summary>Whether to trim leading and trailing silence from your recorded conference audio files. Can be: `trim-silence` or `do-not-trim` and defaults to `trim-silence`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConferenceTrim { get; set; }
@@ -184,7 +184,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Instruction { get; set; }
 #endif
-        /// <summary>&quot;The jitter buffer size for conference. Can be: `small`, `medium`, `large`, `off`.&quot;</summary>
+        /// <summary>The jitter buffer size for conference. Can be: `small`, `medium`, `large`, `off`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? JitterBufferSize { get; set; }
@@ -206,7 +206,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Whether to record the participant and their conferences, including the time between conferences. Can be `true` or `false` and the default is `false`.</summary>
         public bool? Record { get; set; }
-        /// <summary>&quot;The recording channels for the final recording. Can be: `mono` or `dual` and the default is `mono`.&quot;</summary>
+        /// <summary>The recording channels for the final recording. Can be: `mono` or `dual` and the default is `mono`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RecordingChannels { get; set; }
@@ -222,7 +222,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string RecordingStatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use when we call `recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use when we call `recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateWorkerReservationXWwwFormUrlencodedRequestRecordingStatusCallbackMethod? RecordingStatusCallbackMethod { get; set; }
         /// <summary>Whether the reservation should be accepted when executing a Redirect instruction.</summary>
         public bool? RedirectAccept { get; set; }
@@ -250,7 +250,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Region { get; set; }
 #endif
-        /// <summary>&quot;The current status of the reservation. Can be: `pending`, `accepted`, `rejected`, `timeout`, `canceled`, or `rescinded`.&quot;</summary>
+        /// <summary>The current status of the reservation. Can be: `pending`, `accepted`, `rejected`, `timeout`, `canceled`, or `rescinded`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WorkerReservationEnumStatus? ReservationStatus { get; set; }
         /// <summary>The SIP password for authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -268,7 +268,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SipAuthUsername { get; set; }
 #endif
-        /// <summary>&quot;Whether to start the conference when the participant joins, if it has not already started. Can be: `true` or `false` and the default is `true`. If `false` and the conference has not started, the participant is muted and hears background music until another participant starts the conference.&quot;</summary>
+        /// <summary>Whether to start the conference when the participant joins, if it has not already started. Can be: `true` or `false` and the default is `true`. If `false` and the conference has not started, the participant is muted and hears background music until another participant starts the conference.</summary>
         public bool? StartConferenceOnEnter { get; set; }
         /// <summary>The URL we should call using the `status_callback_method` to send status information to your application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -278,7 +278,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The call progress events that we will send to `status_callback`. Can be: `initiated`, `ringing`, `answered`, or `completed`.&quot;</summary>
+        /// <summary>The call progress events that we will send to `status_callback`. Can be: `initiated`, `ringing`, `answered`, or `completed`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Twilio.OpenApiClient.Models.WorkerReservationEnumCallStatus?>? StatusCallbackEvent { get; set; }
@@ -286,7 +286,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.WorkerReservationEnumCallStatus?> StatusCallbackEvent { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `status_callback`. Can be: `POST` or `GET` and the default is `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `status_callback`. Can be: `POST` or `GET` and the default is `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateWorkerReservationXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>The timeout for a call when executing a Conference instruction.</summary>
         public int? Timeout { get; set; }

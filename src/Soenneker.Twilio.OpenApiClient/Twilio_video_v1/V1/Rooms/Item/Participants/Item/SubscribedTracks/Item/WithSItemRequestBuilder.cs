@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participa
         {
         }
         /// <summary>
-        /// &quot;Returns a single Track resource represented by `track_sid`.  Note: This is one resource with the Video API that requires a SID, be Track Name on the subscriber side is not guaranteed to be unique.&quot;
+        /// Returns a single Track resource represented by `track_sid`.  Note: This is one resource with the Video API that requires a SID, be Track Name on the subscriber side is not guaranteed to be unique.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribedTrack"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participa
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribedTrack>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomParticipantRoomParticipantSubscribedTrack.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Returns a single Track resource represented by `track_sid`.  Note: This is one resource with the Video API that requires a SID, be Track Name on the subscriber side is not guaranteed to be unique.&quot;
+        /// Returns a single Track resource represented by `track_sid`.  Note: This is one resource with the Video API that requires a SID, be Track Name on the subscriber side is not guaranteed to be unique.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

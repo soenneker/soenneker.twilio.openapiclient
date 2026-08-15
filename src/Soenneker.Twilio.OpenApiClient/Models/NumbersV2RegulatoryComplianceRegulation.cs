@@ -16,7 +16,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of End User the regulation requires - can be `individual` or `business`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RegulationEnumEndUserType? EndUserType { get; set; }
-        /// <summary>&quot;A human-readable description that is assigned to describe the Regulation resource. Examples can include Germany: Mobile - Business.&quot;</summary>
+        /// <summary>A human-readable description that is assigned to describe the Regulation resource. Examples can include Germany: Mobile - Business.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FriendlyName { get; set; }

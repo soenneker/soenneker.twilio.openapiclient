@@ -124,9 +124,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Attempts
 #else
             public string Country { get; set; }
 #endif
-            /// <summary>&quot;Datetime filter used to consider only Verification Attempts created after this datetime on the summary aggregation. Given as GMT in ISO 8601 formatted datetime string: yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z.&quot;</summary>
+            /// <summary>Datetime filter used to consider only Verification Attempts created after this datetime on the summary aggregation. Given as GMT in ISO 8601 formatted datetime string: yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z.</summary>
             public DateTimeOffset? DateCreatedAfter { get; set; }
-            /// <summary>&quot;Datetime filter used to consider only Verification Attempts created before this datetime on the summary aggregation. Given as GMT in ISO 8601 formatted datetime string: yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z.&quot;</summary>
+            /// <summary>Datetime filter used to consider only Verification Attempts created before this datetime on the summary aggregation. Given as GMT in ISO 8601 formatted datetime string: yyyy-MM-dd&apos;T&apos;HH:mm:ss&apos;Z.</summary>
             public DateTimeOffset? DateCreatedBefore { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }

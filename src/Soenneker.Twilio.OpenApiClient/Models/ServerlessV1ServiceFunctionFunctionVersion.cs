@@ -72,7 +72,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
-        /// <summary>&quot;The access control that determines how the Function Version resource can be accessed. Can be: `public`, `protected`, or `private`.&quot;</summary>
+        /// <summary>The access control that determines how the Function Version resource can be accessed. Can be: `public`, `protected`, or `private`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.FunctionVersionEnumVisibility? Visibility { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersion"/> and sets the default values.

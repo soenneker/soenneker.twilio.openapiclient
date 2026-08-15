@@ -15,7 +15,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Current status of the long-running operation.PENDING: accepted but not yet started.RUNNING: currently in progress.COMPLETED: successfully completed.FAILED: failed and cannot be completed.&quot;</summary>
+        /// <summary>Current status of the long-running operation.PENDING: accepted but not yet started.RUNNING: currently in progress.COMPLETED: successfully completed.FAILED: failed and cannot be completed.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperation202ResponseStatus? Status { get; set; }
         /// <summary>URI to poll for operation status. Mirrors the Location response header.Provided as a body field for programmatic access by JSON-parsing clients(RFC 9110 Section 15.3.3).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

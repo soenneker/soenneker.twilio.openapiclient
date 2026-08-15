@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of the Execution. Can be: `active` or `ended`.&quot;</summary>
+    /// <summary>The status of the Execution. Can be: `active` or `ended`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ExecutionEnumStatus
     {

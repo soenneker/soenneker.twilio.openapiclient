@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string LongestTaskWaitingSid { get; set; }
 #endif
-        /// <summary>&quot;The number of Tasks by priority. For example: `{\&quot;0\&quot;: \&quot;10\&quot;, \&quot;99\&quot;: \&quot;5\&quot;}` shows 10 Tasks at priority 0 and 5 at priority 99.&quot;</summary>
+        /// <summary>The number of Tasks by priority. For example: `{&quot;0&quot;: &quot;10&quot;, &quot;99&quot;: &quot;5&quot;}` shows 10 Tasks at priority 0 and 5 at priority 99.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByPriority? TasksByPriority { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByPriority TasksByPriority { get; set; }
 #endif
-        /// <summary>&quot;The number of Tasks by their current status. For example: `{\&quot;pending\&quot;: \&quot;1\&quot;, \&quot;reserved\&quot;: \&quot;3\&quot;, \&quot;assigned\&quot;: \&quot;2\&quot;, \&quot;completed\&quot;: \&quot;5\&quot;}`.&quot;</summary>
+        /// <summary>The number of Tasks by their current status. For example: `{&quot;pending&quot;: &quot;1&quot;, &quot;reserved&quot;: &quot;3&quot;, &quot;assigned&quot;: &quot;2&quot;, &quot;completed&quot;: &quot;5&quot;}`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceRealTimeStatisticsTasksByStatus? TasksByStatus { get; set; }

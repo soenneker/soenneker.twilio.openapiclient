@@ -18,7 +18,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public int? LastConsumedMessageIndex { get; set; }
         /// <summary>The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) timestamp of the last [Message](https://www.twilio.com/docs/chat/rest/message-resource) read event for the Member within the [Channel](https://www.twilio.com/docs/chat/channels).</summary>
         public DateTimeOffset? LastConsumptionTimestamp { get; set; }
-        /// <summary>&quot;The push notification level of the User for the Channel. Can be: `default` or `muted`.&quot;</summary>
+        /// <summary>The push notification level of the User for the Channel. Can be: `default` or `muted`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.UserChannelEnumNotificationLevel? NotificationLevel { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2UpdateUserChannelXWwwFormUrlencodedRequest"/> and sets the default values.

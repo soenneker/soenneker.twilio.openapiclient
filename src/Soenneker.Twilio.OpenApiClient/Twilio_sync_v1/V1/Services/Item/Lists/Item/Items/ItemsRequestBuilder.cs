@@ -127,7 +127,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.I
         public partial class ItemsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>&quot;Whether to include the List Item referenced by the `from` parameter. Can be: `inclusive` to include the List Item referenced by the `from` parameter or `exclusive` to start with the next List Item. The default value is `inclusive`.&quot;</summary>
+            /// <summary>Whether to include the List Item referenced by the `from` parameter. Can be: `inclusive` to include the List Item referenced by the `from` parameter or `exclusive` to start with the next List Item. The default value is `inclusive`.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.SyncListItemEnumQueryFromBoundType? Bounds { get; set; }
             /// <summary>The `index` of the first Sync List Item resource to read. See also `bounds`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,7 +137,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Lists.I
 #else
             public string From { get; set; }
 #endif
-            /// <summary>&quot;How to order the List Items returned by their `index` value. Can be: `asc` (ascending) or `desc` (descending) and the default is ascending.&quot;</summary>
+            /// <summary>How to order the List Items returned by their `index` value. Can be: `asc` (ascending) or `desc` (descending) and the default is ascending.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.SyncListItemEnumQueryResultOrder? Order { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }

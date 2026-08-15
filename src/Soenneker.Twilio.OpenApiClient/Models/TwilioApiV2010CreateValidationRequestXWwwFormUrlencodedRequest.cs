@@ -48,7 +48,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `status_callback`. Can be: `GET` or `POST`, and the default is `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `status_callback`. Can be: `GET` or `POST`, and the default is `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateValidationRequestXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateValidationRequestXWwwFormUrlencodedRequest"/> and sets the default values.

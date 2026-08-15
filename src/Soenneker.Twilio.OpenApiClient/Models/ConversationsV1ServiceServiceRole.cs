@@ -58,7 +58,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The type of role. Can be: `conversation` for [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) roles or `service` for [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) roles.&quot;</summary>
+        /// <summary>The type of role. Can be: `conversation` for [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) roles or `service` for [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) roles.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ServiceRoleEnumRoleType? Type { get; set; }
         /// <summary>An absolute API resource URL for this user role.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

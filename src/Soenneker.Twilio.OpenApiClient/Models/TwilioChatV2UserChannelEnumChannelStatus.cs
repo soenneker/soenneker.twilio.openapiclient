@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of the User on the Channel. Can be: `joined`, `invited`, or `notParticipating`.&quot;</summary>
+    /// <summary>The status of the User on the Channel. Can be: `joined`, `invited`, or `notParticipating`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TwilioChatV2UserChannelEnumChannelStatus
     {

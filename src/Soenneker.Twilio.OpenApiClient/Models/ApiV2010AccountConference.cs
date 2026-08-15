@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>&quot;The reason why a conference ended. When a conference is in progress, will be `null`. When conference is completed, can be: `conference-ended-via-api`, `participant-with-end-conference-on-exit-left`, `participant-with-end-conference-on-exit-kicked`, `last-participant-kicked`, or `last-participant-left`.&quot;</summary>
+        /// <summary>The reason why a conference ended. When a conference is in progress, will be `null`. When conference is completed, can be: `conference-ended-via-api`, `participant-with-end-conference-on-exit-left`, `participant-with-end-conference-on-exit-kicked`, `last-participant-kicked`, or `last-participant-left`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumReasonConferenceEnded? ReasonConferenceEnded { get; set; }
         /// <summary>A string that represents the Twilio Region where the conference audio was mixed. May be `us1`, `us2`, `ie1`,  `de1`, `sg1`, `br1`, `au1`, and `jp1`. Basic conference audio will always be mixed in `us1`. Global Conference audio will be mixed nearest to the majority of participants.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The status of this conference. Can be: `init`, `in-progress`, or `completed`.&quot;</summary>
+        /// <summary>The status of this conference. Can be: `init`, `in-progress`, or `completed`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumStatus? Status { get; set; }
         /// <summary>A list of related resources identified by their URIs relative to `https://api.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

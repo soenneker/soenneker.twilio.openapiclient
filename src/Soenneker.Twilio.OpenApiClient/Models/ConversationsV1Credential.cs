@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The type of push-notification service the credential is for. Can be: `fcm`, `gcm`, or `apn`.&quot;</summary>
+        /// <summary>The type of push-notification service the credential is for. Can be: `fcm`, `gcm`, or `apn`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CredentialEnumPushType? Type { get; set; }
         /// <summary>An absolute API resource URL for this credential.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

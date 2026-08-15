@@ -124,7 +124,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceLinksProperty Links { get; set; }
 #endif
-        /// <summary>&quot;Whether to log notifications. Can be: `true` or `false` and the default is `true`.&quot;</summary>
+        /// <summary>Whether to log notifications. Can be: `true` or `false` and the default is `true`.</summary>
         public bool? LogEnabled { get; set; }
         /// <summary>The SID of the [Messaging Service](https://www.twilio.com/docs/sms/quickstart#messaging-services) to use for SMS Bindings. In order to send SMS notifications this parameter has to be set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

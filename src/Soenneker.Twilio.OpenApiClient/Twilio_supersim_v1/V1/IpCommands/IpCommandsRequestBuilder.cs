@@ -170,7 +170,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.IpCommands
 #else
             public string SimIccid { get; set; }
 #endif
-            /// <summary>&quot;The status of the IP Command. Can be: `queued`, `sent`, `received` or `failed`. See the [IP Command Status Values](https://www.twilio.com/docs/iot/supersim/api/ipcommand-resource#status-values) for a description of each.&quot;</summary>
+            /// <summary>The status of the IP Command. Can be: `queued`, `sent`, `received` or `failed`. See the [IP Command Status Values](https://www.twilio.com/docs/iot/supersim/api/ipcommand-resource#status-values) for a description of each.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.IpCommandEnumStatus? Status { get; set; }
         }
     }

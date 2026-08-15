@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;The recording settings for the trunk. Can be: `do-not-record`, `record-from-ringing`, `record-from-answer`. If set to `record-from-ringing` or `record-from-answer`, all calls going through the trunk will be recorded. The only way to change recording parameters is on a sub-resource of a Trunk after it has been created. e.g.`/Trunks/[Trunk_SID]/Recording -XPOST -d&apos;Mode=record-from-answer&apos;`. See [Recording](https://www.twilio.com/docs/sip-trunking#recording) for more information.&quot;
+    /// The recording settings for the trunk. Can be: `do-not-record`, `record-from-ringing`, `record-from-answer`. If set to `record-from-ringing` or `record-from-answer`, all calls going through the trunk will be recorded. The only way to change recording parameters is on a sub-resource of a Trunk after it has been created. e.g.`/Trunks/[Trunk_SID]/Recording -XPOST -d&apos;Mode=record-from-answer&apos;`. See [Recording](https://www.twilio.com/docs/sip-trunking#recording) for more information.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TrunkingV1TrunkRecordingProperty : IAdditionalDataHolder, IParsable

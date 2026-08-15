@@ -69,7 +69,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceConferenceRecording>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceConferenceRecording.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Changes the status of the recording to paused, stopped, or in-progress. Note: To use `Twilio.CURRENT`, pass it as recording sid.&quot;
+        /// Changes the status of the recording to paused, stopped, or in-progress. Note: To use `Twilio.CURRENT`, pass it as recording sid.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceConferenceRecording"/></returns>
         /// <param name="body">The request body</param>
@@ -104,7 +104,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>
@@ -127,7 +126,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Changes the status of the recording to paused, stopped, or in-progress. Note: To use `Twilio.CURRENT`, pass it as recording sid.&quot;
+        /// Changes the status of the recording to paused, stopped, or in-progress. Note: To use `Twilio.CURRENT`, pass it as recording sid.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;A string that shows the status of the current Bulk Hosting request, it can vary between these values: &apos;QUEUED&apos;,&apos;IN_PROGRESS&apos;,&apos;PROCESSED&apos;&quot;</summary>
+    /// <summary>A string that shows the status of the current Bulk Hosting request, it can vary between these values: &apos;QUEUED&apos;,&apos;IN_PROGRESS&apos;,&apos;PROCESSED&apos;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum BulkHostedNumberOrderEnumRequestStatus
     {

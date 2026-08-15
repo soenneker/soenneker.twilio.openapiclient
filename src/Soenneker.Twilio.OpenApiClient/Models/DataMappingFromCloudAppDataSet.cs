@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string DatasetId { get; set; }
 #endif
         /// <summary>The source data type, which determines the source of the data and the required configuration parameters.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSetType? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.DatasetCloudappType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "datasetId", n => { DatasetId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSetType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.DatasetCloudappType>(); } },
             };
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("datasetId", DatasetId);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSetType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.DatasetCloudappType>("type", Type);
         }
     }
 }

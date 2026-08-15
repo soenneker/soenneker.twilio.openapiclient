@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The status of the Participant. Can be: `connected` or `disconnected`.&quot;</summary>
+        /// <summary>The status of the Participant. Can be: `connected` or `disconnected`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RoomParticipantEnumStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateRoomParticipantXWwwFormUrlencodedRequest"/> and sets the default values.

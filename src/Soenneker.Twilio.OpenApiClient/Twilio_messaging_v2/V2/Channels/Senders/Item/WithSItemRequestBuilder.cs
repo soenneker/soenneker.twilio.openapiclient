@@ -104,7 +104,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v2.V2.Channels.Senders
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FromDomainSid { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `status_callback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `status_callback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateByocTrunkXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>The URL that we should call to pass status parameters (such as call ended) to your application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `voice_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `voice_fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateByocTrunkXWwwFormUrlencodedRequestVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>The URL that we should call when an error occurs while retrieving or executing the TwiML from `voice_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,7 +60,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string VoiceFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `voice_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `voice_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateByocTrunkXWwwFormUrlencodedRequestVoiceMethod? VoiceMethod { get; set; }
         /// <summary>The URL we should call when the BYOC Trunk receives a call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

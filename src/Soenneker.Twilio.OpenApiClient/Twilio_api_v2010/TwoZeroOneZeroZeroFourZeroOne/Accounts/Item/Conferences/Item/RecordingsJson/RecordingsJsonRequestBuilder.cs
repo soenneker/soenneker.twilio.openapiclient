@@ -85,12 +85,12 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RecordingsJsonRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.&quot;</summary>
+            /// <summary>The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.</summary>
             public Date? DateCreated { get; set; }
-            /// <summary>&quot;The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.&quot;</summary>
+            /// <summary>The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.</summary>
             [QueryParameter("DateCreated%3C")]
             public Date? DateCreated0 { get; set; }
-            /// <summary>&quot;The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.&quot;</summary>
+            /// <summary>The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.</summary>
             [QueryParameter("DateCreated%3E")]
             public Date? DateCreated1 { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>

@@ -108,7 +108,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Authorize
             public string CodeChallenge { get; set; }
 #endif
             [QueryParameter("code_challenge_method")]
-            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2AuthorizeCodeChallengeMethodParameter? CodeChallengeMethod { get; set; }
+            public global::Soenneker.Twilio.OpenApiClient.Models.S256CodeChallengeMethod? CodeChallengeMethod { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("redirect_uri")]

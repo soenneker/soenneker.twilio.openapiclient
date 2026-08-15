@@ -132,7 +132,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Recordings
 #else
             public string SourceSid { get; set; }
 #endif
-            /// <summary>&quot;Read only the recordings that have this status. Can be: `processing`, `completed`, or `deleted`.&quot;</summary>
+            /// <summary>Read only the recordings that have this status. Can be: `processing`, `completed`, or `deleted`.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1RecordingEnumStatus? Status { get; set; }
         }
     }

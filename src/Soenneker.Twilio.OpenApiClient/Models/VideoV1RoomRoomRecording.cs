@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The codec used for the recording. Can be: `VP8` or `H264`.&quot;</summary>
+        /// <summary>The codec used for the recording. Can be: `VP8` or `H264`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RoomRecordingEnumCodec? Codec { get; set; }
         /// <summary>The container_format property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RoomRecordingEnumFormat? ContainerFormat { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SourceSid { get; set; }
 #endif
-        /// <summary>&quot;The status of the recording. Can be: `processing`, `completed`, or `deleted`. `processing` indicates the Recording is still being captured. `completed` indicates the Recording has been captured and is now available for download. `deleted` means the recording media has been deleted from the system, but its metadata is still available for historical purposes.&quot;</summary>
+        /// <summary>The status of the recording. Can be: `processing`, `completed`, or `deleted`. `processing` indicates the Recording is still being captured. `completed` indicates the Recording has been captured and is now available for download. `deleted` means the recording media has been deleted from the system, but its metadata is still available for historical purposes.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RoomRecordingEnumStatus? Status { get; set; }
         /// <summary>The name that was given to the source track of the recording. If no name is given, the `source_sid` is used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -92,7 +92,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string TrackName { get; set; }
 #endif
-        /// <summary>&quot;The recording&apos;s media type. Can be: `audio` or `video`.&quot;</summary>
+        /// <summary>The recording&apos;s media type. Can be: `audio` or `video`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RoomRecordingEnumType? Type { get; set; }
         /// <summary>The absolute URL of the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

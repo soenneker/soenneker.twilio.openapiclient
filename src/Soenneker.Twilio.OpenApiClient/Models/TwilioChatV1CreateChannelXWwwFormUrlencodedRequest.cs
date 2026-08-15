@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>&quot;The visibility of the channel. Can be: `public` or `private`.&quot;</summary>
+        /// <summary>The visibility of the channel. Can be: `public` or `private`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ChannelEnumChannelType? Type { get; set; }
         /// <summary>An application-defined string that uniquely identifies the resource. It can be used to address the resource in place of the resource&apos;s `sid` in the URL. This value must be 64 characters or less in length and be unique within the Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

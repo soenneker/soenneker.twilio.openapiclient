@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Attributes { get; set; }
 #endif
-        /// <summary>&quot;The `identity` of the User that created the channel. Default is: `system`.&quot;</summary>
+        /// <summary>The `identity` of the User that created the channel. Default is: `system`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CreatedBy { get; set; }

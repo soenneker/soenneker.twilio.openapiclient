@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The structure of the result returned by the Language Operator (specific to what the LLM returns, not the entirety of the Operator Result resource).Available values:- `TEXT`:  The Operator will return plaintext from the LLM.- `JSON`: the Operator will return a structured object with schema defined in `output_schema`- `CLASSIFICATION`: The Operator will return the determined classifier string.&quot;</summary>
+    /// <summary>The structure of the result returned by the Language Operator (specific to what the LLM returns, not the entirety of the Operator Result resource).Available values:- `TEXT`:  The Operator will return plaintext from the LLM.- `JSON`: the Operator will return a structured object with schema defined in `output_schema`- `CLASSIFICATION`: The Operator will return the determined classifier string.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum OperatorOutputFormat
     {

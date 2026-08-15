@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The conversational lifecycle event that will activate execution of the Rule.Available values are:- `COMMUNICATION`: Trigger the Rule on each communication within the Conversation.- `CONVERSATION_END`: Trigger the Rule when the Conversation moves to the `closed` state- `CONVERSATION_INACTIVE`: Trigger the Rule when the Conversation moves to `inactive` state&quot;</summary>
+        /// <summary>The conversational lifecycle event that will activate execution of the Rule.Available values are:- `COMMUNICATION`: Trigger the Rule on each communication within the Conversation.- `CONVERSATION_END`: Trigger the Rule when the Conversation moves to the `closed` state- `CONVERSATION_INACTIVE`: Trigger the Rule when the Conversation moves to `inactive` state</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TriggerOn? On { get; set; }
         /// <summary>Additional configuration to modify Trigger behavior. Only applies to certain Trigger types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ChannelEndpointSid { get; set; }
 #endif
-        /// <summary>&quot;The type of channel endpoint. eg: phone-number&quot;</summary>
+        /// <summary>The type of channel endpoint. eg: phone-number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ChannelEndpointType { get; set; }

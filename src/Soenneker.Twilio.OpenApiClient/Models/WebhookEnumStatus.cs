@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The webhook status. Default value is `enabled`. One of: `enabled` or `disabled`&quot;</summary>
+    /// <summary>The webhook status. Default value is `enabled`. One of: `enabled` or `disabled`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum WebhookEnumStatus
     {

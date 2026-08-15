@@ -170,7 +170,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> WebhookFilters { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method to use for calls to the `pre_webhook_url` and `post_webhook_url` webhooks.  Can be: `POST` or `GET` and the default is `POST`. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.&quot;</summary>
+        /// <summary>The HTTP method to use for calls to the `pre_webhook_url` and `post_webhook_url` webhooks.  Can be: `POST` or `GET` and the default is `POST`. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2UpdateServiceXWwwFormUrlencodedRequestWebhookMethod? WebhookMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2UpdateServiceXWwwFormUrlencodedRequest"/> and sets the default values.

@@ -104,7 +104,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Users.Item.C
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

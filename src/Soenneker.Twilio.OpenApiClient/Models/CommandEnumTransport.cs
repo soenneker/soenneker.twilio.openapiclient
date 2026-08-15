@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of transport used. Can be: `sms` or `ip`.&quot;</summary>
+    /// <summary>The type of transport used. Can be: `sms` or `ip`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CommandEnumTransport
     {

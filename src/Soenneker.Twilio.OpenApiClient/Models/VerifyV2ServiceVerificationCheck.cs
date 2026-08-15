@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Amount { get; set; }
 #endif
-        /// <summary>&quot;The verification method to use. One of: [`email`](https://www.twilio.com/docs/verify/email), `sms`, `whatsapp`, `call`, or `sna`.&quot;</summary>
+        /// <summary>The verification method to use. One of: [`email`](https://www.twilio.com/docs/verify/email), `sms`, `whatsapp`, `call`, or `sna`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.VerificationCheckEnumChannel? Channel { get; set; }
         /// <summary>The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the Verification Check resource was created.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceVerificationCheckSnaAttemptsErrorCodesItem> SnaAttemptsErrorCodes { get; set; }
 #endif
-        /// <summary>&quot;The status of the verification. Can be: `pending`, `approved`, `canceled`, `max_attempts_reached`, `deleted`, `failed` or `expired`.&quot;</summary>
+        /// <summary>The status of the verification. Can be: `pending`, `approved`, `canceled`, `max_attempts_reached`, `deleted`, `failed` or `expired`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get; set; }

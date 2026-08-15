@@ -38,7 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string CampaignId { get; set; }
 #endif
-        /// <summary>&quot;Campaign status. Examples: IN_PROGRESS, VERIFIED, FAILED.&quot;</summary>
+        /// <summary>Campaign status. Examples: IN_PROGRESS, VERIFIED, FAILED.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CampaignStatus { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public DateTimeOffset? DateCreated { get; set; }
         /// <summary>The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateUpdated { get; set; }
-        /// <summary>&quot;A short description of what this SMS campaign does. Min length: 40 characters. Max length: 4096 characters.&quot;</summary>
+        /// <summary>A short description of what this SMS campaign does. Min length: 40 characters. Max length: 4096 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string MessageFlow { get; set; }
 #endif
-        /// <summary>&quot;An array of sample message strings, min two and max five. Min length for each sample: 20 chars. Max length for each sample: 1024 chars.&quot;</summary>
+        /// <summary>An array of sample message strings, min two and max five. Min length for each sample: 20 chars. Max length for each sample: 1024 chars.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? MessageSamples { get; set; }
@@ -174,7 +174,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
-        /// <summary>&quot;A2P Campaign Use Case. Examples: [ 2FA, EMERGENCY, MARKETING, SOLE_PROPRIETOR...]. SOLE_PROPRIETOR campaign use cases can only be created by SOLE_PROPRIETOR Brands, and there can only be one SOLE_PROPRIETOR campaign created per SOLE_PROPRIETOR Brand.&quot;</summary>
+        /// <summary>A2P Campaign Use Case. Examples: [ 2FA, EMERGENCY, MARKETING, SOLE_PROPRIETOR...]. SOLE_PROPRIETOR campaign use cases can only be created by SOLE_PROPRIETOR Brands, and there can only be one SOLE_PROPRIETOR campaign created per SOLE_PROPRIETOR Brand.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UsAppToPersonUsecase { get; set; }

@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The current status of the Task&apos;s assignment. Can be: `pending`, `reserved`, `assigned`, `canceled`, `wrapping`, or `completed`.&quot;</summary>
+        /// <summary>The current status of the Task&apos;s assignment. Can be: `pending`, `reserved`, `assigned`, `canceled`, `wrapping`, or `completed`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TaskEnumStatus? AssignmentStatus { get; set; }
         /// <summary>The JSON string that describes the custom attributes of the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

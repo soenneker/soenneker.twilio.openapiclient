@@ -15,8 +15,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The HTTP method to use for the webhook callback.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionStatusCallbackMethod? Method { get; set; }
+        /// <summary>The HTTP method to be used when performing the Action. Must be set to `POST`.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Models.PostMethod? Method { get; set; }
         /// <summary>The webhook callback URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "method", n => { Method = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionStatusCallbackMethod>(); } },
+                { "method", n => { Method = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PostMethod>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -61,7 +61,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionStatusCallbackMethod>("method", Method);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PostMethod>("method", Method);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -28,7 +28,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>Physical page number (1-based). PDF sources only; omitted for all other source types.</summary>
         public int? DocumentNumber { get; set; }
-        /// <summary>&quot;Human-readable title of the source document.Web: HTML &lt;title&gt; from the crawled page.File: filename from Unstructured metadata.Text: knowledge name from the knowledge source.&quot;</summary>
+        /// <summary>Human-readable title of the source document.Web: HTML &lt;title&gt; from the crawled page.File: filename from Unstructured metadata.Text: knowledge name from the knowledge source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DocumentTitle { get; set; }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The delivery status of the IP Command. This is one of the following: “queued”, “sent”, “failed” or “received”.&quot;</summary>
+    /// <summary>The delivery status of the IP Command. This is one of the following: “queued”, “sent”, “failed” or “received”.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum IpCommandEnumStatus
     {

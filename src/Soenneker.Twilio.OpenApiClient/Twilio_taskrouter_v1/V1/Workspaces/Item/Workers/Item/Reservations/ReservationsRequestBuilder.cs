@@ -103,7 +103,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;Returns the list of reservations for a worker with a specified ReservationStatus. Can be: `pending`, `accepted`, `rejected`, `timeout`, `canceled`, or `rescinded`.&quot;</summary>
+            /// <summary>Returns the list of reservations for a worker with a specified ReservationStatus. Can be: `pending`, `accepted`, `rejected`, `timeout`, `canceled`, or `rescinded`.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.WorkerReservationEnumStatus? ReservationStatus { get; set; }
         }
     }

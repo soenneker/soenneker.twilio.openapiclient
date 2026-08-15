@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The address value formatted according to channel type:- SMS/VOICE: E.164 phone number (such as \&quot;+18005550100\&quot;)- WHATSAPP: Phone number with whatsapp prefix (such as \&quot;whatsapp:+18005550100\&quot;)- RCS: Sender ID or phone number with rcs prefix (such as \&quot;rcs:brand_acme_agent\&quot; or \&quot;rcs:+18005550100\&quot;)- CHAT: Customer-defined string identifier&quot;</summary>
+        /// <summary>The address value formatted according to channel type:- SMS/VOICE: E.164 phone number (such as &quot;+18005550100&quot;)- WHATSAPP: Phone number with whatsapp prefix (such as &quot;whatsapp:+18005550100&quot;)- RCS: Sender ID or phone number with rcs prefix (such as &quot;rcs:brand_acme_agent&quot; or &quot;rcs:+18005550100&quot;)- CHAT: Customer-defined string identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Address { get; set; }

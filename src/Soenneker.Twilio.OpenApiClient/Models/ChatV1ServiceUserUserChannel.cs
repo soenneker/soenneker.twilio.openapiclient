@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ServiceSid { get; set; }
 #endif
-        /// <summary>&quot;The status of the User on the Channel. Can be: `joined`, `invited`, or `not_participating`.&quot;</summary>
+        /// <summary>The status of the User on the Channel. Can be: `joined`, `invited`, or `not_participating`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.UserChannelEnumChannelStatus? Status { get; set; }
         /// <summary>The number of unread Messages in the Channel for the User. Note that retrieving messages on a client endpoint does not mean that messages are consumed or read. See [Consumption Horizon feature](/docs/api/chat/guides/consumption-horizon) to learn how to mark messages as consumed.</summary>
         public int? UnreadMessagesCount { get; set; }

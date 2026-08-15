@@ -16,7 +16,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The AnsweredBy property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumAnsweredBy? AnsweredBy { get; set; }
-        /// <summary>&quot;Specify the call score. This is of type integer. Use a range of 1-5 to indicate the call experience score, with the following mapping as a reference for rating the call [5: Excellent, 4: Good, 3 : Fair, 2 : Poor, 1: Bad].&quot;</summary>
+        /// <summary>Specify the call score. This is of type integer. Use a range of 1-5 to indicate the call experience score, with the following mapping as a reference for rating the call [5: Excellent, 4: Good, 3 : Fair, 2 : Poor, 1: Bad].</summary>
         public int? CallScore { get; set; }
         /// <summary>Specify any comments pertaining to the call. `comment` has a maximum character limit of 100. Twilio does not treat this field as PII, so no PII should be included in the `comment`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

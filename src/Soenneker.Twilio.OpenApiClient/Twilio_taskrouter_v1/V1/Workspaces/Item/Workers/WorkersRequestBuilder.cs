@@ -197,7 +197,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;Filter by Workers that would match an expression. In addition to fields in the workers&apos; attributes, the expression can include the following worker fields: `sid`, `friendly_name`, `activity_sid`, or `activity_name`&quot;</summary>
+            /// <summary>Filter by Workers that would match an expression. In addition to fields in the workers&apos; attributes, the expression can include the following worker fields: `sid`, `friendly_name`, `activity_sid`, or `activity_name`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string? TargetWorkersExpression { get; set; }

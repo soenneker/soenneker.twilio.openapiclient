@@ -140,7 +140,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Operators.Cus
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CustomRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Returns Custom Operators with the provided availability type. Possible values: internal, beta, public, retired.&quot;</summary>
+            /// <summary>Returns Custom Operators with the provided availability type. Possible values: internal, beta, public, retired.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.CustomOperatorEnumAvailability? Availability { get; set; }
             /// <summary>Returns Custom Operators that support the provided language code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

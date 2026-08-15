@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The codec used to encode the track. Can be: `VP8`, `H264`, `OPUS`, and `PCMU`.&quot;</summary>
+        /// <summary>The codec used to encode the track. Can be: `VP8`, `H264`, `OPUS`, and `PCMU`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumCodec? Codec { get; set; }
         /// <summary>The container_format property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumFormat? ContainerFormat { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SourceSid { get; set; }
 #endif
-        /// <summary>&quot;The status of the recording. Can be: `processing`, `completed`, or `deleted`. `processing` indicates the recording is still being captured; `completed` indicates the recording has been captured and is now available for download. `deleted` means the recording media has been deleted from the system, but its metadata is still available.&quot;</summary>
+        /// <summary>The status of the recording. Can be: `processing`, `completed`, or `deleted`. `processing` indicates the recording is still being captured; `completed` indicates the recording has been captured and is now available for download. `deleted` means the recording media has been deleted from the system, but its metadata is still available.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1RecordingEnumStatus? Status { get; set; }
         /// <summary>The URL called using the `status_callback_method` to send status information on every recording event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,7 +84,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method used to call `status_callback`. Can be: `POST` or `GET`, defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method used to call `status_callback`. Can be: `POST` or `GET`, defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>The name that was given to the source track of the recording. If no name is given, the `source_sid` is used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,7 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string TrackName { get; set; }
 #endif
-        /// <summary>&quot;The recording&apos;s media type. Can be: `audio` or `video`.&quot;</summary>
+        /// <summary>The recording&apos;s media type. Can be: `audio` or `video`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumType? Type { get; set; }
         /// <summary>The absolute URL of the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -127,15 +127,15 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MessagesJsonRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Filter by Message `sent_date`. Accepts GMT dates in the following formats: `YYYY-MM-DD` (to find Messages with a specific `sent_date`), `&lt;=YYYY-MM-DD` (to find Messages with `sent_date`s on and before a specific date), and `&gt;=YYYY-MM-DD` (to find Messages with `sent_dates` on and after a specific date).&quot;</summary>
+            /// <summary>Filter by Message `sent_date`. Accepts GMT dates in the following formats: `YYYY-MM-DD` (to find Messages with a specific `sent_date`), `&lt;=YYYY-MM-DD` (to find Messages with `sent_date`s on and before a specific date), and `&gt;=YYYY-MM-DD` (to find Messages with `sent_dates` on and after a specific date).</summary>
             public DateTimeOffset? DateSent { get; set; }
-            /// <summary>&quot;Filter by Message `sent_date`. Accepts GMT dates in the following formats: `YYYY-MM-DD` (to find Messages with a specific `sent_date`), `&lt;=YYYY-MM-DD` (to find Messages with `sent_date`s on and before a specific date), and `&gt;=YYYY-MM-DD` (to find Messages with `sent_dates` on and after a specific date).&quot;</summary>
+            /// <summary>Filter by Message `sent_date`. Accepts GMT dates in the following formats: `YYYY-MM-DD` (to find Messages with a specific `sent_date`), `&lt;=YYYY-MM-DD` (to find Messages with `sent_date`s on and before a specific date), and `&gt;=YYYY-MM-DD` (to find Messages with `sent_dates` on and after a specific date).</summary>
             [QueryParameter("DateSent%3C")]
             public DateTimeOffset? DateSent0 { get; set; }
-            /// <summary>&quot;Filter by Message `sent_date`. Accepts GMT dates in the following formats: `YYYY-MM-DD` (to find Messages with a specific `sent_date`), `&lt;=YYYY-MM-DD` (to find Messages with `sent_date`s on and before a specific date), and `&gt;=YYYY-MM-DD` (to find Messages with `sent_dates` on and after a specific date).&quot;</summary>
+            /// <summary>Filter by Message `sent_date`. Accepts GMT dates in the following formats: `YYYY-MM-DD` (to find Messages with a specific `sent_date`), `&lt;=YYYY-MM-DD` (to find Messages with `sent_date`s on and before a specific date), and `&gt;=YYYY-MM-DD` (to find Messages with `sent_dates` on and after a specific date).</summary>
             [QueryParameter("DateSent%3E")]
             public DateTimeOffset? DateSent1 { get; set; }
-            /// <summary>&quot;Filter by sender. For example: Set this parameter to `+15552229999` to retrieve a list of Message resources sent by `+15552229999`.&quot;</summary>
+            /// <summary>Filter by sender. For example: Set this parameter to `+15552229999` to retrieve a list of Message resources sent by `+15552229999`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string? From { get; set; }
@@ -155,7 +155,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;Filter by recipient. For example: Set this parameter to `+15558881111` to retrieve a list of Message resources sent to `+15558881111`.&quot;</summary>
+            /// <summary>Filter by recipient. For example: Set this parameter to `+15558881111` to retrieve a list of Message resources sent to `+15558881111`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string? To { get; set; }

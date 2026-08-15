@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Type of brand being created. One of: \&quot;STANDARD\&quot;, \&quot;SOLE_PROPRIETOR\&quot;. SOLE_PROPRIETOR is for low volume, SOLE_PROPRIETOR use cases. STANDARD is for all other use cases.&quot;</summary>
+        /// <summary>Type of brand being created. One of: &quot;STANDARD&quot;, &quot;SOLE_PROPRIETOR&quot;. SOLE_PROPRIETOR is for low volume, SOLE_PROPRIETOR use cases. STANDARD is for all other use cases.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BrandType { get; set; }

@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>&quot;The \`KeyType\` form parameter is used to specify the type of key you want to create.**Default Behavior**: If \`KeyType\` is not specified, the API will generate a standard key.**Restricted Key**: If \`KeyType\` is set to \`restricted\`, the API will create a new restricted key. In this case, a policy object is required to define the permissions.&quot;</summary>
+        /// <summary>The \`KeyType\` form parameter is used to specify the type of key you want to create.**Default Behavior**: If \`KeyType\` is not specified, the API will generate a standard key.**Restricted Key**: If \`KeyType\` is set to \`restricted\`, the API will create a new restricted key. In this case, a policy object is required to define the permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? KeyType { get; set; }

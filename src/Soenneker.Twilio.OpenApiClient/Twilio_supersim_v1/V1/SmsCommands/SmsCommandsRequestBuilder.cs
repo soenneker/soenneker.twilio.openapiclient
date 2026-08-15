@@ -162,7 +162,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.SmsCommands
 #else
             public string Sim { get; set; }
 #endif
-            /// <summary>&quot;The status of the SMS Command. Can be: `queued`, `sent`, `delivered`, `received` or `failed`. See the [SMS Command Status Values](https://www.twilio.com/docs/iot/supersim/api/smscommand-resource#status-values) for a description of each.&quot;</summary>
+            /// <summary>The status of the SMS Command. Can be: `queued`, `sent`, `delivered`, `received` or `failed`. See the [SMS Command Status Values](https://www.twilio.com/docs/iot/supersim/api/smscommand-resource#status-values) for a description of each.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.SmsCommandEnumStatus? Status { get; set; }
         }
     }

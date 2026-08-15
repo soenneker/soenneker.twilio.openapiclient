@@ -44,7 +44,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public DateTimeOffset? DateUpdated { get; set; }
         /// <summary>The default `ttl` value for Sessions created in the Service. The TTL (time to live) is measured in seconds after the Session&apos;s last create or last Interaction. The default value of `0` indicates an unlimited Session length. You can override a Session&apos;s default TTL value by setting its `ttl` value.</summary>
         public int? DefaultTtl { get; set; }
-        /// <summary>&quot;Where a proxy number must be located relative to the participant identifier. Can be: `country`, `area-code`, or `extended-area-code`. The default value is `country` and more specific areas than `country` are only available in North America.&quot;</summary>
+        /// <summary>Where a proxy number must be located relative to the participant identifier. Can be: `country`, `area-code`, or `extended-area-code`. The default value is `country` and more specific areas than `country` are only available in North America.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumGeoMatchLevel? GeoMatchLevel { get; set; }
         /// <summary>The URL we call on each interaction. If we receive a 403 status, we block the interaction; otherwise the interaction continues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceLinksProperty Links { get; set; }
 #endif
-        /// <summary>&quot;The preference for Proxy Number selection in the Service instance. Can be: `prefer-sticky` or `avoid-sticky`. `prefer-sticky` means that we will try and select the same Proxy Number for a given participant if they have previous [Sessions](https://www.twilio.com/docs/proxy/api/session), but we will not fail if that Proxy Number cannot be used.  `avoid-sticky` means that we will try to use different Proxy Numbers as long as that is possible within a given pool rather than try and use a previously assigned number.&quot;</summary>
+        /// <summary>The preference for Proxy Number selection in the Service instance. Can be: `prefer-sticky` or `avoid-sticky`. `prefer-sticky` means that we will try and select the same Proxy Number for a given participant if they have previous [Sessions](https://www.twilio.com/docs/proxy/api/session), but we will not fail if that Proxy Number cannot be used.  `avoid-sticky` means that we will try to use different Proxy Numbers as long as that is possible within a given pool rather than try and use a previously assigned number.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumNumberSelectionBehavior? NumberSelectionBehavior { get; set; }
         /// <summary>The URL we call when an inbound call or SMS action occurs on a closed or non-existent Session. If your server (or a Twilio [function](https://www.twilio.com/en-us/serverless/functions)) responds with valid [TwiML](https://www.twilio.com/docs/voice/twiml), we will process it. This means it is possible, for example, to play a message for a call, send an automated text message response, or redirect a call to another Phone Number. See [Out-of-Session Callback Response Guide](https://www.twilio.com/docs/proxy/out-session-callback-response-guide) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

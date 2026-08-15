@@ -143,7 +143,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;Read only the rooms with this status. Can be: `in-progress` (default) or `completed`&quot;</summary>
+            /// <summary>Read only the rooms with this status. Can be: `in-progress` (default) or `completed`</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumRoomStatus? Status { get; set; }
             /// <summary>Read only rooms with the this `unique_name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

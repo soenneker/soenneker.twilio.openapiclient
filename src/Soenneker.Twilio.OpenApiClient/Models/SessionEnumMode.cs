@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The Mode of the Session. Can be: `message-only`, `voice-only`, or `voice-and-message`.&quot;</summary>
+    /// <summary>The Mode of the Session. Can be: `message-only`, `voice-only`, or `voice-and-message`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SessionEnumMode
     {

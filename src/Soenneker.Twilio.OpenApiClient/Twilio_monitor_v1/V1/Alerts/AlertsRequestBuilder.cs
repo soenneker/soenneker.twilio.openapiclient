@@ -93,7 +93,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v1.V1.Alerts
         {
             /// <summary>Only include alerts that occurred on or before this date and time. Specify the date and time in GMT and format as `YYYY-MM-DD` or `YYYY-MM-DDThh:mm:ssZ`. Queries for alerts older than 30 days are not supported.</summary>
             public DateTimeOffset? EndDate { get; set; }
-            /// <summary>&quot;Only show alerts for this log-level.  Can be: `error`, `warning`, `notice`, or `debug`.&quot;</summary>
+            /// <summary>Only show alerts for this log-level.  Can be: `error`, `warning`, `notice`, or `debug`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string? LogLevel { get; set; }

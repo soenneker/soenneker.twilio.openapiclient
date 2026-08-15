@@ -22,9 +22,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string AmdStatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use when calling the `amd_status_callback` URL. Can be: `GET` or `POST` and the default is `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use when calling the `amd_status_callback` URL. Can be: `GET` or `POST` and the default is `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateParticipantXWwwFormUrlencodedRequestAmdStatusCallbackMethod? AmdStatusCallbackMethod { get; set; }
-        /// <summary>&quot;Whether to play a notification beep to the conference when the participant joins. Can be: `true`, `false`, `onEnter`, or `onExit`. The default value is `true`.&quot;</summary>
+        /// <summary>Whether to play a notification beep to the conference when the participant joins. Can be: `true`, `false`, `onEnter`, or `onExit`. The default value is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Beep { get; set; }
@@ -88,9 +88,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ClientNotificationUrl { get; set; }
 #endif
-        /// <summary>&quot;Whether the participant is coaching another call. Can be: `true` or `false`. If not present, defaults to `false` unless `call_sid_to_coach` is defined. If `true`, `call_sid_to_coach` must be defined.&quot;</summary>
+        /// <summary>Whether the participant is coaching another call. Can be: `true` or `false`. If not present, defaults to `false` unless `call_sid_to_coach` is defined. If `true`, `call_sid_to_coach` must be defined.</summary>
         public bool? Coaching { get; set; }
-        /// <summary>&quot;Whether to record the conference the participant is joining. Can be: `true`, `false`, `record-from-start`, and `do-not-record`. The default value is `false`.&quot;</summary>
+        /// <summary>Whether to record the conference the participant is joining. Can be: `true`, `false`, `record-from-start`, and `do-not-record`. The default value is `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConferenceRecord { get; set; }
@@ -106,7 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ConferenceRecordingStatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The conference recording state changes that generate a call to `conference_recording_status_callback`. Can be: `in-progress`, `completed`, `failed`, and `absent`. Separate multiple values with a space, ex: `&apos;in-progress completed failed&apos;`&quot;</summary>
+        /// <summary>The conference recording state changes that generate a call to `conference_recording_status_callback`. Can be: `in-progress`, `completed`, `failed`, and `absent`. Separate multiple values with a space, ex: `&apos;in-progress completed failed&apos;`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ConferenceRecordingStatusCallbackEvent { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> ConferenceRecordingStatusCallbackEvent { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `conference_recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `conference_recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateParticipantXWwwFormUrlencodedRequestConferenceRecordingStatusCallbackMethod? ConferenceRecordingStatusCallbackMethod { get; set; }
         /// <summary>The URL we should call using the `conference_status_callback_method` when the conference events in `conference_status_callback_event` occur. Only the value set by the first participant to join the conference is used. Subsequent `conference_status_callback` values are ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -124,7 +124,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ConferenceStatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The conference state changes that should generate a call to `conference_status_callback`. Can be: `start`, `end`, `join`, `leave`, `mute`, `hold`, `modify`, `speaker`, and `announcement`. Separate multiple values with a space. Defaults to `start end`.&quot;</summary>
+        /// <summary>The conference state changes that should generate a call to `conference_status_callback`. Can be: `start`, `end`, `join`, `leave`, `mute`, `hold`, `modify`, `speaker`, and `announcement`. Separate multiple values with a space. Defaults to `start end`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ConferenceStatusCallbackEvent { get; set; }
@@ -132,9 +132,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> ConferenceStatusCallbackEvent { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `conference_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `conference_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateParticipantXWwwFormUrlencodedRequestConferenceStatusCallbackMethod? ConferenceStatusCallbackMethod { get; set; }
-        /// <summary>&quot;Whether to trim leading and trailing silence from the conference recording. Can be: `trim-silence` or `do-not-trim` and defaults to `trim-silence`.&quot;</summary>
+        /// <summary>Whether to trim leading and trailing silence from the conference recording. Can be: `trim-silence` or `do-not-trim` and defaults to `trim-silence`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConferenceTrim { get; set; }
@@ -142,9 +142,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ConferenceTrim { get; set; }
 #endif
-        /// <summary>&quot;Whether to allow an agent to hear the state of the outbound call, including ringing or disconnect messages. Can be: `true` or `false` and defaults to `true`.&quot;</summary>
+        /// <summary>Whether to allow an agent to hear the state of the outbound call, including ringing or disconnect messages. Can be: `true` or `false` and defaults to `true`.</summary>
         public bool? EarlyMedia { get; set; }
-        /// <summary>&quot;The emergency caller&apos;s street address including street number and street name.Note: If the value exceeds 60 characters, only the first 60 characters will be used.&quot;</summary>
+        /// <summary>The emergency caller&apos;s street address including street number and street name.Note: If the value exceeds 60 characters, only the first 60 characters will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmergencyAddress { get; set; }
@@ -152,7 +152,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string EmergencyAddress { get; set; }
 #endif
-        /// <summary>&quot;The emergency caller&apos;s physical location description within a building or facility.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+        /// <summary>The emergency caller&apos;s physical location description within a building or facility.Note: If the value exceeds 20 characters, only the first 20 characters will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmergencyCallerLocation { get; set; }
@@ -160,7 +160,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string EmergencyCallerLocation { get; set; }
 #endif
-        /// <summary>&quot;The emergency caller&apos;s GPS coordinates in decimal degrees format.Format: \&quot;latitude longitude\&quot; (space-separated)- Latitude: decimal degrees, range -90.0 to +90.0 (negative for South, positive for North)- Longitude: decimal degrees, range -180.0 to +180.0 (negative for West, positive for East)- Precision: up to 6 decimal places recommended for meter-level accuracyNote: If the value exceeds 150 characters, only the first 150 characters will be used.&quot;</summary>
+        /// <summary>The emergency caller&apos;s GPS coordinates in decimal degrees format.Format: &quot;latitude longitude&quot; (space-separated)- Latitude: decimal degrees, range -90.0 to +90.0 (negative for South, positive for North)- Longitude: decimal degrees, range -180.0 to +180.0 (negative for West, positive for East)- Precision: up to 6 decimal places recommended for meter-level accuracyNote: If the value exceeds 150 characters, only the first 150 characters will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmergencyCallerPosition { get; set; }
@@ -168,7 +168,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string EmergencyCallerPosition { get; set; }
 #endif
-        /// <summary>&quot;The emergency caller&apos;s city or municipality name.Should be the official city name as recognized by local authorities.Used in combination with state and country for emergency call routing.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+        /// <summary>The emergency caller&apos;s city or municipality name.Should be the official city name as recognized by local authorities.Used in combination with state and country for emergency call routing.Note: If the value exceeds 20 characters, only the first 20 characters will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmergencyCity { get; set; }
@@ -176,7 +176,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string EmergencyCity { get; set; }
 #endif
-        /// <summary>&quot;The emergency caller&apos;s country. Currently supported US and CA only.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+        /// <summary>The emergency caller&apos;s country. Currently supported US and CA only.Note: If the value exceeds 20 characters, only the first 20 characters will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmergencyCountry { get; set; }
@@ -184,7 +184,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string EmergencyCountry { get; set; }
 #endif
-        /// <summary>&quot;The emergency caller&apos;s organization or entity name.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+        /// <summary>The emergency caller&apos;s organization or entity name.Note: If the value exceeds 20 characters, only the first 20 characters will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmergencyName { get; set; }
@@ -192,7 +192,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string EmergencyName { get; set; }
 #endif
-        /// <summary>&quot;The emergency caller&apos;s state or province.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+        /// <summary>The emergency caller&apos;s state or province.Note: If the value exceeds 20 characters, only the first 20 characters will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmergencyState { get; set; }
@@ -200,7 +200,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string EmergencyState { get; set; }
 #endif
-        /// <summary>&quot;The emergency caller&apos;s postal code or ZIP code.Note: If the value exceeds 20 characters, only the first 20 characters will be used.&quot;</summary>
+        /// <summary>The emergency caller&apos;s postal code or ZIP code.Note: If the value exceeds 20 characters, only the first 20 characters will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmergencyZipCode { get; set; }
@@ -208,7 +208,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string EmergencyZipCode { get; set; }
 #endif
-        /// <summary>&quot;Whether to end the conference when the participant leaves. Can be: `true` or `false` and defaults to `false`.&quot;</summary>
+        /// <summary>Whether to end the conference when the participant leaves. Can be: `true` or `false` and defaults to `false`.</summary>
         public bool? EndConferenceOnExit { get; set; }
         /// <summary>The phone number, Client identifier, or username portion of SIP address that made this call. Phone numbers are in [E.164](https://www.twilio.com/docs/glossary/what-e164) format (e.g., +16175551212). Client identifiers are formatted `client:name`. If using a phone number, it must be a Twilio number or a Verified [outgoing caller id](https://www.twilio.com/docs/voice/api/outgoing-caller-ids) for your account. If the `to` parameter is a phone number, `from` must also be a phone number. If `to` is sip address, this value of `from` should be a username portion to be used to populate the P-Asserted-Identity header that is passed to the SIP endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -218,7 +218,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string From { get; set; }
 #endif
-        /// <summary>&quot;Jitter buffer size for the connecting participant. Twilio will use this setting to apply Jitter Buffer before participant&apos;s audio is mixed into the conference. Can be: `off`, `small`, `medium`, and `large`. Default to `large`.&quot;</summary>
+        /// <summary>Jitter buffer size for the connecting participant. Twilio will use this setting to apply Jitter Buffer before participant&apos;s audio is mixed into the conference. Can be: `off`, `small`, `medium`, and `large`. Default to `large`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? JitterBufferSize { get; set; }
@@ -234,7 +234,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>&quot;Whether to detect if a human, answering machine, or fax has picked up the call. Can be: `Enable` or `DetectMessageEnd`. Use `Enable` if you would like us to return `AnsweredBy` as soon as the called party is identified. Use `DetectMessageEnd`, if you would like to leave a message on an answering machine. For more information, see [Answering Machine Detection](https://www.twilio.com/docs/voice/answering-machine-detection).&quot;</summary>
+        /// <summary>Whether to detect if a human, answering machine, or fax has picked up the call. Can be: `Enable` or `DetectMessageEnd`. Use `Enable` if you would like us to return `AnsweredBy` as soon as the called party is identified. Use `DetectMessageEnd`, if you would like to leave a message on an answering machine. For more information, see [Answering Machine Detection](https://www.twilio.com/docs/voice/answering-machine-detection).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MachineDetection { get; set; }
@@ -242,11 +242,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string MachineDetection { get; set; }
 #endif
-        /// <summary>&quot;The number of milliseconds of initial silence after which an `unknown` AnsweredBy result will be returned. Possible Values: 2000-10000. Default: 5000.&quot;</summary>
+        /// <summary>The number of milliseconds of initial silence after which an `unknown` AnsweredBy result will be returned. Possible Values: 2000-10000. Default: 5000.</summary>
         public int? MachineDetectionSilenceTimeout { get; set; }
-        /// <summary>&quot;The number of milliseconds of silence after speech activity at which point the speech activity is considered complete. Possible Values: 500-5000. Default: 1200.&quot;</summary>
+        /// <summary>The number of milliseconds of silence after speech activity at which point the speech activity is considered complete. Possible Values: 500-5000. Default: 1200.</summary>
         public int? MachineDetectionSpeechEndThreshold { get; set; }
-        /// <summary>&quot;The number of milliseconds that is used as the measuring stick for the length of the speech activity, where durations lower than this value will be interpreted as a human and longer than this value as a machine. Possible Values: 1000-6000. Default: 2400.&quot;</summary>
+        /// <summary>The number of milliseconds that is used as the measuring stick for the length of the speech activity, where durations lower than this value will be interpreted as a human and longer than this value as a machine. Possible Values: 1000-6000. Default: 2400.</summary>
         public int? MachineDetectionSpeechThreshold { get; set; }
         /// <summary>The number of seconds that we should attempt to detect an answering machine before timing out and sending a voice request with `AnsweredBy` of `unknown`. The default timeout is 30 seconds.</summary>
         public int? MachineDetectionTimeout { get; set; }
@@ -264,7 +264,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Whether to record the participant and their conferences, including the time between conferences. Can be `true` or `false` and the default is `false`.</summary>
         public bool? Record { get; set; }
-        /// <summary>&quot;The recording channels for the final recording. Can be: `mono` or `dual` and the default is `mono`.&quot;</summary>
+        /// <summary>The recording channels for the final recording. Can be: `mono` or `dual` and the default is `mono`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RecordingChannels { get; set; }
@@ -288,7 +288,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string RecordingStatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The recording state changes that should generate a call to `recording_status_callback`. Can be: `started`, `in-progress`, `paused`, `resumed`, `stopped`, `completed`, `failed`, and `absent`. Separate multiple values with a space, ex: `&apos;in-progress completed failed&apos;`.&quot;</summary>
+        /// <summary>The recording state changes that should generate a call to `recording_status_callback`. Can be: `started`, `in-progress`, `paused`, `resumed`, `stopped`, `completed`, `failed`, and `absent`. Separate multiple values with a space, ex: `&apos;in-progress completed failed&apos;`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RecordingStatusCallbackEvent { get; set; }
@@ -296,9 +296,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> RecordingStatusCallbackEvent { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use when we call `recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use when we call `recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateParticipantXWwwFormUrlencodedRequestRecordingStatusCallbackMethod? RecordingStatusCallbackMethod { get; set; }
-        /// <summary>&quot;The audio track to record for the call. Can be: `inbound`, `outbound` or `both`. The default is `both`. `inbound` records the audio that is received by Twilio. `outbound` records the audio that is sent from Twilio. `both` records the audio that is received and sent by Twilio.&quot;</summary>
+        /// <summary>The audio track to record for the call. Can be: `inbound`, `outbound` or `both`. The default is `both`. `inbound` records the audio that is received by Twilio. `outbound` records the audio that is sent from Twilio. `both` records the audio that is received and sent by Twilio.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RecordingTrack { get; set; }
@@ -330,7 +330,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SipAuthUsername { get; set; }
 #endif
-        /// <summary>&quot;Whether to start the conference when the participant joins, if it has not already started. Can be: `true` or `false` and the default is `true`. If `false` and the conference has not started, the participant is muted and hears background music until another participant starts the conference.&quot;</summary>
+        /// <summary>Whether to start the conference when the participant joins, if it has not already started. Can be: `true` or `false` and the default is `true`. If `false` and the conference has not started, the participant is muted and hears background music until another participant starts the conference.</summary>
         public bool? StartConferenceOnEnter { get; set; }
         /// <summary>The URL we should call using the `status_callback_method` to send status information to your application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -340,7 +340,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The conference state changes that should generate a call to `status_callback`. Can be: `initiated`, `ringing`, `answered`, and `completed`. Separate multiple values with a space. The default value is `completed`.&quot;</summary>
+        /// <summary>The conference state changes that should generate a call to `status_callback`. Can be: `initiated`, `ringing`, `answered`, and `completed`. Separate multiple values with a space. The default value is `completed`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? StatusCallbackEvent { get; set; }
@@ -348,7 +348,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> StatusCallbackEvent { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `status_callback`. Can be: `GET` and `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `status_callback`. Can be: `GET` and `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateParticipantXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>The maximum duration of the call in seconds. Constraints depend on account and configuration.</summary>
         public int? TimeLimit { get; set; }
@@ -362,7 +362,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string To { get; set; }
 #endif
-        /// <summary>&quot;Whether to trim any leading and trailing silence from the participant recording. Can be: `trim-silence` or `do-not-trim` and the default is `trim-silence`.&quot;</summary>
+        /// <summary>Whether to trim any leading and trailing silence from the participant recording. Can be: `trim-silence` or `do-not-trim` and the default is `trim-silence`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Trim { get; set; }

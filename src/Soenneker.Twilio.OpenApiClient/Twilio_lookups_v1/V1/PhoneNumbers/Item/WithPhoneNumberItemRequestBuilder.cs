@@ -109,7 +109,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v1.V1.PhoneNumbers.Item
 #else
             public string CountryCode { get; set; }
 #endif
-            /// <summary>&quot;The type of information to return. Can be: `carrier` or `caller-name`. The default is null. To retrieve both types of information, specify this parameter twice; once with `carrier` and once with `caller-name` as the value.&quot;</summary>
+            /// <summary>The type of information to return. Can be: `carrier` or `caller-name`. The default is null. To retrieve both types of information, specify this parameter twice; once with `carrier` and once with `caller-name` as the value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string[]? Type { get; set; }

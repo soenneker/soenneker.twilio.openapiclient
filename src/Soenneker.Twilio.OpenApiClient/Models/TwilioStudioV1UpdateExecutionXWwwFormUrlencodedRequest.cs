@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The status of the Execution. Can be: `active` or `ended`.&quot;</summary>
+        /// <summary>The status of the Execution. Can be: `active` or `ended`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionEnumStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV1UpdateExecutionXWwwFormUrlencodedRequest"/> and sets the default values.

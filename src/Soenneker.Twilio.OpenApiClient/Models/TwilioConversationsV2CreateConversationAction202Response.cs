@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>&quot;Named identifiers from downstream. For SEND_MESSAGE:- messageSid: The downstream message SID (present when PENDING or COMPLETED)- communicationId: The Communication ID (present when COMPLETED)&quot;</summary>
+        /// <summary>Named identifiers from downstream. For SEND_MESSAGE:- messageSid: The downstream message SID (present when PENDING or COMPLETED)- communicationId: The Communication ID (present when COMPLETED)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationAction202ResponseRelated? Related { get; set; }
@@ -44,7 +44,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Lifecycle status of an Action.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ActionStatus? Status { get; set; }
-        /// <summary>&quot;The type of action. Accepted values: SEND_MESSAGE.&quot;</summary>
+        /// <summary>The type of action. Accepted values: SEND_MESSAGE.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

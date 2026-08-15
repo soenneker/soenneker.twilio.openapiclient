@@ -114,7 +114,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         public partial class LocalJsonRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>&quot;Whether to include phone numbers new to the Twilio platform. Can be: `true` or `false` and the default is `true`.&quot;</summary>
+            /// <summary>Whether to include phone numbers new to the Twilio platform. Can be: `true` or `false` and the default is `true`.</summary>
             public bool? Beta { get; set; }
             /// <summary>A string that identifies the resources to read.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -124,7 +124,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
 #else
             public string FriendlyName { get; set; }
 #endif
-            /// <summary>&quot;Whether to include phone numbers based on their origin. Can be: `twilio` or `hosted`. By default, phone numbers of all origin are included.&quot;</summary>
+            /// <summary>Whether to include phone numbers based on their origin. Can be: `twilio` or `hosted`. By default, phone numbers of all origin are included.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string? Origin { get; set; }

@@ -95,9 +95,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.UsageRecords
 #else
             public string Fleet { get; set; }
 #endif
-            /// <summary>&quot;Time-based grouping that UsageRecords should be aggregated by. Can be: `hour`, `day`, or `all`. Default is `all`. `all` returns one UsageRecord that describes the usage for the entire period.&quot;</summary>
+            /// <summary>Time-based grouping that UsageRecords should be aggregated by. Can be: `hour`, `day`, or `all`. Default is `all`. `all` returns one UsageRecord that describes the usage for the entire period.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.UsageRecordEnumGranularity? Granularity { get; set; }
-            /// <summary>&quot;Dimension over which to aggregate usage records. Can be: `sim`, `fleet`, `network`, `isoCountry`. Default is to not aggregate across any of these dimensions, UsageRecords will be aggregated into the time buckets described by the `Granularity` parameter.&quot;</summary>
+            /// <summary>Dimension over which to aggregate usage records. Can be: `sim`, `fleet`, `network`, `isoCountry`. Default is to not aggregate across any of these dimensions, UsageRecords will be aggregated into the time buckets described by the `Granularity` parameter.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.UsageRecordEnumGroup? Group { get; set; }
             /// <summary>Alpha-2 ISO Country Code. Only show UsageRecords representing usage in this country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

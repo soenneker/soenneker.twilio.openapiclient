@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The mode used to send the SMS message. Can be: `text` or `binary`. The default SMS mode is `text`.&quot;</summary>
+    /// <summary>The mode used to send the SMS message. Can be: `text` or `binary`. The default SMS mode is `text`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CommandEnumCommandMode
     {

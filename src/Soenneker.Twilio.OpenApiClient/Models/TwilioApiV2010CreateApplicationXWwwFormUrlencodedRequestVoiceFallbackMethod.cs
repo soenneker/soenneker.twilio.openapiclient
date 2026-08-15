@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The HTTP method we should use to call `voice_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+    /// <summary>The HTTP method we should use to call `voice_fallback_url`. Can be: `GET` or `POST`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TwilioApiV2010CreateApplicationXWwwFormUrlencodedRequestVoiceFallbackMethod
     {

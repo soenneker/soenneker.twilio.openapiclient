@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string AlphaSender { get; set; }
 #endif
-        /// <summary>&quot;An array of values that describe whether the number can receive calls or messages. Can be: `SMS`.&quot;</summary>
+        /// <summary>An array of values that describe whether the number can receive calls or messages. Can be: `SMS`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Capabilities { get; set; }

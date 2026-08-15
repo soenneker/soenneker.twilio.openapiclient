@@ -24,7 +24,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string BrandRegistrationSid { get; set; }
 #endif
-        /// <summary>&quot;A short description of what this SMS campaign does. Min length: 40 characters. Max length: 4096 characters.&quot;</summary>
+        /// <summary>A short description of what this SMS campaign does. Min length: 40 characters. Max length: 4096 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string MessageFlow { get; set; }
 #endif
-        /// <summary>&quot;An array of sample message strings, min two and max five. Min length for each sample: 20 chars. Max length for each sample: 1024 chars.&quot;</summary>
+        /// <summary>An array of sample message strings, min two and max five. Min length for each sample: 20 chars. Max length for each sample: 1024 chars.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? MessageSamples { get; set; }
@@ -120,7 +120,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string TermsAndConditionsUrl { get; set; }
 #endif
-        /// <summary>&quot;A2P Campaign Use Case. Examples: [ 2FA, EMERGENCY, MARKETING..]&quot;</summary>
+        /// <summary>A2P Campaign Use Case. Examples: [ 2FA, EMERGENCY, MARKETING..]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UsAppToPersonUsecase { get; set; }

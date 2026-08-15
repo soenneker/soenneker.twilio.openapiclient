@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Configuration details for file based knowledge sources. Supported file formats (extension → MIME type):  .csv → text/csv  .md → text/markdown  .pdf → application/pdf  .tsv → text/tab-separated-values  .txt → text/plainMaximum file size: 16MB (16 * 1024 * 1024 bytes).&quot;
+    /// Configuration details for file based knowledge sources. Supported file formats (extension → MIME type):  .csv → text/csv  .md → text/markdown  .pdf → application/pdf  .tsv → text/tab-separated-values  .txt → text/plainMaximum file size: 16MB (16 * 1024 * 1024 bytes).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileSourceDetails : IParsable
@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Supported MIME types for knowledge file imports. Maximum file size for any file is 16MB (16 * 1024 * 1024 bytes). Extensions → MIME:  .csv → text/csv  .md → text/markdown  .pdf → application/pdf  .tsv → text/tab-separated-values  .txt → text/plain</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.SupportedFileMimeType? MimeType { get; set; }
         /// <summary>File based knowledge sources</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.FileSourceDetailsType? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FileType? Type { get; set; }
         /// <summary>Expiration time of the presigned upload URL in ISO 8601 format (only present when status is SCHEDULED)</summary>
         public DateTimeOffset? UploadExpiration { get; private set; }
         /// <summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "fileSize", n => { FileSize = n.GetIntValue(); } },
                 { "importUrl", n => { ImportUrl = n.GetStringValue(); } },
                 { "mimeType", n => { MimeType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupportedFileMimeType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FileSourceDetailsType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FileType>(); } },
                 { "uploadExpiration", n => { UploadExpiration = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -73,7 +73,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("fileName", FileName);
             writer.WriteIntValue("fileSize", FileSize);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupportedFileMimeType>("mimeType", MimeType);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FileSourceDetailsType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FileType>("type", Type);
         }
     }
 }

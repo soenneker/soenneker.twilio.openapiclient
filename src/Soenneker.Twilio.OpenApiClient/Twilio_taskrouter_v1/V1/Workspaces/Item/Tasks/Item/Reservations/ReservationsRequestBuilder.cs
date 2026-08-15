@@ -103,7 +103,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;Returns the list of reservations for a task with a specified ReservationStatus.  Can be: `pending`, `accepted`, `rejected`, or `timeout`.&quot;</summary>
+            /// <summary>Returns the list of reservations for a task with a specified ReservationStatus.  Can be: `pending`, `accepted`, `rejected`, or `timeout`.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumStatus? ReservationStatus { get; set; }
             /// <summary>The SID of the reserved Worker resource to read.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

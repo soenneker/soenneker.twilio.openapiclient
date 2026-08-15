@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The HTTP method we use to call `callback_url`. Can be: `POST` or `GET`, and the default is `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `callback_url`. Can be: `POST` or `GET`, and the default is `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1CreateCommandXWwwFormUrlencodedRequestCallbackMethod? CallbackMethod { get; set; }
         /// <summary>The URL we call using the `callback_url` when the Command has finished sending, whether the command was delivered or it failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,11 +32,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Command { get; set; }
 #endif
-        /// <summary>&quot;The mode used to send the SMS message. Can be: `text` or `binary`. The default SMS mode is `text`.&quot;</summary>
+        /// <summary>The mode used to send the SMS message. Can be: `text` or `binary`. The default SMS mode is `text`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CommandEnumCommandMode? CommandMode { get; set; }
         /// <summary>Whether to request delivery receipt from the recipient. For Commands that request delivery receipt, the Command state transitions to &apos;delivered&apos; once the server has received a delivery receipt from the device. The default value is `true`.</summary>
         public bool? DeliveryReceiptRequested { get; set; }
-        /// <summary>&quot;Whether to include the SID of the command in the message body. Can be: `none`, `start`, or `end`, and the default behavior is `none`. When sending a Command to a SIM in text mode, we can automatically include the SID of the Command in the message body, which could be used to ensure that the device does not process the same Command more than once.  A value of `start` will prepend the message with the Command SID, and `end` will append it to the end, separating the Command SID from the message body with a space. The length of the Command SID is included in the 160 character limit so the SMS body must be 128 characters or less before the Command SID is included.&quot;</summary>
+        /// <summary>Whether to include the SID of the command in the message body. Can be: `none`, `start`, or `end`, and the default behavior is `none`. When sending a Command to a SIM in text mode, we can automatically include the SID of the Command in the message body, which could be used to ensure that the device does not process the same Command more than once.  A value of `start` will prepend the message with the Command SID, and `end` will append it to the end, separating the Command SID from the message body with a space. The length of the Command SID is included in the 160 character limit so the SMS body must be 128 characters or less before the Command SID is included.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IncludeSid { get; set; }

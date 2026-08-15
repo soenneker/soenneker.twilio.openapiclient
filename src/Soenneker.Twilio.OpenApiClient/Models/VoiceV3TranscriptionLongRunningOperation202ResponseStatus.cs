@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;Current status of the long-running operation.PENDING: accepted but not yet started.RUNNING: currently in progress.COMPLETED: successfully completed.FAILED: failed and cannot be completed.&quot;</summary>
+    /// <summary>Current status of the long-running operation.PENDING: accepted but not yet started.RUNNING: currently in progress.COMPLETED: successfully completed.FAILED: failed and cannot be completed.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum VoiceV3TranscriptionLongRunningOperation202ResponseStatus
     {

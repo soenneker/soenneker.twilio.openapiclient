@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Key-value mapping for parameters defined as part of the Operator schema. The key and value passed by the Rule must match the name and data type of the parameter defined in the Operator, respectively.These parameters will customize the behavior of the Operator when executed by the Rule via runtime substitution into the prompt.Note: For parameters of type `knowledge_base_and_source_ids`, the value must be passed in the following format: `knowledge_base_id:knowledge_source_id`.&quot;
+    /// Key-value mapping for parameters defined as part of the Operator schema. The key and value passed by the Rule must match the name and data type of the parameter defined in the Operator, respectively.These parameters will customize the behavior of the Operator when executed by the Rule via runtime substitution into the prompt.Note: For parameters of type `knowledge_base_and_source_ids`, the value must be passed in the following format: `knowledge_base_id:knowledge_source_id`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OperatorTypeParametersProperty : IAdditionalDataHolder, IParsable

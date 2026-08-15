@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Map of traits to add, update, or remove in this Trait Group, where the key is the trait name. - To update/add a trait: provide the complete TraitDefinition object - To remove a trait: set dataType to an empty string (\&quot;\&quot;)&quot;
+    /// Map of traits to add, update, or remove in this Trait Group, where the key is the trait name. - To update/add a trait: provide the complete TraitDefinition object - To remove a trait: set dataType to an empty string (&quot;&quot;)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TwilioMemoryV1PatchTraitGroupRequestTraits : IAdditionalDataHolder, IParsable

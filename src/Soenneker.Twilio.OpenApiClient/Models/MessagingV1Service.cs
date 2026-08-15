@@ -28,7 +28,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public DateTimeOffset? DateCreated { get; set; }
         /// <summary>The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateUpdated { get; set; }
-        /// <summary>&quot;The HTTP method we use to call `fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceFallbackMethod? FallbackMethod { get; set; }
         /// <summary>[OBSOLETE] Former feature used to fallback to long code sender after certain short code message failures.</summary>
         public bool? FallbackToLongCode { get; set; }

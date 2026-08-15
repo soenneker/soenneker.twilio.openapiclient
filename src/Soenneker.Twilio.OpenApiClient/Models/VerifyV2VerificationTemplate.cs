@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;A list of channels that support the Template. Can include: sms, voice.&quot;</summary>
+        /// <summary>A list of channels that support the Template. Can include: sms, voice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Channels { get; set; }

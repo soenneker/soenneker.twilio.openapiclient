@@ -41,7 +41,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdatePasskeysFactorRequestResponse Response { get; set; }
 #endif
         /// <summary>The valid credential types supported by the API.The values of this enumeration are used for versioning the `AuthenticatorAssertion` and `AuthenticatorAttestation` structures according to the type of the authenticator.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdatePasskeysFactorRequestType? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PublicKeyType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdatePasskeysFactorRequest"/> and sets the default values.
         /// </summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "rawId", n => { RawId = n.GetStringValue(); } },
                 { "response", n => { Response = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdatePasskeysFactorRequestResponse>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdatePasskeysFactorRequestResponse.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdatePasskeysFactorRequestType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicKeyType>(); } },
             };
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("rawId", RawId);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdatePasskeysFactorRequestResponse>("response", Response);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdatePasskeysFactorRequestType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicKeyType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

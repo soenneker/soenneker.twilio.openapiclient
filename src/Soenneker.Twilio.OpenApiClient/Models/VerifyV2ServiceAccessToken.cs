@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Token { get; set; }
 #endif
-        /// <summary>&quot;How long, in seconds, the access token is valid. Max: 5 minutes&quot;</summary>
+        /// <summary>How long, in seconds, the access token is valid. Max: 5 minutes</summary>
         public int? Ttl { get; set; }
         /// <summary>The URL of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

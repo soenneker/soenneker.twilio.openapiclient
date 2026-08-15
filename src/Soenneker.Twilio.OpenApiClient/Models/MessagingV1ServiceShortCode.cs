@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;An array of values that describe whether the number can receive calls or messages. Can be: `SMS` and `MMS`.&quot;</summary>
+        /// <summary>An array of values that describe whether the number can receive calls or messages. Can be: `SMS` and `MMS`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Capabilities { get; set; }

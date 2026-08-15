@@ -72,7 +72,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SimSid { get; set; }
 #endif
-        /// <summary>&quot;The delivery status of the IP Command. This is one of the following: “queued”, “sent”, “failed” or “received”.&quot;</summary>
+        /// <summary>The delivery status of the IP Command. This is one of the following: “queued”, “sent”, “failed” or “received”.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.IpCommandEnumStatus? Status { get; set; }
         /// <summary>The absolute URL of the IP Command resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

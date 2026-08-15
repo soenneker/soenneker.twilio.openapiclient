@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;`array[object]` List of agent session summaries for conversation relay. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#conversation-relay-object) for the object properties.&quot;</summary>
+        /// <summary>`array[object]` List of agent session summaries for conversation relay. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#conversation-relay-object) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryAgentSessionSummary>? AgentSessionSummaries { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryAgentSessionSummary> AgentSessionSummaries { get; set; }
 #endif
-        /// <summary>&quot;`object` Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties.&quot;</summary>
+        /// <summary>`object` Programmatically labeled annotations for the Call. Developers can update the Call Summary records with Annotation during or after a Call. Annotations can be updated as long as the Call Summary record is addressable via the API. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#annotation-object) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAnnotation? Annotation { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The answered_by property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumAnsweredBy? AnsweredBy { get; set; }
-        /// <summary>&quot;`object` Attributes capturing call-flow-specific details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#attributes-object) for the object properties.&quot;</summary>
+        /// <summary>`object` Attributes capturing call-flow-specific details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#attributes-object) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesAttributes? Attributes { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumCallState? CallState { get; set; }
         /// <summary>The call_type property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumCallType? CallType { get; set; }
-        /// <summary>&quot;`object` Contains metrics and properties for the Twilio media gateway of a PSTN call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
+        /// <summary>`object` Contains metrics and properties for the Twilio media gateway of a PSTN call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesCarrierEdge? CarrierEdge { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesCarrierEdge CarrierEdge { get; set; }
 #endif
-        /// <summary>&quot;`object` Contains metrics and properties for the Twilio media gateway of a Client call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
+        /// <summary>`object` Contains metrics and properties for the Twilio media gateway of a Client call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesClientEdge? ClientEdge { get; set; }
@@ -84,7 +84,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public int? Duration { get; set; }
         /// <summary>The time at which the Call was ended, given in ISO 8601 format.</summary>
         public DateTimeOffset? EndTime { get; set; }
-        /// <summary>&quot;`object` The calling party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.&quot;</summary>
+        /// <summary>`object` The calling party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesFrom? From { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The processing_state property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CallSummariesEnumProcessingState? ProcessingState { get; set; }
-        /// <summary>&quot;`object` Contains edge-agnostic call-level details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#properties-object) for the object properties.&quot;</summary>
+        /// <summary>`object` Contains edge-agnostic call-level details. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#properties-object) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesProperties? Properties { get; set; }
@@ -102,7 +102,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesProperties Properties { get; set; }
 #endif
-        /// <summary>&quot;`object` Contains metrics and properties for the SDK sensor library for Client calls. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
+        /// <summary>`object` Contains metrics and properties for the SDK sensor library for Client calls. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSdkEdge? SdkEdge { get; set; }
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSdkEdge SdkEdge { get; set; }
 #endif
-        /// <summary>&quot;`object` Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
+        /// <summary>`object` Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesSipEdge? SipEdge { get; set; }
@@ -128,7 +128,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> Tags { get; set; }
 #endif
-        /// <summary>&quot;`object` The called party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.&quot;</summary>
+        /// <summary>`object` The called party. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#tofrom-object) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTo? To { get; set; }
@@ -136,7 +136,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTo To { get; set; }
 #endif
-        /// <summary>&quot;`object` Contains trusted communications details including Branded Call and verified caller ID. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#trust-object) for the object properties.&quot;</summary>
+        /// <summary>`object` Contains trusted communications details including Branded Call and verified caller ID. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#trust-object) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallSummariesTrust? Trust { get; set; }

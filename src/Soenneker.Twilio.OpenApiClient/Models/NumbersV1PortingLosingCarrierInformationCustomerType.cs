@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of customer account in the losing carrier. This should either be: &apos;Individual&apos; or &apos;Business&apos;.&quot;</summary>
+    /// <summary>The type of customer account in the losing carrier. This should either be: &apos;Individual&apos; or &apos;Business&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum NumbersV1PortingLosingCarrierInformationCustomerType
     {

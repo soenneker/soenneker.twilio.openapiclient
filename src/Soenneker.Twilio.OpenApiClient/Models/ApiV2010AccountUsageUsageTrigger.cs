@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ApiVersion { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we use to call `callback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `callback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountUsageUsageTriggerCallbackMethod? CallbackMethod { get; set; }
         /// <summary>The URL we call using the `callback_method` when the trigger fires.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>&quot;The frequency of a recurring UsageTrigger.  Can be: `daily`, `monthly`, or `yearly` for recurring triggers or empty for non-recurring triggers. A trigger will only fire once during each period. Recurring times are in GMT.&quot;</summary>
+        /// <summary>The frequency of a recurring UsageTrigger.  Can be: `daily`, `monthly`, or `yearly` for recurring triggers or empty for non-recurring triggers. A trigger will only fire once during each period. Recurring times are in GMT.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.UsageTriggerEnumRecurring? Recurring { get; set; }
         /// <summary>The unique string that that we created to identify the UsageTrigger resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,7 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The field in the [UsageRecord](https://www.twilio.com/docs/usage/api/usage-record) resource that fires the trigger.  Can be: `count`, `usage`, or `price`, as described in the [UsageRecords documentation](https://www.twilio.com/docs/usage/api/usage-record#usage-count-price).&quot;</summary>
+        /// <summary>The field in the [UsageRecord](https://www.twilio.com/docs/usage/api/usage-record) resource that fires the trigger.  Can be: `count`, `usage`, or `price`, as described in the [UsageRecords documentation](https://www.twilio.com/docs/usage/api/usage-record#usage-count-price).</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.UsageTriggerEnumTriggerField? TriggerBy { get; set; }
         /// <summary>The value at which the trigger will fire.  Must be a positive, numeric value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

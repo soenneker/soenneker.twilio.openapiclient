@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of the Build. Can be: `building`, `completed`, or `failed`.&quot;</summary>
+    /// <summary>The status of the Build. Can be: `building`, `completed`, or `failed`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum BuildStatusEnumStatus
     {

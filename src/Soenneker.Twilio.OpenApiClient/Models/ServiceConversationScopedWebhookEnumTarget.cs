@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The target of this webhook: `webhook`, `studio`, `trigger`&quot;</summary>
+    /// <summary>The target of this webhook: `webhook`, `studio`, `trigger`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ServiceConversationScopedWebhookEnumTarget
     {

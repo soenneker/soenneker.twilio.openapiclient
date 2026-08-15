@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Details provided to give context about the Challenge. Not shown to the end user. It must be a stringified JSON with only strings values eg. `{\&quot;ip\&quot;: \&quot;172.168.1.234\&quot;}`. Can be up to 1024 characters in length&quot;
+    /// Details provided to give context about the Challenge. Not shown to the end user. It must be a stringified JSON with only strings values eg. `{&quot;ip&quot;: &quot;172.168.1.234&quot;}`. Can be up to 1024 characters in length
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequestHiddenDetails : IAdditionalDataHolder, IParsable

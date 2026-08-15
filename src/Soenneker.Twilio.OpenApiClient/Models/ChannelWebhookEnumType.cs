@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of webhook. Can be: `webhook`, `studio`, or `trigger`.&quot;</summary>
+    /// <summary>The type of webhook. Can be: `webhook`, `studio`, or `trigger`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ChannelWebhookEnumType
     {

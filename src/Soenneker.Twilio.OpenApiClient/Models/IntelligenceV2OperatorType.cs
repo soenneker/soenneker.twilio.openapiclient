@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Operator Type availability status. Possible values: internal, beta, general-availability, retired, deprecated.&quot;</summary>
+        /// <summary>Operator Type availability status. Possible values: internal, beta, general-availability, retired, deprecated.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.OperatorTypeEnumAvailability? Availability { get; set; }
         /// <summary>JSON Schema for configuring an Operator with this Operator Type. Following https://json-schema.org/</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,9 +62,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;Operator Results for this Operator Type will follow this format. Possible values: text-classification, text-extraction, text-extraction-normalized, text-generation.&quot;</summary>
+        /// <summary>Operator Results for this Operator Type will follow this format. Possible values: text-classification, text-extraction, text-extraction-normalized, text-generation.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.OperatorTypeEnumOutputType? OutputType { get; set; }
-        /// <summary>&quot;Operators with this Operator Type are executed using this provider. Possible values: twilio, amazon, openai.&quot;</summary>
+        /// <summary>Operators with this Operator Type are executed using this provider. Possible values: twilio, amazon, openai.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.OperatorTypeEnumProvider? Provider { get; set; }
         /// <summary>A 34 character string that uniquely identifies this Operator Type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

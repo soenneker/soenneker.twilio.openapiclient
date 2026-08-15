@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string OperationId { get; set; }
 #endif
-        /// <summary>&quot;Current status of the transcription operation.PENDING: accepted but not yet started.RUNNING: currently in progress.COMPLETED: successfully completed.FAILED: failed and cannot be completed.&quot;</summary>
+        /// <summary>Current status of the transcription operation.PENDING: accepted but not yet started.RUNNING: currently in progress.COMPLETED: successfully completed.FAILED: failed and cannot be completed.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperationResponseStatus? Status { get; set; }
         /// <summary>URL to poll for the latest operation status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The HTTP method that we should use to request the `fallback_url`. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.&quot;</summary>
+        /// <summary>The HTTP method that we should use to request the `fallback_url`. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateCallXWwwFormUrlencodedRequestFallbackMethod? FallbackMethod { get; set; }
         /// <summary>The URL that we call using the `fallback_method` if an error occurs when requesting or executing the TwiML at `url`. If an `application_sid` parameter is present, this parameter is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -24,7 +24,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use when calling the `url`. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.&quot;</summary>
+        /// <summary>The HTTP method we should use when calling the `url`. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateCallXWwwFormUrlencodedRequestMethod? Method { get; set; }
         /// <summary>The Status property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CallEnumUpdateStatus? Status { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use when requesting the `status_callback` URL. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.&quot;</summary>
+        /// <summary>The HTTP method we should use when requesting the `status_callback` URL. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateCallXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>The maximum duration of the call in seconds. Constraints depend on account and configuration.</summary>
         public int? TimeLimit { get; set; }

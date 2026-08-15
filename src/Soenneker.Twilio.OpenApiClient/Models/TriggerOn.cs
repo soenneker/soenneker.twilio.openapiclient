@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The conversational lifecycle event that will activate execution of the Rule.Available values are:- `COMMUNICATION`: Trigger the Rule on each communication within the Conversation.- `CONVERSATION_END`: Trigger the Rule when the Conversation moves to the `closed` state- `CONVERSATION_INACTIVE`: Trigger the Rule when the Conversation moves to `inactive` state&quot;</summary>
+    /// <summary>The conversational lifecycle event that will activate execution of the Rule.Available values are:- `COMMUNICATION`: Trigger the Rule on each communication within the Conversation.- `CONVERSATION_END`: Trigger the Rule when the Conversation moves to the `closed` state- `CONVERSATION_INACTIVE`: Trigger the Rule when the Conversation moves to `inactive` state</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TriggerOn
     {

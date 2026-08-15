@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ConnectAppSid { get; set; }
 #endif
-        /// <summary>&quot;The set of permissions that you authorized for the Connect App.  Can be: `get-all` or `post-all`.&quot;</summary>
+        /// <summary>The set of permissions that you authorized for the Connect App.  Can be: `get-all` or `post-all`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Twilio.OpenApiClient.Models.AuthorizedConnectAppEnumPermission?>? Permissions { get; set; }

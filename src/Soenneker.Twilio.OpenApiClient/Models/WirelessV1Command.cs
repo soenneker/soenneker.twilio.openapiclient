@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Command { get; set; }
 #endif
-        /// <summary>&quot;The mode used to send the SMS message. Can be: `text` or `binary`. The default SMS mode is `text`.&quot;</summary>
+        /// <summary>The mode used to send the SMS message. Can be: `text` or `binary`. The default SMS mode is `text`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CommandEnumCommandMode? CommandMode { get; set; }
         /// <summary>The date and time in GMT when the resource was created specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -56,9 +56,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SimSid { get; set; }
 #endif
-        /// <summary>&quot;The status of the Command. Can be: `queued`, `sent`, `delivered`, `received`, or `failed`. See [Status Values](https://www.twilio.com/docs/iot/wireless/api/command-resource#status-values) for a description of each state.&quot;</summary>
+        /// <summary>The status of the Command. Can be: `queued`, `sent`, `delivered`, `received`, or `failed`. See [Status Values](https://www.twilio.com/docs/iot/wireless/api/command-resource#status-values) for a description of each state.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CommandEnumStatus? Status { get; set; }
-        /// <summary>&quot;The type of transport used. Can be: `sms` or `ip`.&quot;</summary>
+        /// <summary>The type of transport used. Can be: `sms` or `ip`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CommandEnumTransport? Transport { get; set; }
         /// <summary>The absolute URL of the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -92,7 +92,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The size of the composed media file in bytes.</summary>
         public long? Size { get; set; }
-        /// <summary>&quot;The status of the composition. Can be: `enqueued`, `processing`, `completed`, `deleted` or `failed`. `enqueued` is the initial state and indicates that the composition request has been received and is scheduled for processing; `processing` indicates the composition is being processed; `completed` indicates the composition has been completed and is available for download; `deleted` means the composition media has been deleted from the system, but its metadata is still available for 30 days; `failed` indicates the composition failed to execute the media processing task.&quot;</summary>
+        /// <summary>The status of the composition. Can be: `enqueued`, `processing`, `completed`, `deleted` or `failed`. `enqueued` is the initial state and indicates that the composition request has been received and is scheduled for processing; `processing` indicates the composition is being processed; `completed` indicates the composition has been completed and is available for download; `deleted` means the composition media has been deleted from the system, but its metadata is still available for 30 days; `failed` indicates the composition failed to execute the media processing task.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CompositionEnumStatus? Status { get; set; }
         /// <summary>The URL called using the `status_callback_method` to send status information on every composition event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -102,7 +102,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method used to call `status_callback`. Can be: `POST` or `GET`, defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method used to call `status_callback`. Can be: `POST` or `GET`, defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>Whether to remove intervals with no media, as specified in the POST request that created the composition. Compositions with `trim` enabled are shorter when the Room is created and no Participant joins for a while as well as if all the Participants leave the room and join later, because those gaps will be removed. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.</summary>
         public bool? Trim { get; set; }

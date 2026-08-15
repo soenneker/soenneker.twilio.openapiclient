@@ -60,7 +60,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Identity { get; set; }
 #endif
-        /// <summary>&quot;Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{\&quot;os\&quot;: \&quot;Android\&quot;}`. Can be up to 1024 characters in length.&quot;</summary>
+        /// <summary>Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{&quot;os&quot;: &quot;Android&quot;}`. Can be up to 1024 characters in length.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityFactorMetadata? Metadata { get; set; }

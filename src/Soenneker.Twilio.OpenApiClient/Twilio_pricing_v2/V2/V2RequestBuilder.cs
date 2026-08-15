@@ -21,7 +21,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_pricing_v2.V2
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_pricing_v2.V2.Trunking.TrunkingRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The Voice property</summary>
+        /// <summary>Voice pricing</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_pricing_v2.V2.Voice.VoiceRequestBuilder Voice
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_pricing_v2.V2.Voice.VoiceRequestBuilder(PathParameters, RequestAdapter);

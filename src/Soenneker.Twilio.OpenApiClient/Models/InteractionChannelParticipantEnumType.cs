@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;Participant type. Can be: `agent`, `customer`, `supervisor`, `external`, `unknown`&quot;</summary>
+    /// <summary>Participant type. Can be: `agent`, `customer`, `supervisor`, `external`, `unknown`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum InteractionChannelParticipantEnumType
     {

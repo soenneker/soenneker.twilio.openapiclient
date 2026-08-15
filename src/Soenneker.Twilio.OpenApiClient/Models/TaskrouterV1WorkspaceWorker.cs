@@ -38,7 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The JSON string that describes the Worker. For example: `{ \&quot;email\&quot;: \&quot;Bob@example.com\&quot;, \&quot;phone\&quot;: \&quot;+5095551234\&quot; }`. **Note** If this property has been assigned a value, it will only be displayed in FETCH actions that return a single resource. Otherwise, this property will be null, even if it has a value. This data is passed to the `assignment_callback_url` when TaskRouter assigns a Task to the Worker.&quot;</summary>
+        /// <summary>The JSON string that describes the Worker. For example: `{ &quot;email&quot;: &quot;Bob@example.com&quot;, &quot;phone&quot;: &quot;+5095551234&quot; }`. **Note** If this property has been assigned a value, it will only be displayed in FETCH actions that return a single resource. Otherwise, this property will be null, even if it has a value. This data is passed to the `assignment_callback_url` when TaskRouter assigns a Task to the Worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Attributes { get; set; }

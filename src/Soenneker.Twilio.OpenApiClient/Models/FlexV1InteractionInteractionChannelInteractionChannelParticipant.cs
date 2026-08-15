@@ -46,7 +46,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;Participant type. Can be: `agent`, `customer`, `supervisor`, `external`, `unknown`&quot;</summary>
+        /// <summary>Participant type. Can be: `agent`, `customer`, `supervisor`, `external`, `unknown`</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType? Type { get; set; }
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

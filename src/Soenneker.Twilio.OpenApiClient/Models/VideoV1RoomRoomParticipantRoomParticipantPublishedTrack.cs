@@ -20,7 +20,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public DateTimeOffset? DateUpdated { get; set; }
         /// <summary>Whether the track is enabled.</summary>
         public bool? Enabled { get; set; }
-        /// <summary>&quot;The track type. Can be: `audio`, `video` or `data`.&quot;</summary>
+        /// <summary>The track type. Can be: `audio`, `video` or `data`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RoomParticipantPublishedTrackEnumKind? Kind { get; set; }
         /// <summary>The track name. Must be no more than 128 characters, and be unique among the participant&apos;s published tracks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

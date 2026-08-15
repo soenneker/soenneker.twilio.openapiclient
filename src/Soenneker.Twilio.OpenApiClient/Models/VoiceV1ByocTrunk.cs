@@ -78,7 +78,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunkVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>The URL that we call when an error occurs while retrieving or executing the TwiML requested from `voice_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string VoiceFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1ByocTrunkVoiceMethod? VoiceMethod { get; set; }
         /// <summary>The URL we call using the `voice_method` when the BYOC Trunk receives a call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

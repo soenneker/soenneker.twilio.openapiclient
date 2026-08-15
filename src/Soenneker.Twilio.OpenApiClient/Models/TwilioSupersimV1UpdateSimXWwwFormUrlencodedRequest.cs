@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The HTTP method we should use to call `callback_url`. Can be: `GET` or `POST` and the default is POST.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `callback_url`. Can be: `GET` or `POST` and the default is POST.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1UpdateSimXWwwFormUrlencodedRequestCallbackMethod? CallbackMethod { get; set; }
         /// <summary>The URL we should call using the `callback_method` after an asynchronous update has finished.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -79,9 +79,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string PortabilityAdvanceCarrier { get; set; }
 #endif
-        /// <summary>&quot;Target date to port the number. We cannot guarantee that this date will be honored by the other carriers, please work with Ops to get a confirmation of the firm order commitment (FOC) date. Expected format is ISO Local Date, example: ‘2011-12-03`. This date must be at least 7 days in the future for US ports and 10 days in the future for Japanese ports. We can&apos;t guarantee the exact date and time, as this depends on the losing carrier&quot;</summary>
+        /// <summary>Target date to port the number. We cannot guarantee that this date will be honored by the other carriers, please work with Ops to get a confirmation of the firm order commitment (FOC) date. Expected format is ISO Local Date, example: ‘2011-12-03`. This date must be at least 7 days in the future for US ports and 10 days in the future for Japanese ports. We can&apos;t guarantee the exact date and time, as this depends on the losing carrier</summary>
         public Date? TargetPortInDate { get; set; }
-        /// <summary>&quot;The latest time that the port should occur on the target port in date. Expected format is ISO Offset Time, example: ‘10:15:00-08:00&apos;. We can&apos;t guarantee the exact date and time, as this depends on the losing carrier&quot;</summary>
+        /// <summary>The latest time that the port should occur on the target port in date. Expected format is ISO Offset Time, example: ‘10:15:00-08:00&apos;. We can&apos;t guarantee the exact date and time, as this depends on the losing carrier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TargetPortInTimeRangeEnd { get; set; }
@@ -89,7 +89,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string TargetPortInTimeRangeEnd { get; set; }
 #endif
-        /// <summary>&quot;The earliest time that the port should occur on the target port in date. Expected format is ISO Offset Time, example: ‘10:15:00-08:00&apos;. We can&apos;t guarantee the exact date and time, as this depends on the losing carrier&quot;</summary>
+        /// <summary>The earliest time that the port should occur on the target port in date. Expected format is ISO Offset Time, example: ‘10:15:00-08:00&apos;. We can&apos;t guarantee the exact date and time, as this depends on the losing carrier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TargetPortInTimeRangeStart { get; set; }

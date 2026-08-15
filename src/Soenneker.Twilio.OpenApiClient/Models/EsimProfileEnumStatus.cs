@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of the eSIM Profile. Can be: `new`, `reserving`, `available`, `downloaded`, `installed` or `failed`. See the [eSIM Profile Status Values](https://www.twilio.com/docs/iot/supersim/api/esimprofile-resource#status-values) for a description of each.&quot;</summary>
+    /// <summary>The status of the eSIM Profile. Can be: `new`, `reserving`, `available`, `downloaded`, `installed` or `failed`. See the [eSIM Profile Status Values](https://www.twilio.com/docs/iot/supersim/api/esimprofile-resource#status-values) for a description of each.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum EsimProfileEnumStatus
     {

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The visibility of the channel. Can be: `public` or `private`.&quot;</summary>
+    /// <summary>The visibility of the channel. Can be: `public` or `private`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ChannelEnumChannelType
     {

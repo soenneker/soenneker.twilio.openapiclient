@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The type of [Address](https://www.twilio.com/docs/usage/api/address) resource the phone number requires. Can be: `none`, `any`, `local`, or `foreign`. `none` means no address is required. `any` means an address is required, but it can be anywhere in the world. `local` means an address in the phone number&apos;s country is required. `foreign` means an address outside of the phone number&apos;s country is required.&quot;</summary>
+        /// <summary>The type of [Address](https://www.twilio.com/docs/usage/api/address) resource the phone number requires. Can be: `none`, `any`, `local`, or `foreign`. `none` means no address is required. `any` means an address is required, but it can be anywhere in the world. `local` means an address in the phone number&apos;s country is required. `foreign` means an address outside of the phone number&apos;s country is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AddressRequirements { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string AddressRequirements { get; set; }
 #endif
-        /// <summary>&quot;Whether the phone number is new to the Twilio platform. Can be: `true` or `false`.&quot;</summary>
+        /// <summary>Whether the phone number is new to the Twilio platform. Can be: `true` or `false`.</summary>
         public bool? Beta { get; set; }
-        /// <summary>&quot;The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.&quot;</summary>
+        /// <summary>The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberNationalCapabilities? Capabilities { get; set; }

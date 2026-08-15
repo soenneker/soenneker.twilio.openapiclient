@@ -116,7 +116,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Executio
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

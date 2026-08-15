@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BindingsRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;The push technology used by the Binding resources to read.  Can be: `apn`, `gcm`, `fcm`, or `twilsock`.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.&quot;</summary>
+            /// <summary>The push technology used by the Binding resources to read.  Can be: `apn`, `gcm`, `fcm`, or `twilsock`.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public global::Soenneker.Twilio.OpenApiClient.Models.ServiceBindingEnumBindingType[]? BindingType { get; set; }

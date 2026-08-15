@@ -94,7 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> Identity { get; set; }
 #endif
-        /// <summary>&quot;The priority of the notification. Can be: `low` or `high` and the default is `high`. A value of `low` optimizes the client app&apos;s battery consumption; however, notifications may be delivered with unspecified delay. For FCM and GCM, `low` priority is the same as `Normal` priority. For APNS `low` priority is the same as `5`. A value of `high` sends the notification immediately, and can wake up a sleeping device. For FCM and GCM, `high` is the same as `High` priority. For APNS, `high` is a priority `10`. SMS does not support this property.&quot;</summary>
+        /// <summary>The priority of the notification. Can be: `low` or `high` and the default is `high`. A value of `low` optimizes the client app&apos;s battery consumption; however, notifications may be delivered with unspecified delay. For FCM and GCM, `low` priority is the same as `Normal` priority. For APNS `low` priority is the same as `5`. A value of `high` sends the notification immediately, and can wake up a sleeping device. For FCM and GCM, `high` is the same as `High` priority. For APNS, `high` is a priority `10`. SMS does not support this property.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.NotificationEnumPriority? Priority { get; set; }
         /// <summary>The Segment resource is deprecated. Use the `tag` parameter, instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,7 +104,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> Segment { get; set; }
 #endif
-        /// <summary>&quot;The SMS-specific payload that overrides corresponding attributes in the generic payload for SMS Bindings.  Each attribute in this value maps to the corresponding `form` parameter of the Twilio [Message](https://www.twilio.com/docs/sms/quickstart) resource.  These parameters of the Message resource are supported in snake case format: `body`, `media_urls`, `status_callback`, and `max_price`.  The `status_callback` parameter overrides the corresponding parameter in the messaging service, if configured. The `media_urls` property expects a JSON array.&quot;</summary>
+        /// <summary>The SMS-specific payload that overrides corresponding attributes in the generic payload for SMS Bindings.  Each attribute in this value maps to the corresponding `form` parameter of the Twilio [Message](https://www.twilio.com/docs/sms/quickstart) resource.  These parameters of the Message resource are supported in snake case format: `body`, `media_urls`, `status_callback`, and `max_price`.  The `status_callback` parameter overrides the corresponding parameter in the messaging service, if configured. The `media_urls` property expects a JSON array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestSms? Sms { get; set; }

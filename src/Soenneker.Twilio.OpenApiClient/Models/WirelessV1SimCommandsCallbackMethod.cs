@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The HTTP method we use to call `commands_callback_url`.  Can be: `POST` or `GET`. Default is `POST`.&quot;</summary>
+    /// <summary>The HTTP method we use to call `commands_callback_url`.  Can be: `POST` or `GET`. Default is `POST`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum WirelessV1SimCommandsCallbackMethod
     {

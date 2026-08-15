@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string NotificationEmail { get; set; }
 #endif
-        /// <summary>&quot;A string that shows the status of the current Bulk Hosting request, it can vary between these values: &apos;QUEUED&apos;,&apos;IN_PROGRESS&apos;,&apos;PROCESSED&apos;&quot;</summary>
+        /// <summary>A string that shows the status of the current Bulk Hosting request, it can vary between these values: &apos;QUEUED&apos;,&apos;IN_PROGRESS&apos;,&apos;PROCESSED&apos;</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.BulkHostedNumberOrderEnumRequestStatus? RequestStatus { get; set; }
         /// <summary>Contains a list of all the individual hosting orders and their information, for this Bulk request. Each result object is grouped by its order status. To see a complete list of order status, please check &apos;https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/hosted-number-order-resource#status-values&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

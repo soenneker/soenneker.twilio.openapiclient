@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The HTTP method used to call `status_callback`. Can be: `POST` or `GET`, defaults to `POST`.&quot;</summary>
+    /// <summary>The HTTP method used to call `status_callback`. Can be: `POST` or `GET`, defaults to `POST`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum VideoV1CompositionStatusCallbackMethod
     {

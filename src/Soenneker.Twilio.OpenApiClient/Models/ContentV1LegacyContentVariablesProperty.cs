@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Defines the default placeholder values for variables included in the Content resource. e.g. {\&quot;1\&quot;: \&quot;Customer_Name\&quot;}.&quot;
+    /// Defines the default placeholder values for variables included in the Content resource. e.g. {&quot;1&quot;: &quot;Customer_Name&quot;}.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ContentV1LegacyContentVariablesProperty : IAdditionalDataHolder, IParsable

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The Credential type. Can be: `gcm`, `fcm`, or `apn`.&quot;</summary>
+    /// <summary>The Credential type. Can be: `gcm`, `fcm`, or `apn`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TwilioNotifyV1CredentialEnumPushService
     {

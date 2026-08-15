@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The time of participant connected to the room in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#UTC) format.</summary>
         public DateTimeOffset? StartTime { get; set; }
-        /// <summary>&quot;The status of the Participant. Can be: `connected` or `disconnected`.&quot;</summary>
+        /// <summary>The status of the Participant. Can be: `connected` or `disconnected`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RoomParticipantAnonymizeEnumStatus? Status { get; set; }
         /// <summary>The absolute URL of the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

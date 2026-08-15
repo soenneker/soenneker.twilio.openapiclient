@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SmdpPlusAddress { get; set; }
 #endif
-        /// <summary>&quot;The status of the eSIM Profile. Can be: `new`, `reserving`, `available`, `downloaded`, `installed` or `failed`. See the [eSIM Profile Status Values](https://www.twilio.com/docs/iot/supersim/api/esimprofile-resource#status-values) for a description of each.&quot;</summary>
+        /// <summary>The status of the eSIM Profile. Can be: `new`, `reserving`, `available`, `downloaded`, `installed` or `failed`. See the [eSIM Profile Status Values](https://www.twilio.com/docs/iot/supersim/api/esimprofile-resource#status-values) for a description of each.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.EsimProfileEnumStatus? Status { get; set; }
         /// <summary>The absolute URL of the eSIM Profile resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

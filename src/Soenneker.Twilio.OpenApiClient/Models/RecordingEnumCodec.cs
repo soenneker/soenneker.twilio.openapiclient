@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The codec used to encode the track. Can be: `VP8`, `H264`, `OPUS`, and `PCMU`.&quot;</summary>
+    /// <summary>The codec used to encode the track. Can be: `VP8`, `H264`, `OPUS`, and `PCMU`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RecordingEnumCodec
     {

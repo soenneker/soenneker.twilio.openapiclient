@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The HTTP method we use to call `commands_callback_url`.  Can be: `POST` or `GET`. Default is `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `commands_callback_url`.  Can be: `POST` or `GET`. Default is `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimCommandsCallbackMethod? CommandsCallbackMethod { get; set; }
         /// <summary>The URL we call using the `commands_callback_method` when the SIM originates a machine-to-machine [Command](https://www.twilio.com/docs/iot/wireless/api/command-resource). Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,7 +84,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string RatePlanSid { get; set; }
 #endif
-        /// <summary>&quot;The connectivity reset status of the SIM. Can be: null or `resetting`. When a connectivity reset is initiated on a SIM, this property is `resetting`. After the reset completes, it is null.&quot;</summary>
+        /// <summary>The connectivity reset status of the SIM. Can be: null or `resetting`. When a connectivity reset is initiated on a SIM, this property is `resetting`. After the reset completes, it is null.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.SimEnumResetStatus? ResetStatus { get; set; }
         /// <summary>The unique string that we created to identify the Sim resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,7 +114,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SmsUrl { get; set; }
 #endif
-        /// <summary>&quot;The status of the Sim resource. Can be: `new`, `ready`, `active`, `deactivated`, `canceled`, `deleted`, `scheduled`, or `updating`. See [Status Values](https://www.twilio.com/docs/iot/wireless/api/sim-resource#status-values) for the description of each status.&quot;</summary>
+        /// <summary>The status of the Sim resource. Can be: `new`, `ready`, `active`, `deactivated`, `canceled`, `deleted`, `scheduled`, or `updating`. See [Status Values](https://www.twilio.com/docs/iot/wireless/api/sim-resource#status-values) for the description of each status.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1SimEnumStatus? Status { get; set; }
         /// <summary>An application-defined string that uniquely identifies the resource. It can be used in place of the resource&apos;s `sid` in the URL to address the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -132,7 +132,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
-        /// <summary>&quot;Deprecated. The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`. Default is `POST`.&quot;</summary>
+        /// <summary>Deprecated. The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`. Default is `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>Deprecated. The URL we call using the `voice_fallback_method` when an error occurs while retrieving or executing the TwiML requested from `voice_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -142,7 +142,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string VoiceFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;Deprecated. The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`. Default is `POST`.&quot;</summary>
+        /// <summary>Deprecated. The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`. Default is `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimVoiceMethod? VoiceMethod { get; set; }
         /// <summary>Deprecated. The URL we call using the `voice_method` when the SIM-connected device makes a voice call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     public partial class AppleTypingIndicatorRequest : IParsable
     {
         /// <summary>The messaging channel. Must be &quot;APPLE&quot;.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestChannel? Channel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AppleChannel? Channel { get; set; }
         /// <summary>The type of typing event. &quot;START&quot; indicates the agent began typing, &quot;END&quot; indicates the agent stopped typing. Defaults to &quot;START&quot;.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestEvent? Event { get; set; }
         /// <summary>The Apple Messages for Business identifier of the sender (business).</summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestChannel>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleChannel>(); } },
                 { "event", n => { Event = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestEvent>(); } },
                 { "from", n => { From = n.GetStringValue(); } },
                 { "to", n => { To = n.GetStringValue(); } },
@@ -64,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestChannel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleChannel>("channel", Channel);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestEvent>("event", Event);
             writer.WriteStringValue("from", From);
             writer.WriteStringValue("to", To);

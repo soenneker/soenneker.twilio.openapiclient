@@ -38,7 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string DefaultTemplateSid { get; set; }
 #endif
-        /// <summary>&quot;Whether to add a security warning at the end of an SMS verification body. Disabled by default and applies only to SMS. Example SMS body: `Your AppName verification code is: 1234. Don’t share this code with anyone; our employees will never ask for the code`&quot;</summary>
+        /// <summary>Whether to add a security warning at the end of an SMS verification body. Disabled by default and applies only to SMS. Example SMS body: `Your AppName verification code is: 1234. Don’t share this code with anyone; our employees will never ask for the code`</summary>
         public bool? DoNotShareWarningEnabled { get; set; }
         /// <summary>Whether to ask the user to press a number before delivering the verify code in a phone call.</summary>
         public bool? DtmfInputRequired { get; set; }

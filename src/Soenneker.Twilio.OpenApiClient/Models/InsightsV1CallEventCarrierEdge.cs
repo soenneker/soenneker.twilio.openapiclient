@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;`object` Represents the connection between Twilio and our immediate carrier partners. The events here describe the call lifecycle as reported by Twilio&apos;s carrier media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;
+    /// `object` Represents the connection between Twilio and our immediate carrier partners. The events here describe the call lifecycle as reported by Twilio&apos;s carrier media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InsightsV1CallEventCarrierEdge : IAdditionalDataHolder, IParsable

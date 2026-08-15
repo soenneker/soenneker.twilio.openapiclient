@@ -16,7 +16,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to enable [Area Code Geomatch](https://www.twilio.com/docs/messaging/services#area-code-geomatch) on the Service Instance.</summary>
         public bool? AreaCodeGeomatch { get; set; }
-        /// <summary>&quot;The HTTP method we should use to call `fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequestFallbackMethod? FallbackMethod { get; set; }
         /// <summary>[OBSOLETE] Former feature used to fallback to long code sender after certain short code message failures.</summary>
         public bool? FallbackToLongCode { get; set; }

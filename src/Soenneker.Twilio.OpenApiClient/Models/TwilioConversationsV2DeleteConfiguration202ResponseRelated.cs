@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Named resource identifiers associated with this operation. Keys depend on the operation type:- config-create, config-update, config-delete: configurationId- conversation-delete: conversationId&quot;
+    /// Named resource identifiers associated with this operation. Keys depend on the operation type:- config-create, config-update, config-delete: configurationId- conversation-delete: conversationId
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TwilioConversationsV2DeleteConfiguration202ResponseRelated : IAdditionalDataHolder, IParsable

@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;A JSON string that includes the message body of message interactions (e.g. `{\&quot;body\&quot;: \&quot;hello\&quot;}`) or the call duration (when available) of a call (e.g. `{\&quot;duration\&quot;: \&quot;5\&quot;}`).&quot;</summary>
+        /// <summary>A JSON string that includes the message body of message interactions (e.g. `{&quot;body&quot;: &quot;hello&quot;}`) or the call duration (when available) of a call (e.g. `{&quot;duration&quot;: &quot;5&quot;}`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Data { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The inbound resource status of the Interaction. Will always be `delivered` for messages and `in-progress` for calls.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.InteractionEnumResourceStatus? OutboundResourceStatus { get; set; }
-        /// <summary>&quot;The outbound resource type. Can be: [Call](https://www.twilio.com/docs/voice/api/call-resource) or [Message](https://www.twilio.com/docs/sms/api/message-resource).&quot;</summary>
+        /// <summary>The outbound resource type. Can be: [Call](https://www.twilio.com/docs/voice/api/call-resource) or [Message](https://www.twilio.com/docs/sms/api/message-resource).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OutboundResourceType { get; set; }
@@ -126,7 +126,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The Type of the Interaction. Can be: `message`, `voice` or `unknown`.&quot;</summary>
+        /// <summary>The Type of the Interaction. Can be: `message`, `voice` or `unknown`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.InteractionEnumType? Type { get; set; }
         /// <summary>The absolute URL of the Interaction resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

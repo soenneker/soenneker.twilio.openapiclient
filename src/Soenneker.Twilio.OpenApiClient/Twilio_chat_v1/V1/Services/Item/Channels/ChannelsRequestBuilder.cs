@@ -139,7 +139,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channel
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;The visibility of the Channels to read. Can be: `public` or `private` and defaults to `public`.&quot;</summary>
+            /// <summary>The visibility of the Channels to read. Can be: `public` or `private` and defaults to `public`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public global::Soenneker.Twilio.OpenApiClient.Models.ChannelEnumChannelType[]? Type { get; set; }

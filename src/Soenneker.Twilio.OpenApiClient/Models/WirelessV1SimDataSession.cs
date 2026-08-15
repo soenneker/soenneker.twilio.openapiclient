@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The date that the record ended, given as GMT in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.</summary>
         public DateTimeOffset? End { get; set; }
-        /// <summary>&quot;The &apos;international mobile equipment identity&apos; is the unique ID of the device using the SIM to connect. An IMEI is a 15-digit string: 14 digits for the device identifier plus a check digit calculated using the Luhn formula.&quot;</summary>
+        /// <summary>The &apos;international mobile equipment identity&apos; is the unique ID of the device using the SIM to connect. An IMEI is a 15-digit string: 14 digits for the device identifier plus a check digit calculated using the Luhn formula.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Imei { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string OperatorCountry { get; set; }
 #endif
-        /// <summary>&quot;The &apos;mobile country code&apos; is the unique ID of the home country where the Data Session took place. See: [MCC/MNC lookup](http://mcc-mnc.com/).&quot;</summary>
+        /// <summary>The &apos;mobile country code&apos; is the unique ID of the home country where the Data Session took place. See: [MCC/MNC lookup](http://mcc-mnc.com/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperatorMcc { get; set; }

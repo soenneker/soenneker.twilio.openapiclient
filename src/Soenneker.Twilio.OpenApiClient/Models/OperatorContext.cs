@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Optionally specifies which contextual data sources (Memory, Knowledge) the operator can access during execution. Context objects will be passed in by the Intelligence Configuration Rule at runtime.**Note**: this simply gives the LLM access to these context objects – ultimately the LLM will determine whether to actually call for context at runtime.&quot;
+    /// Optionally specifies which contextual data sources (Memory, Knowledge) the operator can access during execution. Context objects will be passed in by the Intelligence Configuration Rule at runtime.**Note**: this simply gives the LLM access to these context objects – ultimately the LLM will determine whether to actually call for context at runtime.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OperatorContext : IAdditionalDataHolder, IParsable

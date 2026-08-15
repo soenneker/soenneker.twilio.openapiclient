@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The current status of the reservation. Can be: `pending`, `accepted`, `rejected`, or `timeout`.&quot;</summary>
+    /// <summary>The current status of the reservation. Can be: `pending`, `accepted`, `rejected`, or `timeout`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TaskReservationEnumStatus
     {

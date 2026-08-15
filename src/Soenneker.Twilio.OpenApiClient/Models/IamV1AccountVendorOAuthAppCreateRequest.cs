@@ -56,8 +56,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateRequestPolicy Policy { get; set; }
 #endif
-        /// <summary>Determines how the client authenticates. Account OAuth apps on v1 only support &apos;client_secret_basic&apos;. For PKCE (none), use the v2 API.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateRequestTokenEndpointAuthMethod? TokenEndpointAuthMethod { get; set; }
+        /// <summary>Determines how the client authenticates. Organization OAuth apps only support &apos;client_secret_basic&apos;.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Models.ClientSecretBasicTokenEndpointAuthMethod? TokenEndpointAuthMethod { get; set; }
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,7 +97,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "owner_sid", n => { OwnerSid = n.GetStringValue(); } },
                 { "policy", n => { Policy = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateRequestPolicy>(global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateRequestPolicy.CreateFromDiscriminatorValue); } },
-                { "token_endpoint_auth_method", n => { TokenEndpointAuthMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateRequestTokenEndpointAuthMethod>(); } },
+                { "token_endpoint_auth_method", n => { TokenEndpointAuthMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ClientSecretBasicTokenEndpointAuthMethod>(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -114,7 +114,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("owner_sid", OwnerSid);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateRequestPolicy>("policy", Policy);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IamV1AccountVendorOAuthAppCreateRequestTokenEndpointAuthMethod>("token_endpoint_auth_method", TokenEndpointAuthMethod);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ClientSecretBasicTokenEndpointAuthMethod>("token_endpoint_auth_method", TokenEndpointAuthMethod);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

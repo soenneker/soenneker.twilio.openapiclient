@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of the Sim resource. Can be: `new`, `ready`, `active`, `deactivated`, `canceled`, `deleted`, `scheduled`, or `updating`. See [Status Values](https://www.twilio.com/docs/iot/wireless/api/sim-resource#status-values) for the description of each status.&quot;</summary>
+    /// <summary>The status of the Sim resource. Can be: `new`, `ready`, `active`, `deactivated`, `canceled`, `deleted`, `scheduled`, or `updating`. See [Status Values](https://www.twilio.com/docs/iot/wireless/api/sim-resource#status-values) for the description of each status.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TwilioWirelessV1SimEnumStatus
     {

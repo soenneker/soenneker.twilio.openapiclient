@@ -72,7 +72,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;How long, in seconds, the notification is valid. Max: 5 minutes&quot;</summary>
+        /// <summary>How long, in seconds, the notification is valid. Max: 5 minutes</summary>
         public int? Ttl { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceEntityChallengeNotification"/> and sets the default values.

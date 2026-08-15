@@ -42,7 +42,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.I
         /// <summary>
         /// Permanently delete knowledge source and all its associated data, including  processed chunks and embeddings. This action cannot be undone. The knowledge  resource will no longer be available for search or retrieval operations.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioError">When receiving a 400 status code</exception>
@@ -54,11 +53,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.I
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -72,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.I
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Fetch detailed information about a specific knowledge source by its ID.  This returns the complete knowledgesource object including  processing status, source details, and configuration information.

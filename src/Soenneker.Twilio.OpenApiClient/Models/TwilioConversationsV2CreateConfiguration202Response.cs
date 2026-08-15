@@ -15,7 +15,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Named resource identifiers associated with this operation. Keys depend on the operation type:- config-create, config-update, config-delete: configurationId- conversation-delete: conversationId&quot;</summary>
+        /// <summary>Named resource identifiers associated with this operation. Keys depend on the operation type:- config-create, config-update, config-delete: configurationId- conversation-delete: conversationId</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConfiguration202ResponseRelated? Related { get; set; }

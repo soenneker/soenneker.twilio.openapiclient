@@ -52,7 +52,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public bool? Secure { get; set; }
         /// <summary>Whether to allow SIP Endpoints to register with the domain to receive calls. Can be `true` or `false`. `true` allows SIP Endpoints to register with the domain to receive calls, `false` does not.</summary>
         public bool? SipRegistration { get; set; }
-        /// <summary>&quot;The HTTP method we should use to call `voice_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `voice_fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateSipDomainXWwwFormUrlencodedRequestVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>The URL that we should call when an error occurs while retrieving or executing the TwiML requested by `voice_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The HTTP method we should use to call `voice_url`</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateSipDomainXWwwFormUrlencodedRequestVoiceMethod? VoiceMethod { get; set; }
-        /// <summary>&quot;The HTTP method we should use to call `voice_status_callback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `voice_status_callback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateSipDomainXWwwFormUrlencodedRequestVoiceStatusCallbackMethod? VoiceStatusCallbackMethod { get; set; }
         /// <summary>The URL that we should call to pass status parameters (such as call ended) to your application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

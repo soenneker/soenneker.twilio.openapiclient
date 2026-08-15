@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;URL encoded JSON array of update objects. example : `[ { \&quot;iso_code\&quot;: \&quot;GB\&quot;, \&quot;low_risk_numbers_enabled\&quot;: \&quot;true\&quot;, \&quot;high_risk_special_numbers_enabled\&quot;:\&quot;true\&quot;, \&quot;high_risk_tollfraud_numbers_enabled\&quot;: \&quot;false\&quot; } ]`&quot;</summary>
+        /// <summary>URL encoded JSON array of update objects. example : `[ { &quot;iso_code&quot;: &quot;GB&quot;, &quot;low_risk_numbers_enabled&quot;: &quot;true&quot;, &quot;high_risk_special_numbers_enabled&quot;:&quot;true&quot;, &quot;high_risk_tollfraud_numbers_enabled&quot;: &quot;false&quot; } ]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UpdateRequest { get; set; }

@@ -86,7 +86,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string CustomerName { get; set; }
 #endif
-        /// <summary>&quot;The type of customer account in the losing carrier. This should either be: &apos;Individual&apos; or &apos;Business&apos;.&quot;</summary>
+        /// <summary>The type of customer account in the losing carrier. This should either be: &apos;Individual&apos; or &apos;Business&apos;.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformationCustomerType? CustomerType { get; set; }
         /// <summary>The katakana_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

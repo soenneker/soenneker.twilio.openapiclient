@@ -91,7 +91,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v2.V2.Services.Item.Binding
         public partial class BindingsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>&quot;The push technology used by the Binding resources to read.  Can be: `apn`, `gcm`, or `fcm`.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.&quot;</summary>
+            /// <summary>The push technology used by the Binding resources to read.  Can be: `apn`, `gcm`, or `fcm`.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public global::Soenneker.Twilio.OpenApiClient.Models.BindingEnumBindingType[]? BindingType { get; set; }

@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Price { get; set; }
 #endif
-        /// <summary>&quot;The currency used in the `price` property. Example: `USD`.&quot;</summary>
+        /// <summary>The currency used in the `price` property. Example: `USD`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PriceUnit { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;How the recording was created. Can be: `DialVerb`, `Conference`, `OutboundAPI`, `Trunking`, `RecordVerb`, `StartCallRecordingAPI`, and `StartConferenceRecordingAPI`.&quot;</summary>
+        /// <summary>How the recording was created. Can be: `DialVerb`, `Conference`, `OutboundAPI`, `Trunking`, `RecordVerb`, `StartCallRecordingAPI`, and `StartConferenceRecordingAPI`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumSource? Source { get; set; }
         /// <summary>The start time of the recording in GMT and in [RFC 2822](https://www.php.net/manual/en/class.datetime.php#datetime.constants.rfc2822) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -124,7 +124,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StartTime { get; set; }
 #endif
-        /// <summary>&quot;The status of the recording. Can be: `processing`, `completed`, `absent` or `deleted`. For information about more detailed statuses on in-progress recordings, check out how to [Update a Recording Resource](https://www.twilio.com/docs/voice/api/recording#update-a-recording-resource).&quot;</summary>
+        /// <summary>The status of the recording. Can be: `processing`, `completed`, `absent` or `deleted`. For information about more detailed statuses on in-progress recordings, check out how to [Update a Recording Resource](https://www.twilio.com/docs/voice/api/recording#update-a-recording-resource).</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumStatus? Status { get; set; }
         /// <summary>A list of related resources identified by their relative URIs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

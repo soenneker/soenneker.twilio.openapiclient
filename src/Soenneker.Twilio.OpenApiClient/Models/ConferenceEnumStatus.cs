@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of this conference. Can be: `init`, `in-progress`, or `completed`.&quot;</summary>
+    /// <summary>The status of this conference. Can be: `init`, `in-progress`, or `completed`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ConferenceEnumStatus
     {

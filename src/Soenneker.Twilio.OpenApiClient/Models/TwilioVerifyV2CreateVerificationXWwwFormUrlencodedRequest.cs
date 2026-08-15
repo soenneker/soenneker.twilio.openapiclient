@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Amount { get; set; }
 #endif
-        /// <summary>&quot;Your [App Hash](https://developers.google.com/identity/sms-retriever/verify#computing_your_apps_hash_string) to be appended at the end of your verification SMS body. Applies only to SMS. Example SMS body: `&lt;#&gt; Your AppName verification code is: 1234 He42w354ol9`.&quot;</summary>
+        /// <summary>Your [App Hash](https://developers.google.com/identity/sms-retriever/verify#computing_your_apps_hash_string) to be appended at the end of your verification SMS body. Applies only to SMS. Example SMS body: `&lt;#&gt; Your AppName verification code is: 1234 He42w354ol9`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AppHash { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string AppHash { get; set; }
 #endif
-        /// <summary>&quot;The verification method to use. One of: [`email`](https://www.twilio.com/docs/verify/email), `sms`, `whatsapp`, `call`, `sna` or `auto`.&quot;</summary>
+        /// <summary>The verification method to use. One of: [`email`](https://www.twilio.com/docs/verify/email), `sms`, `whatsapp`, `call`, `sna` or `auto`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Channel { get; set; }
@@ -105,7 +105,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateVerificationXWwwFormUrlencodedRequestRateLimits RateLimits { get; set; }
 #endif
-        /// <summary>&quot;Risk_check overrides Fraud Prevention measures like Fraud Guard, Geo Permissions etc per verification attempt basis, allowing Verify to block traffic considered fraudulent if enabled or bypass active protections if disabled. Can be: `enable`(default) or `disable`. For SMS channel only.&quot;</summary>
+        /// <summary>Risk_check overrides Fraud Prevention measures like Fraud Guard, Geo Permissions etc per verification attempt basis, allowing Verify to block traffic considered fraudulent if enabled or bypass active protections if disabled. Can be: `enable`(default) or `disable`. For SMS channel only.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.VerificationEnumRiskCheck? RiskCheck { get; set; }
         /// <summary>The digits to send after a phone call is answered, for example, to dial an extension. For more information, see the Programmable Voice documentation of [sendDigits](https://www.twilio.com/docs/voice/twiml/number#attributes-sendDigits).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

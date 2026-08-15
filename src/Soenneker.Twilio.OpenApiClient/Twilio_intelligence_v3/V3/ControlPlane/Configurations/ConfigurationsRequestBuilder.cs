@@ -72,7 +72,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3ListConfigurations200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Create an Intelligence Configuration to control how and when language operators analyze conversations.You must include the `rules` field in the request. You can pass an empty array (`\&quot;rules\&quot;: []`), but an Intelligence Configuration with an empty `rules` array doesn&apos;t execute any language operators. To add rules later, make a `PUT /v3/ControlPlane/Configurations/{id}` request.After creating an Intelligence Configuration, you must attach it to a Conversations Configuration by using the Conversations API.&quot;
+        /// Create an Intelligence Configuration to control how and when language operators analyze conversations.You must include the `rules` field in the request. You can pass an empty array (`&quot;rules&quot;: []`), but an Intelligence Configuration with an empty `rules` array doesn&apos;t execute any language operators. To add rules later, make a `PUT /v3/ControlPlane/Configurations/{id}` request.After creating an Intelligence Configuration, you must attach it to a Conversations Configuration by using the Conversations API.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateConfiguration201Response"/></returns>
         /// <param name="body">Request body for creating a new Intelligence Configuration.</param>
@@ -120,7 +120,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.ControlPlane.
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Create an Intelligence Configuration to control how and when language operators analyze conversations.You must include the `rules` field in the request. You can pass an empty array (`\&quot;rules\&quot;: []`), but an Intelligence Configuration with an empty `rules` array doesn&apos;t execute any language operators. To add rules later, make a `PUT /v3/ControlPlane/Configurations/{id}` request.After creating an Intelligence Configuration, you must attach it to a Conversations Configuration by using the Conversations API.&quot;
+        /// Create an Intelligence Configuration to control how and when language operators analyze conversations.You must include the `rules` field in the request. You can pass an empty array (`&quot;rules&quot;: []`), but an Intelligence Configuration with an empty `rules` array doesn&apos;t execute any language operators. To add rules later, make a `PUT /v3/ControlPlane/Configurations/{id}` request.After creating an Intelligence Configuration, you must attach it to a Conversations Configuration by using the Conversations API.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request body for creating a new Intelligence Configuration.</param>

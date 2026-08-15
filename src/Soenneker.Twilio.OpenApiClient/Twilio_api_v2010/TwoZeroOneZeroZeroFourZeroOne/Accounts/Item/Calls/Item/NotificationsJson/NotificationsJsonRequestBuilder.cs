@@ -78,7 +78,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         public partial class NotificationsJsonRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>&quot;Only read notifications of the specified log level. Can be:  `0` to read only ERROR notifications or `1` to read only WARNING notifications. By default, all notifications are read.&quot;</summary>
+            /// <summary>Only read notifications of the specified log level. Can be:  `0` to read only ERROR notifications or `1` to read only WARNING notifications. By default, all notifications are read.</summary>
             public int? Log { get; set; }
             /// <summary>Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `&lt;=YYYY-MM-DD` for messages logged at or before midnight on a date, or `&gt;=YYYY-MM-DD` for messages logged at or after midnight on a date.</summary>
             public Date? MessageDate { get; set; }

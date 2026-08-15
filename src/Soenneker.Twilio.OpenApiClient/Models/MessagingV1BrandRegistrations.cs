@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The secondary vetting score if it was done. Otherwise, it will be the brand score if it&apos;s returned from TCR. It may be null if no score is available.</summary>
         public int? BrandScore { get; set; }
-        /// <summary>&quot;Type of brand. One of: \&quot;STANDARD\&quot;, \&quot;SOLE_PROPRIETOR\&quot;. SOLE_PROPRIETOR is for the low volume, SOLE_PROPRIETOR campaign use case. There can only be one SOLE_PROPRIETOR campaign created per SOLE_PROPRIETOR brand. STANDARD is for all other campaign use cases. Multiple campaign use cases can be created per STANDARD brand.&quot;</summary>
+        /// <summary>Type of brand. One of: &quot;STANDARD&quot;, &quot;SOLE_PROPRIETOR&quot;. SOLE_PROPRIETOR is for the low volume, SOLE_PROPRIETOR campaign use case. There can only be one SOLE_PROPRIETOR campaign created per SOLE_PROPRIETOR brand. STANDARD is for all other campaign use cases. Multiple campaign use cases can be created per STANDARD brand.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BrandType { get; set; }

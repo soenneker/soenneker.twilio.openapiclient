@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Total number of attempts made (including this request) to send the message regardless of the provider used</summary>
         public int? Attempt { get; set; }
-        /// <summary>&quot;The text content of the outgoing message. Can be up to 1,600 characters in length. SMS only: If the `body` contains more than 160 [GSM-7](https://www.twilio.com/docs/glossary/what-is-gsm-7-character-encoding) characters (or 70 [UCS-2](https://www.twilio.com/docs/glossary/what-is-ucs-2-character-encoding) characters), the message is segmented and charged accordingly. For long `body` text, consider using the [send_as_mms parameter](https://www.twilio.com/blog/mms-for-long-text-messages).&quot;</summary>
+        /// <summary>The text content of the outgoing message. Can be up to 1,600 characters in length. SMS only: If the `body` contains more than 160 [GSM-7](https://www.twilio.com/docs/glossary/what-is-gsm-7-character-encoding) characters (or 70 [UCS-2](https://www.twilio.com/docs/glossary/what-is-ucs-2-character-encoding) characters), the message is segmented and charged accordingly. For long `body` text, consider using the [send_as_mms parameter](https://www.twilio.com/blog/mms-for-long-text-messages).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Body { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Determines if the message content can be stored or redacted based on privacy settings</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumContentRetention? ContentRetention { get; set; }
-        /// <summary>&quot;For [Content Editor/API](https://www.twilio.com/docs/content) only: The SID of the Content Template to be used with the Message, e.g., `HXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`. If this parameter is not provided, a Content Template is not used. Find the SID in the Console on the Content Editor page. For Content API users, the SID is found in Twilio&apos;s response when [creating the Template](https://www.twilio.com/docs/content/content-api-resources#create-templates) or by [fetching your Templates](https://www.twilio.com/docs/content/content-api-resources#fetch-all-content-resources).&quot;</summary>
+        /// <summary>For [Content Editor/API](https://www.twilio.com/docs/content) only: The SID of the Content Template to be used with the Message, e.g., `HXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`. If this parameter is not provided, a Content Template is not used. Find the SID in the Console on the Content Editor page. For Content API users, the SID is found in Twilio&apos;s response when [creating the Template](https://www.twilio.com/docs/content/content-api-resources#create-templates) or by [fetching your Templates](https://www.twilio.com/docs/content/content-api-resources#fetch-all-content-resources).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContentSid { get; set; }
@@ -44,7 +44,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ContentSid { get; set; }
 #endif
-        /// <summary>&quot;For [Content Editor/API](https://www.twilio.com/docs/content) only: Key-value pairs of [Template variables](https://www.twilio.com/docs/content/using-variables-with-content-api) and their substitution values. `content_sid` parameter must also be provided. If values are not defined in the `content_variables` parameter, the [Template&apos;s default placeholder values](https://www.twilio.com/docs/content/content-api-resources#create-templates) are used.&quot;</summary>
+        /// <summary>For [Content Editor/API](https://www.twilio.com/docs/content) only: Key-value pairs of [Template variables](https://www.twilio.com/docs/content/using-variables-with-content-api) and their substitution values. `content_sid` parameter must also be provided. If values are not defined in the `content_variables` parameter, the [Template&apos;s default placeholder values](https://www.twilio.com/docs/content/content-api-resources#create-templates) are used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContentVariables { get; set; }
@@ -100,15 +100,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public bool? ProvideFeedback { get; set; }
         /// <summary>Include this parameter with a value of `disable` to skip any kind of risk check on the respective message request.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumRiskCheck? RiskCheck { get; set; }
-        /// <summary>&quot;For Messaging Services only: Include this parameter with a value of `fixed` in conjuction with the `send_time` parameter in order to [schedule a Message](https://www.twilio.com/docs/messaging/features/message-scheduling).&quot;</summary>
+        /// <summary>For Messaging Services only: Include this parameter with a value of `fixed` in conjuction with the `send_time` parameter in order to [schedule a Message](https://www.twilio.com/docs/messaging/features/message-scheduling).</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumScheduleType? ScheduleType { get; set; }
         /// <summary>If set to `true`, Twilio delivers the message as a single MMS message, regardless of the presence of media.</summary>
         public bool? SendAsMms { get; set; }
         /// <summary>The time that Twilio will send the message. Must be in ISO 8601 format.</summary>
         public DateTimeOffset? SendAt { get; set; }
-        /// <summary>&quot;For Messaging Services with [Link Shortening configured](https://www.twilio.com/docs/messaging/features/link-shortening) only: A Boolean indicating whether or not Twilio should shorten links in the `body` of the Message. Default value is `false`. If `true`, the `messaging_service_sid` parameter must also be provided.&quot;</summary>
+        /// <summary>For Messaging Services with [Link Shortening configured](https://www.twilio.com/docs/messaging/features/link-shortening) only: A Boolean indicating whether or not Twilio should shorten links in the `body` of the Message. Default value is `false`. If `true`, the `messaging_service_sid` parameter must also be provided.</summary>
         public bool? ShortenUrls { get; set; }
-        /// <summary>&quot;Whether to detect Unicode characters that have a similar GSM-7 character and replace them. Can be: `true` or `false`.&quot;</summary>
+        /// <summary>Whether to detect Unicode characters that have a similar GSM-7 character and replace them. Can be: `true` or `false`.</summary>
         public bool? SmartEncoded { get; set; }
         /// <summary>The URL of the endpoint to which Twilio sends [Message status callback requests](https://www.twilio.com/docs/sms/api/message-resource#twilios-request-to-the-statuscallback-url). URL must contain a valid hostname and underscores are not allowed. If you include this parameter with the `messaging_service_sid`, Twilio uses this URL instead of the Status Callback URL of the [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource). </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -162,9 +162,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.V1.Commands
 #else
             public string Sim { get; set; }
 #endif
-            /// <summary>&quot;The status of the resources to read. Can be: `queued`, `sent`, `delivered`, `received`, or `failed`.&quot;</summary>
+            /// <summary>The status of the resources to read. Can be: `queued`, `sent`, `delivered`, `received`, or `failed`.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.CommandEnumStatus? Status { get; set; }
-            /// <summary>&quot;Only return Commands with this transport value. Can be: `sms` or `ip`.&quot;</summary>
+            /// <summary>Only return Commands with this transport value. Can be: `sms` or `ip`.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.CommandEnumTransport? Transport { get; set; }
         }
     }

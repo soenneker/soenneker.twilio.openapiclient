@@ -46,7 +46,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string MessageSid { get; set; }
 #endif
-        /// <summary>&quot;Reported outcome indicating whether there is confirmation that the Message recipient performed a tracked user action. Can be: `unconfirmed` or `confirmed`. For more details see [How to Optimize Message Deliverability with Message Feedback](https://www.twilio.com/docs/messaging/guides/send-message-feedback-to-twilio).&quot;</summary>
+        /// <summary>Reported outcome indicating whether there is confirmation that the Message recipient performed a tracked user action. Can be: `unconfirmed` or `confirmed`. For more details see [How to Optimize Message Deliverability with Message Feedback](https://www.twilio.com/docs/messaging/guides/send-message-feedback-to-twilio).</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.MessageFeedbackEnumOutcome? Outcome { get; set; }
         /// <summary>The URI of the resource, relative to `https://api.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

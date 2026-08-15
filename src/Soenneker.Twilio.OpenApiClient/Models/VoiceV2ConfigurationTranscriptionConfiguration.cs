@@ -16,7 +16,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The configuration type discriminator. Always &quot;Transcription&quot; for this resource.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionConfigurationConfigurationType? ConfigurationType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TranscriptionConfigurationType? ConfigurationType { get; set; }
         /// <summary>The ID of the Maestro Conversations Configuration for transcription storage and optional add-ons.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -25,7 +25,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ConversationConfigurationId { get; set; }
 #endif
-        /// <summary>&quot;Controls how the ASR handles language. Can be a supported BCP-47 language code, or &apos;multi&apos; for multilingual code switching (Deepgram engine only). Supported language codes: en-US, en-GB, en-AU, de-DE, fr-FR, it-IT, es-MX, es-ES, es-US, pt-BR, pt-PT, nl-NL, no-NO, pl-PL, sv-SE, da-DK.&quot;</summary>
+        /// <summary>Controls how the ASR handles language. Can be a supported BCP-47 language code, or &apos;multi&apos; for multilingual code switching (Deepgram engine only). Supported language codes: en-US, en-GB, en-AU, de-DE, fr-FR, it-IT, es-MX, es-ES, es-US, pt-BR, pt-PT, nl-NL, no-NO, pl-PL, sv-SE, da-DK.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Language { get; set; }
@@ -41,7 +41,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionParticipantDefault> ParticipantDefaults { get; set; }
 #endif
-        /// <summary>&quot;The specific speech model to use for transcription. Valid models depend on transcriptionEngine: For &apos;google&apos;: chirp_2. For &apos;deepgram&apos;: nova-3, nova-2. For &apos;twilio_managed&apos;: twilio_managed.&quot;</summary>
+        /// <summary>The specific speech model to use for transcription. Valid models depend on transcriptionEngine: For &apos;google&apos;: chirp_2. For &apos;deepgram&apos;: nova-3, nova-2. For &apos;twilio_managed&apos;: twilio_managed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SpeechModel { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SpeechModel { get; set; }
 #endif
-        /// <summary>&quot;The transcription engine provider. Supported values: &apos;google&apos;, &apos;deepgram&apos;, &apos;twilio_managed&apos;. When using &apos;twilio_managed&apos;, do not specify a speechModel.&quot;</summary>
+        /// <summary>The transcription engine provider. Supported values: &apos;google&apos;, &apos;deepgram&apos;, &apos;twilio_managed&apos;. When using &apos;twilio_managed&apos;, do not specify a speechModel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TranscriptionEngine { get; set; }
@@ -90,7 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "configurationType", n => { ConfigurationType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionConfigurationConfigurationType>(); } },
+                { "configurationType", n => { ConfigurationType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TranscriptionConfigurationType>(); } },
                 { "conversationConfigurationId", n => { ConversationConfigurationId = n.GetStringValue(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
                 { "participantDefaults", n => { ParticipantDefaults = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionParticipantDefault>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionParticipantDefault.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionConfigurationConfigurationType>("configurationType", ConfigurationType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TranscriptionConfigurationType>("configurationType", ConfigurationType);
             writer.WriteStringValue("conversationConfigurationId", ConversationConfigurationId);
             writer.WriteStringValue("language", Language);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionParticipantDefault>("participantDefaults", ParticipantDefaults);

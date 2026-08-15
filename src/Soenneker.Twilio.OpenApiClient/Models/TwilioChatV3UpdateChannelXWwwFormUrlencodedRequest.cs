@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string MessagingServiceSid { get; set; }
 #endif
-        /// <summary>&quot;The visibility of the channel. Can be: `public` or `private`.&quot;</summary>
+        /// <summary>The visibility of the channel. Can be: `public` or `private`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV3ChannelEnumChannelType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV3UpdateChannelXWwwFormUrlencodedRequest"/> and sets the default values.

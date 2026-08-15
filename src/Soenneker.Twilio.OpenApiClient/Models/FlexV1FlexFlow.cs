@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1FlexFlowIntegration Integration { get; set; }
 #endif
-        /// <summary>&quot;The software that will handle inbound messages. [Integration Type](https://www.twilio.com/docs/flex/developer/messaging/manage-flows#integration-types) can be: `studio`, `external`,  or `task`.&quot;</summary>
+        /// <summary>The software that will handle inbound messages. [Integration Type](https://www.twilio.com/docs/flex/developer/messaging/manage-flows#integration-types) can be: `studio`, `external`,  or `task`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.FlexFlowEnumIntegrationType? IntegrationType { get; set; }
         /// <summary>When enabled, the Messaging Channel Janitor will remove active Proxy sessions if the associated Task is deleted outside of the Flex UI. Defaults to `false`.</summary>
         public bool? JanitorEnabled { get; set; }

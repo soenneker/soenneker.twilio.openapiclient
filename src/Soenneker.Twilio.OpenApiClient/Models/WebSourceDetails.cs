@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public List<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup> Errors { get; set; }
 #endif
         /// <summary>Web based knowledge sources</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsType? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WebType? Type { get; set; }
         /// <summary>The URL to crawl for web content</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,7 +63,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "crawlDepth", n => { CrawlDepth = n.GetIntValue(); } },
                 { "crawlPeriod", n => { CrawlPeriod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod>(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup>(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -77,7 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("crawlDepth", CrawlDepth);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod>("crawlPeriod", CrawlPeriod);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup>("errors", Errors);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebType>("type", Type);
             writer.WriteStringValue("url", Url);
         }
     }

@@ -76,7 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Configures how long (in minutes) a room will remain active if no one joins. Valid values range from 1 to 60 minutes (no fractions).</summary>
         public int? UnusedRoomTimeout { get; set; }
-        /// <summary>&quot;An array of the video codecs that are supported when publishing a track in the room.  Can be: `VP8` and `H264`.&quot;</summary>
+        /// <summary>An array of the video codecs that are supported when publishing a track in the room.  Can be: `VP8` and `H264`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumVideoCodec?>? VideoCodecs { get; set; }

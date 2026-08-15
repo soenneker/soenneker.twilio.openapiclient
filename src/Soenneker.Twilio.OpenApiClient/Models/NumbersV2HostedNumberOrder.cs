@@ -138,7 +138,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SigningDocumentSid { get; set; }
 #endif
-        /// <summary>&quot;Status of this resource. It can hold one of the values: 1. Twilio Processing 2. Received, 3. Pending LOA, 4. Carrier Processing, 5. Completed, 6. Action Required, 7. Failed. See the [HostedNumberOrders Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/hosted-number-order-resource#status-values) section for more information on each of these statuses.&quot;</summary>
+        /// <summary>Status of this resource. It can hold one of the values: 1. Twilio Processing 2. Received, 3. Pending LOA, 4. Carrier Processing, 5. Completed, 6. Action Required, 7. Failed. See the [HostedNumberOrders Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/hosted-number-order-resource#status-values) section for more information on each of these statuses.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumStatus? Status { get; set; }
         /// <summary>The URL of this HostedNumberOrder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -176,7 +176,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string VerificationCode { get; set; }
 #endif
-        /// <summary>&quot;The method used to verify ownership of the number to be hosted. Can be: `phone-call` or `phone-bill` and the default is `phone-call`.&quot;</summary>
+        /// <summary>The method used to verify ownership of the number to be hosted. Can be: `phone-call` or `phone-bill` and the default is `phone-call`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumVerificationType? VerificationType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2HostedNumberOrder"/> and sets the default values.

@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public List<string> Columns { get; set; }
 #endif
         /// <summary>The source data type, which determines the source of the data and the required configuration parameters.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngressType? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IngressType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "columns", n => { Columns = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngressType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IngressType>(); } },
             };
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("columns", Columns);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngressType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IngressType>("type", Type);
         }
     }
 }

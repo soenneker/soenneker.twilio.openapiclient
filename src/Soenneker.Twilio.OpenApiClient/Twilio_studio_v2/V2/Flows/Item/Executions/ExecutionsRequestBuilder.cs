@@ -156,7 +156,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executio
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;Only show Execution resources with the given status. Can be: `active` or `ended`.&quot;</summary>
+            /// <summary>Only show Execution resources with the given status. Can be: `active` or `ended`.</summary>
             [QueryParameter("status")]
             public global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2ExecutionEnumStatus? Status { get; set; }
         }

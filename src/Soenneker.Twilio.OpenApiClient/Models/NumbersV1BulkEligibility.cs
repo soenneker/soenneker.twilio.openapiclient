@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string RequestId { get; set; }
 #endif
-        /// <summary>&quot;The result set that contains the eligibility check response for each requested number, each result has at least the following attributes:  phone_number: The requested phone number ,hosting_account_sid: The account sid where the phone number will be hosted, country: Phone number’s country, eligibility_status: Indicates the eligibility status of the PN (Eligible/Ineligible), eligibility_sub_status: Indicates the sub status of the eligibility , ineligibility_reason: Reason for number&apos;s ineligibility (if applicable), next_step: Suggested next step in the hosting process based on the eligibility status.&quot;</summary>
+        /// <summary>The result set that contains the eligibility check response for each requested number, each result has at least the following attributes:  phone_number: The requested phone number ,hosting_account_sid: The account sid where the phone number will be hosted, country: Phone number’s country, eligibility_status: Indicates the eligibility status of the PN (Eligible/Ineligible), eligibility_sub_status: Indicates the sub status of the eligibility , ineligibility_reason: Reason for number&apos;s ineligibility (if applicable), next_step: Suggested next step in the hosting process based on the eligibility status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibilityResultsItem>? Results { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1BulkEligibilityResultsItem> Results { get; set; }
 #endif
-        /// <summary>&quot;This is the status of the bulk eligibility check request. (Example: COMPLETE, IN_PROGRESS)&quot;</summary>
+        /// <summary>This is the status of the bulk eligibility check request. (Example: COMPLETE, IN_PROGRESS)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get; set; }

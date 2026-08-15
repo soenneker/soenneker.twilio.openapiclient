@@ -52,7 +52,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public int? LimitsChannelMembers { get; set; }
         /// <summary>The maximum number of Channels Users can be a Member of within this Service. Can be up to 1,000.</summary>
         public int? LimitsUserChannels { get; set; }
-        /// <summary>&quot;Whether to send a notification when a member is added to a channel. Can be: `true` or `false` and the default is `false`.&quot;</summary>
+        /// <summary>Whether to send a notification when a member is added to a channel. Can be: `true` or `false` and the default is `false`.</summary>
         public bool? NotificationsAddedToChannelEnabled { get; set; }
         /// <summary>The template to use to create the notification text displayed when a member is added to a channel and `notifications.added_to_channel.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string NotificationsAddedToChannelTemplate { get; set; }
 #endif
-        /// <summary>&quot;Whether to send a notification when a user is invited to a channel. Can be: `true` or `false` and the default is `false`.&quot;</summary>
+        /// <summary>Whether to send a notification when a user is invited to a channel. Can be: `true` or `false` and the default is `false`.</summary>
         public bool? NotificationsInvitedToChannelEnabled { get; set; }
         /// <summary>The template to use to create the notification text displayed when a user is invited to a channel and `notifications.invited_to_channel.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string NotificationsInvitedToChannelTemplate { get; set; }
 #endif
-        /// <summary>&quot;Whether to send a notification when a new message is added to a channel. Can be: `true` or `false` and the default is `false`.&quot;</summary>
+        /// <summary>Whether to send a notification when a new message is added to a channel. Can be: `true` or `false` and the default is `false`.</summary>
         public bool? NotificationsNewMessageEnabled { get; set; }
         /// <summary>The template to use to create the notification text displayed when a new message is added to a channel and `notifications.new_message.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string NotificationsNewMessageTemplate { get; set; }
 #endif
-        /// <summary>&quot;Whether to send a notification to a user when they are removed from a channel. Can be: `true` or `false` and the default is `false`.&quot;</summary>
+        /// <summary>Whether to send a notification to a user when they are removed from a channel. Can be: `true` or `false` and the default is `false`.</summary>
         public bool? NotificationsRemovedFromChannelEnabled { get; set; }
         /// <summary>The template to use to create the notification text displayed to a user when they are removed from a channel and `notifications.removed_from_channel.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> WebhookFilters { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method to use for calls to the `pre_webhook_url` and `post_webhook_url` webhooks.  Can be: `POST` or `GET` and the default is `POST`. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.&quot;</summary>
+        /// <summary>The HTTP method to use for calls to the `pre_webhook_url` and `post_webhook_url` webhooks.  Can be: `POST` or `GET` and the default is `POST`. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhookMethod? WebhookMethod { get; set; }
         /// <summary>The URL of the webhook to call in response to the `on_channel_added` event`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelAddedMethod? WebhooksOnChannelAddedMethod { get; set; }

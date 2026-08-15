@@ -258,7 +258,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ServiceVersion { get; set; }
 #endif
-        /// <summary>&quot;The status of the Flex onboarding. Can be: `ok`, `inprogress`,`notstarted`.&quot;</summary>
+        /// <summary>The status of the Flex onboarding. Can be: `ok`, `inprogress`,`notstarted`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationEnumStatus? Status { get; set; }
         /// <summary>The TaskRouter SID of the offline activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

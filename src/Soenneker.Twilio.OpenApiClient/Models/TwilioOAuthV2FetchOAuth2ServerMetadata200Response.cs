@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The code_challenge_methods_supported property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseCodeChallengeMethodsSupportedItem?>? CodeChallengeMethodsSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.S256Item?>? CodeChallengeMethodsSupported { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseCodeChallengeMethodsSupportedItem?> CodeChallengeMethodsSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.S256Item?> CodeChallengeMethodsSupported { get; set; }
 #endif
         /// <summary>The grant_types_supported property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The response_types_supported property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseResponseTypesSupportedItem?>? ResponseTypesSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CodeItem?>? ResponseTypesSupported { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseResponseTypesSupportedItem?> ResponseTypesSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CodeItem?> ResponseTypesSupported { get; set; }
 #endif
         /// <summary>The token_endpoint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -96,10 +96,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "authorization_endpoint", n => { AuthorizationEndpoint = n.GetStringValue(); } },
-                { "code_challenge_methods_supported", n => { CodeChallengeMethodsSupported = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseCodeChallengeMethodsSupportedItem>()?.AsList(); } },
+                { "code_challenge_methods_supported", n => { CodeChallengeMethodsSupported = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.S256Item>()?.AsList(); } },
                 { "grant_types_supported", n => { GrantTypesSupported = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseGrantTypesSupportedItem>()?.AsList(); } },
                 { "issuer", n => { Issuer = n.GetStringValue(); } },
-                { "response_types_supported", n => { ResponseTypesSupported = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseResponseTypesSupportedItem>()?.AsList(); } },
+                { "response_types_supported", n => { ResponseTypesSupported = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.CodeItem>()?.AsList(); } },
                 { "token_endpoint", n => { TokenEndpoint = n.GetStringValue(); } },
                 { "token_endpoint_auth_methods_supported", n => { TokenEndpointAuthMethodsSupported = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem>()?.AsList(); } },
             };
@@ -112,10 +112,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("authorization_endpoint", AuthorizationEndpoint);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseCodeChallengeMethodsSupportedItem>("code_challenge_methods_supported", CodeChallengeMethodsSupported);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.S256Item>("code_challenge_methods_supported", CodeChallengeMethodsSupported);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseGrantTypesSupportedItem>("grant_types_supported", GrantTypesSupported);
             writer.WriteStringValue("issuer", Issuer);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseResponseTypesSupportedItem>("response_types_supported", ResponseTypesSupported);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.CodeItem>("response_types_supported", ResponseTypesSupported);
             writer.WriteStringValue("token_endpoint", TokenEndpoint);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem>("token_endpoint_auth_methods_supported", TokenEndpointAuthMethodsSupported);
             writer.WriteAdditionalData(AdditionalData);

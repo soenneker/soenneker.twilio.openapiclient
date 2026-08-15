@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayload Payload { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>Action type discriminator. Accepted values: SEND_MESSAGE.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

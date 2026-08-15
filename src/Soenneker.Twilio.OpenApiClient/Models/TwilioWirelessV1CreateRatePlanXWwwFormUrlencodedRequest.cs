@@ -20,7 +20,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public int? DataLimit { get; set; }
         /// <summary>The way the home network (T-Mobile USA) will behave after a SIM&apos;s usage exceeds its `data_limit`. Can be either `block` or `throttle`. Default is `block`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RatePlanEnumDataLimitStrategy? DataLimitStrategy { get; set; }
-        /// <summary>&quot;The model used to meter data usage. Can be: `payg` and `quota-1`, `quota-10`, and `quota-50`. Learn more about the available [data metering models](https://www.twilio.com/docs/iot/wireless/api/rateplan-resource#payg-vs-quota-data-plans).&quot;</summary>
+        /// <summary>The model used to meter data usage. Can be: `payg` and `quota-1`, `quota-10`, and `quota-50`. Learn more about the available [data metering models](https://www.twilio.com/docs/iot/wireless/api/rateplan-resource#payg-vs-quota-data-plans).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DataMetering { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>&quot;The list of services that SIMs capable of using GPRS/3G/4G/LTE data connectivity can use outside of the United States. Can contain: `data` and `messaging`.&quot;</summary>
+        /// <summary>The list of services that SIMs capable of using GPRS/3G/4G/LTE data connectivity can use outside of the United States. Can contain: `data` and `messaging`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? InternationalRoaming { get; set; }

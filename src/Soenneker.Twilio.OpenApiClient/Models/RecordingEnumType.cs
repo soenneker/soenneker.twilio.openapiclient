@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The recording&apos;s media type. Can be: `audio` or `video`.&quot;</summary>
+    /// <summary>The recording&apos;s media type. Can be: `audio` or `video`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RecordingEnumType
     {

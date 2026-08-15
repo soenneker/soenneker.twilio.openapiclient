@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.ControlPlane
         {
         }
         /// <summary>
-        /// &quot;Retrieve the current status of a long-running operation.Operations progress through: PENDING -&gt; RUNNING -&gt; COMPLETED or FAILED.&quot;
+        /// Retrieve the current status of a long-running operation.Operations progress through: PENDING -&gt; RUNNING -&gt; COMPLETED or FAILED.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.ControlPlane
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Retrieve the current status of a long-running operation.Operations progress through: PENDING -&gt; RUNNING -&gt; COMPLETED or FAILED.&quot;
+        /// Retrieve the current status of a long-running operation.Operations progress through: PENDING -&gt; RUNNING -&gt; COMPLETED or FAILED.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

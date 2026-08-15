@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;The number of Tasks by their current status. For example: `{\&quot;pending\&quot;: \&quot;1\&quot;, \&quot;reserved\&quot;: \&quot;3\&quot;, \&quot;assigned\&quot;: \&quot;2\&quot;, \&quot;completed\&quot;: \&quot;5\&quot;}`.&quot;
+    /// The number of Tasks by their current status. For example: `{&quot;pending&quot;: &quot;1&quot;, &quot;reserved&quot;: &quot;3&quot;, &quot;assigned&quot;: &quot;2&quot;, &quot;completed&quot;: &quot;5&quot;}`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaskrouterV1WorkspaceWorkflowWorkflowRealTimeStatisticsTasksByStatus : IAdditionalDataHolder, IParsable

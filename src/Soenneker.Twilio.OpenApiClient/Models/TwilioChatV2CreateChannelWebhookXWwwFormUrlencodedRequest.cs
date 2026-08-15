@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ConfigurationUrl { get; set; }
 #endif
-        /// <summary>&quot;The type of webhook. Can be: `webhook`, `studio`, or `trigger`.&quot;</summary>
+        /// <summary>The type of webhook. Can be: `webhook`, `studio`, or `trigger`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ChannelWebhookEnumType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhookXWwwFormUrlencodedRequest"/> and sets the default values.

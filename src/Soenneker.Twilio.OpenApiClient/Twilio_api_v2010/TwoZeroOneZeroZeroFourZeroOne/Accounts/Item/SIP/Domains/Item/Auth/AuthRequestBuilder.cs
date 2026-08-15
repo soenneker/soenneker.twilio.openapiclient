@@ -3,7 +3,9 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.Calls;
+using Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.CallsJson;
 using Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.Registrations;
+using Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.RegistrationsJson;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -21,10 +23,20 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.Calls.CallsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The CallsJson property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.CallsJson.CallsJsonRequestBuilder CallsJson
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.CallsJson.CallsJsonRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The Registrations property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.Registrations.RegistrationsRequestBuilder Registrations
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.Registrations.RegistrationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The RegistrationsJson property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.RegistrationsJson.RegistrationsJsonRequestBuilder RegistrationsJson
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.RegistrationsJson.RegistrationsJsonRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.AuthRequestBuilder"/> and sets the default values.

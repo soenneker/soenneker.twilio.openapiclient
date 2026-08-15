@@ -16,7 +16,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Shared channel identifier</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2WhatsappTypingIndicatorChannel? Channel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappChannel? Channel { get; set; }
         /// <summary>Message SID that identifies the conversation thread for the typing indicator. Must be a valid Twilio Message SID (SM*) or Media SID (MM*) from an existing WhatsApp conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2WhatsappTypingIndicatorChannel>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WhatsappChannel>(); } },
                 { "messageId", n => { MessageId = n.GetStringValue(); } },
             };
         }
@@ -61,7 +61,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2WhatsappTypingIndicatorChannel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WhatsappChannel>("channel", Channel);
             writer.WriteStringValue("messageId", MessageId);
             writer.WriteAdditionalData(AdditionalData);
         }

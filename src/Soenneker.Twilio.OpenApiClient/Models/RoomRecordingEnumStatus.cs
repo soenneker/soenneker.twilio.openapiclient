@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of the recording. Can be: `processing`, `completed`, or `deleted`. `processing` indicates the Recording is still being captured. `completed` indicates the Recording has been captured and is now available for download. `deleted` means the recording media has been deleted from the system, but its metadata is still available for historical purposes.&quot;</summary>
+    /// <summary>The status of the recording. Can be: `processing`, `completed`, or `deleted`. `processing` indicates the Recording is still being captured. `completed` indicates the Recording has been captured and is now available for download. `deleted` means the recording media has been deleted from the system, but its metadata is still available for historical purposes.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RoomRecordingEnumStatus
     {

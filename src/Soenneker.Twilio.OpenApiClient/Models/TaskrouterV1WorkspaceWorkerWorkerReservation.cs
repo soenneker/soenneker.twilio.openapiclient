@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkerReservationLinksProperty Links { get; set; }
 #endif
-        /// <summary>&quot;The current status of the reservation. Can be: `pending`, `accepted`, `rejected`, `timeout`, `canceled`, or `rescinded`.&quot;</summary>
+        /// <summary>The current status of the reservation. Can be: `pending`, `accepted`, `rejected`, `timeout`, `canceled`, or `rescinded`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WorkerReservationEnumStatus? ReservationStatus { get; set; }
         /// <summary>The unique string that we created to identify the WorkerReservation resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

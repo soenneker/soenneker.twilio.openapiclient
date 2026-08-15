@@ -76,7 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Whether multi-tasking is enabled. The default is `true`, which enables multi-tasking. Multi-tasking allows Workers to handle multiple Tasks simultaneously. When enabled (`true`), each Worker can receive parallel reservations up to the per-channel maximums defined in the Workers section. In single-tasking each Worker would only receive a new reservation when the previous task is completed. Learn more at [Multitasking](https://www.twilio.com/docs/taskrouter/multitasking).</summary>
         public bool? MultiTaskEnabled { get; set; }
-        /// <summary>&quot;The type of TaskQueue to prioritize when Workers are receiving Tasks from both types of TaskQueues. Can be: `LIFO` or `FIFO` and the default is `FIFO`. For more information, see [Queue Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).&quot;</summary>
+        /// <summary>The type of TaskQueue to prioritize when Workers are receiving Tasks from both types of TaskQueues. Can be: `LIFO` or `FIFO` and the default is `FIFO`. For more information, see [Queue Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder? PrioritizeQueueOrder { get; set; }
         /// <summary>The unique string that we created to identify the Workspace resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

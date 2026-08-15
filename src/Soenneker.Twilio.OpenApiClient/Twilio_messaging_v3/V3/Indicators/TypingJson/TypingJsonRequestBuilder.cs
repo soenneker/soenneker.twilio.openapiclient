@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v3.V3.Indicators.Typin
         {
         }
         /// <summary>
-        /// &quot;Send a typing indicator to notify the recipient that you are composing a message. Supported channels: WhatsApp, Apple Messages for Business, RCS. The request body varies by channel — use the `channel` field as the discriminator.&quot;
+        /// Send a typing indicator to notify the recipient that you are composing a message. Supported channels: WhatsApp, Apple Messages for Business, RCS. The request body varies by channel — use the `channel` field as the discriminator.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator200Response"/></returns>
         /// <param name="body">Request body for sending a typing indicator. The schema varies by channel. Use the `channel` field to determine which properties are required.</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v3.V3.Indicators.Typin
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Send a typing indicator to notify the recipient that you are composing a message. Supported channels: WhatsApp, Apple Messages for Business, RCS. The request body varies by channel — use the `channel` field as the discriminator.&quot;
+        /// Send a typing indicator to notify the recipient that you are composing a message. Supported channels: WhatsApp, Apple Messages for Business, RCS. The request body varies by channel — use the `channel` field as the discriminator.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request body for sending a typing indicator. The schema varies by channel. Use the `channel` field to determine which properties are required.</param>

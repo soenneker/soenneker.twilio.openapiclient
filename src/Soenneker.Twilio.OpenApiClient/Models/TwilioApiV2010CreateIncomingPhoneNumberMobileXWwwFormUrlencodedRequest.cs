@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SmsApplicationSid { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method that we should use to call `sms_fallback_url`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method that we should use to call `sms_fallback_url`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateIncomingPhoneNumberMobileXWwwFormUrlencodedRequestSmsFallbackMethod? SmsFallbackMethod { get; set; }
         /// <summary>The URL that we should call when an error occurs while requesting or executing the TwiML defined by `sms_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,7 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SmsFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method that we should use to call `sms_url`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method that we should use to call `sms_url`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateIncomingPhoneNumberMobileXWwwFormUrlencodedRequestSmsMethod? SmsMethod { get; set; }
         /// <summary>The URL we should call when the new phone number receives an incoming SMS message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,7 +108,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `status_callback`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `status_callback`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateIncomingPhoneNumberMobileXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>The SID of the Trunk we should use to handle calls to the new phone number. If a `trunk_sid` is present, we ignore all of the voice urls and voice applications and use only those set on the Trunk. Setting a `trunk_sid` will automatically delete your `voice_application_sid` and vice versa.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,9 +126,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string VoiceApplicationSid { get; set; }
 #endif
-        /// <summary>&quot;Whether to lookup the caller&apos;s name from the CNAM database and post it to your app. Can be: `true` or `false` and defaults to `false`.&quot;</summary>
+        /// <summary>Whether to lookup the caller&apos;s name from the CNAM database and post it to your app. Can be: `true` or `false` and defaults to `false`.</summary>
         public bool? VoiceCallerIdLookup { get; set; }
-        /// <summary>&quot;The HTTP method that we should use to call `voice_fallback_url`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method that we should use to call `voice_fallback_url`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateIncomingPhoneNumberMobileXWwwFormUrlencodedRequestVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>The URL that we should call when an error occurs retrieving or executing the TwiML requested by `url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -138,7 +138,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string VoiceFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method that we should use to call `voice_url`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method that we should use to call `voice_url`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateIncomingPhoneNumberMobileXWwwFormUrlencodedRequestVoiceMethod? VoiceMethod { get; set; }
         /// <summary>The VoiceReceiveMode property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.IncomingPhoneNumberMobileEnumVoiceReceiveMode? VoiceReceiveMode { get; set; }

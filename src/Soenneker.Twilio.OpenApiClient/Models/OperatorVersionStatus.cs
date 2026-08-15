@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The lifecycle status of an Operator version.Available values:- `PREVIEW`: Available but restricted to internal/testing visibility. Normal execution.- `ACTIVE`: Available for normal use.- `DEPRECATED`: Still executes normally, but a Warn event is emitted via the Watch product lifecycle system. Customers should migrate to a newer version.- `RETIRED`: Hard failure on execution. An Error is logged in Watch. Customers must manually update their Intelligence Configuration to a valid version.&quot;</summary>
+    /// <summary>The lifecycle status of an Operator version.Available values:- `PREVIEW`: Available but restricted to internal/testing visibility. Normal execution.- `ACTIVE`: Available for normal use.- `DEPRECATED`: Still executes normally, but a Warn event is emitted via the Watch product lifecycle system. Customers should migrate to a newer version.- `RETIRED`: Hard failure on execution. An Error is logged in Watch. Customers must manually update their Intelligence Configuration to a valid version.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum OperatorVersionStatus
     {

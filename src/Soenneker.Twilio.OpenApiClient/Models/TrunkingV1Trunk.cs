@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The types of authentication mapped to the domain. Can be: `IP_ACL` and `CREDENTIAL_LIST`. If both are mapped, the values are returned in a comma delimited list. If empty, the domain will not receive any traffic.&quot;</summary>
+        /// <summary>The types of authentication mapped to the domain. Can be: `IP_ACL` and `CREDENTIAL_LIST`. If both are mapped, the values are returned in a comma delimited list. If empty, the domain will not receive any traffic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AuthType { get; set; }
@@ -44,7 +44,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public DateTimeOffset? DateCreated { get; set; }
         /// <summary>The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.</summary>
         public DateTimeOffset? DateUpdated { get; set; }
-        /// <summary>&quot;The HTTP method we use to call the `disaster_recovery_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call the `disaster_recovery_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkDisasterRecoveryMethod? DisasterRecoveryMethod { get; set; }
         /// <summary>The URL we call using the `disaster_recovery_method` if an error occurs while sending SIP traffic towards the configured Origination URL. We retrieve TwiML from this URL and execute the instructions like any other normal TwiML call. See [Disaster Recovery](https://www.twilio.com/docs/sip-trunking#disaster-recovery) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -78,7 +78,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkLinksProperty Links { get; set; }
 #endif
-        /// <summary>&quot;The recording settings for the trunk. Can be: `do-not-record`, `record-from-ringing`, `record-from-answer`. If set to `record-from-ringing` or `record-from-answer`, all calls going through the trunk will be recorded. The only way to change recording parameters is on a sub-resource of a Trunk after it has been created. e.g.`/Trunks/[Trunk_SID]/Recording -XPOST -d&apos;Mode=record-from-answer&apos;`. See [Recording](https://www.twilio.com/docs/sip-trunking#recording) for more information.&quot;</summary>
+        /// <summary>The recording settings for the trunk. Can be: `do-not-record`, `record-from-ringing`, `record-from-answer`. If set to `record-from-ringing` or `record-from-answer`, all calls going through the trunk will be recorded. The only way to change recording parameters is on a sub-resource of a Trunk after it has been created. e.g.`/Trunks/[Trunk_SID]/Recording -XPOST -d&apos;Mode=record-from-answer&apos;`. See [Recording](https://www.twilio.com/docs/sip-trunking#recording) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkRecordingProperty? Recording { get; set; }
@@ -98,9 +98,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Whether Symmetric RTP is enabled for the trunk. When Symmetric RTP is disabled, Twilio will send RTP to the destination negotiated in the SDP. Disabling Symmetric RTP is considered to be more secure and therefore recommended. See [Symmetric RTP](https://www.twilio.com/docs/sip-trunking#symmetric-rtp) for more information.</summary>
         public bool? SymmetricRtpEnabled { get; set; }
-        /// <summary>&quot;Caller Id for transfer target. Can be: `from-transferee` (default) or `from-transferor`.&quot;</summary>
+        /// <summary>Caller Id for transfer target. Can be: `from-transferee` (default) or `from-transferor`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferCallerId? TransferCallerId { get; set; }
-        /// <summary>&quot;The call transfer settings for the trunk. Can be: `enable-all`, `sip-only` and `disable-all`. See [Transfer](https://www.twilio.com/docs/sip-trunking/call-transfer) for more information.&quot;</summary>
+        /// <summary>The call transfer settings for the trunk. Can be: `enable-all`, `sip-only` and `disable-all`. See [Transfer](https://www.twilio.com/docs/sip-trunking/call-transfer) for more information.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferSetting? TransferMode { get; set; }
         /// <summary>The absolute URL of the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

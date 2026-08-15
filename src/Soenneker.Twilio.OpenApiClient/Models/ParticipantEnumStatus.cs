@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of the participant&apos;s call in a session. Can be: `queued`, `connecting`, `ringing`, `connected`, `complete`, or `failed`.&quot;</summary>
+    /// <summary>The status of the participant&apos;s call in a session. Can be: `queued`, `connecting`, `ringing`, `connected`, `complete`, or `failed`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ParticipantEnumStatus
     {

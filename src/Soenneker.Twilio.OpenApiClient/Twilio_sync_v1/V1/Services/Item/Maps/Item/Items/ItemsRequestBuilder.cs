@@ -127,7 +127,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps.It
         public partial class ItemsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>&quot;Whether to include the Map Item referenced by the `from` parameter. Can be: `inclusive` to include the Map Item referenced by the `from` parameter or `exclusive` to start with the next Map Item. The default value is `inclusive`.&quot;</summary>
+            /// <summary>Whether to include the Map Item referenced by the `from` parameter. Can be: `inclusive` to include the Map Item referenced by the `from` parameter or `exclusive` to start with the next Map Item. The default value is `inclusive`.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.SyncMapItemEnumQueryFromBoundType? Bounds { get; set; }
             /// <summary>The `key` of the first Sync Map Item resource to read. See also `bounds`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,7 +137,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps.It
 #else
             public string From { get; set; }
 #endif
-            /// <summary>&quot;How to order the Map Items returned by their `key` value. Can be: `asc` (ascending) or `desc` (descending) and the default is ascending. Map Items are [ordered lexicographically](https://en.wikipedia.org/wiki/Lexicographical_order) by Item key.&quot;</summary>
+            /// <summary>How to order the Map Items returned by their `key` value. Can be: `asc` (ascending) or `desc` (descending) and the default is ascending. Map Items are [ordered lexicographically](https://en.wikipedia.org/wiki/Lexicographical_order) by Item key.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.SyncMapItemEnumQueryResultOrder? Order { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }

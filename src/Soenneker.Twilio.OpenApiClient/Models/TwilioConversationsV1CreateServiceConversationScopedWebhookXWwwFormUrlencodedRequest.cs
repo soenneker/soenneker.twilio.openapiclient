@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ConfigurationUrl { get; set; }
 #endif
-        /// <summary>&quot;The target of this webhook: `webhook`, `studio`, `trigger`&quot;</summary>
+        /// <summary>The target of this webhook: `webhook`, `studio`, `trigger`</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ServiceConversationScopedWebhookEnumTarget? Target { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1CreateServiceConversationScopedWebhookXWwwFormUrlencodedRequest"/> and sets the default values.

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of the Participant. Can be: `connected` or `disconnected`.&quot;</summary>
+    /// <summary>The status of the Participant. Can be: `connected` or `disconnected`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RoomParticipantEnumStatus
     {

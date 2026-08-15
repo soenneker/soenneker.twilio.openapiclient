@@ -70,7 +70,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we use to call the `sms_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call the `sms_fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCodeSmsFallbackMethod? SmsFallbackMethod { get; set; }
         /// <summary>The URL that we call if an error occurs while retrieving or executing the TwiML from `sms_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SmsFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we use to call the `sms_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call the `sms_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountShortCodeSmsMethod? SmsMethod { get; set; }
         /// <summary>The URL we call when receiving an incoming SMS message to this short code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

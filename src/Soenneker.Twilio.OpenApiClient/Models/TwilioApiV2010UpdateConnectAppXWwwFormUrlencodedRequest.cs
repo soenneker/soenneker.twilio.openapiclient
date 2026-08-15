@@ -64,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string HomepageUrl { get; set; }
 #endif
-        /// <summary>&quot;A comma-separated list of the permissions you will request from the users of this ConnectApp.  Can include: `get-all` and `post-all`.&quot;</summary>
+        /// <summary>A comma-separated list of the permissions you will request from the users of this ConnectApp.  Can include: `get-all` and `post-all`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Twilio.OpenApiClient.Models.ConnectAppEnumPermission?>? Permissions { get; set; }

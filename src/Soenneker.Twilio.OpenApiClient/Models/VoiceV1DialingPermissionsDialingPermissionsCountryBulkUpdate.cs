@@ -16,7 +16,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of countries updated</summary>
         public int? UpdateCount { get; set; }
-        /// <summary>&quot;A bulk update request to change voice dialing country permissions stored as a URL-encoded, JSON array of update objects. For example : `[ { \&quot;iso_code\&quot;: \&quot;GB\&quot;, \&quot;low_risk_numbers_enabled\&quot;: \&quot;true\&quot;, \&quot;high_risk_special_numbers_enabled\&quot;:\&quot;true\&quot;, \&quot;high_risk_tollfraud_numbers_enabled\&quot;: \&quot;false\&quot; } ]`&quot;</summary>
+        /// <summary>A bulk update request to change voice dialing country permissions stored as a URL-encoded, JSON array of update objects. For example : `[ { &quot;iso_code&quot;: &quot;GB&quot;, &quot;low_risk_numbers_enabled&quot;: &quot;true&quot;, &quot;high_risk_special_numbers_enabled&quot;:&quot;true&quot;, &quot;high_risk_tollfraud_numbers_enabled&quot;: &quot;false&quot; } ]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UpdateRequest { get; set; }

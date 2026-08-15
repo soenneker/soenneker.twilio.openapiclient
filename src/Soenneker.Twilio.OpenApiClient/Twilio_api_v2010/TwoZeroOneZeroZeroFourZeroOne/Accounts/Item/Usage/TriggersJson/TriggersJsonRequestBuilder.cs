@@ -139,9 +139,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;The frequency of recurring UsageTriggers to read. Can be: `daily`, `monthly`, or `yearly` to read recurring UsageTriggers. An empty value or a value of `alltime` reads non-recurring UsageTriggers.&quot;</summary>
+            /// <summary>The frequency of recurring UsageTriggers to read. Can be: `daily`, `monthly`, or `yearly` to read recurring UsageTriggers. An empty value or a value of `alltime` reads non-recurring UsageTriggers.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.UsageTriggerEnumRecurring? Recurring { get; set; }
-            /// <summary>&quot;The trigger field of the UsageTriggers to read.  Can be: `count`, `usage`, or `price` as described in the [UsageRecords documentation](https://www.twilio.com/docs/usage/api/usage-record#usage-count-price).&quot;</summary>
+            /// <summary>The trigger field of the UsageTriggers to read.  Can be: `count`, `usage`, or `price` as described in the [UsageRecords documentation](https://www.twilio.com/docs/usage/api/usage-record#usage-count-price).</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.UsageTriggerEnumTriggerField? TriggerBy { get; set; }
             /// <summary>The usage category of the UsageTriggers to read. Must be a supported [usage categories](https://www.twilio.com/docs/usage/api/usage-record#usage-categories).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

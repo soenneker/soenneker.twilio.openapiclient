@@ -115,7 +115,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participa
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;Read only the participants with this status. Can be: `connected` or `disconnected`. For `in-progress` Rooms the default Status is `connected`, for `completed` Rooms only `disconnected` Participants are returned.&quot;</summary>
+            /// <summary>Read only the participants with this status. Can be: `connected` or `disconnected`. For `in-progress` Rooms the default Status is `connected`, for `completed` Rooms only `disconnected` Participants are returned.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.RoomParticipantEnumStatus? Status { get; set; }
         }
     }

@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Operators.Pre
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PreBuiltRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Returns Pre-built Operators with the provided availability type. Possible values: internal, beta, public, retired.&quot;</summary>
+            /// <summary>Returns Pre-built Operators with the provided availability type. Possible values: internal, beta, public, retired.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.PrebuiltOperatorEnumAvailability? Availability { get; set; }
             /// <summary>Returns Pre-built Operators that support the provided language code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

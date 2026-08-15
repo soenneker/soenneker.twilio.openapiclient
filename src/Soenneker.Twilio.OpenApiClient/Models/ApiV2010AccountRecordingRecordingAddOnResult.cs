@@ -78,7 +78,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The status of the result. Can be: `canceled`, `completed`, `deleted`, `failed`, `in-progress`, `init`, `processing`, `queued`.&quot;</summary>
+        /// <summary>The status of the result. Can be: `canceled`, `completed`, `deleted`, `failed`, `in-progress`, `init`, `processing`, `queued`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RecordingAddOnResultEnumStatus? Status { get; set; }
         /// <summary>A list of related resources identified by their relative URIs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

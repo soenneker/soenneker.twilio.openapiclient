@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The HTTP method we should use to call `announce_url`. Can be: `GET` or `POST` and defaults to `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `announce_url`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestAnnounceMethod? AnnounceMethod { get; set; }
         /// <summary>The URL we call using the `announce_method` for an announcement to the participant. The URL may return an MP3 file, a WAV file, or a TwiML document that contains `&lt;Play&gt;`, `&lt;Say&gt;`, `&lt;Pause&gt;`, or `&lt;Redirect&gt;` verbs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -24,7 +24,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string AnnounceUrl { get; set; }
 #endif
-        /// <summary>&quot;Whether to play a notification beep to the conference when the participant exits. Can be: `true` or `false`.&quot;</summary>
+        /// <summary>Whether to play a notification beep to the conference when the participant exits. Can be: `true` or `false`.</summary>
         public bool? BeepOnExit { get; set; }
         /// <summary>The SID of the participant who is being `coached`. The participant being coached is the only participant who can hear the participant who is `coaching`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,13 +34,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string CallSidToCoach { get; set; }
 #endif
-        /// <summary>&quot;Whether the participant is coaching another call. Can be: `true` or `false`. If not present, defaults to `false` unless `call_sid_to_coach` is defined. If `true`, `call_sid_to_coach` must be defined.&quot;</summary>
+        /// <summary>Whether the participant is coaching another call. Can be: `true` or `false`. If not present, defaults to `false` unless `call_sid_to_coach` is defined. If `true`, `call_sid_to_coach` must be defined.</summary>
         public bool? Coaching { get; set; }
-        /// <summary>&quot;Whether to end the conference when the participant leaves. Can be: `true` or `false` and defaults to `false`.&quot;</summary>
+        /// <summary>Whether to end the conference when the participant leaves. Can be: `true` or `false` and defaults to `false`.</summary>
         public bool? EndConferenceOnExit { get; set; }
-        /// <summary>&quot;Whether the participant should be on hold. Can be: `true` or `false`. `true` puts the participant on hold, and `false` lets them rejoin the conference.&quot;</summary>
+        /// <summary>Whether the participant should be on hold. Can be: `true` or `false`. `true` puts the participant on hold, and `false` lets them rejoin the conference.</summary>
         public bool? Hold { get; set; }
-        /// <summary>&quot;The HTTP method we should use to call `hold_url`. Can be: `GET` or `POST` and the default is `GET`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `hold_url`. Can be: `GET` or `POST` and the default is `GET`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestHoldMethod? HoldMethod { get; set; }
         /// <summary>The URL we call using the `hold_method` for music that plays when the participant is on hold. The URL may return an MP3 file, a WAV file, or a TwiML document that contains `&lt;Play&gt;`, `&lt;Say&gt;`, `&lt;Pause&gt;`, or `&lt;Redirect&gt;` verbs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

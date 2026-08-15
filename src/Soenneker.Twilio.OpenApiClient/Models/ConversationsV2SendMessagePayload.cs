@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent Content { get; set; }
 #endif
-        /// <summary>&quot;Identifies a participant for an Action. Supports three resolution modes:1. participantId + channel: Resolves address from participant&apos;s registered addresses2. participantId only: Resolves when participant has exactly one address3. address + channel: Uses explicit address&quot;</summary>
+        /// <summary>Identifies a participant for an Action. Supports three resolution modes:1. participantId + channel: Resolves address from participant&apos;s registered addresses2. participantId only: Resolves when participant has exactly one address3. address + channel: Uses explicit address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant? From { get; set; }

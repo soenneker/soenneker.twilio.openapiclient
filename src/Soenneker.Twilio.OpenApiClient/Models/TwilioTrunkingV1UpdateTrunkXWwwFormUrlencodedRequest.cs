@@ -16,7 +16,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether Caller ID Name (CNAM) lookup should be enabled for the trunk. If enabled, all inbound calls to the SIP Trunk from the United States and Canada automatically perform a CNAM Lookup and display Caller ID data on your phone. See [CNAM Lookups](https://www.twilio.com/docs/sip-trunking#CNAM) for more information.</summary>
         public bool? CnamLookupEnabled { get; set; }
-        /// <summary>&quot;The HTTP method we should use to call the `disaster_recovery_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call the `disaster_recovery_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1UpdateTrunkXWwwFormUrlencodedRequestDisasterRecoveryMethod? DisasterRecoveryMethod { get; set; }
         /// <summary>The URL we should call using the `disaster_recovery_method` if an error occurs while sending SIP traffic towards the configured Origination URL. We retrieve TwiML from the URL and execute the instructions like any other normal TwiML call. See [Disaster Recovery](https://www.twilio.com/docs/sip-trunking#disaster-recovery) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,9 +44,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Whether Secure Trunking is enabled for the trunk. If enabled, all calls going through the trunk will be secure using SRTP for media and TLS for signaling. If disabled, then RTP will be used for media. See [Secure Trunking](https://www.twilio.com/docs/sip-trunking#securetrunking) for more information.</summary>
         public bool? Secure { get; set; }
-        /// <summary>&quot;Caller Id for transfer target. Can be: `from-transferee` (default) or `from-transferor`.&quot;</summary>
+        /// <summary>Caller Id for transfer target. Can be: `from-transferee` (default) or `from-transferor`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferCallerId? TransferCallerId { get; set; }
-        /// <summary>&quot;The call transfer settings for the trunk. Can be: `enable-all`, `sip-only` and `disable-all`. See [Transfer](https://www.twilio.com/docs/sip-trunking/call-transfer) for more information.&quot;</summary>
+        /// <summary>The call transfer settings for the trunk. Can be: `enable-all`, `sip-only` and `disable-all`. See [Transfer](https://www.twilio.com/docs/sip-trunking/call-transfer) for more information.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferSetting? TransferMode { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1UpdateTrunkXWwwFormUrlencodedRequest"/> and sets the default values.

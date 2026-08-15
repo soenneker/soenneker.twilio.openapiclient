@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;Operators with this Operator Type are executed using this provider. Possible values: twilio, amazon, openai.&quot;</summary>
+    /// <summary>Operators with this Operator Type are executed using this provider. Possible values: twilio, amazon, openai.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum OperatorTypeEnumProvider
     {

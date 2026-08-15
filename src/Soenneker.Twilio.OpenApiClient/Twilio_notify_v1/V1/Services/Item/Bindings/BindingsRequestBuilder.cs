@@ -151,7 +151,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_notify_v1.V1.Services.Item.Bindi
 #endif
             /// <summary>Only include usage that has occurred on or after this date. Specify the date in GMT and format as `YYYY-MM-DD`.</summary>
             public Date? StartDate { get; set; }
-            /// <summary>&quot;Only list Bindings that have all of the specified Tags. The following implicit tags are available: `all`, `apn`, `fcm`, `gcm`, `sms`, `facebook-messenger`. Up to 5 tags are allowed.&quot;</summary>
+            /// <summary>Only list Bindings that have all of the specified Tags. The following implicit tags are available: `all`, `apn`, `fcm`, `gcm`, `sms`, `facebook-messenger`. Up to 5 tags are allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string[]? Tag { get; set; }

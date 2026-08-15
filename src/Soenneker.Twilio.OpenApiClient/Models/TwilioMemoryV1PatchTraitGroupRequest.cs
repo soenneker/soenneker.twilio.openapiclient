@@ -20,7 +20,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>&quot;Map of traits to add, update, or remove in this Trait Group, where the key is the trait name. - To update/add a trait: provide the complete TraitDefinition object - To remove a trait: set dataType to an empty string (\&quot;\&quot;)&quot;</summary>
+        /// <summary>Map of traits to add, update, or remove in this Trait Group, where the key is the trait name. - To update/add a trait: provide the complete TraitDefinition object - To remove a trait: set dataType to an empty string (&quot;&quot;)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchTraitGroupRequestTraits? Traits { get; set; }

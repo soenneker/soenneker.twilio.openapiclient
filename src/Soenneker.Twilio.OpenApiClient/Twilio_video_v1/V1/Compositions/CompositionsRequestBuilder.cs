@@ -158,7 +158,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Compositions
 #else
             public string RoomSid { get; set; }
 #endif
-            /// <summary>&quot;Read only Composition resources with this status. Can be: `enqueued`, `processing`, `completed`, `deleted`, or `failed`.&quot;</summary>
+            /// <summary>Read only Composition resources with this status. Can be: `enqueued`, `processing`, `completed`, `deleted`, or `failed`.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.CompositionEnumStatus? Status { get; set; }
         }
     }

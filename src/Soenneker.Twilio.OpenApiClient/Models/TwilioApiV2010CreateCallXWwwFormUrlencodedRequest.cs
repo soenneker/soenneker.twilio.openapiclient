@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ApplicationSid { get; set; }
 #endif
-        /// <summary>&quot;Select whether to perform answering machine detection in the background. Default, blocks the execution of the call until Answering Machine Detection is completed. Can be: `true` or `false`.&quot;</summary>
+        /// <summary>Select whether to perform answering machine detection in the background. Default, blocks the execution of the call until Answering Machine Detection is completed. Can be: `true` or `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AsyncAmd { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string AsyncAmdStatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use when calling the `async_amd_status_callback` URL. Can be: `GET` or `POST` and the default is `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use when calling the `async_amd_status_callback` URL. Can be: `GET` or `POST` and the default is `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallXWwwFormUrlencodedRequestAsyncAmdStatusCallbackMethod? AsyncAmdStatusCallbackMethod { get; set; }
         /// <summary>The SID of a BYOC (Bring Your Own Carrier) trunk to route this call with. Note that `byoc` is only meaningful when `to` is a phone number; it will otherwise be ignored. (Beta)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ClientNotificationUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method that we should use to request the `fallback_url`. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.&quot;</summary>
+        /// <summary>The HTTP method that we should use to request the `fallback_url`. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallXWwwFormUrlencodedRequestFallbackMethod? FallbackMethod { get; set; }
         /// <summary>The URL that we call using the `fallback_method` if an error occurs when requesting or executing the TwiML at `url`. If an `application_sid` parameter is present, this parameter is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string From { get; set; }
 #endif
-        /// <summary>&quot;Whether to detect if a human, answering machine, or fax has picked up the call. Can be: `Enable` or `DetectMessageEnd`. Use `Enable` if you would like us to return `AnsweredBy` as soon as the called party is identified. Use `DetectMessageEnd`, if you would like to leave a message on an answering machine. If `send_digits` is provided, this parameter is ignored. For more information, see [Answering Machine Detection](https://www.twilio.com/docs/voice/answering-machine-detection).&quot;</summary>
+        /// <summary>Whether to detect if a human, answering machine, or fax has picked up the call. Can be: `Enable` or `DetectMessageEnd`. Use `Enable` if you would like us to return `AnsweredBy` as soon as the called party is identified. Use `DetectMessageEnd`, if you would like to leave a message on an answering machine. If `send_digits` is provided, this parameter is ignored. For more information, see [Answering Machine Detection](https://www.twilio.com/docs/voice/answering-machine-detection).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MachineDetection { get; set; }
@@ -106,15 +106,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string MachineDetection { get; set; }
 #endif
-        /// <summary>&quot;The number of milliseconds of initial silence after which an `unknown` AnsweredBy result will be returned. Possible Values: 2000-10000. Default: 5000.&quot;</summary>
+        /// <summary>The number of milliseconds of initial silence after which an `unknown` AnsweredBy result will be returned. Possible Values: 2000-10000. Default: 5000.</summary>
         public int? MachineDetectionSilenceTimeout { get; set; }
-        /// <summary>&quot;The number of milliseconds of silence after speech activity at which point the speech activity is considered complete. Possible Values: 500-5000. Default: 1200.&quot;</summary>
+        /// <summary>The number of milliseconds of silence after speech activity at which point the speech activity is considered complete. Possible Values: 500-5000. Default: 1200.</summary>
         public int? MachineDetectionSpeechEndThreshold { get; set; }
-        /// <summary>&quot;The number of milliseconds that is used as the measuring stick for the length of the speech activity, where durations lower than this value will be interpreted as a human and longer than this value as a machine. Possible Values: 1000-6000. Default: 2400.&quot;</summary>
+        /// <summary>The number of milliseconds that is used as the measuring stick for the length of the speech activity, where durations lower than this value will be interpreted as a human and longer than this value as a machine. Possible Values: 1000-6000. Default: 2400.</summary>
         public int? MachineDetectionSpeechThreshold { get; set; }
         /// <summary>The number of seconds that we should attempt to detect an answering machine before timing out and sending a voice request with `AnsweredBy` of `unknown`. The default timeout is 30 seconds.</summary>
         public int? MachineDetectionTimeout { get; set; }
-        /// <summary>&quot;The HTTP method we should use when calling the `url` parameter&apos;s value. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.&quot;</summary>
+        /// <summary>The HTTP method we should use when calling the `url` parameter&apos;s value. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallXWwwFormUrlencodedRequestMethod? Method { get; set; }
         /// <summary>The STIR/SHAKEN passport for this call, provided as a base64 encoded string. Multiple passports (at max 5) are comma separated and provided as base64 encoded string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,7 +126,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Whether to record the call. Can be `true` to record the phone call, or `false` to not. The default is `false`. The `recording_url` is sent to the `status_callback` URL.</summary>
         public bool? Record { get; set; }
-        /// <summary>&quot;The number of channels in the final recording. Can be: `mono` or `dual`. The default is `mono`. `mono` records both legs of the call in a single channel of the recording file. `dual` records each leg to a separate channel of the recording file. The first channel of a dual-channel recording contains the parent call and the second channel contains the child call.&quot;</summary>
+        /// <summary>The number of channels in the final recording. Can be: `mono` or `dual`. The default is `mono`. `mono` records both legs of the call in a single channel of the recording file. `dual` records each leg to a separate channel of the recording file. The first channel of a dual-channel recording contains the parent call and the second channel contains the child call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RecordingChannels { get; set; }
@@ -150,7 +150,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string RecordingStatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The recording status events that will trigger calls to the URL specified in `recording_status_callback`. Can be: `in-progress`, `completed` and `absent`. Defaults to `completed`. Separate  multiple values with a space.&quot;</summary>
+        /// <summary>The recording status events that will trigger calls to the URL specified in `recording_status_callback`. Can be: `in-progress`, `completed` and `absent`. Defaults to `completed`. Separate  multiple values with a space.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RecordingStatusCallbackEvent { get; set; }
@@ -158,9 +158,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> RecordingStatusCallbackEvent { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use when calling the `recording_status_callback` URL. Can be: `GET` or `POST` and the default is `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use when calling the `recording_status_callback` URL. Can be: `GET` or `POST` and the default is `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallXWwwFormUrlencodedRequestRecordingStatusCallbackMethod? RecordingStatusCallbackMethod { get; set; }
-        /// <summary>&quot;The audio track to record for the call. Can be: `inbound`, `outbound` or `both`. The default is `both`. `inbound` records the audio that is received by Twilio. `outbound` records the audio that is generated from Twilio. `both` records the audio that is received and generated by Twilio.&quot;</summary>
+        /// <summary>The audio track to record for the call. Can be: `inbound`, `outbound` or `both`. The default is `both`. `inbound` records the audio that is received by Twilio. `outbound` records the audio that is generated from Twilio. `both` records the audio that is received and generated by Twilio.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RecordingTrack { get; set; }
@@ -200,7 +200,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The call progress events that we will send to the `status_callback` URL. Can be: `initiated`, `ringing`, `answered`, and `completed`. If no event is specified, we send the `completed` status. If you want to receive multiple events, specify each one in a separate `status_callback_event` parameter. See the code sample for [monitoring call progress](https://www.twilio.com/docs/voice/api/call-resource?code-sample=code-create-a-call-resource-and-specify-a-statuscallbackevent&amp;code-sdk-version=json). If an `application_sid` is present, this parameter is ignored.&quot;</summary>
+        /// <summary>The call progress events that we will send to the `status_callback` URL. Can be: `initiated`, `ringing`, `answered`, and `completed`. If no event is specified, we send the `completed` status. If you want to receive multiple events, specify each one in a separate `status_callback_event` parameter. See the code sample for [monitoring call progress](https://www.twilio.com/docs/voice/api/call-resource?code-sample=code-create-a-call-resource-and-specify-a-statuscallbackevent&amp;code-sdk-version=json). If an `application_sid` is present, this parameter is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? StatusCallbackEvent { get; set; }
@@ -208,7 +208,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> StatusCallbackEvent { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use when calling the `status_callback` URL. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.&quot;</summary>
+        /// <summary>The HTTP method we should use when calling the `status_callback` URL. Can be: `GET` or `POST` and the default is `POST`. If an `application_sid` parameter is present, this parameter is ignored.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>The maximum duration of the call in seconds. Constraints depend on account and configuration.</summary>
         public int? TimeLimit { get; set; }
@@ -222,7 +222,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string To { get; set; }
 #endif
-        /// <summary>&quot;Whether to trim any leading and trailing silence from the recording. Can be: `trim-silence` or `do-not-trim` and the default is `trim-silence`.&quot;</summary>
+        /// <summary>Whether to trim any leading and trailing silence from the recording. Can be: `trim-silence` or `do-not-trim` and the default is `trim-silence`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Trim { get; set; }

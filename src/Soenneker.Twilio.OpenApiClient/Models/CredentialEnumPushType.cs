@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of push-notification service the credential is for. Can be: `fcm`, `gcm`, or `apn`.&quot;</summary>
+    /// <summary>The type of push-notification service the credential is for. Can be: `fcm`, `gcm`, or `apn`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CredentialEnumPushType
     {

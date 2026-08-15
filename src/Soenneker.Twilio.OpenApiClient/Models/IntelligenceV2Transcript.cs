@@ -38,7 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string CustomerKey { get; set; }
 #endif
-        /// <summary>&quot;Data logging allows Twilio to improve the quality of the speech recognition &amp; language understanding services through using customer data to refine, fine tune and evaluate machine learning models.Note: Data logging cannot be activated via API, only via www.twilio.com, as it requires additional consent.&quot;</summary>
+        /// <summary>Data logging allows Twilio to improve the quality of the speech recognition &amp; language understanding services through using customer data to refine, fine tune and evaluate machine learning models.Note: Data logging cannot be activated via API, only via www.twilio.com, as it requires additional consent.</summary>
         public bool? DataLogging { get; set; }
         /// <summary>The date that this Transcript was created, given in ISO 8601 format.</summary>
         public DateTimeOffset? DateCreated { get; set; }

@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The status of the transcription. Can be: `in-progress`, `completed`, `failed`.&quot;</summary>
+        /// <summary>The status of the transcription. Can be: `in-progress`, `completed`, `failed`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TranscriptionEnumStatus? Status { get; set; }
         /// <summary>The text content of the transcription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,7 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string TranscriptionText { get; set; }
 #endif
-        /// <summary>&quot;The transcription type. Can only be: `fast`.&quot;</summary>
+        /// <summary>The transcription type. Can only be: `fast`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

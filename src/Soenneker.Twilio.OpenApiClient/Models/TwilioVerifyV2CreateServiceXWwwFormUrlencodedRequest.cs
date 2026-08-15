@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string DefaultTemplateSid { get; set; }
 #endif
-        /// <summary>&quot;Whether to add a security warning at the end of an SMS verification body. Disabled by default and applies only to SMS. Example SMS body: `Your AppName verification code is: 1234. Don’t share this code with anyone; our employees will never ask for the code`&quot;</summary>
+        /// <summary>Whether to add a security warning at the end of an SMS verification body. Disabled by default and applies only to SMS. Example SMS body: `Your AppName verification code is: 1234. Don’t share this code with anyone; our employees will never ask for the code`</summary>
         public bool? DoNotShareWarningEnabled { get; set; }
         /// <summary>Whether to ask the user to press a number before delivering the verify code in a phone call.</summary>
         public bool? DtmfInputRequired { get; set; }
@@ -106,7 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string PushFcmCredentialSid { get; set; }
 #endif
-        /// <summary>&quot;Optional configuration for the Push factors. If true, include the date in the Challenge&apos;s response. Otherwise, the date is omitted from the response. See [Challenge](https://www.twilio.com/docs/verify/api/challenge) resource’s details parameter for more info. Default: false. **Deprecated** do not use this parameter. This timestamp value is the same one as the one found in `date_created`, please use that one instead.&quot;</summary>
+        /// <summary>Optional configuration for the Push factors. If true, include the date in the Challenge&apos;s response. Otherwise, the date is omitted from the response. See [Challenge](https://www.twilio.com/docs/verify/api/challenge) resource’s details parameter for more info. Default: false. **Deprecated** do not use this parameter. This timestamp value is the same one as the one found in `date_created`, please use that one instead.</summary>
         public bool? PushIncludeDate { get; set; }
         /// <summary>Whether to skip sending SMS verifications to landlines. Requires `lookup_enabled`.</summary>
         public bool? SkipSmsToLandlines { get; set; }

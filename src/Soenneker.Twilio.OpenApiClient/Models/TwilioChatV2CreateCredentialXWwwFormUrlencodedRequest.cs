@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Secret { get; set; }
 #endif
-        /// <summary>&quot;The type of push-notification service the credential is for. Can be: `gcm`, `fcm`, or `apn`.&quot;</summary>
+        /// <summary>The type of push-notification service the credential is for. Can be: `gcm`, `fcm`, or `apn`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CredentialEnumPushService? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateCredentialXWwwFormUrlencodedRequest"/> and sets the default values.

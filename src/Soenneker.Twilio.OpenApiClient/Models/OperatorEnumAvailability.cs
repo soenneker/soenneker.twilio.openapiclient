@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;Operator availability status. Possible values: internal, beta, public, retired.&quot;</summary>
+    /// <summary>Operator availability status. Possible values: internal, beta, public, retired.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum OperatorEnumAvailability
     {

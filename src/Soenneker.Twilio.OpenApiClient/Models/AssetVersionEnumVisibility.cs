@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The access control that determines how the Asset Version resource can be accessed. Can be:  `public`, `protected`, or `private`.&quot;</summary>
+    /// <summary>The access control that determines how the Asset Version resource can be accessed. Can be:  `public`, `protected`, or `private`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum AssetVersionEnumVisibility
     {

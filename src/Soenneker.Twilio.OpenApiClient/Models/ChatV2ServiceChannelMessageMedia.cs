@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;An object that describes the Message&apos;s media, if the message contains media. The object contains these fields: `content_type` with the MIME type of the media, `filename` with the name of the media, `sid` with the SID of the Media resource, and `size` with the media object&apos;s file size in bytes. If the Message has no media, this value is `null`.&quot;
+    /// An object that describes the Message&apos;s media, if the message contains media. The object contains these fields: `content_type` with the MIME type of the media, `filename` with the name of the media, `sid` with the SID of the Media resource, and `size` with the media object&apos;s file size in bytes. If the Message has no media, this value is `null`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChatV2ServiceChannelMessageMedia : IAdditionalDataHolder, IParsable

@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string From { get; set; }
 #endif
-        /// <summary>&quot;A JSON string we will add to your flow&apos;s context and that you can access as variables inside your flow. For example, if you pass in `Parameters={&apos;name&apos;:&apos;Zeke&apos;}` then inside a widget you can reference the variable `{{flow.data.name}}` which will return the string &apos;Zeke&apos;. Note: the JSON value must explicitly be passed as a string, not as a hash object. Depending on your particular HTTP library, you may need to add quotes or URL encode your JSON string.&quot;</summary>
+        /// <summary>A JSON string we will add to your flow&apos;s context and that you can access as variables inside your flow. For example, if you pass in `Parameters={&apos;name&apos;:&apos;Zeke&apos;}` then inside a widget you can reference the variable `{{flow.data.name}}` which will return the string &apos;Zeke&apos;. Note: the JSON value must explicitly be passed as a string, not as a hash object. Depending on your particular HTTP library, you may need to add quotes or URL encode your JSON string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV1CreateEngagementXWwwFormUrlencodedRequestParameters? Parameters { get; set; }

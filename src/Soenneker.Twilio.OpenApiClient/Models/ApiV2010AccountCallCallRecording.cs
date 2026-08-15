@@ -38,7 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string CallSid { get; set; }
 #endif
-        /// <summary>&quot;The number of channels in the final recording file.  Can be: `1`, or `2`. Separating a two leg call into two separate channels of the recording file is supported in [Dial](https://www.twilio.com/docs/voice/twiml/dial#attributes-record) and [Outbound Rest API](https://www.twilio.com/docs/voice/make-calls) record options.&quot;</summary>
+        /// <summary>The number of channels in the final recording file.  Can be: `1`, or `2`. Separating a two leg call into two separate channels of the recording file is supported in [Dial](https://www.twilio.com/docs/voice/twiml/dial#attributes-record) and [Outbound Rest API](https://www.twilio.com/docs/voice/make-calls) record options.</summary>
         public int? Channels { get; set; }
         /// <summary>The Conference SID that identifies the conference associated with the recording, if a conference recording.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,7 +84,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public int? ErrorCode { get; set; }
         /// <summary>The one-time cost of creating the recording in the `price_unit` currency.</summary>
         public double? Price { get; set; }
-        /// <summary>&quot;The currency used in the `price` property. Example: `USD`.&quot;</summary>
+        /// <summary>The currency used in the `price` property. Example: `USD`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PriceUnit { get; set; }
@@ -100,7 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;How the recording was created. Can be: `DialVerb`, `Conference`, `OutboundAPI`, `Trunking`, `RecordVerb`, `StartCallRecordingAPI`, and `StartConferenceRecordingAPI`.&quot;</summary>
+        /// <summary>How the recording was created. Can be: `DialVerb`, `Conference`, `OutboundAPI`, `Trunking`, `RecordVerb`, `StartCallRecordingAPI`, and `StartConferenceRecordingAPI`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CallRecordingEnumSource? Source { get; set; }
         /// <summary>The start time of the recording in GMT and in [RFC 2822](https://www.php.net/manual/en/class.datetime.php#datetime.constants.rfc2822) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,9 +110,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StartTime { get; set; }
 #endif
-        /// <summary>&quot;The status of the recording. Can be: `processing`, `completed` and `absent`. For more detailed statuses on in-progress recordings, check out how to [Update a Recording Resource](https://www.twilio.com/docs/voice/api/recording#update-a-recording-resource).&quot;</summary>
+        /// <summary>The status of the recording. Can be: `processing`, `completed` and `absent`. For more detailed statuses on in-progress recordings, check out how to [Update a Recording Resource](https://www.twilio.com/docs/voice/api/recording#update-a-recording-resource).</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.CallRecordingEnumStatus? Status { get; set; }
-        /// <summary>&quot;The recorded track. Can be: `inbound`, `outbound`, or `both`.&quot;</summary>
+        /// <summary>The recorded track. Can be: `inbound`, `outbound`, or `both`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Track { get; set; }

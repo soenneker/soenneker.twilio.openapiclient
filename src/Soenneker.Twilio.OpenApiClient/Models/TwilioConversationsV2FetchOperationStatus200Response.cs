@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string OperationId { get; set; }
 #endif
-        /// <summary>&quot;Named resource identifiers associated with this operation. Keys depend on the operation type:- config-create, config-update, config-delete: configurationId- conversation-delete: conversationId&quot;</summary>
+        /// <summary>Named resource identifiers associated with this operation. Keys depend on the operation type:- config-create, config-update, config-delete: configurationId- conversation-delete: conversationId</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchOperationStatus200ResponseRelated? Related { get; set; }

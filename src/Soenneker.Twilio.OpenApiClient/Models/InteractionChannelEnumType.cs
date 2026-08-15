@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The Interaction Channel&apos;s type. Can be: `sms`, `email`, `chat`, `whatsapp`, `web`, `messenger`, or `gbm`.  **Note:** These can be different from the task channel type specified in the Routing attributes. Task channel type corresponds to channel capacity while this channel type is the actual media type&quot;</summary>
+    /// <summary>The Interaction Channel&apos;s type. Can be: `sms`, `email`, `chat`, `whatsapp`, `web`, `messenger`, or `gbm`.  **Note:** These can be different from the task channel type specified in the Routing attributes. Task channel type corresponds to channel capacity while this channel type is the actual media type</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum InteractionChannelEnumType
     {

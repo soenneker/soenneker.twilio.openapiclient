@@ -165,7 +165,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Summaries
 #else
             public string BusinessProfileType { get; set; }
 #endif
-            /// <summary>&quot;A Call Score of the calls. Use a range of 1-5 to indicate the call experience score, with the following mapping as a reference for the rated call [5: Excellent, 4: Good, 3 : Fair, 2 : Poor, 1: Bad].&quot;</summary>
+            /// <summary>A Call Score of the calls. Use a range of 1-5 to indicate the call experience score, with the following mapping as a reference for the rated call [5: Excellent, 4: Good, 3 : Fair, 2 : Poor, 1: Bad].</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string? CallScoreAnnotation { get; set; }

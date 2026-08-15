@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;A JSON string with the attributes of the new task. This value is passed to the Workflow&apos;s `assignment_callback_url` when the Task is assigned to a Worker. For example: `{ \&quot;task_type\&quot;: \&quot;call\&quot;, \&quot;twilio_call_sid\&quot;: \&quot;CAxxx\&quot;, \&quot;customer_ticket_number\&quot;: \&quot;12345\&quot; }`.&quot;</summary>
+        /// <summary>A JSON string with the attributes of the new task. This value is passed to the Workflow&apos;s `assignment_callback_url` when the Task is assigned to a Worker. For example: `{ &quot;task_type&quot;: &quot;call&quot;, &quot;twilio_call_sid&quot;: &quot;CAxxx&quot;, &quot;customer_ticket_number&quot;: &quot;12345&quot; }`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Attributes { get; set; }

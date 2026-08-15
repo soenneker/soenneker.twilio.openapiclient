@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Whether we should automatically correct the address. Can be: `true` or `false` and the default is `true`. If empty or `true`, we will correct the address you provide if necessary. If `false`, we won&apos;t alter the address you provide.&quot;</summary>
+        /// <summary>Whether we should automatically correct the address. Can be: `true` or `false` and the default is `true`. If empty or `true`, we will correct the address you provide if necessary. If `false`, we won&apos;t alter the address you provide.</summary>
         public bool? AutoCorrectAddress { get; set; }
         /// <summary>The city of the address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,7 +32,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string CustomerName { get; set; }
 #endif
-        /// <summary>&quot;Whether to enable emergency calling on the address. Can be: `true` or `false`.&quot;</summary>
+        /// <summary>Whether to enable emergency calling on the address. Can be: `true` or `false`.</summary>
         public bool? EmergencyEnabled { get; set; }
         /// <summary>A descriptive string that you create to describe the new address. It can be up to 64 characters long for Regulatory Compliance addresses and 32 characters long for Emergency addresses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

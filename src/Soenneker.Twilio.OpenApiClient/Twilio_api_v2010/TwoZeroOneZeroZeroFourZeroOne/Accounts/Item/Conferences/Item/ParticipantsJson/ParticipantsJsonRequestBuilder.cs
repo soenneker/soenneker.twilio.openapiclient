@@ -121,11 +121,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ParticipantsJsonRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Whether to return only participants who are coaching another call. Can be: `true` or `false`.&quot;</summary>
+            /// <summary>Whether to return only participants who are coaching another call. Can be: `true` or `false`.</summary>
             public bool? Coaching { get; set; }
-            /// <summary>&quot;Whether to return only participants that are on hold. Can be: `true` or `false`.&quot;</summary>
+            /// <summary>Whether to return only participants that are on hold. Can be: `true` or `false`.</summary>
             public bool? Hold { get; set; }
-            /// <summary>&quot;Whether to return only participants that are muted. Can be: `true` or `false`.&quot;</summary>
+            /// <summary>Whether to return only participants that are muted. Can be: `true` or `false`.</summary>
             public bool? Muted { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }

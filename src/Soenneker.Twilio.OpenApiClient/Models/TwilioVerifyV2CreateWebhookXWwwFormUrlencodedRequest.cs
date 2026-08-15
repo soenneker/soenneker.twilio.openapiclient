@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The array of events that this Webhook is subscribed to. Possible event types: `*, factor.deleted, factor.created, factor.verified, challenge.approved, challenge.denied`&quot;</summary>
+        /// <summary>The array of events that this Webhook is subscribed to. Possible event types: `*, factor.deleted, factor.created, factor.verified, challenge.approved, challenge.denied`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? EventTypes { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>&quot;The webhook status. Default value is `enabled`. One of: `enabled` or `disabled`&quot;</summary>
+        /// <summary>The webhook status. Default value is `enabled`. One of: `enabled` or `disabled`</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WebhookEnumStatus? Status { get; set; }
         /// <summary>The webhook version. Default value is `v2` which includes all the latest fields. Version `v1` is legacy and may be removed in the future.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WebhookEnumVersion? Version { get; set; }

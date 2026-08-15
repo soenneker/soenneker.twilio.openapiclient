@@ -136,7 +136,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Boolean which indicates if the phone number is in a valid range that can be freely assigned by a carrier to a user.</summary>
         public bool? Valid { get; set; }
-        /// <summary>&quot;Contains reasons why a phone number is invalid. Possible values: TOO_SHORT, TOO_LONG, INVALID_BUT_POSSIBLE, INVALID_COUNTRY_CODE, INVALID_LENGTH, NOT_A_NUMBER.&quot;</summary>
+        /// <summary>Contains reasons why a phone number is invalid. Possible values: TOO_SHORT, TOO_LONG, INVALID_BUT_POSSIBLE, INVALID_COUNTRY_CODE, INVALID_LENGTH, NOT_A_NUMBER.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Twilio.OpenApiClient.Models.ValidationError?>? ValidationErrors { get; set; }

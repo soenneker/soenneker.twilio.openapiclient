@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Communication addresses for this Participant. Address format varies by channel:- SMS/VOICE: E.164 phone number (such as \&quot;+18005550100\&quot;)- EMAIL: Email address (such as \&quot;user@example.com\&quot;)- WHATSAPP: Phone number with whatsapp prefix (such as \&quot;whatsapp:+18005550100\&quot;)- RCS: Sender ID or phone number with rcs prefix (such as \&quot;rcs:brand_acme_agent\&quot; or \&quot;rcs:+18005550100\&quot;)&quot;</summary>
+        /// <summary>Communication addresses for this Participant. Address format varies by channel:- SMS/VOICE: E.164 phone number (such as &quot;+18005550100&quot;)- EMAIL: Email address (such as &quot;user@example.com&quot;)- WHATSAPP: Phone number with whatsapp prefix (such as &quot;whatsapp:+18005550100&quot;)- RCS: Sender ID or phone number with rcs prefix (such as &quot;rcs:brand_acme_agent&quot; or &quot;rcs:+18005550100&quot;)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Address>? Addresses { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;Profile ID. Note: This field is only resolved for `CUSTOMER` participant types, not for `HUMAN_AGENT` or `AI_AGENT` participants.&quot;</summary>
+        /// <summary>Profile ID. Note: This field is only resolved for `CUSTOMER` participant types, not for `HUMAN_AGENT` or `AI_AGENT` participants.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProfileId { get; set; }

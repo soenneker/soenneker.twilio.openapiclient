@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of the Transfer. Can be: `cold`, `warm`.&quot;</summary>
+    /// <summary>The type of the Transfer. Can be: `cold`, `warm`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum InteractionTransferEnumTransferType
     {

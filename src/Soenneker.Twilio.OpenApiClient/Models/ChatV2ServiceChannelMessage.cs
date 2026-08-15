@@ -68,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string LastUpdatedBy { get; set; }
 #endif
-        /// <summary>&quot;An object that describes the Message&apos;s media, if the message contains media. The object contains these fields: `content_type` with the MIME type of the media, `filename` with the name of the media, `sid` with the SID of the Media resource, and `size` with the media object&apos;s file size in bytes. If the Message has no media, this value is `null`.&quot;</summary>
+        /// <summary>An object that describes the Message&apos;s media, if the message contains media. The object contains these fields: `content_type` with the MIME type of the media, `filename` with the name of the media, `sid` with the SID of the Media resource, and `size` with the media object&apos;s file size in bytes. If the Message has no media, this value is `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceChannelMessageMedia? Media { get; set; }
@@ -100,7 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string To { get; set; }
 #endif
-        /// <summary>&quot;The Message type. Can be: `text` or `media`.&quot;</summary>
+        /// <summary>The Message type. Can be: `text` or `media`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

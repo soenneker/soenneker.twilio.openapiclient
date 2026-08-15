@@ -46,7 +46,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string FriendlyName { get; set; }
 #endif
-        /// <summary>&quot;The status of the Flow. Can be: `draft` or `published`.&quot;</summary>
+        /// <summary>The status of the Flow. Can be: `draft` or `published`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2FlowEnumStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2CreateFlowXWwwFormUrlencodedRequest"/> and sets the default values.

@@ -106,7 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string PushFcmCredentialSid { get; set; }
 #endif
-        /// <summary>&quot;Optional configuration for the Push factors. If true, include the date in the Challenge&apos;s response. Otherwise, the date is omitted from the response. See [Challenge](https://www.twilio.com/docs/verify/api/challenge) resource’s details parameter for more info. Default: false. **Deprecated** do not use this parameter.&quot;</summary>
+        /// <summary>Optional configuration for the Push factors. If true, include the date in the Challenge&apos;s response. Otherwise, the date is omitted from the response. See [Challenge](https://www.twilio.com/docs/verify/api/challenge) resource’s details parameter for more info. Default: false. **Deprecated** do not use this parameter.</summary>
         public bool? PushIncludeDate { get; set; }
         /// <summary>Whether to skip sending SMS verifications to landlines. Requires `lookup_enabled`.</summary>
         public bool? SkipSmsToLandlines { get; set; }

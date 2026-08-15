@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Identifies a participant for an Action. Supports three resolution modes:1. participantId + channel: Resolves address from participant&apos;s registered addresses2. participantId only: Resolves when participant has exactly one address3. address + channel: Uses explicit address&quot;
+    /// Identifies a participant for an Action. Supports three resolution modes:1. participantId + channel: Resolves address from participant&apos;s registered addresses2. participantId only: Resolves when participant has exactly one address3. address + channel: Uses explicit address
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConversationsV2SendMessageParticipant : IAdditionalDataHolder, IParsable

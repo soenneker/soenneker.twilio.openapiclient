@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The HTTP method used to call `announce_url`. Can be: `GET` or `POST` and the default is `POST`&quot;</summary>
+        /// <summary>The HTTP method used to call `announce_url`. Can be: `GET` or `POST` and the default is `POST`</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConferenceXWwwFormUrlencodedRequestAnnounceMethod? AnnounceMethod { get; set; }
         /// <summary>The URL we should call to announce something into the conference. The URL may return an MP3 file, a WAV file, or a TwiML document that contains `&lt;Play&gt;`, `&lt;Say&gt;`, `&lt;Pause&gt;`, or `&lt;Redirect&gt;` verbs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

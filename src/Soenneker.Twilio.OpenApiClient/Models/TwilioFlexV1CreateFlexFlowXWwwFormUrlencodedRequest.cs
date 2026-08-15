@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public int? IntegrationRetryCount { get; set; }
         /// <summary>The Task timeout in seconds for a new Task. Default is 86,400 seconds (24 hours). Optional when `integrationType` is `task`, not applicable otherwise.</summary>
         public int? IntegrationTimeout { get; set; }
-        /// <summary>&quot;The software that will handle inbound messages. [Integration Type](https://www.twilio.com/docs/flex/developer/messaging/manage-flows#integration-types) can be: `studio`, `external`,  or `task`.&quot;</summary>
+        /// <summary>The software that will handle inbound messages. [Integration Type](https://www.twilio.com/docs/flex/developer/messaging/manage-flows#integration-types) can be: `studio`, `external`,  or `task`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.FlexFlowEnumIntegrationType? IntegrationType { get; set; }
         /// <summary>The URL of the external webhook. Required when `integrationType` is `external`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

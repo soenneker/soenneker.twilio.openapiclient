@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The target of this webhook: `webhook`, `studio`, `trigger`&quot;</summary>
+        /// <summary>The target of this webhook: `webhook`, `studio`, `trigger`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Target { get; set; }

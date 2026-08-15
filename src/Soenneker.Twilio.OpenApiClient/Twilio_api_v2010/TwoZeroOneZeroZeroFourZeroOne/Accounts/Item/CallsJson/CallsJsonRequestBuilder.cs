@@ -127,12 +127,12 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CallsJsonRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Only include calls that ended on this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that ended on this date.&quot;</summary>
+            /// <summary>Only include calls that ended on this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that ended on this date.</summary>
             public DateTimeOffset? EndTime { get; set; }
-            /// <summary>&quot;Only include calls that ended before this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that ended before this date.&quot;</summary>
+            /// <summary>Only include calls that ended before this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that ended before this date.</summary>
             [QueryParameter("EndTime%3C")]
             public DateTimeOffset? EndTime0 { get; set; }
-            /// <summary>&quot;Only include calls that ended on or after this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that ended on or after this date.&quot;</summary>
+            /// <summary>Only include calls that ended on or after this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that ended on or after this date.</summary>
             [QueryParameter("EndTime%3E")]
             public DateTimeOffset? EndTime1 { get; set; }
             /// <summary>Only include calls from this phone number, SIP address, Client identifier or SIM SID.</summary>
@@ -163,15 +163,15 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
 #else
             public string ParentCallSid { get; set; }
 #endif
-            /// <summary>&quot;Only include calls that started on this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that started on this date.&quot;</summary>
+            /// <summary>Only include calls that started on this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that started on this date.</summary>
             public DateTimeOffset? StartTime { get; set; }
-            /// <summary>&quot;Only include calls that started before this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that started before this date.&quot;</summary>
+            /// <summary>Only include calls that started before this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that started before this date.</summary>
             [QueryParameter("StartTime%3C")]
             public DateTimeOffset? StartTime0 { get; set; }
-            /// <summary>&quot;Only include calls that started on or after this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that started on or after this date.&quot;</summary>
+            /// <summary>Only include calls that started on or after this date. Specify a date as `YYYY-MM-DD` in UTC, for example: `2009-07-06`, to read only calls that started on or after this date.</summary>
             [QueryParameter("StartTime%3E")]
             public DateTimeOffset? StartTime1 { get; set; }
-            /// <summary>&quot;The status of the calls to include. Can be: `queued`, `ringing`, `in-progress`, `canceled`, `completed`, `failed`, `busy`, or `no-answer`.&quot;</summary>
+            /// <summary>The status of the calls to include. Can be: `queued`, `ringing`, `in-progress`, `canceled`, `completed`, `failed`, `busy`, or `no-answer`.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.CallEnumStatus? Status { get; set; }
             /// <summary>Only show calls made to this phone number, SIP address, Client identifier or SIM SID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

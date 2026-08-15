@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string CallSid { get; set; }
 #endif
-        /// <summary>&quot;`object` Represents the connection between Twilio and our immediate carrier partners. The events here describe the call lifecycle as reported by Twilio&apos;s carrier media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
+        /// <summary>`object` Represents the connection between Twilio and our immediate carrier partners. The events here describe the call lifecycle as reported by Twilio&apos;s carrier media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventCarrierEdge? CarrierEdge { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventCarrierEdge CarrierEdge { get; set; }
 #endif
-        /// <summary>&quot;`object` Represents the Twilio media gateway for Client calls. The events here describe the call lifecycle as reported by Twilio&apos;s Voice SDK media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
+        /// <summary>`object` Represents the Twilio media gateway for Client calls. The events here describe the call lifecycle as reported by Twilio&apos;s Voice SDK media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventClientEdge? ClientEdge { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;`object` Represents the Voice SDK running locally in the browser or in the Android/iOS application. The events here are emitted by the Voice SDK in response to certain call progress events, network changes, or call quality conditions. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
+        /// <summary>`object` Represents the Voice SDK running locally in the browser or in the Android/iOS application. The events here are emitted by the Voice SDK in response to certain call progress events, network changes, or call quality conditions. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSdkEdge? SdkEdge { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSdkEdge SdkEdge { get; set; }
 #endif
-        /// <summary>&quot;`object` Represents the Twilio media gateway for SIP interface and SIP trunking calls. The events here describe the call lifecycle as reported by Twilio&apos;s public media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.&quot;</summary>
+        /// <summary>`object` Represents the Twilio media gateway for SIP interface and SIP trunking calls. The events here describe the call lifecycle as reported by Twilio&apos;s public media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSipEdge? SipEdge { get; set; }

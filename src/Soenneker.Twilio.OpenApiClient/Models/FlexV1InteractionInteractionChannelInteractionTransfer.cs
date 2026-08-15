@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The status of the Transfer. Can be: `active`, `completed`, `failed`.&quot;</summary>
+        /// <summary>The status of the Transfer. Can be: `active`, `completed`, `failed`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.InteractionTransferEnumTransferStatus? Status { get; set; }
         /// <summary>The SID of the Summary associated with the Transfer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string To { get; set; }
 #endif
-        /// <summary>&quot;The type of the Transfer. Can be: `cold`, `warm`.&quot;</summary>
+        /// <summary>The type of the Transfer. Can be: `cold`, `warm`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.InteractionTransferEnumTransferType? Type { get; set; }
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

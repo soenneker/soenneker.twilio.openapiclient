@@ -24,7 +24,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The answered_by property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumAnsweredBy? AnsweredBy { get; set; }
-        /// <summary>&quot;Specifies the Call Score, if available. This is of type integer. Use a range of 1-5 to indicate the call experience score, with the following mapping as a reference for rating the call [5: Excellent, 4: Good, 3 : Fair, 2 : Poor, 1: Bad].&quot;</summary>
+        /// <summary>Specifies the Call Score, if available. This is of type integer. Use a range of 1-5 to indicate the call experience score, with the following mapping as a reference for rating the call [5: Excellent, 4: Good, 3 : Fair, 2 : Poor, 1: Bad].</summary>
         public int? CallScore { get; set; }
         /// <summary>The unique SID identifier of the Call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,7 +60,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> QualityIssues { get; set; }
 #endif
-        /// <summary>&quot;Specifies if the call was a spam call. Use this to provide feedback on whether calls placed from your account were marked as spam, or if inbound calls received by your account were unwanted spam. Is of type Boolean: true, false. Use true if the call was a spam call.&quot;</summary>
+        /// <summary>Specifies if the call was a spam call. Use this to provide feedback on whether calls placed from your account were marked as spam, or if inbound calls received by your account were unwanted spam. Is of type Boolean: true, false. Use true if the call was a spam call.</summary>
         public bool? Spam { get; set; }
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

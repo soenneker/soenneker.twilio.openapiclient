@@ -127,7 +127,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channel
         public partial class MessagesRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
-            /// <summary>&quot;The sort order of the returned messages. Can be: `asc` (ascending) or `desc` (descending) with `asc` as the default.&quot;</summary>
+            /// <summary>The sort order of the returned messages. Can be: `asc` (ascending) or `desc` (descending) with `asc` as the default.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumOrderType? Order { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }

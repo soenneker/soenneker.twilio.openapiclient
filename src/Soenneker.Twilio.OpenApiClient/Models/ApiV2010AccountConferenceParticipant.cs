@@ -38,7 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string CallSidToCoach { get; set; }
 #endif
-        /// <summary>&quot;Whether the participant is coaching another call. Can be: `true` or `false`. If not present, defaults to `false` unless `call_sid_to_coach` is defined. If `true`, `call_sid_to_coach` must be defined.&quot;</summary>
+        /// <summary>Whether the participant is coaching another call. Can be: `true` or `false`. If not present, defaults to `false` unless `call_sid_to_coach` is defined. If `true`, `call_sid_to_coach` must be defined.</summary>
         public bool? Coaching { get; set; }
         /// <summary>The SID of the conference the participant is in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string DateUpdated { get; set; }
 #endif
-        /// <summary>&quot;Whether the conference ends when the participant leaves. Can be: `true` or `false` and the default is `false`. If `true`, the conference ends and all other participants drop out when the participant leaves.&quot;</summary>
+        /// <summary>Whether the conference ends when the participant leaves. Can be: `true` or `false` and the default is `false`. If `true`, the conference ends and all other participants drop out when the participant leaves.</summary>
         public bool? EndConferenceOnExit { get; set; }
         /// <summary>Whether the participant is on hold. Can be `true` or `false`.</summary>
         public bool? Hold { get; set; }
@@ -86,9 +86,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string QueueTime { get; set; }
 #endif
-        /// <summary>&quot;Whether the conference starts when the participant joins the conference, if it has not already started. Can be: `true` or `false` and the default is `true`. If `false` and the conference has not started, the participant is muted and hears background music until another participant starts the conference.&quot;</summary>
+        /// <summary>Whether the conference starts when the participant joins the conference, if it has not already started. Can be: `true` or `false` and the default is `true`. If `false` and the conference has not started, the participant is muted and hears background music until another participant starts the conference.</summary>
         public bool? StartConferenceOnEnter { get; set; }
-        /// <summary>&quot;The status of the participant&apos;s call in a session. Can be: `queued`, `connecting`, `ringing`, `connected`, `complete`, or `failed`.&quot;</summary>
+        /// <summary>The status of the participant&apos;s call in a session. Can be: `queued`, `connecting`, `ringing`, `connected`, `complete`, or `failed`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ParticipantEnumStatus? Status { get; set; }
         /// <summary>The URI of the resource, relative to `https://api.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

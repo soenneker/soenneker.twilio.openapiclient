@@ -15,9 +15,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The HTTP method to be used when performing the Action. Must be set to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ActionMethod? Method { get; set; }
-        /// <summary>&quot;The type of Action to be performed after the Rule is triggered. Supported Actions are:- `WEBHOOK`: A webhook Action sends an HTTP request to a specified URL with Rule execution results.&quot;</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ActionType? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PostMethod? Method { get; set; }
+        /// <summary>The type of Action to be performed after the Rule is triggered. Supported Actions are:- `WEBHOOK`: A webhook Action sends an HTTP request to a specified URL with Rule execution results.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Models.WebhookType? Type { get; set; }
         /// <summary>The URL endpoint where the Action will send the HTTP request containing the Rule execution results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -51,8 +51,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "method", n => { Method = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ActionMethod>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ActionType>(); } },
+                { "method", n => { Method = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PostMethod>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebhookType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -63,8 +63,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ActionMethod>("method", Method);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ActionType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PostMethod>("method", Method);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebhookType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

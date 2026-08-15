@@ -93,7 +93,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventConversationRelayData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventConversationRelayData();
             if("BaseRelayData".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {

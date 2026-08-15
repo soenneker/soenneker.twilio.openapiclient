@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The status of the transcription. Can be: `in-progress`, `completed`, `failed`.&quot;</summary>
+    /// <summary>The status of the transcription. Can be: `in-progress`, `completed`, `failed`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RecordingTranscriptionEnumStatus
     {

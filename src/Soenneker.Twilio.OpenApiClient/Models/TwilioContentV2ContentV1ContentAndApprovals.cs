@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentAndApprovalsTypesProperty Types { get; set; }
 #endif
-        /// <summary>&quot;Defines the default placeholder values for variables included in the Content resource. e.g. {\&quot;1\&quot;: \&quot;Customer_Name\&quot;}.&quot;</summary>
+        /// <summary>Defines the default placeholder values for variables included in the Content resource. e.g. {&quot;1&quot;: &quot;Customer_Name&quot;}.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioContentV2ContentV1ContentAndApprovalsVariablesProperty? Variables { get; set; }

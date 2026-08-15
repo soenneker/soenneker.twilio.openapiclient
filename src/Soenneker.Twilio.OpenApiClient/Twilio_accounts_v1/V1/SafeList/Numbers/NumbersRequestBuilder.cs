@@ -104,7 +104,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.SafeList.Numbers
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

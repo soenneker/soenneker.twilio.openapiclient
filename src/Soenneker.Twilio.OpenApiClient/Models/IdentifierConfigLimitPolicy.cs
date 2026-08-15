@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;Removal policy to apply when the number of values exceeds the limit andis based on the timestamp of the request when the identifier was added.- `fifo`: First In First Out, removes the oldest values first.- `lifo`: Last In First Out, removes the most recent values first.&quot;</summary>
+    /// <summary>Removal policy to apply when the number of values exceeds the limit andis based on the timestamp of the request when the identifier was added.- `fifo`: First In First Out, removes the oldest values first.- `lifo`: Last In First Out, removes the most recent values first.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum IdentifierConfigLimitPolicy
     {

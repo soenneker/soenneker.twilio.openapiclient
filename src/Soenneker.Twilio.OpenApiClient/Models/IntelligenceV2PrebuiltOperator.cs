@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Author { get; set; }
 #endif
-        /// <summary>&quot;Operator availability status. Possible values: internal, beta, public, retired.&quot;</summary>
+        /// <summary>Operator availability status. Possible values: internal, beta, public, retired.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.PrebuiltOperatorEnumAvailability? Availability { get; set; }
         /// <summary>Operator configuration, following the schema defined by the Operator Type. Only available on Custom Operators created by the Account, will be empty for Pre-Built Operators.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

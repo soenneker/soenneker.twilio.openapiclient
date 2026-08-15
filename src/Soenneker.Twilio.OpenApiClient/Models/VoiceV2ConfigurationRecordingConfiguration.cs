@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback ConferenceRecordingStatusCallback { get; set; }
 #endif
         /// <summary>The configuration type discriminator. Always &quot;Recording&quot; for this resource.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingConfigurationConfigurationType? ConfigurationType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.RecordingConfigurationType? ConfigurationType { get; set; }
         /// <summary>The features to apply to this recording.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "callRecordingStatusCallback", n => { CallRecordingStatusCallback = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback.CreateFromDiscriminatorValue); } },
                 { "compositionPolicy", n => { CompositionPolicy = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicy>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicy.CreateFromDiscriminatorValue); } },
                 { "conferenceRecordingStatusCallback", n => { ConferenceRecordingStatusCallback = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback.CreateFromDiscriminatorValue); } },
-                { "configurationType", n => { ConfigurationType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingConfigurationConfigurationType>(); } },
+                { "configurationType", n => { ConfigurationType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingConfigurationType>(); } },
                 { "features", n => { Features = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingFeature>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingFeature.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -91,7 +91,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback>("callRecordingStatusCallback", CallRecordingStatusCallback);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicy>("compositionPolicy", CompositionPolicy);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback>("conferenceRecordingStatusCallback", ConferenceRecordingStatusCallback);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingConfigurationConfigurationType>("configurationType", ConfigurationType);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingConfigurationType>("configurationType", ConfigurationType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingFeature>("features", Features);
             writer.WriteAdditionalData(AdditionalData);
         }

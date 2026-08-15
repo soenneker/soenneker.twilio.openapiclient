@@ -32,7 +32,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The number of seconds since the Task was created.</summary>
         public int? Age { get; set; }
-        /// <summary>&quot;The current status of the Task&apos;s assignment. Can be: `pending`, `reserved`, `assigned`, `canceled`, `wrapping`, or `completed`.&quot;</summary>
+        /// <summary>The current status of the Task&apos;s assignment. Can be: `pending`, `reserved`, `assigned`, `canceled`, `wrapping`, or `completed`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TaskEnumStatus? AssignmentStatus { get; set; }
         /// <summary>The JSON string with custom attributes of the work. **Note** If this property has been assigned a value, it will only be displayed in FETCH action that returns a single resource. Otherwise, it will be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

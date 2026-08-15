@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> Permission { get; set; }
 #endif
-        /// <summary>&quot;The type of role. Can be: `conversation` for [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) roles or `service` for [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) roles.&quot;</summary>
+        /// <summary>The type of role. Can be: `conversation` for [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) roles or `service` for [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) roles.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1RoleEnumRoleType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1CreateRoleXWwwFormUrlencodedRequest"/> and sets the default values.

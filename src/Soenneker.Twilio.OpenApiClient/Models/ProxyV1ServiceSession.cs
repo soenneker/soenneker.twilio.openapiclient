@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionLinksProperty Links { get; set; }
 #endif
-        /// <summary>&quot;The Mode of the Session. Can be: `message-only`, `voice-only`, or `voice-and-message`.&quot;</summary>
+        /// <summary>The Mode of the Session. Can be: `message-only`, `voice-only`, or `voice-and-message`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.SessionEnumMode? Mode { get; set; }
         /// <summary>The SID of the [Service](https://www.twilio.com/docs/proxy/api/service) the session is associated with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Sid { get; set; }
 #endif
-        /// <summary>&quot;The status of the Session. Can be: `open`, `in-progress`, `closed`, `failed`, or `unknown`.&quot;</summary>
+        /// <summary>The status of the Session. Can be: `open`, `in-progress`, `closed`, `failed`, or `unknown`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.SessionEnumStatus? Status { get; set; }
         /// <summary>The time, in seconds, when the session will expire. The time is measured from the last Session create or the Session&apos;s last Interaction.</summary>
         public int? Ttl { get; set; }

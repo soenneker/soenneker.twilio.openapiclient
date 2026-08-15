@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The API version to use to start a new TwiML session. Can be: `2010-04-01` or `2008-08-01`. The default value is your account&apos;s default API version.&quot;</summary>
+        /// <summary>The API version to use to start a new TwiML session. Can be: `2010-04-01` or `2008-08-01`. The default value is your account&apos;s default API version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ApiVersion { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string MessageStatusCallback { get; set; }
 #endif
-        /// <summary>&quot;Whether to allow other Twilio accounts to dial this applicaton using Dial verb. Can be: `true` or `false`.&quot;</summary>
+        /// <summary>Whether to allow other Twilio accounts to dial this applicaton using Dial verb. Can be: `true` or `false`.</summary>
         public bool? PublicApplicationConnectEnabled { get; set; }
-        /// <summary>&quot;The HTTP method we should use to call `sms_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `sms_fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateApplicationXWwwFormUrlencodedRequestSmsFallbackMethod? SmsFallbackMethod { get; set; }
         /// <summary>The URL that we should call when an error occurs while retrieving or executing the TwiML from `sms_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,9 +50,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SmsFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `sms_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `sms_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateApplicationXWwwFormUrlencodedRequestSmsMethod? SmsMethod { get; set; }
-        /// <summary>&quot;Same as message_status_callback: The URL we should call using a POST method to send status information about SMS messages sent by the application. Deprecated, included for backwards compatibility.&quot;</summary>
+        /// <summary>Same as message_status_callback: The URL we should call using a POST method to send status information about SMS messages sent by the application. Deprecated, included for backwards compatibility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SmsStatusCallback { get; set; }
@@ -76,11 +76,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `status_callback`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `status_callback`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateApplicationXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
-        /// <summary>&quot;Whether we should look up the caller&apos;s caller-ID name from the CNAM database (additional charges apply). Can be: `true` or `false`.&quot;</summary>
+        /// <summary>Whether we should look up the caller&apos;s caller-ID name from the CNAM database (additional charges apply). Can be: `true` or `false`.</summary>
         public bool? VoiceCallerIdLookup { get; set; }
-        /// <summary>&quot;The HTTP method we should use to call `voice_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `voice_fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateApplicationXWwwFormUrlencodedRequestVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>The URL that we should call when an error occurs retrieving or executing the TwiML requested by `url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,7 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string VoiceFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we should use to call `voice_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we should use to call `voice_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateApplicationXWwwFormUrlencodedRequestVoiceMethod? VoiceMethod { get; set; }
         /// <summary>The URL we should call when the phone number assigned to this application receives a call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The Type of the Interaction. Can be: `message`, `voice` or `unknown`.&quot;</summary>
+    /// <summary>The Type of the Interaction. Can be: `message`, `voice` or `unknown`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum InteractionEnumType
     {

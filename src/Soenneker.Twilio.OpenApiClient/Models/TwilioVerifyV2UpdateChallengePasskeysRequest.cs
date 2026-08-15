@@ -40,8 +40,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateChallengePasskeysRequestResponse Response { get; set; }
 #endif
-        /// <summary>The valid credential types supported by the API. The values of this enumeration are used for versioning the `AuthenticatorAssertion` and `AuthenticatorAttestation` structures according to the type of the authenticator.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateChallengePasskeysRequestType? Type { get; set; }
+        /// <summary>The valid credential types supported by the API.The values of this enumeration are used for versioning the `AuthenticatorAssertion` and `AuthenticatorAttestation` structures according to the type of the authenticator.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Models.PublicKeyType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateChallengePasskeysRequest"/> and sets the default values.
         /// </summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "rawId", n => { RawId = n.GetStringValue(); } },
                 { "response", n => { Response = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateChallengePasskeysRequestResponse>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateChallengePasskeysRequestResponse.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateChallengePasskeysRequestType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicKeyType>(); } },
             };
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("rawId", RawId);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateChallengePasskeysRequestResponse>("response", Response);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateChallengePasskeysRequestType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PublicKeyType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

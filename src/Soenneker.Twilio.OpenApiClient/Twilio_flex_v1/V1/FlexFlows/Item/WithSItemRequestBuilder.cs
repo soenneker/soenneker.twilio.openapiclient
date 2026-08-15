@@ -92,7 +92,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.FlexFlows.Item
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <returns>A <see cref="RequestInformation"/></returns>

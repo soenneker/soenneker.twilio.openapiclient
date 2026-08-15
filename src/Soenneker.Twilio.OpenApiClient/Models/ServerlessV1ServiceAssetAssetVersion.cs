@@ -64,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
-        /// <summary>&quot;The access control that determines how the Asset Version resource can be accessed. Can be:  `public`, `protected`, or `private`.&quot;</summary>
+        /// <summary>The access control that determines how the Asset Version resource can be accessed. Can be:  `public`, `protected`, or `private`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.AssetVersionEnumVisibility? Visibility { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceAssetAssetVersion"/> and sets the default values.

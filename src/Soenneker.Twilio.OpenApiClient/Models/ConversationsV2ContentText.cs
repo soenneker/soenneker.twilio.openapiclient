@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string Text { get; set; }
 #endif
         /// <summary>Content type discriminator.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTextType? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TextType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentText"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTextType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TextType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("text", Text);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTextType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TextType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ApiVersion { get; set; }
 #endif
-        /// <summary>&quot;The types of authentication you have mapped to your domain. Can be: `IP_ACL` and `CREDENTIAL_LIST`. If you have both defined for your domain, both will be returned in a comma delimited string. If `auth_type` is not defined, the domain will not be able to receive any traffic.&quot;</summary>
+        /// <summary>The types of authentication you have mapped to your domain. Can be: `IP_ACL` and `CREDENTIAL_LIST`. If you have both defined for your domain, both will be returned in a comma delimited string. If `auth_type` is not defined, the domain will not be able to receive any traffic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AuthType { get; set; }
@@ -116,7 +116,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Uri { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>The URL that we call when an error occurs while retrieving or executing the TwiML requested from `voice_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,7 +126,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string VoiceFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceMethod? VoiceMethod { get; set; }
         /// <summary>The HTTP method we use to call `voice_status_callback_url`. Either `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceStatusCallbackMethod? VoiceStatusCallbackMethod { get; set; }

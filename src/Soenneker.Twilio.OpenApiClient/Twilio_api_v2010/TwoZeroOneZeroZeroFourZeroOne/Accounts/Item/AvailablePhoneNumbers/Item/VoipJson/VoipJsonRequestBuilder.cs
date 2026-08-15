@@ -80,9 +80,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         {
             /// <summary>The area code of the phone numbers to read. Applies to only phone numbers in the US and Canada.</summary>
             public int? AreaCode { get; set; }
-            /// <summary>&quot;Whether to read phone numbers that are new to the Twilio platform. Can be: `true` or `false` and the default is `true`.&quot;</summary>
+            /// <summary>Whether to read phone numbers that are new to the Twilio platform. Can be: `true` or `false` and the default is `true`.</summary>
             public bool? Beta { get; set; }
-            /// <summary>&quot;Matching pattern to identify phone numbers. This pattern can be between 2 and 16 characters long and allows all digits (0-9) and all non-diacritic latin alphabet letters (a-z, A-Z). It accepts four meta-characters: `*`, `%`, `+`, `$`. The `*` and `%` meta-characters can appear multiple times in the pattern. To match wildcards at the beginning or end of the pattern, use `*` to match any single character or `%` to match a sequence of characters. If you use the wildcard patterns, it must include at least two non-meta-characters, and wildcards cannot be used between non-meta-characters. To match the beginning of a pattern, start the pattern with `+`. To match the end of the pattern, append the pattern with `$`. These meta-characters can&apos;t be adjacent to each other.&quot;</summary>
+            /// <summary>Matching pattern to identify phone numbers. This pattern can be between 2 and 16 characters long and allows all digits (0-9) and all non-diacritic latin alphabet letters (a-z, A-Z). It accepts four meta-characters: `*`, `%`, `+`, `$`. The `*` and `%` meta-characters can appear multiple times in the pattern. To match wildcards at the beginning or end of the pattern, use `*` to match any single character or `%` to match a sequence of characters. If you use the wildcard patterns, it must include at least two non-meta-characters, and wildcards cannot be used between non-meta-characters. To match the beginning of a pattern, start the pattern with `+`. To match the end of the pattern, append the pattern with `$`. These meta-characters can&apos;t be adjacent to each other.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             public string? Contains { get; set; }
@@ -92,13 +92,13 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
 #endif
             /// <summary>The search radius, in miles, for a `near_` query.  Can be up to `500` and the default is `25`. Applies to only phone numbers in the US and Canada.</summary>
             public int? Distance { get; set; }
-            /// <summary>&quot;Whether to exclude phone numbers that require an [Address](https://www.twilio.com/docs/usage/api/address). Can be: `true` or `false` and the default is `false`.&quot;</summary>
+            /// <summary>Whether to exclude phone numbers that require an [Address](https://www.twilio.com/docs/usage/api/address). Can be: `true` or `false` and the default is `false`.</summary>
             public bool? ExcludeAllAddressRequired { get; set; }
-            /// <summary>&quot;Whether to exclude phone numbers that require a foreign [Address](https://www.twilio.com/docs/usage/api/address). Can be: `true` or `false` and the default is `false`.&quot;</summary>
+            /// <summary>Whether to exclude phone numbers that require a foreign [Address](https://www.twilio.com/docs/usage/api/address). Can be: `true` or `false` and the default is `false`.</summary>
             public bool? ExcludeForeignAddressRequired { get; set; }
-            /// <summary>&quot;Whether to exclude phone numbers that require a local [Address](https://www.twilio.com/docs/usage/api/address). Can be: `true` or `false` and the default is `false`.&quot;</summary>
+            /// <summary>Whether to exclude phone numbers that require a local [Address](https://www.twilio.com/docs/usage/api/address). Can be: `true` or `false` and the default is `false`.</summary>
             public bool? ExcludeLocalAddressRequired { get; set; }
-            /// <summary>&quot;Whether the phone numbers can receive faxes. Can be: `true` or `false`.&quot;</summary>
+            /// <summary>Whether the phone numbers can receive faxes. Can be: `true` or `false`.</summary>
             public bool? FaxEnabled { get; set; }
             /// <summary>Limit results to a specific local access and transport area ([LATA](https://en.wikipedia.org/wiki/Local_access_and_transport_area)). Given a phone number, search within the same [LATA](https://en.wikipedia.org/wiki/Local_access_and_transport_area) as that number. Applies to only phone numbers in the US and Canada.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -140,7 +140,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
 #else
             public string InRegion { get; set; }
 #endif
-            /// <summary>&quot;Whether the phone numbers can receive MMS messages. Can be: `true` or `false`.&quot;</summary>
+            /// <summary>Whether the phone numbers can receive MMS messages. Can be: `true` or `false`.</summary>
             public bool? MmsEnabled { get; set; }
             /// <summary>Given a latitude/longitude pair `lat,long` find geographically close numbers within `distance` miles. Applies to only phone numbers in the US and Canada.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -170,9 +170,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>&quot;Whether the phone numbers can receive text messages. Can be: `true` or `false`.&quot;</summary>
+            /// <summary>Whether the phone numbers can receive text messages. Can be: `true` or `false`.</summary>
             public bool? SmsEnabled { get; set; }
-            /// <summary>&quot;Whether the phone numbers can receive calls. Can be: `true` or `false`.&quot;</summary>
+            /// <summary>Whether the phone numbers can receive calls. Can be: `true` or `false`.</summary>
             public bool? VoiceEnabled { get; set; }
         }
     }

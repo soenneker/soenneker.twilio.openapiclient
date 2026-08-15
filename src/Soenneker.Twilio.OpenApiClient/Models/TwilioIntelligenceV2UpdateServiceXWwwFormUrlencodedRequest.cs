@@ -18,7 +18,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public bool? AutoRedaction { get; set; }
         /// <summary>Instructs the Speech Recognition service to automatically transcribe all recordings made on the account.</summary>
         public bool? AutoTranscribe { get; set; }
-        /// <summary>&quot;Data logging allows Twilio to improve the quality of the speech recognition &amp; language understanding services through using customer data to refine, fine tune and evaluate machine learning models.Note: Data logging cannot be activated via API, only via www.twilio.com, as it requires additional consent.&quot;</summary>
+        /// <summary>Data logging allows Twilio to improve the quality of the speech recognition &amp; language understanding services through using customer data to refine, fine tune and evaluate machine learning models.Note: Data logging cannot be activated via API, only via www.twilio.com, as it requires additional consent.</summary>
         public bool? DataLogging { get; set; }
         /// <summary>The unique SID identifier of the Public Key resource used to encrypt the sentences and operator results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

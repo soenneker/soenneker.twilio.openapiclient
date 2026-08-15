@@ -52,7 +52,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileProvisionalCopy>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileProvisionalCopy.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Create the provisional copy for a given customer profile with status: TWILIO_APPROVED, this is useful for making updates to an existing immutable customer profile instance.&quot;
+        /// Create the provisional copy for a given customer profile with status: TWILIO_APPROVED, this is useful for making updates to an existing immutable customer profile instance.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1CustomerProfileProvisionalCopy"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -89,7 +89,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Create the provisional copy for a given customer profile with status: TWILIO_APPROVED, this is useful for making updates to an existing immutable customer profile instance.&quot;
+        /// Create the provisional copy for a given customer profile with status: TWILIO_APPROVED, this is useful for making updates to an existing immutable customer profile instance.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

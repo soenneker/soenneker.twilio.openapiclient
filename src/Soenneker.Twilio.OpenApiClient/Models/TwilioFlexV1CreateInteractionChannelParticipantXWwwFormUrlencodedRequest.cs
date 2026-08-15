@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequestRoutingProperties RoutingProperties { get; set; }
 #endif
-        /// <summary>&quot;Participant type. Can be: `agent`, `customer`, `supervisor`, `external`, `unknown`&quot;</summary>
+        /// <summary>Participant type. Can be: `agent`, `customer`, `supervisor`, `external`, `unknown`</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequest"/> and sets the default values.

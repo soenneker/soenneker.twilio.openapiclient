@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Whether the phone number requires an [Address](https://www.twilio.com/docs/usage/api/address) registered with Twilio. Can be: `none`, `any`, `local`, or `foreign`.&quot;</summary>
+        /// <summary>Whether the phone number requires an [Address](https://www.twilio.com/docs/usage/api/address) registered with Twilio. Can be: `none`, `any`, `local`, or `foreign`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.DependentPhoneNumberEnumAddressRequirement? AddressRequirements { get; set; }
         /// <summary>The API version used to start a new TwiML session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,7 +32,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string ApiVersion { get; set; }
 #endif
-        /// <summary>&quot;The set of Boolean properties that indicates whether a phone number can receive calls or messages.  Capabilities are  `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.&quot;</summary>
+        /// <summary>The set of Boolean properties that indicates whether a phone number can receive calls or messages.  Capabilities are  `Voice`, `SMS`, and `MMS` and each capability can be: `true` or `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAddressDependentPhoneNumberCapabilities? Capabilities { get; set; }
@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SmsApplicationSid { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we use to call `sms_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `sms_fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAddressDependentPhoneNumberSmsFallbackMethod? SmsFallbackMethod { get; set; }
         /// <summary>The URL that we call when an error occurs while retrieving or executing the TwiML from `sms_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,7 +108,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SmsFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we use to call `sms_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `sms_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAddressDependentPhoneNumberSmsMethod? SmsMethod { get; set; }
         /// <summary>The URL we call when the phone number receives an incoming SMS message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,7 +126,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string StatusCallback { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we use to call `status_callback`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `status_callback`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAddressDependentPhoneNumberStatusCallbackMethod? StatusCallbackMethod { get; set; }
         /// <summary>The SID of the Trunk that handles calls to the phone number. If a `trunk_sid` is present, we ignore all of the voice urls and voice applications and use those set on the Trunk. Setting a `trunk_sid` will automatically delete your `voice_application_sid` and vice versa.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -152,9 +152,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string VoiceApplicationSid { get; set; }
 #endif
-        /// <summary>&quot;Whether we look up the caller&apos;s caller-ID name from the CNAM database. Can be: `true` or `false`. Caller ID lookups can cost $0.01 each.&quot;</summary>
+        /// <summary>Whether we look up the caller&apos;s caller-ID name from the CNAM database. Can be: `true` or `false`. Caller ID lookups can cost $0.01 each.</summary>
         public bool? VoiceCallerIdLookup { get; set; }
-        /// <summary>&quot;The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAddressDependentPhoneNumberVoiceFallbackMethod? VoiceFallbackMethod { get; set; }
         /// <summary>The URL that we call when an error occurs retrieving or executing the TwiML requested by `url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -164,7 +164,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string VoiceFallbackUrl { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`.&quot;</summary>
+        /// <summary>The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountAddressDependentPhoneNumberVoiceMethod? VoiceMethod { get; set; }
         /// <summary>The URL we call when the phone number receives a call. The `voice_url` will not be used if a `voice_application_sid` or a `trunk_sid` is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

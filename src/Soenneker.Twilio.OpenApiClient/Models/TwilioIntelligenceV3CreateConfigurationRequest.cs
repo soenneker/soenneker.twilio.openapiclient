@@ -31,7 +31,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string DisplayName { get; set; }
 #endif
-        /// <summary>&quot;List of Intelligence Configuration Rules that govern when and how Language Operators run.Each Rule represents a bundle of Operators, Triggers, Context, and Actions to be executed bythe Intelligence Configuration on a Conversation. A maximum of five (5) Rules are allowed perIntelligence Configuration.To create an Intelligence Configuration without any Rules configured yet, pass an empty array(`\&quot;rules\&quot;: []`). The Configuration will not execute any Language Operators until at least one Rulehas been added.&quot;</summary>
+        /// <summary>List of Intelligence Configuration Rules that govern when and how Language Operators run.Each Rule represents a bundle of Operators, Triggers, Context, and Actions to be executed bythe Intelligence Configuration on a Conversation. A maximum of five (5) Rules are allowed perIntelligence Configuration.To create an Intelligence Configuration without any Rules configured yet, pass an empty array(`&quot;rules&quot;: []`). The Configuration will not execute any Language Operators until at least one Rulehas been added.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Twilio.OpenApiClient.Models.RuleCreationRequestPayload>? Rules { get; set; }

@@ -36,7 +36,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public int? AutoCreationStudioRetryCount { get; set; }
         /// <summary>The AutoCreationType property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationAddressEnumAutoCreationType? AutoCreationType { get; set; }
-        /// <summary>&quot;The list of events, firing webhook event for this Conversation. Values can be any of the following: `onMessageAdded`, `onMessageUpdated`, `onMessageRemoved`, `onConversationUpdated`, `onConversationStateUpdated`, `onConversationRemoved`, `onParticipantAdded`, `onParticipantUpdated`, `onParticipantRemoved`, `onDeliveryUpdated`&quot;</summary>
+        /// <summary>The list of events, firing webhook event for this Conversation. Values can be any of the following: `onMessageAdded`, `onMessageUpdated`, `onMessageRemoved`, `onConversationUpdated`, `onConversationStateUpdated`, `onConversationRemoved`, `onParticipantAdded`, `onParticipantUpdated`, `onParticipantRemoved`, `onDeliveryUpdated`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AutoCreationWebhookFilters { get; set; }

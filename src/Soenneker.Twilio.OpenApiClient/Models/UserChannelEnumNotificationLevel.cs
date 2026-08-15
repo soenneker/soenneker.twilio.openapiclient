@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;The push notification level of the User for the Channel. Can be: `default` or `muted`.&quot;</summary>
+    /// <summary>The push notification level of the User for the Channel. Can be: `default` or `muted`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum UserChannelEnumNotificationLevel
     {

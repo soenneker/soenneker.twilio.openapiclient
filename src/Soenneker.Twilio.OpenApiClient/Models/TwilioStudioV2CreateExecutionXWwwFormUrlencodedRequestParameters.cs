@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;JSON data that will be added to the Flow&apos;s context and that can be accessed as variables inside your Flow. For example, if you pass in `Parameters={\&quot;name\&quot;:\&quot;Zeke\&quot;}`, a widget in your Flow can reference the variable `{{flow.data.name}}`, which returns \&quot;Zeke\&quot;. Note: the JSON value must explicitly be passed as a string, not as a hash object. Depending on your particular HTTP library, you may need to add quotes or URL encode the JSON string.&quot;
+    /// JSON data that will be added to the Flow&apos;s context and that can be accessed as variables inside your Flow. For example, if you pass in `Parameters={&quot;name&quot;:&quot;Zeke&quot;}`, a widget in your Flow can reference the variable `{{flow.data.name}}`, which returns &quot;Zeke&quot;. Note: the JSON value must explicitly be passed as a string, not as a hash object. Depending on your particular HTTP library, you may need to add quotes or URL encode the JSON string.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TwilioStudioV2CreateExecutionXWwwFormUrlencodedRequestParameters : IAdditionalDataHolder, IParsable

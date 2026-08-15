@@ -14,7 +14,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The city name, ex: San Francisco.&quot;</summary>
+        /// <summary>The city name, ex: San Francisco.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? City { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string City { get; set; }
 #endif
-        /// <summary>&quot;The country, ex: USA.&quot;</summary>
+        /// <summary>The country, ex: USA.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Country { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Country { get; set; }
 #endif
-        /// <summary>&quot;The state name, ex: CA or California. Note this should match the losing carrier’s information exactly. So if they spell out the entire state’s name instead of abbreviating it, please do so.&quot;</summary>
+        /// <summary>The state name, ex: CA or California. Note this should match the losing carrier’s information exactly. So if they spell out the entire state’s name instead of abbreviating it, please do so.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string State { get; set; }
 #endif
-        /// <summary>&quot;The street address, ex: 101 Spear St&quot;</summary>
+        /// <summary>The street address, ex: 101 Spear St</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Street { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Street { get; set; }
 #endif
-        /// <summary>&quot;The building information, ex : 5th floor.&quot;</summary>
+        /// <summary>The building information, ex : 5th floor.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Street2 { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Street2 { get; set; }
 #endif
-        /// <summary>&quot;The zip code, ex: 94105.&quot;</summary>
+        /// <summary>The zip code, ex: 94105.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Zip { get; set; }

@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.V1.UsageRecords
         {
             /// <summary>Only include usage that has occurred on or before this date. Format is [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).</summary>
             public DateTimeOffset? End { get; set; }
-            /// <summary>&quot;How to summarize the usage by time. Can be: `daily`, `hourly`, or `all`. A value of `all` returns one Usage Record that describes the usage for the entire period.&quot;</summary>
+            /// <summary>How to summarize the usage by time. Can be: `daily`, `hourly`, or `all`. A value of `all` returns one Usage Record that describes the usage for the entire period.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.AccountUsageRecordEnumGranularity? Granularity { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }

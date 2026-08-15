@@ -140,7 +140,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MessagesRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;The sort order of the returned messages. Can be: `asc` (ascending) or `desc` (descending), with `asc` as the default.&quot;</summary>
+            /// <summary>The sort order of the returned messages. Can be: `asc` (ascending) or `desc` (descending), with `asc` as the default.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.ServiceConversationMessageEnumOrderType? Order { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }

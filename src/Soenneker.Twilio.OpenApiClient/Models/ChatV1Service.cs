@@ -130,7 +130,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> WebhookFilters { get; set; }
 #endif
-        /// <summary>&quot;The HTTP method to use for calls to the `pre_webhook_url` and `post_webhook_url` webhooks.  Can be: `POST` or `GET` and the default is `POST`. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.&quot;</summary>
+        /// <summary>The HTTP method to use for calls to the `pre_webhook_url` and `post_webhook_url` webhooks.  Can be: `POST` or `GET` and the default is `POST`. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebhookMethod { get; set; }

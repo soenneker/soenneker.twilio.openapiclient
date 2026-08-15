@@ -114,9 +114,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.DialingPermissions.C
 #else
             public string CountryCode { get; set; }
 #endif
-            /// <summary>&quot;Filter to retrieve the country permissions with dialing to high-risk special service numbers enabled. Can be: `true` or `false`&quot;</summary>
+            /// <summary>Filter to retrieve the country permissions with dialing to high-risk special service numbers enabled. Can be: `true` or `false`</summary>
             public bool? HighRiskSpecialNumbersEnabled { get; set; }
-            /// <summary>&quot;Filter to retrieve the country permissions with dialing to high-risk [toll fraud](https://www.twilio.com/blog/how-to-protect-your-account-from-toll-fraud-with-voice-dialing-geo-permissions-html) numbers enabled. Can be: `true` or `false`.&quot;</summary>
+            /// <summary>Filter to retrieve the country permissions with dialing to high-risk [toll fraud](https://www.twilio.com/blog/how-to-protect-your-account-from-toll-fraud-with-voice-dialing-geo-permissions-html) numbers enabled. Can be: `true` or `false`.</summary>
             public bool? HighRiskTollfraudNumbersEnabled { get; set; }
             /// <summary>Filter to retrieve the country permissions by specifying the [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,7 +126,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.DialingPermissions.C
 #else
             public string IsoCode { get; set; }
 #endif
-            /// <summary>&quot;Filter to retrieve the country permissions with dialing to low-risk numbers enabled. Can be: `true` or `false`.&quot;</summary>
+            /// <summary>Filter to retrieve the country permissions with dialing to low-risk numbers enabled. Can be: `true` or `false`.</summary>
             public bool? LowRiskNumbersEnabled { get; set; }
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }

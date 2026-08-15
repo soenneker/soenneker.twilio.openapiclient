@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>&quot;Caller Id for transfer target. Can be: `from-transferee` (default) or `from-transferor`.&quot;</summary>
+    /// <summary>Caller Id for transfer target. Can be: `from-transferee` (default) or `from-transferor`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TrunkEnumTransferCallerId
     {

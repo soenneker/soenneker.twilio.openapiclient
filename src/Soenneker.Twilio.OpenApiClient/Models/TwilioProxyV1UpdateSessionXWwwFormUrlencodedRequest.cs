@@ -16,7 +16,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session should expire. If this is value is present, it overrides the `ttl` value.</summary>
         public DateTimeOffset? DateExpiry { get; set; }
-        /// <summary>&quot;The status of the Session. Can be: `open`, `in-progress`, `closed`, `failed`, or `unknown`.&quot;</summary>
+        /// <summary>The status of the Session. Can be: `open`, `in-progress`, `closed`, `failed`, or `unknown`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.SessionEnumStatus? Status { get; set; }
         /// <summary>The time, in seconds, when the session will expire. The time is measured from the last Session create or the Session&apos;s last Interaction.</summary>
         public int? Ttl { get; set; }
