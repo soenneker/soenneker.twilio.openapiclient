@@ -61,10 +61,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The absolute URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinksProperty Links { get; set; }
 #endif
         /// <summary>Whether to enable the [MMS Converter](https://www.twilio.com/docs/messaging/services#mms-converter) for messages sent through the Service instance.</summary>
         public bool? MmsConverter { get; set; }
@@ -150,7 +150,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "inbound_method", n => { InboundMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceInboundMethod>(); } },
                 { "inbound_request_url", n => { InboundRequestUrl = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinksProperty.CreateFromDiscriminatorValue); } },
                 { "mms_converter", n => { MmsConverter = n.GetBoolValue(); } },
                 { "scan_message_content", n => { ScanMessageContent = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumScanMessageContent>(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -182,7 +182,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceInboundMethod>("inbound_method", InboundMethod);
             writer.WriteStringValue("inbound_request_url", InboundRequestUrl);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceLinksProperty>("links", Links);
             writer.WriteBoolValue("mms_converter", MmsConverter);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumScanMessageContent>("scan_message_content", ScanMessageContent);
             writer.WriteStringValue("sid", Sid);

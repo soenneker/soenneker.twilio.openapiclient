@@ -59,10 +59,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The absolute URLs of the [Channel](https://www.twilio.com/docs/chat/channels) and [Binding](https://www.twilio.com/docs/chat/rest/binding-resource) resources related to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceUserLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceUserLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceUserLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceUserLinksProperty Links { get; set; }
 #endif
         /// <summary>The SID of the [Role](https://www.twilio.com/docs/chat/rest/role-resource) assigned to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -131,7 +131,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "is_notifiable", n => { IsNotifiable = n.GetBoolValue(); } },
                 { "is_online", n => { IsOnline = n.GetBoolValue(); } },
                 { "joined_channels_count", n => { JoinedChannelsCount = n.GetIntValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceUserLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceUserLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceUserLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceUserLinksProperty.CreateFromDiscriminatorValue); } },
                 { "role_sid", n => { RoleSid = n.GetStringValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -154,7 +154,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("is_notifiable", IsNotifiable);
             writer.WriteBoolValue("is_online", IsOnline);
             writer.WriteIntValue("joined_channels_count", JoinedChannelsCount);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceUserLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV2ServiceUserLinksProperty>("links", Links);
             writer.WriteStringValue("role_sid", RoleSid);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);

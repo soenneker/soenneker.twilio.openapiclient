@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecutionExecutionStepLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecutionExecutionStepLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecutionExecutionStepLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecutionExecutionStepLinksProperty Links { get; set; }
 #endif
         /// <summary>The event that caused the Flow to transition to the Step.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -145,7 +145,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "execution_sid", n => { ExecutionSid = n.GetStringValue(); } },
                 { "flow_sid", n => { FlowSid = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecutionExecutionStepLinks>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecutionExecutionStepLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecutionExecutionStepLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecutionExecutionStepLinksProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "parent_step_sid", n => { ParentStepSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -168,7 +168,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("execution_sid", ExecutionSid);
             writer.WriteStringValue("flow_sid", FlowSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecutionExecutionStepLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowExecutionExecutionStepLinksProperty>("links", Links);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("parent_step_sid", ParentStepSid);
             writer.WriteStringValue("sid", Sid);

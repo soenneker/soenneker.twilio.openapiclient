@@ -45,10 +45,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of resources related to the Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionLinksProperty Links { get; set; }
 #endif
         /// <summary>&quot;The Mode of the Session. Can be: `message-only`, `voice-only`, or `voice-and-message`.&quot;</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.SessionEnumMode? Mode { get; set; }
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_last_interaction", n => { DateLastInteraction = n.GetDateTimeOffsetValue(); } },
                 { "date_started", n => { DateStarted = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionLinksProperty.CreateFromDiscriminatorValue); } },
                 { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SessionEnumMode>(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -147,7 +147,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_last_interaction", DateLastInteraction);
             writer.WriteDateTimeOffsetValue("date_started", DateStarted);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ProxyV1ServiceSessionLinksProperty>("links", Links);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SessionEnumMode>("mode", Mode);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);

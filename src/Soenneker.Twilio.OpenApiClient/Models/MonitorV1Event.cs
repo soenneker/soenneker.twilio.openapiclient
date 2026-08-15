@@ -67,10 +67,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The absolute URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinksProperty Links { get; set; }
 #endif
         /// <summary>The SID of the resource that was affected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -152,7 +152,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "event_data", n => { EventData = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventEventData>(global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventEventData.CreateFromDiscriminatorValue); } },
                 { "event_date", n => { EventDate = n.GetDateTimeOffsetValue(); } },
                 { "event_type", n => { EventType = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinks>(global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinksProperty.CreateFromDiscriminatorValue); } },
                 { "resource_sid", n => { ResourceSid = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -175,7 +175,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventEventData>("event_data", EventData);
             writer.WriteDateTimeOffsetValue("event_date", EventDate);
             writer.WriteStringValue("event_type", EventType);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV1EventLinksProperty>("links", Links);
             writer.WriteStringValue("resource_sid", ResourceSid);
             writer.WriteStringValue("resource_type", ResourceType);
             writer.WriteStringValue("sid", Sid);

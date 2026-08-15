@@ -85,10 +85,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of related resources identified by their URIs relative to `https://api.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceSubresourceUris? SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceSubresourceUrisProperty? SubresourceUris { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceSubresourceUris SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceSubresourceUrisProperty SubresourceUris { get; set; }
 #endif
         /// <summary>The URI of this resource, relative to `https://api.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -133,7 +133,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "region", n => { Region = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumStatus>(); } },
-                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceSubresourceUris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceSubresourceUris.CreateFromDiscriminatorValue); } },
+                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceSubresourceUrisProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceSubresourceUrisProperty.CreateFromDiscriminatorValue); } },
                 { "uri", n => { Uri = n.GetStringValue(); } },
             };
         }
@@ -154,7 +154,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("region", Region);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumStatus>("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceSubresourceUris>("subresource_uris", SubresourceUris);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountConferenceSubresourceUrisProperty>("subresource_uris", SubresourceUris);
             writer.WriteStringValue("uri", Uri);
             writer.WriteAdditionalData(AdditionalData);
         }

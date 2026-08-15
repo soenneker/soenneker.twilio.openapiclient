@@ -69,10 +69,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of the Flow&apos;s nested resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinksProperty Links { get; set; }
 #endif
         /// <summary>The latest revision number of the Flow&apos;s definition.</summary>
         public int? Revision { get; set; }
@@ -146,7 +146,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "definition", n => { Definition = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowDefinition>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowDefinition.CreateFromDiscriminatorValue); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinks>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinksProperty.CreateFromDiscriminatorValue); } },
                 { "revision", n => { Revision = n.GetIntValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2FlowEnumStatus>(); } },
@@ -171,7 +171,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowDefinition>("definition", Definition);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowErrorsItem>("errors", Errors);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinksProperty>("links", Links);
             writer.WriteIntValue("revision", Revision);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2FlowEnumStatus>("status", Status);

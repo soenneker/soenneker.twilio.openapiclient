@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The JSON object with the configuration that must be provided when installing a given Add-on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnConfigurationSchema? ConfigurationSchema { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnConfigurationSchemaProperty? ConfigurationSchema { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnConfigurationSchema ConfigurationSchema { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnConfigurationSchemaProperty ConfigurationSchema { get; set; }
 #endif
         /// <summary>A short description of the Add-on&apos;s functionality.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnLinksProperty Links { get; set; }
 #endif
         /// <summary>How customers are charged for using this Add-on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,10 +95,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "configuration_schema", n => { ConfigurationSchema = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnConfigurationSchema>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnConfigurationSchema.CreateFromDiscriminatorValue); } },
+                { "configuration_schema", n => { ConfigurationSchema = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnConfigurationSchemaProperty>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnConfigurationSchemaProperty.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnLinks>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnLinksProperty.CreateFromDiscriminatorValue); } },
                 { "pricing_type", n => { PricingType = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -111,10 +111,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnConfigurationSchema>("configuration_schema", ConfigurationSchema);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnConfigurationSchemaProperty>("configuration_schema", ConfigurationSchema);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1AvailableAddOnLinksProperty>("links", Links);
             writer.WriteStringValue("pricing_type", PricingType);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);

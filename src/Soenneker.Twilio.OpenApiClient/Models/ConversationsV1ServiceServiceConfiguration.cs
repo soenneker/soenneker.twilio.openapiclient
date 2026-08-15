@@ -49,10 +49,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains an absolute API resource URL to access the push notifications configuration of this service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationLinksProperty Links { get; set; }
 #endif
         /// <summary>Whether the [Reachability Indicator](https://www.twilio.com/docs/conversations/reachability) is enabled for this Conversations Service. The default is `false`.</summary>
         public bool? ReachabilityEnabled { get; set; }
@@ -93,7 +93,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "default_chat_service_role_sid", n => { DefaultChatServiceRoleSid = n.GetStringValue(); } },
                 { "default_conversation_creator_role_sid", n => { DefaultConversationCreatorRoleSid = n.GetStringValue(); } },
                 { "default_conversation_role_sid", n => { DefaultConversationRoleSid = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationLinksProperty.CreateFromDiscriminatorValue); } },
                 { "reachability_enabled", n => { ReachabilityEnabled = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -109,7 +109,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("default_chat_service_role_sid", DefaultChatServiceRoleSid);
             writer.WriteStringValue("default_conversation_creator_role_sid", DefaultConversationCreatorRoleSid);
             writer.WriteStringValue("default_conversation_role_sid", DefaultConversationRoleSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ServiceServiceConfigurationLinksProperty>("links", Links);
             writer.WriteBoolValue("reachability_enabled", ReachabilityEnabled);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

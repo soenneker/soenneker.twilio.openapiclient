@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of the Assigned Items of the Trust Product resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinksProperty Links { get; set; }
 #endif
         /// <summary>The unique string of the policy that is associated with the Trust Product resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -125,7 +125,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinksProperty.CreateFromDiscriminatorValue); } },
                 { "policy_sid", n => { PolicySid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TrustProductEnumStatus>(); } },
@@ -147,7 +147,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("email", Email);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductErrorsItem>("errors", Errors);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinksProperty>("links", Links);
             writer.WriteStringValue("policy_sid", PolicySid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TrustProductEnumStatus>("status", Status);

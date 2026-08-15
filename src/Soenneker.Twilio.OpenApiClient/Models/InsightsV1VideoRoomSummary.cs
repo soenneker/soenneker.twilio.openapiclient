@@ -47,10 +47,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Room subresources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinksProperty Links { get; set; }
 #endif
         /// <summary>Maximum number of participants allowed in the room at the same time allowed by the application settings.</summary>
         public int? MaxConcurrentParticipants { get; set; }
@@ -142,7 +142,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "edge_location", n => { EdgeLocation = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEdgeLocation>(); } },
                 { "end_reason", n => { EndReason = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEndReason>(); } },
                 { "end_time", n => { EndTime = n.GetDateTimeOffsetValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinks>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinksProperty.CreateFromDiscriminatorValue); } },
                 { "max_concurrent_participants", n => { MaxConcurrentParticipants = n.GetIntValue(); } },
                 { "max_participants", n => { MaxParticipants = n.GetIntValue(); } },
                 { "media_region", n => { MediaRegion = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumTwilioRealm>(); } },
@@ -177,7 +177,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEdgeLocation>("edge_location", EdgeLocation);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEndReason>("end_reason", EndReason);
             writer.WriteDateTimeOffsetValue("end_time", EndTime);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinksProperty>("links", Links);
             writer.WriteIntValue("max_concurrent_participants", MaxConcurrentParticipants);
             writer.WriteIntValue("max_participants", MaxParticipants);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumTwilioRealm>("media_region", MediaRegion);

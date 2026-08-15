@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinksProperty Links { get; set; }
 #endif
         /// <summary>The URL of the media file associated with the recording when stored externally. See [External S3 Recordings](/docs/video/api/external-s3-recordings) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -135,7 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
                 { "grouping_sids", n => { GroupingSids = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingGroupingSids>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingGroupingSids.CreateFromDiscriminatorValue); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinksProperty.CreateFromDiscriminatorValue); } },
                 { "media_external_location", n => { MediaExternalLocation = n.GetStringValue(); } },
                 { "offset", n => { Offset = n.GetLongValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -162,7 +162,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteIntValue("duration", Duration);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingGroupingSids>("grouping_sids", GroupingSids);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RecordingLinksProperty>("links", Links);
             writer.WriteStringValue("media_external_location", MediaExternalLocation);
             writer.WriteLongValue("offset", Offset);
             writer.WriteStringValue("sid", Sid);

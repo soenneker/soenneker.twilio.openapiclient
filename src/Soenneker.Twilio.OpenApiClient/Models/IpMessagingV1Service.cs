@@ -71,10 +71,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinksProperty Links { get; set; }
 #endif
         /// <summary>The notifications property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -182,7 +182,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "default_service_role_sid", n => { DefaultServiceRoleSid = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLimits>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLimits.CreateFromDiscriminatorValue); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinksProperty.CreateFromDiscriminatorValue); } },
                 { "notifications", n => { Notifications = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceNotifications>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceNotifications.CreateFromDiscriminatorValue); } },
                 { "post_webhook_url", n => { PostWebhookUrl = n.GetStringValue(); } },
                 { "pre_webhook_url", n => { PreWebhookUrl = n.GetStringValue(); } },
@@ -212,7 +212,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("default_service_role_sid", DefaultServiceRoleSid);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLimits>("limits", Limits);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceLinksProperty>("links", Links);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV1ServiceNotifications>("notifications", Notifications);
             writer.WriteStringValue("post_webhook_url", PostWebhookUrl);
             writer.WriteStringValue("pre_webhook_url", PreWebhookUrl);

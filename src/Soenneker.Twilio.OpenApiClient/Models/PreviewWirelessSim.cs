@@ -69,10 +69,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinksProperty Links { get; set; }
 #endif
         /// <summary>The rate_plan_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -187,7 +187,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "e_id", n => { EId = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "iccid", n => { Iccid = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinks>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinksProperty.CreateFromDiscriminatorValue); } },
                 { "rate_plan_sid", n => { RatePlanSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sms_fallback_method", n => { SmsFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimSmsFallbackMethod>(); } },
@@ -218,7 +218,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("e_id", EId);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("iccid", Iccid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimLinksProperty>("links", Links);
             writer.WriteStringValue("rate_plan_sid", RatePlanSid);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimSmsFallbackMethod>("sms_fallback_method", SmsFallbackMethod);

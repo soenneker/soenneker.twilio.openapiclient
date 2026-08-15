@@ -29,10 +29,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains a dictionary of URL links to nested resources of this schema.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SchemaLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SchemaLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SchemaLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SchemaLinksProperty Links { get; set; }
 #endif
         /// <summary>The URL of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "latest_version", n => { LatestVersion = n.GetIntValue(); } },
                 { "latest_version_date_created", n => { LatestVersionDateCreated = n.GetDateTimeOffsetValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SchemaLinks>(global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SchemaLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SchemaLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SchemaLinksProperty.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -85,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteIntValue("latest_version", LatestVersion);
             writer.WriteDateTimeOffsetValue("latest_version_date_created", LatestVersionDateCreated);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SchemaLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SchemaLinksProperty>("links", Links);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

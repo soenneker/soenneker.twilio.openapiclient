@@ -103,10 +103,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of mapping resources associated with the SIP Domain resource identified by their relative URIs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUris? SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty? SubresourceUris { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUris SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty SubresourceUris { get; set; }
 #endif
         /// <summary>The URI of the resource, relative to `https://api.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -184,7 +184,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "secure", n => { Secure = n.GetBoolValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sip_registration", n => { SipRegistration = n.GetBoolValue(); } },
-                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUris.CreateFromDiscriminatorValue); } },
+                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty.CreateFromDiscriminatorValue); } },
                 { "uri", n => { Uri = n.GetStringValue(); } },
                 { "voice_fallback_method", n => { VoiceFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceFallbackMethod>(); } },
                 { "voice_fallback_url", n => { VoiceFallbackUrl = n.GetStringValue(); } },
@@ -214,7 +214,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("secure", Secure);
             writer.WriteStringValue("sid", Sid);
             writer.WriteBoolValue("sip_registration", SipRegistration);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUris>("subresource_uris", SubresourceUris);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty>("subresource_uris", SubresourceUris);
             writer.WriteStringValue("uri", Uri);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceFallbackMethod>("voice_fallback_method", VoiceFallbackMethod);
             writer.WriteStringValue("voice_fallback_url", VoiceFallbackUrl);

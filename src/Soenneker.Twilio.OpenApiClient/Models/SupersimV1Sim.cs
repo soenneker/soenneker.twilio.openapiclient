@@ -45,10 +45,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimLinksProperty Links { get; set; }
 #endif
         /// <summary>The unique string that identifies the Sim resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,7 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "fleet_sid", n => { FleetSid = n.GetStringValue(); } },
                 { "iccid", n => { Iccid = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimLinks>(global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimLinksProperty.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SimEnumStatus>(); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
@@ -125,7 +125,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("fleet_sid", FleetSid);
             writer.WriteStringValue("iccid", Iccid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimLinksProperty>("links", Links);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SimEnumStatus>("status", Status);
             writer.WriteStringValue("unique_name", UniqueName);

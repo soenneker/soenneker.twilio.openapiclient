@@ -47,10 +47,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of resources related to the Sync Document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceDocumentLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceDocumentLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceDocumentLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceDocumentLinksProperty Links { get; set; }
 #endif
         /// <summary>The current revision of the Sync Document, represented as a string. The `revision` property is used with conditional updates to ensure data consistency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,7 +123,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_expires", n => { DateExpires = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceDocumentLinks>(global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceDocumentLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceDocumentLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceDocumentLinksProperty.CreateFromDiscriminatorValue); } },
                 { "revision", n => { Revision = n.GetStringValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -144,7 +144,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_expires", DateExpires);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceDocumentLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceDocumentLinksProperty>("links", Links);
             writer.WriteStringValue("revision", Revision);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);

@@ -129,10 +129,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of related resources identified by their relative URIs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingSubresourceUris? SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingSubresourceUrisProperty? SubresourceUris { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingSubresourceUris SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingSubresourceUrisProperty SubresourceUris { get; set; }
 #endif
         /// <summary>The URI of the resource, relative to `https://api.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -184,7 +184,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "source", n => { Source = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumSource>(); } },
                 { "start_time", n => { StartTime = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumStatus>(); } },
-                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingSubresourceUris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingSubresourceUris.CreateFromDiscriminatorValue); } },
+                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingSubresourceUrisProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingSubresourceUrisProperty.CreateFromDiscriminatorValue); } },
                 { "uri", n => { Uri = n.GetStringValue(); } },
             };
         }
@@ -212,7 +212,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumSource>("source", Source);
             writer.WriteStringValue("start_time", StartTime);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumStatus>("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingSubresourceUris>("subresource_uris", SubresourceUris);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingSubresourceUrisProperty>("subresource_uris", SubresourceUris);
             writer.WriteStringValue("uri", Uri);
             writer.WriteAdditionalData(AdditionalData);
         }

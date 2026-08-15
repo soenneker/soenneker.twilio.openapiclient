@@ -69,10 +69,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty Links { get; set; }
 #endif
         /// <summary>Whether multi-tasking is enabled. The default is `true`, which enables multi-tasking. Multi-tasking allows Workers to handle multiple Tasks simultaneously. When enabled (`true`), each Worker can receive parallel reservations up to the per-channel maximums defined in the Workers section. In single-tasking each Worker would only receive a new reservation when the previous task is completed. Learn more at [Multitasking](https://www.twilio.com/docs/taskrouter/multitasking).</summary>
         public bool? MultiTaskEnabled { get; set; }
@@ -143,7 +143,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "event_callback_url", n => { EventCallbackUrl = n.GetStringValue(); } },
                 { "events_filter", n => { EventsFilter = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty.CreateFromDiscriminatorValue); } },
                 { "multi_task_enabled", n => { MultiTaskEnabled = n.GetBoolValue(); } },
                 { "prioritize_queue_order", n => { PrioritizeQueueOrder = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder>(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -167,7 +167,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("event_callback_url", EventCallbackUrl);
             writer.WriteStringValue("events_filter", EventsFilter);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty>("links", Links);
             writer.WriteBoolValue("multi_task_enabled", MultiTaskEnabled);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder>("prioritize_queue_order", PrioritizeQueueOrder);
             writer.WriteStringValue("sid", Sid);

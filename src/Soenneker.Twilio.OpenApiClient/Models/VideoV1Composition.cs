@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URL of the media file associated with the composition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinksProperty Links { get; set; }
 #endif
         /// <summary>The URL of the media file associated with the composition when stored externally. See [External S3 Compositions](/docs/video/api/external-s3-compositions) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -158,7 +158,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_deleted", n => { DateDeleted = n.GetDateTimeOffsetValue(); } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
                 { "format", n => { Format = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CompositionEnumFormat>(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinksProperty.CreateFromDiscriminatorValue); } },
                 { "media_external_location", n => { MediaExternalLocation = n.GetStringValue(); } },
                 { "resolution", n => { Resolution = n.GetStringValue(); } },
                 { "room_sid", n => { RoomSid = n.GetStringValue(); } },
@@ -188,7 +188,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_deleted", DateDeleted);
             writer.WriteIntValue("duration", Duration);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CompositionEnumFormat>("format", Format);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1CompositionLinksProperty>("links", Links);
             writer.WriteStringValue("media_external_location", MediaExternalLocation);
             writer.WriteStringValue("resolution", Resolution);
             writer.WriteStringValue("room_sid", RoomSid);

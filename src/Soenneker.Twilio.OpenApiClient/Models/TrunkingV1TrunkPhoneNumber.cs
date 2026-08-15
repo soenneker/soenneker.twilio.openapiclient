@@ -57,10 +57,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberLinksProperty Links { get; set; }
 #endif
         /// <summary>The phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -195,7 +195,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberLinks>(global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberLinksProperty.CreateFromDiscriminatorValue); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sms_application_sid", n => { SmsApplicationSid = n.GetStringValue(); } },
@@ -230,7 +230,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkingV1TrunkPhoneNumberLinksProperty>("links", Links);
             writer.WriteStringValue("phone_number", PhoneNumber);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("sms_application_sid", SmsApplicationSid);

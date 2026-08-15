@@ -29,10 +29,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileLinksProperty Links { get; set; }
 #endif
         /// <summary>The unique string that identifies the Network Access Profile resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,7 +86,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileLinks>(global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileLinksProperty.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -102,7 +102,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileLinksProperty>("links", Links);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("unique_name", UniqueName);
             writer.WriteStringValue("url", Url);

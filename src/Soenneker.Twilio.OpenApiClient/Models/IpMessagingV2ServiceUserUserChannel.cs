@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserUserChannelLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserUserChannelLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserUserChannelLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserUserChannelLinksProperty Links { get; set; }
 #endif
         /// <summary>The member_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,7 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "channel_sid", n => { ChannelSid = n.GetStringValue(); } },
                 { "last_consumed_message_index", n => { LastConsumedMessageIndex = n.GetIntValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserUserChannelLinks>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserUserChannelLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserUserChannelLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserUserChannelLinksProperty.CreateFromDiscriminatorValue); } },
                 { "member_sid", n => { MemberSid = n.GetStringValue(); } },
                 { "notification_level", n => { NotificationLevel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UserChannelEnumNotificationLevel>(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
@@ -126,7 +126,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("channel_sid", ChannelSid);
             writer.WriteIntValue("last_consumed_message_index", LastConsumedMessageIndex);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserUserChannelLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceUserUserChannelLinksProperty>("links", Links);
             writer.WriteStringValue("member_sid", MemberSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UserChannelEnumNotificationLevel>("notification_level", NotificationLevel);
             writer.WriteStringValue("service_sid", ServiceSid);

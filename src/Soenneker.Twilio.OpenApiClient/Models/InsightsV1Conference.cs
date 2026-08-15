@@ -67,10 +67,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains a dictionary of URL links to nested resources of this Conference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceLinksProperty Links { get; set; }
 #endif
         /// <summary>Actual maximum number of concurrent participants in the conference.</summary>
         public int? MaxConcurrentParticipants { get; set; }
@@ -149,7 +149,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "end_time", n => { EndTime = n.GetDateTimeOffsetValue(); } },
                 { "ended_by", n => { EndedBy = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceLinksProperty.CreateFromDiscriminatorValue); } },
                 { "max_concurrent_participants", n => { MaxConcurrentParticipants = n.GetIntValue(); } },
                 { "max_participants", n => { MaxParticipants = n.GetIntValue(); } },
                 { "mixer_region", n => { MixerRegion = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumRegion>(); } },
@@ -181,7 +181,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumConferenceEndReason>("end_reason", EndReason);
             writer.WriteDateTimeOffsetValue("end_time", EndTime);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceLinksProperty>("links", Links);
             writer.WriteIntValue("max_concurrent_participants", MaxConcurrentParticipants);
             writer.WriteIntValue("max_participants", MaxParticipants);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumRegion>("mixer_region", MixerRegion);

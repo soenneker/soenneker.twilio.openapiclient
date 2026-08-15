@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionLinksProperty Links { get; set; }
 #endif
         /// <summary>A JSON Object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality.  All attributes in the Routing object on your Interaction request body are added “as is” to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,7 +97,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionChannel>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionChannel.CreateFromDiscriminatorValue); } },
                 { "interaction_context_sid", n => { InteractionContextSid = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionLinks>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionLinksProperty.CreateFromDiscriminatorValue); } },
                 { "routing", n => { Routing = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionRouting>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionRouting.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -113,7 +113,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionChannel>("channel", Channel);
             writer.WriteStringValue("interaction_context_sid", InteractionContextSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionLinksProperty>("links", Links);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InteractionRouting>("routing", Routing);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("url", Url);

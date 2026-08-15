@@ -47,10 +47,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of the Service&apos;s nested resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceLinksProperty Links { get; set; }
 #endif
         /// <summary>The unique string that we created to identify the Service resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,7 +109,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "domain_base", n => { DomainBase = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "include_credentials", n => { IncludeCredentials = n.GetBoolValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceLinksProperty.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "ui_editable", n => { UiEditable = n.GetBoolValue(); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
@@ -129,7 +129,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("domain_base", DomainBase);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteBoolValue("include_credentials", IncludeCredentials);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceLinksProperty>("links", Links);
             writer.WriteStringValue("sid", Sid);
             writer.WriteBoolValue("ui_editable", UiEditable);
             writer.WriteStringValue("unique_name", UniqueName);

@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinksProperty Links { get; set; }
 #endif
         /// <summary>The maximum number of published audio, video, and data tracks all participants combined are allowed to publish in the room at the same time. Check [Programmable Video Limits](https://www.twilio.com/docs/video/programmable-video-limits) for more details. If it is set to 0 it means unconstrained.</summary>
         public int? MaxConcurrentPublishedTracks { get; set; }
@@ -148,7 +148,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "enable_turn", n => { EnableTurn = n.GetBoolValue(); } },
                 { "end_time", n => { EndTime = n.GetDateTimeOffsetValue(); } },
                 { "large_room", n => { LargeRoom = n.GetBoolValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinksProperty.CreateFromDiscriminatorValue); } },
                 { "max_concurrent_published_tracks", n => { MaxConcurrentPublishedTracks = n.GetIntValue(); } },
                 { "max_participant_duration", n => { MaxParticipantDuration = n.GetIntValue(); } },
                 { "max_participants", n => { MaxParticipants = n.GetIntValue(); } },
@@ -181,7 +181,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("enable_turn", EnableTurn);
             writer.WriteDateTimeOffsetValue("end_time", EndTime);
             writer.WriteBoolValue("large_room", LargeRoom);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomLinksProperty>("links", Links);
             writer.WriteIntValue("max_concurrent_published_tracks", MaxConcurrentPublishedTracks);
             writer.WriteIntValue("max_participant_duration", MaxParticipantDuration);
             writer.WriteIntValue("max_participants", MaxParticipants);

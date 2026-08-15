@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The JSON object that represents the current configuration of installed Add-on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnConfiguration? Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnConfigurationProperty? Configuration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnConfiguration Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnConfigurationProperty Configuration { get; set; }
 #endif
         /// <summary>The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnLinksProperty Links { get; set; }
 #endif
         /// <summary>The unique string that we created to identify the InstalledAddOn resource. This Sid can also be found in the Console on that specific Add-ons page as the &apos;Available Add-on Sid&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,12 +108,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnConfiguration.CreateFromDiscriminatorValue); } },
+                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnConfigurationProperty>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnConfigurationProperty.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnLinks>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnLinksProperty.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -127,12 +127,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnConfiguration>("configuration", Configuration);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnConfigurationProperty>("configuration", Configuration);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnLinksProperty>("links", Links);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("unique_name", UniqueName);
             writer.WriteStringValue("url", Url);

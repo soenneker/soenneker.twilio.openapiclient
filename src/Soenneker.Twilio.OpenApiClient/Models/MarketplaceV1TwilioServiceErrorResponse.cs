@@ -38,10 +38,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The params property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponseParams? Params { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponseParamsProperty? Params { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponseParams Params { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponseParamsProperty Params { get; set; }
 #endif
         /// <summary>HTTP response status code</summary>
         public int? Status { get; set; }
@@ -73,7 +73,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "code", n => { Code = n.GetIntValue(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
                 { "more_info", n => { MoreInfo = n.GetStringValue(); } },
-                { "params", n => { Params = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponseParams>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponseParams.CreateFromDiscriminatorValue); } },
+                { "params", n => { Params = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponseParamsProperty>(global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponseParamsProperty.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetIntValue(); } },
             };
         }
@@ -87,7 +87,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("code", Code);
             writer.WriteStringValue("message", MessageEscaped);
             writer.WriteStringValue("more_info", MoreInfo);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponseParams>("params", Params);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponseParamsProperty>("params", Params);
             writer.WriteIntValue("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }

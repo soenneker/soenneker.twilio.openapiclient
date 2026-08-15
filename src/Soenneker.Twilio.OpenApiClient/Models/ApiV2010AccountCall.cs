@@ -179,10 +179,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of subresources available to this call, identified by their URIs relative to `https://api.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallSubresourceUris? SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallSubresourceUrisProperty? SubresourceUris { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallSubresourceUris SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallSubresourceUrisProperty SubresourceUris { get; set; }
 #endif
         /// <summary>The phone number, SIP address, Client identifier or SIM SID that received this call. Phone numbers are in [E.164](https://www.twilio.com/docs/glossary/what-e164) format (e.g., +16175551212). SIP addresses are formatted as `name@company.com`. Client identifiers are formatted `client:name`. SIM SIDs are formatted as `sim:sid`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -262,7 +262,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "start_time", n => { StartTime = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallEnumStatus>(); } },
-                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallSubresourceUris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallSubresourceUris.CreateFromDiscriminatorValue); } },
+                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallSubresourceUrisProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallSubresourceUrisProperty.CreateFromDiscriminatorValue); } },
                 { "to", n => { To = n.GetStringValue(); } },
                 { "to_formatted", n => { ToFormatted = n.GetStringValue(); } },
                 { "trunk_sid", n => { TrunkSid = n.GetStringValue(); } },
@@ -297,7 +297,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("start_time", StartTime);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallEnumStatus>("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallSubresourceUris>("subresource_uris", SubresourceUris);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountCallSubresourceUrisProperty>("subresource_uris", SubresourceUris);
             writer.WriteStringValue("to", To);
             writer.WriteStringValue("to_formatted", ToFormatted);
             writer.WriteStringValue("trunk_sid", TrunkSid);

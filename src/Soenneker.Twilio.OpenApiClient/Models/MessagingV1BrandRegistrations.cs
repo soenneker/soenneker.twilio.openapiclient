@@ -83,10 +83,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinksProperty Links { get; set; }
 #endif
         /// <summary>A boolean that specifies whether brand should be a mock or not. If true, brand will be registered as a mock brand. Defaults to false if no value is provided.</summary>
         public bool? Mock { get; set; }
@@ -165,7 +165,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "failure_reason", n => { FailureReason = n.GetStringValue(); } },
                 { "government_entity", n => { GovernmentEntity = n.GetBoolValue(); } },
                 { "identity_status", n => { IdentityStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumIdentityStatus>(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinks>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinksProperty.CreateFromDiscriminatorValue); } },
                 { "mock", n => { Mock = n.GetBoolValue(); } },
                 { "russell_3000", n => { Russell3000 = n.GetBoolValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -195,7 +195,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("failure_reason", FailureReason);
             writer.WriteBoolValue("government_entity", GovernmentEntity);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumIdentityStatus>("identity_status", IdentityStatus);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinksProperty>("links", Links);
             writer.WriteBoolValue("mock", Mock);
             writer.WriteBoolValue("russell_3000", Russell3000);
             writer.WriteStringValue("sid", Sid);

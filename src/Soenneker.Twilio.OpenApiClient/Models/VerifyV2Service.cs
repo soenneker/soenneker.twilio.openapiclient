@@ -53,10 +53,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinksProperty Links { get; set; }
 #endif
         /// <summary>Whether to perform a lookup with each verification started and return info about the phone number.</summary>
         public bool? LookupEnabled { get; set; }
@@ -157,7 +157,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "do_not_share_warning_enabled", n => { DoNotShareWarningEnabled = n.GetBoolValue(); } },
                 { "dtmf_input_required", n => { DtmfInputRequired = n.GetBoolValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinksProperty.CreateFromDiscriminatorValue); } },
                 { "lookup_enabled", n => { LookupEnabled = n.GetBoolValue(); } },
                 { "passkeys", n => { Passkeys = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePasskeys>(global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePasskeys.CreateFromDiscriminatorValue); } },
                 { "psd2_enabled", n => { Psd2Enabled = n.GetBoolValue(); } },
@@ -187,7 +187,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("do_not_share_warning_enabled", DoNotShareWarningEnabled);
             writer.WriteBoolValue("dtmf_input_required", DtmfInputRequired);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServiceLinksProperty>("links", Links);
             writer.WriteBoolValue("lookup_enabled", LookupEnabled);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2ServicePasskeys>("passkeys", Passkeys);
             writer.WriteBoolValue("psd2_enabled", Psd2Enabled);

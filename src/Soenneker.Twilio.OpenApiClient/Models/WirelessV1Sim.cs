@@ -71,10 +71,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related subresources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinksProperty Links { get; set; }
 #endif
         /// <summary>The SID of the [RatePlan resource](https://www.twilio.com/docs/iot/wireless/api/rateplan-resource) to which the Sim resource is assigned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -186,7 +186,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "iccid", n => { Iccid = n.GetStringValue(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinks>(global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinksProperty.CreateFromDiscriminatorValue); } },
                 { "rate_plan_sid", n => { RatePlanSid = n.GetStringValue(); } },
                 { "reset_status", n => { ResetStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SimEnumResetStatus>(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -219,7 +219,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("iccid", Iccid);
             writer.WriteStringValue("ip_address", IpAddress);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimLinksProperty>("links", Links);
             writer.WriteStringValue("rate_plan_sid", RatePlanSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SimEnumResetStatus>("reset_status", ResetStatus);
             writer.WriteStringValue("sid", Sid);

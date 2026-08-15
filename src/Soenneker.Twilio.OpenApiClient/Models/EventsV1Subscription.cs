@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains a dictionary of URL links to nested resources of this Subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SubscriptionLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SubscriptionLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SubscriptionLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SubscriptionLinksProperty Links { get; set; }
 #endif
         /// <summary>A 34 character string that uniquely identifies this Subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,7 +95,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SubscriptionLinks>(global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SubscriptionLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SubscriptionLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SubscriptionLinksProperty.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sink_sid", n => { SinkSid = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -112,7 +112,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SubscriptionLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SubscriptionLinksProperty>("links", Links);
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("sink_sid", SinkSid);
             writer.WriteStringValue("url", Url);

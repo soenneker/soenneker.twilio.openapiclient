@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The absolute URLs of the [Members](https://www.twilio.com/docs/chat/api/members), [Messages](https://www.twilio.com/docs/chat/api/messages) , [Invites](https://www.twilio.com/docs/chat/api/invites) and, if it exists, the last [Message](https://www.twilio.com/docs/chat/api/messages) for the Channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceUserUserChannelLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceUserUserChannelLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceUserUserChannelLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceUserUserChannelLinksProperty Links { get; set; }
 #endif
         /// <summary>The SID of a [Member](https://www.twilio.com/docs/api/chat/rest/members) that represents the User on the Channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "channel_sid", n => { ChannelSid = n.GetStringValue(); } },
                 { "last_consumed_message_index", n => { LastConsumedMessageIndex = n.GetIntValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceUserUserChannelLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceUserUserChannelLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceUserUserChannelLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceUserUserChannelLinksProperty.CreateFromDiscriminatorValue); } },
                 { "member_sid", n => { MemberSid = n.GetStringValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.UserChannelEnumChannelStatus>(); } },
@@ -105,7 +105,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("channel_sid", ChannelSid);
             writer.WriteIntValue("last_consumed_message_index", LastConsumedMessageIndex);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceUserUserChannelLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ChatV1ServiceUserUserChannelLinksProperty>("links", Links);
             writer.WriteStringValue("member_sid", MemberSid);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.UserChannelEnumChannelStatus>("status", Status);

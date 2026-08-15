@@ -155253,7 +155253,7 @@
             "$ref": "#/components/schemas/AccountEnumStatus"
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountSubresourceUrisProperty"
           },
           "type": {
             "$ref": "#/components/schemas/AccountEnumType"
@@ -155647,7 +155647,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountAvailablePhoneNumberCountrySubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountAvailablePhoneNumberCountrySubresourceUrisProperty"
           }
         }
       },
@@ -156357,7 +156357,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountCallSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountCallSubresourceUrisProperty"
           }
         }
       },
@@ -156903,7 +156903,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountConferenceSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountConferenceSubresourceUrisProperty"
           },
           "reason_conference_ended": {
             "$ref": "#/components/schemas/ConferenceEnumReasonConferenceEnded"
@@ -157876,7 +157876,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnSubresourceUrisProperty"
           }
         }
       },
@@ -159110,7 +159110,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountMessageSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountMessageSubresourceUrisProperty"
           }
         }
       },
@@ -160359,7 +160359,7 @@
             "$ref": "#/components/schemas/ApiV2010AccountRecordingEncryptionDetails"
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountRecordingSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountRecordingSubresourceUrisProperty"
           },
           "media_url": {
             "type": "string",
@@ -160514,7 +160514,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountRecordingRecordingAddOnResultSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountRecordingRecordingAddOnResultSubresourceUrisProperty"
           }
         }
       },
@@ -160645,7 +160645,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUrisProperty"
           }
         }
       },
@@ -161109,7 +161109,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountSipSipCredentialListSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountSipSipCredentialListSubresourceUrisProperty"
           },
           "uri": {
             "type": "string",
@@ -161271,7 +161271,7 @@
             }
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountSipSipDomainSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountSipSipDomainSubresourceUrisProperty"
           },
           "sip_registration": {
             "type": "boolean",
@@ -161343,7 +161343,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountSipSipIpAccessControlListSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountSipSipIpAccessControlListSubresourceUrisProperty"
           },
           "uri": {
             "type": "string",
@@ -162091,7 +162091,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordSubresourceUrisProperty"
           },
           "uri": {
             "type": "string",
@@ -162175,7 +162175,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordAllTimeSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordAllTimeSubresourceUrisProperty"
           },
           "uri": {
             "type": "string",
@@ -162259,7 +162259,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordDailySubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordDailySubresourceUrisProperty"
           },
           "uri": {
             "type": "string",
@@ -162343,7 +162343,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordLastMonthSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordLastMonthSubresourceUrisProperty"
           },
           "uri": {
             "type": "string",
@@ -162427,7 +162427,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordMonthlySubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordMonthlySubresourceUrisProperty"
           },
           "uri": {
             "type": "string",
@@ -162511,7 +162511,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordThisMonthSubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordThisMonthSubresourceUrisProperty"
           },
           "uri": {
             "type": "string",
@@ -162595,7 +162595,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordTodaySubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordTodaySubresourceUrisProperty"
           },
           "uri": {
             "type": "string",
@@ -162679,7 +162679,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordYearlySubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordYearlySubresourceUrisProperty"
           },
           "uri": {
             "type": "string",
@@ -162763,7 +162763,7 @@
             "nullable": true
           },
           "subresource_uris": {
-            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordYesterdaySubresourceUris"
+            "$ref": "#/components/schemas/ApiV2010AccountUsageUsageRecordUsageRecordYesterdaySubresourceUrisProperty"
           },
           "uri": {
             "type": "string",
@@ -163182,7 +163182,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/BulkexportsV1ExportLinks"
+            "$ref": "#/components/schemas/BulkexportsV1ExportLinksProperty"
           }
         }
       },
@@ -163486,7 +163486,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ChatV1ServiceChannelLinks"
+            "$ref": "#/components/schemas/ChatV1ServiceChannelLinksProperty"
           }
         }
       },
@@ -164108,7 +164108,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ChatV1ServiceLinks"
+            "$ref": "#/components/schemas/ChatV1ServiceLinksProperty"
           }
         }
       },
@@ -164208,7 +164208,7 @@
             "default": 0
           },
           "links": {
-            "$ref": "#/components/schemas/ChatV1ServiceUserLinks"
+            "$ref": "#/components/schemas/ChatV1ServiceUserLinksProperty"
           },
           "url": {
             "type": "string",
@@ -164267,7 +164267,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ChatV1ServiceUserUserChannelLinks"
+            "$ref": "#/components/schemas/ChatV1ServiceUserUserChannelLinksProperty"
           }
         }
       },
@@ -164386,7 +164386,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ChatV2ServiceBindingLinks"
+            "$ref": "#/components/schemas/ChatV2ServiceBindingLinksProperty"
           }
         }
       },
@@ -164521,7 +164521,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ChatV2ServiceChannelLinks"
+            "$ref": "#/components/schemas/ChatV2ServiceChannelLinksProperty"
           }
         }
       },
@@ -165362,7 +165362,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ChatV2ServiceLinks"
+            "$ref": "#/components/schemas/ChatV2ServiceLinksProperty"
           }
         }
       },
@@ -165462,7 +165462,7 @@
             "default": 0
           },
           "links": {
-            "$ref": "#/components/schemas/ChatV2ServiceUserLinks"
+            "$ref": "#/components/schemas/ChatV2ServiceUserLinksProperty"
           },
           "url": {
             "type": "string",
@@ -165675,7 +165675,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ChatV2ServiceUserUserChannelLinks"
+            "$ref": "#/components/schemas/ChatV2ServiceUserUserChannelLinksProperty"
           },
           "url": {
             "type": "string",
@@ -166908,7 +166908,7 @@
             "nullable": true
           },
           "whatsapp": {
-            "$ref": "#/components/schemas/ContentV1ContentApprovalFetchWhatsapp"
+            "$ref": "#/components/schemas/ContentV1ContentApprovalFetchWhatsappProperty"
           },
           "url": {
             "type": "string",
@@ -166960,10 +166960,10 @@
             "nullable": true
           },
           "variables": {
-            "$ref": "#/components/schemas/ContentV1ContentVariables"
+            "$ref": "#/components/schemas/ContentV1ContentVariablesProperty"
           },
           "types": {
-            "$ref": "#/components/schemas/ContentV1ContentTypes"
+            "$ref": "#/components/schemas/ContentV1ContentTypesProperty"
           },
           "url": {
             "type": "string",
@@ -166972,7 +166972,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ContentV1ContentLinks"
+            "$ref": "#/components/schemas/ContentV1ContentLinksProperty"
           }
         }
       },
@@ -167018,13 +167018,13 @@
             "nullable": true
           },
           "variables": {
-            "$ref": "#/components/schemas/ContentV1ContentAndApprovalsVariables"
+            "$ref": "#/components/schemas/ContentV1ContentAndApprovalsVariablesProperty"
           },
           "types": {
-            "$ref": "#/components/schemas/ContentV1ContentAndApprovalsTypes"
+            "$ref": "#/components/schemas/ContentV1ContentAndApprovalsTypesProperty"
           },
           "approval_requests": {
-            "$ref": "#/components/schemas/ContentV1ContentAndApprovalsApprovalRequests"
+            "$ref": "#/components/schemas/ContentV1ContentAndApprovalsApprovalRequestsProperty"
           }
         }
       },
@@ -167070,10 +167070,10 @@
             "nullable": true
           },
           "variables": {
-            "$ref": "#/components/schemas/ContentV1LegacyContentVariables"
+            "$ref": "#/components/schemas/ContentV1LegacyContentVariablesProperty"
           },
           "types": {
-            "$ref": "#/components/schemas/ContentV1LegacyContentTypes"
+            "$ref": "#/components/schemas/ContentV1LegacyContentTypesProperty"
           },
           "legacy_template_name": {
             "type": "string",
@@ -167165,10 +167165,10 @@
             "nullable": true
           },
           "variables": {
-            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentVariables"
+            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentVariablesProperty"
           },
           "types": {
-            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentTypes"
+            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentTypesProperty"
           },
           "url": {
             "type": "string",
@@ -167177,7 +167177,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentLinks"
+            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentLinksProperty"
           }
         }
       },
@@ -167223,13 +167223,13 @@
             "nullable": true
           },
           "variables": {
-            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentAndApprovalsVariables"
+            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentAndApprovalsVariablesProperty"
           },
           "types": {
-            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentAndApprovalsTypes"
+            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentAndApprovalsTypesProperty"
           },
           "approval_requests": {
-            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentAndApprovalsApprovalRequests"
+            "$ref": "#/components/schemas/TwilioContentV2ContentV1ContentAndApprovalsApprovalRequestsProperty"
           }
         }
       },
@@ -167342,7 +167342,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ConfigurationLinks"
+            "$ref": "#/components/schemas/ConversationsV1ConfigurationLinksProperty"
           }
         }
       },
@@ -167698,7 +167698,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ConversationLinks"
+            "$ref": "#/components/schemas/ConversationsV1ConversationLinksProperty"
           },
           "bindings": {
             "$ref": "#/components/schemas/ConversationsV1ConversationBindings"
@@ -167869,7 +167869,7 @@
             "$ref": "#/components/schemas/ConversationsV1ConversationConversationMessageDelivery"
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ConversationConversationMessageLinks"
+            "$ref": "#/components/schemas/ConversationsV1ConversationConversationMessageLinksProperty"
           },
           "content_sid": {
             "maxLength": 34,
@@ -168392,7 +168392,7 @@
             "$ref": "#/components/schemas/ConversationsV1ConversationWithParticipantsTimers"
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ConversationWithParticipantsLinks"
+            "$ref": "#/components/schemas/ConversationsV1ConversationWithParticipantsLinksProperty"
           },
           "bindings": {
             "$ref": "#/components/schemas/ConversationsV1ConversationWithParticipantsBindings"
@@ -168660,7 +168660,7 @@
             "$ref": "#/components/schemas/ConversationsV1ParticipantConversationConversationTimers"
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ParticipantConversationLinks"
+            "$ref": "#/components/schemas/ConversationsV1ParticipantConversationLinksProperty"
           }
         }
       },
@@ -168833,7 +168833,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ServiceLinks"
+            "$ref": "#/components/schemas/ConversationsV1ServiceLinksProperty"
           }
         }
       },
@@ -169000,7 +169000,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConfigurationLinks"
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConfigurationLinksProperty"
           },
           "reachability_enabled": {
             "type": "boolean",
@@ -169102,7 +169102,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationLinks"
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationLinksProperty"
           },
           "bindings": {
             "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationBindings"
@@ -169281,7 +169281,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationServiceConversationMessageLinks"
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationServiceConversationMessageLinksProperty"
           },
           "content_sid": {
             "maxLength": 34,
@@ -169782,7 +169782,7 @@
             "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationWithParticipantsTimers"
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationWithParticipantsLinks"
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationWithParticipantsLinksProperty"
           },
           "bindings": {
             "$ref": "#/components/schemas/ConversationsV1ServiceServiceConversationWithParticipantsBindings"
@@ -170005,7 +170005,7 @@
             "$ref": "#/components/schemas/ConversationsV1ServiceServiceParticipantConversationConversationTimers"
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ServiceServiceParticipantConversationLinks"
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceParticipantConversationLinksProperty"
           }
         }
       },
@@ -170249,7 +170249,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ServiceServiceUserLinks"
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceUserLinksProperty"
           }
         }
       },
@@ -170393,7 +170393,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1ServiceServiceUserServiceUserConversationLinks"
+            "$ref": "#/components/schemas/ConversationsV1ServiceServiceUserServiceUserConversationLinksProperty"
           }
         }
       },
@@ -170636,7 +170636,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1UserLinks"
+            "$ref": "#/components/schemas/ConversationsV1UserLinksProperty"
           }
         }
       },
@@ -170780,7 +170780,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ConversationsV1UserUserConversationLinks"
+            "$ref": "#/components/schemas/ConversationsV1UserUserConversationLinksProperty"
           }
         }
       },
@@ -172080,7 +172080,7 @@
             "$ref": "#/components/schemas/ConversationsV2OperationStatusError"
           },
           "related": {
-            "$ref": "#/components/schemas/ConversationsV2OperationStatusRelated"
+            "$ref": "#/components/schemas/ConversationsV2OperationStatusRelatedProperty"
           }
         },
         "description": "Status of a long-running operation.",
@@ -172109,7 +172109,7 @@
             "example": "https://conversations.twilio.com/v2/ControlPlane/Operations/proc_job_01h9d8r0vte3hz8tykdj329t7r"
           },
           "related": {
-            "$ref": "#/components/schemas/ConversationsV2OperationAcceptedRelated"
+            "$ref": "#/components/schemas/ConversationsV2OperationAcceptedRelatedProperty"
           }
         },
         "description": "Slim response for an accepted long-running operation.",
@@ -172505,7 +172505,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/EventsV1EventTypeLinks"
+            "$ref": "#/components/schemas/EventsV1EventTypeLinksProperty"
           }
         }
       },
@@ -172588,7 +172588,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/EventsV1SchemaLinks"
+            "$ref": "#/components/schemas/EventsV1SchemaLinksProperty"
           },
           "latest_version_date_created": {
             "type": "string",
@@ -172679,7 +172679,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/EventsV1SinkLinks"
+            "$ref": "#/components/schemas/EventsV1SinkLinksProperty"
           }
         }
       },
@@ -172857,7 +172857,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/EventsV1SubscriptionLinks"
+            "$ref": "#/components/schemas/EventsV1SubscriptionLinksProperty"
           }
         }
       },
@@ -174626,7 +174626,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/FlexV1InteractionLinks"
+            "$ref": "#/components/schemas/FlexV1InteractionLinksProperty"
           },
           "interaction_context_sid": {
             "maxLength": 34,
@@ -174682,7 +174682,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/FlexV1InteractionInteractionChannelLinks"
+            "$ref": "#/components/schemas/FlexV1InteractionInteractionChannelLinksProperty"
           }
         }
       },
@@ -175324,7 +175324,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/FlexV1PluginLinks"
+            "$ref": "#/components/schemas/FlexV1PluginLinksProperty"
           }
         }
       },
@@ -175458,7 +175458,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/FlexV1PluginConfigurationLinks"
+            "$ref": "#/components/schemas/FlexV1PluginConfigurationLinksProperty"
           }
         }
       },
@@ -176711,7 +176711,7 @@
             "nullable": true
           },
           "policy": {
-            "$ref": "#/components/schemas/IamV1KeyPolicy"
+            "$ref": "#/components/schemas/IamV1KeyPolicyProperty"
           }
         }
       },
@@ -176755,7 +176755,7 @@
             "nullable": true
           },
           "policy": {
-            "$ref": "#/components/schemas/IamV1NewKeyPolicy"
+            "$ref": "#/components/schemas/IamV1NewKeyPolicyProperty"
           }
         }
       },
@@ -178964,7 +178964,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/InsightsV1CallLinks"
+            "$ref": "#/components/schemas/InsightsV1CallLinksProperty"
           }
         }
       },
@@ -179452,7 +179452,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/InsightsV1ConferenceLinks"
+            "$ref": "#/components/schemas/InsightsV1ConferenceLinksProperty"
           }
         }
       },
@@ -181233,7 +181233,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/InsightsV1VideoRoomSummaryLinks"
+            "$ref": "#/components/schemas/InsightsV1VideoRoomSummaryLinksProperty"
           }
         }
       },
@@ -183617,7 +183617,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/IntelligenceV2TranscriptLinks"
+            "$ref": "#/components/schemas/IntelligenceV2TranscriptLinksProperty"
           }
         }
       },
@@ -185616,7 +185616,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/IpMessagingV1ServiceChannelLinks"
+            "$ref": "#/components/schemas/IpMessagingV1ServiceChannelLinksProperty"
           }
         }
       },
@@ -186121,7 +186121,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/IpMessagingV1ServiceLinks"
+            "$ref": "#/components/schemas/IpMessagingV1ServiceLinksProperty"
           }
         }
       },
@@ -186191,7 +186191,7 @@
             "default": 0
           },
           "links": {
-            "$ref": "#/components/schemas/IpMessagingV1ServiceUserLinks"
+            "$ref": "#/components/schemas/IpMessagingV1ServiceUserLinksProperty"
           },
           "url": {
             "type": "string",
@@ -186243,7 +186243,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/IpMessagingV1ServiceUserUserChannelLinks"
+            "$ref": "#/components/schemas/IpMessagingV1ServiceUserUserChannelLinksProperty"
           }
         }
       },
@@ -186339,7 +186339,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/IpMessagingV2ServiceBindingLinks"
+            "$ref": "#/components/schemas/IpMessagingV2ServiceBindingLinksProperty"
           }
         }
       },
@@ -186437,7 +186437,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/IpMessagingV2ServiceChannelLinks"
+            "$ref": "#/components/schemas/IpMessagingV2ServiceChannelLinksProperty"
           }
         }
       },
@@ -187135,7 +187135,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/IpMessagingV2ServiceLinks"
+            "$ref": "#/components/schemas/IpMessagingV2ServiceLinksProperty"
           }
         }
       },
@@ -187205,7 +187205,7 @@
             "default": 0
           },
           "links": {
-            "$ref": "#/components/schemas/IpMessagingV2ServiceUserLinks"
+            "$ref": "#/components/schemas/IpMessagingV2ServiceUserLinksProperty"
           },
           "url": {
             "type": "string",
@@ -187386,7 +187386,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/IpMessagingV2ServiceUserUserChannelLinks"
+            "$ref": "#/components/schemas/IpMessagingV2ServiceUserUserChannelLinksProperty"
           },
           "url": {
             "type": "string",
@@ -189603,7 +189603,7 @@
             "nullable": true
           },
           "configuration_schema": {
-            "$ref": "#/components/schemas/MarketplaceV1AvailableAddOnConfigurationSchema"
+            "$ref": "#/components/schemas/MarketplaceV1AvailableAddOnConfigurationSchemaProperty"
           },
           "url": {
             "type": "string",
@@ -189612,7 +189612,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/MarketplaceV1AvailableAddOnLinks"
+            "$ref": "#/components/schemas/MarketplaceV1AvailableAddOnLinksProperty"
           }
         }
       },
@@ -189688,7 +189688,7 @@
             "nullable": true
           },
           "configuration": {
-            "$ref": "#/components/schemas/MarketplaceV1InstalledAddOnConfiguration"
+            "$ref": "#/components/schemas/MarketplaceV1InstalledAddOnConfigurationProperty"
           },
           "unique_name": {
             "type": "string",
@@ -189714,7 +189714,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/MarketplaceV1InstalledAddOnLinks"
+            "$ref": "#/components/schemas/MarketplaceV1InstalledAddOnLinksProperty"
           }
         }
       },
@@ -189817,25 +189817,25 @@
             "nullable": true
           },
           "description": {
-            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementDescription"
+            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementDescriptionProperty"
           },
           "support": {
-            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementSupport"
+            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementSupportProperty"
           },
           "policies": {
-            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementPolicies"
+            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementPoliciesProperty"
           },
           "module_info": {
-            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementModuleInfo"
+            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementModuleInfoProperty"
           },
           "documentation": {
-            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementDocumentation"
+            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementDocumentationProperty"
           },
           "configuration": {
-            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementConfiguration"
+            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementConfigurationProperty"
           },
           "pricing": {
-            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementPricing"
+            "$ref": "#/components/schemas/MarketplaceV1ModuleDataManagementPricingProperty"
           }
         }
       },
@@ -189910,7 +189910,7 @@
             "type": "string"
           },
           "params": {
-            "$ref": "#/components/schemas/MarketplaceV1TwilioServiceErrorResponseParams"
+            "$ref": "#/components/schemas/MarketplaceV1TwilioServiceErrorResponseParamsProperty"
           },
           "more_info": {
             "type": "string",
@@ -192652,7 +192652,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/MessagingV1BrandRegistrationsLinks"
+            "$ref": "#/components/schemas/MessagingV1BrandRegistrationsLinksProperty"
           }
         }
       },
@@ -193613,7 +193613,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/MessagingV1ServiceLinks"
+            "$ref": "#/components/schemas/MessagingV1ServiceLinksProperty"
           },
           "usecase": {
             "type": "string",
@@ -196340,7 +196340,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/MonitorV1EventLinks"
+            "$ref": "#/components/schemas/MonitorV1EventLinksProperty"
           }
         }
       },
@@ -196783,7 +196783,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/NotifyV1ServiceBindingLinks"
+            "$ref": "#/components/schemas/NotifyV1ServiceBindingLinksProperty"
           }
         }
       },
@@ -197159,7 +197159,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/NotifyV1ServiceLinks"
+            "$ref": "#/components/schemas/NotifyV1ServiceLinksProperty"
           },
           "alexa_skill_id": {
             "type": "string",
@@ -199421,7 +199421,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/NumbersV2AuthorizationDocumentLinks"
+            "$ref": "#/components/schemas/NumbersV2AuthorizationDocumentLinksProperty"
           }
         }
       },
@@ -199637,7 +199637,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/NumbersV2RegulatoryComplianceBundleLinks"
+            "$ref": "#/components/schemas/NumbersV2RegulatoryComplianceBundleLinksProperty"
           }
         }
       },
@@ -202751,7 +202751,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/PreviewHostedNumbersAuthorizationDocumentLinks"
+            "$ref": "#/components/schemas/PreviewHostedNumbersAuthorizationDocumentLinksProperty"
           }
         }
       },
@@ -203327,7 +203327,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/PreviewMarketplaceAvailableAddOnLinks"
+            "$ref": "#/components/schemas/PreviewMarketplaceAvailableAddOnLinksProperty"
           }
         }
       },
@@ -203429,7 +203429,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/PreviewMarketplaceInstalledAddOnLinks"
+            "$ref": "#/components/schemas/PreviewMarketplaceInstalledAddOnLinksProperty"
           }
         }
       },
@@ -203718,7 +203718,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/PreviewWirelessSimLinks"
+            "$ref": "#/components/schemas/PreviewWirelessSimLinksProperty"
           }
         }
       },
@@ -203778,7 +203778,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/PricingV1MessagingLinks"
+            "$ref": "#/components/schemas/PricingV1MessagingLinksProperty"
           }
         }
       },
@@ -203861,7 +203861,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/PricingV1PhoneNumberLinks"
+            "$ref": "#/components/schemas/PricingV1PhoneNumberLinksProperty"
           }
         }
       },
@@ -203936,7 +203936,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/PricingV1VoiceLinks"
+            "$ref": "#/components/schemas/PricingV1VoiceLinksProperty"
           }
         }
       },
@@ -204177,7 +204177,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/PricingV2VoiceLinks"
+            "$ref": "#/components/schemas/PricingV2VoiceLinksProperty"
           }
         }
       },
@@ -204945,7 +204945,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ProxyV1ServiceSessionParticipantLinks"
+            "$ref": "#/components/schemas/ProxyV1ServiceSessionParticipantLinksProperty"
           }
         }
       },
@@ -205105,7 +205105,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ProxyV1ServiceLinks"
+            "$ref": "#/components/schemas/ProxyV1ServiceLinksProperty"
           }
         }
       },
@@ -205256,7 +205256,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ProxyV1ServiceSessionLinks"
+            "$ref": "#/components/schemas/ProxyV1ServiceSessionLinksProperty"
           }
         }
       },
@@ -205644,7 +205644,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ServerlessV1ServiceAssetLinks"
+            "$ref": "#/components/schemas/ServerlessV1ServiceAssetLinksProperty"
           }
         }
       },
@@ -205815,7 +205815,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ServerlessV1ServiceBuildLinks"
+            "$ref": "#/components/schemas/ServerlessV1ServiceBuildLinksProperty"
           }
         }
       },
@@ -206121,7 +206121,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ServerlessV1ServiceEnvironmentLinks"
+            "$ref": "#/components/schemas/ServerlessV1ServiceEnvironmentLinksProperty"
           }
         }
       },
@@ -206182,7 +206182,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ServerlessV1ServiceFunctionLinks"
+            "$ref": "#/components/schemas/ServerlessV1ServiceFunctionLinksProperty"
           }
         }
       },
@@ -206248,7 +206248,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ServerlessV1ServiceFunctionFunctionVersionLinks"
+            "$ref": "#/components/schemas/ServerlessV1ServiceFunctionFunctionVersionLinksProperty"
           }
         }
       },
@@ -206493,7 +206493,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/ServerlessV1ServiceLinks"
+            "$ref": "#/components/schemas/ServerlessV1ServiceLinksProperty"
           }
         }
       },
@@ -206639,7 +206639,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/StudioV1FlowEngagementLinks"
+            "$ref": "#/components/schemas/StudioV1FlowEngagementLinksProperty"
           }
         }
       },
@@ -206775,7 +206775,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/StudioV1FlowExecutionLinks"
+            "$ref": "#/components/schemas/StudioV1FlowExecutionLinksProperty"
           }
         }
       },
@@ -206925,7 +206925,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/StudioV1FlowExecutionExecutionStepLinks"
+            "$ref": "#/components/schemas/StudioV1FlowExecutionExecutionStepLinksProperty"
           }
         }
       },
@@ -207026,7 +207026,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/StudioV1FlowLinks"
+            "$ref": "#/components/schemas/StudioV1FlowLinksProperty"
           }
         }
       },
@@ -207138,7 +207138,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/StudioV1FlowEngagementStepLinks"
+            "$ref": "#/components/schemas/StudioV1FlowEngagementStepLinksProperty"
           }
         }
       },
@@ -207269,7 +207269,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/StudioV2FlowExecutionLinks"
+            "$ref": "#/components/schemas/StudioV2FlowExecutionLinksProperty"
           }
         }
       },
@@ -207419,7 +207419,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/StudioV2FlowExecutionExecutionStepLinks"
+            "$ref": "#/components/schemas/StudioV2FlowExecutionExecutionStepLinksProperty"
           }
         }
       },
@@ -207562,7 +207562,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/StudioV2FlowLinks"
+            "$ref": "#/components/schemas/StudioV2FlowLinksProperty"
           }
         }
       },
@@ -208314,7 +208314,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/SupersimV1NetworkAccessProfileLinks"
+            "$ref": "#/components/schemas/SupersimV1NetworkAccessProfileLinksProperty"
           }
         }
       },
@@ -208516,7 +208516,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/SupersimV1SimLinks"
+            "$ref": "#/components/schemas/SupersimV1SimLinksProperty"
           }
         }
       },
@@ -208930,7 +208930,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/SyncV1ServiceDocumentLinks"
+            "$ref": "#/components/schemas/SyncV1ServiceDocumentLinksProperty"
           },
           "revision": {
             "type": "string",
@@ -209117,7 +209117,7 @@
             "default": 0
           },
           "links": {
-            "$ref": "#/components/schemas/SyncV1ServiceLinks"
+            "$ref": "#/components/schemas/SyncV1ServiceLinksProperty"
           }
         }
       },
@@ -209182,7 +209182,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/SyncV1ServiceSyncListLinks"
+            "$ref": "#/components/schemas/SyncV1ServiceSyncListLinksProperty"
           },
           "revision": {
             "type": "string",
@@ -209447,7 +209447,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/SyncV1ServiceSyncMapLinks"
+            "$ref": "#/components/schemas/SyncV1ServiceSyncMapLinksProperty"
           },
           "revision": {
             "type": "string",
@@ -209718,7 +209718,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/SyncV1ServiceSyncStreamLinks"
+            "$ref": "#/components/schemas/SyncV1ServiceSyncStreamLinksProperty"
           },
           "date_expires": {
             "type": "string",
@@ -209807,7 +209807,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TaskrouterV1WorkspaceActivityLinks"
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceActivityLinksProperty"
           }
         }
       },
@@ -210049,7 +210049,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskLinks"
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskLinksProperty"
           },
           "virtual_start_time": {
             "type": "string",
@@ -210173,7 +210173,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskChannelLinks"
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskChannelLinksProperty"
           }
         }
       },
@@ -210273,7 +210273,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueLinks"
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskQueueLinksProperty"
           }
         }
       },
@@ -210695,7 +210695,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskTaskReservationLinks"
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceTaskTaskReservationLinksProperty"
           }
         }
       },
@@ -210950,7 +210950,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkerLinks"
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkerLinksProperty"
           }
         }
       },
@@ -211150,7 +211150,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkerWorkerReservationLinks"
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkerWorkerReservationLinksProperty"
           }
         }
       },
@@ -211520,7 +211520,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkflowLinks"
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceWorkflowLinksProperty"
           }
         }
       },
@@ -211839,7 +211839,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TaskrouterV1WorkspaceLinks"
+            "$ref": "#/components/schemas/TaskrouterV1WorkspaceLinksProperty"
           }
         }
       },
@@ -212310,7 +212310,7 @@
             }
           },
           "links": {
-            "$ref": "#/components/schemas/TrunkingV1TrunkPhoneNumberLinks"
+            "$ref": "#/components/schemas/TrunkingV1TrunkPhoneNumberLinksProperty"
           },
           "phone_number": {
             "type": "string",
@@ -212613,7 +212613,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TrunkingV1TrunkLinks"
+            "$ref": "#/components/schemas/TrunkingV1TrunkLinksProperty"
           }
         }
       },
@@ -213352,7 +213352,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TrusthubV1CustomerProfileLinks"
+            "$ref": "#/components/schemas/TrusthubV1CustomerProfileLinksProperty"
           },
           "errors": {
             "type": "array",
@@ -214031,7 +214031,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/TrusthubV1TrustProductLinks"
+            "$ref": "#/components/schemas/TrusthubV1TrustProductLinksProperty"
           },
           "errors": {
             "type": "array",
@@ -214617,7 +214617,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/VerifyV2ServiceEntityChallengeLinks"
+            "$ref": "#/components/schemas/VerifyV2ServiceEntityChallengeLinksProperty"
           }
         }
       },
@@ -214789,7 +214789,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/VerifyV2ServiceEntityLinks"
+            "$ref": "#/components/schemas/VerifyV2ServiceEntityLinksProperty"
           }
         }
       },
@@ -215393,7 +215393,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/VerifyV2ServiceRateLimitLinks"
+            "$ref": "#/components/schemas/VerifyV2ServiceRateLimitLinksProperty"
           }
         }
       },
@@ -215534,7 +215534,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/VerifyV2ServiceLinks"
+            "$ref": "#/components/schemas/VerifyV2ServiceLinksProperty"
           }
         }
       },
@@ -216523,7 +216523,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/VideoV1CompositionLinks"
+            "$ref": "#/components/schemas/VideoV1CompositionLinksProperty"
           }
         }
       },
@@ -216867,7 +216867,7 @@
             "$ref": "#/components/schemas/VideoV1RecordingStatusCallbackMethod"
           },
           "links": {
-            "$ref": "#/components/schemas/VideoV1RecordingLinks"
+            "$ref": "#/components/schemas/VideoV1RecordingLinksProperty"
           }
         }
       },
@@ -217166,7 +217166,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/VideoV1RoomLinks"
+            "$ref": "#/components/schemas/VideoV1RoomLinksProperty"
           }
         }
       },
@@ -217319,7 +217319,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/VideoV1RoomRoomParticipantLinks"
+            "$ref": "#/components/schemas/VideoV1RoomRoomParticipantLinksProperty"
           }
         }
       },
@@ -217765,7 +217765,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/VideoV1RoomRoomRecordingLinks"
+            "$ref": "#/components/schemas/VideoV1RoomRoomRecordingLinksProperty"
           }
         }
       },
@@ -217985,7 +217985,7 @@
             "nullable": true
           },
           "configuration": {
-            "$ref": "#/components/schemas/VideoV1RoomRoomTranscriptionsConfiguration"
+            "$ref": "#/components/schemas/VideoV1RoomRoomTranscriptionsConfigurationProperty"
           }
         }
       },
@@ -218692,7 +218692,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/VoiceV1ConnectionPolicyLinks"
+            "$ref": "#/components/schemas/VoiceV1ConnectionPolicyLinksProperty"
           }
         }
       },
@@ -218827,7 +218827,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/VoiceV1DialingPermissionsDialingPermissionsCountryLinks"
+            "$ref": "#/components/schemas/VoiceV1DialingPermissionsDialingPermissionsCountryLinksProperty"
           }
         }
       },
@@ -218880,7 +218880,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/VoiceV1DialingPermissionsDialingPermissionsCountryInstanceLinks"
+            "$ref": "#/components/schemas/VoiceV1DialingPermissionsDialingPermissionsCountryInstanceLinksProperty"
           }
         }
       },
@@ -220642,7 +220642,7 @@
             "nullable": true
           },
           "links": {
-            "$ref": "#/components/schemas/WirelessV1SimLinks"
+            "$ref": "#/components/schemas/WirelessV1SimLinksProperty"
           },
           "ip_address": {
             "type": "string",
@@ -257643,6 +257643,18 @@
         "type": "object",
         "description": "\u0022A list of objects where each object represents the result of processing a messaging Geo Permission. Each object contains the following fields: \u0060country_code\u0060, the country code of the country for which the permission was updated; \u0060type\u0060, the type of the permission i.e. country; \u0060enabled\u0060, true if the permission is enabled else false; \u0060error_code\u0060, an integer where 0 indicates success and any non-zero value represents an error; and \u0060error_messages\u0060, an array of strings describing specific validation errors encountered. If the request is successful, the error_messages array will be empty.\u0022"
       },
+      "ApiV2010AccountSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A Map of various subresources available for the given Account Instance"
+      },
+      "ApiV2010AccountAvailablePhoneNumberCountrySubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related AvailablePhoneNumber resources identified by their URIs relative to \u0060https://api.twilio.com\u0060."
+      },
+      "ApiV2010AccountCallSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of subresources available to this call, identified by their URIs relative to \u0060https://api.twilio.com\u0060."
+      },
       "ApiV2010AccountCallCallEventRequest": {
         "type": "object",
         "description": "Contains a dictionary representing the request of the call.",
@@ -257667,6 +257679,10 @@
         "type": "object",
         "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature."
       },
+      "ApiV2010AccountConferenceSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their URIs relative to \u0060https://api.twilio.com\u0060."
+      },
       "ApiV2010AccountConferenceConferenceRecordingEncryptionDetails": {
         "type": "object",
         "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature."
@@ -257679,15 +257695,91 @@
         "type": "object",
         "description": "A JSON string that represents the current configuration of this Add-on installation."
       },
+      "ApiV2010AccountIncomingPhoneNumberIncomingPhoneNumberAssignedAddOnSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their relative URIs."
+      },
+      "ApiV2010AccountMessageSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their URIs relative to \u0060https://api.twilio.com\u0060"
+      },
       "ApiV2010AccountRecordingEncryptionDetails": {
         "type": "object",
         "description": "How to decrypt the recording if it was encrypted using [Call Recording Encryption](https://www.twilio.com/docs/voice/tutorials/voice-recording-encryption) feature."
+      },
+      "ApiV2010AccountRecordingSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their relative URIs."
+      },
+      "ApiV2010AccountRecordingRecordingAddOnResultSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their relative URIs."
+      },
+      "ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their relative URIs."
+      },
+      "ApiV2010AccountSipSipCredentialListSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of credentials associated with this credential list."
+      },
+      "ApiV2010AccountSipSipDomainSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of mapping resources associated with the SIP Domain resource identified by their relative URIs."
+      },
+      "ApiV2010AccountSipSipIpAccessControlListSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of the IpAddress resources associated with this IP access control list resource."
+      },
+      "ApiV2010AccountUsageUsageRecordSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their URIs. For more information, see [List Subresources](https://www.twilio.com/docs/usage/api/usage-record#list-subresources)."
+      },
+      "ApiV2010AccountUsageUsageRecordUsageRecordAllTimeSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their URIs. For more information, see [List Subresources](https://www.twilio.com/docs/usage/api/usage-record#list-subresources)."
+      },
+      "ApiV2010AccountUsageUsageRecordUsageRecordDailySubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their URIs. For more information, see [List Subresources](https://www.twilio.com/docs/usage/api/usage-record#list-subresources)."
+      },
+      "ApiV2010AccountUsageUsageRecordUsageRecordLastMonthSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their URIs. For more information, see [List Subresources](https://www.twilio.com/docs/usage/api/usage-record#list-subresources)."
+      },
+      "ApiV2010AccountUsageUsageRecordUsageRecordMonthlySubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their URIs. For more information, see [List Subresources](https://www.twilio.com/docs/usage/api/usage-record#list-subresources)."
+      },
+      "ApiV2010AccountUsageUsageRecordUsageRecordThisMonthSubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their URIs. For more information, see [List Subresources](https://www.twilio.com/docs/usage/api/usage-record#list-subresources)."
+      },
+      "ApiV2010AccountUsageUsageRecordUsageRecordTodaySubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their URIs. For more information, see [List Subresources](https://www.twilio.com/docs/usage/api/usage-record#list-subresources)."
+      },
+      "ApiV2010AccountUsageUsageRecordUsageRecordYearlySubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their URIs. For more information, see [List Subresources](https://www.twilio.com/docs/usage/api/usage-record#list-subresources)."
+      },
+      "ApiV2010AccountUsageUsageRecordUsageRecordYesterdaySubresourceUrisProperty": {
+        "type": "object",
+        "description": "A list of related resources identified by their URIs. For more information, see [List Subresources](https://www.twilio.com/docs/usage/api/usage-record#list-subresources)."
+      },
+      "BulkexportsV1ExportLinksProperty": {
+        "type": "object",
+        "description": "Contains a dictionary of URL links to nested resources of this Export."
       },
       "BulkexportsV1ExportExportCustomJobDetailsItem": {
         "type": "object"
       },
       "BulkexportsV1ExportJobDetailsItem": {
         "type": "object"
+      },
+      "ChatV1ServiceChannelLinksProperty": {
+        "type": "object",
+        "description": "The absolute URLs of the [Members](https://www.twilio.com/docs/chat/api/members), [Messages](https://www.twilio.com/docs/chat/api/messages) , [Invites](https://www.twilio.com/docs/chat/api/invites) and, if it exists, the last [Message](https://www.twilio.com/docs/chat/api/messages) for the Channel."
       },
       "ChatV1ServiceLimits": {
         "type": "object",
@@ -257700,6 +257792,26 @@
       "ChatV1ServiceNotifications": {
         "type": "object",
         "description": "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more information."
+      },
+      "ChatV1ServiceLinksProperty": {
+        "type": "object",
+        "description": "The absolute URLs of the Service\u0027s [Channels](https://www.twilio.com/docs/chat/api/channels), [Roles](https://www.twilio.com/docs/chat/api/roles), and [Users](https://www.twilio.com/docs/chat/api/users)."
+      },
+      "ChatV1ServiceUserLinksProperty": {
+        "type": "object",
+        "description": "The absolute URLs of the [Channel](https://www.twilio.com/docs/chat/api/channels) and [Binding](https://www.twilio.com/docs/chat/rest/bindings-resource) resources related to the user."
+      },
+      "ChatV1ServiceUserUserChannelLinksProperty": {
+        "type": "object",
+        "description": "The absolute URLs of the [Members](https://www.twilio.com/docs/chat/api/members), [Messages](https://www.twilio.com/docs/chat/api/messages) , [Invites](https://www.twilio.com/docs/chat/api/invites) and, if it exists, the last [Message](https://www.twilio.com/docs/chat/api/messages) for the Channel."
+      },
+      "ChatV2ServiceBindingLinksProperty": {
+        "type": "object",
+        "description": "The absolute URLs of the Binding\u0027s [User](https://www.twilio.com/docs/chat/rest/user-resource)."
+      },
+      "ChatV2ServiceChannelLinksProperty": {
+        "type": "object",
+        "description": "The absolute URLs of the [Members](https://www.twilio.com/docs/chat/rest/member-resource), [Messages](https://www.twilio.com/docs/chat/rest/message-resource), [Invites](https://www.twilio.com/docs/chat/rest/invite-resource), Webhooks and, if it exists, the last [Message](https://www.twilio.com/docs/chat/rest/message-resource) for the Channel."
       },
       "ChatV2ServiceChannelChannelWebhookConfiguration": {
         "type": "object",
@@ -257727,6 +257839,18 @@
         "type": "object",
         "description": "An object that describes the properties of media that the service supports. The object contains the \u0060size_limit_mb\u0060 property, which describes the size of the largest media file in MB; and the \u0060compatibility_message\u0060 property, which contains the message text to send when a media message does not have any text."
       },
+      "ChatV2ServiceLinksProperty": {
+        "type": "object",
+        "description": "The absolute URLs of the Service\u0027s [Channels](https://www.twilio.com/docs/chat/channels), [Roles](https://www.twilio.com/docs/chat/rest/role-resource), [Bindings](https://www.twilio.com/docs/chat/rest/binding-resource), and [Users](https://www.twilio.com/docs/chat/rest/user-resource)."
+      },
+      "ChatV2ServiceUserLinksProperty": {
+        "type": "object",
+        "description": "The absolute URLs of the [Channel](https://www.twilio.com/docs/chat/channels) and [Binding](https://www.twilio.com/docs/chat/rest/binding-resource) resources related to the user."
+      },
+      "ChatV2ServiceUserUserChannelLinksProperty": {
+        "type": "object",
+        "description": "The absolute URLs of the [Members](https://www.twilio.com/docs/chat/rest/member-resource), [Messages](https://www.twilio.com/docs/chat/rest/message-resource) , [Invites](https://www.twilio.com/docs/chat/rest/invite-resource) and, if it exists, the last [Message](https://www.twilio.com/docs/chat/rest/message-resource) for the Channel."
+      },
       "ContentCreateRequestVariablesProperty": {
         "type": "object",
         "additionalProperties": {
@@ -257741,9 +257865,69 @@
         },
         "description": "Key value pairs of variable name to value"
       },
+      "ContentV1ContentApprovalFetchWhatsappProperty": {
+        "type": "object",
+        "description": "Contains the whatsapp approval information for the Content resource, with fields such as approval status, rejection reason, and category, amongst others."
+      },
+      "ContentV1ContentVariablesProperty": {
+        "type": "object",
+        "description": "\u0022Defines the default placeholder values for variables included in the Content resource. e.g. {\\\u00221\\\u0022: \\\u0022Customer_Name\\\u0022}.\u0022"
+      },
+      "ContentV1ContentTypesProperty": {
+        "type": "object",
+        "description": "The [Content types](https://www.twilio.com/docs/content-api/content-types-overview) (e.g. twilio/text) for this Content resource."
+      },
+      "ContentV1ContentLinksProperty": {
+        "type": "object",
+        "description": "A list of links related to the Content resource, such as approval_fetch and approval_create"
+      },
+      "ContentV1ContentAndApprovalsVariablesProperty": {
+        "type": "object",
+        "description": "\u0022Defines the default placeholder values for variables included in the Content resource. e.g. {\\\u00221\\\u0022: \\\u0022Customer_Name\\\u0022}.\u0022"
+      },
+      "ContentV1ContentAndApprovalsTypesProperty": {
+        "type": "object",
+        "description": "The [Content types](https://www.twilio.com/docs/content-api/content-types-overview) (e.g. twilio/text) for this Content resource."
+      },
+      "ContentV1ContentAndApprovalsApprovalRequestsProperty": {
+        "type": "object",
+        "description": "The submitted information and approval request status of the Content resource."
+      },
+      "ContentV1LegacyContentVariablesProperty": {
+        "type": "object",
+        "description": "\u0022Defines the default placeholder values for variables included in the Content resource. e.g. {\\\u00221\\\u0022: \\\u0022Customer_Name\\\u0022}.\u0022"
+      },
+      "ContentV1LegacyContentTypesProperty": {
+        "type": "object",
+        "description": "The [Content types](https://www.twilio.com/docs/content-api/content-types-overview) (e.g. twilio/text) for this Content resource."
+      },
       "TwilioContentV2ContentV1ContentApprovalFetchWhatsapp": {
         "type": "object",
         "description": "Contains the whatsapp approval information for the Content resource, with fields such as approval status, rejection reason, and category, amongst others."
+      },
+      "TwilioContentV2ContentV1ContentVariablesProperty": {
+        "type": "object",
+        "description": "\u0022Defines the default placeholder values for variables included in the Content resource. e.g. {\\\u00221\\\u0022: \\\u0022Customer_Name\\\u0022}.\u0022"
+      },
+      "TwilioContentV2ContentV1ContentTypesProperty": {
+        "type": "object",
+        "description": "The [Content types](https://www.twilio.com/docs/content/content-types-overview) (e.g. twilio/text) for this Content resource."
+      },
+      "TwilioContentV2ContentV1ContentLinksProperty": {
+        "type": "object",
+        "description": "A list of links related to the Content resource, such as approval_fetch and approval_create"
+      },
+      "TwilioContentV2ContentV1ContentAndApprovalsVariablesProperty": {
+        "type": "object",
+        "description": "\u0022Defines the default placeholder values for variables included in the Content resource. e.g. {\\\u00221\\\u0022: \\\u0022Customer_Name\\\u0022}.\u0022"
+      },
+      "TwilioContentV2ContentV1ContentAndApprovalsTypesProperty": {
+        "type": "object",
+        "description": "The [Content types](https://www.twilio.com/docs/content/content-types-overview) (e.g. twilio/text) for this Content resource."
+      },
+      "TwilioContentV2ContentV1ContentAndApprovalsApprovalRequestsProperty": {
+        "type": "object",
+        "description": "The submitted information and approval request status of the Content resource."
       },
       "TwilioContentV2ContentV1LegacyContentVariables": {
         "type": "object",
@@ -257753,6 +257937,10 @@
         "type": "object",
         "description": "The [Content types](https://www.twilio.com/docs/content/content-types-overview) (e.g. twilio/text) for this Content resource."
       },
+      "ConversationsV1ConfigurationLinksProperty": {
+        "type": "object",
+        "description": "Contains absolute API resource URLs to access the webhook and default service configurations."
+      },
       "ConversationsV1ConfigurationAddressAutoCreation": {
         "type": "object",
         "description": "Auto Creation configuration for the address."
@@ -257760,6 +257948,10 @@
       "ConversationsV1ConversationTimers": {
         "type": "object",
         "description": "Timer date values representing state update for this conversation."
+      },
+      "ConversationsV1ConversationLinksProperty": {
+        "type": "object",
+        "description": "Contains absolute URLs to access the [participants](https://www.twilio.com/docs/conversations/api/conversation-participant-resource), [messages](https://www.twilio.com/docs/conversations/api/conversation-message-resource) and [webhooks](https://www.twilio.com/docs/conversations/api/conversation-scoped-webhook-resource) of this conversation."
       },
       "ConversationsV1ConversationBindings": {
         "type": "object"
@@ -257770,6 +257962,10 @@
       "ConversationsV1ConversationConversationMessageDelivery": {
         "type": "object",
         "description": "An object that contains the summary of delivery statuses for the message to non-chat participants."
+      },
+      "ConversationsV1ConversationConversationMessageLinksProperty": {
+        "type": "object",
+        "description": "Contains an absolute API resource URL to access the delivery \u0026 read receipts of this message."
       },
       "ConversationsV1ConversationConversationParticipantMessagingBinding": {
         "type": "object",
@@ -257789,6 +257985,10 @@
         "type": "object",
         "description": "Timer date values representing state update for this conversation."
       },
+      "ConversationsV1ConversationWithParticipantsLinksProperty": {
+        "type": "object",
+        "description": "Contains absolute URLs to access the [participants](https://www.twilio.com/docs/conversations/api/conversation-participant-resource), [messages](https://www.twilio.com/docs/conversations/api/conversation-message-resource) and [webhooks](https://www.twilio.com/docs/conversations/api/conversation-scoped-webhook-resource) of this conversation."
+      },
       "ConversationsV1ConversationWithParticipantsBindings": {
         "type": "object"
       },
@@ -257806,9 +258006,25 @@
         "type": "object",
         "description": "Timer date values representing state update for this conversation."
       },
+      "ConversationsV1ParticipantConversationLinksProperty": {
+        "type": "object",
+        "description": "Contains absolute URLs to access the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource) and [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) of this conversation."
+      },
+      "ConversationsV1ServiceLinksProperty": {
+        "type": "object",
+        "description": "Contains absolute API resource URLs to access conversations, users, roles, bindings and configuration of this service."
+      },
+      "ConversationsV1ServiceServiceConfigurationLinksProperty": {
+        "type": "object",
+        "description": "Contains an absolute API resource URL to access the push notifications configuration of this service."
+      },
       "ConversationsV1ServiceServiceConversationTimers": {
         "type": "object",
         "description": "Timer date values representing state update for this conversation."
+      },
+      "ConversationsV1ServiceServiceConversationLinksProperty": {
+        "type": "object",
+        "description": "Contains absolute URLs to access the [participants](https://www.twilio.com/docs/conversations/api/conversation-participant-resource), [messages](https://www.twilio.com/docs/conversations/api/conversation-message-resource) and [webhooks](https://www.twilio.com/docs/conversations/api/conversation-scoped-webhook-resource) of this conversation."
       },
       "ConversationsV1ServiceServiceConversationBindings": {
         "type": "object"
@@ -257819,6 +258035,10 @@
       "ConversationsV1ServiceServiceConversationServiceConversationMessageDelivery": {
         "type": "object",
         "description": "An object that contains the summary of delivery statuses for the message to non-chat participants."
+      },
+      "ConversationsV1ServiceServiceConversationServiceConversationMessageLinksProperty": {
+        "type": "object",
+        "description": "Contains an absolute API resource URL to access the delivery \u0026 read receipts of this message."
       },
       "ConversationsV1ServiceServiceConversationServiceConversationParticipantMessagingBinding": {
         "type": "object",
@@ -257837,6 +258057,10 @@
       "ConversationsV1ServiceServiceConversationWithParticipantsTimers": {
         "type": "object",
         "description": "Timer date values representing state update for this conversation."
+      },
+      "ConversationsV1ServiceServiceConversationWithParticipantsLinksProperty": {
+        "type": "object",
+        "description": "Contains absolute URLs to access the [participants](https://www.twilio.com/docs/conversations/api/conversation-participant-resource), [messages](https://www.twilio.com/docs/conversations/api/conversation-message-resource) and [webhooks](https://www.twilio.com/docs/conversations/api/conversation-scoped-webhook-resource) of this conversation."
       },
       "ConversationsV1ServiceServiceConversationWithParticipantsBindings": {
         "type": "object"
@@ -257867,13 +258091,31 @@
         "type": "object",
         "description": "Timer date values representing state update for this conversation."
       },
+      "ConversationsV1ServiceServiceParticipantConversationLinksProperty": {
+        "type": "object",
+        "description": "Contains absolute URLs to access the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource) and [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) of this conversation."
+      },
+      "ConversationsV1ServiceServiceUserLinksProperty": {
+        "type": "object"
+      },
       "ConversationsV1ServiceServiceUserServiceUserConversationTimers": {
         "type": "object",
         "description": "Timer date values representing state update for this conversation."
       },
+      "ConversationsV1ServiceServiceUserServiceUserConversationLinksProperty": {
+        "type": "object",
+        "description": "Contains absolute URLs to access the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource) and [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) of this conversation."
+      },
+      "ConversationsV1UserLinksProperty": {
+        "type": "object"
+      },
       "ConversationsV1UserUserConversationTimers": {
         "type": "object",
         "description": "Timer date values representing state update for this conversation."
+      },
+      "ConversationsV1UserUserConversationLinksProperty": {
+        "type": "object",
+        "description": "Contains absolute URLs to access the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource) and [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) of this conversation."
       },
       "ConversationsV2SendMessagePayloadChannelSettings": {
         "type": "object",
@@ -257929,9 +258171,38 @@
         },
         "description": "Additional matching criteria for the capture rule. For voice calls, can include \u0060callType\u0060 (\u0060PSTN\u0060, \u0060SIP\u0060, and similar)."
       },
+      "ConversationsV2OperationStatusRelatedProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "\u0022Named resource identifiers associated with this operation. Keys depend on the operation type:\n- config-create, config-update, config-delete: configurationId\n- conversation-delete: conversationId\n\u0022"
+      },
+      "ConversationsV2OperationAcceptedRelatedProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "\u0022Named resource identifiers associated with this operation. Keys depend on the operation type:\n- config-create, config-update, config-delete: configurationId\n- conversation-delete: conversationId\n\u0022"
+      },
+      "EventsV1EventTypeLinksProperty": {
+        "type": "object"
+      },
+      "EventsV1SchemaLinksProperty": {
+        "type": "object",
+        "description": "Contains a dictionary of URL links to nested resources of this schema."
+      },
       "EventsV1SinkSinkConfiguration": {
         "type": "object",
         "description": "The information required for Twilio to connect to the provided Sink encoded as JSON."
+      },
+      "EventsV1SinkLinksProperty": {
+        "type": "object",
+        "description": "Contains a dictionary of URL links to nested resources of this Sink."
+      },
+      "EventsV1SubscriptionLinksProperty": {
+        "type": "object",
+        "description": "Contains a dictionary of URL links to nested resources of this Subscription."
       },
       "FlexV1ConfigurationAttributes": {
         "type": "object",
@@ -258078,6 +258349,12 @@
         "type": "object",
         "description": "A JSON Object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality. \n All attributes in the Routing object on your Interaction request body are added \u201Cas is\u201D to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes)."
       },
+      "FlexV1InteractionLinksProperty": {
+        "type": "object"
+      },
+      "FlexV1InteractionInteractionChannelLinksProperty": {
+        "type": "object"
+      },
       "FlexV1InteractionInteractionChannelInteractionChannelInviteRouting": {
         "type": "object",
         "description": "A JSON object representing the routing rules for the Interaction Channel. See [Outbound SMS Example](https://www.twilio.com/docs/flex/developer/conversations/interactions-api/interactions#agent-initiated-outbound-interactions) for an example Routing object. The Interactions resource uses TaskRouter for all routing functionality. \n All attributes in the Routing object on your Interaction request body are added \u201Cas is\u201D to the task. For a list of known attributes consumed by the Flex UI and/or Flex Insights, see [Known Task Attributes](https://www.twilio.com/docs/flex/developer/conversations/interactions-api#task-attributes)."
@@ -258086,8 +258363,22 @@
         "type": "object",
         "description": "The Participant\u0027s routing properties."
       },
+      "FlexV1PluginLinksProperty": {
+        "type": "object"
+      },
+      "FlexV1PluginConfigurationLinksProperty": {
+        "type": "object"
+      },
       "ScimPatchOperationValueProperty": {
         "type": "object"
+      },
+      "IamV1KeyPolicyProperty": {
+        "type": "object",
+        "description": "The \\\u0060Policy\\\u0060 object is a collection that specifies the allowed Twilio permissions for the restricted key.\nFor more information on the permissions available with restricted API keys, refer to the [Twilio documentation](https://www.twilio.com/docs/iam/api-keys/restricted-api-keys#permissions-available-with-restricted-api-keys)."
+      },
+      "IamV1NewKeyPolicyProperty": {
+        "type": "object",
+        "description": "Collection of allow assertions."
       },
       "IamV1CreateAccountRequestTagsProperty": {
         "type": "object",
@@ -258114,6 +258405,9 @@
           "$ref": "#/components/schemas/IamV1OperationResultPropertyAdditionalProperties"
         },
         "description": "\u0022A polymorphic result object. Fields vary depending on the operation.\nCommon fields include:\n  - \u0060resourceId\u0060: string\n\u0022"
+      },
+      "InsightsV1CallLinksProperty": {
+        "type": "object"
       },
       "InsightsV1CallSummariesFrom": {
         "type": "object",
@@ -258174,6 +258468,10 @@
       "InsightsV1ConferenceTagInfo": {
         "type": "object",
         "description": "Object. Contains details about conference tags including severity."
+      },
+      "InsightsV1ConferenceLinksProperty": {
+        "type": "object",
+        "description": "Contains a dictionary of URL links to nested resources of this Conference."
       },
       "InsightsV1ConferenceConferenceParticipantProperties": {
         "type": "object",
@@ -258292,6 +258590,10 @@
       "InsightsV1VideoRoomSummaryVideoParticipantSummaryPublisherInfo": {
         "type": "object",
         "description": "Object containing information about the SDK name and version. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#publisher_info) for more information."
+      },
+      "InsightsV1VideoRoomSummaryLinksProperty": {
+        "type": "object",
+        "description": "Room subresources."
       },
       "InsightsV1CallStatsStatsBucketCallsProperty": {
         "type": "object",
@@ -258461,6 +258763,9 @@
         "type": "object",
         "description": "Media Channel describing Transcript Source and Participant Mapping"
       },
+      "IntelligenceV2TranscriptLinksProperty": {
+        "type": "object"
+      },
       "JsonResultResultProperty": {
         "type": "object",
         "description": "The actual result from executing the Language Operator with \u0060JSON\u0060 output format. Its structure depends on the \u0060outputSchema\u0060 defined on the Operator."
@@ -258510,6 +258815,9 @@
         "type": "object",
         "description": "\u0022Default value to use in the prompt if no value is provided by the Intelligence Configuration.\nNote: knowledge_base_and_source_ids does not support the default attribute, but all other param types do allow for a default value.\u0022"
       },
+      "IpMessagingV1ServiceChannelLinksProperty": {
+        "type": "object"
+      },
       "IpMessagingV1ServiceLimits": {
         "type": "object"
       },
@@ -258517,6 +258825,21 @@
         "type": "object"
       },
       "IpMessagingV1ServiceNotifications": {
+        "type": "object"
+      },
+      "IpMessagingV1ServiceLinksProperty": {
+        "type": "object"
+      },
+      "IpMessagingV1ServiceUserLinksProperty": {
+        "type": "object"
+      },
+      "IpMessagingV1ServiceUserUserChannelLinksProperty": {
+        "type": "object"
+      },
+      "IpMessagingV2ServiceBindingLinksProperty": {
+        "type": "object"
+      },
+      "IpMessagingV2ServiceChannelLinksProperty": {
         "type": "object"
       },
       "IpMessagingV2ServiceChannelChannelWebhookConfiguration": {
@@ -258532,6 +258855,15 @@
         "type": "object"
       },
       "IpMessagingV2ServiceMedia": {
+        "type": "object"
+      },
+      "IpMessagingV2ServiceLinksProperty": {
+        "type": "object"
+      },
+      "IpMessagingV2ServiceUserLinksProperty": {
+        "type": "object"
+      },
+      "IpMessagingV2ServiceUserUserChannelLinksProperty": {
         "type": "object"
       },
       "KnowledgeV1ServiceKnowledgeKnowledgeSourceDetailsProperty": {
@@ -258598,6 +258930,53 @@
         "type": "object",
         "description": "An object that contains pre fill information. pre_fill will return PII information associated with the phone number like first name, last name, address line, country code, state and postal code. "
       },
+      "MarketplaceV1AvailableAddOnConfigurationSchemaProperty": {
+        "type": "object",
+        "description": "The JSON object with the configuration that must be provided when installing a given Add-on."
+      },
+      "MarketplaceV1AvailableAddOnLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
+      "MarketplaceV1InstalledAddOnConfigurationProperty": {
+        "type": "object",
+        "description": "The JSON object that represents the current configuration of installed Add-on."
+      },
+      "MarketplaceV1InstalledAddOnLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
+      "MarketplaceV1ModuleDataManagementDescriptionProperty": {
+        "type": "object",
+        "description": "A JSON object describing the module and is displayed under the Description tab of the Module detail page. You can define the main body of the description, highlight key features or aspects of the module and if applicable, provide code samples for developers"
+      },
+      "MarketplaceV1ModuleDataManagementSupportProperty": {
+        "type": "object",
+        "description": "A JSON object containing information on how customers can obtain support for the module. Use this parameter to provide details such as contact information and support description."
+      },
+      "MarketplaceV1ModuleDataManagementPoliciesProperty": {
+        "type": "object",
+        "description": "A JSON object describing the module\u0027s privacy and legal policies and is displayed under the Policies tab of the Module detail page. The maximum file size for Policies is 5MB"
+      },
+      "MarketplaceV1ModuleDataManagementModuleInfoProperty": {
+        "type": "object",
+        "description": "A JSON object containing essential attributes that define a module. This information is presented on the Module detail page in the Twilio Marketplace Catalog. You can pass the following attributes in the JSON object"
+      },
+      "MarketplaceV1ModuleDataManagementDocumentationProperty": {
+        "type": "object",
+        "description": "A JSON object for providing comprehensive information, instructions, and resources related to the module"
+      },
+      "MarketplaceV1ModuleDataManagementConfigurationProperty": {
+        "type": "object",
+        "description": "A JSON object for providing listing specific configuration. Contains button setup, notification url, among others."
+      },
+      "MarketplaceV1ModuleDataManagementPricingProperty": {
+        "type": "object",
+        "description": "A JSON object for providing Listing specific pricing information."
+      },
+      "MarketplaceV1TwilioServiceErrorResponseParamsProperty": {
+        "type": "object"
+      },
       "FullTraitValue": {
         "type": "object",
         "description": "The value of a trait. Can be a string, integer, boolean, or an array of these types (arrays cannot contain nested arrays)."
@@ -258654,9 +259033,16 @@
       "MessagingV1BrandRegistrationsErrorsItem": {
         "type": "object"
       },
+      "MessagingV1BrandRegistrationsLinksProperty": {
+        "type": "object"
+      },
       "MessagingV1DomainCertV4CertInValidation": {
         "type": "object",
         "description": "Optional JSON field describing the status and upload date of a new certificate in the process of validation"
+      },
+      "MessagingV1ServiceLinksProperty": {
+        "type": "object",
+        "description": "The absolute URLs of related resources."
       },
       "MessagingV1TollfreeVerificationRejectionReasonsItem": {
         "type": "object"
@@ -258708,6 +259094,10 @@
         "type": "object",
         "description": "An object with additional data about the event. The  contents depend on \u0060event_type\u0060. For example, event-types of the form \u0060RESOURCE.updated\u0060, this value contains a \u0060resource_properties\u0060 dictionary that describes the previous and updated properties of the resource."
       },
+      "MonitorV1EventLinksProperty": {
+        "type": "object",
+        "description": "The absolute URLs of related resources."
+      },
       "TwilioMonitorV2TwilioServiceErrorResponseParamsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -258720,6 +259110,10 @@
           "type": "string"
         },
         "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "NotifyV1ServiceBindingLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
       },
       "NotifyV1ServiceNotificationData": {
         "type": "object",
@@ -258749,6 +259143,10 @@
         "type": "object",
         "description": "Deprecated."
       },
+      "NotifyV1ServiceLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Binding, Notification, Segment, and User resources related to the service."
+      },
       "NumbersV1BulkEligibilityResultsItem": {
         "type": "object"
       },
@@ -258767,8 +259165,15 @@
         "type": "object",
         "description": "A list of related resources identified by their URIs."
       },
+      "NumbersV2AuthorizationDocumentLinksProperty": {
+        "type": "object"
+      },
       "NumbersV2BulkHostedNumberOrderResultsItem": {
         "type": "object"
+      },
+      "NumbersV2RegulatoryComplianceBundleLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Assigned Items of the Bundle resource."
       },
       "NumbersV2RegulatoryComplianceEndUserAttributes": {
         "type": "object",
@@ -258809,13 +259214,27 @@
       "SenderIdRegistrationRegistrationInfoItemProperty": {
         "type": "object"
       },
+      "PreviewHostedNumbersAuthorizationDocumentLinksProperty": {
+        "type": "object"
+      },
       "PreviewMarketplaceAvailableAddOnConfigurationSchema": {
         "type": "object",
         "description": "The JSON object with the configuration that must be provided when installing a given Add-on."
       },
+      "PreviewMarketplaceAvailableAddOnLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
       "PreviewMarketplaceInstalledAddOnConfiguration": {
         "type": "object",
         "description": "The JSON object that represents the current configuration of installed Add-on."
+      },
+      "PreviewMarketplaceInstalledAddOnLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
+      "PreviewWirelessSimLinksProperty": {
+        "type": "object"
       },
       "PreviewWirelessSimUsagePeriod": {
         "type": "object"
@@ -258832,6 +259251,35 @@
       "PreviewWirelessSimUsageDataCosts": {
         "type": "object"
       },
+      "PricingV1MessagingLinksProperty": {
+        "type": "object"
+      },
+      "PricingV1PhoneNumberLinksProperty": {
+        "type": "object"
+      },
+      "PricingV1VoiceLinksProperty": {
+        "type": "object"
+      },
+      "PricingV2VoiceLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the related Countries and Numbers resources."
+      },
+      "ProxyV1ServiceSessionParticipantLinksProperty": {
+        "type": "object",
+        "description": "The URLs to resources related the participant."
+      },
+      "ProxyV1ServiceLinksProperty": {
+        "type": "object",
+        "description": "The URLs of resources related to the Service."
+      },
+      "ProxyV1ServiceSessionLinksProperty": {
+        "type": "object",
+        "description": "The URLs of resources related to the Session."
+      },
+      "ServerlessV1ServiceAssetLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Asset resource\u0027s nested resources."
+      },
       "ServerlessV1ServiceBuildAssetVersionsItem": {
         "type": "object"
       },
@@ -258841,9 +259289,31 @@
       "ServerlessV1ServiceBuildDependenciesItem": {
         "type": "object"
       },
+      "ServerlessV1ServiceBuildLinksProperty": {
+        "type": "object"
+      },
+      "ServerlessV1ServiceEnvironmentLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Environment resource\u0027s nested resources."
+      },
+      "ServerlessV1ServiceFunctionLinksProperty": {
+        "type": "object",
+        "description": "The URLs of nested resources of the Function resource."
+      },
+      "ServerlessV1ServiceFunctionFunctionVersionLinksProperty": {
+        "type": "object"
+      },
+      "ServerlessV1ServiceLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Service\u0027s nested resources."
+      },
       "StudioV1FlowEngagementContext": {
         "type": "object",
         "description": "The current state of the execution flow. As your flow executes, we save the state in a flow context. Your widgets can access the data in the flow context as variables, either in configuration fields or in text areas as variable substitution."
+      },
+      "StudioV1FlowEngagementLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Engagement\u0027s nested resources."
       },
       "StudioV1FlowEngagementEngagementContextContext": {
         "type": "object",
@@ -258858,6 +259328,10 @@
             "deleteSla": 30
           }
         }
+      },
+      "StudioV1FlowExecutionLinksProperty": {
+        "type": "object",
+        "description": "The URLs of nested resources."
       },
       "StudioV1FlowExecutionExecutionContextContext": {
         "type": "object",
@@ -258879,6 +259353,10 @@
           }
         }
       },
+      "StudioV1FlowExecutionExecutionStepLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
       "StudioV1FlowExecutionExecutionStepExecutionStepContextContext": {
         "type": "object",
         "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
@@ -258889,6 +259367,10 @@
           }
         }
       },
+      "StudioV1FlowLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Flow\u0027s nested resources."
+      },
       "StudioV1FlowEngagementStepContext": {
         "type": "object",
         "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
@@ -258898,6 +259380,10 @@
             "deleteSla": 30
           }
         }
+      },
+      "StudioV1FlowEngagementStepLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
       },
       "StudioV1FlowEngagementStepStepContextContext": {
         "type": "object",
@@ -258919,6 +259405,10 @@
           }
         }
       },
+      "StudioV2FlowExecutionLinksProperty": {
+        "type": "object",
+        "description": "The URLs of nested resources."
+      },
       "StudioV2FlowExecutionExecutionContextContext": {
         "type": "object",
         "description": "The current state of the Flow\u0027s Execution. As a flow executes, we save its state in this context. We save data that your widgets can access as variables in configuration fields or in text areas as variable substitution.",
@@ -258938,6 +259428,10 @@
             "deleteSla": 30
           }
         }
+      },
+      "StudioV2FlowExecutionExecutionStepLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
       },
       "StudioV2FlowExecutionExecutionStepExecutionStepContextContext": {
         "type": "object",
@@ -258959,6 +259453,10 @@
       "StudioV2FlowWarningsItem": {
         "type": "object"
       },
+      "StudioV2FlowLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Flow\u0027s nested resources."
+      },
       "StudioV2FlowFlowRevisionDefinition": {
         "type": "object",
         "description": "JSON representation of flow definition."
@@ -258969,15 +259467,25 @@
       "SupersimV1NetworkIdentifiersItem": {
         "type": "object"
       },
+      "SupersimV1NetworkAccessProfileLinksProperty": {
+        "type": "object"
+      },
       "SupersimV1NetworkAccessProfileNetworkAccessProfileNetworkIdentifiersItem": {
         "type": "object"
       },
       "SupersimV1SettingsUpdatePackagesItem": {
         "type": "object"
       },
+      "SupersimV1SimLinksProperty": {
+        "type": "object"
+      },
       "SupersimV1UsageRecordPeriod": {
         "type": "object",
         "description": "The time period for which the usage is reported. The period is represented as a pair of \u0060start_time\u0060 and \u0060end_time\u0060 timestamps specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format."
+      },
+      "SyncV1ServiceDocumentLinksProperty": {
+        "type": "object",
+        "description": "The URLs of resources related to the Sync Document."
       },
       "SyncV1ServiceDocumentData": {
         "type": "object",
@@ -258989,6 +259497,10 @@
           }
         }
       },
+      "SyncV1ServiceLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
       "SyncV1ServiceSyncStreamStreamMessageData": {
         "type": "object",
         "description": "An arbitrary, schema-less object that contains the Stream Message body. Can be up to 4 KiB in length.",
@@ -258998,6 +259510,10 @@
             "deleteSla": 0
           }
         }
+      },
+      "SyncV1ServiceSyncListLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Sync List\u0027s nested resources."
       },
       "SyncV1ServiceSyncListSyncListItemData": {
         "type": "object",
@@ -259009,6 +259525,10 @@
           }
         }
       },
+      "SyncV1ServiceSyncMapLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Sync Map\u0027s nested resources."
+      },
       "SyncV1ServiceSyncMapSyncMapItemData": {
         "type": "object",
         "description": "An arbitrary, schema-less object that the Map Item stores. Can be up to 16 KiB in length.",
@@ -259019,9 +259539,28 @@
           }
         }
       },
+      "SyncV1ServiceSyncStreamLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Stream\u0027s nested resources."
+      },
+      "TaskrouterV1WorkspaceActivityLinksProperty": {
+        "type": "object"
+      },
       "TaskrouterV1WorkspaceEventEventData": {
         "type": "object",
         "description": "Data about the event. For more information, see [Event types](https://www.twilio.com/docs/taskrouter/api/event#event-types)."
+      },
+      "TaskrouterV1WorkspaceTaskLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
+      "TaskrouterV1WorkspaceTaskChannelLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
+      "TaskrouterV1WorkspaceTaskQueueLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
       },
       "TaskrouterV1WorkspaceTaskQueueTaskQueueBulkRealTimeStatisticsTaskQueueDataItem": {
         "type": "object"
@@ -259069,9 +259608,21 @@
         "type": "object",
         "description": "An object that contains the real-time statistics for the TaskQueues."
       },
+      "TaskrouterV1WorkspaceTaskTaskReservationLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
+      "TaskrouterV1WorkspaceWorkerLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
       "TaskrouterV1WorkspaceWorkerWorkerInstanceStatisticsCumulative": {
         "type": "object",
         "description": "An object that contains the cumulative statistics for the Worker."
+      },
+      "TaskrouterV1WorkspaceWorkerWorkerReservationLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
       },
       "TaskrouterV1WorkspaceWorkerWorkerStatisticsRealtime": {
         "type": "object",
@@ -259086,6 +259637,10 @@
       },
       "TaskrouterV1WorkspaceWorkerWorkersRealTimeStatisticsActivityStatisticsItem": {
         "type": "object"
+      },
+      "TaskrouterV1WorkspaceWorkflowLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
       },
       "TaskrouterV1WorkspaceWorkflowWorkflowCumulativeStatisticsSplitByWaitTime": {
         "type": "object",
@@ -259114,6 +259669,10 @@
       "TaskrouterV1WorkspaceWorkflowWorkflowStatisticsRealtime": {
         "type": "object",
         "description": "An object that contains the real-time statistics for the Workflow."
+      },
+      "TaskrouterV1WorkspaceLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
       },
       "TaskrouterV1WorkspaceWorkspaceCumulativeStatisticsSplitByWaitTime": {
         "type": "object",
@@ -259146,9 +259705,21 @@
         "type": "object",
         "description": "An object that contains the cumulative statistics for the Workspace."
       },
+      "TrunkingV1TrunkPhoneNumberLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
       "TrunkingV1TrunkRecordingProperty": {
         "type": "object",
         "description": "\u0022The recording settings for the trunk. Can be: \u0060do-not-record\u0060, \u0060record-from-ringing\u0060, \u0060record-from-answer\u0060. If set to \u0060record-from-ringing\u0060 or \u0060record-from-answer\u0060, all calls going through the trunk will be recorded. The only way to change recording parameters is on a sub-resource of a Trunk after it has been created. e.g.\u0060/Trunks/[Trunk_SID]/Recording -XPOST -d\u0027Mode=record-from-answer\u0027\u0060. See [Recording](https://www.twilio.com/docs/sip-trunking#recording) for more information.\u0022"
+      },
+      "TrunkingV1TrunkLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
+      "TrusthubV1CustomerProfileLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Assigned Items of the Customer-Profile resource."
       },
       "TrusthubV1CustomerProfileErrorsItem": {
         "type": "object"
@@ -259186,6 +259757,10 @@
       "TrusthubV1SupportingDocumentTypeFieldsItem": {
         "type": "object"
       },
+      "TrusthubV1TrustProductLinksProperty": {
+        "type": "object",
+        "description": "The URLs of the Assigned Items of the Trust Product resource."
+      },
       "TrusthubV1TrustProductErrorsItem": {
         "type": "object"
       },
@@ -259221,6 +259796,14 @@
             "deleteSla": 30
           }
         }
+      },
+      "VerifyV2ServiceEntityChallengeLinksProperty": {
+        "type": "object",
+        "description": "Contains a dictionary of URL links to nested resources of this Challenge."
+      },
+      "VerifyV2ServiceEntityLinksProperty": {
+        "type": "object",
+        "description": "Contains a dictionary of URL links to nested resources of this Entity."
       },
       "VerifyV2ServiceEntityFactorConfig": {
         "type": "object",
@@ -259265,6 +259848,10 @@
           }
         }
       },
+      "VerifyV2ServiceRateLimitLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
       "VerifyV2ServicePush": {
         "type": "object",
         "description": "Configurations for the Push factors (channel) created under this Service."
@@ -259278,6 +259865,10 @@
       },
       "VerifyV2ServicePasskeys": {
         "type": "object"
+      },
+      "VerifyV2ServiceLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
       },
       "VerifyV2ServiceVerificationLookup": {
         "type": "object",
@@ -259315,6 +259906,10 @@
           }
         }
       },
+      "VideoV1CompositionLinksProperty": {
+        "type": "object",
+        "description": "The URL of the media file associated with the composition."
+      },
       "VideoV1CompositionHookVideoLayout": {
         "type": "object",
         "description": "A JSON object that describes the video layout of the composition in terms of regions as specified in the HTTP POST request that created the CompositionHook resource. See [POST Parameters](https://www.twilio.com/docs/video/api/compositions-resource#http-post-parameters) for more information. Please, be aware that either video_layout or audio_sources have to be provided to get a valid creation request",
@@ -259329,9 +259924,29 @@
         "type": "object",
         "description": "A list of SIDs related to the recording. Includes the \u0060room_sid\u0060 and \u0060participant_sid\u0060."
       },
+      "VideoV1RecordingLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
+      "VideoV1RoomLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
+      "VideoV1RoomRoomParticipantLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
       "VideoV1RoomRoomRecordingGroupingSids": {
         "type": "object",
         "description": "A list of SIDs related to the Recording. Includes the \u0060room_sid\u0060 and \u0060participant_sid\u0060."
+      },
+      "VideoV1RoomRoomRecordingLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
+      "VideoV1RoomRoomTranscriptionsConfigurationProperty": {
+        "type": "object",
+        "description": "An JSON object that describes the video layout of the composition in terms of regions. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info."
       },
       "TwilioInsightsV3InternalServerErrorResponseParamsProperty": {
         "type": "object",
@@ -259381,6 +259996,18 @@
       "PhoneNumberPageMetaProperty": {
         "type": "object"
       },
+      "VoiceV1ConnectionPolicyLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related resources."
+      },
+      "VoiceV1DialingPermissionsDialingPermissionsCountryLinksProperty": {
+        "type": "object",
+        "description": "A list of URLs related to this resource."
+      },
+      "VoiceV1DialingPermissionsDialingPermissionsCountryInstanceLinksProperty": {
+        "type": "object",
+        "description": "A list of URLs related to this resource."
+      },
       "VoiceV2AccountDefaultConfigurationRequestConfigurationProperty": {
         "type": "object"
       },
@@ -259408,6 +260035,10 @@
       "WirelessV1SimDataSessionCellLocationEstimate": {
         "type": "object",
         "description": "An object that describes the estimated location in latitude and longitude where the device\u0027s Data Session took place. The location is derived from the \u0060cell_id\u0060 when the Data Session was last updated. See [Cell Location Estimate Object](https://www.twilio.com/docs/iot/wireless/api/datasession-resource#cell-location-estimate-object). "
+      },
+      "WirelessV1SimLinksProperty": {
+        "type": "object",
+        "description": "The URLs of related subresources."
       },
       "WirelessV1SimUsageRecordPeriod": {
         "type": "object",

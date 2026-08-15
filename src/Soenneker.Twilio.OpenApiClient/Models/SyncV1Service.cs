@@ -39,10 +39,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceLinksProperty Links { get; set; }
 #endif
         /// <summary>Whether every `endpoint_disconnected` event should occur after a configurable delay. The default is `false`, where the `endpoint_disconnected` event occurs immediately after disconnection. When `true`, intervening reconnections can prevent the `endpoint_disconnected` event.</summary>
         public bool? ReachabilityDebouncingEnabled { get; set; }
@@ -115,7 +115,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceLinksProperty.CreateFromDiscriminatorValue); } },
                 { "reachability_debouncing_enabled", n => { ReachabilityDebouncingEnabled = n.GetBoolValue(); } },
                 { "reachability_debouncing_window", n => { ReachabilityDebouncingWindow = n.GetIntValue(); } },
                 { "reachability_webhooks_enabled", n => { ReachabilityWebhooksEnabled = n.GetBoolValue(); } },
@@ -138,7 +138,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SyncV1ServiceLinksProperty>("links", Links);
             writer.WriteBoolValue("reachability_debouncing_enabled", ReachabilityDebouncingEnabled);
             writer.WriteIntValue("reachability_debouncing_window", ReachabilityDebouncingWindow);
             writer.WriteBoolValue("reachability_webhooks_enabled", ReachabilityWebhooksEnabled);

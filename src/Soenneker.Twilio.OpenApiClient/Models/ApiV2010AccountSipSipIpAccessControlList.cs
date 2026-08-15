@@ -57,10 +57,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of the IpAddress resources associated with this IP access control list resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipIpAccessControlListSubresourceUris? SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipIpAccessControlListSubresourceUrisProperty? SubresourceUris { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipIpAccessControlListSubresourceUris SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipIpAccessControlListSubresourceUrisProperty SubresourceUris { get; set; }
 #endif
         /// <summary>The URI for this resource, relative to `https://api.twilio.com`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipIpAccessControlListSubresourceUris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipIpAccessControlListSubresourceUris.CreateFromDiscriminatorValue); } },
+                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipIpAccessControlListSubresourceUrisProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipIpAccessControlListSubresourceUrisProperty.CreateFromDiscriminatorValue); } },
                 { "uri", n => { Uri = n.GetStringValue(); } },
             };
         }
@@ -116,7 +116,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("date_updated", DateUpdated);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipIpAccessControlListSubresourceUris>("subresource_uris", SubresourceUris);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipIpAccessControlListSubresourceUrisProperty>("subresource_uris", SubresourceUris);
             writer.WriteStringValue("uri", Uri);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -97,10 +97,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of related resources identified by their relative URIs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUris? SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUrisProperty? SubresourceUris { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUris SubresourceUris { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUrisProperty SubresourceUris { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayload"/> and sets the default values.
@@ -137,7 +137,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "reference_sid", n => { ReferenceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUris>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUris.CreateFromDiscriminatorValue); } },
+                { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUrisProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUrisProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -157,7 +157,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("reference_sid", ReferenceSid);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUris>("subresource_uris", SubresourceUris);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountRecordingRecordingAddOnResultRecordingAddOnResultPayloadSubresourceUrisProperty>("subresource_uris", SubresourceUris);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

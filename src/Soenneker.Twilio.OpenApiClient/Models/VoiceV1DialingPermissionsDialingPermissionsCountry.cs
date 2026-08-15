@@ -45,10 +45,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of URLs related to this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountryLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountryLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountryLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountryLinksProperty Links { get; set; }
 #endif
         /// <summary>Whether dialing to low-risk numbers is enabled.</summary>
         public bool? LowRiskNumbersEnabled { get; set; }
@@ -98,7 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "high_risk_special_numbers_enabled", n => { HighRiskSpecialNumbersEnabled = n.GetBoolValue(); } },
                 { "high_risk_tollfraud_numbers_enabled", n => { HighRiskTollfraudNumbersEnabled = n.GetBoolValue(); } },
                 { "iso_code", n => { IsoCode = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountryLinks>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountryLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountryLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountryLinksProperty.CreateFromDiscriminatorValue); } },
                 { "low_risk_numbers_enabled", n => { LowRiskNumbersEnabled = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -116,7 +116,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("high_risk_special_numbers_enabled", HighRiskSpecialNumbersEnabled);
             writer.WriteBoolValue("high_risk_tollfraud_numbers_enabled", HighRiskTollfraudNumbersEnabled);
             writer.WriteStringValue("iso_code", IsoCode);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountryLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1DialingPermissionsDialingPermissionsCountryLinksProperty>("links", Links);
             writer.WriteBoolValue("low_risk_numbers_enabled", LowRiskNumbersEnabled);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("url", Url);

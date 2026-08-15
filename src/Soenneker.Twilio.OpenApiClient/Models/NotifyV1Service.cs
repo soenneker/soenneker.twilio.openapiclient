@@ -119,10 +119,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URLs of the Binding, Notification, Segment, and User resources related to the service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceLinksProperty Links { get; set; }
 #endif
         /// <summary>&quot;Whether to log notifications. Can be: `true` or `false` and the default is `true`.&quot;</summary>
         public bool? LogEnabled { get; set; }
@@ -190,7 +190,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "fcm_credential_sid", n => { FcmCredentialSid = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "gcm_credential_sid", n => { GcmCredentialSid = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceLinksProperty.CreateFromDiscriminatorValue); } },
                 { "log_enabled", n => { LogEnabled = n.GetBoolValue(); } },
                 { "messaging_service_sid", n => { MessagingServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -219,7 +219,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("fcm_credential_sid", FcmCredentialSid);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("gcm_credential_sid", GcmCredentialSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NotifyV1ServiceLinksProperty>("links", Links);
             writer.WriteBoolValue("log_enabled", LogEnabled);
             writer.WriteStringValue("messaging_service_sid", MessagingServiceSid);
             writer.WriteStringValue("sid", Sid);

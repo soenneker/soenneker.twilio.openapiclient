@@ -69,10 +69,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The [Content types](https://www.twilio.com/docs/content-api/content-types-overview) (e.g. twilio/text) for this Content resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentTypes? Types { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentTypesProperty? Types { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentTypes Types { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentTypesProperty Types { get; set; }
 #endif
         /// <summary>The URL of the resource, relative to `https://content.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,10 +85,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>&quot;Defines the default placeholder values for variables included in the Content resource. e.g. {\&quot;1\&quot;: \&quot;Customer_Name\&quot;}.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentVariables? Variables { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentVariablesProperty? Variables { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentVariables Variables { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentVariablesProperty Variables { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContent"/> and sets the default values.
@@ -123,9 +123,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "legacy_body", n => { LegacyBody = n.GetStringValue(); } },
                 { "legacy_template_name", n => { LegacyTemplateName = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "types", n => { Types = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentTypes>(global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentTypes.CreateFromDiscriminatorValue); } },
+                { "types", n => { Types = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentTypesProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentTypesProperty.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "variables", n => { Variables = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentVariables>(global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentVariables.CreateFromDiscriminatorValue); } },
+                { "variables", n => { Variables = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentVariablesProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentVariablesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -143,9 +143,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("legacy_body", LegacyBody);
             writer.WriteStringValue("legacy_template_name", LegacyTemplateName);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentTypes>("types", Types);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentTypesProperty>("types", Types);
             writer.WriteStringValue("url", Url);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentVariables>("variables", Variables);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1LegacyContentVariablesProperty>("variables", Variables);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

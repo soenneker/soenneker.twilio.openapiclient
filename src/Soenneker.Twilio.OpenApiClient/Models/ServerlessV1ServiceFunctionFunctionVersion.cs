@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersionLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersionLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersionLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersionLinksProperty Links { get; set; }
 #endif
         /// <summary>The URL-friendly string by which the Function Version resource can be referenced. It can be a maximum of 255 characters. All paths begin with a forward slash (&apos;/&apos;). If a Function Version creation request is submitted with a path not containing a leading slash, the path will automatically be prepended with one.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -102,7 +102,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "function_sid", n => { FunctionSid = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersionLinks>(global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersionLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersionLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersionLinksProperty.CreateFromDiscriminatorValue); } },
                 { "path", n => { Path = n.GetStringValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
@@ -120,7 +120,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteStringValue("function_sid", FunctionSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersionLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceFunctionFunctionVersionLinksProperty>("links", Links);
             writer.WriteStringValue("path", Path);
             writer.WriteStringValue("service_sid", ServiceSid);
             writer.WriteStringValue("sid", Sid);

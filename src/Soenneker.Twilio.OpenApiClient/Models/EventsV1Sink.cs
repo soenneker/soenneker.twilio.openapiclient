@@ -29,10 +29,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains a dictionary of URL links to nested resources of this Sink.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinks? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinksProperty? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinks Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinksProperty Links { get; set; }
 #endif
         /// <summary>A 34 character string that uniquely identifies this Sink.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,7 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinks>(global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinks.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinksProperty.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sink_configuration", n => { SinkConfiguration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkSinkConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkSinkConfiguration.CreateFromDiscriminatorValue); } },
                 { "sink_type", n => { SinkType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType>(); } },
@@ -108,7 +108,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinks>("links", Links);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkLinksProperty>("links", Links);
             writer.WriteStringValue("sid", Sid);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.EventsV1SinkSinkConfiguration>("sink_configuration", SinkConfiguration);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType>("sink_type", SinkType);
