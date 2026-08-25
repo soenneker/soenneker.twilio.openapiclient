@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsQueryResponseItemsItemProperty> Items { get; set; }
 #endif
-        /// <summary>Pagination metadata containing navigation tokens and result information,this schema should according to convention be added to the responsepayload&apos;s &apos;meta&apos; attribute</summary>
+        /// <summary>The pagination metadata containing navigation tokens and result information.By convention, this schema should be added to the response payload&apos;s&apos;meta&apos; attribute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta? Meta { get; set; }

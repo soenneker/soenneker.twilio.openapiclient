@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSet"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngress"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromWarehouseDataSet"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSet"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngress"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromWarehouseDataSet"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DataMappingFromTypes : IComposedTypeWrapper, IParsable
@@ -20,22 +20,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSet DataMappingFromCloudAppDataSet { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv? DataMappingFromCsv { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv DataMappingFromCsv { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet? DataMappingFromDataSet { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet DataMappingFromDataSet { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngress"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,14 +51,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 result.DataMappingFromCloudAppDataSet = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSet();
             }
-            else if("CSV".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.DataMappingFromCsv = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv();
-            }
-            else if("DataMappingFromDataSet".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.DataMappingFromDataSet = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet();
-            }
             else if("DataMappingFromIngress".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.DataMappingFromIngress = new global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromIngress();
@@ -94,14 +70,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(DataMappingFromCloudAppDataSet != null)
             {
                 return DataMappingFromCloudAppDataSet.GetFieldDeserializers();
-            }
-            else if(DataMappingFromCsv != null)
-            {
-                return DataMappingFromCsv.GetFieldDeserializers();
-            }
-            else if(DataMappingFromDataSet != null)
-            {
-                return DataMappingFromDataSet.GetFieldDeserializers();
             }
             else if(DataMappingFromIngress != null)
             {
@@ -123,14 +91,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(DataMappingFromCloudAppDataSet != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCloudAppDataSet>(null, DataMappingFromCloudAppDataSet);
-            }
-            else if(DataMappingFromCsv != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromCsv>(null, DataMappingFromCsv);
-            }
-            else if(DataMappingFromDataSet != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromDataSet>(null, DataMappingFromDataSet);
             }
             else if(DataMappingFromIngress != null)
             {

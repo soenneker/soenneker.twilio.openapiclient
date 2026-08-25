@@ -7,15 +7,14 @@ using System.IO;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>
-    /// The pagination metadata containing navigation tokens and result information.By convention, this schema should be added to the response payload&apos;s&apos;meta&apos; attribute.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PaginationMeta : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class VoiceV3TranscriptionTranscriptionListMeta : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The key of the list property contains the actual data items.This enables programmatic iteration over paginated results.</summary>
+        /// <summary>A key, sibling to the `meta` object that holds the actual list of resources</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Key { get; set; }
@@ -23,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Key { get; set; }
 #endif
-        /// <summary>Token to fetch the next page of results.Only included if there is a next page, otherwise omitted.</summary>
+        /// <summary>The nextToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NextToken { get; set; }
@@ -31,9 +30,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string NextToken { get; set; }
 #endif
-        /// <summary>The actual number of items returned in this response.May be less than the requested pageSize for the last page.</summary>
+        /// <summary>The actual number of resources returned in the response</summary>
         public int? PageSize { get; set; }
-        /// <summary>Token to fetch the previous page of results.Only included if there is a previous page, otherwise omitted.</summary>
+        /// <summary>The previousToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PreviousToken { get; set; }
@@ -42,21 +41,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string PreviousToken { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionListMeta"/> and sets the default values.
         /// </summary>
-        public PaginationMeta()
+        public VoiceV3TranscriptionTranscriptionListMeta()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionListMeta"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionListMeta CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta();
+            return new global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionListMeta();
         }
         /// <summary>
         /// The deserialization information for the current model

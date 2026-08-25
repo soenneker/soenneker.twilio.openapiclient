@@ -131,7 +131,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string TemplateCustomSubstitutions { get; set; }
 #endif
-        /// <summary>The message [template](https://www.twilio.com/docs/verify/api/templates). If provided, will override the default template for the Service. SMS and Voice channels only.</summary>
+        /// <summary>A stringified JSON array of template entries, ordered by preference. Each entry is an object with the following fields: `sid` (string, required, matching `^HJ[0-9a-fA-F]{32}$`) — the SID of the message [template](https://www.twilio.com/docs/verify/api/templates) to apply; and `substitutions` (object, optional) — a key-value map in which the keys are the template&apos;s special variables and the values are their substitution values. The array may contain up to 10 entries. If provided, `Templates` takes precedence over `TemplateSid` and `TemplateCustomSubstitutions`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Templates { get; set; }
+#nullable restore
+#else
+        public string Templates { get; set; }
+#endif
+        /// <summary>The message [template](https://www.twilio.com/docs/verify/api/templates). If provided, will override the default template for the Service. SMS and Voice channels only. If the `Templates` parameter is also provided, `Templates` takes precedence over this parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TemplateSid { get; set; }
@@ -189,6 +197,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "Tags", n => { Tags = n.GetStringValue(); } },
                 { "TemplateCustomSubstitutions", n => { TemplateCustomSubstitutions = n.GetStringValue(); } },
                 { "TemplateSid", n => { TemplateSid = n.GetStringValue(); } },
+                { "Templates", n => { Templates = n.GetStringValue(); } },
                 { "To", n => { To = n.GetStringValue(); } },
             };
         }
@@ -215,6 +224,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("SendDigits", SendDigits);
             writer.WriteStringValue("Tags", Tags);
             writer.WriteStringValue("TemplateCustomSubstitutions", TemplateCustomSubstitutions);
+            writer.WriteStringValue("Templates", Templates);
             writer.WriteStringValue("TemplateSid", TemplateSid);
             writer.WriteStringValue("To", To);
             writer.WriteAdditionalData(AdditionalData);

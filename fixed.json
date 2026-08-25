@@ -84472,7 +84472,7 @@
         "tags": [
           "TwilioInsights"
         ],
-        "summary": "Fetch paginated query results",
+        "summary": "Retrieve paginated query results",
         "description": "Retrieve subsequent pages of a synchronous query using a page token.",
         "operationId": "TwilioInsightsV3FetchQueryResults",
         "parameters": [
@@ -84578,7 +84578,7 @@
         "tags": [
           "TwilioInsights"
         ],
-        "summary": "Fetch domain metadata",
+        "summary": "Retrieve domain metadata",
         "description": "Returns available cubes, measures, and dimensions for the Conversations domain.",
         "operationId": "TwilioInsightsV3FetchMetadata",
         "responses": {
@@ -110476,7 +110476,7 @@
                         ]
                       },
                       "mappingFrom": {
-                        "type": "DATASET",
+                        "type": "DATASET_CLOUDAPP",
                         "datasetId": "tdi_dataset_00000000000000000000000000"
                       }
                     }
@@ -110511,7 +110511,7 @@
           "DataMapping"
         ],
         "summary": "Create a Data Mapping",
-        "description": "Create a new data mapping to connect an external data source to this Memory Store.\nFor DATASET types, validates that all mapped Trait Groups and traits exist\nand that dataset field data types match their respective mapped trait data types.",
+        "description": "Create a new data mapping to connect an external data source to this Memory Store.\nFor \u0060DATASET_CLOUDAPP\u0060 and \u0060DATASET_WAREHOUSE\u0060 types, validates that all mapped Trait Groups and traits exist\nand that dataset field data types match their respective mapped trait data types.",
         "operationId": "TwilioMemoryV1CreateDataMapping",
         "requestBody": {
           "content": {
@@ -110622,7 +110622,7 @@
           "DataMapping"
         ],
         "summary": "Update a Data Mapping",
-        "description": "Partially update a data mapping. Only the fields provided in the request body will be updated,\nincluding replacing the entire contents of the \u0060mappings\u0060 array.\n\nFor DATASET types, validates that all mapped Trait Groups and traits exist\nand that dataset field data types match their respective mapped trait data types.",
+        "description": "Partially update a data mapping. Only the fields provided in the request body will be updated,\nincluding replacing the entire contents of the \u0060mappings\u0060 array.\n\nFor \u0060DATASET_CLOUDAPP\u0060 and \u0060DATASET_WAREHOUSE\u0060 types, validates that all mapped Trait Groups and traits exist\nand that dataset field data types match their respective mapped trait data types.",
         "operationId": "TwilioMemoryV1PatchDataMapping",
         "parameters": [
           {
@@ -130963,101 +130963,6 @@
           }
         ]
       }
-    },
-    "/twilio_numbers_v2/v2/CallerIds": {
-      "get": {
-        "tags": [
-          "V2CallerIds"
-        ],
-        "summary": "List verified caller IDs for an account",
-        "operationId": "TwilioNumbersV2ListCallerIds",
-        "parameters": [
-          {
-            "name": "page_size",
-            "in": "query",
-            "schema": {
-              "maximum": 1000,
-              "minimum": 1,
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "List of caller IDs",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TwilioNumbersV2ListCallerIds200Response"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "twilio_numbers_v2_accountSid_authToken": []
-          }
-        ]
-      }
-    },
-    "/twilio_numbers_v2/v2/CallerIds/{callerIdSid}": {
-      "post": {
-        "tags": [
-          "V2CallerIds"
-        ],
-        "summary": "Update a caller ID",
-        "operationId": "TwilioNumbersV2UpdateCallerId",
-        "responses": {
-          "200": {
-            "description": "Updated caller ID",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/NumbersV2CallerId"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "twilio_numbers_v2_accountSid_authToken": []
-          }
-        ]
-      },
-      "delete": {
-        "tags": [
-          "V2CallerIds"
-        ],
-        "summary": "Delete a caller ID",
-        "operationId": "TwilioNumbersV2DeleteCallerId",
-        "responses": {
-          "204": {
-            "description": "Caller ID deleted successfully"
-          }
-        },
-        "security": [
-          {
-            "twilio_numbers_v2_accountSid_authToken": []
-          }
-        ]
-      },
-      "parameters": [
-        {
-          "name": "callerIdSid",
-          "in": "path",
-          "required": true,
-          "schema": {
-            "maxLength": 34,
-            "minLength": 34,
-            "pattern": "^PN[0-9a-fA-F]{32}$",
-            "type": "string"
-          }
-        }
-      ]
     },
     "/twilio_numbers_v3/v3/HostedNumbers/HostedNumberOrders": {
       "post": {
@@ -186565,6 +186470,14 @@
                     "Tags": "{\u0022tenant_id\u0022: \u002212345\u0022}"
                   }
                 },
+                "createVerificationWithTemplates": {
+                  "value": {
+                    "To": "\u002B15017122661",
+                    "Channel": "sms",
+                    "CustomCode": "custom_code",
+                    "Templates": "[{\u0022sid\u0022: \u0022HJaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\u0022, \u0022substitutions\u0022: {\u0022title\u0022: \u0022Authorization\u0022, \u0022body\u0022: \u0022NikeAI is requesting your approval to send a wire to David.\u0022, \u0022approve_button_title\u0022: \u0022Approve\u0022, \u0022deny_button_title\u0022: \u0022Deny\u0022}}, {\u0022sid\u0022: \u0022HJbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\u0022, \u0022substitutions\u0022: {\u0022friendly_name\u0022: \u0022NikeAI\u0022}}]"
+                  }
+                },
                 "createVerificationWhatsapp": {
                   "value": {
                     "To": "\u002B15017122661",
@@ -199355,6 +199268,216 @@
       }
     },
     "/twilio_voice_v3/v3/Transcriptions": {
+      "get": {
+        "tags": [
+          "V3Transcriptions"
+        ],
+        "summary": "Retrieves a paginated, filterable list of transcriptions for the account, sorted by creation date (newest first).",
+        "description": "Returns the account\u0027s transcriptions, newest first. Filters combine with AND, and paging uses the opaque cursors in meta rather than page numbers: pass meta.nextToken to advance and meta.previousToken to go back. A token is only valid for the filter set that produced it, so changing sourceId or the date range means starting a new walk.\nItems are the transcription resource itself. Create and fetch-by-id return the long running operation envelope instead, because creation is asynchronous.",
+        "operationId": "TwilioVoiceV3ListV3Transcriptions",
+        "parameters": [
+          {
+            "name": "createdAfter",
+            "in": "query",
+            "description": "Only include transcriptions created at or after this time (inclusive)",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "example": "2026-01-01T00:00:00Z"
+            }
+          },
+          {
+            "name": "createdBefore",
+            "in": "query",
+            "description": "Only include transcriptions created strictly before this time (exclusive)",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "example": "2026-02-01T00:00:00Z"
+            }
+          },
+          {
+            "name": "languageCode",
+            "in": "query",
+            "description": "Only include transcriptions whose resolved language matches this value exactly. The comparison is case sensitive, so use the stored form, for example en-US.",
+            "schema": {
+              "type": "string",
+              "example": "en-US"
+            }
+          },
+          {
+            "name": "sourceId",
+            "in": "query",
+            "description": "Only include transcriptions for this source audio. Must be a Recording SID in lowercase hex; anything else is rejected with a 400.",
+            "schema": {
+              "pattern": "^RE[0-9a-f]{32}$",
+              "type": "string",
+              "example": "REe3a2b046e52271b586425c61d84ca90e"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "Only include transcriptions in this status",
+            "schema": {
+              "$ref": "#/components/schemas/TwilioVoiceV3ListV3TranscriptionsStatusParameter"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of results per page. This endpoint caps at 100, which is lower than the shared pagination component\u0027s ceiling and matches what the service enforces.",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "default": 50,
+              "example": 50
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "Opaque cursor for retrieving the next or previous page of results",
+            "schema": {
+              "type": "string",
+              "example": "aWQ9dm9pY2VfdHJhbnNjcmlwdGlvbl83bjdobmQ3c2Y2OHlmdjVyZTQybnZ2ejdhYSZjcmVhdGVkQXQ9MjAyNi0wNC0wMlQxOToyNToyMC4wMDBaJl9fc2Y9MA"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of transcriptions matching the given filters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV3TranscriptionTranscriptionList"
+                },
+                "example": {
+                  "transcriptions": [
+                    {
+                      "id": "voice_transcription_7n7hnd7sf68yfv5re42nvvz7aa",
+                      "accountId": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                      "status": "COMPLETED",
+                      "transcriptionConfigurationId": "voice_transcriptionconfiguration_3rthm325nansqmqvc1rrzymn1h",
+                      "sourceId": "REe3a2b046e52271b586425c61d84ca90e",
+                      "audioStartedAt": "2026-04-02T19:25:20Z",
+                      "conversationId": "conv_conversation_01k1etx3jbfx88476ccja0889c",
+                      "participants": [
+                        {
+                          "type": "CUSTOMER",
+                          "address": "\u002B15551234567",
+                          "audioChannelIndex": 1
+                        },
+                        {
+                          "type": "HUMAN_AGENT",
+                          "address": "\u002B15559876543",
+                          "audioChannelIndex": 2
+                        }
+                      ],
+                      "createdAt": "2026-04-02T19:25:20Z",
+                      "updatedAt": "2026-04-02T19:27:41Z",
+                      "url": "https://voice.twilio.com/v3/Transcriptions/voice_transcription_7n7hnd7sf68yfv5re42nvvz7aa"
+                    },
+                    {
+                      "id": "voice_transcription_4abcde1234567890abcde12345",
+                      "accountId": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                      "status": "RUNNING",
+                      "transcriptionConfigurationId": "voice_transcriptionconfiguration_3rthm325nansqmqvc1rrzymn1h",
+                      "mediaUrl": "https://example.com/audio/recording.wav",
+                      "audioStartedAt": "2026-04-02T18:10:05Z",
+                      "participants": [
+                        {
+                          "type": "CUSTOMER",
+                          "address": "\u002B15551234567",
+                          "audioChannelIndex": 1
+                        }
+                      ],
+                      "createdAt": "2026-04-02T18:10:05Z",
+                      "updatedAt": "2026-04-02T18:10:09Z",
+                      "url": "https://voice.twilio.com/v3/Transcriptions/voice_transcription_4abcde1234567890abcde12345"
+                    }
+                  ],
+                  "meta": {
+                    "key": "transcriptions",
+                    "pageSize": 2,
+                    "nextToken": "aWQ9dm9pY2VfdHJhbnNjcmlwdGlvbl80YWJjZGUxMjM0NTY3ODkwYWJjZGUxMjM0NSZjcmVhdGVkQXQ9MjAyNi0wNC0wMlQxODoxMDowNS4wMDBaJl9fc2Y9MA",
+                    "previousToken": null
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions400Response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions401Response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions403Response"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Returned only when filtering by sourceId whose total historical item count exceeds the service\u0027s scan cap. This is a fixed data volume limit on that one source rather than a problem with the request, so narrowing the other filters or retrying will not help. Error code 17535.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions422Response"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "headers": {
+              "Retry-After": {
+                "description": "Number of seconds to wait before retrying",
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions429Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions500Response"
+                }
+              }
+            }
+          }
+        }
+      },
       "post": {
         "tags": [
           "V3Transcriptions"
@@ -229166,7 +229289,7 @@
             "example": "eyJwYWdlIjoyLCJxdWVyeSI6ImJvb2tzIn0="
           }
         },
-        "description": "Pagination metadata containing navigation tokens and result information,\nthis schema should according to convention be added to the response\npayload\u0027s \u0027meta\u0027 attribute\n"
+        "description": "The pagination metadata containing navigation tokens and result information.\nBy convention, this schema should be added to the response payload\u0027s\n\u0027meta\u0027 attribute.\n"
       },
       "QueryDefinition": {
         "type": "object",
@@ -229266,7 +229389,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Valid status values for long-running operations.",
+        "description": "The valid status values for long-running operations.",
         "x-ms-enum": {
           "name": "LongRunningOperationStatus",
           "modelAsString": false,
@@ -229326,7 +229449,7 @@
             "example": "ClickHouse query exceeded the 120s execution limit."
           }
         },
-        "description": "Error details for a failed operation, embedded inside a 200 OK operation envelope."
+        "description": "The error details for a failed operation, embedded inside a 200 OK operation envelope."
       },
       "QueryJobSubmitResponse": {
         "required": [
@@ -229339,7 +229462,7 @@
         "properties": {
           "operationId": {
             "type": "string",
-            "description": "Unique identifier for the async query operation.",
+            "description": "The unique identifier for the asynchronous query operation, in TTID format.",
             "format": "Proc_JobTtid",
             "example": "proc_job_01h9d8r0vte3hz8tykdj329t7r"
           },
@@ -229348,18 +229471,18 @@
           },
           "statusUrl": {
             "type": "string",
-            "description": "URI to poll for operation status.",
+            "description": "The URI to poll for operation status.",
             "format": "uri",
             "example": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r"
           },
           "createdAt": {
             "type": "string",
-            "description": "When the operation was accepted (RFC 3339 UTC).",
+            "description": "The time when the operation was accepted, in RFC 3339 UTC format.",
             "format": "date-time",
             "example": "2026-05-25T14:30:00Z"
           }
         },
-        "description": "Initial 202 response for an async query submission.\nConforms to LongRunningOperation202Response from Twilio API Standards.\n"
+        "description": "The initial 202 response for an async query submission.\nConforms to LongRunningOperation202Response from Twilio API Standards.\n"
       },
       "QueryJobStatusResponse": {
         "required": [
@@ -229371,6 +229494,7 @@
         "properties": {
           "operationId": {
             "type": "string",
+            "description": "The unique identifier for the asynchronous query operation, in TTID format.",
             "format": "Proc_JobTtid",
             "example": "proc_job_01h9d8r0vte3hz8tykdj329t7r"
           },
@@ -229389,7 +229513,7 @@
           },
           "completedAt": {
             "type": "string",
-            "description": "When the operation reached a terminal state.",
+            "description": "The time when the operation reached a terminal state (CANCELLED, COMPLETED, or FAILED), in RFC 3339 UTC format. Null while the operation is still PENDING or RUNNING.",
             "format": "date-time",
             "nullable": true,
             "example": "2026-05-25T14:32:17Z"
@@ -229399,26 +229523,26 @@
           },
           "resultUrl": {
             "type": "string",
-            "description": "URL to retrieve query results. Present only when status is COMPLETED.\nSupports pagination via pageSize and pageToken query parameters.\n",
+            "description": "The URL to retrieve query results, present only when status is COMPLETED.\nSupports pagination via the pageSize and pageToken query parameters.\n",
             "format": "uri",
             "nullable": true,
             "example": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r/Results"
           },
           "resultId": {
             "type": "string",
-            "description": "Identifier of the results resource. Present only when status is COMPLETED.\nEqual to operationId, since results are keyed by the operation ID.\n",
+            "description": "The identifier of the results resource, present only when status is COMPLETED.\nEqual to operationId, since results are keyed by the operation ID.\n",
             "nullable": true,
             "example": "proc_job_01h9d8r0vte3hz8tykdj329t7r"
           },
           "resultRetentionPeriod": {
             "type": "string",
-            "description": "ISO 8601 duration for how long results are retained.",
+            "description": "The duration for how long results are retained, in ISO 8601 format.",
             "format": "duration",
             "nullable": true,
             "example": "P7D"
           }
         },
-        "description": "Status response for an async query operation.\nConforms to LongRunningOperationStatusResponse from Twilio API Standards.\n"
+        "description": "The status response for an async query operation.\nConforms to LongRunningOperationStatusResponse from Twilio API Standards.\n"
       },
       "QueryJobListResponse": {
         "required": [
@@ -229437,7 +229561,7 @@
             "$ref": "#/components/schemas/PaginationMeta"
           }
         },
-        "description": "Paginated list of async query operations for the account."
+        "description": "A paginated list of async query operations for the account."
       },
       "IntelligenceV2CustomOperator": {
         "type": "object",
@@ -230765,15 +230889,15 @@
         "required": [
           "id",
           "accountId",
+          "conversationId",
           "outputFormat",
-          "executionDetails",
-          "referenceIds",
-          "metadata",
           "result",
+          "executionDetails",
+          "metadata",
           "operator",
-          "dateCreated",
+          "referenceIds",
           "intelligenceConfiguration",
-          "conversationId"
+          "dateCreated"
         ],
         "type": "object",
         "properties": {
@@ -230835,15 +230959,15 @@
         "required": [
           "id",
           "accountId",
+          "conversationId",
           "outputFormat",
-          "executionDetails",
-          "referenceIds",
-          "metadata",
           "result",
+          "executionDetails",
+          "metadata",
           "operator",
-          "dateCreated",
+          "referenceIds",
           "intelligenceConfiguration",
-          "conversationId"
+          "dateCreated"
         ],
         "type": "object",
         "properties": {
@@ -230905,15 +231029,15 @@
         "required": [
           "id",
           "accountId",
+          "conversationId",
           "outputFormat",
-          "executionDetails",
-          "referenceIds",
-          "metadata",
           "result",
+          "executionDetails",
+          "metadata",
           "operator",
-          "dateCreated",
+          "referenceIds",
           "intelligenceConfiguration",
-          "conversationId"
+          "dateCreated"
         ],
         "type": "object",
         "properties": {
@@ -230975,15 +231099,15 @@
         "required": [
           "id",
           "accountId",
+          "conversationId",
           "outputFormat",
-          "executionDetails",
-          "referenceIds",
-          "metadata",
           "result",
+          "executionDetails",
+          "metadata",
           "operator",
-          "dateCreated",
+          "referenceIds",
           "intelligenceConfiguration",
-          "conversationId"
+          "dateCreated"
         ],
         "type": "object",
         "properties": {
@@ -231675,8 +231799,8 @@
       "CreateOrUpdateOperatorRequest": {
         "required": [
           "displayName",
-          "prompt",
-          "outputFormat"
+          "outputFormat",
+          "prompt"
         ],
         "type": "object",
         "properties": {
@@ -234879,10 +235003,10 @@
       "Knowledge": {
         "required": [
           "id",
-          "status",
-          "name",
           "createdAt",
-          "updatedAt"
+          "name",
+          "updatedAt",
+          "status"
         ],
         "type": "object",
         "properties": {
@@ -235358,12 +235482,12 @@
       },
       "KnowledgeBase": {
         "required": [
-          "displayName",
           "id",
-          "status",
-          "version",
           "createdAt",
-          "updatedAt"
+          "version",
+          "displayName",
+          "updatedAt",
+          "status"
         ],
         "type": "object",
         "properties": {
@@ -237095,7 +237219,7 @@
             "example": "ClickHouse query exceeded the 120s execution limit."
           }
         },
-        "description": "Error details. Present only when status is FAILED."
+        "description": "The error details, present only when status is FAILED."
       },
       "InsightsV1CallEventConversationRelayData": {
         "type": "object",
@@ -237303,12 +237427,12 @@
       },
       "SummaryInfo": {
         "required": [
-          "occurredAt",
           "id",
           "createdAt",
+          "conversationId",
+          "occurredAt",
           "updatedAt",
-          "content",
-          "conversationId"
+          "content"
         ],
         "type": "object",
         "properties": {
@@ -237947,11 +238071,11 @@
       },
       "Store": {
         "required": [
-          "displayName",
           "id",
-          "status",
+          "intelligenceServiceId",
           "version",
-          "intelligenceServiceId"
+          "displayName",
+          "status"
         ],
         "type": "object",
         "properties": {
@@ -238043,9 +238167,9 @@
       },
       "IdentityResolutionSettings": {
         "required": [
-          "identifierConfigs",
           "version",
-          "matchingRules"
+          "matchingRules",
+          "identifierConfigs"
         ],
         "type": "object",
         "properties": {
@@ -238150,8 +238274,8 @@
       },
       "TraitGroup": {
         "required": [
-          "displayName",
-          "version"
+          "version",
+          "displayName"
         ],
         "type": "object",
         "properties": {
@@ -238412,28 +238536,18 @@
       },
       "DataMappingType": {
         "enum": [
-          "CSV",
-          "DATASET",
           "INGRESS",
           "DATASET_CLOUDAPP",
           "DATASET_WAREHOUSE"
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The type of data mapping defining how data flows into the Memory Store.\n\u0060CSV\u0060 and \u0060DATASET\u0060 are deprecated aliases being replaced by \u0060INGRESS\u0060,\n\u0060DATASET_CLOUDAPP\u0060, and \u0060DATASET_WAREHOUSE\u0060 respectively.",
+        "description": "The type of data mapping defining how data flows into the Memory Store.",
         "example": "DATASET_WAREHOUSE",
         "x-ms-enum": {
           "name": "DataMappingType",
           "modelAsString": false,
           "values": [
-            {
-              "value": "CSV",
-              "name": "Csv"
-            },
-            {
-              "value": "DATASET",
-              "name": "Dataset"
-            },
             {
               "value": "INGRESS",
               "name": "Ingress"
@@ -238453,13 +238567,7 @@
         "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/DataMappingFromCsv"
-          },
-          {
             "$ref": "#/components/schemas/DataMappingFromIngress"
-          },
-          {
-            "$ref": "#/components/schemas/DataMappingFromDataSet"
           },
           {
             "$ref": "#/components/schemas/DataMappingFromCloudAppDataSet"
@@ -238478,7 +238586,7 @@
               "minLength": 1,
               "type": "string"
             },
-            "description": "The list of CSV column names that serve as the source fields."
+            "description": "The list of ingress column names that serve as the source fields."
           },
           "datasetId": {
             "pattern": "^tdi_dataset_[0-7][0-9a-z]{25}$",
@@ -238491,14 +238599,10 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "CSV": "#/components/schemas/DataMappingFromCsv",
             "INGRESS": "#/components/schemas/DataMappingFromIngress",
-            "DATASET": "#/components/schemas/DataMappingFromDataSet",
             "DATASET_CLOUDAPP": "#/components/schemas/DataMappingFromCloudAppDataSet",
             "DATASET_WAREHOUSE": "#/components/schemas/DataMappingFromWarehouseDataSet",
-            "DataMappingFromCsv": "#/components/schemas/DataMappingFromCsv",
             "DataMappingFromIngress": "#/components/schemas/DataMappingFromIngress",
-            "DataMappingFromDataSet": "#/components/schemas/DataMappingFromDataSet",
             "DataMappingFromCloudAppDataSet": "#/components/schemas/DataMappingFromCloudAppDataSet",
             "DataMappingFromWarehouseDataSet": "#/components/schemas/DataMappingFromWarehouseDataSet"
           }
@@ -238507,26 +238611,6 @@
           "type": "DATASET_WAREHOUSE",
           "datasetId": "tdi_dataset_00000000000000000000000000"
         }
-      },
-      "DataMappingFromDataSet": {
-        "required": [
-          "type",
-          "datasetId"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "$ref": "#/components/schemas/DatasetType"
-          },
-          "datasetId": {
-            "pattern": "^tdi_dataset_[0-7][0-9a-z]{25}$",
-            "type": "string",
-            "description": "The unique identifier of the TDI dataset to connect.",
-            "example": "tdi_dataset_00000000000000000000000000"
-          }
-        },
-        "additionalProperties": false,
-        "description": "Configuration for mapping from a TDI dataset."
       },
       "DataMappingToTypes": {
         "type": "object",
@@ -238677,9 +238761,9 @@
       },
       "CreateDataMappingInput": {
         "required": [
-          "mappingFrom",
           "displayName",
-          "mappingTo"
+          "mappingTo",
+          "mappingFrom"
         ],
         "type": "object",
         "properties": {
@@ -238713,12 +238797,12 @@
       },
       "DataMapping": {
         "required": [
-          "mappingTo",
           "id",
-          "displayName",
+          "createdAt",
+          "mappingTo",
           "version",
           "mappingFrom",
-          "createdAt",
+          "displayName",
           "updatedAt"
         ],
         "type": "object",
@@ -238793,10 +238877,10 @@
       },
       "RecallObservationInfo": {
         "required": [
-          "occurredAt",
           "id",
-          "source",
           "createdAt",
+          "occurredAt",
+          "source",
           "updatedAt",
           "content"
         ],
@@ -238863,12 +238947,12 @@
       },
       "RecallSummaryInfo": {
         "required": [
-          "occurredAt",
           "id",
           "createdAt",
+          "conversationId",
+          "occurredAt",
           "updatedAt",
-          "content",
-          "conversationId"
+          "content"
         ],
         "type": "object",
         "properties": {
@@ -239084,9 +239168,9 @@
       },
       "ObservationCreateRequest": {
         "required": [
-          "occurredAt",
+          "content",
           "source",
-          "content"
+          "occurredAt"
         ],
         "type": "object",
         "properties": {
@@ -239122,31 +239206,6 @@
             "description": "Array of conversation IDs associated with this observation."
           }
         }
-      },
-      "DataMappingFromCsv": {
-        "required": [
-          "type",
-          "columns"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "$ref": "#/components/schemas/CsvType"
-          },
-          "columns": {
-            "maxItems": 100,
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "maxLength": 256,
-              "minLength": 1,
-              "type": "string"
-            },
-            "description": "The list of CSV column names that serve as the source fields."
-          }
-        },
-        "additionalProperties": false,
-        "description": "Configuration for mapping from CSV column names provided directly in the request."
       },
       "DataMappingSuggestionToTypes": {
         "type": "object",
@@ -240436,6 +240495,14 @@
           "country_code": {
             "type": "string",
             "description": "The 2-character [ISO Country Code](https://www.iso.org/iso-3166-country-codes.html) of the number or channel sender.",
+            "nullable": true
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The capabilities of the number or channel sender (e.g. SMS, MMS, Voice). Populated for phone-number senders; empty for channel senders which have a standardized capability.",
             "nullable": true
           }
         }
@@ -245856,8 +245923,8 @@
       },
       "NumbersV1A2PRegistrationDetailsFetch": {
         "required": [
-          "externalPhoneNumberStatus",
           "phoneNumberSid",
+          "externalPhoneNumberStatus",
           "phoneNumber",
           "accountSid"
         ],
@@ -246137,14 +246204,16 @@
             "minLength": 34,
             "pattern": "^VE[0-9a-fA-F]{32}$",
             "type": "string",
-            "description": "The unique SID of this verification resource."
+            "description": "The unique SID of this verification resource.",
+            "x-field-extra-annotation": "@JsonAlias({\u0022verification_sid\u0022})"
           },
           "sendCodeAttempts": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/NumbersV1SmsVerificationSendCodeAttemptsItem"
             },
-            "description": "An array of verification attempt objects."
+            "description": "An array of verification attempt objects.",
+            "x-field-extra-annotation": "@JsonAlias({\u0022send_code_attempts\u0022})"
           }
         }
       },
@@ -246160,7 +246229,8 @@
             "minLength": 34,
             "pattern": "^VE[0-9a-fA-F]{32}$",
             "type": "string",
-            "description": "The unique SID of this verification resource."
+            "description": "The unique SID of this verification resource.",
+            "x-field-extra-annotation": "@JsonAlias({\u0022verification_sid\u0022})"
           },
           "status": {
             "type": "string",
@@ -246172,7 +246242,8 @@
             "pattern": "^PN[0-9a-fA-F]{32}$",
             "type": "string",
             "description": "The Caller ID SID created upon successful verification.",
-            "nullable": true
+            "nullable": true,
+            "x-field-extra-annotation": "@JsonAlias({\u0022caller_id_sid\u0022})"
           }
         }
       },
@@ -246184,24 +246255,29 @@
             "minLength": 34,
             "pattern": "^AC[0-9a-fA-F]{32}$",
             "type": "string",
-            "description": "The Account SID that owns this verification."
+            "description": "The Account SID that owns this verification.",
+            "x-field-extra-annotation": "@JsonAlias({\u0022AccountSid\u0022})"
           },
           "phoneNumber": {
             "type": "string",
-            "description": "The phone number being verified in E.164 format."
+            "description": "The phone number being verified in E.164 format.",
+            "x-field-extra-annotation": "@JsonAlias({\u0022PhoneNumber\u0022})"
           },
           "friendlyName": {
             "type": "string",
             "description": "A human-readable name for this caller ID.",
-            "nullable": true
+            "nullable": true,
+            "x-field-extra-annotation": "@JsonAlias({\u0022FriendlyName\u0022})"
           },
           "validationCode": {
             "type": "string",
-            "description": "The 6-digit validation code to be entered during the call."
+            "description": "The 6-digit validation code to be entered during the call.",
+            "x-field-extra-annotation": "@JsonAlias({\u0022ValidationCode\u0022})"
           },
           "callSid": {
             "type": "string",
-            "description": "The Call SID for the verification call."
+            "description": "The Call SID for the verification call.",
+            "x-field-extra-annotation": "@JsonAlias({\u0022CallSid\u0022})"
           }
         }
       },
@@ -246218,7 +246294,8 @@
             "pattern": "^PN[0-9a-fA-F]{32}$",
             "type": "string",
             "description": "The Caller ID SID created upon successful verification.",
-            "nullable": true
+            "nullable": true,
+            "x-field-extra-annotation": "@JsonAlias({\u0022caller_id_sid\u0022})"
           }
         }
       },
@@ -246300,8 +246377,8 @@
       },
       "NumbersV2A2PRegistrationDetailsFetch": {
         "required": [
-          "externalPhoneNumberStatus",
           "phoneNumberSid",
+          "externalPhoneNumberStatus",
           "phoneNumber",
           "accountSid"
         ],
@@ -249011,8 +249088,7 @@
           "sender_id",
           "business_identity",
           "is_subassigned",
-          "friendly_name",
-          "customer_profile_bundle_sid"
+          "friendly_name"
         ],
         "type": "object",
         "properties": {
@@ -249051,7 +249127,8 @@
             "minLength": 34,
             "pattern": "^BU[0-9a-fA-F]{32}$",
             "type": "string",
-            "description": "Bundle SID of customer\u0027s profile"
+            "description": "Bundle SID of customer\u0027s profile",
+            "nullable": true
           },
           "isv_opt_in_consent": {
             "type": "boolean",
@@ -249125,29 +249202,32 @@
             "minLength": 34,
             "pattern": "^AC[0-9a-fA-F]{32}$",
             "type": "string",
-            "description": "The Account SID that owns this Caller ID."
+            "description": "The Account SID that owns this Caller ID.",
+            "x-field-extra-annotation": "@JsonAlias({\u0022account_sid\u0022})"
           },
           "phoneNumber": {
             "type": "string",
             "description": "The phone number in E.164 format.",
-            "nullable": true
+            "nullable": true,
+            "x-field-extra-annotation": "@JsonAlias({\u0022phone_number\u0022})"
           },
           "friendlyName": {
             "type": "string",
             "description": "A human-readable name for this caller ID.",
-            "nullable": true
+            "nullable": true,
+            "x-field-extra-annotation": "@JsonAlias({\u0022friendly_name\u0022})"
           },
           "dateCreated": {
             "type": "string",
             "description": "The date this resource was created.",
-            "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "x-field-extra-annotation": "@JsonAlias({\u0022date_created\u0022})"
           },
           "dateUpdated": {
             "type": "string",
             "description": "The date this resource was last updated.",
-            "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "x-field-extra-annotation": "@JsonAlias({\u0022date_updated\u0022})"
           }
         }
       },
@@ -267154,7 +267234,7 @@
             "type": "string",
             "description": "The source ID (recording ID) - used for tracking only",
             "nullable": true,
-            "example": "RExxxxx"
+            "example": "REe3a2b046e52271b586425c61d84ca90e"
           },
           "audioStartedAt": {
             "type": "string",
@@ -267257,6 +267337,25 @@
           }
         },
         "description": "Response envelope for long-running operations (202 Accepted pattern).\nReturned immediately on acceptance and on each status poll. Extensible to allow\nadditional fields in future versions.\n"
+      },
+      "VoiceV3TranscriptionTranscriptionList": {
+        "required": [
+          "transcriptions",
+          "meta"
+        ],
+        "type": "object",
+        "properties": {
+          "transcriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VoiceV3TranscriptionTranscription"
+            },
+            "description": "List of transcription resources"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/VoiceV3TranscriptionTranscriptionListMeta"
+          }
+        }
       },
       "WirelessV1AccountUsageRecord": {
         "type": "object",
@@ -270268,10 +270367,10 @@
       },
       "TwilioMemoryV1CommunicationRecipientsItem": {
         "required": [
-          "address",
-          "name",
           "id",
-          "channel"
+          "channel",
+          "name",
+          "address"
         ],
         "type": "object",
         "properties": {
@@ -270683,7 +270782,8 @@
         "type": "object",
         "properties": {
           "attemptSid": {
-            "type": "string"
+            "type": "string",
+            "x-field-extra-annotation": "@JsonAlias({\u0022attempt_sid\u0022})"
           },
           "time": {
             "type": "string"
@@ -272208,6 +272308,29 @@
           },
           "type": {
             "$ref": "#/components/schemas/VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItemType"
+          }
+        }
+      },
+      "VoiceV3TranscriptionTranscriptionListMeta": {
+        "required": [
+          "key",
+          "pageSize"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "A key, sibling to the \u0060meta\u0060 object that holds the actual list of resources"
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "The actual number of resources returned in the response"
+          },
+          "previousToken": {
+            "type": "string"
+          },
+          "nextToken": {
+            "type": "string"
           }
         }
       },
@@ -298158,11 +298281,15 @@
             "minLength": 34,
             "pattern": "^HJ[0-9a-fA-F]{32}$",
             "type": "string",
-            "description": "The message [template](https://www.twilio.com/docs/verify/api/templates). If provided, will override the default template for the Service. SMS and Voice channels only."
+            "description": "The message [template](https://www.twilio.com/docs/verify/api/templates). If provided, will override the default template for the Service. SMS and Voice channels only. If the \u0060Templates\u0060 parameter is also provided, \u0060Templates\u0060 takes precedence over this parameter."
           },
           "TemplateCustomSubstitutions": {
             "type": "string",
             "description": "A stringified JSON object in which the keys are the template\u0027s special variables and the values are the variables substitutions."
+          },
+          "Templates": {
+            "type": "string",
+            "description": "A stringified JSON array of template entries, ordered by preference. Each entry is an object with the following fields: \u0060sid\u0060 (string, required, matching \u0060^HJ[0-9a-fA-F]{32}$\u0060) \u2014 the SID of the message [template](https://www.twilio.com/docs/verify/api/templates) to apply; and \u0060substitutions\u0060 (object, optional) \u2014 a key-value map in which the keys are the template\u0027s special variables and the values are their substitution values. The array may contain up to 10 entries. If provided, \u0060Templates\u0060 takes precedence over \u0060TemplateSid\u0060 and \u0060TemplateCustomSubstitutions\u0060."
           },
           "DeviceIp": {
             "type": "string",
@@ -300180,6 +300307,354 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TwilioVoiceV3FetchTranscription500ResponseErrorsItem"
+            },
+            "description": "Twilio-specific extension for validation errors (typically HTTP 400/422).\nContains an array of individual field-level validation errors, each with a\nhuman-readable detail message and a JSON Pointer (RFC 6901) indicating the\nlocation of the error in the request. This is particularly useful for\nrequest validation failures where multiple fields may have errors.\n",
+            "nullable": true
+          }
+        },
+        "description": "The error response from a Twilio service, compliant with RFC-9457 (Problem Details for HTTP APIs).\nSee https://www.rfc-editor.org/rfc/rfc9457.html for the specification.\n"
+      },
+      "TwilioVoiceV3ListV3Transcriptions400Response": {
+        "required": [
+          "type",
+          "title",
+          "status",
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A URI reference (RFC3986) that identifies the problem type. This URI should resolve to\nhuman-readable documentation for the problem type. When dereferenced, it SHOULD provide\nhuman-readable documentation for the problem type (e.g., using HTML).\nFor Twilio errors, this should be a URL to https://www.twilio.com/docs/api/errors/{code}\n",
+            "format": "uri-reference",
+            "example": "https://www.twilio.com/docs/api/errors/20001"
+          },
+          "title": {
+            "maxLength": 128,
+            "minLength": 16,
+            "type": "string",
+            "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
+            "example": "Invalid parameter"
+          },
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code generated by the origin server for this occurrence of the problem.\nThis is the same as the HTTP status code returned in the response.\n",
+            "example": 400
+          },
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation specific to this occurrence of the problem. This field\u0027s value\ncan change between different occurrences of the same problem type to provide specific details.\n",
+            "nullable": true,
+            "example": "The \u0027PhoneNumber\u0027 parameter is required but was not provided."
+          },
+          "instance": {
+            "type": "string",
+            "description": "A URI reference that identifies the specific occurrence of the problem. It may or may not\nyield further information if dereferenced. This can be used for correlation and debugging.\n",
+            "format": "uri-reference",
+            "nullable": true,
+            "example": "/api/v1/accounts/AC123/calls/CA456"
+          },
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code (extension member). This numeric code uniquely identifies\nthe error type within Twilio\u0027s error taxonomy and can be used for programmatic handling.\nRegistered at https://www.twilio.com/docs/api/errors\n",
+            "example": 20001
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions400ResponseErrorsItem"
+            },
+            "description": "Twilio-specific extension for validation errors (typically HTTP 400/422).\nContains an array of individual field-level validation errors, each with a\nhuman-readable detail message and a JSON Pointer (RFC 6901) indicating the\nlocation of the error in the request. This is particularly useful for\nrequest validation failures where multiple fields may have errors.\n",
+            "nullable": true
+          }
+        },
+        "description": "The error response from a Twilio service, compliant with RFC-9457 (Problem Details for HTTP APIs).\nSee https://www.rfc-editor.org/rfc/rfc9457.html for the specification.\n"
+      },
+      "TwilioVoiceV3ListV3Transcriptions401Response": {
+        "required": [
+          "type",
+          "title",
+          "status",
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A URI reference (RFC3986) that identifies the problem type. This URI should resolve to\nhuman-readable documentation for the problem type. When dereferenced, it SHOULD provide\nhuman-readable documentation for the problem type (e.g., using HTML).\nFor Twilio errors, this should be a URL to https://www.twilio.com/docs/api/errors/{code}\n",
+            "format": "uri-reference",
+            "example": "https://www.twilio.com/docs/api/errors/20001"
+          },
+          "title": {
+            "maxLength": 128,
+            "minLength": 16,
+            "type": "string",
+            "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
+            "example": "Invalid parameter"
+          },
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code generated by the origin server for this occurrence of the problem.\nThis is the same as the HTTP status code returned in the response.\n",
+            "example": 400
+          },
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation specific to this occurrence of the problem. This field\u0027s value\ncan change between different occurrences of the same problem type to provide specific details.\n",
+            "nullable": true,
+            "example": "The \u0027PhoneNumber\u0027 parameter is required but was not provided."
+          },
+          "instance": {
+            "type": "string",
+            "description": "A URI reference that identifies the specific occurrence of the problem. It may or may not\nyield further information if dereferenced. This can be used for correlation and debugging.\n",
+            "format": "uri-reference",
+            "nullable": true,
+            "example": "/api/v1/accounts/AC123/calls/CA456"
+          },
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code (extension member). This numeric code uniquely identifies\nthe error type within Twilio\u0027s error taxonomy and can be used for programmatic handling.\nRegistered at https://www.twilio.com/docs/api/errors\n",
+            "example": 20001
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions401ResponseErrorsItem"
+            },
+            "description": "Twilio-specific extension for validation errors (typically HTTP 400/422).\nContains an array of individual field-level validation errors, each with a\nhuman-readable detail message and a JSON Pointer (RFC 6901) indicating the\nlocation of the error in the request. This is particularly useful for\nrequest validation failures where multiple fields may have errors.\n",
+            "nullable": true
+          }
+        },
+        "description": "The error response from a Twilio service, compliant with RFC-9457 (Problem Details for HTTP APIs).\nSee https://www.rfc-editor.org/rfc/rfc9457.html for the specification.\n"
+      },
+      "TwilioVoiceV3ListV3Transcriptions403Response": {
+        "required": [
+          "type",
+          "title",
+          "status",
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A URI reference (RFC3986) that identifies the problem type. This URI should resolve to\nhuman-readable documentation for the problem type. When dereferenced, it SHOULD provide\nhuman-readable documentation for the problem type (e.g., using HTML).\nFor Twilio errors, this should be a URL to https://www.twilio.com/docs/api/errors/{code}\n",
+            "format": "uri-reference",
+            "example": "https://www.twilio.com/docs/api/errors/20001"
+          },
+          "title": {
+            "maxLength": 128,
+            "minLength": 16,
+            "type": "string",
+            "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
+            "example": "Invalid parameter"
+          },
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code generated by the origin server for this occurrence of the problem.\nThis is the same as the HTTP status code returned in the response.\n",
+            "example": 400
+          },
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation specific to this occurrence of the problem. This field\u0027s value\ncan change between different occurrences of the same problem type to provide specific details.\n",
+            "nullable": true,
+            "example": "The \u0027PhoneNumber\u0027 parameter is required but was not provided."
+          },
+          "instance": {
+            "type": "string",
+            "description": "A URI reference that identifies the specific occurrence of the problem. It may or may not\nyield further information if dereferenced. This can be used for correlation and debugging.\n",
+            "format": "uri-reference",
+            "nullable": true,
+            "example": "/api/v1/accounts/AC123/calls/CA456"
+          },
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code (extension member). This numeric code uniquely identifies\nthe error type within Twilio\u0027s error taxonomy and can be used for programmatic handling.\nRegistered at https://www.twilio.com/docs/api/errors\n",
+            "example": 20001
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions403ResponseErrorsItem"
+            },
+            "description": "Twilio-specific extension for validation errors (typically HTTP 400/422).\nContains an array of individual field-level validation errors, each with a\nhuman-readable detail message and a JSON Pointer (RFC 6901) indicating the\nlocation of the error in the request. This is particularly useful for\nrequest validation failures where multiple fields may have errors.\n",
+            "nullable": true
+          }
+        },
+        "description": "The error response from a Twilio service, compliant with RFC-9457 (Problem Details for HTTP APIs).\nSee https://www.rfc-editor.org/rfc/rfc9457.html for the specification.\n"
+      },
+      "TwilioVoiceV3ListV3Transcriptions422Response": {
+        "required": [
+          "type",
+          "title",
+          "status",
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A URI reference (RFC3986) that identifies the problem type. This URI should resolve to\nhuman-readable documentation for the problem type. When dereferenced, it SHOULD provide\nhuman-readable documentation for the problem type (e.g., using HTML).\nFor Twilio errors, this should be a URL to https://www.twilio.com/docs/api/errors/{code}\n",
+            "format": "uri-reference",
+            "example": "https://www.twilio.com/docs/api/errors/20001"
+          },
+          "title": {
+            "maxLength": 128,
+            "minLength": 16,
+            "type": "string",
+            "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
+            "example": "Invalid parameter"
+          },
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code generated by the origin server for this occurrence of the problem.\nThis is the same as the HTTP status code returned in the response.\n",
+            "example": 400
+          },
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation specific to this occurrence of the problem. This field\u0027s value\ncan change between different occurrences of the same problem type to provide specific details.\n",
+            "nullable": true,
+            "example": "The \u0027PhoneNumber\u0027 parameter is required but was not provided."
+          },
+          "instance": {
+            "type": "string",
+            "description": "A URI reference that identifies the specific occurrence of the problem. It may or may not\nyield further information if dereferenced. This can be used for correlation and debugging.\n",
+            "format": "uri-reference",
+            "nullable": true,
+            "example": "/api/v1/accounts/AC123/calls/CA456"
+          },
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code (extension member). This numeric code uniquely identifies\nthe error type within Twilio\u0027s error taxonomy and can be used for programmatic handling.\nRegistered at https://www.twilio.com/docs/api/errors\n",
+            "example": 20001
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions422ResponseErrorsItem"
+            },
+            "description": "Twilio-specific extension for validation errors (typically HTTP 400/422).\nContains an array of individual field-level validation errors, each with a\nhuman-readable detail message and a JSON Pointer (RFC 6901) indicating the\nlocation of the error in the request. This is particularly useful for\nrequest validation failures where multiple fields may have errors.\n",
+            "nullable": true
+          }
+        },
+        "description": "The error response from a Twilio service, compliant with RFC-9457 (Problem Details for HTTP APIs).\nSee https://www.rfc-editor.org/rfc/rfc9457.html for the specification.\n"
+      },
+      "TwilioVoiceV3ListV3Transcriptions429Response": {
+        "required": [
+          "type",
+          "title",
+          "status",
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A URI reference (RFC3986) that identifies the problem type. This URI should resolve to\nhuman-readable documentation for the problem type. When dereferenced, it SHOULD provide\nhuman-readable documentation for the problem type (e.g., using HTML).\nFor Twilio errors, this should be a URL to https://www.twilio.com/docs/api/errors/{code}\n",
+            "format": "uri-reference",
+            "example": "https://www.twilio.com/docs/api/errors/20001"
+          },
+          "title": {
+            "maxLength": 128,
+            "minLength": 16,
+            "type": "string",
+            "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
+            "example": "Invalid parameter"
+          },
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code generated by the origin server for this occurrence of the problem.\nThis is the same as the HTTP status code returned in the response.\n",
+            "example": 400
+          },
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation specific to this occurrence of the problem. This field\u0027s value\ncan change between different occurrences of the same problem type to provide specific details.\n",
+            "nullable": true,
+            "example": "The \u0027PhoneNumber\u0027 parameter is required but was not provided."
+          },
+          "instance": {
+            "type": "string",
+            "description": "A URI reference that identifies the specific occurrence of the problem. It may or may not\nyield further information if dereferenced. This can be used for correlation and debugging.\n",
+            "format": "uri-reference",
+            "nullable": true,
+            "example": "/api/v1/accounts/AC123/calls/CA456"
+          },
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code (extension member). This numeric code uniquely identifies\nthe error type within Twilio\u0027s error taxonomy and can be used for programmatic handling.\nRegistered at https://www.twilio.com/docs/api/errors\n",
+            "example": 20001
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions429ResponseErrorsItem"
+            },
+            "description": "Twilio-specific extension for validation errors (typically HTTP 400/422).\nContains an array of individual field-level validation errors, each with a\nhuman-readable detail message and a JSON Pointer (RFC 6901) indicating the\nlocation of the error in the request. This is particularly useful for\nrequest validation failures where multiple fields may have errors.\n",
+            "nullable": true
+          }
+        },
+        "description": "The error response from a Twilio service, compliant with RFC-9457 (Problem Details for HTTP APIs).\nSee https://www.rfc-editor.org/rfc/rfc9457.html for the specification.\n"
+      },
+      "TwilioVoiceV3ListV3Transcriptions500Response": {
+        "required": [
+          "type",
+          "title",
+          "status",
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A URI reference (RFC3986) that identifies the problem type. This URI should resolve to\nhuman-readable documentation for the problem type. When dereferenced, it SHOULD provide\nhuman-readable documentation for the problem type (e.g., using HTML).\nFor Twilio errors, this should be a URL to https://www.twilio.com/docs/api/errors/{code}\n",
+            "format": "uri-reference",
+            "example": "https://www.twilio.com/docs/api/errors/20001"
+          },
+          "title": {
+            "maxLength": 128,
+            "minLength": 16,
+            "type": "string",
+            "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
+            "example": "Invalid parameter"
+          },
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code generated by the origin server for this occurrence of the problem.\nThis is the same as the HTTP status code returned in the response.\n",
+            "example": 400
+          },
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation specific to this occurrence of the problem. This field\u0027s value\ncan change between different occurrences of the same problem type to provide specific details.\n",
+            "nullable": true,
+            "example": "The \u0027PhoneNumber\u0027 parameter is required but was not provided."
+          },
+          "instance": {
+            "type": "string",
+            "description": "A URI reference that identifies the specific occurrence of the problem. It may or may not\nyield further information if dereferenced. This can be used for correlation and debugging.\n",
+            "format": "uri-reference",
+            "nullable": true,
+            "example": "/api/v1/accounts/AC123/calls/CA456"
+          },
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code (extension member). This numeric code uniquely identifies\nthe error type within Twilio\u0027s error taxonomy and can be used for programmatic handling.\nRegistered at https://www.twilio.com/docs/api/errors\n",
+            "example": 20001
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TwilioVoiceV3ListV3Transcriptions500ResponseErrorsItem"
             },
             "description": "Twilio-specific extension for validation errors (typically HTTP 400/422).\nContains an array of individual field-level validation errors, each with a\nhuman-readable detail message and a JSON Pointer (RFC 6901) indicating the\nlocation of the error in the request. This is particularly useful for\nrequest validation failures where multiple fields may have errors.\n",
             "nullable": true
@@ -303732,17 +304207,6 @@
       },
       "TwilioNumbersV2CreateBulkHostedNumberOrderRequestRequestBody": {
         "type": "object"
-      },
-      "TwilioNumbersV2ListCallerIds200Response": {
-        "type": "object",
-        "properties": {
-          "callerIds": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/NumbersV2CallerId"
-            }
-          }
-        }
       },
       "TwilioTaskrouterV1CreateTaskQueueBulkRealTimeStatisticsRequestRequestBody": {
         "type": "object"
@@ -317415,6 +317879,132 @@
           }
         }
       },
+      "TwilioVoiceV3ListV3Transcriptions400ResponseErrorsItem": {
+        "required": [
+          "detail",
+          "pointer"
+        ],
+        "type": "object",
+        "properties": {
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation of the validation error for this specific field.",
+            "example": "must be a positive integer"
+          },
+          "pointer": {
+            "type": "string",
+            "description": "A JSON Pointer (RFC 6901) to the location in the request where the error occurred.",
+            "example": "#/age"
+          }
+        }
+      },
+      "TwilioVoiceV3ListV3Transcriptions401ResponseErrorsItem": {
+        "required": [
+          "detail",
+          "pointer"
+        ],
+        "type": "object",
+        "properties": {
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation of the validation error for this specific field.",
+            "example": "must be a positive integer"
+          },
+          "pointer": {
+            "type": "string",
+            "description": "A JSON Pointer (RFC 6901) to the location in the request where the error occurred.",
+            "example": "#/age"
+          }
+        }
+      },
+      "TwilioVoiceV3ListV3Transcriptions403ResponseErrorsItem": {
+        "required": [
+          "detail",
+          "pointer"
+        ],
+        "type": "object",
+        "properties": {
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation of the validation error for this specific field.",
+            "example": "must be a positive integer"
+          },
+          "pointer": {
+            "type": "string",
+            "description": "A JSON Pointer (RFC 6901) to the location in the request where the error occurred.",
+            "example": "#/age"
+          }
+        }
+      },
+      "TwilioVoiceV3ListV3Transcriptions422ResponseErrorsItem": {
+        "required": [
+          "detail",
+          "pointer"
+        ],
+        "type": "object",
+        "properties": {
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation of the validation error for this specific field.",
+            "example": "must be a positive integer"
+          },
+          "pointer": {
+            "type": "string",
+            "description": "A JSON Pointer (RFC 6901) to the location in the request where the error occurred.",
+            "example": "#/age"
+          }
+        }
+      },
+      "TwilioVoiceV3ListV3Transcriptions429ResponseErrorsItem": {
+        "required": [
+          "detail",
+          "pointer"
+        ],
+        "type": "object",
+        "properties": {
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation of the validation error for this specific field.",
+            "example": "must be a positive integer"
+          },
+          "pointer": {
+            "type": "string",
+            "description": "A JSON Pointer (RFC 6901) to the location in the request where the error occurred.",
+            "example": "#/age"
+          }
+        }
+      },
+      "TwilioVoiceV3ListV3Transcriptions500ResponseErrorsItem": {
+        "required": [
+          "detail",
+          "pointer"
+        ],
+        "type": "object",
+        "properties": {
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 16,
+            "type": "string",
+            "description": "A human-readable explanation of the validation error for this specific field.",
+            "example": "must be a positive integer"
+          },
+          "pointer": {
+            "type": "string",
+            "description": "A JSON Pointer (RFC 6901) to the location in the request where the error occurred.",
+            "example": "#/age"
+          }
+        }
+      },
       "TwilioVoiceV3CreateV3Transcriptions400ResponseErrorsItem": {
         "required": [
           "detail",
@@ -320797,25 +321387,6 @@
           ]
         }
       },
-      "DatasetType": {
-        "enum": [
-          "DATASET"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "The source data type, which determines the source of the data and the required configuration parameters.",
-        "example": "DATASET",
-        "x-ms-enum": {
-          "name": "DatasetType",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "DATASET",
-              "name": "Dataset"
-            }
-          ]
-        }
-      },
       "TraitsType": {
         "enum": [
           "TRAITS"
@@ -320870,25 +321441,6 @@
             {
               "value": "FAILED",
               "name": "Failed"
-            }
-          ]
-        }
-      },
-      "CsvType": {
-        "enum": [
-          "CSV"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "The source data type, which determines the source of the data and the required configuration parameters.",
-        "example": "CSV",
-        "x-ms-enum": {
-          "name": "CsvType",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "CSV",
-              "name": "Csv"
             }
           ]
         }
@@ -329348,6 +329900,39 @@
         "type": "string",
         "additionalProperties": false,
         "example": "S256"
+      },
+      "TwilioVoiceV3ListV3TranscriptionsStatusParameter": {
+        "enum": [
+          "PENDING",
+          "RUNNING",
+          "COMPLETED",
+          "FAILED"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "COMPLETED",
+        "x-ms-enum": {
+          "name": "TwilioVoiceV3ListV3TranscriptionsStatusParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "PENDING",
+              "name": "Pending"
+            },
+            {
+              "value": "RUNNING",
+              "name": "Running"
+            },
+            {
+              "value": "COMPLETED",
+              "name": "Completed"
+            },
+            {
+              "value": "FAILED",
+              "name": "Failed"
+            }
+          ]
+        }
       }
     },
     "responses": {
@@ -333391,11 +333976,11 @@
     },
     {
       "name": "TwilioInsights",
-      "description": "Twilio Insights Sync API."
+      "description": "Twilio Insights synchronous Query and Metadata resources."
     },
     {
       "name": "TwilioInsightsAsync",
-      "description": "Twilio Insights Async Query Jobs API (long-running query operations)."
+      "description": "Twilio Insights asynchronous QueryJobs resource (long-running query operations)."
     },
     {
       "name": "IntelligenceV2CustomOperator"

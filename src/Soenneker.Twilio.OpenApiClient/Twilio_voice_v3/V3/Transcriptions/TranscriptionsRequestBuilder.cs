@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TranscriptionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v3/v3/Transcriptions", pathParameters)
+        public TranscriptionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v3/v3/Transcriptions{?createdAfter*,createdBefore*,languageCode*,pageSize*,pageToken*,sourceId*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,8 +43,41 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TranscriptionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v3/v3/Transcriptions", rawUrl)
+        public TranscriptionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v3/v3/Transcriptions{?createdAfter*,createdBefore*,languageCode*,pageSize*,pageToken*,sourceId*,status*}", rawUrl)
         {
+        }
+        /// <summary>
+        /// Returns the account&apos;s transcriptions, newest first. Filters combine with AND, and paging uses the opaque cursors in meta rather than page numbers: pass meta.nextToken to advance and meta.previousToken to go back. A token is only valid for the filter set that produced it, so changing sourceId or the date range means starting a new walk.Items are the transcription resource itself. Create and fetch-by-id return the long running operation envelope instead, because creation is asynchronous.
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionList"/></returns>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions422Response">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions500Response">When receiving a 500 status code</exception>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionList?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions.TranscriptionsRequestBuilder.TranscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionList> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions.TranscriptionsRequestBuilder.TranscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            var requestInfo = ToGetRequestInformation(requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions401Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions403Response.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions422Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions500Response.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionList>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a new transcription from either a sourceId or a mediaUrl. Either sourceId or mediaUrl must be provided, but not both.
@@ -84,6 +117,25 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperation202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperation202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
+        /// Returns the account&apos;s transcriptions, newest first. Filters combine with AND, and paging uses the opaque cursors in meta rather than page numbers: pass meta.nextToken to advance and meta.previousToken to go back. A token is only valid for the filter set that produced it, so changing sourceId or the date range means starting a new walk.Items are the transcription resource itself. Create and fetch-by-id return the long running operation envelope instead, because creation is asynchronous.
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions.TranscriptionsRequestBuilder.TranscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions.TranscriptionsRequestBuilder.TranscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
+        }
+        /// <summary>
         /// Creates a new transcription from either a sourceId or a mediaUrl. Either sourceId or mediaUrl must be provided, but not both.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
@@ -113,6 +165,55 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions
         public global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions.TranscriptionsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions.TranscriptionsRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// Returns the account&apos;s transcriptions, newest first. Filters combine with AND, and paging uses the opaque cursors in meta rather than page numbers: pass meta.nextToken to advance and meta.previousToken to go back. A token is only valid for the filter set that produced it, so changing sourceId or the date range means starting a new walk.Items are the transcription resource itself. Create and fetch-by-id return the long running operation envelope instead, because creation is asynchronous.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class TranscriptionsRequestBuilderGetQueryParameters 
+        {
+            /// <summary>Only include transcriptions created at or after this time (inclusive)</summary>
+            [QueryParameter("createdAfter")]
+            public DateTimeOffset? CreatedAfter { get; set; }
+            /// <summary>Only include transcriptions created strictly before this time (exclusive)</summary>
+            [QueryParameter("createdBefore")]
+            public DateTimeOffset? CreatedBefore { get; set; }
+            /// <summary>Only include transcriptions whose resolved language matches this value exactly. The comparison is case sensitive, so use the stored form, for example en-US.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("languageCode")]
+            public string? LanguageCode { get; set; }
+#nullable restore
+#else
+            [QueryParameter("languageCode")]
+            public string LanguageCode { get; set; }
+#endif
+            /// <summary>Number of results per page. This endpoint caps at 100, which is lower than the shared pagination component&apos;s ceiling and matches what the service enforces.</summary>
+            [QueryParameter("pageSize")]
+            public int? PageSize { get; set; }
+            /// <summary>Opaque cursor for retrieving the next or previous page of results</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("pageToken")]
+            public string? PageToken { get; set; }
+#nullable restore
+#else
+            [QueryParameter("pageToken")]
+            public string PageToken { get; set; }
+#endif
+            /// <summary>Only include transcriptions for this source audio. Must be a Recording SID in lowercase hex; anything else is rejected with a 400.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("sourceId")]
+            public string? SourceId { get; set; }
+#nullable restore
+#else
+            [QueryParameter("sourceId")]
+            public string SourceId { get; set; }
+#endif
+            /// <summary>Only include transcriptions in this status</summary>
+            [QueryParameter("status")]
+            public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3TranscriptionsStatusParameter? Status { get; set; }
         }
     }
 }

@@ -78,7 +78,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.DataMappingList>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.DataMappingList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new data mapping to connect an external data source to this Memory Store.For DATASET types, validates that all mapped Trait Groups and traits existand that dataset field data types match their respective mapped trait data types.
+        /// Create a new data mapping to connect an external data source to this Memory Store.For `DATASET_CLOUDAPP` and `DATASET_WAREHOUSE` types, validates that all mapped Trait Groups and traits existand that dataset field data types match their respective mapped trait data types.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1CreateDataMapping202Response"/></returns>
         /// <param name="body">A data mapping connects external data sources to a Memory Store, enabling automaticingestion and mapping of data to profile traits.</param>
@@ -132,7 +132,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
             return requestInfo;
         }
         /// <summary>
-        /// Create a new data mapping to connect an external data source to this Memory Store.For DATASET types, validates that all mapped Trait Groups and traits existand that dataset field data types match their respective mapped trait data types.
+        /// Create a new data mapping to connect an external data source to this Memory Store.For `DATASET_CLOUDAPP` and `DATASET_WAREHOUSE` types, validates that all mapped Trait Groups and traits existand that dataset field data types match their respective mapped trait data types.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">A data mapping connects external data sources to a Memory Store, enabling automaticingestion and mapping of data to profile traits.</param>
