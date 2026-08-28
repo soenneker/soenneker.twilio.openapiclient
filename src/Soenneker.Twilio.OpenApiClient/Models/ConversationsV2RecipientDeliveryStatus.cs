@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>Delivery status of a Communication to a recipient.</summary>
+    /// <summary>Delivery status of a Communication to a recipient.- INITIATED: Communication is initiated to be sent at a future time- IN_PROGRESS: Communication is in the process of being sent- DELIVERED: Provider confirms the Communication has been delivered- READ: Recipient has read the Communication (channels that support read receipts, e.g. WhatsApp, RCS)- FAILED: Communication could not be sent or delivered- COMPLETED: Deprecated and unused. Never emitted; do not rely on this value.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ConversationsV2RecipientDeliveryStatus
     {
@@ -18,6 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         [EnumMember(Value = "DELIVERED")]
         #pragma warning disable CS1591
         Delivered,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "READ")]
+        #pragma warning disable CS1591
+        Read,
         #pragma warning restore CS1591
         [EnumMember(Value = "COMPLETED")]
         #pragma warning disable CS1591

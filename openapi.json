@@ -268405,53 +268405,323 @@
       "conversations.v2.start_conversation_participant": {
         "type": "object",
         "properties": {
-          "participantId": {
+          "ref": {
             "type": "string",
-            "description": "Existing Participant to resolve the address from, instead of supplying one.",
-            "example": "conv_participant_00000000000000000000000000"
+            "description": "Caller-assigned handle used by the action's `from` and `to`. Request-scoped; not persisted.",
+            "example": "customer"
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name for this Participant.",
+            "example": "Alice"
+          },
+          "type": {
+            "$ref": "#/components/schemas/conversations.v2.participant_type"
+          },
+          "profileId": {
+            "type": "string",
+            "description": "Profile to associate with this Participant, instead of resolving one from the addresses.",
+            "example": "mem_profile_00000000000000000000000000"
+          },
+          "agentConnectConnectionId": {
+            "pattern": "^[A-Za-z0-9_-]{1,128}$",
+            "type": "string",
+            "description": "Agent Connect connection backing an AI_AGENT Participant. Becomes a path segment of the relay endpoint, so it is constrained to an opaque handle.",
+            "example": "agent_connect_connection_XXXX"
+          },
+          "addresses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/conversations.v2.start_conversation_address"
+            },
+            "description": "Channel addresses this Participant can be reached on."
+          }
+        },
+        "description": "A party on the Conversation. The dispatched `action` refers to Participants by `ref`.",
+        "example": {
+          "ref": "customer",
+          "name": "Alice",
+          "type": "CUSTOMER",
+          "addresses": [
+            {
+              "channel": "SMS",
+              "address": "+18005550199"
+            }
+          ]
+        }
+      },
+      "conversations.v2.start_conversation_address": {
+        "required": [
+          "channel",
+          "address"
+        ],
+        "type": "object",
+        "properties": {
+          "channel": {
+            "$ref": "#/components/schemas/conversations.v2.channel"
           },
           "address": {
             "type": "string",
-            "description": "Channel-specific address, formatted according to the request's channel:\n- SMS/VOICE: E.164 phone number (such as \"+18005550100\")\n- WHATSAPP: Phone number with whatsapp prefix (such as \"whatsapp:+18005550100\")\n- RCS: Sender ID or phone number with rcs prefix (such as \"rcs:brand_acme_agent\" or \"rcs:+18005550100\")\n- CHAT: Customer-defined string identifier\n",
+            "description": "Address formatted for the channel: E.164 for SMS/VOICE, `whatsapp:` or `rcs:` prefixed for those channels, a customer-defined string for CHAT.",
             "example": "+18005550100"
           }
         },
-        "description": "A party on a StartConversation. The channel is set once at the request level, so it is\nnot repeated per participant.\n",
+        "description": "A channel address for a Participant on the Conversation being started.",
         "example": {
+          "channel": "SMS",
           "address": "+18005550100"
         }
       },
-      "conversations.v2.orchestrator_policy_action": {
+      "conversations.v2.start_conversation_participant_selector": {
         "required": [
-          "type"
+          "ref"
+        ],
+        "type": "object",
+        "properties": {
+          "ref": {
+            "type": "string",
+            "description": "The `ref` of a Participant declared in `participants`.",
+            "example": "customer"
+          }
+        },
+        "description": "Points at one entry in `participants` by its `ref`.",
+        "example": {
+          "ref": "customer"
+        }
+      },
+      "conversations.v2.start_conversation_configuration": {
+        "type": "object",
+        "properties": {
+          "intelligenceConfigurationIds": {
+            "maxItems": 5,
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of Conversational Intelligence configuration IDs to apply to this Conversation.",
+            "example": [
+              "agent1",
+              "agent2"
+            ]
+          },
+          "statusCallbacks": {
+            "maxItems": 2,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/conversations.v2.status_callback_config"
+            },
+            "description": "Webhook configurations for Conversation-level events on this Conversation."
+          }
+        },
+        "description": "Per-Conversation overrides applied on top of the Configuration named by `configurationId`.",
+        "example": {
+          "intelligenceConfigurationIds": [
+            "agent1"
+          ],
+          "statusCallbacks": [
+            {
+              "url": "https://webhook.example.com/conversation/status",
+              "method": "POST"
+            }
+          ]
+        }
+      },
+      "conversations.v2.start_conversation_send_message_action": {
+        "title": "StartConversationSendMessageAction",
+        "required": [
+          "type",
+          "channel",
+          "payload"
         ],
         "type": "object",
         "properties": {
           "type": {
             "enum": [
-              "WEBHOOK",
-              "STUDIO_FLOW"
+              "SEND_MESSAGE"
             ],
             "type": "string",
-            "description": "WEBHOOK posts the outcome to `url`. STUDIO_FLOW hands the call to `flowId`.",
-            "example": "WEBHOOK"
+            "description": "Action type discriminator. Accepted values: SEND_MESSAGE.",
+            "example": "SEND_MESSAGE"
           },
-          "url": {
+          "channel": {
+            "$ref": "#/components/schemas/conversations.v2.send_channel"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_send_message_payload"
+          }
+        },
+        "description": "Sends a message on the Conversation being started.",
+        "example": {
+          "type": "SEND_MESSAGE",
+          "channel": "SMS",
+          "payload": {
+            "content": {
+              "text": "Your order has shipped!"
+            }
+          }
+        }
+      },
+      "conversations.v2.start_conversation_send_message_payload": {
+        "required": [
+          "content"
+        ],
+        "type": "object",
+        "properties": {
+          "from": {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_participant_selector"
+          },
+          "to": {
+            "maxItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/conversations.v2.start_conversation_participant_selector"
+            },
+            "description": "The single recipient (1:1). Defaults to the roster's only `CUSTOMER` Participant."
+          },
+          "content": {
+            "$ref": "#/components/schemas/conversations.v2.send_content"
+          },
+          "channelSettings": {
+            "$ref": "#/components/schemas/conversations.v2.channel_settings"
+          }
+        },
+        "description": "Message to send on the Conversation being started.",
+        "example": {
+          "content": {
+            "text": "Your order has shipped!"
+          }
+        }
+      },
+      "conversations.v2.start_conversation_start_flow_action": {
+        "title": "StartConversationStartFlowAction",
+        "required": [
+          "type",
+          "payload"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "enum": [
+              "START_FLOW"
+            ],
             "type": "string",
-            "description": "Required when `type` is WEBHOOK. Must be https.",
-            "format": "uri",
-            "example": "https://example.com/hooks/call-outcome"
+            "description": "Action type discriminator. Accepted values: START_FLOW.",
+            "example": "START_FLOW"
           },
+          "payload": {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_start_flow_payload"
+          }
+        },
+        "description": "Hands the Conversation being started to a Studio Flow.",
+        "example": {
+          "type": "START_FLOW",
+          "payload": {
+            "flowId": "FW00000000000000000000000000000000"
+          }
+        }
+      },
+      "conversations.v2.start_conversation_start_flow_payload": {
+        "required": [
+          "flowId"
+        ],
+        "type": "object",
+        "properties": {
           "flowId": {
             "pattern": "^FW[0-9a-fA-F]{32}$",
             "type": "string",
-            "description": "Required when `type` is STUDIO_FLOW. Studio Flow to hand the call to.",
+            "description": "Studio Flow to execute.",
             "example": "FW00000000000000000000000000000000"
+          },
+          "from": {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_participant_selector"
+          },
+          "to": {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_participant_selector"
+          },
+          "parameters": {
+            "type": "object",
+            "description": "Key/value pairs passed through to the Studio Flow execution.",
+            "example": {
+              "orderNumber": "12345"
+            }
           }
         },
-        "description": "What to do when the call reaches an outcome."
+        "description": "Studio Flow to execute for the Conversation being started.",
+        "example": {
+          "flowId": "FW00000000000000000000000000000000",
+          "parameters": {
+            "orderNumber": "12345"
+          }
+        }
       },
-      "conversations.v2.orchestrator_policy": {
+      "conversations.v2.start_conversation_call_action": {
+        "title": "StartConversationCallAction",
+        "required": [
+          "type",
+          "payload"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "enum": [
+              "CALL"
+            ],
+            "type": "string",
+            "description": "Action type discriminator. Accepted values: CALL.",
+            "example": "CALL"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_call_payload"
+          }
+        },
+        "description": "Places an outbound call on the Conversation being started.",
+        "example": {
+          "type": "CALL",
+          "payload": {
+            "handler": {
+              "type": "AGENT_CONNECT"
+            }
+          }
+        }
+      },
+      "conversations.v2.start_conversation_call_payload": {
+        "required": [
+          "handler"
+        ],
+        "type": "object",
+        "properties": {
+          "handler": {
+            "$ref": "#/components/schemas/conversations.v2.agent_connect_handler"
+          },
+          "from": {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_participant_selector"
+          },
+          "to": {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_participant_selector"
+          },
+          "parameters": {
+            "type": "object",
+            "description": "Key/value pairs passed through to the handler that answers the call.",
+            "example": {
+              "campaignId": "spring-2026"
+            }
+          },
+          "callSettings": {
+            "$ref": "#/components/schemas/conversations.v2.call_settings"
+          }
+        },
+        "description": "Outbound call to place for the Conversation being started.",
+        "example": {
+          "handler": {
+            "type": "AGENT_CONNECT",
+            "greeting": {
+              "text": "Hi, calling about your order."
+            }
+          }
+        }
+      },
+      "conversations.v2.agent_connect_handler": {
         "required": [
           "type"
         ],
@@ -268459,108 +268729,188 @@
         "properties": {
           "type": {
             "enum": [
-              "STUDIO_FLOW",
-              "TAC_FLOW"
+              "AGENT_CONNECT"
             ],
             "type": "string",
-            "description": "Handler that places the call. Only STUDIO_FLOW is currently supported.",
-            "example": "STUDIO_FLOW"
+            "description": "Handler type. Accepted values: AGENT_CONNECT.",
+            "example": "AGENT_CONNECT"
           },
-          "systemFlow": {
-            "enum": [
-              "OUTBOUND_CALL"
-            ],
+          "greeting": {
+            "$ref": "#/components/schemas/conversations.v2.send_content"
+          },
+          "relayUrl": {
+            "maxLength": 2048,
+            "pattern": "^wss://.+",
             "type": "string",
-            "description": "Behaviour to run for the call.",
-            "default": "OUTBOUND_CALL",
-            "example": "OUTBOUND_CALL"
+            "description": "Relay endpoint for the answered call. When set, this full URL is used instead of the configured default.",
+            "example": "wss://example.ngrok.io/agent_connect_connection_XXXX"
           },
-          "onSuccess": {
-            "$ref": "#/components/schemas/conversations.v2.orchestrator_policy_action"
-          },
-          "onFailure": {
-            "$ref": "#/components/schemas/conversations.v2.orchestrator_policy_action"
-          },
-          "parameters": {
-            "type": "object",
-            "description": "Optional key/value pairs passed through to the handler that places the call.",
-            "example": {
-              "greeting": "Hi, calling about your order",
-              "campaignId": "spring-2026"
-            }
+          "relay": {
+            "$ref": "#/components/schemas/conversations.v2.relay_settings"
           }
         },
-        "description": "Selects how an outbound VOICE Conversation is delivered. Required for the VOICE channel\nand rejected for all other channels.\n",
+        "description": "Connects the answered call to an AI agent over ConversationRelay. The agent's identity comes from the sending Participant's `agentConnectConnectionId`; this carries session settings only.",
         "example": {
-          "type": "STUDIO_FLOW",
-          "systemFlow": "OUTBOUND_CALL",
-          "onSuccess": {
-            "type": "STUDIO_FLOW",
-            "flowId": "FW00000000000000000000000000000000"
+          "type": "AGENT_CONNECT",
+          "greeting": {
+            "text": "Hi, calling about your order."
+          }
+        }
+      },
+      "conversations.v2.relay_settings": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "description": "BCP-47 language tag for the session.",
+            "example": "en-US"
           },
-          "onFailure": {
-            "type": "WEBHOOK",
-            "url": "https://example.com/hooks/call-outcome"
+          "ttsProvider": {
+            "type": "string",
+            "description": "Text-to-speech provider for the session.",
+            "example": "ElevenLabs"
+          },
+          "voice": {
+            "type": "string",
+            "description": "Provider-specific voice identifier.",
+            "example": "UgBBYS2sOqTuMpoF3BR0"
+          },
+          "interruptible": {
+            "type": "string",
+            "description": "Whether and how the caller may interrupt the agent.",
+            "example": "speech"
+          }
+        },
+        "description": "Per-call ConversationRelay session settings. Strings rather than enums because Voice owns the accepted values.",
+        "example": {
+          "language": "en-US",
+          "ttsProvider": "ElevenLabs",
+          "voice": "UgBBYS2sOqTuMpoF3BR0",
+          "interruptible": "speech"
+        }
+      },
+      "conversations.v2.call_settings": {
+        "type": "object",
+        "properties": {
+          "machineDetection": {
+            "type": "string",
+            "description": "Answering-machine detection. `Enable` or `DetectMessageEnd`.",
+            "example": "DetectMessageEnd"
+          },
+          "timeout": {
+            "type": "integer",
+            "description": "Seconds to let the call ring before giving up.",
+            "example": 30
+          }
+        },
+        "description": "Curated passthrough to Twilio Voice POST /Calls.",
+        "example": {
+          "machineDetection": "DetectMessageEnd",
+          "timeout": 30
+        }
+      },
+      "conversations.v2.start_conversation_action_request": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_send_message_action"
+          },
+          {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_start_flow_action"
+          },
+          {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_call_action"
+          }
+        ],
+        "description": "The single action dispatched once the Conversation is created, selected by `type`.",
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "SEND_MESSAGE": "#/components/schemas/conversations.v2.start_conversation_send_message_action",
+            "START_FLOW": "#/components/schemas/conversations.v2.start_conversation_start_flow_action",
+            "CALL": "#/components/schemas/conversations.v2.start_conversation_call_action"
+          }
+        },
+        "example": {
+          "type": "SEND_MESSAGE",
+          "channel": "SMS",
+          "payload": {
+            "content": {
+              "text": "Your order has shipped!"
+            }
           }
         }
       },
       "conversations.v2.start_conversation_request": {
         "required": [
-          "channel",
-          "from",
-          "to",
-          "configurationId"
+          "configurationId",
+          "participants",
+          "action"
         ],
         "type": "object",
         "properties": {
-          "channel": {
-            "$ref": "#/components/schemas/conversations.v2.start_conversation_channel"
-          },
-          "from": {
-            "$ref": "#/components/schemas/conversations.v2.start_conversation_participant"
-          },
-          "to": {
-            "maxItems": 1,
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/conversations.v2.start_conversation_participant"
-            },
-            "description": "The recipient of the Conversation. Exactly one recipient is supported (1:1)."
-          },
-          "content": {
-            "$ref": "#/components/schemas/conversations.v2.send_content"
-          },
           "configurationId": {
             "type": "string",
             "description": "Configuration governing grouping, timeouts, and channel configuration.",
             "example": "conv_configuration_00000000000000000000000000"
           },
-          "channelSettings": {
-            "$ref": "#/components/schemas/conversations.v2.channel_settings"
+          "name": {
+            "type": "string",
+            "description": "Human-readable name for the Conversation.",
+            "example": "Order updates"
           },
-          "orchestratorPolicy": {
-            "$ref": "#/components/schemas/conversations.v2.orchestrator_policy"
+          "participants": {
+            "maxItems": 50,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/conversations.v2.start_conversation_participant"
+            },
+            "description": "Everyone taking part. The dispatched action selects its actors from this roster."
+          },
+          "action": {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_action_request"
+          },
+          "configuration": {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_configuration"
           }
         },
-        "description": "Starts a new Conversation and delegates outbound delivery to the recipient on the\nspecified channel. Unlike SEND_MESSAGE, the request is flat (no type discriminator\nor payload wrapper) — the route names the action.\n",
+        "description": "Creates a Conversation from a Participant roster and dispatches one action on it.",
         "example": {
-          "channel": "SMS",
-          "from": {
-            "address": "+15550001234"
-          },
-          "to": [
+          "configurationId": "conv_configuration_00000000000000000000000000",
+          "name": "Order updates",
+          "participants": [
             {
-              "address": "+15551234567"
+              "ref": "agent",
+              "name": "Acme",
+              "type": "AGENT",
+              "addresses": [
+                {
+                  "channel": "SMS",
+                  "address": "+18005550100"
+                }
+              ]
+            },
+            {
+              "ref": "customer",
+              "name": "Alice",
+              "type": "CUSTOMER",
+              "addresses": [
+                {
+                  "channel": "SMS",
+                  "address": "+18005550199"
+                }
+              ]
             }
           ],
-          "content": {
-            "contentId": "HX78e8e67abc123def456789012345678",
-            "variables": {
-              "1": "tomorrow at 2pm"
+          "action": {
+            "type": "SEND_MESSAGE",
+            "channel": "SMS",
+            "payload": {
+              "content": {
+                "text": "Your order has shipped!"
+              }
             }
-          },
-          "configurationId": "conv_configuration_00000000000000000000000000"
+          }
         }
       },
       "conversations.v2.update_start_conversation_action_request": {
@@ -268606,7 +268956,7 @@
             "additionalProperties": {
               "type": "string"
             },
-            "description": "Named identifiers, populated as the asynchronous work completes:\n- conversationId: The created Conversation (present once the Conversation is created)\n- channelId: The downstream channel identifier (present once dispatch succeeds)\n- executionSid: VOICE only. The Studio Flow execution that placed the call\n- callId: VOICE only. The Call SID of the outbound call\n\nAbsent from the 202 response (returned as an empty map).\n",
+            "description": "Named identifiers, populated as the asynchronous work completes and varying by action type:\n- conversationId: The created Conversation\n- channelId: The downstream channel identifier, for SEND_MESSAGE\n- executionSid: The Studio Flow execution started for the Conversation, for START_FLOW\n- callId: The Call SID of the outbound call, for CALL and for START_FLOW once its Flow reports back\n\nAbsent from the 202 response (returned as an empty map).\n",
             "example": {
               "conversationId": "conv_conversation_00000000000000000000000000",
               "channelId": "SM1234567890abcdef1234567890abcdef"
@@ -269288,18 +269638,6 @@
         "type": "string",
         "description": "Channel type for sending a Communication. Note: VOICE is receive-only and not supported for send operations."
       },
-      "conversations.v2.start_conversation_channel": {
-        "enum": [
-          "SMS",
-          "RCS",
-          "WHATSAPP",
-          "CHAT",
-          "VOICE"
-        ],
-        "type": "string",
-        "description": "Channel type for a StartConversation Action. Unlike other send operations, VOICE is\nsupported: it places an outbound call and requires `orchestratorPolicy`.\n",
-        "example": "SMS"
-      },
       "conversations.v2.call_status": {
         "enum": [
           "ANSWERED",
@@ -269309,7 +269647,7 @@
           "CANCELED"
         ],
         "type": "string",
-        "description": "Outcome of an outbound call placed by a VOICE StartConversation Action.",
+        "description": "Outcome of an outbound call placed by a CALL StartConversation Action.",
         "example": "ANSWERED"
       },
       "conversations.v2.recipient_delivery_status": {
@@ -269317,11 +269655,12 @@
           "INITIATED",
           "IN_PROGRESS",
           "DELIVERED",
+          "READ",
           "COMPLETED",
           "FAILED"
         ],
         "type": "string",
-        "description": "Delivery status of a Communication to a recipient."
+        "description": "Delivery status of a Communication to a recipient.\n- INITIATED: Communication is initiated to be sent at a future time\n- IN_PROGRESS: Communication is in the process of being sent\n- DELIVERED: Provider confirms the Communication has been delivered\n- READ: Recipient has read the Communication (channels that support read receipts, e.g. WhatsApp, RCS)\n- FAILED: Communication could not be sent or delivered\n- COMPLETED: Deprecated and unused. Never emitted; do not rely on this value.\n"
       },
       "conversations.v2.action_status": {
         "enum": [
@@ -279608,17 +279947,17 @@
       "TextResult": {
         "title": "Text result",
         "required": [
-          "id",
-          "accountId",
-          "conversationId",
-          "outputFormat",
-          "result",
-          "executionDetails",
-          "metadata",
           "operator",
-          "referenceIds",
+          "id",
+          "executionDetails",
+          "result",
+          "outputFormat",
+          "conversationId",
+          "metadata",
           "intelligenceConfiguration",
-          "dateCreated"
+          "dateCreated",
+          "referenceIds",
+          "accountId"
         ],
         "type": "object",
         "properties": {
@@ -279694,17 +280033,17 @@
       "JSONResult": {
         "title": "JSON result",
         "required": [
-          "id",
-          "accountId",
-          "conversationId",
-          "outputFormat",
-          "result",
-          "executionDetails",
-          "metadata",
           "operator",
-          "referenceIds",
+          "id",
+          "executionDetails",
+          "result",
+          "outputFormat",
+          "conversationId",
+          "metadata",
           "intelligenceConfiguration",
-          "dateCreated"
+          "dateCreated",
+          "referenceIds",
+          "accountId"
         ],
         "type": "object",
         "properties": {
@@ -279771,17 +280110,17 @@
       "ClassificationResult": {
         "title": "Classification result",
         "required": [
-          "id",
-          "accountId",
-          "conversationId",
-          "outputFormat",
-          "result",
-          "executionDetails",
-          "metadata",
           "operator",
-          "referenceIds",
+          "id",
+          "executionDetails",
+          "result",
+          "outputFormat",
+          "conversationId",
+          "metadata",
           "intelligenceConfiguration",
-          "dateCreated"
+          "dateCreated",
+          "referenceIds",
+          "accountId"
         ],
         "type": "object",
         "properties": {
@@ -279857,17 +280196,17 @@
       "ExtractionResult": {
         "title": "Extraction result",
         "required": [
-          "id",
-          "accountId",
-          "conversationId",
-          "outputFormat",
-          "result",
-          "executionDetails",
-          "metadata",
           "operator",
-          "referenceIds",
+          "id",
+          "executionDetails",
+          "result",
+          "outputFormat",
+          "conversationId",
+          "metadata",
           "intelligenceConfiguration",
-          "dateCreated"
+          "dateCreated",
+          "referenceIds",
+          "accountId"
         ],
         "type": "object",
         "properties": {
@@ -283548,11 +283887,11 @@
       },
       "Knowledge": {
         "required": [
-          "id",
-          "createdAt",
-          "name",
           "updatedAt",
-          "status"
+          "name",
+          "id",
+          "status",
+          "createdAt"
         ],
         "type": "object",
         "properties": {
@@ -283986,12 +284325,12 @@
       },
       "KnowledgeBase": {
         "required": [
-          "id",
-          "createdAt",
-          "version",
           "displayName",
           "updatedAt",
-          "status"
+          "version",
+          "id",
+          "status",
+          "createdAt"
         ],
         "type": "object",
         "properties": {
@@ -285786,9 +286125,9 @@
       },
       "ObservationInfo": {
         "required": [
+          "updatedAt",
           "id",
-          "createdAt",
-          "updatedAt"
+          "createdAt"
         ],
         "type": "object",
         "properties": {
@@ -285875,12 +286214,12 @@
       },
       "SummaryInfo": {
         "required": [
-          "id",
-          "createdAt",
-          "conversationId",
-          "occurredAt",
           "updatedAt",
-          "content"
+          "occurredAt",
+          "id",
+          "content",
+          "conversationId",
+          "createdAt"
         ],
         "type": "object",
         "properties": {
@@ -286043,10 +286382,10 @@
             "type": "array",
             "items": {
               "required": [
-                "id",
-                "channel",
+                "address",
                 "name",
-                "address"
+                "id",
+                "channel"
               ],
               "type": "object",
               "properties": {
@@ -286537,10 +286876,10 @@
       },
       "Store": {
         "required": [
+          "displayName",
+          "version",
           "id",
           "intelligenceServiceId",
-          "version",
-          "displayName",
           "status"
         ],
         "type": "object",
@@ -286653,8 +286992,8 @@
       "IdentityResolutionSettings": {
         "required": [
           "version",
-          "matchingRules",
-          "identifierConfigs"
+          "identifierConfigs",
+          "matchingRules"
         ],
         "type": "object",
         "properties": {
@@ -286836,8 +287175,8 @@
       },
       "TraitGroup": {
         "required": [
-          "version",
-          "displayName"
+          "displayName",
+          "version"
         ],
         "type": "object",
         "properties": {
@@ -287343,8 +287682,8 @@
       "CreateDataMappingInput": {
         "required": [
           "displayName",
-          "mappingTo",
-          "mappingFrom"
+          "mappingFrom",
+          "mappingTo"
         ],
         "type": "object",
         "properties": {
@@ -287375,13 +287714,13 @@
       },
       "DataMapping": {
         "required": [
-          "id",
-          "createdAt",
-          "mappingTo",
+          "displayName",
+          "updatedAt",
           "version",
           "mappingFrom",
-          "displayName",
-          "updatedAt"
+          "id",
+          "mappingTo",
+          "createdAt"
         ],
         "type": "object",
         "properties": {
@@ -287452,12 +287791,12 @@
       },
       "RecallObservationInfo": {
         "required": [
-          "id",
-          "createdAt",
-          "occurredAt",
-          "source",
           "updatedAt",
-          "content"
+          "occurredAt",
+          "id",
+          "source",
+          "content",
+          "createdAt"
         ],
         "type": "object",
         "properties": {
@@ -287518,12 +287857,12 @@
       },
       "RecallSummaryInfo": {
         "required": [
-          "id",
-          "createdAt",
-          "conversationId",
-          "occurredAt",
           "updatedAt",
-          "content"
+          "occurredAt",
+          "id",
+          "content",
+          "conversationId",
+          "createdAt"
         ],
         "type": "object",
         "properties": {
@@ -287753,8 +288092,8 @@
       "ObservationCreateRequest": {
         "required": [
           "content",
-          "source",
-          "occurredAt"
+          "occurredAt",
+          "source"
         ],
         "type": "object",
         "properties": {
@@ -290090,28 +290429,6 @@
         ],
         "type": "string",
         "description": "The status of the sender. Configuring: We are in the process of registering the sender. If your sender stays in this state for a long period of time it is possible that there is an issue with parameters you provided; PendingVerification: We have successfully registered the sender with WhatsApp and you should receive a code from their services; Configured: The sender has been successfully verified with WhatsApp and is all set to start sending messages; ConfigurationError - If configuration fails due to below possibilities: parameters provided were incorrect, Twilio account suspended or deleted, whatsapp api failed, Twilio internal error. VerificationError - If verification api fails, please check error_message for more details"
-      },
-      "whatsapp_template_enum_category": {
-        "enum": [
-          "ACCOUNT_UPDATE",
-          "ALERT_UPDATE",
-          "AUTO_REPLY",
-          "APPOINTMENT_UPDATE",
-          "ISSUE_RESOLUTION",
-          "PAYMENT_UPDATE",
-          "PERSONAL_FINANCE_UPDATE",
-          "RESERVATION_UPDATE",
-          "SHIPPING_UPDATE",
-          "TICKET_UPDATE",
-          "TRANSPORTATION_UPDATE",
-          "MARKETING",
-          "OTP",
-          "TRANSACTIONAL",
-          "AUTHENTICATION",
-          "UTILITY"
-        ],
-        "type": "string",
-        "description": "The Category of this WhatsApp Template. One of `ACCOUNT_UPDATE`, `ALERT_UPDATE`, `APPOINTMENT_UPDATE`, `AUTO_REPLY`, `ISSUE_RESOLUTION`, `PAYMENT_UPDATE`, `PERSONAL_FINANCE_UPDATE`, `RESERVATION_UPDATE`, `SHIPPING_UPDATE`, `TICKET_UPDATE`, `TRANSPORTATION_UPDATE`, `MARKETING`, `AUTHENTICATION`, `UTILITY`, `OTP` or `TRANSACTIONAL`."
       },
       "messaging.v2.channels_sender_response": {
         "type": "object",
@@ -293774,10 +294091,10 @@
       },
       "numbers.v1.a2p_registration_details_fetch": {
         "required": [
-          "phoneNumberSid",
-          "externalPhoneNumberStatus",
           "phoneNumber",
-          "accountSid"
+          "phoneNumberSid",
+          "accountSid",
+          "externalPhoneNumberStatus"
         ],
         "type": "object",
         "properties": {
@@ -294239,10 +294556,10 @@
       },
       "numbers.v2.a2p_registration_details_fetch": {
         "required": [
-          "phoneNumberSid",
-          "externalPhoneNumberStatus",
           "phoneNumber",
-          "accountSid"
+          "phoneNumberSid",
+          "accountSid",
+          "externalPhoneNumberStatus"
         ],
         "type": "object",
         "properties": {
@@ -318703,9 +319020,6 @@
     },
     {
       "name": "MessagingV1WhatsappSender"
-    },
-    {
-      "name": "MessagingV1WhatsappTemplate"
     },
     {
       "name": "MessagingV1TwoFactorAuthentication"
