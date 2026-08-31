@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Description>A .NET client generated from the Twilio OpenAPI schema, updated daily</Description>
+        <Description>Kiota-generated client for Twilio APIs</Description>
         <Version Condition="'$(BUILD_VERSION)' == ''">4.0.0</Version>
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.Twilio.OpenApiClient</AssemblyName>
