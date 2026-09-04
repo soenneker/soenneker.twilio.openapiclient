@@ -218783,6 +218783,9 @@
         }
       },
       "ConversationsV2StartConversationActionRequest": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -218798,6 +218801,9 @@
         "properties": {
           "channel": {
             "$ref": "#/components/schemas/ConversationsV2SendChannel"
+          },
+          "type": {
+            "type": "string"
           }
         },
         "description": "The single action dispatched once the Conversation is created, selected by \u0060type\u0060.",
@@ -231037,6 +231043,9 @@
       },
       "OperatorResultsResponseV1": {
         "title": "Operator Results Response V1",
+        "required": [
+          "outputFormat"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -235500,6 +235509,9 @@
         }
       },
       "KnowledgeSourceTypes": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -235571,6 +235583,9 @@
             "format": "date-time",
             "readOnly": true,
             "example": "2026-01-15T13:00:00Z"
+          },
+          "type": {
+            "type": "string"
           }
         },
         "description": "Details specific to the knowledge source type. Each knowledge source type has  its own set of configuration\nparameters and source specific properties.",
@@ -236004,6 +236019,9 @@
         "additionalProperties": false
       },
       "OperationResult": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -238676,6 +238694,9 @@
         "description": "A Trait is a single attribute or characteristic of a profile, such as age, location, or preferences."
       },
       "ValidationRule": {
+        "required": [
+          "ruleType"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -238724,6 +238745,9 @@
             "minimum": 0,
             "type": "integer",
             "description": "Maximum number of items"
+          },
+          "ruleType": {
+            "type": "string"
           }
         },
         "discriminator": {
@@ -238880,6 +238904,9 @@
         }
       },
       "DataMappingFromTypes": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -238909,6 +238936,9 @@
             "type": "string",
             "description": "The unique identifier of the TDI dataset to connect.",
             "example": "tdi_dataset_00000000000000000000000000"
+          },
+          "type": {
+            "type": "string"
           }
         },
         "description": "Details of where to map data items from. Each data mapping from type has its own set of configuration\nparameters and source specific properties.",
@@ -238929,6 +238959,9 @@
         }
       },
       "DataMappingToTypes": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -239403,6 +239436,9 @@
         "additionalProperties": false
       },
       "TwilioMemoryV1OperationResult": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -239524,6 +239560,9 @@
         }
       },
       "DataMappingSuggestionToTypes": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -239578,6 +239617,9 @@
         "description": "Request to generate suggested mappings from a set of source fields to the requested\ndestination type."
       },
       "DataMappingSuggestionResultTypes": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -243416,6 +243458,9 @@
         }
       },
       "TypingIndicatorRequest": {
+        "required": [
+          "channel"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -243444,6 +243489,9 @@
             "type": "string",
             "description": "The Apple Messages for Business identifier of the recipient (customer).",
             "example": "apple:urn:mbid:AQAAYyUbut6E4B3T9FLv5EbG"
+          },
+          "channel": {
+            "type": "string"
           }
         },
         "description": "Request body for sending a typing indicator. The schema varies by channel. Use the \u0060channel\u0060 field to determine which properties are required.\n",
@@ -281507,6 +281555,9 @@
         }
       },
       "TwilioConversationsV2CreateConversationActionRequest": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -300892,6 +300943,9 @@
         "description": "The error response from a Twilio service, compliant with RFC-9457 (Problem Details for HTTP APIs).\nSee https://www.rfc-editor.org/rfc/rfc9457.html for the specification.\n"
       },
       "TwilioVoiceV3CreateV3TranscriptionsRequest": {
+        "required": [
+          "inputSource"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -300933,6 +300987,9 @@
             "description": "The start time of the audio recording",
             "format": "date-time",
             "example": "2025-11-19T19:42:16Z"
+          },
+          "inputSource": {
+            "type": "string"
           }
         },
         "discriminator": {

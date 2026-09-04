@@ -156,18 +156,28 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             public string? Identity { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             public string Identity { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             public int? PageSize { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             public string? PageToken { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             public string PageToken { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>Filter by resource id for resource-level role assignments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -187,10 +197,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             public string? Scope { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             public string Scope { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

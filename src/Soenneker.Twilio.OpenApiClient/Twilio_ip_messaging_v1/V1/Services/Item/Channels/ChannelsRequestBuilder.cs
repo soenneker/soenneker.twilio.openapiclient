@@ -141,10 +141,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV1ChannelEnumChannelType[]? Type { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV1ChannelEnumChannelType[] Type { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

@@ -129,17 +129,25 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Commands
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             public string? Device { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             public string Device { get; set; }
+            #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             public string? Direction { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             public string Direction { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }
@@ -155,17 +163,25 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Commands
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             public string? Sim { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             public string Sim { get; set; }
+            #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             public string? Status { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             public string Status { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

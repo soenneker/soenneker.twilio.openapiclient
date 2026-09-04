@@ -127,7 +127,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item
         public partial class MessagesRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2MessageEnumOrderType? Order { get; set; }
+            #pragma warning restore CS1591
             /// <summary>The page index. This value is simply for client state.</summary>
             public int? Page { get; set; }
             /// <summary>How many resources to return in each list page. The default is 50, and the maximum is 100.</summary>

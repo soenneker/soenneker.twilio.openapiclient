@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "2A7E2F42E2C2744BDD1DEE47E4C0C0F582B3B06FE945F17802B89B7DF7917AF3B6681D01C8C61BF3DA4C26CC23FAC4B6F9AD178B77820D6157D760219E573A4C",
+  "descriptionHash": "8AFE4C30881EAAB7E9FDCB2172777D119C1A66900A9B8C3BD30F9BFF7D77A064F61B4ED5A9F6F71FF622BA58F85260181C3FCC2F3FE2F2DBD6D23CD4520F75EA",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.34.1",
+  "kiotaVersion": "1.35.0",
   "clientClassName": "TwilioOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Twilio.OpenApiClient",

@@ -174,7 +174,9 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms
 #else
             public string PageToken { get; set; }
 #endif
+            #pragma warning disable CS1591
             public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2ListAlarmsSortOrderParameter? SortOrder { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }
