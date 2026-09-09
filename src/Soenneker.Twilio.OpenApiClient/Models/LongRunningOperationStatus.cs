@@ -3,33 +3,29 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>Channel type for a Communication address.</summary>
+    /// <summary>The valid status values for long-running operations.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum TwilioConversationsV2CreateConversationWithConfigRequestParticipantsItemAddressesItemChannel
+    public enum LongRunningOperationStatus
     {
-        [EnumMember(Value = "VOICE")]
+        [EnumMember(Value = "PENDING")]
         #pragma warning disable CS1591
-        Voice,
+        Pending,
         #pragma warning restore CS1591
-        [EnumMember(Value = "SMS")]
+        [EnumMember(Value = "RUNNING")]
         #pragma warning disable CS1591
-        Sms,
+        Running,
         #pragma warning restore CS1591
-        [EnumMember(Value = "RCS")]
+        [EnumMember(Value = "CANCELLED")]
         #pragma warning disable CS1591
-        Rcs,
+        Cancelled,
         #pragma warning restore CS1591
-        [EnumMember(Value = "WHATSAPP")]
+        [EnumMember(Value = "COMPLETED")]
         #pragma warning disable CS1591
-        Whatsapp,
+        Completed,
         #pragma warning restore CS1591
-        [EnumMember(Value = "CHAT")]
+        [EnumMember(Value = "FAILED")]
         #pragma warning disable CS1591
-        Chat,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "VIDEO")]
-        #pragma warning disable CS1591
-        Video,
+        Failed,
         #pragma warning restore CS1591
     }
 }

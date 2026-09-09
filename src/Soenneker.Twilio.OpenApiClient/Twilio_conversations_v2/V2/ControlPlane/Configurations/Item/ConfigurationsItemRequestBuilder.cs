@@ -94,6 +94,41 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.ControlPlane
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConfiguration200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConfiguration200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
+        /// Partially update a Configuration. Only fields present in the request body are changed; omitted fields are left untouched. For `channelSettings`, an omitted channel key is preserved, a channel key mapped to a value replaces that channel&apos;s settings, and a channel key explicitly mapped to `null` removes it.
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConfiguration202Response"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.BadRequestResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.NotFoundResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.ConflictResponse">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TooManyRequestsResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.InternalServerErrorResponse">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.ServiceUnavailableResponse">When receiving a 503 status code</exception>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConfiguration202Response?> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConfigurationRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConfiguration202Response> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConfigurationRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.BadRequestResponse.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Twilio.OpenApiClient.Models.NotFoundResponse.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Twilio.OpenApiClient.Models.ConflictResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TooManyRequestsResponse.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.InternalServerErrorResponse.CreateFromDiscriminatorValue },
+                { "503", global::Soenneker.Twilio.OpenApiClient.Models.ServiceUnavailableResponse.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConfiguration202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConfiguration202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
         /// Update an existing Configuration
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2UpdateConfiguration202Response"/></returns>
@@ -164,6 +199,28 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.ControlPlane
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
+        }
+        /// <summary>
+        /// Partially update a Configuration. Only fields present in the request body are changed; omitted fields are left untouched. For `channelSettings`, an omitted channel key is preserved, a channel key mapped to a value replaces that channel&apos;s settings, and a channel key explicitly mapped to `null` removes it.
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConfigurationRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConfigurationRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = new RequestInformation(Method.PATCH, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>

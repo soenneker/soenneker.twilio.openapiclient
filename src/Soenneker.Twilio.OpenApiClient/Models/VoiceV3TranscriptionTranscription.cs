@@ -44,6 +44,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>Absolute URLs of resources related to this Transcription. Includes `conversation`, theConversations API resource for this Transcription&apos;s `conversationId`, once the transcripthas been stored. Omitted entirely when there is no related resource to link to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionLinksProperty? Links { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionLinksProperty Links { get; set; }
+#endif
         /// <summary>The third party media URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -127,6 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionLinksProperty.CreateFromDiscriminatorValue); } },
                 { "mediaUrl", n => { MediaUrl = n.GetStringValue(); } },
                 { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resolvedConfiguration", n => { ResolvedConfiguration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration.CreateFromDiscriminatorValue); } },
@@ -150,6 +159,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteIntValue("duration", Duration);
             writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionLinksProperty>("links", Links);
             writer.WriteStringValue("mediaUrl", MediaUrl);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>("participants", Participants);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration>("resolvedConfiguration", ResolvedConfiguration);

@@ -80,6 +80,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> MediaUrl { get; set; }
 #endif
+        /// <summary>The MessageIntent property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MessageIntent { get; set; }
+#nullable restore
+#else
+        public string MessageIntent { get; set; }
+#endif
         /// <summary>The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services) you want to associate with the Message. When this parameter is provided and the `from` parameter is omitted, Twilio selects the optimal sender from the Messaging Service&apos;s Sender Pool. You may also provide a `from` parameter if you want to use a specific Sender from the Sender Pool.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -167,6 +175,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "From", n => { From = n.GetStringValue(); } },
                 { "MaxPrice", n => { MaxPrice = n.GetDoubleValue(); } },
                 { "MediaUrl", n => { MediaUrl = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "MessageIntent", n => { MessageIntent = n.GetStringValue(); } },
                 { "MessagingServiceSid", n => { MessagingServiceSid = n.GetStringValue(); } },
                 { "PersistentAction", n => { PersistentAction = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "ProvideFeedback", n => { ProvideFeedback = n.GetBoolValue(); } },
@@ -201,6 +210,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("From", From);
             writer.WriteDoubleValue("MaxPrice", MaxPrice);
             writer.WriteCollectionOfPrimitiveValues<string>("MediaUrl", MediaUrl);
+            writer.WriteStringValue("MessageIntent", MessageIntent);
             writer.WriteStringValue("MessagingServiceSid", MessagingServiceSid);
             writer.WriteCollectionOfPrimitiveValues<string>("PersistentAction", PersistentAction);
             writer.WriteBoolValue("ProvideFeedback", ProvideFeedback);

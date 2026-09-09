@@ -19487,6 +19487,10 @@
                     "type": "string",
                     "description": "For [Content Editor/API](https://www.twilio.com/docs/content) only: Key-value pairs of [Template variables](https://www.twilio.com/docs/content/using-variables-with-content-api) and their substitution values. `content_sid` parameter must also be provided. If values are not defined in the `content_variables` parameter, the [Template's default placeholder values](https://www.twilio.com/docs/content/content-api-resources#create-templates) are used."
                   },
+                  "MessageIntent": {
+                    "type": "string",
+                    "description": ""
+                  },
                   "RiskCheck": {
                     "$ref": "#/components/schemas/message_enum_risk_check"
                   },
@@ -76301,6 +76305,262 @@
           }
         ]
       },
+      "patch": {
+        "tags": [
+          "ConversationsV2Configuration"
+        ],
+        "summary": "Patch Configuration",
+        "description": "Partially update a Configuration. Only fields present in the request body are changed; omitted fields are left untouched. For `channelSettings`, an omitted channel key is preserved, a channel key mapped to a value replaces that channel's settings, and a channel key explicitly mapped to `null` removes it.",
+        "operationId": "twilio_conversations_v2_PatchConfiguration",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKeyHeader"
+          }
+        ],
+        "requestBody": {
+          "description": "The partial configuration update.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "displayName": {
+                    "maxLength": 32,
+                    "pattern": "^[a-zA-Z0-9-_ ]+$",
+                    "type": "string",
+                    "description": "A human-readable name for the configuration. Limited to 32 characters.",
+                    "nullable": true,
+                    "example": "My Support Config"
+                  },
+                  "description": {
+                    "maxLength": 512,
+                    "type": "string",
+                    "description": "Human-readable description for the configuration.",
+                    "nullable": true,
+                    "example": "Updated Customer Support Configuration"
+                  },
+                  "conversationGroupingType": {
+                    "enum": [
+                      "GROUP_BY_PROFILE",
+                      "GROUP_BY_PARTICIPANT_ADDRESSES",
+                      "GROUP_BY_PARTICIPANT_ADDRESSES_AND_CHANNEL_TYPE"
+                    ],
+                    "type": "string",
+                    "description": "Type of Conversation grouping strategy:\n- `GROUP_BY_PROFILE`: Groups Communications by resolved Profile from the Memory Store.\n  A Profile is looked up or created for `CUSTOMER` Participant types. All Communications from the same Profile are in the same Conversation, regardless of address or channel.\n- `GROUP_BY_PARTICIPANT_ADDRESSES`: Groups Communications by Participant addresses across all channels.\n  A customer using +18005550100 will be in the same Conversation whether they contact by SMS, WhatsApp, or RCS.\n- `GROUP_BY_PARTICIPANT_ADDRESSES_AND_CHANNEL_TYPE`: Groups Communications by both Participant addresses AND channel.\n  A customer using +18005550100 by SMS will be in a different Conversation than the same customer by Voice.\n",
+                    "example": "GROUP_BY_PROFILE"
+                  },
+                  "memoryStoreId": {
+                    "type": "string",
+                    "description": "The Memory Store ID for profile resolution.",
+                    "nullable": true,
+                    "example": "memora_service_123"
+                  },
+                  "channelSettings": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "object",
+                      "properties": {
+                        "statusTimeouts": {
+                          "type": "object",
+                          "properties": {
+                            "inactive": {
+                              "minimum": 1,
+                              "type": "integer",
+                              "example": 10
+                            },
+                            "closed": {
+                              "minimum": 1,
+                              "type": "integer",
+                              "example": 15
+                            }
+                          }
+                        },
+                        "captureRules": {
+                          "type": "array",
+                          "items": {
+                            "required": [
+                              "from",
+                              "to"
+                            ],
+                            "type": "object",
+                            "properties": {
+                              "from": {
+                                "type": "string",
+                                "example": "+18005550100"
+                              },
+                              "to": {
+                                "type": "string",
+                                "example": "+18005550101"
+                              },
+                              "metadata": {
+                                "type": "object",
+                                "additionalProperties": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "nullable": true
+                    },
+                    "description": "Channel-specific settings to merge onto the existing channelSettings map. A channel key mapped to a value replaces that channel's settings; a channel key explicitly mapped to null removes it; an omitted channel key is left untouched."
+                  },
+                  "statusCallbacks": {
+                    "maxItems": 2,
+                    "type": "array",
+                    "items": {
+                      "required": [
+                        "url"
+                      ],
+                      "type": "object",
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "method": {
+                          "enum": [
+                            "POST",
+                            "GET"
+                          ],
+                          "type": "string",
+                          "default": "POST"
+                        }
+                      }
+                    },
+                    "nullable": true
+                  },
+                  "intelligenceConfigurationIds": {
+                    "maxItems": 5,
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "A list of Conversational Intelligence configuration IDs.",
+                    "nullable": true,
+                    "example": [
+                      "agent1",
+                      "agent2"
+                    ]
+                  },
+                  "memoryExtractionEnabled": {
+                    "type": "boolean",
+                    "description": "Whether memory extraction is enabled for conversations under this configuration.",
+                    "nullable": true,
+                    "example": false
+                  },
+                  "conversationsV1Bridge": {
+                    "required": [
+                      "serviceId"
+                    ],
+                    "type": "object",
+                    "properties": {
+                      "serviceId": {
+                        "pattern": "^IS[0-9a-f]{32}$",
+                        "type": "string",
+                        "description": "The Conversations V1 Service SID (IS prefix). One configuration per V1 Service SID.",
+                        "example": "IS00000000000000000000000000000000"
+                      }
+                    },
+                    "description": "Configuration for Conversations V1 bridge. When set, messaging channels route through Conversations V1. Use this to integrate with existing Conversations V1 applications.",
+                    "nullable": true,
+                    "example": {
+                      "serviceId": "IS00000000000000000000000000000000"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted - Operation created for asynchronous processing",
+            "headers": {
+              "Operation-Id": {
+                "description": "Unique identifier for the long-running operation",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Retry-After": {
+                "description": "Suggested number of seconds before polling operation status",
+                "schema": {
+                  "type": "integer",
+                  "example": 5
+                }
+              },
+              "Location": {
+                "description": "URI of the operation status endpoint",
+                "schema": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "statusUrl"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "statusUrl": {
+                      "type": "string",
+                      "description": "URL to poll for operation status.",
+                      "format": "uri",
+                      "example": "https://conversations.twilio.com/v2/ControlPlane/Operations/proc_job_01h9d8r0vte3hz8tykdj329t7r"
+                    },
+                    "related": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "Named resource identifiers associated with this operation. Keys depend on the operation type:\n- config-create, config-update, config-delete: configurationId\n- conversation-delete: conversationId\n",
+                      "nullable": true,
+                      "example": {
+                        "configurationId": "cfg_configuration_01h9d8r0vte3hz8tykdj329t7r"
+                      }
+                    }
+                  },
+                  "description": "Slim response for an accepted long-running operation.",
+                  "example": {
+                    "statusUrl": "https://conversations.twilio.com/v2/ControlPlane/Operations/proc_job_01h9d8r0vte3hz8tykdj329t7r",
+                    "related": {
+                      "configurationId": "cfg_configuration_01h9d8r0vte3hz8tykdj329t7r"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "409": {
+            "$ref": "#/components/responses/Conflict"
+          },
+          "429": {
+            "$ref": "#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          },
+          "503": {
+            "$ref": "#/components/responses/ServiceUnavailable"
+          }
+        },
+        "security": [
+          {
+            "basic_apikey_or_accountsid": [ ]
+          }
+        ]
+      },
       "delete": {
         "tags": [
           "ConversationsV2Configuration"
@@ -76747,7 +77007,8 @@
                                   "SMS",
                                   "RCS",
                                   "WHATSAPP",
-                                  "CHAT"
+                                  "CHAT",
+                                  "VIDEO"
                                 ],
                                 "type": "string",
                                 "description": "Channel type for a Communication address."
@@ -77396,6 +77657,7 @@
                   "name": {
                     "type": "string",
                     "description": "The name of the Conversation.",
+                    "nullable": true,
                     "example": "Support Chat"
                   },
                   "status": {
@@ -77416,7 +77678,8 @@
                         "items": {
                           "$ref": "#/components/schemas/conversations.v2.status_callback_config"
                         },
-                        "description": "List of webhook configurations for this conversation. Send an empty array to clear all callbacks and stop webhook delivery."
+                        "description": "List of webhook configurations for this conversation. Send an empty array to clear all callbacks and stop webhook delivery.",
+                        "nullable": true
                       }
                     },
                     "description": "Partial configuration update for an existing conversation. Only statusCallbacks can be modified."
@@ -77948,7 +78211,10 @@
             "normalizeSid": true
           }
         }
-      ]
+      ],
+      "x-twilio": {
+        "pathType": "instance"
+      }
     },
     "/twilio_conversations_v2/v2/Conversations/{ConversationId}/Participants": {
       "get": {
@@ -77998,8 +78264,7 @@
                         "required": [
                           "id",
                           "conversationId",
-                          "accountId",
-                          "name"
+                          "accountId"
                         ],
                         "type": "object",
                         "properties": {
@@ -78021,6 +78286,7 @@
                           "name": {
                             "type": "string",
                             "description": "Participant display name.",
+                            "nullable": true,
                             "example": "Dana S."
                           },
                           "type": {
@@ -78171,7 +78437,8 @@
                             "SMS",
                             "RCS",
                             "WHATSAPP",
-                            "CHAT"
+                            "CHAT",
+                            "VIDEO"
                           ],
                           "type": "string",
                           "description": "Channel type for a Communication address."
@@ -78199,8 +78466,7 @@
                   "required": [
                     "id",
                     "conversationId",
-                    "accountId",
-                    "name"
+                    "accountId"
                   ],
                   "type": "object",
                   "properties": {
@@ -78222,6 +78488,7 @@
                     "name": {
                       "type": "string",
                       "description": "Participant display name.",
+                      "nullable": true,
                       "example": "Dana S."
                     },
                     "type": {
@@ -78345,8 +78612,7 @@
                   "required": [
                     "id",
                     "conversationId",
-                    "accountId",
-                    "name"
+                    "accountId"
                   ],
                   "type": "object",
                   "properties": {
@@ -78368,6 +78634,7 @@
                     "name": {
                       "type": "string",
                       "description": "Participant display name.",
+                      "nullable": true,
                       "example": "Dana S."
                     },
                     "type": {
@@ -78494,7 +78761,8 @@
                             "SMS",
                             "RCS",
                             "WHATSAPP",
-                            "CHAT"
+                            "CHAT",
+                            "VIDEO"
                           ],
                           "type": "string",
                           "description": "Channel type for a Communication address."
@@ -78522,8 +78790,7 @@
                   "required": [
                     "id",
                     "conversationId",
-                    "accountId",
-                    "name"
+                    "accountId"
                   ],
                   "type": "object",
                   "properties": {
@@ -78545,6 +78812,7 @@
                     "name": {
                       "type": "string",
                       "description": "Participant display name.",
+                      "nullable": true,
                       "example": "Dana S."
                     },
                     "type": {
@@ -78908,7 +79176,8 @@
                           "SMS",
                           "RCS",
                           "WHATSAPP",
-                          "CHAT"
+                          "CHAT",
+                          "VIDEO"
                         ],
                         "type": "string",
                         "description": "Channel type for a Communication address."
@@ -78998,7 +79267,8 @@
                             "SMS",
                             "RCS",
                             "WHATSAPP",
-                            "CHAT"
+                            "CHAT",
+                            "VIDEO"
                           ],
                           "type": "string",
                           "description": "Channel type for a Communication address."
@@ -105373,7 +105643,7 @@
           "report_id",
           "status"
         ],
-        "pathType": "instance"
+        "pathType": "list"
       }
     },
     "/twilio_insights_v2/v2/Voice/Reports/{reportId}": {
@@ -105734,7 +106004,9 @@
           "report_id",
           "status"
         ],
-        "pathType": "instance"
+        "className": "inbound_report",
+        "mountName": "inbound_reports",
+        "pathType": "list"
       }
     },
     "/twilio_insights_v2/v2/Voice/Reports/PhoneNumbers/Inbound/{reportId}": {
@@ -106063,7 +106335,9 @@
           "report_id",
           "status"
         ],
-        "pathType": "instance"
+        "className": "outbound_report",
+        "mountName": "outbound_reports",
+        "pathType": "list"
       }
     },
     "/twilio_insights_v2/v2/Voice/Reports/PhoneNumbers/Outbound/{reportId}": {
@@ -106813,6 +107087,1013 @@
           },
           "400": {
             "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "description": "Maximum number of requests allowed in the time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "X-RateLimit-Remaining": {
+                "description": "Number of requests remaining in the current time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "X-RateLimit-Reset": {
+                "description": "Time in seconds until the rate limit resets",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 45
+              },
+              "X-Rate-Limit-Limit": {
+                "$ref": "#/components/headers/X-Rate-Limit-Limit"
+              },
+              "X-Rate-Limit-Remaining": {
+                "$ref": "#/components/headers/X-Rate-Limit-Remaining"
+              },
+              "X-Rate-Limit-Config": {
+                "$ref": "#/components/headers/X-Rate-Limit-Config"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_insights_v3_basic_apikey_or_accountsid": [ ]
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://insights.twilio.com"
+        }
+      ]
+    },
+    "/twilio_insights_v3/v3/InsightsDomains/Conversations/QueryJobs": {
+      "post": {
+        "tags": [
+          "TwilioInsightsAsync"
+        ],
+        "summary": "Submit an asynchronous query",
+        "description": "Submit a long-running semantic query against the Conversations domain.\nReturns 202 Accepted with an operationId and a Location header pointing\nto the QueryJobs status endpoint for polling.\n",
+        "operationId": "twilio_insights_v3_CreateQueryJob",
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "A client-generated UUIDv7 key that ensures idempotent behavior.\nSubmitting the same key with an identical request returns the same operation\nwithout re-execution. Scoped to Account + Region. Retained for 24 hours.\n",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "example": "01890a5d-aa0f-7c80-b8e6-0242ac140004"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsightsQueryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Async query accepted",
+            "headers": {
+              "Location": {
+                "description": "URI to poll for operation status.",
+                "schema": {
+                  "type": "string",
+                  "format": "uri",
+                  "example": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r"
+                }
+              },
+              "Retry-After": {
+                "description": "Seconds before the client should first poll.",
+                "schema": {
+                  "type": "integer",
+                  "example": 5
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryJobSubmitResponse"
+                },
+                "example": {
+                  "operationId": "proc_job_01h9d8r0vte3hz8tykdj329t7r",
+                  "status": "PENDING",
+                  "statusUrl": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r",
+                  "createdAt": "2026-05-25T14:30:00Z"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable content (idempotency key payload mismatch)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "description": "Maximum number of requests allowed in the time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "X-RateLimit-Remaining": {
+                "description": "Number of requests remaining in the current time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "X-RateLimit-Reset": {
+                "description": "Time in seconds until the rate limit resets",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 45
+              },
+              "X-Rate-Limit-Limit": {
+                "$ref": "#/components/headers/X-Rate-Limit-Limit"
+              },
+              "X-Rate-Limit-Remaining": {
+                "$ref": "#/components/headers/X-Rate-Limit-Remaining"
+              },
+              "X-Rate-Limit-Config": {
+                "$ref": "#/components/headers/X-Rate-Limit-Config"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_insights_v3_basic_apikey_or_accountsid": [ ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "TwilioInsightsAsync"
+        ],
+        "summary": "Retrieve a list of asynchronous queries",
+        "description": "Returns a paginated list of asynchronous query operations for the authenticated account.\nOptionally filter by status.\n",
+        "operationId": "twilio_insights_v3_ListQueryJobs",
+        "parameters": [
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The maximum number of resources to return",
+            "schema": {
+              "maximum": 1000,
+              "minimum": 1,
+              "type": "integer",
+              "default": 50
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "Token for pagination",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "The operation status to filter results by.",
+            "schema": {
+              "$ref": "#/components/schemas/LongRunningOperationStatus"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Paginated list of async query operations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryJobListResponse"
+                },
+                "example": {
+                  "items": [
+                    {
+                      "operationId": "proc_job_01h9d8r0vte3hz8tykdj329t7r",
+                      "status": "RUNNING",
+                      "createdAt": "2026-05-25T14:30:00Z",
+                      "statusUrl": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r",
+                      "resultId": "proc_job_01h9d8r0vte3hz8tykdj329t7r"
+                    }
+                  ],
+                  "meta": {
+                    "key": "items",
+                    "pageSize": 1
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "description": "Maximum number of requests allowed in the time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "X-RateLimit-Remaining": {
+                "description": "Number of requests remaining in the current time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "X-RateLimit-Reset": {
+                "description": "Time in seconds until the rate limit resets",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 45
+              },
+              "X-Rate-Limit-Limit": {
+                "$ref": "#/components/headers/X-Rate-Limit-Limit"
+              },
+              "X-Rate-Limit-Remaining": {
+                "$ref": "#/components/headers/X-Rate-Limit-Remaining"
+              },
+              "X-Rate-Limit-Config": {
+                "$ref": "#/components/headers/X-Rate-Limit-Config"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_insights_v3_basic_apikey_or_accountsid": [ ]
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://insights.twilio.com"
+        }
+      ]
+    },
+    "/twilio_insights_v3/v3/InsightsDomains/Conversations/QueryJobs/{operationId}": {
+      "get": {
+        "tags": [
+          "TwilioInsightsAsync"
+        ],
+        "summary": "Retrieve asynchronous query status and results",
+        "description": "Poll the operation status. When status is COMPLETED, the response\nincludes query results inline.\nWhen FAILED, the response includes error details conforming to the\nOperationError schema.\n",
+        "operationId": "twilio_insights_v3_FetchQueryJobStatus",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "description": "The unique identifier for the asynchronous query operation, in TTID format.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "Proc_JobTtid",
+              "example": "proc_job_01h9d8r0vte3hz8tykdj329t7r"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation status (may include results if COMPLETED)",
+            "headers": {
+              "Retry-After": {
+                "description": "Seconds before the client should poll again (present while PENDING/RUNNING).",
+                "schema": {
+                  "type": "integer",
+                  "example": 10
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryJobStatusResponse"
+                },
+                "examples": {
+                  "running": {
+                    "summary": "Operation still running",
+                    "value": {
+                      "operationId": "proc_job_01h9d8r0vte3hz8tykdj329t7r",
+                      "status": "RUNNING",
+                      "createdAt": "2026-05-25T14:30:00Z",
+                      "statusUrl": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r"
+                    }
+                  },
+                  "completed": {
+                    "summary": "Operation completed",
+                    "value": {
+                      "operationId": "proc_job_01h9d8r0vte3hz8tykdj329t7r",
+                      "status": "COMPLETED",
+                      "createdAt": "2026-05-25T14:30:00Z",
+                      "completedAt": "2026-05-25T14:32:17Z",
+                      "statusUrl": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r",
+                      "resultRetentionPeriod": "P7D"
+                    }
+                  },
+                  "failed": {
+                    "summary": "Operation failed",
+                    "value": {
+                      "operationId": "proc_job_01h9d8r0vte3hz8tykdj329t7r",
+                      "status": "FAILED",
+                      "createdAt": "2026-05-25T14:30:00Z",
+                      "completedAt": "2026-05-25T14:30:12Z",
+                      "statusUrl": "https://insights.twilio.com/v3/InsightsDomains/Conversations/QueryJobs/proc_job_01h9d8r0vte3hz8tykdj329t7r",
+                      "error": {
+                        "code": 50001,
+                        "message": "Query execution timeout exceeded",
+                        "httpStatusCode": 504,
+                        "detail": "ClickHouse query exceeded the 120s execution limit for this account."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "description": "Maximum number of requests allowed in the time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "X-RateLimit-Remaining": {
+                "description": "Number of requests remaining in the current time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "X-RateLimit-Reset": {
+                "description": "Time in seconds until the rate limit resets",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 45
+              },
+              "X-Rate-Limit-Limit": {
+                "$ref": "#/components/headers/X-Rate-Limit-Limit"
+              },
+              "X-Rate-Limit-Remaining": {
+                "$ref": "#/components/headers/X-Rate-Limit-Remaining"
+              },
+              "X-Rate-Limit-Config": {
+                "$ref": "#/components/headers/X-Rate-Limit-Config"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_insights_v3_basic_apikey_or_accountsid": [ ]
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://insights.twilio.com"
+        }
+      ]
+    },
+    "/twilio_insights_v3/v3/InsightsDomains/Conversations/QueryJobs/{operationId}/Results": {
+      "get": {
+        "tags": [
+          "TwilioInsightsAsync"
+        ],
+        "summary": "Retrieve asynchronous query results",
+        "description": "Retrieve paginated results for a completed asynchronous query operation.\nThe resultUrl in the status response points to this endpoint.\nReturns 404 if the operation is not yet COMPLETED or has expired.\n",
+        "operationId": "twilio_insights_v3_FetchQueryJobResults",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "description": "The unique identifier for the asynchronous query operation, in TTID format.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "Proc_JobTtid",
+              "example": "proc_job_01h9d8r0vte3hz8tykdj329t7r"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The maximum number of resources to return",
+            "schema": {
+              "maximum": 1000,
+              "minimum": 1,
+              "type": "integer",
+              "default": 50
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "Token for pagination",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Query results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InsightsQueryResponse"
+                },
+                "example": {
+                  "domain": "Conversations",
+                  "items": [
+                    {
+                      "Id": "conv1",
+                      "Languages": [
+                        "en"
+                      ],
+                      "Channels": [
+                        "voice"
+                      ],
+                      "OperatorResult.Value": "positive"
+                    },
+                    {
+                      "Id": "conv2",
+                      "Languages": [
+                        "en",
+                        "es"
+                      ],
+                      "Channels": [
+                        "chat"
+                      ],
+                      "OperatorResult.Value": "negative"
+                    }
+                  ],
+                  "meta": {
+                    "key": "items",
+                    "pageSize": 2,
+                    "nextToken": "eyJwYWdlIjoyLCJxdWVyeSI6ImJvb2tzIn0="
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found",
             "content": {
               "application/json": {
                 "schema": {
@@ -165504,6 +166785,9 @@
             "application/x-www-form-urlencoded": {
               "schema": {
                 "title": "CreateTokenRequest",
+                "required": [
+                  "grant_type"
+                ],
                 "type": "object",
                 "properties": {
                   "grant_type": {
@@ -236067,8 +237351,7 @@
                 }
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "201": {
@@ -248607,6 +249890,9 @@
                     "sourceId": "RExxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
                     "audioStartedAt": "2026-03-10T19:42:16Z",
                     "conversationId": "conv_conversation_01k1etx3jbfx88476ccja0889c",
+                    "links": {
+                      "conversation": "https://conversations.twilio.com/v2/Conversations/conv_conversation_01k1etx3jbfx88476ccja0889c"
+                    },
                     "participants": [
                       {
                         "type": "CUSTOMER",
@@ -249331,6 +250617,9 @@
                       "sourceId": "REe3a2b046e52271b586425c61d84ca90e",
                       "audioStartedAt": "2026-04-02T19:25:20Z",
                       "conversationId": "conv_conversation_01k1etx3jbfx88476ccja0889c",
+                      "links": {
+                        "conversation": "https://conversations.twilio.com/v2/Conversations/conv_conversation_01k1etx3jbfx88476ccja0889c"
+                      },
                       "participants": [
                         {
                           "type": "CUSTOMER",
@@ -267819,8 +269108,7 @@
         "required": [
           "id",
           "conversationId",
-          "accountId",
-          "name"
+          "accountId"
         ],
         "type": "object",
         "properties": {
@@ -267842,6 +269130,7 @@
           "name": {
             "type": "string",
             "description": "Participant display name.",
+            "nullable": true,
             "example": "Dana S."
           },
           "type": {
@@ -268403,16 +269692,14 @@
         }
       },
       "conversations.v2.start_conversation_participant": {
+        "required": [
+          "name"
+        ],
         "type": "object",
         "properties": {
-          "ref": {
-            "type": "string",
-            "description": "Caller-assigned handle used by the action's `from` and `to`. Request-scoped; not persisted.",
-            "example": "customer"
-          },
           "name": {
             "type": "string",
-            "description": "Display name for this Participant.",
+            "description": "Display name for this Participant, and the handle the action's `from` and `to` select it by. Must be unique within the request.",
             "example": "Alice"
           },
           "type": {
@@ -268423,12 +269710,6 @@
             "description": "Profile to associate with this Participant, instead of resolving one from the addresses.",
             "example": "mem_profile_00000000000000000000000000"
           },
-          "agentConnectConnectionId": {
-            "pattern": "^[A-Za-z0-9_-]{1,128}$",
-            "type": "string",
-            "description": "Agent Connect connection backing an AI_AGENT Participant. Becomes a path segment of the relay endpoint, so it is constrained to an opaque handle.",
-            "example": "agent_connect_connection_XXXX"
-          },
           "addresses": {
             "type": "array",
             "items": {
@@ -268437,9 +269718,8 @@
             "description": "Channel addresses this Participant can be reached on."
           }
         },
-        "description": "A party on the Conversation. The dispatched `action` refers to Participants by `ref`.",
+        "description": "A party on the Conversation. The dispatched `action` refers to Participants by `name`.",
         "example": {
-          "ref": "customer",
           "name": "Alice",
           "type": "CUSTOMER",
           "addresses": [
@@ -268474,37 +269754,24 @@
       },
       "conversations.v2.start_conversation_participant_selector": {
         "required": [
-          "ref"
+          "name"
         ],
         "type": "object",
         "properties": {
-          "ref": {
+          "name": {
             "type": "string",
-            "description": "The `ref` of a Participant declared in `participants`.",
-            "example": "customer"
+            "description": "The `name` of a Participant declared in `participants`.",
+            "example": "Alice"
           }
         },
-        "description": "Points at one entry in `participants` by its `ref`.",
+        "description": "Points at one entry in `participants` by its `name`.",
         "example": {
-          "ref": "customer"
+          "name": "Alice"
         }
       },
       "conversations.v2.start_conversation_configuration": {
         "type": "object",
         "properties": {
-          "intelligenceConfigurationIds": {
-            "maxItems": 5,
-            "uniqueItems": true,
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "A list of Conversational Intelligence configuration IDs to apply to this Conversation.",
-            "example": [
-              "agent1",
-              "agent2"
-            ]
-          },
           "statusCallbacks": {
             "maxItems": 2,
             "type": "array",
@@ -268516,9 +269783,6 @@
         },
         "description": "Per-Conversation overrides applied on top of the Configuration named by `configurationId`.",
         "example": {
-          "intelligenceConfigurationIds": [
-            "agent1"
-          ],
           "statusCallbacks": [
             {
               "url": "https://webhook.example.com/conversation/status",
@@ -268680,7 +269944,8 @@
           "type": "CALL",
           "payload": {
             "handler": {
-              "type": "AGENT_CONNECT"
+              "type": "AGENT_CONNECT",
+              "relayUrl": "wss://example.ngrok.io/agent_connect_connection_XXXX"
             }
           }
         }
@@ -268715,6 +269980,7 @@
         "example": {
           "handler": {
             "type": "AGENT_CONNECT",
+            "relayUrl": "wss://example.ngrok.io/agent_connect_connection_XXXX",
             "greeting": {
               "text": "Hi, calling about your order."
             }
@@ -268723,7 +269989,8 @@
       },
       "conversations.v2.agent_connect_handler": {
         "required": [
-          "type"
+          "type",
+          "relayUrl"
         ],
         "type": "object",
         "properties": {
@@ -268742,16 +270009,17 @@
             "maxLength": 2048,
             "pattern": "^wss://.+",
             "type": "string",
-            "description": "Relay endpoint for the answered call. When set, this full URL is used instead of the configured default.",
+            "description": "Relay endpoint the answered call connects to. This is what addresses the agent, so it is supplied whole.",
             "example": "wss://example.ngrok.io/agent_connect_connection_XXXX"
           },
           "relay": {
             "$ref": "#/components/schemas/conversations.v2.relay_settings"
           }
         },
-        "description": "Connects the answered call to an AI agent over ConversationRelay. The agent's identity comes from the sending Participant's `agentConnectConnectionId`; this carries session settings only.",
+        "description": "Connects the answered call to an AI agent over ConversationRelay.",
         "example": {
           "type": "AGENT_CONNECT",
+          "relayUrl": "wss://example.ngrok.io/agent_connect_connection_XXXX",
           "greeting": {
             "text": "Hi, calling about your order."
           }
@@ -268880,7 +270148,6 @@
           "name": "Order updates",
           "participants": [
             {
-              "ref": "agent",
               "name": "Acme",
               "type": "AGENT",
               "addresses": [
@@ -268891,7 +270158,6 @@
               ]
             },
             {
-              "ref": "customer",
               "name": "Alice",
               "type": "CUSTOMER",
               "addresses": [
@@ -269438,7 +270704,8 @@
             "items": {
               "$ref": "#/components/schemas/conversations.v2.status_callback_config"
             },
-            "description": "List of webhook configurations for this conversation. Send an empty array to clear all callbacks and stop webhook delivery."
+            "description": "List of webhook configurations for this conversation. Send an empty array to clear all callbacks and stop webhook delivery.",
+            "nullable": true
           }
         },
         "description": "Partial configuration update for an existing conversation. Only statusCallbacks can be modified."
@@ -269623,7 +270890,8 @@
           "SMS",
           "RCS",
           "WHATSAPP",
-          "CHAT"
+          "CHAT",
+          "VIDEO"
         ],
         "type": "string",
         "description": "Channel type for a Communication address."
@@ -273528,6 +274796,215 @@
           }
         }
       },
+      "iam.v1.OrganizationToJoin": {
+        "type": "object",
+        "properties": {
+          "organizationSid": {
+            "pattern": "OR[0-9a-f]{32}",
+            "type": "string",
+            "description": "Unique Twilio organization sid",
+            "format": "OrganizationSid",
+            "example": "OR33f4f3aa6fffe840d000f8ef22e883db"
+          },
+          "name": {
+            "type": "string",
+            "description": "Friendly name of the organization"
+          },
+          "ownerEmail": {
+            "type": "string",
+            "description": "Email address of the organization owner"
+          },
+          "domainVerified": {
+            "type": "boolean",
+            "description": "Whether the organization has verified the domain"
+          }
+        }
+      },
+      "iam.v1.RequestToJoinOrg": {
+        "type": "object",
+        "properties": {
+          "notificationSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^NF[0-9a-fA-F]{32}$",
+            "type": "string"
+          },
+          "email": {
+            "maxLength": 160,
+            "minLength": 2,
+            "type": "string",
+            "description": "Email address of the requesting user",
+            "format": "email"
+          },
+          "firstName": {
+            "maxLength": 160,
+            "minLength": 2,
+            "type": "string",
+            "description": "First name of the requesting user"
+          },
+          "lastName": {
+            "maxLength": 160,
+            "minLength": 2,
+            "type": "string",
+            "description": "Last name of the requesting user"
+          },
+          "dateCreated": {
+            "type": "string",
+            "description": "Date the join request was created",
+            "format": "date-time"
+          },
+          "scope": {
+            "type": "string",
+            "description": "The SID of the entity requested to join (OR…, AC…, etc)"
+          },
+          "scopeType": {
+            "enum": [
+              "organization",
+              "account",
+              "subaccount",
+              "resource"
+            ],
+            "type": "string",
+            "description": "Type of the scope entity for the requested role"
+          },
+          "scopeName": {
+            "type": "string",
+            "description": "Scope Name e.g. Account or Organization friendly name"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "roleSid": {
+                  "pattern": "^IX[0-9a-fA-F]{32}$",
+                  "type": "string",
+                  "description": "SID of the requested role",
+                  "format": "IamRoleSid"
+                },
+                "roleName": {
+                  "type": "string",
+                  "description": "Name of the requested role"
+                }
+              }
+            },
+            "description": "The requested roles"
+          },
+          "status": {
+            "type": "string",
+            "description": "Display status of the join request (e.g. Active, Expired), derived by the downstream service from the underlying notification's state and expiry. Does not map 1:1 to the notification's internal status."
+          }
+        }
+      },
+      "iam.v1.RequestToJoinOrgRequest": {
+        "required": [
+          "organizationSid",
+          "roleSids"
+        ],
+        "type": "object",
+        "properties": {
+          "organizationSid": {
+            "pattern": "OR[0-9a-f]{32}",
+            "type": "string",
+            "description": "Unique Twilio sid of the organization to request to join",
+            "format": "OrganizationSid",
+            "example": "OR33f4f3aa6fffe840d000f8ef22e883db"
+          },
+          "roleSids": {
+            "type": "array",
+            "items": {
+              "pattern": "^IX[0-9a-fA-F]{32}$",
+              "type": "string",
+              "format": "IamRoleSid"
+            },
+            "description": "SIDs of the requested roles",
+            "example": [
+              "IX8b69703c2a65ec199f061b0ae2974511"
+            ]
+          }
+        }
+      },
+      "iam.v1.RequestToJoinOrgResponse": {
+        "type": "object",
+        "properties": {
+          "notificationSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^NF[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "SID of the created join-org request notification"
+          }
+        }
+      },
+      "iam.v1.RequestToJoinOrgSelf": {
+        "type": "object",
+        "properties": {
+          "notificationSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^NF[0-9a-fA-F]{32}$",
+            "type": "string"
+          },
+          "scope": {
+            "type": "string",
+            "description": "The SID of the entity requested to join (OR…, AC…, etc)"
+          },
+          "scopeType": {
+            "enum": [
+              "organization",
+              "account",
+              "subaccount",
+              "resource"
+            ],
+            "type": "string",
+            "description": "Type of the scope entity for the requested role"
+          },
+          "scopeName": {
+            "type": "string",
+            "description": "Scope Name e.g. Account or Organization friendly name"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "roleSid": {
+                  "pattern": "^IX[0-9a-fA-F]{32}$",
+                  "type": "string",
+                  "description": "SID of the requested role",
+                  "format": "IamRoleSid"
+                },
+                "roleName": {
+                  "type": "string",
+                  "description": "Name of the requested role"
+                }
+              }
+            },
+            "description": "The requested roles"
+          },
+          "dateCreated": {
+            "type": "string",
+            "description": "Date the join request was created",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "description": "Display status of the join request (e.g. Active, Expired, Declined, Accepted), derived by the downstream service from the underlying notification's state and expiry. Does not map 1:1 to the notification's internal status."
+          }
+        }
+      },
+      "iam.v1.AcceptRequestToJoinOrgResponse": {
+        "type": "object",
+        "properties": {
+          "executionSid": {
+            "pattern": "WX[0-9a-f]{32}",
+            "type": "string",
+            "description": "The SID of the workflow that will handle accepting the join request",
+            "format": "WorkflowExecutionSid",
+            "example": "WXe0c97ff86651669fefcd6cc4ecd96e9a"
+          }
+        }
+      },
       "iam.v1.OrganizationFeatures": {
         "type": "object",
         "properties": {
@@ -275401,6 +276878,158 @@
           }
         },
         "description": "Request to disconnect a social identity provider from the authenticated user's account"
+      },
+      "iam.v1.PostLoginActionUserContext": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "Whitney's own identifier for the user. This is not a Twilio user SID - the Twilio user record is resolved by email instead"
+          },
+          "emails": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The user's email addresses. The first entry is used to resolve their Twilio unified user record"
+          },
+          "phones": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The user's phone numbers, if any are on file"
+          },
+          "is_first_login": {
+            "type": "boolean",
+            "description": "Whether this is the user's first successful login"
+          }
+        },
+        "description": "Details about the user completing the Whitney auth_flow.checkpoint event that triggered this webhook"
+      },
+      "iam.v1.PostLoginActionRequestContext": {
+        "type": "object",
+        "properties": {
+          "ip_address": {
+            "type": "string",
+            "description": "The IP address the login request originated from"
+          },
+          "user_agent": {
+            "type": "string",
+            "description": "The User-Agent header from the login request"
+          },
+          "request_id": {
+            "type": "string",
+            "description": "Whitney's request identifier for the login attempt"
+          }
+        },
+        "description": "Request metadata for the Whitney auth_flow.checkpoint event, carried through for future blocklist/status-check use"
+      },
+      "iam.v1.PostLoginActionOAuthContext": {
+        "type": "object",
+        "properties": {
+          "client_id": {
+            "type": "string",
+            "description": "The OAuth client the user is authenticating to"
+          },
+          "scope": {
+            "type": "string",
+            "description": "The space-delimited scopes requested by the client"
+          },
+          "authorization_details": {
+            "type": "string",
+            "description": "RFC 9396 authorization_details sent with the authorization request, if any"
+          }
+        },
+        "description": "Details of the OAuth authorization request the user is logging in for"
+      },
+      "iam.v1.PostLoginActionRequest": {
+        "required": [
+          "user_context"
+        ],
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "description": "The version of the Whitney webhook payload contract"
+          },
+          "event": {
+            "type": "string",
+            "description": "The Whitney event name (e.g. auth_flow.checkpoint)"
+          },
+          "account_sid": {
+            "type": "string",
+            "description": "The Twilio account SID associated with the login"
+          },
+          "node_id": {
+            "type": "string",
+            "description": "The Whitney auth flow node identifier for this action"
+          },
+          "action_id": {
+            "type": "string",
+            "description": "Whitney's identifier for this action invocation"
+          },
+          "timestamp": {
+            "type": "integer",
+            "description": "Unix timestamp (seconds) of the login event",
+            "format": "int64"
+          },
+          "oauth": {
+            "$ref": "#/components/schemas/iam.v1.PostLoginActionOAuthContext"
+          },
+          "acr": {
+            "type": "string",
+            "description": "The authentication context class reference the login satisfied"
+          },
+          "completed_factors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The authentication factors the user completed, as RFC 8176 authentication method reference values (e.g. pwd, otp, mfa)"
+          },
+          "user_context": {
+            "$ref": "#/components/schemas/iam.v1.PostLoginActionUserContext"
+          },
+          "request_context": {
+            "$ref": "#/components/schemas/iam.v1.PostLoginActionRequestContext"
+          }
+        },
+        "description": "The auth_flow.checkpoint webhook payload Whitney sends for a post-login action"
+      },
+      "iam.v1.PostLoginActionTokenClaims": {
+        "type": "object",
+        "properties": {
+          "custom_claims": {
+            "type": "object",
+            "description": "Map of custom claim name to value"
+          }
+        },
+        "description": "Custom claims to attach to the id_token or access_token"
+      },
+      "iam.v1.PostLoginActionResponse": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "enum": [
+              "allow",
+              "deny"
+            ],
+            "type": "string",
+            "description": "Whether the login should be allowed or denied"
+          },
+          "id_token": {
+            "$ref": "#/components/schemas/iam.v1.PostLoginActionTokenClaims"
+          },
+          "access_token": {
+            "$ref": "#/components/schemas/iam.v1.PostLoginActionTokenClaims"
+          },
+          "reason": {
+            "type": "string",
+            "description": "The customer-facing message explaining why the login was denied. Present only when action is deny"
+          }
+        },
+        "description": "The verdict UAS returns for a Whitney post-login action"
       },
       "iam.v1.SubaccountBatchWorkflowType": {
         "enum": [
@@ -279947,17 +281576,17 @@
       "TextResult": {
         "title": "Text result",
         "required": [
-          "operator",
-          "id",
-          "executionDetails",
-          "result",
-          "outputFormat",
-          "conversationId",
-          "metadata",
-          "intelligenceConfiguration",
           "dateCreated",
+          "id",
+          "result",
+          "executionDetails",
+          "conversationId",
+          "intelligenceConfiguration",
           "referenceIds",
-          "accountId"
+          "metadata",
+          "accountId",
+          "outputFormat",
+          "operator"
         ],
         "type": "object",
         "properties": {
@@ -280033,17 +281662,17 @@
       "JSONResult": {
         "title": "JSON result",
         "required": [
-          "operator",
-          "id",
-          "executionDetails",
-          "result",
-          "outputFormat",
-          "conversationId",
-          "metadata",
-          "intelligenceConfiguration",
           "dateCreated",
+          "id",
+          "result",
+          "executionDetails",
+          "conversationId",
+          "intelligenceConfiguration",
           "referenceIds",
-          "accountId"
+          "metadata",
+          "accountId",
+          "outputFormat",
+          "operator"
         ],
         "type": "object",
         "properties": {
@@ -280110,17 +281739,17 @@
       "ClassificationResult": {
         "title": "Classification result",
         "required": [
-          "operator",
-          "id",
-          "executionDetails",
-          "result",
-          "outputFormat",
-          "conversationId",
-          "metadata",
-          "intelligenceConfiguration",
           "dateCreated",
+          "id",
+          "result",
+          "executionDetails",
+          "conversationId",
+          "intelligenceConfiguration",
           "referenceIds",
-          "accountId"
+          "metadata",
+          "accountId",
+          "outputFormat",
+          "operator"
         ],
         "type": "object",
         "properties": {
@@ -280196,17 +281825,17 @@
       "ExtractionResult": {
         "title": "Extraction result",
         "required": [
-          "operator",
-          "id",
-          "executionDetails",
-          "result",
-          "outputFormat",
-          "conversationId",
-          "metadata",
-          "intelligenceConfiguration",
           "dateCreated",
+          "id",
+          "result",
+          "executionDetails",
+          "conversationId",
+          "intelligenceConfiguration",
           "referenceIds",
-          "accountId"
+          "metadata",
+          "accountId",
+          "outputFormat",
+          "operator"
         ],
         "type": "object",
         "properties": {
@@ -281167,9 +282796,9 @@
       },
       "CreateOrUpdateOperatorRequest": {
         "required": [
+          "prompt",
           "displayName",
-          "outputFormat",
-          "prompt"
+          "outputFormat"
         ],
         "type": "object",
         "properties": {
@@ -283887,11 +285516,11 @@
       },
       "Knowledge": {
         "required": [
+          "id",
+          "createdAt",
           "updatedAt",
           "name",
-          "id",
-          "status",
-          "createdAt"
+          "status"
         ],
         "type": "object",
         "properties": {
@@ -284326,11 +285955,11 @@
       "KnowledgeBase": {
         "required": [
           "displayName",
+          "id",
+          "createdAt",
           "updatedAt",
           "version",
-          "id",
-          "status",
-          "createdAt"
+          "status"
         ],
         "type": "object",
         "properties": {
@@ -286214,12 +287843,12 @@
       },
       "SummaryInfo": {
         "required": [
-          "updatedAt",
-          "occurredAt",
           "id",
+          "createdAt",
           "content",
           "conversationId",
-          "createdAt"
+          "updatedAt",
+          "occurredAt"
         ],
         "type": "object",
         "properties": {
@@ -286383,8 +288012,8 @@
             "items": {
               "required": [
                 "address",
-                "name",
                 "id",
+                "name",
                 "channel"
               ],
               "type": "object",
@@ -286877,9 +288506,9 @@
       "Store": {
         "required": [
           "displayName",
-          "version",
           "id",
           "intelligenceServiceId",
+          "version",
           "status"
         ],
         "type": "object",
@@ -286991,8 +288620,8 @@
       },
       "IdentityResolutionSettings": {
         "required": [
-          "version",
           "identifierConfigs",
+          "version",
           "matchingRules"
         ],
         "type": "object",
@@ -287715,12 +289344,12 @@
       "DataMapping": {
         "required": [
           "displayName",
-          "updatedAt",
-          "version",
-          "mappingFrom",
           "id",
+          "createdAt",
+          "updatedAt",
           "mappingTo",
-          "createdAt"
+          "version",
+          "mappingFrom"
         ],
         "type": "object",
         "properties": {
@@ -287791,12 +289420,12 @@
       },
       "RecallObservationInfo": {
         "required": [
-          "updatedAt",
-          "occurredAt",
           "id",
-          "source",
+          "createdAt",
           "content",
-          "createdAt"
+          "updatedAt",
+          "source",
+          "occurredAt"
         ],
         "type": "object",
         "properties": {
@@ -287857,12 +289486,12 @@
       },
       "RecallSummaryInfo": {
         "required": [
-          "updatedAt",
-          "occurredAt",
           "id",
+          "createdAt",
           "content",
           "conversationId",
-          "createdAt"
+          "updatedAt",
+          "occurredAt"
         ],
         "type": "object",
         "properties": {
@@ -288092,8 +289721,8 @@
       "ObservationCreateRequest": {
         "required": [
           "content",
-          "occurredAt",
-          "source"
+          "source",
+          "occurredAt"
         ],
         "type": "object",
         "properties": {
@@ -288409,6 +290038,198 @@
         },
         "additionalProperties": false,
         "description": "Configuration for mapping from a TDI dataset backed by a warehouse source."
+      },
+      "TraitExtractionDefinition": {
+        "required": [
+          "traitGroup",
+          "traitName"
+        ],
+        "type": "object",
+        "properties": {
+          "traitGroup": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_\\-\\.]+$",
+            "type": "string",
+            "description": "The name of the Trait Group containing the trait to infer.",
+            "example": "Contact"
+          },
+          "traitName": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[a-z][a-zA-Z0-9]*$",
+            "type": "string",
+            "description": "The name of the trait within the Trait Group to infer. Must be 1-128 characters, camelCase (start with a lowercase letter, followed by letters and numbers only).",
+            "example": "email"
+          },
+          "instructions": {
+            "maxLength": 1024,
+            "minLength": 1,
+            "type": "string",
+            "description": "Free-text guidance telling the extractor how to infer this trait.",
+            "example": "Only set this when the customer states the value explicitly."
+          }
+        },
+        "additionalProperties": false,
+        "description": "One trait to infer, and how. Trait keys are unique within a strategy, so two strategies may both\ncover the same trait with different instructions."
+      },
+      "TraitExtractionStrategyName": {
+        "maxLength": 64,
+        "minLength": 1,
+        "pattern": "^[a-zA-Z][a-zA-Z0-9\\-.]*$",
+        "type": "string",
+        "description": "Unique, immutable name identifying a Trait Extraction Strategy within the account.",
+        "example": "retail-support-traits"
+      },
+      "TraitExtractionStrategyCore": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "maxLength": 1024,
+            "type": "string",
+            "description": "A human readable description of this strategy. May be empty.",
+            "example": "Traits inferred from retail support conversations."
+          },
+          "isEnabled": {
+            "type": "boolean",
+            "description": "Flag indicating whether the strategy is active. When false, conversation configurations that\nreference it fall back to the default extraction behaviour.",
+            "default": true,
+            "example": true
+          },
+          "definitions": {
+            "maxItems": 25,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TraitExtractionDefinition"
+            },
+            "description": "The traits this strategy infers. Replaces the existing list on update."
+          }
+        },
+        "description": "Mutable fields of a Trait Extraction Strategy. Used directly as the PATCH request body\n(all fields optional). Composed into CreateTraitExtractionStrategyInput via allOf.\n`displayName` and `storeId` are deliberately absent because they are immutable after creation:\nre-pointing a strategy at a different Memory Store would orphan every definition it holds."
+      },
+      "CreateTraitExtractionStrategyInput": {
+        "required": [
+          "storeId",
+          "displayName"
+        ],
+        "type": "object",
+        "properties": {
+          "description": {
+            "maxLength": 1024,
+            "type": "string",
+            "description": "A human readable description of this strategy. May be empty.",
+            "example": "Traits inferred from retail support conversations."
+          },
+          "isEnabled": {
+            "type": "boolean",
+            "description": "Flag indicating whether the strategy is active. When false, conversation configurations that\nreference it fall back to the default extraction behaviour.",
+            "default": true,
+            "example": true
+          },
+          "definitions": {
+            "maxItems": 25,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TraitExtractionDefinition"
+            },
+            "description": "The traits this strategy infers. Replaces the existing list on update."
+          },
+          "displayName": {
+            "$ref": "#/components/schemas/TraitExtractionStrategyName"
+          },
+          "storeId": {
+            "pattern": "^mem_store_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The Memory Store whose Trait Registry every definition in this strategy resolves against.\nThe store is a property of the strategy, not of an individual definition, and is\nimmutable after creation.",
+            "example": "mem_store_00000000000000000000000000"
+          }
+        },
+        "description": "Payload for creating a Trait Extraction Strategy. `displayName` must be unique within the account\nfor this resource type and cannot be changed afterwards."
+      },
+      "TraitExtractionStrategy": {
+        "required": [
+          "displayName",
+          "id",
+          "createdAt",
+          "updatedAt",
+          "version",
+          "storeId"
+        ],
+        "type": "object",
+        "properties": {
+          "description": {
+            "maxLength": 1024,
+            "type": "string",
+            "description": "A human readable description of this strategy. May be empty.",
+            "example": "Traits inferred from retail support conversations."
+          },
+          "isEnabled": {
+            "type": "boolean",
+            "description": "Flag indicating whether the strategy is active. When false, conversation configurations that\nreference it fall back to the default extraction behaviour.",
+            "default": true,
+            "example": true
+          },
+          "definitions": {
+            "maxItems": 25,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TraitExtractionDefinition"
+            },
+            "description": "The traits this strategy infers. Replaces the existing list on update."
+          },
+          "displayName": {
+            "$ref": "#/components/schemas/TraitExtractionStrategyName"
+          },
+          "storeId": {
+            "pattern": "^mem_store_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The Memory Store whose Trait Registry every definition in this strategy resolves against.\nThe store is a property of the strategy, not of an individual definition, and is\nimmutable after creation.",
+            "example": "mem_store_00000000000000000000000000"
+          },
+          "id": {
+            "pattern": "^mem_traitextraction_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The unique identifier for the Trait Extraction Strategy.",
+            "example": "mem_traitextraction_00000000000000000000000000"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "The ISO 8601 timestamp when the strategy was created.",
+            "format": "date-time",
+            "example": "2026-01-15T10:30:00Z"
+          },
+          "updatedAt": {
+            "type": "string",
+            "description": "The ISO 8601 timestamp when the strategy was last updated.",
+            "format": "date-time",
+            "example": "2026-01-15T11:45:00Z"
+          },
+          "version": {
+            "minimum": 1,
+            "type": "integer",
+            "description": "The current version number of the strategy. Incremented on each successful update.",
+            "example": 3
+          }
+        },
+        "description": "A Trait Extraction Strategy lists the traits to infer from a conversation and how to infer them.\nIt is account scoped and names the Memory Store its definitions resolve against."
+      },
+      "TraitExtractionStrategyList": {
+        "type": "object",
+        "properties": {
+          "traitExtractionStrategies": {
+            "maxItems": 25,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TraitExtractionStrategy"
+            },
+            "description": "List of Trait Extraction Strategies associated with the Twilio account."
+          },
+          "meta": {
+            "$ref": "#/components/schemas/twilio_memory_v1_Meta"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A page of Trait Extraction Strategies belonging to the Twilio account."
       },
       "messaging.v1.service.alpha_sender": {
         "type": "object",
@@ -290418,17 +292239,6 @@
             "nullable": true
           }
         }
-      },
-      "whatsapp_sender_enum_status": {
-        "enum": [
-          "Configuring",
-          "PendingVerification",
-          "Configured",
-          "ConfigurationError",
-          "VerificationError"
-        ],
-        "type": "string",
-        "description": "The status of the sender. Configuring: We are in the process of registering the sender. If your sender stays in this state for a long period of time it is possible that there is an issue with parameters you provided; PendingVerification: We have successfully registered the sender with WhatsApp and you should receive a code from their services; Configured: The sender has been successfully verified with WhatsApp and is all set to start sending messages; ConfigurationError - If configuration fails due to below possibilities: parameters provided were incorrect, Twilio account suspended or deleted, whatsapp api failed, Twilio internal error. VerificationError - If verification api fails, please check error_message for more details"
       },
       "messaging.v2.channels_sender_response": {
         "type": "object",
@@ -294092,9 +295902,9 @@
       "numbers.v1.a2p_registration_details_fetch": {
         "required": [
           "phoneNumber",
+          "externalPhoneNumberStatus",
           "phoneNumberSid",
-          "accountSid",
-          "externalPhoneNumberStatus"
+          "accountSid"
         ],
         "type": "object",
         "properties": {
@@ -294557,9 +296367,9 @@
       "numbers.v2.a2p_registration_details_fetch": {
         "required": [
           "phoneNumber",
+          "externalPhoneNumberStatus",
           "phoneNumberSid",
-          "accountSid",
-          "externalPhoneNumberStatus"
+          "accountSid"
         ],
         "type": "object",
         "properties": {
@@ -313372,12 +315182,12 @@
             },
             "description": "Array of participants in the conversation"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "voice.v3.transcription.CreateRequestWithMediaUrl": {
         "required": [
-          "transcriptionConfigurationId",
-          "mediaUrl"
+          "transcriptionConfigurationId"
         ],
         "type": "object",
         "properties": {
@@ -313415,7 +315225,8 @@
             },
             "description": "Participants in the conversation. If omitted or partially specified, defaults\nfrom the transcription configuration will be applied.\n"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "voice.v3.transcription.TranscriptionStatusCallback": {
         "type": "object",
@@ -313610,6 +315421,12 @@
             "description": "The URL of this resource",
             "format": "uri",
             "example": "https://voice.twilio.com/v3/Transcriptions/voice_transcription_5pe8jw3ahdmsh7zr06yh4d45x1"
+          },
+          "links": {
+            "type": "object",
+            "description": "Absolute URLs of resources related to this Transcription. Includes `conversation`, the\nConversations API resource for this Transcription's `conversationId`, once the transcript\nhas been stored. Omitted entirely when there is no related resource to link to.\n",
+            "format": "uri-map",
+            "nullable": true
           }
         }
       },
@@ -315845,6 +317662,17 @@
           "pattern": "^mem_mapsuggestion_[0-7][0-9a-z]{25}$",
           "type": "string",
           "example": "mem_mapsuggestion_00000000000000000000000000"
+        }
+      },
+      "TraitStrategyId": {
+        "name": "traitStrategyId",
+        "in": "path",
+        "description": "A unique Trait Extraction Strategy ID using Twilio Type ID (TTID) format",
+        "required": true,
+        "schema": {
+          "pattern": "^mem_traitextraction_[0-7][0-9a-z]{25}$",
+          "type": "string",
+          "example": "mem_traitextraction_00000000000000000000000000"
         }
       },
       "XTwilioApiVersion": {
@@ -318901,6 +320729,10 @@
       "name": "MarketplaceReferralConversion"
     },
     {
+      "name": "TraitExtractionStrategies",
+      "description": "A Trait Extraction Strategy lists the traits to infer from a conversation, each with optional free-text instructions telling the extractor how to infer it. Use it to capture durable profile facts that the default extraction behaviour does not cover.\n\nEach strategy names the Memory Store whose Trait Registry its definitions resolve against, so every definition in one strategy targets the same store. Trait keys are unique within a strategy rather than globally, so two strategies may cover the same trait with different instructions and a conversation configuration picks one.\n"
+    },
+    {
       "name": "Store",
       "description": "The Memory Store is the parent container for all Conversation Memory data. Profiles, identifiers, traits, observations, and summaries all live inside a specific store, and that store defines the boundary for how data is organized and resolved. A store must be created before you create a conversation configuration, because the conversation configuration needs to know where profiles and memory should be written. \n"
     },
@@ -319017,9 +320849,6 @@
     },
     {
       "name": "MessagingV1Version"
-    },
-    {
-      "name": "MessagingV1WhatsappSender"
     },
     {
       "name": "MessagingV1TwoFactorAuthentication"

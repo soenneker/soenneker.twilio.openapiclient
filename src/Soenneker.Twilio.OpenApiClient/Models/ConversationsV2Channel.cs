@@ -27,5 +27,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         #pragma warning disable CS1591
         Chat,
         #pragma warning restore CS1591
+        [EnumMember(Value = "VIDEO")]
+        #pragma warning disable CS1591
+        Video,
+        #pragma warning restore CS1591
     }
 }

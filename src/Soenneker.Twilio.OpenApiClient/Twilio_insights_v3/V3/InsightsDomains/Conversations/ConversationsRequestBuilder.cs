@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.Conversations.Metadata;
 using Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.Conversations.Query;
+using Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.Conversations.QueryJobs;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -25,6 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.C
         public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.Conversations.Query.QueryRequestBuilder Query
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.Conversations.Query.QueryRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The QueryJobs property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.Conversations.QueryJobs.QueryJobsRequestBuilder QueryJobs
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.Conversations.QueryJobs.QueryJobsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.Conversations.ConversationsRequestBuilder"/> and sets the default values.
