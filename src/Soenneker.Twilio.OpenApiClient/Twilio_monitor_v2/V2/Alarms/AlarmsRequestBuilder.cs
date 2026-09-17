@@ -19,7 +19,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms
     public partial class AlarmsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_monitor_v2.v2.Alarms.item collection</summary>
-        /// <param name="position">Sid</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.Item.WithSItemRequestBuilder"/></returns>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.Item.WithSItemRequestBuilder this[string position]
         {

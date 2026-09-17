@@ -121633,7 +121633,12 @@
         "operationId": "TwilioMonitorV2FetchAlarm",
         "parameters": [
           {
-            "$ref": "#/components/parameters/Sid"
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -121705,7 +121710,12 @@
         "operationId": "TwilioMonitorV2UpdateAlarm",
         "parameters": [
           {
-            "$ref": "#/components/parameters/Sid"
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -121787,7 +121797,12 @@
         "operationId": "TwilioMonitorV2DeleteAlarm",
         "parameters": [
           {
-            "$ref": "#/components/parameters/Sid"
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -121818,7 +121833,12 @@
         "operationId": "TwilioMonitorV2UpdateAlarmStatus",
         "parameters": [
           {
-            "$ref": "#/components/parameters/Sid"
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -335104,7 +335124,7 @@
           "additionalProperties": false,
           "example": "gzip",
           "x-ms-enum": {
-            "name": "GeneratedEnum",
+            "name": "ContentEncoding",
             "modelAsString": false,
             "values": [
               {
