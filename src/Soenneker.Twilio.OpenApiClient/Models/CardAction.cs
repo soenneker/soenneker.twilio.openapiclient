@@ -9,9 +9,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CardAction : IParsable
+    public partial class CardAction : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,6 +59,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The webview_size property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WebviewSizeType? WebviewSize { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CardAction"/> and sets the default values.
+        /// </summary>
+        public CardAction()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CardAction"/></returns>
@@ -97,6 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CardActionType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebviewSizeType>("webview_size", WebviewSize);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

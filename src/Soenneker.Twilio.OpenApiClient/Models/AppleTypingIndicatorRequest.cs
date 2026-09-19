@@ -11,8 +11,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// Typing indicator request for Apple Messages for Business channel.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AppleTypingIndicatorRequest : IParsable
+    public partial class AppleTypingIndicatorRequest : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The messaging channel. Must be &quot;APPLE&quot;.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.AppleChannel? Channel { get; set; }
         /// <summary>The type of typing event. &quot;START&quot; indicates the agent began typing, &quot;END&quot; indicates the agent stopped typing. Defaults to &quot;START&quot;.</summary>
@@ -33,6 +35,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string To { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequest"/> and sets the default values.
+        /// </summary>
+        public AppleTypingIndicatorRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -68,6 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AppleTypingIndicatorRequestEvent>("event", Event);
             writer.WriteStringValue("from", From);
             writer.WriteStringValue("to", To);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

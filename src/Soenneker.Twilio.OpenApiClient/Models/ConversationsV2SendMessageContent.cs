@@ -11,8 +11,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// Content for a SEND_MESSAGE action.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ConversationsV2SendMessageContent : IParsable
+    public partial class ConversationsV2SendMessageContent : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Content template ID (HX... format). When provided, the template is renderedwith the variables map and sent to the recipient.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,6 +47,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContentVariablesProperty Variables { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent"/> and sets the default values.
+        /// </summary>
+        public ConversationsV2SendMessageContent()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -80,6 +89,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("mediaUrls", MediaUrls);
             writer.WriteStringValue("text", Text);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContentVariablesProperty>("variables", Variables);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

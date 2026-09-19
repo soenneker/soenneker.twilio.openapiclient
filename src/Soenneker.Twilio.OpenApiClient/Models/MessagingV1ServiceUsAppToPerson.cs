@@ -9,7 +9,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class MessagingV1ServiceUsAppToPerson : IParsable
+    public partial class MessagingV1ServiceUsAppToPerson : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that the Campaign belongs to.</summary>
@@ -20,6 +20,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string AccountSid { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean that specifies whether campaign is age gated or not.</summary>
         public bool? AgeGated { get; set; }
         /// <summary>The unique string to identify the A2P brand.</summary>
@@ -183,6 +185,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string UsAppToPersonUsecase { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPerson"/> and sets the default values.
+        /// </summary>
+        public MessagingV1ServiceUsAppToPerson()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPerson"/></returns>
@@ -265,6 +274,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("subscriber_opt_in", SubscriberOptIn);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("us_app_to_person_usecase", UsAppToPersonUsecase);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

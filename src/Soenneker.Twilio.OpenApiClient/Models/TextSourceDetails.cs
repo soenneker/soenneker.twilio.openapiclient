@@ -11,8 +11,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// Configuration details for raw text knowledge sources
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TextSourceDetails : IParsable
+    public partial class TextSourceDetails : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The raw text content to be processed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -23,6 +25,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Raw text knowledge sources</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetailsType? Type { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetails"/> and sets the default values.
+        /// </summary>
+        public TextSourceDetails()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -54,6 +63,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("content", Content);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetailsType>("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

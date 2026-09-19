@@ -12,8 +12,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// A generic error object communicating client and server side API errors.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TwilioError : ApiException, IParsable
+    public partial class TwilioError : ApiException, IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Twilio error code.</summary>
         public int? Code { get; set; }
         /// <summary>The primary error message.</summary>
@@ -36,6 +38,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The HTTP status code for the error.</summary>
         public int? Status { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioError"/> and sets the default values.
+        /// </summary>
+        public TwilioError()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -71,6 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("message", MessageEscaped);
             writer.WriteStringValue("more_info", MoreInfo);
             writer.WriteIntValue("status", Status);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

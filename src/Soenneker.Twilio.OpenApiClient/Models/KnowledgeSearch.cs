@@ -11,8 +11,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// Request payload for performing semantic search across knowledge sources within the knowledge base..  Allowsquerying with natural language text and filtering by specific knowledge  sources to find the most relevant contentchunks.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class KnowledgeSearch : IParsable
+    public partial class KnowledgeSearch : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The list of knowledge IDs to search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,6 +33,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The top K results to return.</summary>
         public int? Top { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeSearch"/> and sets the default values.
+        /// </summary>
+        public KnowledgeSearch()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -64,6 +73,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("knowledgeIds", KnowledgeIds);
             writer.WriteStringValue("query", Query);
             writer.WriteIntValue("top", Top);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

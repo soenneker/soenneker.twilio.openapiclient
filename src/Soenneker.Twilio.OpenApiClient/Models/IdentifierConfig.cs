@@ -9,9 +9,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class IdentifierConfig : IParsable
+    public partial class IdentifierConfig : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When enabled, more than one profile may not share the same identifier value.Adding a shared identifier to a second profile may trigger a merge.Disabling creates a compound identifier where merges are only triggered iftwo or more identifiers satisfy a matching rule.</summary>
         public bool? EnforceUnique { get; set; }
         /// <summary>Name of the identifier type. Usual values are email, phone, external_id etc.</summary>
@@ -37,6 +39,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// </summary>
         public IdentifierConfig()
         {
+            AdditionalData = new Dictionary<string, object>();
             EnforceUnique = true;
             Limit = 100;
             MatchingThreshold = 75;
@@ -82,6 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigMatchingAlgo>("matchingAlgo", MatchingAlgo);
             writer.WriteIntValue("matchingThreshold", MatchingThreshold);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigNormalization>("normalization", Normalization);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

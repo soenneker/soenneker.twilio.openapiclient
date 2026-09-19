@@ -9,9 +9,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class IdentifierUpdate : IParsable
+    public partial class IdentifierUpdate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The identifier type to update (e.g., email, phone).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -36,6 +38,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string OldValue { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IdentifierUpdate"/> and sets the default values.
+        /// </summary>
+        public IdentifierUpdate()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -69,6 +78,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("idType", IdType);
             writer.WriteStringValue("newValue", NewValue);
             writer.WriteStringValue("oldValue", OldValue);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

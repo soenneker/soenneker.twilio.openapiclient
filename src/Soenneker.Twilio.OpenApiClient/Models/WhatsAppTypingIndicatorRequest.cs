@@ -11,8 +11,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// Typing indicator request for WhatsApp channel. Requires a messageId from a recent inbound message.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class WhatsAppTypingIndicatorRequest : IParsable
+    public partial class WhatsAppTypingIndicatorRequest : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The messaging channel. Must be &quot;WHATSAPP&quot;.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequestChannel? Channel { get; set; }
         /// <summary>The SID of a recent inbound message from the recipient. Must be an SM or MM SID format.</summary>
@@ -23,6 +25,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string MessageId { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequest"/> and sets the default values.
+        /// </summary>
+        public WhatsAppTypingIndicatorRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -54,6 +63,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WhatsAppTypingIndicatorRequestChannel>("channel", Channel);
             writer.WriteStringValue("messageId", MessageId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

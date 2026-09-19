@@ -11,8 +11,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// Typing indicator request for RCS channel.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RcsTypingIndicatorRequest : IParsable
+    public partial class RcsTypingIndicatorRequest : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The messaging channel. Must be &quot;RCS&quot;.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.RcsChannel? Channel { get; set; }
         /// <summary>The type of typing event. Currently only &quot;START&quot; is supported for RCS, indicating the agent began typing. Defaults to &quot;START&quot;.</summary>
@@ -33,6 +35,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string To { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.RcsTypingIndicatorRequest"/> and sets the default values.
+        /// </summary>
+        public RcsTypingIndicatorRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -68,6 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.StartEvent>("event", Event);
             writer.WriteStringValue("from", From);
             writer.WriteStringValue("to", To);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

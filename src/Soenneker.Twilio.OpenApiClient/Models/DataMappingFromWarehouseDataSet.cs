@@ -11,8 +11,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// Configuration for mapping from a TDI dataset backed by a warehouse source.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class DataMappingFromWarehouseDataSet : IParsable
+    public partial class DataMappingFromWarehouseDataSet : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier of the TDI dataset to connect.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -23,6 +25,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The source data type, which determines the source of the data and the required configuration parameters.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.DatasetWarehouseType? Type { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingFromWarehouseDataSet"/> and sets the default values.
+        /// </summary>
+        public DataMappingFromWarehouseDataSet()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -54,6 +63,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("datasetId", DatasetId);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.DatasetWarehouseType>("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

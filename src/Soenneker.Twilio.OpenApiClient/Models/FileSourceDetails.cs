@@ -11,8 +11,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// Configuration details for file based knowledge sources. Supported file formats (extension → MIME type):  .csv → text/csv  .md → text/markdown  .pdf → application/pdf  .tsv → text/tab-separated-values  .txt → text/plainMaximum file size: 16MB (16 * 1024 * 1024 bytes).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class FileSourceDetails : IParsable
+    public partial class FileSourceDetails : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Name of the file to be uploaded</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +39,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public global::Soenneker.Twilio.OpenApiClient.Models.FileType? Type { get; set; }
         /// <summary>Expiration time of the presigned upload URL in ISO 8601 format (only present when status is SCHEDULED)</summary>
         public DateTimeOffset? UploadExpiration { get; private set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.FileSourceDetails"/> and sets the default values.
+        /// </summary>
+        public FileSourceDetails()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -74,6 +83,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("fileSize", FileSize);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupportedFileMimeType>("mimeType", MimeType);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FileType>("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

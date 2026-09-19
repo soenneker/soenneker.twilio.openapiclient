@@ -11,8 +11,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// Pagination metadata for list operations
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class KnowledgeMeta : IParsable
+    public partial class KnowledgeMeta : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The key of the list property contains the actual data items.This enables programmatic iteration over paginated results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,6 +41,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string PreviousToken { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeMeta"/> and sets the default values.
+        /// </summary>
+        public KnowledgeMeta()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -74,6 +83,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("nextToken", NextToken);
             writer.WriteIntValue("pageSize", PageSize);
             writer.WriteStringValue("previousToken", PreviousToken);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

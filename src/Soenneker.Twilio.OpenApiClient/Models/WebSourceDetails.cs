@@ -11,8 +11,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// Configuration details for web based knowledge sources
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class WebSourceDetails : IParsable
+    public partial class WebSourceDetails : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The maximum depth to crawl from the source URL</summary>
         public int? CrawlDepth { get; set; }
         /// <summary>Frequency of re-crawling the website for updated content</summary>
@@ -40,6 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// </summary>
         public WebSourceDetails()
         {
+            AdditionalData = new Dictionary<string, object>();
             CrawlDepth = 2;
         }
         /// <summary>
@@ -79,6 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup>("errors", Errors);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebType>("type", Type);
             writer.WriteStringValue("url", Url);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

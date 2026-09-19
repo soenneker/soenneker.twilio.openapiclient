@@ -11,8 +11,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// All the known values for a specific identifier type. These are normalized according to the corresponding identifier settings and ordered chronologically. It includes any promoted values from traits and explicitly set values from API calls, both historical and current.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class IdentifierSet : IParsable
+    public partial class IdentifierSet : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Identifier type defined in Identity Resolution Settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,6 +31,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> Values { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IdentifierSet"/> and sets the default values.
+        /// </summary>
+        public IdentifierSet()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -60,6 +69,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("idType", IdType);
             writer.WriteCollectionOfPrimitiveValues<string>("values", Values);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

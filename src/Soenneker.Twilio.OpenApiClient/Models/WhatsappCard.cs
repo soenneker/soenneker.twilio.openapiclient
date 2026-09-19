@@ -11,7 +11,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// whatsapp/card is a structured template which can be used to send a series of related information. It must include a body and at least one additional field.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class WhatsappCard : IParsable
+    public partial class WhatsappCard : IAdditionalDataHolder, IParsable
     {
         /// <summary>The actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -21,6 +21,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.CardAction> Actions { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The body property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,6 +55,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> Media { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.WhatsappCard"/> and sets the default values.
+        /// </summary>
+        public WhatsappCard()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -90,6 +99,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("footer", Footer);
             writer.WriteStringValue("header_text", HeaderText);
             writer.WriteCollectionOfPrimitiveValues<string>("media", Media);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

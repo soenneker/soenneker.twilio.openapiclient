@@ -9,9 +9,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class BaseRelayData : IParsable
+    public partial class BaseRelayData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Sequence number of the event.</summary>
         public int? SequenceNumber { get; set; }
         /// <summary>Session id of the conversation relay.</summary>
@@ -22,6 +24,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string SessionId { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.BaseRelayData"/> and sets the default values.
+        /// </summary>
+        public BaseRelayData()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -53,6 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("sequence_number", SequenceNumber);
             writer.WriteStringValue("session_id", SessionId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

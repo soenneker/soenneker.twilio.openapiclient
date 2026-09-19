@@ -9,9 +9,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class TwilioMemoryV1OperationStatus : IParsable
+    public partial class TwilioMemoryV1OperationStatus : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When the operation completed or failed.</summary>
         public DateTimeOffset? CompletedAt { get; set; }
         /// <summary>When the operation was created.</summary>
@@ -59,6 +61,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public string StatusUrl { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1OperationStatus"/> and sets the default values.
+        /// </summary>
+        public TwilioMemoryV1OperationStatus()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1OperationStatus"/></returns>
@@ -101,6 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("resultUrl", ResultUrl);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1OperationStatusStatus>("status", Status);
             writer.WriteStringValue("statusUrl", StatusUrl);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }
