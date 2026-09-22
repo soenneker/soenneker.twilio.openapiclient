@@ -248303,11 +248303,11 @@
           }
         }
       },
-      "ApiV2010AccountCallSubresourceUris": {
-        "type": "object",
-        "description": "A list of subresources available to this call, identified by their URIs relative to \u0060https://api.twilio.com\u0060.",
-        "format": "uri-map",
-        "nullable": true
+      "OutputFormat": {
+        "title": "Output Format",
+        "pattern": "^(CLASSIFICATION|TEXT|EXTRACTION|JSON)$",
+        "type": "string",
+        "description": "The output format set on the Operator that generated this result. Determines the structure of the \u0060result\u0060 object."
       },
       "OperatorResultsResponseBase": {
         "title": "Operator Results Response Base",
@@ -249509,221 +249509,77 @@
           }
         }
       },
-      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberVoipCapabilities": {
-        "type": "object",
-        "properties": {
-          "mms": {
-            "type": "boolean"
-          },
-          "sms": {
-            "type": "boolean"
-          },
-          "voice": {
-            "type": "boolean"
-          },
-          "fax": {
-            "type": "boolean"
-          }
-        },
-        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
-        "format": "phone-number-capabilities",
-        "nullable": true,
-        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+      "OperatorTtid": {
+        "pattern": "^intelligence_operator_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "The unique identifier for the Language Operator. Assigned by Twilio (TTID).",
+        "readOnly": true,
+        "example": "intelligence_operator_01k6fc25s7epm9qtk8rszbv3q5"
       },
-      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFreeCapabilities": {
-        "type": "object",
-        "properties": {
-          "mms": {
-            "type": "boolean"
-          },
-          "sms": {
-            "type": "boolean"
-          },
-          "voice": {
-            "type": "boolean"
-          },
-          "fax": {
-            "type": "boolean"
-          }
-        },
-        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
-        "format": "phone-number-capabilities",
-        "nullable": true,
-        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+      "OperatorResultTtid": {
+        "pattern": "^intelligence_operatorresult_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "A unique identifier for the Operator Result. Assigned by Twilio (TTID).",
+        "example": "intelligence_operatorresult_01k6fc25s7epm9qtk8rszbv3q5"
       },
-      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberSharedCostCapabilities": {
-        "type": "object",
-        "properties": {
-          "mms": {
-            "type": "boolean"
-          },
-          "sms": {
-            "type": "boolean"
-          },
-          "voice": {
-            "type": "boolean"
-          },
-          "fax": {
-            "type": "boolean"
-          }
-        },
-        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
-        "format": "phone-number-capabilities",
-        "nullable": true,
-        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
-      },
-      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberNationalCapabilities": {
-        "type": "object",
-        "properties": {
-          "mms": {
-            "type": "boolean"
-          },
-          "sms": {
-            "type": "boolean"
-          },
-          "voice": {
-            "type": "boolean"
-          },
-          "fax": {
-            "type": "boolean"
-          }
-        },
-        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
-        "format": "phone-number-capabilities",
-        "nullable": true,
-        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
-      },
-      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberMobileCapabilities": {
-        "type": "object",
-        "properties": {
-          "mms": {
-            "type": "boolean"
-          },
-          "sms": {
-            "type": "boolean"
-          },
-          "voice": {
-            "type": "boolean"
-          },
-          "fax": {
-            "type": "boolean"
-          }
-        },
-        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
-        "format": "phone-number-capabilities",
-        "nullable": true,
-        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
-      },
-      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberMachineToMachineCapabilities": {
-        "type": "object",
-        "properties": {
-          "mms": {
-            "type": "boolean"
-          },
-          "sms": {
-            "type": "boolean"
-          },
-          "voice": {
-            "type": "boolean"
-          },
-          "fax": {
-            "type": "boolean"
-          }
-        },
-        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
-        "format": "phone-number-capabilities",
-        "nullable": true,
-        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
-      },
-      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberLocalCapabilities": {
-        "type": "object",
-        "properties": {
-          "mms": {
-            "type": "boolean"
-          },
-          "sms": {
-            "type": "boolean"
-          },
-          "voice": {
-            "type": "boolean"
-          },
-          "fax": {
-            "type": "boolean"
-          }
-        },
-        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
-        "format": "phone-number-capabilities",
-        "nullable": true,
-        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
-      },
-      "ApiV2010AccountAvailablePhoneNumberCountrySubresourceUris": {
-        "type": "object",
-        "description": "A list of related AvailablePhoneNumber resources identified by their URIs relative to \u0060https://api.twilio.com\u0060.",
-        "format": "uri-map",
-        "nullable": true
-      },
-      "ApiV2010AccountSubresourceUris": {
-        "type": "object",
-        "description": "A Map of various subresources available for the given Account Instance",
-        "format": "uri-map",
-        "nullable": true
-      },
-      "AccountsV1MessagingSmsPumpingProtectionCountrySpecificProtectionLevel": {
-        "type": "object",
-        "properties": {
-          "low": {
-            "type": "array",
-            "items": {
-              "pattern": "^[A-Z]{2}$",
-              "type": "string"
-            },
-            "description": "ISO 3166-1 alpha-2 country codes for low protection level",
-            "nullable": true
-          },
-          "medium": {
-            "type": "array",
-            "items": {
-              "pattern": "^[A-Z]{2}$",
-              "type": "string"
-            },
-            "description": "ISO 3166-1 alpha-2 country codes for medium protection level",
-            "nullable": true
-          },
-          "high": {
-            "type": "array",
-            "items": {
-              "pattern": "^[A-Z]{2}$",
-              "type": "string"
-            },
-            "description": "ISO 3166-1 alpha-2 country codes for high protection level",
-            "nullable": true
-          },
-          "disabled": {
-            "type": "array",
-            "items": {
-              "pattern": "^[A-Z]{2}$",
-              "type": "string"
-            },
-            "description": "ISO 3166-1 alpha-2 country codes for disabled protection level",
-            "nullable": true
-          }
-        },
-        "description": "Required when protection_mode is \u0022advanced\u0022. Object mapping protection levels to country arrays. Must contain all four keys (low, medium, high, disabled) with their respective country arrays. Must be omitted when protection_mode is \u0022basic\u0022.",
-        "nullable": true
-      },
-      "ConversationsV2CommunicationRecipientsItemAllOf2": {
-        "type": "object",
-        "properties": {
-          "deliveryStatus": {
-            "$ref": "#/components/schemas/ConversationsV2RecipientDeliveryStatus"
-          }
-        }
-      },
-      "CreateRuleExecutionRequestConversationId": {
+      "ConversationTtid": {
         "pattern": "^conv_conversation_[0-7][0-9a-z]{25}$",
         "type": "string",
-        "additionalProperties": false,
-        "description": "The \u0060id\u0060 of the Conversation attached to the Operator Result."
+        "description": "The \u0060id\u0060 of the Conversation attached to the Operator Result.",
+        "example": "conv_conversation_01k1etk2y5f1y9fpe2epfdtvv2"
+      },
+      "ParticipantTtid": {
+        "pattern": "^conv_participant_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "The \u0060id\u0060 of the Participant in the Conversation.",
+        "example": "conv_participant_01k1etx3jbfx88476ccja0889c"
+      },
+      "MemoryProfileTtid": {
+        "pattern": "^mem_profile_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "Customer Memory Profile identifier",
+        "example": "mem_profile_00000000000000000000000000"
+      },
+      "MemoryStoreTtid": {
+        "pattern": "^mem_(store|service)_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "Customer Memory store identifier",
+        "example": "mem_store_00000000000000000000000000"
+      },
+      "KnowledgeBaseTtid": {
+        "pattern": "^know_knowledgebase_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "Knowledge base identifier",
+        "example": "know_knowledgebase_00000000000000000000000000"
+      },
+      "KnowledgeSourceTtid": {
+        "pattern": "^know_knowledge_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "Knowledge source identifier",
+        "example": "know_knowledge_00000000000000000000000000"
+      },
+      "CommunicationTtid": {
+        "pattern": "^conv_communication_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "Communication \u0060id\u0060 from the attached Conversation.",
+        "example": "conv_communication_01k1etk2y5f1y9fpe2epfdtvv2"
+      },
+      "IntelligenceConfigurationTtid": {
+        "pattern": "^intelligence_configuration_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "Unique identifier for a Intelligence Configuration that generated the Operator Result. Assigned by Twilio (TTID).",
+        "example": "intelligence_configuration_01k6fc25s7epm9qtk8rszbv3q5"
+      },
+      "IntelligenceConfigurationRuleTtid": {
+        "pattern": "^intelligence_configurationrule_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "Unique identifier of the rule of the Intelligence Configuration that triggered the result. Assigned by Twilio (TTID).",
+        "example": "intelligence_configurationrule_01k6fc25s7epm9qtk8rszbv3q6"
+      },
+      "ConfigurationTtid": {
+        "type": "string",
+        "description": "The \u0060id\u0060 of the Configuration for a Conversation.",
+        "example": "conv_configuration_00000000000000000000000000"
       },
       "Content": {
         "type": "object",
@@ -252481,11 +252337,11 @@
           "previousToken": ""
         }
       },
-      "CreateRuleExecutionRequestRuleId": {
-        "pattern": "^intelligence_configurationrule_[0-7][0-9a-z]{25}$",
+      "KnowledgeId": {
+        "pattern": "^know_knowledge_[0-7][0-9a-z]{25}$",
         "type": "string",
-        "additionalProperties": false,
-        "description": "Unique identifier of the rule of the Intelligence Configuration that triggered the result. Assigned by Twilio (TTID)."
+        "description": "The unique identifier of knowledge source.",
+        "example": "know_knowledge_00000000000000000000000000"
       },
       "KnowledgeCore": {
         "required": [
@@ -254603,11 +254459,11 @@
           "status": 400
         }
       },
-      "CreateRuleExecutionRequestIntelligenceConfigurationId": {
-        "pattern": "^intelligence_configuration_[0-7][0-9a-z]{25}$",
+      "IdentityProfileId": {
+        "pattern": "^mem_profile_[0-7][0-9a-z]{25}$",
         "type": "string",
-        "additionalProperties": false,
-        "description": "Unique identifier for a Intelligence Configuration that generated the Operator Result. Assigned by Twilio (TTID)."
+        "description": "The canonical profile ID.",
+        "example": "mem_profile_00000000000000000000000000"
       },
       "IdentityProfilesMeta": {
         "maxProperties": 4,
@@ -254722,53 +254578,23 @@
           "$ref": "#/components/schemas/IdentifierUpdateAdditionalProperties"
         }
       },
-      "ExecutionDetailsCommunicationsLast": {
-        "pattern": "^conv_communication_[0-7][0-9a-z]{25}$",
+      "ObservationId": {
+        "pattern": "^mem_observation_[0-7][0-9a-z]{25}$",
         "type": "string",
-        "additionalProperties": false,
-        "description": "Communication \u0060id\u0060 from the attached Conversation.",
-        "example": "conv_communication_01k1etk2y5f1y9fpe2epfdtvv2"
+        "description": "A unique identifier for the observation using Twilio Type ID (TTID) format.",
+        "example": "mem_observation_00000000000000000000000000"
       },
-      "ExecutionDetailsCommunicationsFirst": {
-        "pattern": "^conv_communication_[0-7][0-9a-z]{25}$",
+      "SummaryId": {
+        "pattern": "^mem_summary_[0-7][0-9a-z]{25}$",
         "type": "string",
-        "additionalProperties": false,
-        "description": "Communication \u0060id\u0060 from the attached Conversation.",
-        "example": "conv_communication_01k1etk2y5f1y9fpe2epfdtvv2"
+        "description": "A unique identifier for the summary using Twilio Type ID (TTID) format.",
+        "example": "mem_summary_00000000000000000000000000"
       },
-      "QueryJobStatusResponseError": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32",
-            "example": 50001
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message",
-            "example": "Query execution timeout exceeded"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP status code that would have been returned for a synchronous failure",
-            "format": "int32",
-            "example": 504
-          },
-          "detail": {
-            "type": "string",
-            "description": "Additional context about the failure",
-            "nullable": true,
-            "example": "ClickHouse query exceeded the 120s execution limit."
-          }
-        },
-        "description": "The error details, present only when status is FAILED."
+      "ConversationId": {
+        "pattern": "^conv_conversation_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "A unique identifier for the conversation using Twilio Type ID (TTID) format.",
+        "example": "conv_conversation_00000000000000000000000000"
       },
       "ObservationCore": {
         "required": [
@@ -255335,72 +255161,11 @@
           }
         }
       },
-      "InsightsV1CallEventConversationRelayData": {
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/BaseRelayData"
-          },
-          {
-            "$ref": "#/components/schemas/TtsLatencyRelayData"
-          },
-          {
-            "$ref": "#/components/schemas/SttLatencyRelayData"
-          },
-          {
-            "$ref": "#/components/schemas/InterruptRelayData"
-          },
-          {
-            "$ref": "#/components/schemas/LastTokenReceivedRelayData"
-          },
-          {
-            "$ref": "#/components/schemas/ConfigurationsRelayData"
-          },
-          {
-            "$ref": "#/components/schemas/LanguageChangedRelayData"
-          },
-          {
-            "$ref": "#/components/schemas/CallWrapUpRelayData"
-          },
-          {
-            "$ref": "#/components/schemas/ErrorRelayData"
-          }
-        ],
-        "properties": {
-          "session_id": {
-            "type": "string",
-            "description": "Session id of the conversation relay."
-          },
-          "sequence_number": {
-            "type": "integer",
-            "description": "Sequence number of the event."
-          },
-          "tts_latency": {
-            "$ref": "#/components/schemas/LatencyEvent"
-          },
-          "stt_latency": {
-            "$ref": "#/components/schemas/LatencyEvent"
-          },
-          "interrupt": {
-            "$ref": "#/components/schemas/InterruptEvent"
-          },
-          "last_token_received": {
-            "$ref": "#/components/schemas/LastTokenReceivedEvent"
-          },
-          "configurations": {
-            "$ref": "#/components/schemas/ConfigurationEvent"
-          },
-          "language_changed": {
-            "$ref": "#/components/schemas/LanguageChangedEvent"
-          },
-          "call_wrap_up": {
-            "$ref": "#/components/schemas/CallWrapUpEvent"
-          },
-          "error": {
-            "$ref": "#/components/schemas/ErrorEvent"
-          }
-        },
-        "description": "Contains information about the Conversation Relay (CRelay) connection used in calls."
+      "ProfileId": {
+        "pattern": "^mem_profile_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "The canonical profile ID.",
+        "example": "mem_profile_00000000000000000000000000"
       },
       "TraitValue": {
         "type": "object",
@@ -255508,30 +255273,11 @@
           "$ref": "#/components/schemas/ProfilePatchAdditionalProperties"
         }
       },
-      "ConversationsV2CommunicationRecipientsItem": {
-        "required": [
-          "address",
-          "channel"
-        ],
-        "type": "object",
-        "properties": {
-          "address": {
-            "type": "string",
-            "description": "The address value formatted according to channel type:\n- SMS/VOICE: E.164 phone number (such as \u0022\u002B18005550100\u0022)\n- WHATSAPP: Phone number with whatsapp prefix (such as \u0022whatsapp:\u002B18005550100\u0022)\n- RCS: Sender ID or phone number with rcs prefix (such as \u0022rcs:brand_acme_agent\u0022 or \u0022rcs:\u002B18005550100\u0022)\n- CHAT: Customer-defined string identifier\n",
-            "example": "\u002B18005550100"
-          },
-          "channel": {
-            "$ref": "#/components/schemas/ConversationsV2Channel"
-          },
-          "participantId": {
-            "type": "string",
-            "description": "Participant ID associated with this address.",
-            "example": "conv_participant_00000000000000000000000001"
-          },
-          "deliveryStatus": {
-            "$ref": "#/components/schemas/ConversationsV2RecipientDeliveryStatus"
-          }
-        }
+      "ImportId": {
+        "pattern": "^mem_import_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "description": "The import operation ID.",
+        "example": "mem_import_00000000000000000000000000"
       },
       "ColumnMappingItem": {
         "maxProperties": 3,
@@ -256288,27 +256034,13 @@
         },
         "description": "Maps a field from a source to a Trait in the Memory Store."
       },
-      "ConversationsV2CommunicationContent": {
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/ConversationsV2ContentText"
-          },
-          {
-            "$ref": "#/components/schemas/ConversationsV2ContentTranscription"
-          }
-        ],
-        "properties": {
-          "text": {
-            "type": "string",
-            "description": "Message text content.",
-            "example": "Hello, how can I help you today?"
-          },
-          "transcription": {
-            "$ref": "#/components/schemas/ConversationsV2ContentTranscriptionTranscription"
-          }
-        },
-        "description": "The content of the Communication using type field for discrimination."
+      "DataMappingName": {
+        "maxLength": 64,
+        "minLength": 1,
+        "pattern": "^[a-zA-Z][a-zA-Z0-9-.]*$",
+        "type": "string",
+        "description": "Name of the data mapping.",
+        "example": "crm-contacts"
       },
       "DataMappingCore": {
         "type": "object",
@@ -257123,26 +256855,13 @@
         },
         "description": "One trait to infer, and how. Trait keys are unique within a strategy, so two strategies may both\ncover the same trait with different instructions."
       },
-      "PermanentRedirectResponse": {
-        "maxProperties": 2,
-        "required": [
-          "message",
-          "uri"
-        ],
-        "type": "object",
-        "properties": {
-          "message": {
-            "maxLength": 255,
-            "type": "string",
-            "default": "This resource has moved.",
-            "example": "This resource has moved."
-          },
-          "uri": {
-            "maxLength": 2048,
-            "type": "string",
-            "example": "https://memory.twilio.com/v1/Stores/mem_store_00000000000000000000000000/Profiles/mem_profile_00000000000000000000000000"
-          }
-        }
+      "TraitExtractionStrategyName": {
+        "maxLength": 64,
+        "minLength": 1,
+        "pattern": "^[a-zA-Z][a-zA-Z0-9\\-.]*$",
+        "type": "string",
+        "description": "Unique, immutable name identifying a Trait Extraction Strategy within the account.",
+        "example": "retail-support-traits"
       },
       "TraitExtractionStrategyCore": {
         "type": "object",
@@ -260667,26 +260386,10 @@
           }
         }
       },
-      "MovedPermanentlyResponse": {
-        "maxProperties": 2,
-        "required": [
-          "message",
-          "uri"
-        ],
-        "type": "object",
-        "properties": {
-          "message": {
-            "maxLength": 255,
-            "type": "string",
-            "default": "This resource has moved.",
-            "example": "This resource has moved."
-          },
-          "uri": {
-            "maxLength": 2048,
-            "type": "string",
-            "example": "https://memory.twilio.com/v1/Stores/mem_store_00000000000000000000000000/Profiles/mem_profile_00000000000000000000000000"
-          }
-        }
+      "KeywordLocaleType": {
+        "pattern": "^(STOP|START|HELP)\\.(ALL|AFRIKAANS|ARABIC|BENGALI|CHINESE|CROATIAN|CZECH|DANISH|DUTCH|ENGLISH|ESTONIAN|FINNISH|FRENCH|GERMAN|GREEK|HEBREW|HINDI|HUNGARIAN|ITALIAN|JAPANESE|KOREAN|LATVIAN|LITHUANIAN|MALAY|MALAYSIAN|NORWEGIAN|POLISH|PORTUGUESE|RUSSIAN|SLOVAK|SLOVENE|SPANISH|SOUTHERN_NDEBELE|SOUTHERN_SOTHO|SWATI|SWEDISH|TAMIL|TSWANA|TSONGA|VENDA|XHOSA|ZULU)$",
+        "type": "string",
+        "description": "Combination of KeywordType and Locale in format: {KeywordType}.{Locale}\n\nValid KeywordTypes: STOP, START, HELP\nValid Locales: See LocaleEnum for full list\n\nExamples: STOP.ENGLISH, START.SPANISH, HELP.FRENCH\n"
       },
       "SupportedMessageTypes": {
         "required": [
@@ -261631,36 +261334,9 @@
           ]
         }
       },
-      "RateLimitErrorResponse": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/RateLimitErrorResponseParamsProperty"
-          }
-        }
+      "FriendlyName": {
+        "type": "string",
+        "description": "Friendly name for alarm"
       },
       "MonitorV2AlarmSidRepsonse": {
         "type": "object",
@@ -283024,67 +282700,14 @@
           ]
         }
       },
-      "TwilioInsightsV3InternalServerErrorResponse": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/TwilioInsightsV3InternalServerErrorResponseParamsProperty"
-          }
-        }
+      "ConnectorAccountSid": {
+        "type": "string",
+        "example": "AC00000000000000000000000000000000",
+        "x-jvm-type": "com.twilio.sids.AccountSid"
       },
-      "ForbiddenErrorResponse": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/ForbiddenErrorResponseParamsProperty"
-          }
-        }
+      "ConnectorId": {
+        "type": "string",
+        "example": "voice_connector_00000000000000000000000000"
       },
       "ConnectorType": {
         "enum": [
@@ -283103,67 +282726,13 @@
           ]
         }
       },
-      "UnauthorizedErrorResponse": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/UnauthorizedErrorResponseParamsProperty"
-          }
-        }
+      "ConnectorExternalId": {
+        "type": "string",
+        "example": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
       },
-      "BadRequestErrorResponse": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/BadRequestErrorResponseParamsProperty"
-          }
-        }
+      "ConnectorExternalConsentId": {
+        "type": "string",
+        "example": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
       },
       "ConnectorState": {
         "enum": [
@@ -283197,90 +282766,19 @@
           ]
         }
       },
-      "NotFoundErrorResponse": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/NotFoundErrorResponseParamsProperty"
-          }
-        }
+      "ConnectorFriendlyName": {
+        "maxLength": 256,
+        "minLength": 1,
+        "type": "string",
+        "example": "Voicecon MS Teams Connector"
       },
-      "UnprocessableContentErrorResponse": {
-        "required": [
-          "code",
-          "message",
-          "httpStatusCode"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "A human readable error message"
-          },
-          "httpStatusCode": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          },
-          "userError": {
-            "type": "boolean",
-            "description": "Whether the error is a user error (true) or a system error (false)"
-          },
-          "params": {
-            "$ref": "#/components/schemas/UnprocessableContentErrorResponseParamsProperty"
-          }
-        }
+      "ConnectorPhoneNumberSid": {
+        "type": "string",
+        "example": "PN00000000000000000000000000000000"
       },
-      "ServiceUnavailableResponse": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "Error message"
-          },
-          "more_info": {
-            "type": "string",
-            "description": "Link to Error Code References"
-          },
-          "status": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          }
-        }
+      "ConnectorE164": {
+        "type": "string",
+        "example": "\u002B12345678900"
       },
       "PhoneNumberState": {
         "enum": [
@@ -283329,28 +282827,10 @@
           ]
         }
       },
-      "InternalServerErrorResponse": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "Error message"
-          },
-          "more_info": {
-            "type": "string",
-            "description": "Link to Error Code References"
-          },
-          "status": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          }
-        }
+      "ConnectorApplicationSid": {
+        "type": "string",
+        "example": "AP00000000000000000000000000000000",
+        "x-jvm-type": "com.twilio.sids.ApplicationSid"
       },
       "CreateConnector": {
         "required": [
@@ -284124,130 +283604,41 @@
           }
         }
       },
-      "TooManyRequestsResponse": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "Error message"
-          },
-          "more_info": {
-            "type": "string",
-            "description": "Link to Error Code References"
-          },
-          "status": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          }
-        }
+      "PnSid": {
+        "maxLength": 34,
+        "minLength": 34,
+        "pattern": "^PN[0-9a-fA-F]{32}$",
+        "type": "string"
       },
-      "ConflictResponse": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "Error message"
-          },
-          "more_info": {
-            "type": "string",
-            "description": "Link to Error Code References"
-          },
-          "status": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          }
-        }
+      "BundleSid": {
+        "maxLength": 34,
+        "minLength": 34,
+        "pattern": "^BU[0-9a-fA-F]{32}$",
+        "type": "string"
       },
-      "NotFoundResponse": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "Error message"
-          },
-          "more_info": {
-            "type": "string",
-            "description": "Link to Error Code References"
-          },
-          "status": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          }
-        }
+      "PnDid": {
+        "maxLength": 15,
+        "minLength": 2,
+        "pattern": "^\\\u002B[1-9]\\d{1,14}$",
+        "type": "string"
       },
-      "BadRequestResponse": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "Twilio-specific error code",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "Error message"
-          },
-          "more_info": {
-            "type": "string",
-            "description": "Link to Error Code References"
-          },
-          "status": {
-            "type": "integer",
-            "description": "HTTP response status code",
-            "format": "int32"
-          }
-        }
+      "AccountSid": {
+        "maxLength": 34,
+        "minLength": 34,
+        "pattern": "^AC[0-9a-fA-F]{32}$",
+        "type": "string"
       },
-      "TagsItem": {
-        "required": [
-          "key",
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string",
-            "description": "The tag key"
-          },
-          "value": {
-            "type": "string",
-            "description": "The tag value"
-          }
-        }
+      "RegulationSid": {
+        "maxLength": 34,
+        "minLength": 34,
+        "pattern": "^RN[0-9a-fA-F]{32}$",
+        "type": "string"
       },
-      "IamV1AccountSearchRoleResponseItem": {
-        "type": "object",
-        "properties": {
-          "roleSid": {
-            "type": "string"
-          },
-          "friendlyName": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          }
-        }
+      "PnSidOrDid": {
+        "maxLength": 34,
+        "minLength": 2,
+        "pattern": "^PN[0-9A-Fa-f]{32}$|^\\\u002B[1-9][0-9]{1,14}$",
+        "type": "string"
       },
       "VoiceV2ConfigurationTwilioServiceErrorResponse": {
         "required": [
@@ -285810,6 +285201,832 @@
             }
           ]
         }
+      },
+      "IamV1AccountSearchRoleResponseItem": {
+        "type": "object",
+        "properties": {
+          "roleSid": {
+            "type": "string"
+          },
+          "friendlyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "TagsItem": {
+        "required": [
+          "key",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "The tag key"
+          },
+          "value": {
+            "type": "string",
+            "description": "The tag value"
+          }
+        }
+      },
+      "BadRequestResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "more_info": {
+            "type": "string",
+            "description": "Link to Error Code References"
+          },
+          "status": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          }
+        }
+      },
+      "NotFoundResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "more_info": {
+            "type": "string",
+            "description": "Link to Error Code References"
+          },
+          "status": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          }
+        }
+      },
+      "ConflictResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "more_info": {
+            "type": "string",
+            "description": "Link to Error Code References"
+          },
+          "status": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          }
+        }
+      },
+      "TooManyRequestsResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "more_info": {
+            "type": "string",
+            "description": "Link to Error Code References"
+          },
+          "status": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          }
+        }
+      },
+      "InternalServerErrorResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "more_info": {
+            "type": "string",
+            "description": "Link to Error Code References"
+          },
+          "status": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          }
+        }
+      },
+      "ServiceUnavailableResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "more_info": {
+            "type": "string",
+            "description": "Link to Error Code References"
+          },
+          "status": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          }
+        }
+      },
+      "UnprocessableContentErrorResponse": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/UnprocessableContentErrorResponseParamsProperty"
+          }
+        }
+      },
+      "NotFoundErrorResponse": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/NotFoundErrorResponseParamsProperty"
+          }
+        }
+      },
+      "BadRequestErrorResponse": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/BadRequestErrorResponseParamsProperty"
+          }
+        }
+      },
+      "UnauthorizedErrorResponse": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/UnauthorizedErrorResponseParamsProperty"
+          }
+        }
+      },
+      "ForbiddenErrorResponse": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/ForbiddenErrorResponseParamsProperty"
+          }
+        }
+      },
+      "TwilioInsightsV3InternalServerErrorResponse": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3InternalServerErrorResponseParamsProperty"
+          }
+        }
+      },
+      "RateLimitErrorResponse": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/RateLimitErrorResponseParamsProperty"
+          }
+        }
+      },
+      "MovedPermanentlyResponse": {
+        "maxProperties": 2,
+        "required": [
+          "message",
+          "uri"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "maxLength": 255,
+            "type": "string",
+            "default": "This resource has moved.",
+            "example": "This resource has moved."
+          },
+          "uri": {
+            "maxLength": 2048,
+            "type": "string",
+            "example": "https://memory.twilio.com/v1/Stores/mem_store_00000000000000000000000000/Profiles/mem_profile_00000000000000000000000000"
+          }
+        }
+      },
+      "PermanentRedirectResponse": {
+        "maxProperties": 2,
+        "required": [
+          "message",
+          "uri"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "maxLength": 255,
+            "type": "string",
+            "default": "This resource has moved.",
+            "example": "This resource has moved."
+          },
+          "uri": {
+            "maxLength": 2048,
+            "type": "string",
+            "example": "https://memory.twilio.com/v1/Stores/mem_store_00000000000000000000000000/Profiles/mem_profile_00000000000000000000000000"
+          }
+        }
+      },
+      "ConversationsV2CommunicationContent": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ConversationsV2ContentText"
+          },
+          {
+            "$ref": "#/components/schemas/ConversationsV2ContentTranscription"
+          }
+        ],
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Message text content.",
+            "example": "Hello, how can I help you today?"
+          },
+          "transcription": {
+            "$ref": "#/components/schemas/ConversationsV2ContentTranscriptionTranscription"
+          }
+        },
+        "description": "The content of the Communication using type field for discrimination."
+      },
+      "ConversationsV2CommunicationRecipientsItem": {
+        "required": [
+          "address",
+          "channel"
+        ],
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "description": "The address value formatted according to channel type:\n- SMS/VOICE: E.164 phone number (such as \u0022\u002B18005550100\u0022)\n- WHATSAPP: Phone number with whatsapp prefix (such as \u0022whatsapp:\u002B18005550100\u0022)\n- RCS: Sender ID or phone number with rcs prefix (such as \u0022rcs:brand_acme_agent\u0022 or \u0022rcs:\u002B18005550100\u0022)\n- CHAT: Customer-defined string identifier\n",
+            "example": "\u002B18005550100"
+          },
+          "channel": {
+            "$ref": "#/components/schemas/ConversationsV2Channel"
+          },
+          "participantId": {
+            "type": "string",
+            "description": "Participant ID associated with this address.",
+            "example": "conv_participant_00000000000000000000000001"
+          },
+          "deliveryStatus": {
+            "$ref": "#/components/schemas/ConversationsV2RecipientDeliveryStatus"
+          }
+        }
+      },
+      "InsightsV1CallEventConversationRelayData": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/BaseRelayData"
+          },
+          {
+            "$ref": "#/components/schemas/TtsLatencyRelayData"
+          },
+          {
+            "$ref": "#/components/schemas/SttLatencyRelayData"
+          },
+          {
+            "$ref": "#/components/schemas/InterruptRelayData"
+          },
+          {
+            "$ref": "#/components/schemas/LastTokenReceivedRelayData"
+          },
+          {
+            "$ref": "#/components/schemas/ConfigurationsRelayData"
+          },
+          {
+            "$ref": "#/components/schemas/LanguageChangedRelayData"
+          },
+          {
+            "$ref": "#/components/schemas/CallWrapUpRelayData"
+          },
+          {
+            "$ref": "#/components/schemas/ErrorRelayData"
+          }
+        ],
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "Session id of the conversation relay."
+          },
+          "sequence_number": {
+            "type": "integer",
+            "description": "Sequence number of the event."
+          },
+          "tts_latency": {
+            "$ref": "#/components/schemas/LatencyEvent"
+          },
+          "stt_latency": {
+            "$ref": "#/components/schemas/LatencyEvent"
+          },
+          "interrupt": {
+            "$ref": "#/components/schemas/InterruptEvent"
+          },
+          "last_token_received": {
+            "$ref": "#/components/schemas/LastTokenReceivedEvent"
+          },
+          "configurations": {
+            "$ref": "#/components/schemas/ConfigurationEvent"
+          },
+          "language_changed": {
+            "$ref": "#/components/schemas/LanguageChangedEvent"
+          },
+          "call_wrap_up": {
+            "$ref": "#/components/schemas/CallWrapUpEvent"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorEvent"
+          }
+        },
+        "description": "Contains information about the Conversation Relay (CRelay) connection used in calls."
+      },
+      "QueryJobStatusResponseError": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32",
+            "example": 50001
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message",
+            "example": "Query execution timeout exceeded"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP status code that would have been returned for a synchronous failure",
+            "format": "int32",
+            "example": 504
+          },
+          "detail": {
+            "type": "string",
+            "description": "Additional context about the failure",
+            "nullable": true,
+            "example": "ClickHouse query exceeded the 120s execution limit."
+          }
+        },
+        "description": "The error details, present only when status is FAILED."
+      },
+      "ExecutionDetailsCommunicationsFirst": {
+        "pattern": "^conv_communication_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Communication \u0060id\u0060 from the attached Conversation.",
+        "example": "conv_communication_01k1etk2y5f1y9fpe2epfdtvv2"
+      },
+      "ExecutionDetailsCommunicationsLast": {
+        "pattern": "^conv_communication_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Communication \u0060id\u0060 from the attached Conversation.",
+        "example": "conv_communication_01k1etk2y5f1y9fpe2epfdtvv2"
+      },
+      "CreateRuleExecutionRequestIntelligenceConfigurationId": {
+        "pattern": "^intelligence_configuration_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Unique identifier for a Intelligence Configuration that generated the Operator Result. Assigned by Twilio (TTID)."
+      },
+      "CreateRuleExecutionRequestRuleId": {
+        "pattern": "^intelligence_configurationrule_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Unique identifier of the rule of the Intelligence Configuration that triggered the result. Assigned by Twilio (TTID)."
+      },
+      "CreateRuleExecutionRequestConversationId": {
+        "pattern": "^conv_conversation_[0-7][0-9a-z]{25}$",
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The \u0060id\u0060 of the Conversation attached to the Operator Result."
+      },
+      "ConversationsV2CommunicationRecipientsItemAllOf2": {
+        "type": "object",
+        "properties": {
+          "deliveryStatus": {
+            "$ref": "#/components/schemas/ConversationsV2RecipientDeliveryStatus"
+          }
+        }
+      },
+      "AccountsV1MessagingSmsPumpingProtectionCountrySpecificProtectionLevel": {
+        "type": "object",
+        "properties": {
+          "low": {
+            "type": "array",
+            "items": {
+              "pattern": "^[A-Z]{2}$",
+              "type": "string"
+            },
+            "description": "ISO 3166-1 alpha-2 country codes for low protection level",
+            "nullable": true
+          },
+          "medium": {
+            "type": "array",
+            "items": {
+              "pattern": "^[A-Z]{2}$",
+              "type": "string"
+            },
+            "description": "ISO 3166-1 alpha-2 country codes for medium protection level",
+            "nullable": true
+          },
+          "high": {
+            "type": "array",
+            "items": {
+              "pattern": "^[A-Z]{2}$",
+              "type": "string"
+            },
+            "description": "ISO 3166-1 alpha-2 country codes for high protection level",
+            "nullable": true
+          },
+          "disabled": {
+            "type": "array",
+            "items": {
+              "pattern": "^[A-Z]{2}$",
+              "type": "string"
+            },
+            "description": "ISO 3166-1 alpha-2 country codes for disabled protection level",
+            "nullable": true
+          }
+        },
+        "description": "Required when protection_mode is \u0022advanced\u0022. Object mapping protection levels to country arrays. Must contain all four keys (low, medium, high, disabled) with their respective country arrays. Must be omitted when protection_mode is \u0022basic\u0022.",
+        "nullable": true
+      },
+      "ApiV2010AccountSubresourceUris": {
+        "type": "object",
+        "description": "A Map of various subresources available for the given Account Instance",
+        "format": "uri-map",
+        "nullable": true
+      },
+      "ApiV2010AccountAvailablePhoneNumberCountrySubresourceUris": {
+        "type": "object",
+        "description": "A list of related AvailablePhoneNumber resources identified by their URIs relative to \u0060https://api.twilio.com\u0060.",
+        "format": "uri-map",
+        "nullable": true
+      },
+      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberLocalCapabilities": {
+        "type": "object",
+        "properties": {
+          "mms": {
+            "type": "boolean"
+          },
+          "sms": {
+            "type": "boolean"
+          },
+          "voice": {
+            "type": "boolean"
+          },
+          "fax": {
+            "type": "boolean"
+          }
+        },
+        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
+        "format": "phone-number-capabilities",
+        "nullable": true,
+        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+      },
+      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberMachineToMachineCapabilities": {
+        "type": "object",
+        "properties": {
+          "mms": {
+            "type": "boolean"
+          },
+          "sms": {
+            "type": "boolean"
+          },
+          "voice": {
+            "type": "boolean"
+          },
+          "fax": {
+            "type": "boolean"
+          }
+        },
+        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
+        "format": "phone-number-capabilities",
+        "nullable": true,
+        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+      },
+      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberMobileCapabilities": {
+        "type": "object",
+        "properties": {
+          "mms": {
+            "type": "boolean"
+          },
+          "sms": {
+            "type": "boolean"
+          },
+          "voice": {
+            "type": "boolean"
+          },
+          "fax": {
+            "type": "boolean"
+          }
+        },
+        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
+        "format": "phone-number-capabilities",
+        "nullable": true,
+        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+      },
+      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberNationalCapabilities": {
+        "type": "object",
+        "properties": {
+          "mms": {
+            "type": "boolean"
+          },
+          "sms": {
+            "type": "boolean"
+          },
+          "voice": {
+            "type": "boolean"
+          },
+          "fax": {
+            "type": "boolean"
+          }
+        },
+        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
+        "format": "phone-number-capabilities",
+        "nullable": true,
+        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+      },
+      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberSharedCostCapabilities": {
+        "type": "object",
+        "properties": {
+          "mms": {
+            "type": "boolean"
+          },
+          "sms": {
+            "type": "boolean"
+          },
+          "voice": {
+            "type": "boolean"
+          },
+          "fax": {
+            "type": "boolean"
+          }
+        },
+        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
+        "format": "phone-number-capabilities",
+        "nullable": true,
+        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+      },
+      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberTollFreeCapabilities": {
+        "type": "object",
+        "properties": {
+          "mms": {
+            "type": "boolean"
+          },
+          "sms": {
+            "type": "boolean"
+          },
+          "voice": {
+            "type": "boolean"
+          },
+          "fax": {
+            "type": "boolean"
+          }
+        },
+        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
+        "format": "phone-number-capabilities",
+        "nullable": true,
+        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+      },
+      "ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberVoipCapabilities": {
+        "type": "object",
+        "properties": {
+          "mms": {
+            "type": "boolean"
+          },
+          "sms": {
+            "type": "boolean"
+          },
+          "voice": {
+            "type": "boolean"
+          },
+          "fax": {
+            "type": "boolean"
+          }
+        },
+        "description": "The set of Boolean properties that indicate whether a phone number can receive calls or messages.  Capabilities are: \u0060Voice\u0060, \u0060SMS\u0060, and \u0060MMS\u0060 and each capability can be: \u0060true\u0060 or \u0060false\u0060.",
+        "format": "phone-number-capabilities",
+        "nullable": true,
+        "x-class-extra-annotation": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+      },
+      "ApiV2010AccountCallSubresourceUris": {
+        "type": "object",
+        "description": "A list of subresources available to this call, identified by their URIs relative to \u0060https://api.twilio.com\u0060.",
+        "format": "uri-map",
+        "nullable": true
       },
       "ApiV2010AccountConferenceSubresourceUris": {
         "type": "object",
@@ -288387,13 +288604,6 @@
           "type": "string"
         }
       },
-      "RateLimitErrorResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
       "NotifyV1ServiceBindingLinks": {
         "type": "object",
         "description": "The URLs of related resources.",
@@ -289950,48 +290160,6 @@
           }
         }
       },
-      "TwilioInsightsV3InternalServerErrorResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "ForbiddenErrorResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "UnauthorizedErrorResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "BadRequestErrorResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "NotFoundErrorResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "UnprocessableContentErrorResponseParams": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
       "ConnectorPageMetaProperty": {
         "type": "object",
         "x-jvm-type": "com.twilio.core.domain.paging.impl.PageMetadataImpl"
@@ -290143,6 +290311,55 @@
         "description": "The URLs of related subresources.",
         "format": "uri-map",
         "nullable": true
+      },
+      "UnprocessableContentErrorResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "NotFoundErrorResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "BadRequestErrorResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "UnauthorizedErrorResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "ForbiddenErrorResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3InternalServerErrorResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "RateLimitErrorResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
       },
       "ConversationsV2ContentTranscriptionTranscriptionWordsItem": {
         "required": [
@@ -324481,13 +324698,6 @@
           "type": "string"
         }
       },
-      "RateLimitErrorResponseParamsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
       "NotifyV1ServiceBindingLinksProperty": {
         "type": "object",
         "description": "The URLs of related resources."
@@ -325331,48 +325541,6 @@
         "type": "object",
         "description": "An JSON object that describes the video layout of the composition in terms of regions. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info."
       },
-      "TwilioInsightsV3InternalServerErrorResponseParamsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "ForbiddenErrorResponseParamsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "UnauthorizedErrorResponseParamsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "BadRequestErrorResponseParamsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "NotFoundErrorResponseParamsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
-      "UnprocessableContentErrorResponseParamsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
-      },
       "ConnectorPageMetaProperty2": {
         "type": "object"
       },
@@ -325446,6 +325614,55 @@
       "WirelessV1SimUsageRecordData": {
         "type": "object",
         "description": "An object that describes the SIM\u0027s data usage during the specified period. See [Data Usage Object](https://www.twilio.com/docs/iot/wireless/api/sim-usagerecord-resource#data-usage-object)."
+      },
+      "UnprocessableContentErrorResponseParamsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "NotFoundErrorResponseParamsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "BadRequestErrorResponseParamsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "UnauthorizedErrorResponseParamsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "ForbiddenErrorResponseParamsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3InternalServerErrorResponseParamsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "RateLimitErrorResponseParamsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
       },
       "ConversationsV2ConversationConfigurationChannelSettings": {
         "type": "object",
@@ -350224,7 +350441,9 @@
         "description": "The observation ID.",
         "required": true,
         "schema": {
-          "type": "string"
+          "pattern": "^mem_observation_[0-7][0-9a-z]{25}$",
+          "type": "string",
+          "description": "A unique identifier for the observation using Twilio Type ID (TTID) format."
         }
       },
       "SummaryId": {
@@ -350233,7 +350452,9 @@
         "description": "The summary ID.",
         "required": true,
         "schema": {
-          "type": "string"
+          "pattern": "^mem_summary_[0-7][0-9a-z]{25}$",
+          "type": "string",
+          "description": "A unique identifier for the summary using Twilio Type ID (TTID) format."
         }
       },
       "SourceParam": {
@@ -350336,7 +350557,9 @@
         "in": "query",
         "description": "Filter by conversation ID. Returns only items associated with the specified conversation.",
         "schema": {
-          "type": "string"
+          "pattern": "^conv_conversation_[0-7][0-9a-z]{25}$",
+          "type": "string",
+          "description": "A unique identifier for the conversation using Twilio Type ID (TTID) format."
         }
       },
       "SuggestionId": {
