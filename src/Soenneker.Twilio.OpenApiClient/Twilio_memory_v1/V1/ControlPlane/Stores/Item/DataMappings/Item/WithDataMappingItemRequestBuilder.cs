@@ -99,7 +99,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// Partially update a data mapping. Only the fields provided in the request body will be updated,including replacing the entire contents of the `mappings` array.For `DATASET_CLOUDAPP` and `DATASET_WAREHOUSE` types, validates that all mapped Trait Groups and traits existand that dataset field data types match their respective mapped trait data types.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchDataMapping202Response"/></returns>
-        /// <param name="body">Writable fields of a data mapping. Used directly as the PATCH request body(all fields optional). Composed into CreateDataMappingInput via allOf.</param>
+        /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 400 status code</exception>
@@ -109,11 +109,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchDataMapping202Response?> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.DataMappingCore body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchDataMapping202Response?> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchDataMappingRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchDataMapping202Response> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.DataMappingCore body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchDataMapping202Response> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchDataMappingRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -170,15 +170,15 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.ControlPlane.Stores
         /// Partially update a data mapping. Only the fields provided in the request body will be updated,including replacing the entire contents of the `mappings` array.For `DATASET_CLOUDAPP` and `DATASET_WAREHOUSE` types, validates that all mapped Trait Groups and traits existand that dataset field data types match their respective mapped trait data types.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">Writable fields of a data mapping. Used directly as the PATCH request body(all fields optional). Composed into CreateDataMappingInput via allOf.</param>
+        /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.DataMappingCore body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchDataMappingRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.DataMappingCore body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1PatchDataMappingRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

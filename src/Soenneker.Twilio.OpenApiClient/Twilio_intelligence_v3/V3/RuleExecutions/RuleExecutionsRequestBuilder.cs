@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.RuleExecution
         {
         }
         /// <summary>
-        /// Resolves the given configuration, rule, and conversation, derives the memoryStoreId from the conversation&apos;s configuration. Then executes the rule on the conversation.
+        /// Resolves the given configuration, rule, and conversation, derives the memoryStoreId from the conversation&apos;s configuration. Then executes the rule on the conversation. Optionally, `rule.operators[]` can be provided to override specific operator parameters for this execution only; the stored rule configuration is not modified.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.RuleExecution
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Resolves the given configuration, rule, and conversation, derives the memoryStoreId from the conversation&apos;s configuration. Then executes the rule on the conversation.
+        /// Resolves the given configuration, rule, and conversation, derives the memoryStoreId from the conversation&apos;s configuration. Then executes the rule on the conversation. Optionally, `rule.operators[]` can be provided to override specific operator parameters for this execution only; the stored rule configuration is not modified.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

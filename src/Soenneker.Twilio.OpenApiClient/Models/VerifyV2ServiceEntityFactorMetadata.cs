@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{&quot;os&quot;: &quot;Android&quot;}`. Can be up to 1024 characters in length.
+    /// Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{&quot;os&quot;: &quot;Android&quot;}`. Can be up to 1024 characters in length. For `passkeys` factors, it contains the `aaguid` of the authenticator once the factor is verified, and `date_last_approved` (ISO 8601) once the factor has been used to approve a challenge.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VerifyV2ServiceEntityFactorMetadata : IAdditionalDataHolder, IParsable

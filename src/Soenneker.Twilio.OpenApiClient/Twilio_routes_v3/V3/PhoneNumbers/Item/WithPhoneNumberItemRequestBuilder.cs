@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.PhoneNumbers.Item
         {
         }
         /// <summary>
-        /// Fetch the Inbound Processing Region assigned to a phone number.
+        /// Fetch the Processing Region assigned to a phone number.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3PhoneNumber"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.PhoneNumbers.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3PhoneNumber>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3PhoneNumber.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Assign an Inbound Processing Region to a phone number.
+        /// Assign an Processing Region to a phone number.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3PhoneNumber"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.PhoneNumbers.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3PhoneNumber>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3PhoneNumber.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Fetch the Inbound Processing Region assigned to a phone number.
+        /// Fetch the Processing Region assigned to a phone number.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.PhoneNumbers.Item
             return requestInfo;
         }
         /// <summary>
-        /// Assign an Inbound Processing Region to a phone number.
+        /// Assign an Processing Region to a phone number.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

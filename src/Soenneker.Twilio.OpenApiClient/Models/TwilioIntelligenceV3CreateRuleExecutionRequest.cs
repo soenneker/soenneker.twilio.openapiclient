@@ -30,6 +30,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string IntelligenceConfigurationId { get; set; }
 #endif
+        /// <summary>Optional per-execution overrides applied to the stored rule before execution. When omitted, the stored rule executes unchanged. Only operators[].parameters is overridable; any other field is not part of this schema and is ignored.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.RuleOverride? Rule { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.RuleOverride Rule { get; set; }
+#endif
         /// <summary>Unique identifier of the rule of the Intelligence Configuration that triggered the result. Assigned by Twilio (TTID).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,6 +73,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "intelligenceConfigurationId", n => { IntelligenceConfigurationId = n.GetStringValue(); } },
+                { "rule", n => { Rule = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.RuleOverride>(global::Soenneker.Twilio.OpenApiClient.Models.RuleOverride.CreateFromDiscriminatorValue); } },
                 { "ruleId", n => { RuleId = n.GetStringValue(); } },
             };
         }
@@ -77,6 +86,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteStringValue("intelligenceConfigurationId", IntelligenceConfigurationId);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.RuleOverride>("rule", Rule);
             writer.WriteStringValue("ruleId", RuleId);
             writer.WriteAdditionalData(AdditionalData);
         }

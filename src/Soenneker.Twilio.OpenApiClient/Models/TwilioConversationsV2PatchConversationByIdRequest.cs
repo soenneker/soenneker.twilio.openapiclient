@@ -22,6 +22,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestConfiguration Configuration { get; set; }
 #endif
+        /// <summary>Merge patch for customer-managed metadata (max 8 entries after merge). Provided keys are added or updated; keys set to null are removed; keys not mentioned are preserved.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestMetadata? Metadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestMetadata Metadata { get; set; }
+#endif
         /// <summary>The name of the Conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,6 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestConfiguration.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestMetadata>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestStatus>(); } },
             };
@@ -70,6 +79,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestConfiguration>("configuration", Configuration);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestMetadata>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationByIdRequestStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);

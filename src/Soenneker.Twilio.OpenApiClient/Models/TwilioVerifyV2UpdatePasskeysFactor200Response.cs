@@ -60,7 +60,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Identity { get; set; }
 #endif
-        /// <summary>Custom metadata associated with the factor.</summary>
+        /// <summary>Metadata associated with the factor. For `passkeys` factors, it contains the `aaguid` of the authenticator once the factor is verified, and `date_last_approved` (ISO 8601) once the factor has been used to approve a challenge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdatePasskeysFactor200ResponseMetadata? Metadata { get; set; }

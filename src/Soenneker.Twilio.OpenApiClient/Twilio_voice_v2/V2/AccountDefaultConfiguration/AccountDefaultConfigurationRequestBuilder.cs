@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Twilio_voice_v2.V2.AccountDefaultConfiguration.Item;
+using Soenneker.Twilio.OpenApiClient.Twilio_voice_v2.V2.AccountDefaultConfiguration.Recording;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,6 +16,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v2.V2.AccountDefaultConfig
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccountDefaultConfigurationRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The Recording property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v2.V2.AccountDefaultConfiguration.Recording.RecordingRequestBuilder Recording
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v2.V2.AccountDefaultConfiguration.Recording.RecordingRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_voice_v2.v2.AccountDefaultConfiguration.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v2.V2.AccountDefaultConfiguration.Item.WithTypeItemRequestBuilder"/></returns>

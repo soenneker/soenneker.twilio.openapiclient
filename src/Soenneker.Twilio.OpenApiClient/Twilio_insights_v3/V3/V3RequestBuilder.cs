@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane;
 using Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class V3RequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The ControlPlane property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ControlPlaneRequestBuilder ControlPlane
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ControlPlaneRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The InsightsDomains property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.InsightsDomains.InsightsDomainsRequestBuilder InsightsDomains
         {

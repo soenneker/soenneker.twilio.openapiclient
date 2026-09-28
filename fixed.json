@@ -12395,7 +12395,8 @@
                     "VoiceMethod": "GET",
                     "VoiceUrl": "https://example.com",
                     "VoiceReceiveMode": "voice",
-                    "BundleSid": "BUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    "BundleSid": "BUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "IsEmergencyDynamicLocationDispatchEnabled": "true"
                   }
                 }
               }
@@ -13008,7 +13009,8 @@
                     "VoiceFallbackUrl": "https://example.com",
                     "VoiceMethod": "GET",
                     "VoiceUrl": "https://example.com",
-                    "BundleSid": "BUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    "BundleSid": "BUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "IsEmergencyDynamicLocationDispatchEnabled": "true"
                   }
                 }
               }
@@ -14297,7 +14299,8 @@
                     "VoiceFallbackUrl": "https://example.com",
                     "VoiceMethod": "GET",
                     "VoiceUrl": "https://example.com",
-                    "BundleSid": "BUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    "BundleSid": "BUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "IsEmergencyDynamicLocationDispatchEnabled": "true"
                   }
                 }
               }
@@ -14710,7 +14713,8 @@
                     "VoiceFallbackUrl": "https://example.com",
                     "VoiceMethod": "GET",
                     "VoiceUrl": "https://example.com",
-                    "BundleSid": "BUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    "BundleSid": "BUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "IsEmergencyDynamicLocationDispatchEnabled": "true"
                   }
                 }
               }
@@ -15123,7 +15127,8 @@
                     "VoiceFallbackUrl": "https://example.com",
                     "VoiceMethod": "GET",
                     "VoiceUrl": "https://example.com",
-                    "BundleSid": "BUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    "BundleSid": "BUaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "IsEmergencyDynamicLocationDispatchEnabled": "true"
                   }
                 }
               }
@@ -70051,6 +70056,9 @@
         "security": [
           {
             "twilio_flex_v1_accountSid_authToken": []
+          },
+          {
+            "access_token_bearer": []
           }
         ],
         "servers": [
@@ -70349,6 +70357,9 @@
         "security": [
           {
             "twilio_flex_v1_accountSid_authToken": []
+          },
+          {
+            "access_token_bearer": []
           }
         ],
         "servers": [
@@ -91641,6 +91652,387 @@
         ]
       }
     },
+    "/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappings": {
+      "post": {
+        "tags": [
+          "TwilioInsightsConfig"
+        ],
+        "summary": "Register a custom measure field mapping",
+        "description": "Registers a custom field for an account under a category, sourced from an\nupstream entity \u2014 selected via the \u0060entityMetadata.sourceType\u0060\ndiscriminator, which determines the required shape of \u0060entityMetadata\u0060.\nOnly the \u0060MEASURE\u0060 category is supported for now.\n\nFor sources with a resolvable field-path concept, validates that\n\u0060entityMetadata.field\u0060 resolves on the entity\u0027s latest active version by\ncalling that source\u0027s own resolution API (the Intelligence fetch-operator\nAPI for \u0060sourceType: INTELLIGENCE_OPERATOR\u0060), then performs an idempotent\nupsert keyed on (accountSid, category, name).\n\u0060entityMetadata.sourceType\u0060 plus that variant\u0027s own identity field\n(\u0060operatorId\u0060 for \u0060INTELLIGENCE_OPERATOR\u0060) must match the existing\nregistration\u0027s owner for the upsert to succeed \u2014 a mismatch returns\n\u0060409\u0060. Enforces the per-account, per-category capacity limit.\n",
+        "operationId": "TwilioInsightsV3CreateCustomFieldMapping",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomFieldMappingRequest"
+              },
+              "examples": {
+                "measure_from_intelligence_operator": {
+                  "summary": "Register a custom measure sourced from an Intelligence operator",
+                  "value": {
+                    "category": "MEASURE",
+                    "name": "LeadScore",
+                    "description": "Lead quality score derived from sentiment analysis",
+                    "entityMetadata": {
+                      "sourceType": "INTELLIGENCE_OPERATOR",
+                      "operatorId": "OPxxxx",
+                      "operatorName": "Sentiment Analysis",
+                      "field": "leadScore"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The \u0060name\u0060 was already registered for this operator and was updated in-place.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomFieldMappingResponse"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Newly registered.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomFieldMappingResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping400Response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping401Response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping403Response"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The \u0060name\u0060 is already registered for this account with different\nattributes. Names are unique per account, so a name can only be\nre-registered idempotently by the same owner.\n",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping409Response"
+                },
+                "example": {
+                  "code": 20052,
+                  "message": "The name \u0027LeadScore\u0027 is already registered to a different operator.",
+                  "httpStatusCode": 409
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "description": "Maximum number of requests allowed in the time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "X-RateLimit-Remaining": {
+                "description": "Number of requests remaining in the current time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "X-RateLimit-Reset": {
+                "description": "Time in seconds until the rate limit resets",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 45
+              },
+              "X-Rate-Limit-Limit": {
+                "$ref": "#/components/headers/X-Rate-Limit-Limit"
+              },
+              "X-Rate-Limit-Remaining": {
+                "$ref": "#/components/headers/X-Rate-Limit-Remaining"
+              },
+              "X-Rate-Limit-Config": {
+                "$ref": "#/components/headers/X-Rate-Limit-Config"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping429Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping500Response"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_insights_v3_basic_apikey_or_accountsid": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://insights.twilio.com"
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "TwilioInsightsConfig"
+        ],
+        "summary": "Fetch custom measure field mappings for an account",
+        "description": "Returns custom field mappings registered for the account.\n",
+        "operationId": "TwilioInsightsV3FetchCustomFieldMappings",
+        "responses": {
+          "200": {
+            "description": "Custom field mappings registered for the account.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomFieldMappingsList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappings400Response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappings401Response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappings403Response"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "description": "Maximum number of requests allowed in the time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "X-RateLimit-Remaining": {
+                "description": "Number of requests remaining in the current time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "X-RateLimit-Reset": {
+                "description": "Time in seconds until the rate limit resets",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 45
+              },
+              "X-Rate-Limit-Limit": {
+                "$ref": "#/components/headers/X-Rate-Limit-Limit"
+              },
+              "X-Rate-Limit-Remaining": {
+                "$ref": "#/components/headers/X-Rate-Limit-Remaining"
+              },
+              "X-Rate-Limit-Config": {
+                "$ref": "#/components/headers/X-Rate-Limit-Config"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappings429Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappings500Response"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_insights_v3_basic_apikey_or_accountsid": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://insights.twilio.com"
+          }
+        ]
+      }
+    },
+    "/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappings/Capacity": {
+      "get": {
+        "tags": [
+          "TwilioInsightsConfig"
+        ],
+        "summary": "Get custom field mapping capacity for an account",
+        "description": "Returns the account\u0027s custom measure slot capacity \u2014 slots consumed and\nremaining. Only the \u0060measure\u0060 category is supported for now.\n",
+        "operationId": "TwilioInsightsV3FetchCustomFieldMappingCapacity",
+        "responses": {
+          "200": {
+            "description": "Custom field mapping capacity for the account.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomFieldCapacity"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappingCapacity401Response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappingCapacity403Response"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "description": "Maximum number of requests allowed in the time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "X-RateLimit-Remaining": {
+                "description": "Number of requests remaining in the current time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "X-RateLimit-Reset": {
+                "description": "Time in seconds until the rate limit resets",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 45
+              },
+              "X-Rate-Limit-Limit": {
+                "$ref": "#/components/headers/X-Rate-Limit-Limit"
+              },
+              "X-Rate-Limit-Remaining": {
+                "$ref": "#/components/headers/X-Rate-Limit-Remaining"
+              },
+              "X-Rate-Limit-Config": {
+                "$ref": "#/components/headers/X-Rate-Limit-Config"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappingCapacity429Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappingCapacity500Response"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_insights_v3_basic_apikey_or_accountsid": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://insights.twilio.com"
+          }
+        ]
+      }
+    },
     "/twilio_intelligence_v2/v2/Operators/Custom": {
       "description": "",
       "post": {
@@ -97798,8 +98190,8 @@
         "tags": [
           "RuleExecutions"
         ],
-        "summary": "Manually queue a rule execution",
-        "description": "Resolves the given configuration, rule, and conversation, derives the memoryStoreId from the conversation\u0027s configuration. Then executes the rule on the conversation.\n",
+        "summary": "On-demand Rule execution",
+        "description": "Resolves the given configuration, rule, and conversation, derives the memoryStoreId from the conversation\u0027s configuration. Then executes the rule on the conversation. Optionally, \u0060rule.operators[]\u0060 can be provided to override specific operator parameters for this execution only; the stored rule configuration is not modified.\n",
         "operationId": "TwilioIntelligenceV3CreateRuleExecution",
         "requestBody": {
           "content": {
@@ -97816,7 +98208,7 @@
             "description": "Rule execution queued."
           },
           "400": {
-            "description": "The request is malformed: the request body fails schema validation (a required field is missing, or a field does not match its expected pattern) or the request body is not valid JSON.\n",
+            "description": "The request is malformed: the request body fails schema validation (a required field is missing, or a field does not match its expected pattern) or the request body is not valid JSON. For RuleExecutions creation with \u0060rule\u0060 overrides: \u0060rule.operators\u0060 is missing, an operator \u0060id\u0060 in \u0060rule.operators\u0060 does not exist in the stored rule, a parameter name is not defined by the operator, a parameter value provided for an operator override is invalid for that parameter, or a required parameter with no default is left blank.\n",
             "content": {
               "application/json": {
                 "schema": {
@@ -118819,7 +119211,8 @@
                 "$ref": "#/components/schemas/TwilioMemoryV1PatchStoreRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "202": {
@@ -119584,7 +119977,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "202": {
@@ -119968,10 +120362,11 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DataMappingCore"
+                "$ref": "#/components/schemas/TwilioMemoryV1PatchDataMappingRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "202": {
@@ -152575,8 +152970,8 @@
         "tags": [
           "RoutesV3PhoneNumber"
         ],
-        "summary": "Assign an Inbound Processing Region to a phone number.",
-        "description": "Assign an Inbound Processing Region to a phone number.",
+        "summary": "Assign an Processing Region to a phone number.",
+        "description": "Assign an Processing Region to a phone number.",
         "operationId": "TwilioRoutesV3UpdatePhoneNumber",
         "parameters": [
           {
@@ -152600,7 +152995,7 @@
                   "value": {
                     "friendlyName": "friendly_name",
                     "voiceRegion": "au1",
-                    "messagingRegion": "au1"
+                    "messagingRegion": "us1"
                   }
                 }
               }
@@ -152659,7 +153054,7 @@
                       "accountSid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                       "friendlyName": "friendly_name",
                       "voiceRegion": "au1",
-                      "messagingRegion": "au1",
+                      "messagingRegion": "us1",
                       "dateCreated": "2015-07-30T20:00:00Z",
                       "dateUpdated": "2015-07-30T20:00:00Z"
                     }
@@ -152684,8 +153079,8 @@
         "tags": [
           "RoutesV3PhoneNumber"
         ],
-        "summary": "Fetch the Inbound Processing Region assigned to a phone number.",
-        "description": "Fetch the Inbound Processing Region assigned to a phone number.",
+        "summary": "Fetch the Processing Region assigned to a phone number.",
+        "description": "Fetch the Processing Region assigned to a phone number.",
         "operationId": "TwilioRoutesV3FetchPhoneNumber",
         "parameters": [
           {
@@ -152750,7 +153145,7 @@
                       "accountSid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                       "friendlyName": "friendly_name",
                       "voiceRegion": "au1",
-                      "messagingRegion": "au1",
+                      "messagingRegion": "us1",
                       "dateCreated": "2015-07-30T20:00:00Z",
                       "dateUpdated": "2015-07-30T20:00:00Z"
                     }
@@ -198756,6 +199151,37 @@
                       "metadata": null,
                       "url": "https://verify.twilio.com/v2/Services/VAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Entities/ff483d1ff591898a9942916050d2ca3f/Factors/YFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                     }
+                  },
+                  "fetchPasskeysVerifiedAndApproved": {
+                    "value": {
+                      "sid": "YFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                      "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                      "service_sid": "VAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                      "entity_sid": "YEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                      "identity": "ff483d1ff591898a9942916050d2ca3f",
+                      "date_created": "2015-07-30T20:00:00Z",
+                      "date_updated": "2015-07-30T20:00:00Z",
+                      "friendly_name": "friendly_name",
+                      "status": "verified",
+                      "factor_type": "passkeys",
+                      "config": {
+                        "relying_party": {
+                          "id": "example.com",
+                          "name": "Example",
+                          "origins": [
+                            "https://example.com"
+                          ]
+                        },
+                        "authenticator_attachment": "platform",
+                        "discoverable_credentials": "preferred",
+                        "user_verification": "preferred"
+                      },
+                      "metadata": {
+                        "aaguid": "fbfc3007-154e-4ecc-8c0b-6e020557d7bd",
+                        "date_last_approved": "2015-07-30T20:05:00Z"
+                      },
+                      "url": "https://verify.twilio.com/v2/Services/VAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Entities/ff483d1ff591898a9942916050d2ca3f/Factors/YFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
                   }
                 }
               }
@@ -204377,7 +204803,9 @@
                         "discoverable_credentials": "preferred",
                         "user_verification": "preferred"
                       },
-                      "metadata": null,
+                      "metadata": {
+                        "aaguid": "fbfc3007-154e-4ecc-8c0b-6e020557d7bd"
+                      },
                       "url": "https://verify.twilio.com/v2/Services/VAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Entities/ff483d1ff591898a9942916050d2ca3f/Factors/YFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                     }
                   }
@@ -215707,6 +216135,320 @@
             "url": "https://voice.twilio.com"
           }
         ]
+      }
+    },
+    "/twilio_voice_v2/v2/AccountDefaultConfiguration/Recording": {
+      "post": {
+        "tags": [
+          "RecordingAccountDefaultConfiguration"
+        ],
+        "summary": "Create an Account Default Recording Configuration",
+        "operationId": "TwilioVoiceV2CreateAccountDefaultRecordingConfiguration",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationRecordingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationRecordingResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict - Account Default Configuration already exists",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_voice_v2_accountSid_authToken": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://voice.twilio.com"
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "RecordingAccountDefaultConfiguration"
+        ],
+        "summary": "Get the Account Default Recording Configuration",
+        "operationId": "TwilioVoiceV2FetchAccountDefaultRecordingConfiguration",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationRecordingResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_voice_v2_accountSid_authToken": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://voice.twilio.com"
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "RecordingAccountDefaultConfiguration"
+        ],
+        "summary": "Update the Account Default Recording Configuration",
+        "operationId": "TwilioVoiceV2UpdateAccountDefaultRecordingConfiguration",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationRecordingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationRecordingResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed - ETag mismatch",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_voice_v2_accountSid_authToken": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://voice.twilio.com"
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "RecordingAccountDefaultConfiguration"
+        ],
+        "summary": "Delete the Account Default Recording Configuration",
+        "operationId": "TwilioVoiceV2DeleteAccountDefaultRecordingConfiguration",
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_voice_v2_accountSid_authToken": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://voice.twilio.com"
+          }
+        ]
+      },
+      "x-twilio": {
+        "className": "recording_account_default_configuration",
+        "mountName": "recording_account_default_configuration",
+        "pathType": "instance"
       }
     },
     "/twilio_voice_v3/v3/Transcriptions/{transcriptionId}": {
@@ -234710,6 +235452,138 @@
           ]
         }
       },
+      "ConversationsV2Capability": {
+        "required": [
+          "id",
+          "name",
+          "domain",
+          "status",
+          "visibility",
+          "policyRef",
+          "schemaRef",
+          "version",
+          "createdAt",
+          "updatedAt"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^cap_capability_[0-9a-z]{26}$",
+            "type": "string",
+            "description": "Unique Capability identifier.",
+            "example": "cap_capability_01j2a1b2c3d4e5f6g7h8j9k0m1"
+          },
+          "name": {
+            "type": "string",
+            "description": "Human-readable Capability name.",
+            "example": "Email Event Exhaust"
+          },
+          "domain": {
+            "type": "string",
+            "description": "Domain that owns the Capability.",
+            "example": "Email"
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the Capability.",
+            "example": "Relays inbound email events to subscribing domains"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ConversationsV2CapabilityStatus"
+          },
+          "visibility": {
+            "$ref": "#/components/schemas/ConversationsV2CapabilityVisibility"
+          },
+          "policyRef": {
+            "type": "string",
+            "description": "Identifier for the Cedar policy that controls this Capability.",
+            "example": "cedar/email/policy.cedar"
+          },
+          "schemaRef": {
+            "type": "string",
+            "description": "Identifier for the Cedar schema that defines this Capability.",
+            "example": "cedar/email/schema.cedarschema.json"
+          },
+          "version": {
+            "type": "integer",
+            "description": "Optimistic-locking version.",
+            "example": 1
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "Timestamp when the Capability was created.",
+            "format": "date-time",
+            "example": "2026-06-02T10:00:00Z"
+          },
+          "updatedAt": {
+            "type": "string",
+            "description": "Timestamp when the Capability was last updated.",
+            "format": "date-time",
+            "example": "2026-06-02T10:00:00Z"
+          },
+          "subscriptionPrincipalSchema": {
+            "$ref": "#/components/schemas/ConversationsV2CapabilitySubscriptionPrincipalSchemaProperty"
+          }
+        },
+        "description": "A cross-domain operation or data flow that accounts can subscribe to."
+      },
+      "ConversationsV2CapabilityList": {
+        "required": [
+          "capabilities"
+        ],
+        "type": "object",
+        "properties": {
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConversationsV2Capability"
+            }
+          }
+        }
+      },
+      "ConversationsV2CreateCapabilityRequest": {
+        "required": [
+          "name",
+          "domain",
+          "policyRef",
+          "schemaRef"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Human-readable Capability name.",
+            "example": "Email Event Exhaust"
+          },
+          "domain": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Domain that owns the Capability.",
+            "example": "Email"
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the Capability.",
+            "example": "Relays inbound email events to subscribing domains"
+          },
+          "visibility": {
+            "$ref": "#/components/schemas/ConversationsV2CreateCapabilityRequestVisibility"
+          },
+          "policyRef": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Identifier for a pre-registered Cedar policy supported by the Capabilities API.",
+            "example": "cedar/email/policy.cedar"
+          },
+          "schemaRef": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Identifier for a pre-registered Cedar schema supported by the Capabilities API.",
+            "example": "cedar/email/schema.cedarschema.json"
+          }
+        }
+      },
       "ConversationsV2Conversation": {
         "required": [
           "id",
@@ -234757,6 +235631,9 @@
           "configuration": {
             "$ref": "#/components/schemas/ConversationsV2ConversationConfiguration"
           },
+          "metadata": {
+            "$ref": "#/components/schemas/ConversationsV2ConversationMetadata"
+          },
           "participants": {
             "type": "array",
             "items": {
@@ -234772,7 +235649,10 @@
           "status": "ACTIVE",
           "name": "Customer Support - Multi-channel",
           "createdAt": "2023-07-01T12:00:00Z",
-          "updatedAt": "2023-07-01T12:30:00Z"
+          "updatedAt": "2023-07-01T12:30:00Z",
+          "metadata": {
+            "zendesk_ticket_id": "TKT-456"
+          }
         }
       },
       "ConversationsV2Participant": {
@@ -235326,6 +236206,25 @@
         "example": {
           "channel": "SMS",
           "address": "\u002B18005550100"
+        }
+      },
+      "ConversationsV2ConversationWorkflow": {
+        "title": "ConversationWorkflow",
+        "required": [
+          "flowId"
+        ],
+        "type": "object",
+        "properties": {
+          "flowId": {
+            "pattern": "^FW[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The Studio Flow to run.",
+            "example": "FW00000000000000000000000000000000"
+          }
+        },
+        "description": "A Workflow associated with a Conversation.",
+        "example": {
+          "flowId": "FW00000000000000000000000000000000"
         }
       },
       "ConversationsV2StartConversationParticipantSelector": {
@@ -236244,6 +237143,18 @@
           }
         },
         "description": "Partial configuration update for an existing conversation. Only statusCallbacks can be modified."
+      },
+      "ConversationsV2Metadata": {
+        "maxProperties": 8,
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 512,
+          "type": "string"
+        },
+        "description": "Customer-managed key-value pairs. Maximum 8 entries; keys up to 128 characters allowing alphanumeric characters, periods, underscores, and dashes; values up to 512 characters.",
+        "example": {
+          "zendesk_ticket_id": "TKT-456"
+        }
       },
       "ConversationsV2ConversationsV1Bridge": {
         "required": [
@@ -241222,6 +242133,12 @@
             "pattern": "^NF[0-9a-fA-F]{32}$",
             "type": "string"
           },
+          "userSid": {
+            "pattern": "^US[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "SID of the requesting user",
+            "format": "UserSid"
+          },
           "email": {
             "maxLength": 160,
             "minLength": 2,
@@ -241339,6 +242256,11 @@
             "description": "Date the join request was created",
             "format": "date-time"
           },
+          "expirationDate": {
+            "type": "string",
+            "description": "Date the join request expires, if applicable",
+            "format": "date-time"
+          },
           "status": {
             "type": "string",
             "description": "Display status of the join request (e.g. Active, Expired, Declined, Accepted), derived by the downstream service from the underlying notification\u0027s state and expiry. Does not map 1:1 to the notification\u0027s internal status."
@@ -241370,10 +242292,6 @@
         }
       },
       "IamV1OrganizationUpdateRequest": {
-        "required": [
-          "friendlyName",
-          "domainSignupType"
-        ],
         "type": "object",
         "properties": {
           "friendlyName": {
@@ -242882,35 +243800,10 @@
         },
         "description": "Request to disconnect a social identity provider from the authenticated user\u0027s account"
       },
-      "IamV1PostLoginActionUserContext": {
-        "type": "object",
-        "properties": {
-          "user_id": {
-            "type": "string",
-            "description": "Whitney\u0027s own identifier for the user. This is not a Twilio user SID - the Twilio user record is resolved by email instead"
-          },
-          "emails": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "The user\u0027s email addresses. The first entry is used to resolve their Twilio unified user record"
-          },
-          "phones": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "The user\u0027s phone numbers, if any are on file"
-          },
-          "is_first_login": {
-            "type": "boolean",
-            "description": "Whether this is the user\u0027s first successful login"
-          }
-        },
-        "description": "Details about the user completing the Whitney auth_flow.checkpoint event that triggered this webhook"
-      },
       "IamV1PostLoginActionRequestContext": {
+        "required": [
+          "ip_address"
+        ],
         "type": "object",
         "properties": {
           "ip_address": {
@@ -242946,9 +243839,57 @@
         },
         "description": "Details of the OAuth authorization request the user is logging in for"
       },
+      "IamV1PostLoginActionMethod": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The credential type, e.g. password, email, oauth"
+          },
+          "identifier": {
+            "type": "string",
+            "description": "The contact value the factor resolved, from the user\u0027s verified factor directory. Omitted together with identifier_type when the factor resolved none, e.g. a passkey login"
+          },
+          "identifier_type": {
+            "type": "string",
+            "description": "The kind of identifier, e.g. email or phone"
+          },
+          "completed_at": {
+            "type": "integer",
+            "description": "Unix timestamp (seconds) the factor completed at",
+            "format": "int64"
+          }
+        },
+        "description": "One factor the session completed, in completion order"
+      },
+      "IamV1PostLoginActionAuthenticationContext": {
+        "type": "object",
+        "properties": {
+          "acr": {
+            "type": "string",
+            "description": "The authentication context class reference the login satisfied"
+          },
+          "amr": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The authentication factors the user completed, as RFC 8176 authentication method reference values (e.g. pwd, otp, mfa)"
+          },
+          "methods": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IamV1PostLoginActionMethod"
+            },
+            "description": "The completed factors and the identifier each resolved, in completion order"
+          }
+        },
+        "description": "How the session authenticated"
+      },
       "IamV1PostLoginActionRequest": {
         "required": [
-          "user_context"
+          "authentication_context",
+          "request_context"
         ],
         "type": "object",
         "properties": {
@@ -242980,19 +243921,8 @@
           "oauth": {
             "$ref": "#/components/schemas/IamV1PostLoginActionOAuthContext"
           },
-          "acr": {
-            "type": "string",
-            "description": "The authentication context class reference the login satisfied"
-          },
-          "completed_factors": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "The authentication factors the user completed, as RFC 8176 authentication method reference values (e.g. pwd, otp, mfa)"
-          },
-          "user_context": {
-            "$ref": "#/components/schemas/IamV1PostLoginActionUserContext"
+          "authentication_context": {
+            "$ref": "#/components/schemas/IamV1PostLoginActionAuthenticationContext"
           },
           "request_context": {
             "$ref": "#/components/schemas/IamV1PostLoginActionRequestContext"
@@ -247065,6 +247995,237 @@
         },
         "description": "A paginated list of async query operations for the account."
       },
+      "MappingCategory": {
+        "enum": [
+          "MEASURE"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The type of field being registered. Only \u0060MEASURE\u0060 is supported.",
+        "x-ms-enum": {
+          "name": "MappingCategory",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "MEASURE",
+              "name": "Measure"
+            }
+          ]
+        }
+      },
+      "SourceType": {
+        "enum": [
+          "INTELLIGENCE_OPERATOR"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The kind of upstream entity that sources this field. The value names the\nentity type itself, so the identifier carried in \u0060entityMetadata\u0060 is\nunambiguous without a lookup (\u0060INTELLIGENCE_OPERATOR\u0060 carries an\n\u0060operatorId\u0060).\n\nAdding a new upstream means adding a value here plus its own\n\u0060entityMetadata\u0060 variant \u2014 the request shape is unchanged.\n",
+        "x-ms-enum": {
+          "name": "SourceType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "INTELLIGENCE_OPERATOR",
+              "name": "IntelligenceOperator"
+            }
+          ]
+        }
+      },
+      "EntityMetadataBase": {
+        "required": [
+          "sourceType"
+        ],
+        "type": "object",
+        "properties": {
+          "sourceType": {
+            "$ref": "#/components/schemas/SourceType"
+          }
+        },
+        "description": "Fields common to every \u0060entityMetadata\u0060 variant. Exists so that generated\nclients get a stable base type: a variant added in a later revision\ndegrades to this rather than breaking deserialization.\n"
+      },
+      "IntelligenceOperatorEntityMetadata": {
+        "required": [
+          "operatorId",
+          "field",
+          "sourceType"
+        ],
+        "type": "object",
+        "properties": {
+          "sourceType": {
+            "$ref": "#/components/schemas/SourceType"
+          },
+          "operatorId": {
+            "type": "string",
+            "description": "The Intelligence operator ID. Part of the owner check for\nidempotent upserts \u2014 a mismatch against the existing\nregistration\u0027s \u0060(sourceType, operatorId)\u0060 returns \u0060409\u0060.\n",
+            "example": "OPxxxx"
+          },
+          "operatorName": {
+            "type": "string",
+            "description": "Optional, display-only name of the operator as supplied at\nregistration time. Not part of any uniqueness or validation logic.\n",
+            "example": "Sentiment Analysis"
+          },
+          "field": {
+            "pattern": "^[A-Za-z0-9_.]\u002B$",
+            "type": "string",
+            "description": "Annotation fieldPath key; generic identifier that determines the\noutput-schema field. Resolved against the operator identified by\n\u0060operatorId\u0060.\n",
+            "example": "leadScore"
+          }
+        },
+        "description": "Entity reference for a custom field sourced from a Conversational\nIntelligence operator. \u0060field\u0060 is required \u2014 Intelligence is the source of\ntruth for resolving it against the operator\u0027s output schema.\n"
+      },
+      "EntityMetadata": {
+        "required": [
+          "sourceType"
+        ],
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/IntelligenceOperatorEntityMetadata"
+          }
+        ],
+        "properties": {
+          "sourceType": {
+            "$ref": "#/components/schemas/SourceType"
+          },
+          "operatorId": {
+            "type": "string",
+            "description": "The Intelligence operator ID. Part of the owner check for\nidempotent upserts \u2014 a mismatch against the existing\nregistration\u0027s \u0060(sourceType, operatorId)\u0060 returns \u0060409\u0060.\n",
+            "example": "OPxxxx"
+          },
+          "operatorName": {
+            "type": "string",
+            "description": "Optional, display-only name of the operator as supplied at\nregistration time. Not part of any uniqueness or validation logic.\n",
+            "example": "Sentiment Analysis"
+          },
+          "field": {
+            "pattern": "^[A-Za-z0-9_.]\u002B$",
+            "type": "string",
+            "description": "Annotation fieldPath key; generic identifier that determines the\noutput-schema field. Resolved against the operator identified by\n\u0060operatorId\u0060.\n",
+            "example": "leadScore"
+          }
+        },
+        "description": "Reference to the upstream entity that sources this field. Shape is\nselected by the \u0060sourceType\u0060 discriminator and owned by that upstream, not\nby this API \u2014 adding a new upstream means adding a variant here, not\nchanging the request shape.\n\nEvery variant carries \u0060sourceType\u0060 via \u0060EntityMetadataBase\u0060, so a client\nthat does not recognise a newly added variant can still deserialize the\ncommon fields rather than failing outright.\n\nThe owner check for idempotent upserts is scoped to \u0060sourceType\u0060 plus that\nvariant\u0027s own identity field (\u0060operatorId\u0060 for \u0060INTELLIGENCE_OPERATOR\u0060); a\nmismatch against an existing registration\u0027s owner returns \u0060409\u0060.\n",
+        "discriminator": {
+          "propertyName": "sourceType",
+          "mapping": {
+            "INTELLIGENCE_OPERATOR": "#/components/schemas/IntelligenceOperatorEntityMetadata",
+            "IntelligenceOperatorEntityMetadata": "#/components/schemas/IntelligenceOperatorEntityMetadata"
+          }
+        }
+      },
+      "CustomFieldMappingRequest": {
+        "required": [
+          "category",
+          "name",
+          "entityMetadata"
+        ],
+        "type": "object",
+        "properties": {
+          "category": {
+            "$ref": "#/components/schemas/MappingCategory"
+          },
+          "name": {
+            "pattern": "^[A-Za-z0-9_]\u002B$",
+            "type": "string",
+            "description": "Customer-facing name for the field; becomes the ClickHouse Map key and\nthe platform field alias. Unique per account across every\n\u0060sourceType\u0060 \u2014 the Map key namespace is account-global.\n",
+            "example": "LeadScore"
+          },
+          "description": {
+            "maxLength": 150,
+            "type": "string",
+            "description": "Optional, free-text description of this custom field mapping.\nDisplay-only \u2014 not part of any uniqueness check.\n",
+            "example": "Lead quality score derived from sentiment analysis"
+          },
+          "entityMetadata": {
+            "$ref": "#/components/schemas/EntityMetadata"
+          }
+        },
+        "description": "Registration payload for a single custom field sourced from an upstream\nentity. The target account is supplied via the I-Twilio-Auth-Account\nheader, not this body.\n"
+      },
+      "CustomFieldMappingResponse": {
+        "required": [
+          "category",
+          "name",
+          "entityMetadata"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "TTID for conversation insights custom field mapping",
+            "example": "convinsights_mapping_01m31967b7em08vh1pqgbam3mj"
+          },
+          "category": {
+            "$ref": "#/components/schemas/MappingCategory"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 150,
+            "type": "string",
+            "description": "Optional, free-text description supplied at registration time.\nDisplay-only \u2014 not part of any uniqueness check.\n",
+            "example": "Lead quality score derived from sentiment analysis"
+          },
+          "entityMetadata": {
+            "$ref": "#/components/schemas/EntityMetadata"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "When the mapping was registered.",
+            "format": "date-time",
+            "example": "2026-08-13T14:30:00Z"
+          },
+          "updatedAt": {
+            "type": "string",
+            "description": "When the mapping was last materially modified in-place. Null until the first update-in-place.",
+            "format": "date-time",
+            "nullable": true,
+            "example": "2026-08-13T14:30:00Z"
+          }
+        },
+        "description": "A registered custom field mapping."
+      },
+      "CustomFieldMappingsList": {
+        "required": [
+          "mappings"
+        ],
+        "type": "object",
+        "properties": {
+          "mappings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomFieldMappingResponse"
+            }
+          }
+        },
+        "description": "All custom field mappings registered for an account."
+      },
+      "CustomFieldCapacity": {
+        "type": "object",
+        "properties": {
+          "measure": {
+            "$ref": "#/components/schemas/CategoryCapacity"
+          }
+        },
+        "description": "Custom field mapping slot capacity for the account. Only the \u0060measure\u0060\ncategory is supported for now; it is an empty object when custom\nmeasures are not applicable for the account.\n"
+      },
+      "CategoryCapacity": {
+        "type": "object",
+        "properties": {
+          "consumed": {
+            "type": "integer",
+            "description": "Number of custom field mapping slots already registered.",
+            "example": 1
+          },
+          "remaining": {
+            "type": "integer",
+            "description": "Number of custom field mapping slots still available.",
+            "example": 2
+          }
+        },
+        "description": "Slots consumed and remaining for the measure category. Empty when not\napplicable for the account.\n"
+      },
       "IntelligenceV2CustomOperator": {
         "type": "object",
         "properties": {
@@ -248378,17 +249539,17 @@
       "TextResult": {
         "title": "Text result",
         "required": [
-          "dateCreated",
-          "id",
-          "result",
-          "executionDetails",
-          "conversationId",
-          "intelligenceConfiguration",
-          "referenceIds",
           "metadata",
           "accountId",
+          "operator",
+          "executionDetails",
+          "result",
           "outputFormat",
-          "operator"
+          "conversationId",
+          "referenceIds",
+          "intelligenceConfiguration",
+          "dateCreated",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -248448,17 +249609,17 @@
       "JsonResult": {
         "title": "JSON result",
         "required": [
-          "dateCreated",
-          "id",
-          "result",
-          "executionDetails",
-          "conversationId",
-          "intelligenceConfiguration",
-          "referenceIds",
           "metadata",
           "accountId",
+          "operator",
+          "executionDetails",
+          "result",
           "outputFormat",
-          "operator"
+          "conversationId",
+          "referenceIds",
+          "intelligenceConfiguration",
+          "dateCreated",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -248518,17 +249679,17 @@
       "ClassificationResult": {
         "title": "Classification result",
         "required": [
-          "dateCreated",
-          "id",
-          "result",
-          "executionDetails",
-          "conversationId",
-          "intelligenceConfiguration",
-          "referenceIds",
           "metadata",
           "accountId",
+          "operator",
+          "executionDetails",
+          "result",
           "outputFormat",
-          "operator"
+          "conversationId",
+          "referenceIds",
+          "intelligenceConfiguration",
+          "dateCreated",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -248588,17 +249749,17 @@
       "ExtractionResult": {
         "title": "Extraction result",
         "required": [
-          "dateCreated",
-          "id",
-          "result",
-          "executionDetails",
-          "conversationId",
-          "intelligenceConfiguration",
-          "referenceIds",
           "metadata",
           "accountId",
+          "operator",
+          "executionDetails",
+          "result",
           "outputFormat",
-          "operator"
+          "conversationId",
+          "referenceIds",
+          "intelligenceConfiguration",
+          "dateCreated",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -249225,8 +250386,8 @@
       },
       "LanguageOperatorVersion": {
         "required": [
-          "dateCreated",
-          "status"
+          "status",
+          "dateCreated"
         ],
         "type": "object",
         "properties": {
@@ -249289,9 +250450,9 @@
       },
       "CreateOrUpdateOperatorRequest": {
         "required": [
-          "prompt",
           "displayName",
-          "outputFormat"
+          "outputFormat",
+          "prompt"
         ],
         "type": "object",
         "properties": {
@@ -249963,6 +251124,41 @@
             "pattern": "^conv_conversation_[0-7][0-9a-z]{25}$",
             "type": "string",
             "description": "The \u0060id\u0060 of the Conversation attached to the Operator Result."
+          },
+          "rule": {
+            "$ref": "#/components/schemas/RuleOverride"
+          }
+        }
+      },
+      "RuleOverride": {
+        "required": [
+          "operators"
+        ],
+        "type": "object",
+        "properties": {
+          "operators": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OperatorOverride"
+            },
+            "description": "Operator parameter overrides, merged key-by-key into the stored operator\u0027s parameters (override wins on matching keys; unspecified keys retain their stored values). Operators in the stored rule not referenced here execute with their stored parameters unchanged.\n"
+          }
+        },
+        "description": "Optional per-execution overrides applied to the stored rule before execution. When omitted, the stored rule executes unchanged. Only operators[].parameters is overridable; any other field is not part of this schema and is ignored.\n"
+      },
+      "OperatorOverride": {
+        "required": [
+          "id",
+          "parameters"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The operator id (as configured in the stored rule) to override."
+          },
+          "parameters": {
+            "$ref": "#/components/schemas/OperatorOverrideParametersProperty"
           }
         }
       },
@@ -252368,11 +253564,11 @@
       },
       "Knowledge": {
         "required": [
-          "id",
-          "createdAt",
+          "status",
           "updatedAt",
           "name",
-          "status"
+          "createdAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -252864,12 +254060,12 @@
       },
       "KnowledgeBase": {
         "required": [
-          "displayName",
-          "id",
-          "createdAt",
+          "status",
           "updatedAt",
           "version",
-          "status"
+          "displayName",
+          "createdAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -254641,8 +255837,8 @@
       "ObservationInfo": {
         "required": [
           "updatedAt",
-          "id",
-          "createdAt"
+          "createdAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -254735,12 +255931,12 @@
       },
       "SummaryInfo": {
         "required": [
-          "id",
-          "createdAt",
-          "content",
-          "conversationId",
           "updatedAt",
-          "occurredAt"
+          "occurredAt",
+          "conversationId",
+          "content",
+          "createdAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -255358,11 +256554,11 @@
       },
       "Store": {
         "required": [
-          "displayName",
-          "id",
-          "intelligenceServiceId",
+          "status",
           "version",
-          "status"
+          "intelligenceServiceId",
+          "displayName",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -255456,9 +256652,9 @@
       },
       "IdentityResolutionSettings": {
         "required": [
-          "identifierConfigs",
+          "matchingRules",
           "version",
-          "matchingRules"
+          "identifierConfigs"
         ],
         "type": "object",
         "properties": {
@@ -256068,13 +257264,13 @@
             "$ref": "#/components/schemas/DataMappingToTypes"
           }
         },
-        "description": "Writable fields of a data mapping. Used directly as the PATCH request body\n(all fields optional). Composed into CreateDataMappingInput via allOf."
+        "description": "Writable fields of a data mapping. Every field is optional here; the PATCH request body\nwraps this schema and requires at least one. Composed into CreateDataMappingInput via allOf."
       },
       "CreateDataMappingInput": {
         "required": [
+          "mappingTo",
           "displayName",
-          "mappingFrom",
-          "mappingTo"
+          "mappingFrom"
         ],
         "type": "object",
         "properties": {
@@ -256108,13 +257304,13 @@
       },
       "DataMapping": {
         "required": [
-          "displayName",
-          "id",
-          "createdAt",
-          "updatedAt",
           "mappingTo",
+          "updatedAt",
           "version",
-          "mappingFrom"
+          "displayName",
+          "mappingFrom",
+          "createdAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -256190,12 +257386,12 @@
       },
       "RecallObservationInfo": {
         "required": [
-          "id",
-          "createdAt",
-          "content",
           "updatedAt",
+          "occurredAt",
+          "content",
           "source",
-          "occurredAt"
+          "createdAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -256260,12 +257456,12 @@
       },
       "RecallSummaryInfo": {
         "required": [
-          "id",
-          "createdAt",
-          "content",
-          "conversationId",
           "updatedAt",
-          "occurredAt"
+          "occurredAt",
+          "conversationId",
+          "content",
+          "createdAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -256487,8 +257683,8 @@
       },
       "ObservationCreateRequest": {
         "required": [
-          "content",
           "source",
+          "content",
           "occurredAt"
         ],
         "type": "object",
@@ -256887,12 +258083,12 @@
             "description": "The traits this strategy infers. Replaces the existing list on update."
           }
         },
-        "description": "Mutable fields of a Trait Extraction Strategy. Used directly as the PATCH request body\n(all fields optional). Composed into CreateTraitExtractionStrategyInput via allOf.\n\u0060displayName\u0060 and \u0060storeId\u0060 are deliberately absent because they are immutable after creation:\nre-pointing a strategy at a different Memory Store would orphan every definition it holds."
+        "description": "Mutable fields of a Trait Extraction Strategy. Every field is optional here; the PATCH request\nbody wraps this schema and requires at least one. Composed into CreateTraitExtractionStrategyInput via allOf.\n\u0060displayName\u0060 and \u0060storeId\u0060 are deliberately absent because they are immutable after creation:\nre-pointing a strategy at a different Memory Store would orphan every definition it holds."
       },
       "CreateTraitExtractionStrategyInput": {
         "required": [
-          "storeId",
-          "displayName"
+          "displayName",
+          "storeId"
         ],
         "type": "object",
         "properties": {
@@ -256933,12 +258129,12 @@
       },
       "TraitExtractionStrategy": {
         "required": [
-          "displayName",
-          "id",
-          "createdAt",
           "updatedAt",
           "version",
-          "storeId"
+          "storeId",
+          "displayName",
+          "createdAt",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -257020,6 +258216,220 @@
           "$ref": "#/components/schemas/TraitExtractionStrategyListAdditionalProperties"
         },
         "description": "A page of Trait Extraction Strategies belonging to the Twilio account."
+      },
+      "ObservationCategory": {
+        "required": [
+          "headline",
+          "description",
+          "examples"
+        ],
+        "type": "object",
+        "properties": {
+          "headline": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string",
+            "description": "Short human-readable name for the category.",
+            "example": "Product interests"
+          },
+          "description": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "One sentence stating what the category captures (or, for a prohibited category, excludes).",
+            "example": "Products, plans, or features the customer expresses interest in."
+          },
+          "examples": {
+            "maxItems": 3,
+            "type": "array",
+            "items": {
+              "maxLength": 256,
+              "minLength": 1,
+              "type": "string"
+            },
+            "description": "Short example observations that would fall under this category."
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ObservationCategoryAdditionalProperties"
+        },
+        "description": "A single suggested observation category. Shares the shape of an extraction strategy\u0027s\nallowed/prohibited categories, so an edited suggestion can be saved onto a strategy verbatim."
+      },
+      "ObservationExtractionStrategyName": {
+        "maxLength": 64,
+        "minLength": 1,
+        "pattern": "^[a-zA-Z][a-zA-Z0-9\\-.]*$",
+        "type": "string",
+        "description": "Unique, immutable name identifying an Observation Extraction Strategy within the account.",
+        "example": "retail-support-observations"
+      },
+      "ObservationExtractionStrategyCore": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "maxLength": 1024,
+            "type": "string",
+            "description": "A human readable description of this strategy. May be empty.",
+            "example": "Observation categories tuned for retail support conversations."
+          },
+          "isEnabled": {
+            "type": "boolean",
+            "description": "Flag indicating whether the strategy is active. When false, conversation configurations that\nreference it fall back to the default extraction behaviour.",
+            "default": true,
+            "example": true
+          },
+          "allowedCategories": {
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ObservationCategory"
+            },
+            "description": "Categories of observation this strategy extracts. Replaces the existing list on update."
+          },
+          "prohibitedCategories": {
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ObservationCategory"
+            },
+            "description": "Categories of observation this strategy must never extract. Replaces the existing list on update."
+          }
+        },
+        "description": "Mutable fields of an Observation Extraction Strategy. Used directly as the PATCH request body\n(all fields optional). Composed into CreateObservationExtractionStrategyInput via allOf.\n\u0060displayName\u0060 is deliberately absent because it is immutable after creation."
+      },
+      "CreateObservationExtractionStrategyInput": {
+        "required": [
+          "displayName"
+        ],
+        "type": "object",
+        "properties": {
+          "description": {
+            "maxLength": 1024,
+            "type": "string",
+            "description": "A human readable description of this strategy. May be empty.",
+            "example": "Observation categories tuned for retail support conversations."
+          },
+          "isEnabled": {
+            "type": "boolean",
+            "description": "Flag indicating whether the strategy is active. When false, conversation configurations that\nreference it fall back to the default extraction behaviour.",
+            "default": true,
+            "example": true
+          },
+          "allowedCategories": {
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ObservationCategory"
+            },
+            "description": "Categories of observation this strategy extracts. Replaces the existing list on update."
+          },
+          "prohibitedCategories": {
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ObservationCategory"
+            },
+            "description": "Categories of observation this strategy must never extract. Replaces the existing list on update."
+          },
+          "displayName": {
+            "maxLength": 64,
+            "pattern": "^[a-zA-Z][a-zA-Z0-9\\-.]*$",
+            "type": "string",
+            "description": "Unique, immutable name identifying an Observation Extraction Strategy within the account."
+          }
+        },
+        "description": "Payload for creating an Observation Extraction Strategy. \u0060displayName\u0060 must be unique within the\naccount for this resource type and cannot be changed afterwards. At least one of\n\u0060allowedCategories\u0060 or \u0060prohibitedCategories\u0060 must be provided with a non-empty list."
+      },
+      "ObservationExtractionStrategy": {
+        "required": [
+          "updatedAt",
+          "version",
+          "displayName",
+          "createdAt",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "description": {
+            "maxLength": 1024,
+            "type": "string",
+            "description": "A human readable description of this strategy. May be empty.",
+            "example": "Observation categories tuned for retail support conversations."
+          },
+          "isEnabled": {
+            "type": "boolean",
+            "description": "Flag indicating whether the strategy is active. When false, conversation configurations that\nreference it fall back to the default extraction behaviour.",
+            "default": true,
+            "example": true
+          },
+          "allowedCategories": {
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ObservationCategory"
+            },
+            "description": "Categories of observation this strategy extracts. Replaces the existing list on update."
+          },
+          "prohibitedCategories": {
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ObservationCategory"
+            },
+            "description": "Categories of observation this strategy must never extract. Replaces the existing list on update."
+          },
+          "displayName": {
+            "maxLength": 64,
+            "pattern": "^[a-zA-Z][a-zA-Z0-9\\-.]*$",
+            "type": "string",
+            "description": "Unique, immutable name identifying an Observation Extraction Strategy within the account."
+          },
+          "id": {
+            "pattern": "^mem_obsextraction_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The unique identifier for the Observation Extraction Strategy.",
+            "example": "mem_obsextraction_00000000000000000000000000"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "The ISO 8601 timestamp when the strategy was created.",
+            "format": "date-time",
+            "example": "2026-01-15T10:30:00Z"
+          },
+          "updatedAt": {
+            "type": "string",
+            "description": "The ISO 8601 timestamp when the strategy was last updated.",
+            "format": "date-time",
+            "example": "2026-01-15T11:45:00Z"
+          },
+          "version": {
+            "minimum": 1,
+            "type": "integer",
+            "description": "The current version number of the strategy. Incremented on each successful update.",
+            "example": 3
+          }
+        },
+        "description": "An Observation Extraction Strategy customizes which categories of observation are extracted from\na conversation. It is account scoped and store agnostic."
+      },
+      "ObservationExtractionStrategyList": {
+        "type": "object",
+        "properties": {
+          "observationExtractionStrategies": {
+            "maxItems": 25,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ObservationExtractionStrategy"
+            },
+            "description": "List of Observation Extraction Strategies associated with the Twilio account."
+          },
+          "meta": {
+            "$ref": "#/components/schemas/TwilioMemoryV1Meta"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ObservationExtractionStrategyListAdditionalProperties"
+        },
+        "description": "A page of Observation Extraction Strategies belonging to the Twilio account."
       },
       "MessagingV1ServiceAlphaSender": {
         "type": "object",
@@ -258596,12 +260006,14 @@
             "nullable": true
           },
           "privacy_policy_url": {
+            "maxLength": 2048,
             "type": "string",
             "description": "The URL to the privacy policy for the business or organization.",
             "format": "uri",
             "nullable": true
           },
           "terms_and_conditions_url": {
+            "maxLength": 2048,
             "type": "string",
             "description": "The URL of the terms and conditions for the business or organization.",
             "format": "uri",
@@ -259079,12 +260491,14 @@
             "nullable": true
           },
           "privacy_policy_url": {
+            "maxLength": 2048,
             "type": "string",
             "description": "The URL of the privacy policy for the campaign.",
             "format": "uri",
             "nullable": true
           },
           "terms_and_conditions_url": {
+            "maxLength": 2048,
             "type": "string",
             "description": "The URL of the terms and conditions for the campaign.",
             "format": "uri",
@@ -259457,12 +260871,14 @@
             "nullable": true
           },
           "privacy_policy_url": {
+            "maxLength": 2048,
             "type": "string",
             "description": "The URL of the privacy policy for the campaign.",
             "format": "uri",
             "nullable": true
           },
           "terms_and_conditions_url": {
+            "maxLength": 2048,
             "type": "string",
             "description": "The URL of the terms and conditions for the campaign.",
             "format": "uri",
@@ -260216,6 +261632,42 @@
           },
           "uploadFields": {
             "$ref": "#/components/schemas/MessagingV2PresignedUrlResponseUploadFieldsProperty"
+          }
+        }
+      },
+      "MessagingV2ChannelsAccountMetadataRequest": {
+        "required": [
+          "accountType",
+          "hasAcceptedTos"
+        ],
+        "type": "object",
+        "properties": {
+          "accountType": {
+            "$ref": "#/components/schemas/MessagingV2ChannelsAccountMetadataRequestAccountType"
+          },
+          "hasAcceptedTos": {
+            "type": "boolean",
+            "description": "Whether this account has accepted the WhatsApp terms of service. Only settable by a parent account, and only to true."
+          }
+        }
+      },
+      "MessagingV2ChannelsAccountMetadataResponse": {
+        "type": "object",
+        "properties": {
+          "isParentAccount": {
+            "type": "boolean",
+            "description": "True if this account has no parent account."
+          },
+          "parentAccount": {
+            "type": "string",
+            "description": "The account SID whose terms-of-service acceptance and account type this reflects: this account\u0027s own SID if isParentAccount is true, otherwise the parent\u0027s SID."
+          },
+          "hasAcceptedTos": {
+            "type": "boolean",
+            "description": "Whether parentAccount has accepted the WhatsApp terms of service."
+          },
+          "accountType": {
+            "$ref": "#/components/schemas/MessagingV2ChannelsAccountMetadataResponseAccountType"
           }
         }
       },
@@ -263334,10 +264786,10 @@
       },
       "NumbersV1A2PRegistrationDetailsFetch": {
         "required": [
-          "phoneNumber",
-          "externalPhoneNumberStatus",
+          "accountSid",
           "phoneNumberSid",
-          "accountSid"
+          "externalPhoneNumberStatus",
+          "phoneNumber"
         ],
         "type": "object",
         "properties": {
@@ -263788,10 +265240,10 @@
       },
       "NumbersV2A2PRegistrationDetailsFetch": {
         "required": [
-          "phoneNumber",
-          "externalPhoneNumberStatus",
+          "accountSid",
           "phoneNumberSid",
-          "accountSid"
+          "externalPhoneNumberStatus",
+          "phoneNumber"
         ],
         "type": "object",
         "properties": {
@@ -270211,6 +271663,57 @@
           "dateUpdated": {
             "type": "string",
             "description": "The date that the Inbound Processing Region was updated for this phone number, given in ISO 8601 format.",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "RoutesV3ShortCode": {
+        "type": "object",
+        "properties": {
+          "isoCountryCode": {
+            "type": "string",
+            "description": "The ISO country code of the short code",
+            "nullable": true
+          },
+          "shortCode": {
+            "type": "string",
+            "description": "The short code",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "description": "The absolute URL of the resource.",
+            "format": "uri",
+            "nullable": true
+          },
+          "accountSid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^AC[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The unique SID identifier of the Account.",
+            "nullable": true
+          },
+          "friendlyName": {
+            "type": "string",
+            "description": "A human readable description of the Inbound Processing Region assignment for this short code, up to 64 characters.",
+            "nullable": true
+          },
+          "messagingRegion": {
+            "type": "string",
+            "description": "The Inbound Processing Region used for this short code for messaging.",
+            "nullable": true
+          },
+          "dateCreated": {
+            "type": "string",
+            "description": "The date that this short code was assigned an Inbound Processing Region, given in ISO 8601 format.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dateUpdated": {
+            "type": "string",
+            "description": "The date that the Inbound Processing Region was updated for this short code, given in ISO 8601 format.",
             "format": "date-time",
             "nullable": true
           }
@@ -286507,6 +288010,13 @@
         "format": "uri-map",
         "nullable": true
       },
+      "ConversationsV2CapabilitySubscriptionPrincipalSchema": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ConversationsV2CapabilitySubscriptionPrincipalSchemaAdditionalProperties"
+        },
+        "description": "JSON Schema describing the principal accepted by subscriptions to this Capability."
+      },
       "ConversationsV2ConversationConfiguration": {
         "type": "object",
         "properties": {
@@ -288182,6 +289692,13 @@
           }
         }
       },
+      "OperatorOverrideParameters": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/OperatorOverrideParametersAdditionalProperties"
+        },
+        "description": "Parameter overrides merged into the stored operator\u0027s parameters."
+      },
       "IpMessagingV1ServiceChannelLinks": {
         "type": "object",
         "format": "uri-map",
@@ -288376,10 +289893,10 @@
       },
       "TwilioMemoryV1CommunicationRecipientsItem": {
         "required": [
+          "channel",
           "address",
           "id",
-          "name",
-          "channel"
+          "name"
         ],
         "type": "object",
         "properties": {
@@ -292342,7 +293859,7 @@
           },
           "MessageIntent": {
             "type": "string",
-            "description": ""
+            "description": "Specifies the purpose or use case of the outbound communication. This parameter is used by Twilio\u0027s [Traffic Shaping](https://www.twilio.com/docs/messaging/features/traffic-shaping) and [Compliance Toolkit](https://www.twilio.com/docs/messaging/features/compliance-toolkit) products. Possible values include: \u0060otp\u0060, \u0060notifications\u0060, \u0060marketing\u0060, \u0060fraud\u0060, \u0060security\u0060, \u0060customercare\u0060, \u0060delivery\u0060, \u0060education\u0060, \u0060polling\u0060, \u0060announcements\u0060, and \u0060events\u0060."
           },
           "RiskCheck": {
             "$ref": "#/components/schemas/MessageEnumRiskCheck"
@@ -299083,6 +300600,9 @@
               "$ref": "#/components/schemas/TwilioConversationsV2CreateConversationWithConfigRequestParticipantsItem"
             },
             "description": "Optional list of Participants to create with the Conversation."
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/TwilioConversationsV2CreateConversationWithConfigRequestMetadata"
           }
         }
       },
@@ -299133,12 +300653,24 @@
           "configuration": {
             "$ref": "#/components/schemas/TwilioConversationsV2CreateConversationWithConfig201ResponseConfiguration"
           },
+          "metadata": {
+            "$ref": "#/components/schemas/TwilioConversationsV2CreateConversationWithConfig201ResponseMetadata"
+          },
           "participants": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ConversationsV2Participant"
             },
             "description": "Participants in this Conversation."
+          },
+          "actionId": {
+            "type": "string",
+            "description": "The Action created for the request\u0027s \u0060action\u0060, present only on the create response that\ndispatched one. Poll \u0060GET /v2/Conversations/{ConversationId}/Actions/{ActionId}\u0060 for its status.\n",
+            "example": "conv_action_00000000000000000000000001",
+            "x-twilio": {
+              "betaFeature": "api.conversation.orchestrator.actions",
+              "libraryVisibility": "private"
+            }
           }
         },
         "example": {
@@ -299148,7 +300680,10 @@
           "status": "ACTIVE",
           "name": "Customer Support - Multi-channel",
           "createdAt": "2023-07-01T12:00:00Z",
-          "updatedAt": "2023-07-01T12:30:00Z"
+          "updatedAt": "2023-07-01T12:30:00Z",
+          "metadata": {
+            "zendesk_ticket_id": "TKT-456"
+          }
         }
       },
       "TwilioConversationsV2FetchConversation200Response": {
@@ -299198,12 +300733,24 @@
           "configuration": {
             "$ref": "#/components/schemas/TwilioConversationsV2FetchConversation200ResponseConfiguration"
           },
+          "metadata": {
+            "$ref": "#/components/schemas/TwilioConversationsV2FetchConversation200ResponseMetadata"
+          },
           "participants": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ConversationsV2Participant"
             },
             "description": "Participants in this Conversation."
+          },
+          "actionId": {
+            "type": "string",
+            "description": "The Action created for the request\u0027s \u0060action\u0060, present only on the create response that\ndispatched one. Poll \u0060GET /v2/Conversations/{ConversationId}/Actions/{ActionId}\u0060 for its status.\n",
+            "example": "conv_action_00000000000000000000000001",
+            "x-twilio": {
+              "betaFeature": "api.conversation.orchestrator.actions",
+              "libraryVisibility": "private"
+            }
           }
         },
         "example": {
@@ -299213,7 +300760,10 @@
           "status": "ACTIVE",
           "name": "Customer Support - Multi-channel",
           "createdAt": "2023-07-01T12:00:00Z",
-          "updatedAt": "2023-07-01T12:30:00Z"
+          "updatedAt": "2023-07-01T12:30:00Z",
+          "metadata": {
+            "zendesk_ticket_id": "TKT-456"
+          }
         }
       },
       "TwilioConversationsV2UpdateConversationByIdRequest": {
@@ -299229,6 +300779,9 @@
           },
           "status": {
             "$ref": "#/components/schemas/TwilioConversationsV2UpdateConversationByIdRequestStatus"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/TwilioConversationsV2UpdateConversationByIdRequestMetadata"
           }
         }
       },
@@ -299279,12 +300832,24 @@
           "configuration": {
             "$ref": "#/components/schemas/TwilioConversationsV2UpdateConversationById200ResponseConfiguration"
           },
+          "metadata": {
+            "$ref": "#/components/schemas/TwilioConversationsV2UpdateConversationById200ResponseMetadata"
+          },
           "participants": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ConversationsV2Participant"
             },
             "description": "Participants in this Conversation."
+          },
+          "actionId": {
+            "type": "string",
+            "description": "The Action created for the request\u0027s \u0060action\u0060, present only on the create response that\ndispatched one. Poll \u0060GET /v2/Conversations/{ConversationId}/Actions/{ActionId}\u0060 for its status.\n",
+            "example": "conv_action_00000000000000000000000001",
+            "x-twilio": {
+              "betaFeature": "api.conversation.orchestrator.actions",
+              "libraryVisibility": "private"
+            }
           }
         },
         "example": {
@@ -299294,7 +300859,10 @@
           "status": "ACTIVE",
           "name": "Customer Support - Multi-channel",
           "createdAt": "2023-07-01T12:00:00Z",
-          "updatedAt": "2023-07-01T12:30:00Z"
+          "updatedAt": "2023-07-01T12:30:00Z",
+          "metadata": {
+            "zendesk_ticket_id": "TKT-456"
+          }
         }
       },
       "TwilioConversationsV2DeleteConversationAsync202Response": {
@@ -299338,6 +300906,9 @@
           },
           "configuration": {
             "$ref": "#/components/schemas/TwilioConversationsV2PatchConversationByIdRequestConfiguration"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/TwilioConversationsV2PatchConversationByIdRequestMetadata"
           }
         }
       },
@@ -299388,12 +300959,24 @@
           "configuration": {
             "$ref": "#/components/schemas/TwilioConversationsV2PatchConversationById200ResponseConfiguration"
           },
+          "metadata": {
+            "$ref": "#/components/schemas/TwilioConversationsV2PatchConversationById200ResponseMetadata"
+          },
           "participants": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ConversationsV2Participant"
             },
             "description": "Participants in this Conversation."
+          },
+          "actionId": {
+            "type": "string",
+            "description": "The Action created for the request\u0027s \u0060action\u0060, present only on the create response that\ndispatched one. Poll \u0060GET /v2/Conversations/{ConversationId}/Actions/{ActionId}\u0060 for its status.\n",
+            "example": "conv_action_00000000000000000000000001",
+            "x-twilio": {
+              "betaFeature": "api.conversation.orchestrator.actions",
+              "libraryVisibility": "private"
+            }
           }
         },
         "example": {
@@ -299403,7 +300986,10 @@
           "status": "ACTIVE",
           "name": "Customer Support - Multi-channel",
           "createdAt": "2023-07-01T12:00:00Z",
-          "updatedAt": "2023-07-01T12:30:00Z"
+          "updatedAt": "2023-07-01T12:30:00Z",
+          "metadata": {
+            "zendesk_ticket_id": "TKT-456"
+          }
         }
       },
       "TwilioConversationsV2CreateConversationActionRequest": {
@@ -302933,6 +304519,471 @@
           }
         }
       },
+      "TwilioInsightsV3CreateCustomFieldMapping400Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping400ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3CreateCustomFieldMapping401Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping401ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3CreateCustomFieldMapping403Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping403ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3CreateCustomFieldMapping409Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping409ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3CreateCustomFieldMapping429Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping429ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3CreateCustomFieldMapping500Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3CreateCustomFieldMapping500ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3FetchCustomFieldMappings400Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappings400ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3FetchCustomFieldMappings401Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappings401ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3FetchCustomFieldMappings403Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappings403ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3FetchCustomFieldMappings429Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappings429ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3FetchCustomFieldMappings500Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappings500ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3FetchCustomFieldMappingCapacity401Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappingCapacity401ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3FetchCustomFieldMappingCapacity403Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappingCapacity403ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3FetchCustomFieldMappingCapacity429Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappingCapacity429ResponseParams"
+          }
+        }
+      },
+      "TwilioInsightsV3FetchCustomFieldMappingCapacity500Response": {
+        "required": [
+          "code",
+          "message",
+          "httpStatusCode"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "Twilio-specific error code",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A human readable error message"
+          },
+          "httpStatusCode": {
+            "type": "integer",
+            "description": "HTTP response status code",
+            "format": "int32"
+          },
+          "userError": {
+            "type": "boolean",
+            "description": "Whether the error is a user error (true) or a system error (false)"
+          },
+          "params": {
+            "$ref": "#/components/schemas/TwilioInsightsV3FetchCustomFieldMappingCapacity500ResponseParams"
+          }
+        }
+      },
       "TwilioIntelligenceV2CreateCustomOperatorXWwwFormUrlencodedRequest": {
         "title": "CreateCustomOperatorRequest",
         "required": [
@@ -304561,8 +306612,8 @@
       },
       "TwilioIntelligenceV3FetchOperatorVersion200Response": {
         "required": [
-          "dateCreated",
-          "status"
+          "status",
+          "dateCreated"
         ],
         "type": "object",
         "properties": {
@@ -305529,6 +307580,9 @@
             "type": "string",
             "additionalProperties": false,
             "description": "The \u0060id\u0060 of the Conversation attached to the Operator Result."
+          },
+          "rule": {
+            "$ref": "#/components/schemas/RuleOverride"
           }
         }
       },
@@ -308055,6 +310109,7 @@
         }
       },
       "TwilioMemoryV1PatchStoreRequest": {
+        "minProperties": 1,
         "type": "object",
         "properties": {
           "displayName": {
@@ -308169,6 +310224,7 @@
         }
       },
       "TwilioMemoryV1PatchTraitGroupRequest": {
+        "minProperties": 1,
         "type": "object",
         "properties": {
           "description": {
@@ -308237,6 +310293,34 @@
         },
         "additionalProperties": {
           "$ref": "#/components/schemas/TwilioMemoryV1CreateDataMapping202ResponseAdditionalProperties"
+        }
+      },
+      "TwilioMemoryV1PatchDataMappingRequest": {
+        "minProperties": 1,
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "maxLength": 64,
+            "pattern": "^[a-zA-Z][a-zA-Z0-9-.]*$",
+            "type": "string",
+            "description": "Name of the data mapping."
+          },
+          "description": {
+            "maxLength": 512,
+            "minLength": 1,
+            "type": "string",
+            "description": "A human readable description of this resource, up to 512 characters.",
+            "example": "Syncs customer data from CRM dataset to profile traits"
+          },
+          "isEnabled": {
+            "type": "boolean",
+            "description": "Flag indicating whether the data mapping is active. When true, data will be\ningested and mapped according to the configuration. When false, the data mapping\nwill be inactive and no data will be ingested into the Memory Store.",
+            "default": true,
+            "example": true
+          },
+          "mappingTo": {
+            "$ref": "#/components/schemas/DataMappingToTypes"
+          }
         }
       },
       "TwilioMemoryV1PatchDataMapping202Response": {
@@ -323462,6 +325546,21 @@
         "type": "object",
         "description": "Contains absolute URLs to access the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource) and [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) of this conversation."
       },
+      "ConversationsV2CapabilitySubscriptionPrincipalSchemaProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ConversationsV2CapabilitySubscriptionPrincipalSchemaPropertyAdditionalProperties"
+        },
+        "description": "JSON Schema describing the principal accepted by subscriptions to this Capability."
+      },
+      "ConversationsV2ConversationMetadata": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 512,
+          "type": "string"
+        },
+        "description": "Customer-managed key-value pairs. Maximum 8 entries; keys up to 128 characters allowing alphanumeric characters, periods, underscores, and dashes; values up to 512 characters."
+      },
       "ConversationsV2SendMessagePayloadChannelSettings": {
         "type": "object",
         "additionalProperties": {
@@ -324213,6 +326312,13 @@
         "type": "object",
         "description": "Default value to use in the prompt if no value is provided by the Intelligence Configuration.\nNote: knowledge_base_and_source_ids does not support the default attribute, but all other param types do allow for a default value."
       },
+      "OperatorOverrideParametersProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/OperatorOverrideParametersPropertyAdditionalProperties"
+        },
+        "description": "Parameter overrides merged into the stored operator\u0027s parameters."
+      },
       "IpMessagingV1ServiceChannelLinksProperty": {
         "type": "object"
       },
@@ -324605,6 +326711,14 @@
         "not": {}
       },
       "TraitExtractionStrategyListAdditionalProperties": {
+        "type": "object",
+        "not": {}
+      },
+      "ObservationCategoryAdditionalProperties": {
+        "type": "object",
+        "not": {}
+      },
+      "ObservationExtractionStrategyListAdditionalProperties": {
         "type": "object",
         "not": {}
       },
@@ -325404,7 +327518,7 @@
       },
       "VerifyV2ServiceEntityFactorMetadata": {
         "type": "object",
-        "description": "Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. \u0060{\u0022os\u0022: \u0022Android\u0022}\u0060. Can be up to 1024 characters in length.",
+        "description": "Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. \u0060{\u0022os\u0022: \u0022Android\u0022}\u0060. Can be up to 1024 characters in length. For \u0060passkeys\u0060 factors, it contains the \u0060aaguid\u0060 of the authenticator once the factor is verified, and \u0060date_last_approved\u0060 (ISO 8601) once the factor has been used to approve a challenge.",
         "x-twilio": {
           "pii": {
             "handling": "standard",
@@ -325664,6 +327778,9 @@
         },
         "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
       },
+      "ConversationsV2CapabilitySubscriptionPrincipalSchemaAdditionalProperties": {
+        "type": "object"
+      },
       "ConversationsV2ConversationConfigurationChannelSettings": {
         "type": "object",
         "additionalProperties": {
@@ -325701,6 +327818,9 @@
         "type": "object"
       },
       "OperatorReferenceParametersAdditionalProperties": {
+        "type": "object"
+      },
+      "OperatorOverrideParametersAdditionalProperties": {
         "type": "object"
       },
       "TraitGroupsAdditionalPropertiesAdditionalProperties": {
@@ -327811,12 +329931,24 @@
           "configuration": {
             "$ref": "#/components/schemas/TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfiguration"
           },
+          "metadata": {
+            "$ref": "#/components/schemas/TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemMetadata"
+          },
           "participants": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ConversationsV2Participant"
             },
             "description": "Participants in this Conversation."
+          },
+          "actionId": {
+            "type": "string",
+            "description": "The Action created for the request\u0027s \u0060action\u0060, present only on the create response that\ndispatched one. Poll \u0060GET /v2/Conversations/{ConversationId}/Actions/{ActionId}\u0060 for its status.\n",
+            "example": "conv_action_00000000000000000000000001",
+            "x-twilio": {
+              "betaFeature": "api.conversation.orchestrator.actions",
+              "libraryVisibility": "private"
+            }
           }
         },
         "example": {
@@ -327826,7 +329958,10 @@
           "status": "ACTIVE",
           "name": "Customer Support - Multi-channel",
           "createdAt": "2023-07-01T12:00:00Z",
-          "updatedAt": "2023-07-01T12:30:00Z"
+          "updatedAt": "2023-07-01T12:30:00Z",
+          "metadata": {
+            "zendesk_ticket_id": "TKT-456"
+          }
         }
       },
       "TwilioConversationsV2ListConversationByAccount200ResponseMeta": {
@@ -327866,6 +330001,18 @@
               "type": "string"
             },
             "description": "A list of Conversational Intelligence configuration IDs."
+          },
+          "workflows": {
+            "maxItems": 5,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TwilioConversationsV2CreateConversationWithConfigRequestConfigurationWorkflowsItem"
+            },
+            "description": "The Workflows to associate with this Conversation. Overrides the Configuration\u0027s own.",
+            "x-twilio": {
+              "betaFeature": "api.conversation.orchestrator.actions",
+              "libraryVisibility": "private"
+            }
           }
         },
         "description": "Conversation configuration settings."
@@ -327891,6 +330038,18 @@
             },
             "description": "List of Communication addresses for the Participant."
           }
+        }
+      },
+      "TwilioConversationsV2CreateConversationWithConfigRequestMetadata": {
+        "maxProperties": 8,
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 512,
+          "type": "string"
+        },
+        "description": "Optional customer-managed key-value metadata for this Conversation. Maximum 8 entries; keys up to 128 characters allowing alphanumeric characters, periods, underscores, and dashes; values up to 512 characters.",
+        "example": {
+          "zendesk_ticket_id": "TKT-456"
         }
       },
       "TwilioConversationsV2CreateConversationWithConfig201ResponseConfiguration": {
@@ -327948,6 +330107,14 @@
         },
         "description": "Full configuration settings for this Conversation."
       },
+      "TwilioConversationsV2CreateConversationWithConfig201ResponseMetadata": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 512,
+          "type": "string"
+        },
+        "description": "Customer-managed key-value pairs. Maximum 8 entries; keys up to 128 characters allowing alphanumeric characters, periods, underscores, and dashes; values up to 512 characters."
+      },
       "TwilioConversationsV2FetchConversation200ResponseConfiguration": {
         "type": "object",
         "properties": {
@@ -328002,6 +330169,26 @@
           }
         },
         "description": "Full configuration settings for this Conversation."
+      },
+      "TwilioConversationsV2FetchConversation200ResponseMetadata": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 512,
+          "type": "string"
+        },
+        "description": "Customer-managed key-value pairs. Maximum 8 entries; keys up to 128 characters allowing alphanumeric characters, periods, underscores, and dashes; values up to 512 characters."
+      },
+      "TwilioConversationsV2UpdateConversationByIdRequestMetadata": {
+        "maxProperties": 8,
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 512,
+          "type": "string"
+        },
+        "description": "Customer-managed key-value metadata for this Conversation. Maximum 8 entries; keys up to 128 characters allowing alphanumeric characters, periods, underscores, and dashes; values up to 512 characters.",
+        "example": {
+          "zendesk_ticket_id": "TKT-456"
+        }
       },
       "TwilioConversationsV2UpdateConversationById200ResponseConfiguration": {
         "type": "object",
@@ -328058,6 +330245,14 @@
         },
         "description": "Full configuration settings for this Conversation."
       },
+      "TwilioConversationsV2UpdateConversationById200ResponseMetadata": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 512,
+          "type": "string"
+        },
+        "description": "Customer-managed key-value pairs. Maximum 8 entries; keys up to 128 characters allowing alphanumeric characters, periods, underscores, and dashes; values up to 512 characters."
+      },
       "TwilioConversationsV2DeleteConversationAsync202ResponseAdditionalProperties": {
         "type": "object"
       },
@@ -328086,6 +330281,16 @@
           }
         },
         "description": "Partial configuration update for an existing conversation. Only statusCallbacks can be modified."
+      },
+      "TwilioConversationsV2PatchConversationByIdRequestMetadata": {
+        "maxProperties": 8,
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 512,
+          "type": "string",
+          "nullable": true
+        },
+        "description": "Merge patch for customer-managed metadata (max 8 entries after merge). Provided keys are added or updated; keys set to null are removed; keys not mentioned are preserved."
       },
       "TwilioConversationsV2PatchConversationById200ResponseConfiguration": {
         "type": "object",
@@ -328141,6 +330346,14 @@
           }
         },
         "description": "Full configuration settings for this Conversation."
+      },
+      "TwilioConversationsV2PatchConversationById200ResponseMetadata": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 512,
+          "type": "string"
+        },
+        "description": "Customer-managed key-value pairs. Maximum 8 entries; keys up to 128 characters allowing alphanumeric characters, periods, underscores, and dashes; values up to 512 characters."
       },
       "TwilioConversationsV2CreateConversationAction202ResponseRelated": {
         "type": "object",
@@ -329841,6 +332054,111 @@
         "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
       },
       "TwilioInsightsV3FetchQueryJobResults500ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3CreateCustomFieldMapping400ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3CreateCustomFieldMapping401ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3CreateCustomFieldMapping403ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3CreateCustomFieldMapping409ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3CreateCustomFieldMapping429ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3CreateCustomFieldMapping500ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3FetchCustomFieldMappings400ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3FetchCustomFieldMappings401ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3FetchCustomFieldMappings403ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3FetchCustomFieldMappings429ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3FetchCustomFieldMappings500ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3FetchCustomFieldMappingCapacity401ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3FetchCustomFieldMappingCapacity403ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3FetchCustomFieldMappingCapacity429ResponseParams": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map of parameters related to the error, for example, a \u0060params.twilioErrorCodeUrl\u0060 might hold a URL or link to additional information"
+      },
+      "TwilioInsightsV3FetchCustomFieldMappingCapacity500ResponseParams": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
@@ -336214,7 +338532,7 @@
       },
       "TwilioVerifyV2UpdatePasskeysFactor200ResponseMetadata": {
         "type": "object",
-        "description": "Custom metadata associated with the factor.",
+        "description": "Metadata associated with the factor. For \u0060passkeys\u0060 factors, it contains the \u0060aaguid\u0060 of the authenticator once the factor is verified, and \u0060date_last_approved\u0060 (ISO 8601) once the factor has been used to approve a challenge.",
         "x-twilio": {
           "shortDescription": "Metadata of the factor.",
           "pii": {
@@ -337532,6 +339850,9 @@
           }
         }
       },
+      "ConversationsV2CapabilitySubscriptionPrincipalSchemaPropertyAdditionalProperties": {
+        "type": "object"
+      },
       "ConversationsV2SendMessagePayloadChannelSettingsAdditionalProperties": {
         "type": "object"
       },
@@ -337561,6 +339882,9 @@
         "type": "object"
       },
       "OperatorReferenceParametersPropertyAdditionalProperties": {
+        "type": "object"
+      },
+      "OperatorOverrideParametersPropertyAdditionalProperties": {
         "type": "object"
       },
       "TraitGroupsAdditionalPropertiesPropertyAdditionalProperties": {
@@ -337701,6 +340025,33 @@
           }
         },
         "description": "Full configuration settings for this Conversation."
+      },
+      "TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemMetadata": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 512,
+          "type": "string"
+        },
+        "description": "Customer-managed key-value pairs. Maximum 8 entries; keys up to 128 characters allowing alphanumeric characters, periods, underscores, and dashes; values up to 512 characters."
+      },
+      "TwilioConversationsV2CreateConversationWithConfigRequestConfigurationWorkflowsItem": {
+        "title": "ConversationWorkflow",
+        "required": [
+          "flowId"
+        ],
+        "type": "object",
+        "properties": {
+          "flowId": {
+            "pattern": "^FW[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The Studio Flow to run.",
+            "example": "FW00000000000000000000000000000000"
+          }
+        },
+        "description": "A Workflow associated with a Conversation.",
+        "example": {
+          "flowId": "FW00000000000000000000000000000000"
+        }
       },
       "TwilioConversationsV2CreateConversationWithConfigRequestParticipantsItemAddressesItem": {
         "required": [
@@ -338987,6 +341338,78 @@
             {
               "value": "POST",
               "name": "Post"
+            }
+          ]
+        }
+      },
+      "ConversationsV2CapabilityStatus": {
+        "enum": [
+          "ACTIVE",
+          "DEPRECATED"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Lifecycle status of the Capability.",
+        "example": "ACTIVE",
+        "x-ms-enum": {
+          "name": "ConversationsV2CapabilityStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ACTIVE",
+              "name": "Active"
+            },
+            {
+              "value": "DEPRECATED",
+              "name": "Deprecated"
+            }
+          ]
+        }
+      },
+      "ConversationsV2CapabilityVisibility": {
+        "enum": [
+          "PUBLIC",
+          "INTERNAL"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Whether the Capability is available publicly or only to internal consumers.",
+        "example": "PUBLIC",
+        "x-ms-enum": {
+          "name": "ConversationsV2CapabilityVisibility",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "PUBLIC",
+              "name": "PublicValue"
+            },
+            {
+              "value": "INTERNAL",
+              "name": "InternalValue"
+            }
+          ]
+        }
+      },
+      "ConversationsV2CreateCapabilityRequestVisibility": {
+        "enum": [
+          "PUBLIC",
+          "INTERNAL"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Whether the Capability is available publicly or only to internal consumers.",
+        "example": "PUBLIC",
+        "x-ms-enum": {
+          "name": "ConversationsV2CreateCapabilityRequestVisibility",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "PUBLIC",
+              "name": "PublicValue"
+            },
+            {
+              "value": "INTERNAL",
+              "name": "InternalValue"
             }
           ]
         }
@@ -341212,6 +343635,57 @@
             {
               "value": "MULTI_USE",
               "name": "MultiUse"
+            }
+          ]
+        }
+      },
+      "MessagingV2ChannelsAccountMetadataRequestAccountType": {
+        "enum": [
+          "ISV",
+          "DIRECT"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Whether this account is an ISV (independent software vendor) or a direct customer. Only settable by a parent account.",
+        "x-ms-enum": {
+          "name": "MessagingV2ChannelsAccountMetadataRequestAccountType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ISV",
+              "name": "Isv"
+            },
+            {
+              "value": "DIRECT",
+              "name": "Direct"
+            }
+          ]
+        }
+      },
+      "MessagingV2ChannelsAccountMetadataResponseAccountType": {
+        "enum": [
+          "ISV",
+          "DIRECT",
+          "NOT_SET_YET"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "parentAccount\u0027s declared account type, or NOT_SET_YET if never set.",
+        "x-ms-enum": {
+          "name": "MessagingV2ChannelsAccountMetadataResponseAccountType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ISV",
+              "name": "Isv"
+            },
+            {
+              "value": "DIRECT",
+              "name": "Direct"
+            },
+            {
+              "value": "NOT_SET_YET",
+              "name": "NotSetYet"
             }
           ]
         }
@@ -349826,6 +352300,22 @@
           }
         }
       },
+      "UnprocessableContent": {
+        "description": "Unprocessable Content",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/TwilioMemoryV1TwilioError"
+            },
+            "example": {
+              "code": 20422,
+              "message": "Unprocessable Content",
+              "more_info": "https://www.twilio.com/docs/api/errors/20422",
+              "status": 422
+            }
+          }
+        }
+      },
       "twilio_memory_v1_Conflict": {
         "description": "Conflict",
         "content": {
@@ -350582,6 +353072,26 @@
           "pattern": "^mem_traitextraction_[0-7][0-9a-z]{25}$",
           "type": "string",
           "example": "mem_traitextraction_00000000000000000000000000"
+        }
+      },
+      "IdempotencyKey": {
+        "name": "Idempotency-Key",
+        "in": "header",
+        "description": "A client-generated key that lets this request be safely retried without double-submitting the batch. Repeating the same request with the same key returns the original operation instead of starting a new one, along with an \u0060Idempotent-Replayed\u0060 response header set to \u0060true\u0060. Reusing a key for a different store or profile set is rejected with \u0060422\u0060, because the key identifies one batch and returning the earlier operation would report success for profiles that would never be deleted; use a new key for a new batch. Keys are retained for the lifetime of the underlying deletion workflow, after which the same key is accepted as a new request.",
+        "schema": {
+          "maxLength": 255,
+          "type": "string"
+        }
+      },
+      "ObservationExtractionStrategyId": {
+        "name": "observationExtractionStrategyId",
+        "in": "path",
+        "description": "A unique Observation Extraction Strategy ID using Twilio Type ID (TTID) format",
+        "required": true,
+        "schema": {
+          "pattern": "^mem_obsextraction_[0-7][0-9a-z]{25}$",
+          "type": "string",
+          "example": "mem_obsextraction_00000000000000000000000000"
         }
       },
       "XTwilioApiVersion": {
@@ -352278,6 +354788,26 @@
           "type": "integer"
         }
       },
+      "IdempotentReplayed": {
+        "description": "Present with the value \u0060true\u0060 only when this request replayed an earlier one under the same \u0060Idempotency-Key\u0060, so the operation returned belongs to that earlier request and no new deletion was started. Absent means this request started the deletion.",
+        "schema": {
+          "enum": [
+            "true"
+          ],
+          "type": "string",
+          "additionalProperties": false,
+          "x-ms-enum": {
+            "name": "IdempotentReplayed",
+            "modelAsString": false,
+            "values": [
+              {
+                "value": "true",
+                "name": "TrueValue"
+              }
+            ]
+          }
+        }
+      },
       "Canonical-Profile-Id": {
         "description": "The canonical profile ID associated with the requested resource. If provided, this header indicates that the requested profile is merged to the canonical profile ID.",
         "schema": {
@@ -352361,6 +354891,11 @@
         "type": "http",
         "scheme": "basic"
       },
+      "access_token_bearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "access_token"
+      },
       "twilio_flex_v2_accountSid_authToken": {
         "type": "http",
         "scheme": "basic"
@@ -352382,7 +354917,7 @@
         "type": "http",
         "scheme": "basic"
       },
-      "access_token_bearer": {
+      "twilio_iam_v1_access_token_bearer": {
         "type": "http",
         "scheme": "bearer",
         "bearerFormat": "access_token"
@@ -352861,6 +355396,9 @@
       "name": "Api20100401TwimlSession"
     },
     {
+      "name": "Api20100401TwimlProcess"
+    },
+    {
       "name": "Api20100401Usage"
     },
     {
@@ -353098,6 +355636,10 @@
     {
       "name": "ConversationsV2Action",
       "description": "Perform actions within a Conversation. Actions trigger side effects such as sending messages and return 202 Accepted."
+    },
+    {
+      "name": "ConversationsV2Capability",
+      "description": "Register cross-domain capabilities that can be subscribed to by Twilio accounts."
     },
     {
       "name": "ConversationsV2Operation",
@@ -353479,6 +356021,10 @@
     {
       "name": "TwilioInsightsAsync",
       "description": "Twilio Insights asynchronous QueryJobs resource (long-running query operations)."
+    },
+    {
+      "name": "TwilioInsightsConfig",
+      "description": "Twilio Insights Config API for custom measure field mapping registration."
     },
     {
       "name": "IntelligenceV2CustomOperator"
@@ -354062,6 +356608,9 @@
     },
     {
       "name": "RoutesV3PhoneNumber"
+    },
+    {
+      "name": "RoutesV3ShortCode"
     },
     {
       "name": "RoutesV3RegionalPhoneNumber"

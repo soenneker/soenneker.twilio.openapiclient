@@ -20,6 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string AccountId { get; set; }
 #endif
+        /// <summary>The Action created for the request&apos;s `action`, present only on the create response thatdispatched one. Poll `GET /v2/Conversations/{ConversationId}/Actions/{ActionId}` for its status.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ActionId { get; set; }
+#nullable restore
+#else
+        public string ActionId { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Full configuration settings for this Conversation.</summary>
@@ -47,6 +55,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #nullable restore
 #else
         public string Id { get; set; }
+#endif
+        /// <summary>Customer-managed key-value pairs. Maximum 8 entries; keys up to 128 characters allowing alphanumeric characters, periods, underscores, and dashes; values up to 512 characters.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversation200ResponseMetadata? Metadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversation200ResponseMetadata Metadata { get; set; }
 #endif
         /// <summary>Conversation name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,10 +110,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "accountId", n => { AccountId = n.GetStringValue(); } },
+                { "actionId", n => { ActionId = n.GetStringValue(); } },
                 { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversation200ResponseConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversation200ResponseConfiguration.CreateFromDiscriminatorValue); } },
                 { "configurationId", n => { ConfigurationId = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversation200ResponseMetadata>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversation200ResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Participant>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Participant.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationStatus>(); } },
@@ -112,10 +130,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("accountId", AccountId);
+            writer.WriteStringValue("actionId", ActionId);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversation200ResponseConfiguration>("configuration", Configuration);
             writer.WriteStringValue("configurationId", ConfigurationId);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversation200ResponseMetadata>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Participant>("participants", Participants);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationStatus>("status", Status);
