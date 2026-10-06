@@ -4,7 +4,6 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds.SmsVerificationChecks;
 using Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds.SmsVerifications;
-using Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds.VoiceVerificationChecks;
 using Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds.VoiceVerifications;
 using System.Collections.Generic;
 using System.IO;
@@ -27,11 +26,6 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds
         public global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds.SmsVerifications.SmsVerificationsRequestBuilder SmsVerifications
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds.SmsVerifications.SmsVerificationsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The VoiceVerificationChecks property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds.VoiceVerificationChecks.VoiceVerificationChecksRequestBuilder VoiceVerificationChecks
-        {
-            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds.VoiceVerificationChecks.VoiceVerificationChecksRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The VoiceVerifications property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.CallerIds.VoiceVerifications.VoiceVerificationsRequestBuilder VoiceVerifications

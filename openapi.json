@@ -12052,7 +12052,7 @@
           {
             "name": "Status",
             "in": "query",
-            "description": "The status of the resources to read. Can be: `init`, `in-progress`, or `completed`.",
+            "description": "The status of the resources to read. Can be: `init`, `in-progress`, or `completed`. Starting from September 30th, 2026, the default is `in-progress`. To read completed conferences, set `Status` to `completed`.",
             "schema": {
               "$ref": "#/components/schemas/conference_enum_status"
             },
@@ -76322,6 +76322,30 @@
                               "agent2"
                             ]
                           },
+                          "traitExtractionStrategyIds": {
+                            "maxItems": 1,
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "description": "A list of Trait Extraction Strategy IDs.",
+                            "x-twilio": {
+                              "libraryVisibility": "private",
+                              "betaFeature": "api.memory.2026Q3"
+                            }
+                          },
+                          "observationExtractionStrategyIds": {
+                            "maxItems": 1,
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "description": "A list of Observation Extraction Strategy IDs.",
+                            "x-twilio": {
+                              "libraryVisibility": "private",
+                              "betaFeature": "api.memory.2026Q4"
+                            }
+                          },
                           "memoryExtractionEnabled": {
                             "type": "boolean",
                             "description": "Whether memory extraction is enabled for conversations under this configuration. Defaults to false.",
@@ -76832,6 +76856,30 @@
                         "agent1",
                         "agent2"
                       ]
+                    },
+                    "traitExtractionStrategyIds": {
+                      "maxItems": 1,
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "A list of Trait Extraction Strategy IDs.",
+                      "x-twilio": {
+                        "libraryVisibility": "private",
+                        "betaFeature": "api.memory.2026Q3"
+                      }
+                    },
+                    "observationExtractionStrategyIds": {
+                      "maxItems": 1,
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "A list of Observation Extraction Strategy IDs.",
+                      "x-twilio": {
+                        "libraryVisibility": "private",
+                        "betaFeature": "api.memory.2026Q4"
+                      }
                     },
                     "memoryExtractionEnabled": {
                       "type": "boolean",
@@ -77781,6 +77829,30 @@
                                   "agent2"
                                 ]
                               },
+                              "traitExtractionStrategyIds": {
+                                "maxItems": 1,
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                },
+                                "description": "A list of Trait Extraction Strategy IDs.",
+                                "x-twilio": {
+                                  "libraryVisibility": "private",
+                                  "betaFeature": "api.memory.2026Q3"
+                                }
+                              },
+                              "observationExtractionStrategyIds": {
+                                "maxItems": 1,
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                },
+                                "description": "A list of Observation Extraction Strategy IDs.",
+                                "x-twilio": {
+                                  "libraryVisibility": "private",
+                                  "betaFeature": "api.memory.2026Q4"
+                                }
+                              },
                               "memoryExtractionEnabled": {
                                 "type": "boolean",
                                 "description": "Whether memory extraction is enabled for conversations under this configuration. Defaults to false.",
@@ -77922,6 +77994,30 @@
                           "type": "string"
                         },
                         "description": "A list of Conversational Intelligence configuration IDs."
+                      },
+                      "traitExtractionStrategyIds": {
+                        "maxItems": 1,
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "A list of Trait Extraction Strategy IDs.",
+                        "x-twilio": {
+                          "libraryVisibility": "private",
+                          "betaFeature": "api.memory.2026Q3"
+                        }
+                      },
+                      "observationExtractionStrategyIds": {
+                        "maxItems": 1,
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "A list of Observation Extraction Strategy IDs.",
+                        "x-twilio": {
+                          "libraryVisibility": "private",
+                          "betaFeature": "api.memory.2026Q4"
+                        }
                       },
                       "workflows": {
                         "maxItems": 5,
@@ -78127,6 +78223,30 @@
                             "agent2"
                           ]
                         },
+                        "traitExtractionStrategyIds": {
+                          "maxItems": 1,
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "A list of Trait Extraction Strategy IDs.",
+                          "x-twilio": {
+                            "libraryVisibility": "private",
+                            "betaFeature": "api.memory.2026Q3"
+                          }
+                        },
+                        "observationExtractionStrategyIds": {
+                          "maxItems": 1,
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "A list of Observation Extraction Strategy IDs.",
+                          "x-twilio": {
+                            "libraryVisibility": "private",
+                            "betaFeature": "api.memory.2026Q4"
+                          }
+                        },
                         "memoryExtractionEnabled": {
                           "type": "boolean",
                           "description": "Whether memory extraction is enabled for conversations under this configuration. Defaults to false.",
@@ -78326,6 +78446,30 @@
                             "agent1",
                             "agent2"
                           ]
+                        },
+                        "traitExtractionStrategyIds": {
+                          "maxItems": 1,
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "A list of Trait Extraction Strategy IDs.",
+                          "x-twilio": {
+                            "libraryVisibility": "private",
+                            "betaFeature": "api.memory.2026Q3"
+                          }
+                        },
+                        "observationExtractionStrategyIds": {
+                          "maxItems": 1,
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "A list of Observation Extraction Strategy IDs.",
+                          "x-twilio": {
+                            "libraryVisibility": "private",
+                            "betaFeature": "api.memory.2026Q4"
+                          }
                         },
                         "memoryExtractionEnabled": {
                           "type": "boolean",
@@ -78559,6 +78703,30 @@
                             "agent1",
                             "agent2"
                           ]
+                        },
+                        "traitExtractionStrategyIds": {
+                          "maxItems": 1,
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "A list of Trait Extraction Strategy IDs.",
+                          "x-twilio": {
+                            "libraryVisibility": "private",
+                            "betaFeature": "api.memory.2026Q3"
+                          }
+                        },
+                        "observationExtractionStrategyIds": {
+                          "maxItems": 1,
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "A list of Observation Extraction Strategy IDs.",
+                          "x-twilio": {
+                            "libraryVisibility": "private",
+                            "betaFeature": "api.memory.2026Q4"
+                          }
                         },
                         "memoryExtractionEnabled": {
                           "type": "boolean",
@@ -78921,6 +79089,30 @@
                             "agent2"
                           ]
                         },
+                        "traitExtractionStrategyIds": {
+                          "maxItems": 1,
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "A list of Trait Extraction Strategy IDs.",
+                          "x-twilio": {
+                            "libraryVisibility": "private",
+                            "betaFeature": "api.memory.2026Q3"
+                          }
+                        },
+                        "observationExtractionStrategyIds": {
+                          "maxItems": 1,
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "description": "A list of Observation Extraction Strategy IDs.",
+                          "x-twilio": {
+                            "libraryVisibility": "private",
+                            "betaFeature": "api.memory.2026Q4"
+                          }
+                        },
                         "memoryExtractionEnabled": {
                           "type": "boolean",
                           "description": "Whether memory extraction is enabled for conversations under this configuration. Defaults to false.",
@@ -79099,8 +79291,8 @@
                     },
                     "type": {
                       "type": "string",
-                      "description": "The type of action. Accepted values: SEND_MESSAGE.",
-                      "example": "SEND_MESSAGE"
+                      "description": "The type of action: action-send-message or action-start-flow.",
+                      "example": "action-send-message"
                     },
                     "status": {
                       "$ref": "#/components/schemas/conversations.v2.action_status"
@@ -79115,7 +79307,7 @@
                       "additionalProperties": {
                         "type": "string"
                       },
-                      "description": "Named identifiers from downstream. For SEND_MESSAGE:\n- messageSid: The downstream message SID (present when PENDING or COMPLETED)\n- communicationId: The Communication ID (present when COMPLETED)\n",
+                      "description": "Named identifiers from downstream. For SEND_MESSAGE:\n- messageSid: The downstream message SID (present when PENDING or COMPLETED)\n- communicationId: The Communication ID (present when COMPLETED)\nFor START_FLOW:\n- executionSid: The Studio Flow execution SID (present when COMPLETED)\n",
                       "example": {
                         "messageSid": "SM1234567890abcdef1234567890abcdef",
                         "communicationId": "conv_communication_00000000000000000000000000"
@@ -79138,11 +79330,17 @@
                       "description": "Timestamp when the action reached a terminal status.",
                       "format": "date-time",
                       "example": "2026-03-30T10:30:02Z"
+                    },
+                    "failureReason": {
+                      "type": "string",
+                      "description": "Human-readable failure reason. Null unless status is FAILED.",
+                      "nullable": true,
+                      "example": "Could not find flow FW00000000000000000000000000000000"
                     }
                   },
                   "example": {
                     "id": "conv_action_00000000000000000000000000",
-                    "type": "SEND_MESSAGE",
+                    "type": "action-send-message",
                     "status": "COMPLETED",
                     "conversationId": "conv_conversation_00000000000000000000000000",
                     "related": {
@@ -79253,8 +79451,8 @@
                     },
                     "type": {
                       "type": "string",
-                      "description": "The type of action. Accepted values: SEND_MESSAGE.",
-                      "example": "SEND_MESSAGE"
+                      "description": "The type of action: action-send-message or action-start-flow.",
+                      "example": "action-send-message"
                     },
                     "status": {
                       "$ref": "#/components/schemas/conversations.v2.action_status"
@@ -79269,7 +79467,7 @@
                       "additionalProperties": {
                         "type": "string"
                       },
-                      "description": "Named identifiers from downstream. For SEND_MESSAGE:\n- messageSid: The downstream message SID (present when PENDING or COMPLETED)\n- communicationId: The Communication ID (present when COMPLETED)\n",
+                      "description": "Named identifiers from downstream. For SEND_MESSAGE:\n- messageSid: The downstream message SID (present when PENDING or COMPLETED)\n- communicationId: The Communication ID (present when COMPLETED)\nFor START_FLOW:\n- executionSid: The Studio Flow execution SID (present when COMPLETED)\n",
                       "example": {
                         "messageSid": "SM1234567890abcdef1234567890abcdef",
                         "communicationId": "conv_communication_00000000000000000000000000"
@@ -79292,11 +79490,17 @@
                       "description": "Timestamp when the action reached a terminal status.",
                       "format": "date-time",
                       "example": "2026-03-30T10:30:02Z"
+                    },
+                    "failureReason": {
+                      "type": "string",
+                      "description": "Human-readable failure reason. Null unless status is FAILED.",
+                      "nullable": true,
+                      "example": "Could not find flow FW00000000000000000000000000000000"
                     }
                   },
                   "example": {
                     "id": "conv_action_00000000000000000000000000",
-                    "type": "SEND_MESSAGE",
+                    "type": "action-send-message",
                     "status": "COMPLETED",
                     "conversationId": "conv_conversation_00000000000000000000000000",
                     "related": {
@@ -80462,6 +80666,12 @@
                   },
                   "channelId": {
                     "type": "string"
+                  },
+                  "resourceId": {
+                    "minLength": 1,
+                    "type": "string",
+                    "description": "External resource identifier for this Communication (e.g. MessageSid for SMS/RCS/WhatsApp, TranscriptionSid + MessageIndex for Voice). If a Communication with the same resourceId already exists in the Conversation, it is updated instead of a new one being created.",
+                    "example": "SM12345678901234567890123456789012"
                   },
                   "recipients": {
                     "title": "CreateCommunicationInConversationRequestRecipients",
@@ -102714,6 +102924,131 @@
                       ]
                     }
                   },
+                  "readWithHdAudioDownsampled": {
+                    "value": {
+                      "meta": {
+                        "page": 0,
+                        "page_size": 25,
+                        "first_page_url": "https://insights.twilio.com/v1/Voice/Summaries?PageSize=25&Page=0",
+                        "previous_page_url": null,
+                        "next_page_url": null,
+                        "key": "call_summaries",
+                        "url": "https://insights.twilio.com/v1/Voice/Summaries?PageSize=25&Page=0"
+                      },
+                      "call_summaries": [
+                        {
+                          "call_sid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                          "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                          "created_time": "2021-08-25T05:10:25Z",
+                          "start_time": "2021-08-25T05:10:25Z",
+                          "end_time": "2021-08-25T05:10:45Z",
+                          "duration": 20,
+                          "connect_duration": 20,
+                          "call_type": "client",
+                          "call_state": "completed",
+                          "answered_by": "human",
+                          "from": {
+                            "caller": "client:TBBXXXXXXXXXXXX",
+                            "connection": "twilio_sdk"
+                          },
+                          "to": {
+                            "callee": "+15555555556",
+                            "carrier": "AT&T Wireless",
+                            "connection": "mobile",
+                            "number_prefix": "1555",
+                            "location": {
+                              "lat": 33.42767,
+                              "lon": -86.886475
+                            },
+                            "country_code": "US"
+                          },
+                          "processing_state": "complete",
+                          "sdk_edge": null,
+                          "sip_edge": null,
+                          "client_edge": {
+                            "properties": {
+                              "media_region": "us1",
+                              "signaling_region": "us1",
+                              "twilio_media_ip": "54.xxx.xx.xxx",
+                              "external_media_ip": "54.xxx.xx.xxx",
+                              "edge_location": "xxxxxx",
+                              "direction": "inbound"
+                            },
+                            "metrics": {
+                              "inbound": {
+                                "codec": 111,
+                                "codec_name": "opus",
+                                "packets_received": 252,
+                                "packets_lost": 0,
+                                "packets_loss_percentage": 0.0,
+                                "jitter": {
+                                  "max": 5.60994,
+                                  "avg": 0.933334
+                                }
+                              },
+                              "outbound": {
+                                "codec": 111,
+                                "codec_name": "opus",
+                                "packets_sent": 229,
+                                "packets_lost": 0,
+                                "packets_loss_percentage": 0.0,
+                                "jitter": {
+                                  "max": 0.960786,
+                                  "avg": 0.399859
+                                }
+                              }
+                            }
+                          },
+                          "carrier_edge": {
+                            "properties": {
+                              "media_region": "us1",
+                              "signaling_region": "us1",
+                              "edge_location": "xxxxx",
+                              "direction": "inbound"
+                            },
+                            "metrics": {
+                              "inbound": {
+                                "codec": 0,
+                                "codec_name": "pcmu",
+                                "packets_received": 202,
+                                "packets_lost": 0,
+                                "packets_loss_percentage": 0.0,
+                                "jitter": {
+                                  "max": 1.48209,
+                                  "avg": 0.483035
+                                }
+                              },
+                              "outbound": {
+                                "codec": 0,
+                                "codec_name": "pcmu",
+                                "packets_sent": 218,
+                                "packets_lost": 0,
+                                "packets_loss_percentage": 0.0,
+                                "jitter": {
+                                  "max": 0.51868,
+                                  "avg": 0.364434
+                                }
+                              }
+                            }
+                          },
+                          "tags": [
+                            "hd_audio",
+                            "downsampled"
+                          ],
+                          "properties": {
+                            "last_sip_response_num": 200,
+                            "pdd_ms": 121,
+                            "disconnected_by": "callee",
+                            "direction": "inbound"
+                          },
+                          "trust": null,
+                          "annotation": null,
+                          "agent_session_summaries": null,
+                          "url": "https://insights.twilio.com/v1/Voice/Summaries"
+                        }
+                      ]
+                    }
+                  },
                   "readWithSubaccount": {
                     "value": {
                       "meta": {
@@ -118045,8 +118380,8 @@
               "application/json": {
                 "schema": {
                   "required": [
-                    "status",
-                    "dateCreated"
+                    "dateCreated",
+                    "status"
                   ],
                   "type": "object",
                   "properties": {
@@ -134871,8 +135206,7 @@
                     "meta": {
                       "pageSize": 50,
                       "nextToken": "eyJlYXN0ZXIiOiJlZ2cifQ",
-                      "previousToken": "eyJlYXN0ZXIiOiJlZ2cifQ",
-                      "key": null
+                      "previousToken": "eyJlYXN0ZXIiOiJlZ2cifQ"
                     }
                   }
                 }
@@ -156615,7 +156949,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/messaging.v2.channels_sender_response"
+                  "$ref": "#/components/schemas/messaging.v2.channels_sender_update_response"
                 },
                 "examples": {
                   "update": {
@@ -156668,7 +157002,8 @@
                         "terms_of_service_url": null,
                         "accent_color": null,
                         "phone_numbers": null
-                      }
+                      },
+                      "display_name_status": "updating"
                     }
                   }
                 }
@@ -162944,6 +163279,16 @@
         ],
         "summary": "Initiate SMS verification for a caller ID",
         "operationId": "twilio_numbers_v1_CreateSmsVerification",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/numbers.v1.sms_verification_request"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "201": {
             "description": "SMS verification initiated",
@@ -162975,8 +163320,18 @@
         ],
         "summary": "Check SMS verification code",
         "operationId": "twilio_numbers_v1_CreateSmsVerificationCheck",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/numbers.v1.sms_verification_check_request"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
-          "200": {
+          "201": {
             "description": "Verification check result",
             "content": {
               "application/json": {
@@ -163006,6 +163361,16 @@
         ],
         "summary": "Initiate voice verification for a caller ID",
         "operationId": "twilio_numbers_v1_CreateVoiceVerification",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/numbers.v1.voice_verification_request"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "201": {
             "description": "Voice verification initiated",
@@ -163013,37 +163378,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/numbers.v1.voice_verification"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "twilio_numbers_v1_accountSid_authToken": [ ]
-          }
-        ],
-        "servers": [
-          {
-            "url": "https://numbers.twilio.com"
-          }
-        ]
-      }
-    },
-    "/twilio_numbers_v1/v1/CallerIds/VoiceVerificationChecks": {
-      "post": {
-        "tags": [
-          "V1CallerIds"
-        ],
-        "summary": "Check voice verification code",
-        "operationId": "twilio_numbers_v1_CreateVoiceVerificationCheck",
-        "responses": {
-          "200": {
-            "description": "Verification check result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/numbers.v1.voice_verification_check"
                 }
               }
             }
@@ -170916,7 +171250,7 @@
                       "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
                       "refresh_token": "ghjbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
                       "id_token": "eyJhbdGciOiIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
-                      "expires_in": 1438315200000,
+                      "expires_in": 3600,
                       "token_type": "bearer"
                     }
                   }
@@ -171378,6 +171712,43 @@
                 }
               }
             }
+          }
+        },
+        "security": [
+          {
+            "twilio_preview_accountSid_authToken": [ ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://preview.twilio.com"
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "PreviewHostedNumbersAuthorizationDocument"
+        ],
+        "summary": "Delete the AuthorizationDocument and remove any associations with HostedNumberOrders.",
+        "description": "Delete the AuthorizationDocument and remove any associations with HostedNumberOrders.",
+        "operationId": "twilio_preview_DeleteAuthorizationDocumentRequest",
+        "parameters": [
+          {
+            "name": "Sid",
+            "in": "path",
+            "description": "The SID of the AuthorizationDocument resource to delete.",
+            "required": true,
+            "schema": {
+              "maxLength": 34,
+              "minLength": 34,
+              "pattern": "^PX[0-9a-fA-F]{32}$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The resource was deleted successfully."
           }
         },
         "security": [
@@ -183020,6 +183391,244 @@
                       "accountSid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                       "friendlyName": "friendly_name",
                       "voiceRegion": "au1",
+                      "messagingRegion": "us1",
+                      "dateCreated": "2015-07-30T20:00:00Z",
+                      "dateUpdated": "2015-07-30T20:00:00Z"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_routes_v3_accountSid_authToken": [ ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://routes.twilio.com"
+          }
+        ]
+      },
+      "x-twilio": {
+        "defaultOutputProperties": [
+          "friendlyName",
+          "dateCreated"
+        ],
+        "pathType": "instance"
+      }
+    },
+    "/twilio_routes_v3/v3/ShortCodes/{isoCountryCode}/{shortCode}": {
+      "description": "",
+      "post": {
+        "tags": [
+          "RoutesV3ShortCode"
+        ],
+        "summary": "Assign an Processing Region to a short code.",
+        "description": "Assign an Processing Region to a short code. Short codes only support a Messaging region; Voice is not supported.",
+        "operationId": "twilio_routes_v3_UpdateShortCode",
+        "parameters": [
+          {
+            "name": "isoCountryCode",
+            "in": "path",
+            "description": "The ISO country code of the short code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "shortCode",
+            "in": "path",
+            "description": "The short code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "title": "UpdateShortCodeRequest",
+                "type": "object",
+                "properties": {
+                  "messagingRegion": {
+                    "type": "string",
+                    "description": "The Processing Region used for this short code for messaging"
+                  },
+                  "friendlyName": {
+                    "type": "string",
+                    "description": "A human readable description of this resource, up to 64 characters."
+                  }
+                }
+              },
+              "examples": {
+                "update": {
+                  "value": {
+                    "friendlyName": "friendly_name",
+                    "messagingRegion": "us1"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "description": "Specify the origin(s) allowed to access the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "Specify the HTTP methods allowed when accessing the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "POST, OPTIONS"
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Specify the headers allowed when accessing the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Content-Type, Authorization"
+              },
+              "Access-Control-Allow-Credentials": {
+                "description": "Indicates whether the browser should include credentials",
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "Access-Control-Expose-Headers": {
+                "description": "Headers exposed to the client",
+                "schema": {
+                  "type": "string",
+                  "example": "X-Custom-Header1, X-Custom-Header2"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/routes.v3.short_code"
+                },
+                "examples": {
+                  "update": {
+                    "value": {
+                      "isoCountryCode": "US",
+                      "shortCode": "12345",
+                      "url": "https://routes.twilio.com/v3/ShortCodes/US/12345",
+                      "accountSid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                      "friendlyName": "friendly_name",
+                      "messagingRegion": "us1",
+                      "dateCreated": "2015-07-30T20:00:00Z",
+                      "dateUpdated": "2015-07-30T20:00:00Z"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_routes_v3_accountSid_authToken": [ ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://routes.twilio.com"
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "RoutesV3ShortCode"
+        ],
+        "summary": "Fetch the Processing Region assigned to a short code.",
+        "description": "Fetch the Processing Region assigned to a short code. Short codes only support a Messaging region; Voice is not supported.",
+        "operationId": "twilio_routes_v3_FetchShortCode",
+        "parameters": [
+          {
+            "name": "isoCountryCode",
+            "in": "path",
+            "description": "The ISO country code of the short code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "shortCode",
+            "in": "path",
+            "description": "The short code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "description": "Specify the origin(s) allowed to access the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "Specify the HTTP methods allowed when accessing the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "POST, OPTIONS"
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Specify the headers allowed when accessing the resource",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Content-Type, Authorization"
+              },
+              "Access-Control-Allow-Credentials": {
+                "description": "Indicates whether the browser should include credentials",
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "Access-Control-Expose-Headers": {
+                "description": "Headers exposed to the client",
+                "schema": {
+                  "type": "string",
+                  "example": "X-Custom-Header1, X-Custom-Header2"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/routes.v3.short_code"
+                },
+                "examples": {
+                  "fetch": {
+                    "value": {
+                      "isoCountryCode": "US",
+                      "shortCode": "12345",
+                      "url": "https://routes.twilio.com/v3/ShortCodes/US/12345",
+                      "accountSid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                      "friendlyName": "friendly_name",
                       "messagingRegion": "us1",
                       "dateCreated": "2015-07-30T20:00:00Z",
                       "dateUpdated": "2015-07-30T20:00:00Z"
@@ -234961,6 +235570,9 @@
         "security": [
           {
             "twilio_verify_v2_accountSid_authToken": [ ]
+          },
+          {
+            "twilio_verify_v2_access_token_bearer": [ ]
           }
         ],
         "servers": [
@@ -241882,6 +242494,9 @@
         "security": [
           {
             "twilio_verify_v2_accountSid_authToken": [ ]
+          },
+          {
+            "twilio_verify_v2_access_token_bearer": [ ]
           }
         ],
         "servers": [
@@ -242274,6 +242889,9 @@
         "security": [
           {
             "twilio_verify_v2_accountSid_authToken": [ ]
+          },
+          {
+            "twilio_verify_v2_access_token_bearer": [ ]
           }
         ],
         "servers": [
@@ -242700,6 +243318,9 @@
         "security": [
           {
             "twilio_verify_v2_accountSid_authToken": [ ]
+          },
+          {
+            "twilio_verify_v2_access_token_bearer": [ ]
           }
         ],
         "servers": [
@@ -243175,6 +243796,9 @@
         "security": [
           {
             "twilio_verify_v2_accountSid_authToken": [ ]
+          },
+          {
+            "twilio_verify_v2_access_token_bearer": [ ]
           }
         ],
         "servers": [
@@ -260772,6 +261396,72 @@
           }
         }
       },
+      "PermissionWithSidOnly": {
+        "required": [
+          "permissionSid"
+        ],
+        "type": "object",
+        "properties": {
+          "permissionSid": {
+            "type": "string"
+          }
+        }
+      },
+      "ConfigureAccountPermissionsBody": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PermissionWithSidOnly"
+        }
+      },
+      "AccountPermission": {
+        "type": "object",
+        "properties": {
+          "accountSid": {
+            "type": "string"
+          },
+          "permissionSid": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "AccountPermissions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AccountPermission"
+        }
+      },
+      "Permission": {
+        "required": [
+          "continents",
+          "permissionSid",
+          "name",
+          "prefix"
+        ],
+        "type": "object",
+        "properties": {
+          "continents": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "permissionSid": {
+            "type": "string"
+          },
+          "prefix": {
+            "type": "string"
+          }
+        }
+      },
+      "Permissions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Permission"
+        }
+      },
       "accounts.v1.messaging_geopermissions": {
         "type": "object",
         "properties": {
@@ -274750,7 +275440,7 @@
         "required": [
           "id",
           "name",
-          "domain",
+          "domainId",
           "status",
           "visibility",
           "policyRef",
@@ -274772,9 +275462,9 @@
             "description": "Human-readable Capability name.",
             "example": "Email Event Exhaust"
           },
-          "domain": {
+          "domainId": {
             "type": "string",
-            "description": "Domain that owns the Capability.",
+            "description": "Identifier of the domain that owns the Capability.",
             "example": "Email"
           },
           "description": {
@@ -274852,7 +275542,7 @@
       "conversations.v2.create_capability_request": {
         "required": [
           "name",
-          "domain",
+          "domainId",
           "policyRef",
           "schemaRef"
         ],
@@ -274864,10 +275554,10 @@
             "description": "Human-readable Capability name.",
             "example": "Email Event Exhaust"
           },
-          "domain": {
+          "domainId": {
             "minLength": 1,
             "type": "string",
-            "description": "Domain that owns the Capability.",
+            "description": "Identifier of the domain that owns the Capability.",
             "example": "Email"
           },
           "description": {
@@ -274989,6 +275679,30 @@
                   "agent1",
                   "agent2"
                 ]
+              },
+              "traitExtractionStrategyIds": {
+                "maxItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "A list of Trait Extraction Strategy IDs.",
+                "x-twilio": {
+                  "libraryVisibility": "private",
+                  "betaFeature": "api.memory.2026Q3"
+                }
+              },
+              "observationExtractionStrategyIds": {
+                "maxItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "A list of Observation Extraction Strategy IDs.",
+                "x-twilio": {
+                  "libraryVisibility": "private",
+                  "betaFeature": "api.memory.2026Q4"
+                }
               },
               "memoryExtractionEnabled": {
                 "type": "boolean",
@@ -275561,8 +276275,8 @@
           },
           "type": {
             "type": "string",
-            "description": "The type of action. Accepted values: SEND_MESSAGE.",
-            "example": "SEND_MESSAGE"
+            "description": "The type of action: action-send-message or action-start-flow.",
+            "example": "action-send-message"
           },
           "status": {
             "$ref": "#/components/schemas/conversations.v2.action_status"
@@ -275577,7 +276291,7 @@
             "additionalProperties": {
               "type": "string"
             },
-            "description": "Named identifiers from downstream. For SEND_MESSAGE:\n- messageSid: The downstream message SID (present when PENDING or COMPLETED)\n- communicationId: The Communication ID (present when COMPLETED)\n",
+            "description": "Named identifiers from downstream. For SEND_MESSAGE:\n- messageSid: The downstream message SID (present when PENDING or COMPLETED)\n- communicationId: The Communication ID (present when COMPLETED)\nFor START_FLOW:\n- executionSid: The Studio Flow execution SID (present when COMPLETED)\n",
             "example": {
               "messageSid": "SM1234567890abcdef1234567890abcdef",
               "communicationId": "conv_communication_00000000000000000000000000"
@@ -275600,11 +276314,17 @@
             "description": "Timestamp when the action reached a terminal status.",
             "format": "date-time",
             "example": "2026-03-30T10:30:02Z"
+          },
+          "failureReason": {
+            "type": "string",
+            "description": "Human-readable failure reason. Null unless status is FAILED.",
+            "nullable": true,
+            "example": "Could not find flow FW00000000000000000000000000000000"
           }
         },
         "example": {
           "id": "conv_action_00000000000000000000000000",
-          "type": "SEND_MESSAGE",
+          "type": "action-send-message",
           "status": "COMPLETED",
           "conversationId": "conv_conversation_00000000000000000000000000",
           "related": {
@@ -276022,6 +276742,35 @@
           "timeout": 30
         }
       },
+      "conversations.v2.create_conversation_action_request": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_send_message_action"
+          },
+          {
+            "$ref": "#/components/schemas/conversations.v2.start_conversation_start_flow_action"
+          }
+        ],
+        "description": "The single action dispatched once the Conversation is created, selected by `type`.",
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "SEND_MESSAGE": "#/components/schemas/conversations.v2.start_conversation_send_message_action",
+            "START_FLOW": "#/components/schemas/conversations.v2.start_conversation_start_flow_action",
+            "conversations.v2.start_conversation_send_message_action": "#/components/schemas/conversations.v2.start_conversation_send_message_action",
+            "conversations.v2.start_conversation_start_flow_action": "#/components/schemas/conversations.v2.start_conversation_start_flow_action"
+          }
+        },
+        "example": {
+          "type": "START_FLOW",
+          "payload": {
+            "flowId": "FW00000000000000000000000000000000",
+            "parameters": {
+              "orderNumber": "12345"
+            }
+          }
+        }
+      },
       "conversations.v2.start_conversation_action_request": {
         "oneOf": [
           {
@@ -276127,28 +276876,6 @@
           }
         }
       },
-      "conversations.v2.update_start_conversation_action_request": {
-        "required": [
-          "callStatus"
-        ],
-        "type": "object",
-        "properties": {
-          "callStatus": {
-            "$ref": "#/components/schemas/conversations.v2.call_status"
-          },
-          "callId": {
-            "pattern": "^CA[0-9a-fA-F]{32}$",
-            "type": "string",
-            "description": "The Call SID of the outbound call.",
-            "example": "CA00000000000000000000000000000000"
-          }
-        },
-        "description": "Reports the outcome of an outbound call back to its Action.",
-        "example": {
-          "callStatus": "ANSWERED",
-          "callId": "CA00000000000000000000000000000000"
-        }
-      },
       "conversations.v2.start_conversation_action": {
         "required": [
           "id",
@@ -276170,7 +276897,7 @@
             "additionalProperties": {
               "type": "string"
             },
-            "description": "Named identifiers, populated as the asynchronous work completes and varying by action type:\n- conversationId: The created Conversation\n- channelId: The downstream channel identifier, for SEND_MESSAGE\n- executionSid: The Studio Flow execution started for the Conversation, for START_FLOW\n- callId: The Call SID of the outbound call, for CALL and for START_FLOW once its Flow reports back\n\nAbsent from the 202 response (returned as an empty map).\n",
+            "description": "Named identifiers, populated as the asynchronous work completes and varying by action type:\n- conversationId: The created Conversation\n- channelId: The downstream channel identifier, for SEND_MESSAGE\n- executionSid: The Studio Flow execution started for the Conversation, for START_FLOW\n- callId: The Call SID of the outbound call, for CALL\n\nAbsent from the 202 response (returned as an empty map).\n",
             "example": {
               "conversationId": "conv_conversation_00000000000000000000000000",
               "channelId": "SM1234567890abcdef1234567890abcdef"
@@ -276869,18 +277596,6 @@
         ],
         "type": "string",
         "description": "Channel type for sending a Communication. Note: VOICE is receive-only and not supported for send operations."
-      },
-      "conversations.v2.call_status": {
-        "enum": [
-          "ANSWERED",
-          "BUSY",
-          "NO_ANSWER",
-          "FAILED",
-          "CANCELED"
-        ],
-        "type": "string",
-        "description": "Outcome of an outbound call placed by a CALL StartConversation Action.",
-        "example": "ANSWERED"
       },
       "conversations.v2.recipient_delivery_status": {
         "enum": [
@@ -282746,97 +283461,6 @@
           }
         }
       },
-      "iam.v1.Accounts.UserRole": {
-        "type": "object",
-        "properties": {
-          "sid": {
-            "pattern": "IX[0-9a-f]{32}",
-            "type": "string",
-            "description": "Unique Twilio sid of the account role",
-            "format": "IamRoleSid",
-            "example": "IX8b69703c2a65ec199f061b0ae29745b1"
-          },
-          "name": {
-            "type": "string",
-            "description": "The name of the role",
-            "example": "Admin"
-          }
-        },
-        "description": "Account user role"
-      },
-      "iam.v1.Accounts.UserInvitation": {
-        "type": "object",
-        "properties": {
-          "accountSid": {
-            "pattern": "AC[0-9a-f]{32}",
-            "type": "string",
-            "description": "Unique Twilio sid of the account that the user was invited to",
-            "format": "AccountSid",
-            "example": "AC114547f9207efd8c49aa1e70bfd8c191"
-          },
-          "sid": {
-            "pattern": "NF[0-9a-f]{32}",
-            "type": "string",
-            "description": "Unique Twilio notification sid of the invitation",
-            "format": "IdentityNotificationSid",
-            "example": "NFbfd75767416fbd8418bedafce743700a"
-          },
-          "friendlyName": {
-            "type": "string",
-            "description": "Friendly name of the account"
-          },
-          "type": {
-            "enum": [
-              "Account",
-              "Subaccount"
-            ],
-            "type": "string",
-            "description": "Type of the account"
-          },
-          "email": {
-            "type": "string",
-            "description": "The recipient's email address",
-            "format": "email",
-            "example": "recipient@twilio.com"
-          },
-          "roles": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/iam.v1.Accounts.UserRole"
-            },
-            "description": "The roles assigned to the user in the account"
-          },
-          "status": {
-            "enum": [
-              "PENDING",
-              "EXPIRED"
-            ],
-            "type": "string",
-            "description": "The status of the invitation"
-          },
-          "invitedBy": {
-            "type": "string",
-            "description": "The sender's email address",
-            "format": "email",
-            "example": "sender@twilio.com"
-          },
-          "dateCreated": {
-            "type": "string",
-            "description": "The date and time when the invitation was created",
-            "format": "date-time"
-          },
-          "dateLastSent": {
-            "type": "string",
-            "description": "The date and time when the invitation was last sent",
-            "format": "date-time"
-          },
-          "tokenExpired": {
-            "type": "boolean",
-            "description": "Indicates whether the invitation token has expired"
-          }
-        },
-        "description": "Account user invitation"
-      },
       "iam.v1.DisconnectSocialIdentityRequest": {
         "required": [
           "provider"
@@ -283427,7 +284051,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Tags applied to calls by Voice Insights analysis indicating a condition that could result in subjective degradation of the call quality.",
+            "description": "[Tags](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-tags) that Voice Insights analysis applies to calls. They indicate a condition that may influence the subjective experience of call audio quality.",
             "nullable": true
           },
           "url": {
@@ -284491,7 +285115,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Tags applied to calls by Voice Insights analysis indicating a condition that could result in subjective degradation of the call quality.",
+            "description": "[Tags](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-tags) that Voice Insights analysis applies to calls. They indicate a condition that may influence the subjective experience of call audio quality.",
             "nullable": true
           },
           "url": {
@@ -286602,8 +287226,8 @@
       "IntelligenceOperatorEntityMetadata": {
         "required": [
           "operatorId",
-          "field",
-          "sourceType"
+          "sourceType",
+          "field"
         ],
         "type": "object",
         "properties": {
@@ -287752,17 +288376,17 @@
       "TextResult": {
         "title": "Text result",
         "required": [
-          "metadata",
-          "accountId",
-          "operator",
-          "executionDetails",
-          "result",
-          "outputFormat",
-          "conversationId",
           "referenceIds",
+          "result",
           "intelligenceConfiguration",
           "dateCreated",
-          "id"
+          "outputFormat",
+          "metadata",
+          "id",
+          "conversationId",
+          "operator",
+          "accountId",
+          "executionDetails"
         ],
         "type": "object",
         "properties": {
@@ -287838,17 +288462,17 @@
       "JSONResult": {
         "title": "JSON result",
         "required": [
-          "metadata",
-          "accountId",
-          "operator",
-          "executionDetails",
-          "result",
-          "outputFormat",
-          "conversationId",
           "referenceIds",
+          "result",
           "intelligenceConfiguration",
           "dateCreated",
-          "id"
+          "outputFormat",
+          "metadata",
+          "id",
+          "conversationId",
+          "operator",
+          "accountId",
+          "executionDetails"
         ],
         "type": "object",
         "properties": {
@@ -287916,17 +288540,17 @@
       "ClassificationResult": {
         "title": "Classification result",
         "required": [
-          "metadata",
-          "accountId",
-          "operator",
-          "executionDetails",
-          "result",
-          "outputFormat",
-          "conversationId",
           "referenceIds",
+          "result",
           "intelligenceConfiguration",
           "dateCreated",
-          "id"
+          "outputFormat",
+          "metadata",
+          "id",
+          "conversationId",
+          "operator",
+          "accountId",
+          "executionDetails"
         ],
         "type": "object",
         "properties": {
@@ -288002,17 +288626,17 @@
       "ExtractionResult": {
         "title": "Extraction result",
         "required": [
-          "metadata",
-          "accountId",
-          "operator",
-          "executionDetails",
-          "result",
-          "outputFormat",
-          "conversationId",
           "referenceIds",
+          "result",
           "intelligenceConfiguration",
           "dateCreated",
-          "id"
+          "outputFormat",
+          "metadata",
+          "id",
+          "conversationId",
+          "operator",
+          "accountId",
+          "executionDetails"
         ],
         "type": "object",
         "properties": {
@@ -288912,8 +289536,8 @@
       },
       "LanguageOperatorVersion": {
         "required": [
-          "status",
-          "dateCreated"
+          "dateCreated",
+          "status"
         ],
         "type": "object",
         "properties": {
@@ -288975,8 +289599,8 @@
       "CreateOrUpdateOperatorRequest": {
         "required": [
           "displayName",
-          "outputFormat",
-          "prompt"
+          "prompt",
+          "outputFormat"
         ],
         "type": "object",
         "properties": {
@@ -291735,11 +292359,11 @@
       },
       "Knowledge": {
         "required": [
-          "status",
-          "updatedAt",
-          "name",
           "createdAt",
-          "id"
+          "updatedAt",
+          "id",
+          "name",
+          "status"
         ],
         "type": "object",
         "properties": {
@@ -292186,12 +292810,12 @@
       },
       "KnowledgeBase": {
         "required": [
-          "status",
-          "updatedAt",
-          "version",
-          "displayName",
           "createdAt",
-          "id"
+          "updatedAt",
+          "displayName",
+          "id",
+          "version",
+          "status"
         ],
         "type": "object",
         "properties": {
@@ -292436,16 +293060,16 @@
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "maxLength": 128,
+            "type": "string",
+            "description": "The identifier of the created or affected resource."
+          },
           "type": {
             "enum": [
               "RESOURCE_ID"
             ],
             "type": "string"
-          },
-          "id": {
-            "maxLength": 128,
-            "type": "string",
-            "description": "The identifier of the created or affected resource."
           }
         }
       },
@@ -293983,9 +294607,9 @@
           "source": {
             "maxLength": 100,
             "minLength": 1,
-            "pattern": "^[a-zA-Z0-9 _.-]+$",
+            "pattern": "^[a-zA-Z0-9 _./-]+$",
             "type": "string",
-            "description": "The source system that generated this observation. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.",
+            "description": "The source system that generated this observation. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.",
             "example": "conversational-intelligence"
           },
           "conversationIds": {
@@ -294001,9 +294625,9 @@
       },
       "ObservationInfo": {
         "required": [
-          "updatedAt",
           "createdAt",
-          "id"
+          "id",
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -294023,9 +294647,9 @@
           "source": {
             "maxLength": 100,
             "minLength": 1,
-            "pattern": "^[a-zA-Z0-9 _.-]+$",
+            "pattern": "^[a-zA-Z0-9 _./-]+$",
             "type": "string",
-            "description": "The source system that generated this observation. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.",
+            "description": "The source system that generated this observation. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.",
             "example": "conversational-intelligence"
           },
           "conversationIds": {
@@ -294064,9 +294688,9 @@
         "properties": {
           "source": {
             "maxLength": 100,
-            "pattern": "^[a-zA-Z0-9 _.-]+$",
+            "pattern": "^[a-zA-Z0-9 _./-]+$",
             "type": "string",
-            "description": "The source system that generated the summary. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.",
+            "description": "The source system that generated the summary. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.",
             "example": "conversations"
           },
           "content": {
@@ -294090,20 +294714,20 @@
       },
       "SummaryInfo": {
         "required": [
-          "updatedAt",
-          "occurredAt",
-          "conversationId",
-          "content",
           "createdAt",
-          "id"
+          "content",
+          "updatedAt",
+          "id",
+          "conversationId",
+          "occurredAt"
         ],
         "type": "object",
         "properties": {
           "source": {
             "maxLength": 100,
-            "pattern": "^[a-zA-Z0-9 _.-]+$",
+            "pattern": "^[a-zA-Z0-9 _./-]+$",
             "type": "string",
-            "description": "The source system that generated the summary. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.",
+            "description": "The source system that generated the summary. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.",
             "example": "conversations"
           },
           "content": {
@@ -294258,10 +294882,10 @@
             "type": "array",
             "items": {
               "required": [
-                "channel",
-                "address",
                 "id",
-                "name"
+                "channel",
+                "name",
+                "address"
               ],
               "type": "object",
               "properties": {
@@ -294766,11 +295390,11 @@
       },
       "Store": {
         "required": [
-          "status",
-          "version",
-          "intelligenceServiceId",
           "displayName",
-          "id"
+          "id",
+          "version",
+          "status",
+          "intelligenceServiceId"
         ],
         "type": "object",
         "properties": {
@@ -294883,9 +295507,9 @@
       },
       "IdentityResolutionSettings": {
         "required": [
+          "identifierConfigs",
           "matchingRules",
-          "version",
-          "identifierConfigs"
+          "version"
         ],
         "type": "object",
         "properties": {
@@ -295640,13 +296264,13 @@
       },
       "DataMapping": {
         "required": [
+          "createdAt",
           "mappingTo",
           "updatedAt",
-          "version",
           "displayName",
           "mappingFrom",
-          "createdAt",
-          "id"
+          "id",
+          "version"
         ],
         "type": "object",
         "properties": {
@@ -295719,12 +296343,12 @@
       },
       "RecallObservationInfo": {
         "required": [
-          "updatedAt",
-          "occurredAt",
-          "content",
-          "source",
           "createdAt",
-          "id"
+          "content",
+          "updatedAt",
+          "id",
+          "source",
+          "occurredAt"
         ],
         "type": "object",
         "properties": {
@@ -295744,9 +296368,9 @@
           "source": {
             "maxLength": 100,
             "minLength": 1,
-            "pattern": "^[a-zA-Z0-9 _.-]+$",
+            "pattern": "^[a-zA-Z0-9 _./-]+$",
             "type": "string",
-            "description": "The source system that generated this observation. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.",
+            "description": "The source system that generated this observation. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.",
             "example": "conversational-intelligence"
           },
           "conversationIds": {
@@ -295785,20 +296409,20 @@
       },
       "RecallSummaryInfo": {
         "required": [
-          "updatedAt",
-          "occurredAt",
-          "conversationId",
-          "content",
           "createdAt",
-          "id"
+          "content",
+          "updatedAt",
+          "id",
+          "conversationId",
+          "occurredAt"
         ],
         "type": "object",
         "properties": {
           "source": {
             "maxLength": 100,
-            "pattern": "^[a-zA-Z0-9 _.-]+$",
+            "pattern": "^[a-zA-Z0-9 _./-]+$",
             "type": "string",
-            "description": "The source system that generated the summary. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.",
+            "description": "The source system that generated the summary. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.",
             "example": "conversations"
           },
           "content": {
@@ -295848,9 +296472,9 @@
         "properties": {
           "source": {
             "maxLength": 100,
-            "pattern": "^[a-zA-Z0-9 _.-]+$",
+            "pattern": "^[a-zA-Z0-9 _./-]+$",
             "type": "string",
-            "description": "The source system that generated the summary. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.",
+            "description": "The source system that generated the summary. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.",
             "example": "conversations"
           },
           "content": {
@@ -296004,9 +296628,9 @@
           "source": {
             "maxLength": 100,
             "minLength": 1,
-            "pattern": "^[a-zA-Z0-9 _.-]+$",
+            "pattern": "^[a-zA-Z0-9 _./-]+$",
             "type": "string",
-            "description": "The source system that generated this observation. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.",
+            "description": "The source system that generated this observation. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.",
             "example": "conversational-intelligence"
           },
           "conversationIds": {
@@ -296022,9 +296646,9 @@
       },
       "ObservationCreateRequest": {
         "required": [
-          "source",
+          "occurredAt",
           "content",
-          "occurredAt"
+          "source"
         ],
         "type": "object",
         "properties": {
@@ -296044,9 +296668,9 @@
           "source": {
             "maxLength": 100,
             "minLength": 1,
-            "pattern": "^[a-zA-Z0-9 _.-]+$",
+            "pattern": "^[a-zA-Z0-9 _./-]+$",
             "type": "string",
-            "description": "The source system that generated this observation. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.",
+            "description": "The source system that generated this observation. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.",
             "example": "conversational-intelligence"
           },
           "conversationIds": {
@@ -296472,12 +297096,12 @@
       },
       "TraitExtractionStrategy": {
         "required": [
-          "updatedAt",
-          "version",
-          "storeId",
-          "displayName",
           "createdAt",
-          "id"
+          "updatedAt",
+          "displayName",
+          "id",
+          "version",
+          "storeId"
         ],
         "type": "object",
         "properties": {
@@ -296723,11 +297347,11 @@
       },
       "ObservationExtractionStrategy": {
         "required": [
-          "updatedAt",
-          "version",
-          "displayName",
           "createdAt",
-          "id"
+          "updatedAt",
+          "displayName",
+          "id",
+          "version"
         ],
         "type": "object",
         "properties": {
@@ -298875,6 +299499,90 @@
           "profile": {
             "$ref": "#/components/schemas/messaging.v2.channels_sender.profile_generic_response"
           },
+          "pending_display_name": {
+            "type": "string",
+            "description": "WhatsApp only. The display name the most recent change applies to — awaiting Meta review, approved by Meta and awaiting re-registration, or, once `pending_display_name_status` is `COMPLETED`, the name now in effect (identical to `name`). Absent when no display name change has been made, and once a completed change stops being reported.\n",
+            "nullable": true
+          },
+          "pending_display_name_status": {
+            "enum": [
+              "PENDING_REVIEW",
+              "APPROVED",
+              "DECLINED",
+              "PIN_MISMATCH",
+              "REGISTRATION_FAILED",
+              "EXPIRED",
+              "COMPLETED"
+            ],
+            "type": "string",
+            "description": "WhatsApp only. The status of the most recent display name change. `PENDING_REVIEW`, `APPROVED` and `DECLINED` are reported by Meta. `PIN_MISMATCH` and `REGISTRATION_FAILED` mean Meta approved the name but it could not be applied; `EXPIRED` means Meta's 14-day window to apply an approved name elapsed. In all three cases, re-submit the same `profile.name` to retry. `COMPLETED` means the name was approved and applied — `name` now returns it. A `COMPLETED` change is reported for 14 days after it completes and is absent afterwards, so treat its presence as \"recently completed\" rather than a permanent flag; use `pending_display_name_status_date` to tell how recent. Absent when no display name change has been made.\n",
+            "nullable": true
+          },
+          "pending_display_name_status_date": {
+            "type": "string",
+            "description": "WhatsApp only. The date and time in UTC when `pending_display_name_status` last changed, specified in ISO 8601 format. Absent whenever `pending_display_name_status` is absent, so the three `pending_display_name*` fields are always present or absent together.\n",
+            "format": "date-time",
+            "nullable": true
+          },
+          "properties": {
+            "$ref": "#/components/schemas/messaging.v2.channels_sender.properties"
+          },
+          "offline_reasons": {
+            "$ref": "#/components/schemas/messaging.v2.channels_sender.offline_reasons"
+          },
+          "compliance": {
+            "$ref": "#/components/schemas/messaging.v2.rcs_compliance_response"
+          },
+          "url": {
+            "type": "string",
+            "description": "The URL of the resource.",
+            "format": "uri",
+            "nullable": true
+          }
+        }
+      },
+      "messaging.v2.channels_sender_update_response": {
+        "type": "object",
+        "properties": {
+          "sid": {
+            "maxLength": 34,
+            "minLength": 34,
+            "pattern": "^XE[0-9a-fA-F]{32}$",
+            "type": "string",
+            "description": "The SID of the sender.",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/channels_sender_enum_status"
+          },
+          "sender_id": {
+            "$ref": "#/components/schemas/messaging.v2.channels_sender.fields.sender_id"
+          },
+          "friendly_name": {
+            "type": "string",
+            "description": "Optional display label for the sender in the Twilio Console.",
+            "nullable": true
+          },
+          "configuration": {
+            "$ref": "#/components/schemas/messaging.v2.channels_sender.configuration"
+          },
+          "webhook": {
+            "$ref": "#/components/schemas/messaging.v2.channels_sender.webhook"
+          },
+          "profile": {
+            "$ref": "#/components/schemas/messaging.v2.channels_sender.profile_generic_response"
+          },
+          "display_name_status": {
+            "enum": [
+              "updating",
+              "no_change",
+              "pending_review",
+              "error"
+            ],
+            "type": "string",
+            "description": "WhatsApp only. The outcome of the display name operation in this request. Present only when the request included `profile.name`. `updating` — accepted; either submitted to Meta for review, or, when Meta had already approved this exact name, routed straight to re-registration. `no_change` — the name already matches the sender's active display name; nothing was submitted to Meta. `pending_review` — the same name is already under review at Meta; the existing request continues unchanged. `error` — the display name could not be processed, while other profile fields in the same request were still applied. Returned with a 202 and carries no error code or message. This covers every failure mode, including the case where Meta accepted the name but tracking could not be started — poll `pending_display_name_status` to establish the real state rather than assuming the name was rejected. When `profile.name` is the only field in the request, the failure is returned as an error response with a specific code instead of this status.\n",
+            "nullable": true
+          },
           "properties": {
             "$ref": "#/components/schemas/messaging.v2.channels_sender.properties"
           },
@@ -299189,8 +299897,10 @@
         "type": "object",
         "properties": {
           "name": {
+            "maxLength": 255,
+            "minLength": 1,
             "type": "string",
-            "description": "The name of the sender. Required for WhatsApp senders and must follow [Meta's display name guidelines](https://www.facebook.com/business/help/757569725593362).",
+            "description": "The name of the sender. Required for WhatsApp senders and must follow [Meta's display name guidelines](https://www.facebook.com/business/help/757569725593362). On update, a WhatsApp sender's name is not changed synchronously: it is submitted to Meta for review, and `profile.name` continues to report the current active name until Meta approves the new one and the sender is automatically re-registered. Track progress with `pending_display_name_status` on Fetch Sender, and see `display_name_status` on the update response for the immediate outcome. Re-submitting the same name is how you retry applying a name Meta has already approved, for example after correcting the sender's two-step verification PIN. Meta permits a limited number of display name changes per 30-day period.\n",
             "nullable": true
           },
           "about": {
@@ -302561,9 +303271,9 @@
       },
       "numbers.v1.a2p_registration_details_fetch": {
         "required": [
-          "accountSid",
-          "phoneNumberSid",
           "externalPhoneNumberStatus",
+          "phoneNumberSid",
+          "accountSid",
           "phoneNumber"
         ],
         "type": "object",
@@ -302932,21 +303642,103 @@
           }
         }
       },
-      "numbers.v1.voice_verification_check": {
+      "numbers.v1.sms_verification_request": {
+        "required": [
+          "to"
+        ],
         "type": "object",
         "properties": {
           "to": {
             "type": "string",
-            "description": "The phone number that was verified in E.164 format."
+            "description": "The phone number to verify in E.164 format."
           },
-          "callerIdSid": {
-            "maxLength": 34,
-            "minLength": 34,
-            "pattern": "^PN[0-9a-fA-F]{32}$",
+          "locale": {
             "type": "string",
-            "description": "The Caller ID SID created upon successful verification.",
-            "nullable": true,
-            "x-field-extra-annotation": "@JsonAlias({\"caller_id_sid\"})"
+            "description": "The locale for the verification SMS message."
+          },
+          "friendly_name": {
+            "type": "string",
+            "description": "A human-readable name for the caller ID.",
+            "x-field-extra-annotation": "@JsonAlias({\"friendlyName\"})"
+          }
+        }
+      },
+      "numbers.v1.sms_verification_check_request": {
+        "required": [
+          "to",
+          "verification_code"
+        ],
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string",
+            "description": "The phone number being verified in E.164 format."
+          },
+          "verification_code": {
+            "type": "string",
+            "description": "The 6 character verification code to check.",
+            "x-field-extra-annotation": "@JsonAlias({\"verificationCode\"})"
+          },
+          "friendly_name": {
+            "type": "string",
+            "description": "A human-readable name for the caller ID.",
+            "x-field-extra-annotation": "@JsonAlias({\"friendlyName\"})"
+          }
+        }
+      },
+      "numbers.v1.voice_verification_request": {
+        "required": [
+          "phone_number"
+        ],
+        "type": "object",
+        "properties": {
+          "phone_number": {
+            "type": "string",
+            "description": "The phone number to verify in E.164 format.",
+            "x-field-extra-annotation": "@JsonAlias({\"phoneNumber\"})"
+          },
+          "friendly_name": {
+            "type": "string",
+            "description": "A human-readable name for the caller ID.",
+            "x-field-extra-annotation": "@JsonAlias({\"friendlyName\"})"
+          },
+          "custom_code": {
+            "type": "string",
+            "description": "A custom verification code to use instead of a generated one.",
+            "x-field-extra-annotation": "@JsonAlias({\"customCode\"})"
+          },
+          "call_delay": {
+            "type": "string",
+            "description": "Number of seconds to delay the verification call (0-60).",
+            "x-field-extra-annotation": "@JsonAlias({\"callDelay\"})"
+          },
+          "status_callback": {
+            "type": "string",
+            "description": "URL to receive status callback events.",
+            "format": "uri",
+            "x-field-extra-annotation": "@JsonAlias({\"statusCallback\"})"
+          },
+          "status_callback_method": {
+            "enum": [
+              "HEAD",
+              "GET",
+              "POST",
+              "PATCH",
+              "PUT",
+              "DELETE"
+            ],
+            "type": "string",
+            "description": "HTTP method for status callback requests.",
+            "x-field-extra-annotation": "@JsonAlias({\"statusCallbackMethod\"})"
+          },
+          "extension": {
+            "type": "string",
+            "description": "Phone extension to dial after connecting."
+          },
+          "custom_success_message": {
+            "type": "string",
+            "description": "Custom message to play after successful verification.",
+            "x-field-extra-annotation": "@JsonAlias({\"customSuccessMessage\"})"
           }
         }
       },
@@ -303028,9 +303820,9 @@
       },
       "numbers.v2.a2p_registration_details_fetch": {
         "required": [
-          "accountSid",
-          "phoneNumberSid",
           "externalPhoneNumberStatus",
+          "phoneNumberSid",
+          "accountSid",
           "phoneNumber"
         ],
         "type": "object",
@@ -306080,6 +306872,16 @@
           }
         }
       },
+      "numbers.v2.caller_id_update_request": {
+        "type": "object",
+        "properties": {
+          "friendly_name": {
+            "type": "string",
+            "description": "A human-readable name for this caller ID.",
+            "x-field-extra-annotation": "@JsonAlias({\"friendlyName\"})"
+          }
+        }
+      },
       "numbers.v3.hostedNumbers.hostedNumberOrder": {
         "type": "object",
         "properties": {
@@ -306521,6 +307323,12 @@
           },
           "isPurgatory": {
             "type": "boolean"
+          },
+          "returnTo": {
+            "type": "string",
+            "description": "The post-signup redirect URL from the signed state, present only when it matched the 1Console return allowlist.",
+            "format": "uri",
+            "nullable": true
           }
         }
       },
@@ -306729,6 +307537,10 @@
           },
           "isVerificationRequired": {
             "type": "boolean"
+          },
+          "authProvider": {
+            "type": "string",
+            "description": "Identity provider that authenticated this session: auth0 or whitney."
           }
         }
       },
@@ -324281,11 +325093,11 @@
       "SourceParam": {
         "name": "source",
         "in": "query",
-        "description": "Filter by source. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.",
+        "description": "Filter by source. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.",
         "schema": {
           "maxLength": 100,
           "minLength": 1,
-          "pattern": "^[a-zA-Z0-9 _.-]+$",
+          "pattern": "^[a-zA-Z0-9 _./-]+$",
           "type": "string",
           "example": "customer service platform"
         }
@@ -326222,6 +327034,12 @@
         "scheme": "bearer",
         "bearerFormat": "access_token"
       },
+      "m2mOauth": {
+        "type": "http",
+        "description": "M2M Access Token",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
       "twilio_insights_v1_accountSid_authToken": {
         "type": "http",
         "scheme": "basic"
@@ -326439,6 +327257,12 @@
     },
     {
       "name": "AccountsV1MessagingGeopermissions"
+    },
+    {
+      "name": "AccountsV1MessagingAccountPermission"
+    },
+    {
+      "name": "AccountsV1MessagingPermission"
     },
     {
       "name": "AccountsV1MessagingSmsPumpingProtection"

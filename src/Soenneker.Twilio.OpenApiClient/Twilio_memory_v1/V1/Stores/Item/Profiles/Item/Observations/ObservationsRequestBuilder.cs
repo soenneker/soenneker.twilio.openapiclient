@@ -206,7 +206,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_memory_v1.V1.Stores.Item.Profile
             [QueryParameter("pageToken")]
             public string PageToken { get; set; }
 #endif
-            /// <summary>Filter by source. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.</summary>
+            /// <summary>Filter by source. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("source")]

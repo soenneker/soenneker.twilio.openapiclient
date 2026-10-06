@@ -71,7 +71,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string LogoUrl { get; set; }
 #endif
-        /// <summary>The name of the sender. Required for WhatsApp senders and must follow [Meta&apos;s display name guidelines](https://www.facebook.com/business/help/757569725593362).</summary>
+        /// <summary>The name of the sender. Required for WhatsApp senders and must follow [Meta&apos;s display name guidelines](https://www.facebook.com/business/help/757569725593362). On update, a WhatsApp sender&apos;s name is not changed synchronously: it is submitted to Meta for review, and `profile.name` continues to report the current active name until Meta approves the new one and the sender is automatically re-registered. Track progress with `pending_display_name_status` on Fetch Sender, and see `display_name_status` on the update response for the immediate outcome. Re-submitting the same name is how you retry applying a name Meta has already approved, for example after correcting the sender&apos;s two-step verification PIN. Meta permits a limited number of display name changes per 30-day period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

@@ -23,6 +23,22 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<string> IntelligenceConfigurationIds { get; set; }
 #endif
+        /// <summary>A list of Observation Extraction Strategy IDs.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? ObservationExtractionStrategyIds { get; set; }
+#nullable restore
+#else
+        public List<string> ObservationExtractionStrategyIds { get; set; }
+#endif
+        /// <summary>A list of Trait Extraction Strategy IDs.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? TraitExtractionStrategyIds { get; set; }
+#nullable restore
+#else
+        public List<string> TraitExtractionStrategyIds { get; set; }
+#endif
         /// <summary>The Workflows to associate with this Conversation. Overrides the Configuration&apos;s own.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,6 +73,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "intelligenceConfigurationIds", n => { IntelligenceConfigurationIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "observationExtractionStrategyIds", n => { ObservationExtractionStrategyIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "traitExtractionStrategyIds", n => { TraitExtractionStrategyIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "workflows", n => { Workflows = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationWithConfigRequestConfigurationWorkflowsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationWithConfigRequestConfigurationWorkflowsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -68,6 +86,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("intelligenceConfigurationIds", IntelligenceConfigurationIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("observationExtractionStrategyIds", ObservationExtractionStrategyIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("traitExtractionStrategyIds", TraitExtractionStrategyIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationWithConfigRequestConfigurationWorkflowsItem>("workflows", Workflows);
             writer.WriteAdditionalData(AdditionalData);
         }

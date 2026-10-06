@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The timestamp when the observation originally occurred.</summary>
         public DateTimeOffset? OccurredAt { get; set; }
-        /// <summary>The source system that generated this observation. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.</summary>
+        /// <summary>The source system that generated this observation. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Source { get; set; }

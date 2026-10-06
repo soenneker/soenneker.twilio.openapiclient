@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.PhoneNumbers;
+using Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.ShortCodes;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3
         public global::Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.PhoneNumbers.PhoneNumbersRequestBuilder PhoneNumbers
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.PhoneNumbers.PhoneNumbersRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The ShortCodes property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.ShortCodes.ShortCodesRequestBuilder ShortCodes
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.ShortCodes.ShortCodesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.V3RequestBuilder"/> and sets the default values.

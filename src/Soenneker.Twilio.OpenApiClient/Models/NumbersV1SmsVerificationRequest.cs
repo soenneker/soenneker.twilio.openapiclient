@@ -9,53 +9,51 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ObservationCreateRequest : IAdditionalDataHolder, IParsable
+    public partial class NumbersV1SmsVerificationRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The main content of the observation.</summary>
+        /// <summary>A human-readable name for the caller ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Content { get; set; }
+        public string? FriendlyName { get; set; }
 #nullable restore
 #else
-        public string Content { get; set; }
+        public string FriendlyName { get; set; }
 #endif
-        /// <summary>Array of conversation IDs associated with this observation.</summary>
+        /// <summary>The locale for the verification SMS message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ConversationIds { get; set; }
+        public string? Locale { get; set; }
 #nullable restore
 #else
-        public List<string> ConversationIds { get; set; }
+        public string Locale { get; set; }
 #endif
-        /// <summary>The timestamp when the observation originally occurred.</summary>
-        public DateTimeOffset? OccurredAt { get; set; }
-        /// <summary>The source system that generated this observation. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.</summary>
+        /// <summary>The phone number to verify in E.164 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get; set; }
+        public string? To { get; set; }
 #nullable restore
 #else
-        public string Source { get; set; }
+        public string To { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ObservationCreateRequest"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationRequest"/> and sets the default values.
         /// </summary>
-        public ObservationCreateRequest()
+        public NumbersV1SmsVerificationRequest()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ObservationCreateRequest"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Twilio.OpenApiClient.Models.ObservationCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.ObservationCreateRequest();
+            return new global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationRequest();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,10 +63,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "content", n => { Content = n.GetStringValue(); } },
-                { "conversationIds", n => { ConversationIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "occurredAt", n => { OccurredAt = n.GetDateTimeOffsetValue(); } },
-                { "source", n => { Source = n.GetStringValue(); } },
+                { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
+                { "locale", n => { Locale = n.GetStringValue(); } },
+                { "to", n => { To = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -78,10 +75,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("content", Content);
-            writer.WriteCollectionOfPrimitiveValues<string>("conversationIds", ConversationIds);
-            writer.WriteDateTimeOffsetValue("occurredAt", OccurredAt);
-            writer.WriteStringValue("source", Source);
+            writer.WriteStringValue("friendly_name", FriendlyName);
+            writer.WriteStringValue("locale", Locale);
+            writer.WriteStringValue("to", To);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

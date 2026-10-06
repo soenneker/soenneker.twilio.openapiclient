@@ -26,6 +26,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Timestamp when the action was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>Human-readable failure reason. Null unless status is FAILED.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FailureReason { get; set; }
+#nullable restore
+#else
+        public string FailureReason { get; set; }
+#endif
         /// <summary>Unique identifier for this Action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -34,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Named identifiers from downstream. For SEND_MESSAGE:- messageSid: The downstream message SID (present when PENDING or COMPLETED)- communicationId: The Communication ID (present when COMPLETED)</summary>
+        /// <summary>Named identifiers from downstream. For SEND_MESSAGE:- messageSid: The downstream message SID (present when PENDING or COMPLETED)- communicationId: The Communication ID (present when COMPLETED)For START_FLOW:- executionSid: The Studio Flow execution SID (present when COMPLETED)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversationAction200ResponseRelated? Related { get; set; }
@@ -44,7 +52,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>Lifecycle status of an Action.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ActionStatus? Status { get; set; }
-        /// <summary>The type of action. Accepted values: SEND_MESSAGE.</summary>
+        /// <summary>The type of action: action-send-message or action-start-flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -82,6 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "failureReason", n => { FailureReason = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "related", n => { Related = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversationAction200ResponseRelated>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversationAction200ResponseRelated.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ActionStatus>(); } },
@@ -99,6 +108,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("completedAt", CompletedAt);
             writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
+            writer.WriteStringValue("failureReason", FailureReason);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2FetchConversationAction200ResponseRelated>("related", Related);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ActionStatus>("status", Status);

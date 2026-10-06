@@ -48,6 +48,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestRecipientsItem> Recipients { get; set; }
 #endif
+        /// <summary>External resource identifier for this Communication (e.g. MessageSid for SMS/RCS/WhatsApp, TranscriptionSid + MessageIndex for Voice). If a Communication with the same resourceId already exists in the Conversation, it is updated instead of a new one being created.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ResourceId { get; set; }
+#nullable restore
+#else
+        public string ResourceId { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequest"/> and sets the default values.
         /// </summary>
@@ -78,6 +86,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "content", n => { Content = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent.CreateFromDiscriminatorValue); } },
                 { "occurredAt", n => { OccurredAt = n.GetDateTimeOffsetValue(); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestRecipientsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestRecipientsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "resourceId", n => { ResourceId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -92,6 +101,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent>("content", Content);
             writer.WriteDateTimeOffsetValue("occurredAt", OccurredAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestRecipientsItem>("recipients", Recipients);
+            writer.WriteStringValue("resourceId", ResourceId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

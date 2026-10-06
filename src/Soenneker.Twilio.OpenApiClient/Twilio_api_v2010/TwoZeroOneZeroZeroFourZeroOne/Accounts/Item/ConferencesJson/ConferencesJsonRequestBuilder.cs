@@ -121,7 +121,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
 #else
             public string PageToken { get; set; }
 #endif
-            /// <summary>The status of the resources to read. Can be: `init`, `in-progress`, or `completed`.</summary>
+            /// <summary>The status of the resources to read. Can be: `init`, `in-progress`, or `completed`. Starting from September 30th, 2026, the default is `in-progress`. To read completed conferences, set `Status` to `completed`.</summary>
             public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumStatus? Status { get; set; }
         }
     }

@@ -9,20 +9,20 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class NumbersV1VoiceVerificationCheck : IAdditionalDataHolder, IParsable
+    public partial class NumbersV1SmsVerificationCheckRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The Caller ID SID created upon successful verification.</summary>
+        /// <summary>A human-readable name for the caller ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallerIdSid { get; set; }
+        public string? FriendlyName { get; set; }
 #nullable restore
 #else
-        public string CallerIdSid { get; set; }
+        public string FriendlyName { get; set; }
 #endif
-        /// <summary>The phone number that was verified in E.164 format.</summary>
+        /// <summary>The phone number being verified in E.164 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? To { get; set; }
@@ -30,22 +30,30 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string To { get; set; }
 #endif
+        /// <summary>The 6 character verification code to check.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VerificationCode { get; set; }
+#nullable restore
+#else
+        public string VerificationCode { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1VoiceVerificationCheck"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationCheckRequest"/> and sets the default values.
         /// </summary>
-        public NumbersV1VoiceVerificationCheck()
+        public NumbersV1SmsVerificationCheckRequest()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1VoiceVerificationCheck"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationCheckRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1VoiceVerificationCheck CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationCheckRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1VoiceVerificationCheck();
+            return new global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationCheckRequest();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +63,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "callerIdSid", n => { CallerIdSid = n.GetStringValue(); } },
+                { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "to", n => { To = n.GetStringValue(); } },
+                { "verification_code", n => { VerificationCode = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +75,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("callerIdSid", CallerIdSid);
+            writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("to", To);
+            writer.WriteStringValue("verification_code", VerificationCode);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

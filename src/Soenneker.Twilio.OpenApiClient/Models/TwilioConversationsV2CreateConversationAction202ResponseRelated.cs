@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Named identifiers from downstream. For SEND_MESSAGE:- messageSid: The downstream message SID (present when PENDING or COMPLETED)- communicationId: The Communication ID (present when COMPLETED)
+    /// Named identifiers from downstream. For SEND_MESSAGE:- messageSid: The downstream message SID (present when PENDING or COMPLETED)- communicationId: The Communication ID (present when COMPLETED)For START_FLOW:- executionSid: The Studio Flow execution SID (present when COMPLETED)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TwilioConversationsV2CreateConversationAction202ResponseRelated : IAdditionalDataHolder, IParsable

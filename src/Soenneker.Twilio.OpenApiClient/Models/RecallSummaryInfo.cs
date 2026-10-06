@@ -45,7 +45,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public DateTimeOffset? OccurredAt { get; set; }
         /// <summary>The relevance score of the summary in relation to the query. Higher values indicate greater relevance. This field is omitted when results are returned in most-recent order. This may occur when no query is provided and one cannot be inferred from the conversation context, or when the system defaults to chronological retrieval to ensure high availability.</summary>
         public double? Score { get; set; }
-        /// <summary>The source system that generated the summary. Allows letters, numbers, spaces, and URL-safe symbols. Excludes URL-unsafe characters like quotes, angle brackets, and control characters.</summary>
+        /// <summary>The source system that generated the summary. Allows letters, numbers, spaces, periods, underscores, hyphens, and forward slashes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Source { get; set; }

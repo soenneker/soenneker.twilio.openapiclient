@@ -67,6 +67,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string MemoryStoreId { get; set; }
 #endif
+        /// <summary>A list of Observation Extraction Strategy IDs.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? ObservationExtractionStrategyIds { get; set; }
+#nullable restore
+#else
+        public List<string> ObservationExtractionStrategyIds { get; set; }
+#endif
         /// <summary>List of default webhook configurations applied to Conversations under this Configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,6 +82,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig> StatusCallbacks { get; set; }
+#endif
+        /// <summary>A list of Trait Extraction Strategy IDs.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? TraitExtractionStrategyIds { get; set; }
+#nullable restore
+#else
+        public List<string> TraitExtractionStrategyIds { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2PatchConversationById200ResponseConfiguration"/> and sets the default values.
@@ -109,7 +125,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "intelligenceConfigurationIds", n => { IntelligenceConfigurationIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "memoryExtractionEnabled", n => { MemoryExtractionEnabled = n.GetBoolValue(); } },
                 { "memoryStoreId", n => { MemoryStoreId = n.GetStringValue(); } },
+                { "observationExtractionStrategyIds", n => { ObservationExtractionStrategyIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "statusCallbacks", n => { StatusCallbacks = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig>(global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "traitExtractionStrategyIds", n => { TraitExtractionStrategyIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -127,7 +145,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("intelligenceConfigurationIds", IntelligenceConfigurationIds);
             writer.WriteBoolValue("memoryExtractionEnabled", MemoryExtractionEnabled);
             writer.WriteStringValue("memoryStoreId", MemoryStoreId);
+            writer.WriteCollectionOfPrimitiveValues<string>("observationExtractionStrategyIds", ObservationExtractionStrategyIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig>("statusCallbacks", StatusCallbacks);
+            writer.WriteCollectionOfPrimitiveValues<string>("traitExtractionStrategyIds", TraitExtractionStrategyIds);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

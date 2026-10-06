@@ -120,7 +120,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #endif
         /// <summary>The time at which the Call was started, given in ISO 8601 format.</summary>
         public DateTimeOffset? StartTime { get; set; }
-        /// <summary>Tags applied to calls by Voice Insights analysis indicating a condition that could result in subjective degradation of the call quality.</summary>
+        /// <summary>[Tags](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-tags) that Voice Insights analysis applies to calls. They indicate a condition that may influence the subjective experience of call audio quality.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Tags { get; set; }

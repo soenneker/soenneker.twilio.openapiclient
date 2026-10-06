@@ -9,7 +9,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class MessagingV2ChannelsSenderResponse : IAdditionalDataHolder, IParsable
+    public partial class MessagingV2ChannelsSenderUpdateResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,6 +30,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration Configuration { get; set; }
 #endif
+        /// <summary>WhatsApp only. The outcome of the display name operation in this request. Present only when the request included `profile.name`. `updating` — accepted; either submitted to Meta for review, or, when Meta had already approved this exact name, routed straight to re-registration. `no_change` — the name already matches the sender&apos;s active display name; nothing was submitted to Meta. `pending_review` — the same name is already under review at Meta; the existing request continues unchanged. `error` — the display name could not be processed, while other profile fields in the same request were still applied. Returned with a 202 and carries no error code or message. This covers every failure mode, including the case where Meta accepted the name but tracking could not be started — poll `pending_display_name_status` to establish the real state rather than assuming the name was rejected. When `profile.name` is the only field in the request, the failure is returned as an error response with a specific code instead of this status.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderUpdateResponseDisplayNameStatus? DisplayNameStatus { get; set; }
         /// <summary>Optional display label for the sender in the Twilio Console.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -46,18 +48,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderOfflineReasonsItems> OfflineReasons { get; set; }
 #endif
-        /// <summary>WhatsApp only. The display name the most recent change applies to — awaiting Meta review, approved by Meta and awaiting re-registration, or, once `pending_display_name_status` is `COMPLETED`, the name now in effect (identical to `name`). Absent when no display name change has been made, and once a completed change stops being reported.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PendingDisplayName { get; set; }
-#nullable restore
-#else
-        public string PendingDisplayName { get; set; }
-#endif
-        /// <summary>WhatsApp only. The status of the most recent display name change. `PENDING_REVIEW`, `APPROVED` and `DECLINED` are reported by Meta. `PIN_MISMATCH` and `REGISTRATION_FAILED` mean Meta approved the name but it could not be applied; `EXPIRED` means Meta&apos;s 14-day window to apply an approved name elapsed. In all three cases, re-submit the same `profile.name` to retry. `COMPLETED` means the name was approved and applied — `name` now returns it. A `COMPLETED` change is reported for 14 days after it completes and is absent afterwards, so treat its presence as &quot;recently completed&quot; rather than a permanent flag; use `pending_display_name_status_date` to tell how recent. Absent when no display name change has been made.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderResponsePendingDisplayNameStatus? PendingDisplayNameStatus { get; set; }
-        /// <summary>WhatsApp only. The date and time in UTC when `pending_display_name_status` last changed, specified in ISO 8601 format. Absent whenever `pending_display_name_status` is absent, so the three `pending_display_name*` fields are always present or absent together.</summary>
-        public DateTimeOffset? PendingDisplayNameStatusDate { get; set; }
         /// <summary>The profile information for the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -109,21 +99,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderWebhook Webhook { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderUpdateResponse"/> and sets the default values.
         /// </summary>
-        public MessagingV2ChannelsSenderResponse()
+        public MessagingV2ChannelsSenderUpdateResponse()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderUpdateResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderUpdateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderResponse();
+            return new global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderUpdateResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -135,11 +125,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "compliance", n => { Compliance = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceResponse>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceResponse.CreateFromDiscriminatorValue); } },
                 { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration.CreateFromDiscriminatorValue); } },
+                { "display_name_status", n => { DisplayNameStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderUpdateResponseDisplayNameStatus>(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "offline_reasons", n => { OfflineReasons = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderOfflineReasonsItems>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderOfflineReasonsItems.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "pending_display_name", n => { PendingDisplayName = n.GetStringValue(); } },
-                { "pending_display_name_status", n => { PendingDisplayNameStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderResponsePendingDisplayNameStatus>(); } },
-                { "pending_display_name_status_date", n => { PendingDisplayNameStatusDate = n.GetDateTimeOffsetValue(); } },
                 { "profile", n => { Profile = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse.CreateFromDiscriminatorValue); } },
                 { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProperties>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProperties.CreateFromDiscriminatorValue); } },
                 { "sender_id", n => { SenderId = n.GetStringValue(); } },
@@ -158,11 +146,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceResponse>("compliance", Compliance);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderConfiguration>("configuration", Configuration);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderUpdateResponseDisplayNameStatus>("display_name_status", DisplayNameStatus);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderOfflineReasonsItems>("offline_reasons", OfflineReasons);
-            writer.WriteStringValue("pending_display_name", PendingDisplayName);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderResponsePendingDisplayNameStatus>("pending_display_name_status", PendingDisplayNameStatus);
-            writer.WriteDateTimeOffsetValue("pending_display_name_status_date", PendingDisplayNameStatusDate);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileGenericResponse>("profile", Profile);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProperties>("properties", Properties);
             writer.WriteStringValue("sender_id", SenderId);
