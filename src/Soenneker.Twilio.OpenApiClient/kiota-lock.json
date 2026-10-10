@@ -2,7 +2,7 @@
   "descriptionHash": "E2183D17A26C39617A933024B32B2AA55B25323FD923104024A4C00C834F9A10E493307EDE200B5DAC0D5CE54A44C41F030712305C6A4FC2B9377AFFEF903D9D",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.35.0",
+  "kiotaVersion": "1.36.0",
   "clientClassName": "TwilioOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Twilio.OpenApiClient",
