@@ -11,26 +11,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TwilioInsightsV3FetchCustomFieldMappings401ResponseParams : IAdditionalDataHolder, IParsable
+    public partial class TwilioInsightsV3ListCustomFieldMappings401ResponseParams : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings401ResponseParams"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings401ResponseParams"/> and sets the default values.
         /// </summary>
-        public TwilioInsightsV3FetchCustomFieldMappings401ResponseParams()
+        public TwilioInsightsV3ListCustomFieldMappings401ResponseParams()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings401ResponseParams"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings401ResponseParams"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings401ResponseParams CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings401ResponseParams CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings401ResponseParams();
+            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings401ResponseParams();
         }
         /// <summary>
         /// The deserialization information for the current model

@@ -15,7 +15,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The type of field being registered. Only `MEASURE` is supported.</summary>
+        /// <summary>The category of the custom field. Supported values:- `MEASURE`: a numeric value that can be aggregated and queried as a  measure in Conversations Insights.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.MappingCategory? Category { get; set; }
         /// <summary>When the mapping was registered.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -27,7 +27,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Reference to the upstream entity that sources this field. Shape isselected by the `sourceType` discriminator and owned by that upstream, notby this API — adding a new upstream means adding a variant here, notchanging the request shape.Every variant carries `sourceType` via `EntityMetadataBase`, so a clientthat does not recognise a newly added variant can still deserialize thecommon fields rather than failing outright.The owner check for idempotent upserts is scoped to `sourceType` plus thatvariant&apos;s own identity field (`operatorId` for `INTELLIGENCE_OPERATOR`); amismatch against an existing registration&apos;s owner returns `409`.</summary>
+        /// <summary>Identifies the entity that supplies this field&apos;s value. `sourceType`selects the source, and the property named for that source carries itsdetails. Exactly that one source property must be present:| `sourceType` | Required property ||---|---|| `INTELLIGENCE_OPERATOR` | `intelligenceOperator` |A request whose `sourceType` doesn&apos;t match the source property it sends,or that sends any other property, is rejected with `400`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadata? EntityMetadata { get; set; }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadata EntityMetadata { get; set; }
 #endif
-        /// <summary>TTID for conversation insights custom field mapping</summary>
+        /// <summary>The unique identifier of the custom field mapping.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>Name of the custom field, unique within the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -51,7 +51,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>When the mapping was last materially modified in-place. Null until the first update-in-place.</summary>
+        /// <summary>When the mapping was last modified via `PATCH`. Null until the first update.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse"/> and sets the default values.

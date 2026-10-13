@@ -109704,7 +109704,7 @@
                         "code": 50001,
                         "message": "Query execution timeout exceeded",
                         "httpStatusCode": 504,
-                        "detail": "ClickHouse query exceeded the 120s execution limit for this account."
+                        "detail": "Query exceeded the 120s execution limit for this account."
                       }
                     }
                   }
@@ -110142,7 +110142,7 @@
           "TwilioInsightsConfig"
         ],
         "summary": "Register a custom measure field mapping",
-        "description": "Registers a custom field for an account under a category, sourced from an\nupstream entity — selected via the `entityMetadata.sourceType`\ndiscriminator, which determines the required shape of `entityMetadata`.\nOnly the `MEASURE` category is supported for now.\n\nFor sources with a resolvable field-path concept, validates that\n`entityMetadata.field` resolves on the entity's latest active version by\ncalling that source's own resolution API (the Intelligence fetch-operator\nAPI for `sourceType: INTELLIGENCE_OPERATOR`), then performs an idempotent\nupsert keyed on (accountSid, category, name).\n`entityMetadata.sourceType` plus that variant's own identity field\n(`operatorId` for `INTELLIGENCE_OPERATOR`) must match the existing\nregistration's owner for the upsert to succeed — a mismatch returns\n`409`. Enforces the per-account, per-category capacity limit.\n",
+        "description": "Registers a custom field for the account. `entityMetadata.sourceType`\nselects where the field's value comes from, and the matching property on\n`entityMetadata` (`intelligenceOperator` for `INTELLIGENCE_OPERATOR`)\ncarries its details. Only the `MEASURE` category is supported for now.\n\nThe request is validated before the mapping is created:\n- `name` contains only letters, digits and `_`, and is not already\n  registered for the account (otherwise `409`);\n- `description`, when present, is at most 150 characters;\n- for `INTELLIGENCE_OPERATOR`, the operator has an active version with\n  `outputFormat` `JSON`, and `entityMetadata.intelligenceOperator.field`\n  is one or two `.`-separated segments that resolve to a `number` or\n  `integer` property in that version's output schema (otherwise `400`);\n- the account has a free slot in the category; by default an account can\n  register up to 3 custom measures (otherwise `403`). Use\n  `GET /v3/ControlPlane/ConversationInsights/CustomFieldMappingsCapacity`\n  to check the remaining slots.\n\nCreate-only: if a mapping with the same `name` already exists for the\naccount, `409` is returned with the existing mapping's `id` and nothing\nis changed. To modify an existing mapping, use\n`PATCH /v3/ControlPlane/ConversationInsights/CustomFieldMappings/{mappingId}`.\n",
         "operationId": "twilio_insights_v3_CreateCustomFieldMapping",
         "requestBody": {
           "content": {
@@ -110159,9 +110159,11 @@
                     "description": "Lead quality score derived from sentiment analysis",
                     "entityMetadata": {
                       "sourceType": "INTELLIGENCE_OPERATOR",
-                      "operatorId": "OPxxxx",
-                      "operatorName": "Sentiment Analysis",
-                      "field": "leadScore"
+                      "intelligenceOperator": {
+                        "operatorId": "intelligence_operator_01kcgy1ew0e9x8re6jq542zt8b",
+                        "operatorName": "Sentiment Analysis",
+                        "field": "leadScore"
+                      }
                     }
                   }
                 }
@@ -110171,18 +110173,17 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "The `name` was already registered for this operator and was updated in-place.",
-            "content": {
-              "application/json": {
+          "201": {
+            "description": "The custom field mapping was created.",
+            "headers": {
+              "ETag": {
+                "description": "ETag of the new mapping; supply it as `If-Match` on `PATCH`.",
                 "schema": {
-                  "$ref": "#/components/schemas/CustomFieldMappingResponse"
+                  "type": "string",
+                  "example": "\"2026-08-13T14:30:00Z\""
                 }
               }
-            }
-          },
-          "201": {
-            "description": "Newly registered.",
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -110192,7 +110193,7 @@
             }
           },
           "400": {
-            "description": "Bad request",
+            "description": "The request is invalid. One of:\n- a required property (`category`, `name`, `entityMetadata`,\n  `entityMetadata.sourceType`, `operatorId`, `field`) is missing, or\n  `category` / `sourceType` is not a supported value;\n- `name` is empty or contains characters other than letters,\n  digits and `_`, or `description` is longer than 150 characters;\n- `entityMetadata` does not carry the property that matches its\n  `sourceType`, or carries any other property;\n- `operatorId` is not a valid operator ID;\n- the operator has no active version or its `outputFormat` is not\n  `JSON`;\n- `field` has more than two segments, contains unsupported\n  characters, or does not resolve to a `number` or `integer`\n  property in the operator's output schema.\n",
             "content": {
               "application/json": {
                 "schema": {
@@ -110229,6 +110230,12 @@
                       "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
                     }
                   }
+                },
+                "example": {
+                  "code": 20050,
+                  "message": "The 'field' value 'leadScore' does not resolve on the latest active version of operator 'intelligence_operator_01kcgy1ew0e9x8re6jq542zt8b'.",
+                  "httpStatusCode": 400,
+                  "userError": true
                 }
               }
             }
@@ -110276,7 +110283,7 @@
             }
           },
           "403": {
-            "description": "Forbidden request",
+            "description": "The account has reached its limit of custom measures (default 3), or\ndoes not have access to custom field mappings.\n",
             "content": {
               "application/json": {
                 "schema": {
@@ -110313,12 +110320,18 @@
                       "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
                     }
                   }
+                },
+                "example": {
+                  "code": 20051,
+                  "message": "The account has reached its custom mapping capacity for category 'MEASURE'.",
+                  "httpStatusCode": 403,
+                  "userError": true
                 }
               }
             }
           },
           "409": {
-            "description": "The `name` is already registered for this account with different\nattributes. Names are unique per account, so a name can only be\nre-registered idempotently by the same owner.\n",
+            "description": "A mapping with this `name` already exists for the account. Names are\nunique per account across every `sourceType`, so this applies\nregardless of which entity either mapping is sourced from or whether\nthe payload matches. Nothing is changed. `params.id` carries the\nexisting mapping's `id`; use `PATCH` on it to modify the mapping.\n",
             "content": {
               "application/json": {
                 "schema": {
@@ -110358,8 +110371,14 @@
                 },
                 "example": {
                   "code": 20052,
-                  "message": "The name 'LeadScore' is already registered to a different operator.",
-                  "httpStatusCode": 409
+                  "message": "A custom field mapping named 'LeadScore' already exists for this account.",
+                  "httpStatusCode": 409,
+                  "userError": true,
+                  "params": {
+                    "category": "MEASURE",
+                    "name": "LeadScore",
+                    "id": "convinsights_mapping_01m31967b7em08vh1pqgbam3mj"
+                  }
                 }
               }
             }
@@ -110479,6 +110498,63 @@
                 }
               }
             }
+          },
+          "503": {
+            "description": "The operator details needed to validate the registration could not\nbe retrieved from Conversational Intelligence. No mapping was\ncreated; retry after the `Retry-After` interval.\n",
+            "headers": {
+              "Retry-After": {
+                "description": "Number of seconds to wait before retrying.",
+                "schema": {
+                  "type": "integer",
+                  "example": 5
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                },
+                "example": {
+                  "code": 20503,
+                  "message": "The service is temporarily unavailable. Please retry after a short delay.",
+                  "httpStatusCode": 503,
+                  "userError": false
+                }
+              }
+            }
           }
         },
         "security": [
@@ -110496,12 +110572,33 @@
         "tags": [
           "TwilioInsightsConfig"
         ],
-        "summary": "Fetch custom measure field mappings for an account",
-        "description": "Returns custom field mappings registered for the account.\n",
-        "operationId": "twilio_insights_v3_FetchCustomFieldMappings",
+        "summary": "List custom measure field mappings for an account",
+        "description": "Returns the custom field mappings registered for the account, one page at\na time. Use `pageSize` to limit the number of mappings returned, and pass\n`meta.nextToken` from a response as `pageToken` to fetch the next page.\nOn the last page, `meta.nextToken` is `null`.\n",
+        "operationId": "twilio_insights_v3_ListCustomFieldMappings",
+        "parameters": [
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The maximum number of resources to return",
+            "schema": {
+              "maximum": 1000,
+              "minimum": 1,
+              "type": "integer",
+              "default": 50
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "Token for pagination",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Custom field mappings registered for the account.",
+            "description": "A page of custom field mappings registered for the account.",
             "content": {
               "application/json": {
                 "schema": {
@@ -110765,7 +110862,855 @@
         ]
       }
     },
-    "/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappings/Capacity": {
+    "/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappings/{mappingId}": {
+      "get": {
+        "tags": [
+          "TwilioInsightsConfig"
+        ],
+        "summary": "Fetch a custom field mapping",
+        "description": "Returns a single custom field mapping by its `mappingId`. The `ETag`\nresponse header identifies the mapping's current version; supply it as\n`If-Match` on `PATCH` to guard against concurrent updates.\n",
+        "operationId": "twilio_insights_v3_FetchCustomFieldMapping",
+        "parameters": [
+          {
+            "name": "mappingId",
+            "in": "path",
+            "description": "The unique identifier of the custom field mapping, as returned in `id` when the mapping was created.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "convinsights_mapping_01m31967b7em08vh1pqgbam3mj"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The custom field mapping.",
+            "headers": {
+              "ETag": {
+                "description": "Current ETag of the mapping; supply it as `If-Match` on `PATCH`.",
+                "schema": {
+                  "type": "string",
+                  "example": "\"2026-08-13T14:30:00Z\""
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomFieldMappingResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "description": "Maximum number of requests allowed in the time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "X-RateLimit-Remaining": {
+                "description": "Number of requests remaining in the current time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "X-RateLimit-Reset": {
+                "description": "Time in seconds until the rate limit resets",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 45
+              },
+              "X-Rate-Limit-Limit": {
+                "$ref": "#/components/headers/X-Rate-Limit-Limit"
+              },
+              "X-Rate-Limit-Remaining": {
+                "$ref": "#/components/headers/X-Rate-Limit-Remaining"
+              },
+              "X-Rate-Limit-Config": {
+                "$ref": "#/components/headers/X-Rate-Limit-Config"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_insights_v3_basic_apikey_or_accountsid": [ ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://insights.twilio.com"
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "TwilioInsightsConfig"
+        ],
+        "summary": "Update a custom field mapping",
+        "description": "Partially updates an existing custom field mapping. Only the properties\npresent in the body are changed. The updatable properties depend on the\nmapping's `sourceType`; for `INTELLIGENCE_OPERATOR`, only\n`entityMetadata.intelligenceOperator.field` can be updated today.\n\nThe new `field` is validated the same way as at registration: it must be\none or two `.`-separated segments of letters, digits and `_`, and resolve\nto a `number` or `integer` property in the output schema of the\noperator's latest active version.\n\nThe mapping's `id`, `name`, `category`, `createdAt` and owning entity\nnever change. Sending a `field` value equal to the current one is a no-op that\nreturns `200` without modifying the mapping, so the operation is\nidempotent. Supply `If-Match` with the `ETag` returned by `GET`, `POST`\nor a previous `PATCH` to guard against concurrent updates.\n\nValues already ingested are not recomputed; results processed after the\nupdate use the new `field`.\n",
+        "operationId": "twilio_insights_v3_PatchCustomFieldMapping",
+        "parameters": [
+          {
+            "name": "If-Match",
+            "in": "header",
+            "description": "ETag of the custom field mapping, as returned in the `ETag` response header.\nWhen supplied, the update is applied only if the mapping has not changed\nsince that ETag was issued; otherwise `412` is returned.\n",
+            "schema": {
+              "type": "string",
+              "example": "\"2026-08-13T14:30:00Z\""
+            }
+          },
+          {
+            "name": "mappingId",
+            "in": "path",
+            "description": "The unique identifier of the custom field mapping, as returned in `id` when the mapping was created.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "convinsights_mapping_01m31967b7em08vh1pqgbam3mj"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomFieldMappingUpdateRequest"
+              },
+              "examples": {
+                "update_intelligence_operator_field": {
+                  "summary": "Point a custom measure at a different operator output field",
+                  "value": {
+                    "entityMetadata": {
+                      "sourceType": "INTELLIGENCE_OPERATOR",
+                      "intelligenceOperator": {
+                        "field": "scores.leadScore"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The mapping was updated, or the supplied values already matched and\nnothing changed.\n",
+            "headers": {
+              "ETag": {
+                "description": "Current ETag of the mapping; supply it as `If-Match` on the next update.",
+                "schema": {
+                  "type": "string",
+                  "example": "\"2026-09-30T10:00:00Z\""
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomFieldMappingResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request is invalid. One of:\n- a malformed body, an empty body or source object (nothing to\n  update), a missing `entityMetadata.sourceType`, or a `field` that\n  fails its pattern;\n- a property that cannot be updated (for example `name`,\n  `category`, `operatorId`) is present;\n- `entityMetadata.sourceType` does not match the mapping's current\n  `sourceType`, or is not supported for updates;\n- the new `field` does not resolve to a `number` or `integer`\n  property on the operator's latest active version, or the operator\n  no longer has an active `JSON` version.\n",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                },
+                "examples": {
+                  "field_not_resolvable": {
+                    "value": {
+                      "code": 20050,
+                      "message": "The 'field' value 'scores.leadScore' does not resolve on the latest active version of operator 'intelligence_operator_01kcgy1ew0e9x8re6jq542zt8b'.",
+                      "httpStatusCode": 400,
+                      "userError": true
+                    }
+                  },
+                  "field_not_updatable": {
+                    "value": {
+                      "code": 20053,
+                      "message": "The property 'name' cannot be updated.",
+                      "httpStatusCode": 400,
+                      "userError": true,
+                      "params": {
+                        "field": "name"
+                      }
+                    }
+                  },
+                  "source_type_mismatch": {
+                    "value": {
+                      "code": 20054,
+                      "message": "The 'sourceType' does not match the mapping's current source type.",
+                      "httpStatusCode": 400,
+                      "userError": true,
+                      "params": {
+                        "expected": "INTELLIGENCE_OPERATOR",
+                        "actual": "OTHER_SOURCE"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The mapping was modified by a concurrent request while this update\nwas being applied. Fetch the mapping and retry.\n",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                },
+                "example": {
+                  "code": 20409,
+                  "message": "The custom field mapping was modified concurrently. Please retry.",
+                  "httpStatusCode": 409,
+                  "userError": true
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "The `If-Match` value does not match the mapping's current `ETag`.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                },
+                "example": {
+                  "code": 20412,
+                  "message": "The custom field mapping has changed since the supplied ETag was issued.",
+                  "httpStatusCode": 412,
+                  "userError": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many requests (rate limit exceeded for request originating from public API)",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "description": "Maximum number of requests allowed in the time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "X-RateLimit-Remaining": {
+                "description": "Number of requests remaining in the current time window",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "X-RateLimit-Reset": {
+                "description": "Time in seconds until the rate limit resets",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 45
+              },
+              "X-Rate-Limit-Limit": {
+                "$ref": "#/components/headers/X-Rate-Limit-Limit"
+              },
+              "X-Rate-Limit-Remaining": {
+                "$ref": "#/components/headers/X-Rate-Limit-Remaining"
+              },
+              "X-Rate-Limit-Config": {
+                "$ref": "#/components/headers/X-Rate-Limit-Config"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "The operator details needed to validate the update could not be\nretrieved from Conversational Intelligence. The mapping was not\nchanged; retry after the `Retry-After` interval.\n",
+            "headers": {
+              "Retry-After": {
+                "description": "Number of seconds to wait before retrying.",
+                "schema": {
+                  "type": "integer",
+                  "example": 5
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "code",
+                    "message",
+                    "httpStatusCode"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "Twilio-specific error code",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A human readable error message"
+                    },
+                    "httpStatusCode": {
+                      "type": "integer",
+                      "description": "HTTP response status code",
+                      "format": "int32"
+                    },
+                    "userError": {
+                      "type": "boolean",
+                      "description": "Whether the error is a user error (true) or a system error (false)"
+                    },
+                    "params": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      },
+                      "description": "A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information"
+                    }
+                  }
+                },
+                "example": {
+                  "code": 20503,
+                  "message": "The service is temporarily unavailable. Please retry after a short delay.",
+                  "httpStatusCode": 503,
+                  "userError": false
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "twilio_insights_v3_basic_apikey_or_accountsid": [ ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://insights.twilio.com"
+          }
+        ]
+      }
+    },
+    "/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappingsCapacity": {
       "get": {
         "tags": [
           "TwilioInsightsConfig"
@@ -256230,7 +257175,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -256242,7 +257186,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -256271,7 +257214,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -256323,7 +257265,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -256335,7 +257276,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -256364,7 +257304,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -256416,7 +257355,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -256428,7 +257366,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -256457,7 +257394,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -256509,7 +257445,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -256521,7 +257456,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -256550,7 +257484,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -256610,7 +257543,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -256622,7 +257554,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -256651,7 +257582,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -256703,7 +257633,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -256715,7 +257644,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -256744,7 +257672,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -256968,7 +257895,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -256980,7 +257906,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -257009,7 +257934,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -257061,7 +257985,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -257073,7 +257996,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -257102,7 +258024,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -257154,7 +258075,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -257166,7 +258086,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -257195,7 +258114,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -257247,7 +258165,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -257259,7 +258176,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -257288,7 +258204,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -257348,7 +258263,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -257360,7 +258274,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -257389,7 +258302,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -257441,7 +258353,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -257453,7 +258364,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -257482,7 +258392,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -257734,7 +258643,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -257746,7 +258654,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -257775,7 +258682,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -257827,7 +258733,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -257839,7 +258744,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -257868,7 +258772,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -257920,7 +258823,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -257932,7 +258834,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -257961,7 +258862,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -258013,7 +258913,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -258025,7 +258924,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -258054,7 +258952,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -258106,7 +259003,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -258118,7 +259014,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -258147,7 +259042,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -258207,7 +259101,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -258219,7 +259112,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -258248,7 +259140,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -258300,7 +259191,6 @@
                     },
                     "title": {
                       "maxLength": 128,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence\nto occurrence of the problem, except for purposes of localization.\n",
                       "example": "Invalid parameter"
@@ -258312,7 +259202,6 @@
                     },
                     "detail": {
                       "maxLength": 1024,
-                      "minLength": 16,
                       "type": "string",
                       "description": "A human-readable explanation specific to this occurrence of the problem. This field's value\ncan change between different occurrences of the same problem type to provide specific details.\n",
                       "nullable": true,
@@ -258341,7 +259230,6 @@
                         "properties": {
                           "detail": {
                             "maxLength": 1024,
-                            "minLength": 16,
                             "type": "string",
                             "description": "A human-readable explanation of the validation error for this specific field.",
                             "example": "must be a positive integer"
@@ -271838,7 +272726,7 @@
         "required": [
           "id",
           "title",
-          "timeSlots"
+          "time_slots"
         ],
         "type": "object",
         "properties": {
@@ -271848,7 +272736,7 @@
           "title": {
             "type": "string"
           },
-          "timeSlots": {
+          "time_slots": {
             "type": "string"
           }
         },
@@ -277627,6 +278515,178 @@
         "type": "string",
         "description": "Lifecycle status of a long-running operation."
       },
+      "conversations.v2.import_status": {
+        "enum": [
+          "PENDING",
+          "COMPLETED",
+          "FAILED",
+          "CANCELED"
+        ],
+        "type": "string",
+        "description": "Lifecycle status of an import or one of its sources."
+      },
+      "conversations.v2.update_import_request": {
+        "required": [
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "enum": [
+              "CANCELED"
+            ],
+            "type": "string",
+            "description": "The status to move the import to. Only CANCELED is supported."
+          }
+        }
+      },
+      "conversations.v2.import_source_type": {
+        "enum": [
+          "VOICE_RECORDINGS",
+          "CONVERSATIONS_CLASSIC"
+        ],
+        "type": "string",
+        "description": "Where the import reads data from."
+      },
+      "conversations.v2.create_import_request": {
+        "required": [
+          "sources"
+        ],
+        "type": "object",
+        "properties": {
+          "sources": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "required": [
+                "type"
+              ],
+              "type": "object",
+              "properties": {
+                "type": {
+                  "$ref": "#/components/schemas/conversations.v2.import_source_type"
+                }
+              }
+            },
+            "description": "Sources to import from. Each type can appear once."
+          }
+        }
+      },
+      "conversations.v2.import_progress": {
+        "type": "object",
+        "properties": {
+          "completed": {
+            "type": "integer"
+          },
+          "skipped": {
+            "type": "integer"
+          },
+          "failed": {
+            "type": "integer"
+          },
+          "inFlight": {
+            "type": "integer"
+          }
+        },
+        "description": "Item counts for one source."
+      },
+      "conversations.v2.import_source": {
+        "required": [
+          "type",
+          "status",
+          "progress"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/conversations.v2.import_source_type"
+          },
+          "status": {
+            "$ref": "#/components/schemas/conversations.v2.import_status"
+          },
+          "progress": {
+            "$ref": "#/components/schemas/conversations.v2.import_progress"
+          },
+          "failureReason": {
+            "type": "string",
+            "description": "Why this source failed. Only present when status is FAILED."
+          }
+        }
+      },
+      "conversations.v2.import": {
+        "required": [
+          "id",
+          "status",
+          "sources",
+          "createdAt",
+          "updatedAt"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "conv_import_01k1etx3jbfx88476ccja0889f"
+          },
+          "status": {
+            "$ref": "#/components/schemas/conversations.v2.import_status"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/conversations.v2.import_source"
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completedAt": {
+            "type": "string",
+            "description": "Only present once the import has finished.",
+            "format": "date-time"
+          },
+          "failureReason": {
+            "type": "string",
+            "description": "Why the import failed. Only present when status is FAILED."
+          }
+        }
+      },
+      "conversations.v2.import_list": {
+        "required": [
+          "imports",
+          "meta"
+        ],
+        "type": "object",
+        "properties": {
+          "imports": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/conversations.v2.import"
+            }
+          },
+          "meta": {
+            "required": [
+              "key",
+              "pageSize"
+            ],
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "example": "imports"
+              },
+              "pageSize": {
+                "type": "integer",
+                "example": 1
+              }
+            }
+          }
+        }
+      },
       "events.v1.event_type": {
         "type": "object",
         "properties": {
@@ -277679,24 +278739,6 @@
             "nullable": true
           }
         }
-      },
-      "replay_enum_status": {
-        "enum": [
-          "submitted",
-          "starting",
-          "running",
-          "cancelling",
-          "cancelled",
-          "failed",
-          "completed"
-        ],
-        "type": "string"
-      },
-      "replay_enum_patchstatus": {
-        "enum": [
-          "cancelling"
-        ],
-        "type": "string"
       },
       "events.v1.schema": {
         "type": "object",
@@ -281870,6 +282912,14 @@
           "sso": {
             "type": "boolean",
             "description": "Whether the user has SSO enabled"
+          },
+          "emailDomainVerified": {
+            "type": "boolean",
+            "description": "Whether the user's email domain is verified by the organization"
+          },
+          "hasSocialConnection": {
+            "type": "boolean",
+            "description": "Whether the user has a social login connection, for example Google"
           }
         }
       },
@@ -287073,7 +288123,7 @@
             "type": "string",
             "description": "Additional context about the failure",
             "nullable": true,
-            "example": "ClickHouse query exceeded the 120s execution limit."
+            "example": "Query exceeded the 120s execution limit."
           }
         },
         "description": "The error details for a failed operation, embedded inside a 200 OK operation envelope."
@@ -287202,16 +288252,43 @@
           "MEASURE"
         ],
         "type": "string",
-        "description": "The type of field being registered. Only `MEASURE` is supported."
+        "description": "The category of the custom field. Supported values:\n- `MEASURE`: a numeric value that can be aggregated and queried as a\n  measure in Conversations Insights.\n"
       },
       "SourceType": {
         "enum": [
           "INTELLIGENCE_OPERATOR"
         ],
         "type": "string",
-        "description": "The kind of upstream entity that sources this field. The value names the\nentity type itself, so the identifier carried in `entityMetadata` is\nunambiguous without a lookup (`INTELLIGENCE_OPERATOR` carries an\n`operatorId`).\n\nAdding a new upstream means adding a value here plus its own\n`entityMetadata` variant — the request shape is unchanged.\n"
+        "description": "The kind of entity that supplies the custom field's value. Each value has\na matching property on `entityMetadata` that carries that source's\ndetails. Supported values:\n- `INTELLIGENCE_OPERATOR`: the value is read from the output of a\n  Conversational Intelligence operator. Details go in\n  `entityMetadata.intelligenceOperator`.\n"
       },
-      "EntityMetadataBase": {
+      "IntelligenceOperatorSource": {
+        "required": [
+          "operatorId",
+          "field"
+        ],
+        "type": "object",
+        "properties": {
+          "operatorId": {
+            "pattern": "^intelligence_operator_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The ID of the Conversational Intelligence operator whose output\nsupplies this field's value. Must match\n`^intelligence_operator_[0-7][0-9a-z]{25}$`. Cannot be changed after\nregistration.\n",
+            "example": "intelligence_operator_01kcgy1ew0e9x8re6jq542zt8b"
+          },
+          "operatorName": {
+            "type": "string",
+            "description": "Optional, display-only name of the operator. Stored as supplied and\nnot validated against the operator.\n",
+            "example": "Sentiment Analysis"
+          },
+          "field": {
+            "pattern": "^[A-Za-z0-9_]+(\\.[A-Za-z0-9_]+)?$",
+            "type": "string",
+            "description": "Path to the property in the operator's output schema that supplies\nthis field's value. Rules:\n- one or two segments separated by `.` — a top-level property\n  (`leadScore`) or one level of nesting (`scores.leadScore`);\n- each segment contains only letters, digits and `_`; array\n  indexing (such as `items[0]`) is not supported;\n- the path must exist in the output schema of the operator's\n  latest active version and resolve to a property of type `number`\n  or `integer`.\n",
+            "example": "leadScore"
+          }
+        },
+        "description": "Details of a custom field whose value is read from a Conversational\nIntelligence operator's output. The operator must:\n- have an active version;\n- have `outputFormat` `JSON` (`TEXT` and `CLASSIFICATION` operators\n  are rejected).\n\nRequests that reference an ineligible operator are rejected with `400`.\n"
+      },
+      "EntityMetadata": {
         "required": [
           "sourceType"
         ],
@@ -287219,54 +288296,15 @@
         "properties": {
           "sourceType": {
             "$ref": "#/components/schemas/SourceType"
+          },
+          "intelligenceOperator": {
+            "$ref": "#/components/schemas/IntelligenceOperatorSource"
           }
         },
-        "description": "Fields common to every `entityMetadata` variant. Exists so that generated\nclients get a stable base type: a variant added in a later revision\ndegrades to this rather than breaking deserialization.\n"
-      },
-      "IntelligenceOperatorEntityMetadata": {
-        "required": [
-          "operatorId",
-          "sourceType",
-          "field"
-        ],
-        "type": "object",
-        "properties": {
-          "sourceType": {
-            "$ref": "#/components/schemas/SourceType"
-          },
-          "operatorId": {
-            "type": "string",
-            "description": "The Intelligence operator ID. Part of the owner check for\nidempotent upserts — a mismatch against the existing\nregistration's `(sourceType, operatorId)` returns `409`.\n",
-            "example": "OPxxxx"
-          },
-          "operatorName": {
-            "type": "string",
-            "description": "Optional, display-only name of the operator as supplied at\nregistration time. Not part of any uniqueness or validation logic.\n",
-            "example": "Sentiment Analysis"
-          },
-          "field": {
-            "pattern": "^[A-Za-z0-9_.]+$",
-            "type": "string",
-            "description": "Annotation fieldPath key; generic identifier that determines the\noutput-schema field. Resolved against the operator identified by\n`operatorId`.\n",
-            "example": "leadScore"
-          }
+        "additionalProperties": {
+          "not": { }
         },
-        "description": "Entity reference for a custom field sourced from a Conversational\nIntelligence operator. `field` is required — Intelligence is the source of\ntruth for resolving it against the operator's output schema.\n"
-      },
-      "EntityMetadata": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/IntelligenceOperatorEntityMetadata"
-          }
-        ],
-        "description": "Reference to the upstream entity that sources this field. Shape is\nselected by the `sourceType` discriminator and owned by that upstream, not\nby this API — adding a new upstream means adding a variant here, not\nchanging the request shape.\n\nEvery variant carries `sourceType` via `EntityMetadataBase`, so a client\nthat does not recognise a newly added variant can still deserialize the\ncommon fields rather than failing outright.\n\nThe owner check for idempotent upserts is scoped to `sourceType` plus that\nvariant's own identity field (`operatorId` for `INTELLIGENCE_OPERATOR`); a\nmismatch against an existing registration's owner returns `409`.\n",
-        "discriminator": {
-          "propertyName": "sourceType",
-          "mapping": {
-            "INTELLIGENCE_OPERATOR": "#/components/schemas/IntelligenceOperatorEntityMetadata",
-            "IntelligenceOperatorEntityMetadata": "#/components/schemas/IntelligenceOperatorEntityMetadata"
-          }
-        }
+        "description": "Identifies the entity that supplies this field's value. `sourceType`\nselects the source, and the property named for that source carries its\ndetails. Exactly that one source property must be present:\n\n| `sourceType` | Required property |\n|---|---|\n| `INTELLIGENCE_OPERATOR` | `intelligenceOperator` |\n\nA request whose `sourceType` doesn't match the source property it sends,\nor that sends any other property, is rejected with `400`.\n"
       },
       "CustomFieldMappingRequest": {
         "required": [
@@ -287282,20 +288320,67 @@
           "name": {
             "pattern": "^[A-Za-z0-9_]+$",
             "type": "string",
-            "description": "Customer-facing name for the field; becomes the ClickHouse Map key and\nthe platform field alias. Unique per account across every\n`sourceType` — the Map key namespace is account-global.\n",
+            "description": "Name of the custom field, used to reference it in Insights queries.\nContains only letters, digits and `_`, and must not be empty.\nMust be unique within the account across every `sourceType`;\nregistering an existing name returns `409`. Cannot be changed after\nregistration.\n",
             "example": "LeadScore"
           },
           "description": {
             "maxLength": 150,
             "type": "string",
-            "description": "Optional, free-text description of this custom field mapping.\nDisplay-only — not part of any uniqueness check.\n",
+            "description": "Optional, free-text description of this custom field mapping, up to\n150 characters. Display-only — not part of any uniqueness check.\n",
             "example": "Lead quality score derived from sentiment analysis"
           },
           "entityMetadata": {
             "$ref": "#/components/schemas/EntityMetadata"
           }
         },
-        "description": "Registration payload for a single custom field sourced from an upstream\nentity. The target account is supplied via the I-Twilio-Auth-Account\nheader, not this body.\n"
+        "description": "Registration payload for a single custom field. The mapping is created in\nthe account identified by the request's credentials.\n"
+      },
+      "CustomFieldMappingUpdateRequest": {
+        "minProperties": 1,
+        "type": "object",
+        "properties": {
+          "entityMetadata": {
+            "$ref": "#/components/schemas/EntityMetadataUpdate"
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        },
+        "description": "Partial update of a custom field mapping. Only properties present in the\nbody are changed; absent properties keep their current value. The body\nmust contain at least one change: an empty body is rejected with `400`.\nProperties that cannot be updated (such as `name`, `category` or\n`operatorId`) are rejected with `400` rather than ignored.\n"
+      },
+      "EntityMetadataUpdate": {
+        "required": [
+          "sourceType"
+        ],
+        "type": "object",
+        "properties": {
+          "sourceType": {
+            "$ref": "#/components/schemas/SourceType"
+          },
+          "intelligenceOperator": {
+            "$ref": "#/components/schemas/IntelligenceOperatorSourceUpdate"
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        },
+        "description": "Updatable subset of `entityMetadata`. `sourceType` must equal the\nmapping's current `sourceType` (it cannot be changed), and the property\nnamed for that source carries the fields to update:\n\n| `sourceType` | Update property | Updatable fields |\n|---|---|---|\n| `INTELLIGENCE_OPERATOR` | `intelligenceOperator` | `field` |\n"
+      },
+      "IntelligenceOperatorSourceUpdate": {
+        "minProperties": 1,
+        "type": "object",
+        "properties": {
+          "field": {
+            "pattern": "^[A-Za-z0-9_]+(\\.[A-Za-z0-9_]+)?$",
+            "type": "string",
+            "description": "New path to the property in the operator's output schema. Follows the\nsame rules as `field` at registration: one or two `.`-separated\nsegments of letters, digits and `_`, resolving to a `number` or\n`integer` property on the operator's latest active version.\n",
+            "example": "scores.leadScore"
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        },
+        "description": "Updatable fields of a custom field mapping sourced from a Conversational\nIntelligence operator. At least one field must be present. Currently\nonly `field` can be modified; `operatorId` and `operatorName` cannot be\nupdated.\n"
       },
       "CustomFieldMappingResponse": {
         "required": [
@@ -287307,14 +288392,16 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "TTID for conversation insights custom field mapping",
+            "description": "The unique identifier of the custom field mapping.",
             "example": "convinsights_mapping_01m31967b7em08vh1pqgbam3mj"
           },
           "category": {
             "$ref": "#/components/schemas/MappingCategory"
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "Name of the custom field, unique within the account.",
+            "example": "LeadScore"
           },
           "description": {
             "maxLength": 150,
@@ -287333,28 +288420,32 @@
           },
           "updatedAt": {
             "type": "string",
-            "description": "When the mapping was last materially modified in-place. Null until the first update-in-place.",
+            "description": "When the mapping was last modified via `PATCH`. Null until the first update.",
             "format": "date-time",
             "nullable": true,
-            "example": "2026-08-13T14:30:00Z"
+            "example": "2026-09-30T10:00:00Z"
           }
         },
         "description": "A registered custom field mapping."
       },
       "CustomFieldMappingsList": {
         "required": [
-          "mappings"
+          "items",
+          "meta"
         ],
         "type": "object",
         "properties": {
-          "mappings": {
+          "items": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CustomFieldMappingResponse"
             }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/PaginationMeta"
           }
         },
-        "description": "All custom field mappings registered for an account."
+        "description": "A page of custom field mappings registered for the account. The mappings\nare under `items`, and `meta.key` is `items`.\n"
       },
       "CustomFieldCapacity": {
         "type": "object",
@@ -287363,23 +288454,29 @@
             "$ref": "#/components/schemas/CategoryCapacity"
           }
         },
-        "description": "Custom field mapping slot capacity for the account. Only the `measure`\ncategory is supported for now; it is an empty object when custom\nmeasures are not applicable for the account.\n"
+        "description": "Custom field mapping slot capacity for the account, by category. Only the\n`measure` category is supported for now; the object is empty when custom\nmeasures are not available for the account.\n"
       },
       "CategoryCapacity": {
+        "required": [
+          "consumed",
+          "remaining"
+        ],
         "type": "object",
         "properties": {
           "consumed": {
+            "minimum": 0,
             "type": "integer",
             "description": "Number of custom field mapping slots already registered.",
             "example": 1
           },
           "remaining": {
+            "minimum": 0,
             "type": "integer",
             "description": "Number of custom field mapping slots still available.",
             "example": 2
           }
         },
-        "description": "Slots consumed and remaining for the measure category. Empty when not\napplicable for the account.\n"
+        "description": "Slots consumed and remaining for the measure category. By default an\naccount can register up to 3 custom measures, so `consumed + remaining`\nis the account's limit. Registering a new mapping when `remaining` is\n`0` returns `403`.\n"
       },
       "intelligence.v2.custom_operator": {
         "type": "object",
@@ -288376,17 +289473,17 @@
       "TextResult": {
         "title": "Text result",
         "required": [
-          "referenceIds",
-          "result",
-          "intelligenceConfiguration",
-          "dateCreated",
-          "outputFormat",
-          "metadata",
-          "id",
-          "conversationId",
+          "executionDetails",
           "operator",
+          "outputFormat",
+          "dateCreated",
+          "referenceIds",
+          "metadata",
+          "result",
+          "id",
           "accountId",
-          "executionDetails"
+          "conversationId",
+          "intelligenceConfiguration"
         ],
         "type": "object",
         "properties": {
@@ -288462,17 +289559,17 @@
       "JSONResult": {
         "title": "JSON result",
         "required": [
-          "referenceIds",
-          "result",
-          "intelligenceConfiguration",
-          "dateCreated",
-          "outputFormat",
-          "metadata",
-          "id",
-          "conversationId",
+          "executionDetails",
           "operator",
+          "outputFormat",
+          "dateCreated",
+          "referenceIds",
+          "metadata",
+          "result",
+          "id",
           "accountId",
-          "executionDetails"
+          "conversationId",
+          "intelligenceConfiguration"
         ],
         "type": "object",
         "properties": {
@@ -288540,17 +289637,17 @@
       "ClassificationResult": {
         "title": "Classification result",
         "required": [
-          "referenceIds",
-          "result",
-          "intelligenceConfiguration",
-          "dateCreated",
-          "outputFormat",
-          "metadata",
-          "id",
-          "conversationId",
+          "executionDetails",
           "operator",
+          "outputFormat",
+          "dateCreated",
+          "referenceIds",
+          "metadata",
+          "result",
+          "id",
           "accountId",
-          "executionDetails"
+          "conversationId",
+          "intelligenceConfiguration"
         ],
         "type": "object",
         "properties": {
@@ -288626,17 +289723,17 @@
       "ExtractionResult": {
         "title": "Extraction result",
         "required": [
-          "referenceIds",
-          "result",
-          "intelligenceConfiguration",
-          "dateCreated",
-          "outputFormat",
-          "metadata",
-          "id",
-          "conversationId",
+          "executionDetails",
           "operator",
+          "outputFormat",
+          "dateCreated",
+          "referenceIds",
+          "metadata",
+          "result",
+          "id",
           "accountId",
-          "executionDetails"
+          "conversationId",
+          "intelligenceConfiguration"
         ],
         "type": "object",
         "properties": {
@@ -289598,9 +290695,9 @@
       },
       "CreateOrUpdateOperatorRequest": {
         "required": [
+          "outputFormat",
           "displayName",
-          "prompt",
-          "outputFormat"
+          "prompt"
         ],
         "type": "object",
         "properties": {
@@ -292360,10 +293457,10 @@
       "Knowledge": {
         "required": [
           "createdAt",
-          "updatedAt",
+          "status",
           "id",
           "name",
-          "status"
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -292810,12 +293907,12 @@
       },
       "KnowledgeBase": {
         "required": [
-          "createdAt",
-          "updatedAt",
           "displayName",
-          "id",
+          "createdAt",
+          "status",
           "version",
-          "status"
+          "id",
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -294625,8 +295722,8 @@
       },
       "ObservationInfo": {
         "required": [
-          "createdAt",
           "id",
+          "createdAt",
           "updatedAt"
         ],
         "type": "object",
@@ -294714,12 +295811,12 @@
       },
       "SummaryInfo": {
         "required": [
-          "createdAt",
           "content",
-          "updatedAt",
+          "createdAt",
+          "occurredAt",
           "id",
           "conversationId",
-          "occurredAt"
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -294882,8 +295979,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id",
                 "channel",
+                "id",
                 "name",
                 "address"
               ],
@@ -295391,10 +296488,10 @@
       "Store": {
         "required": [
           "displayName",
-          "id",
-          "version",
           "status",
-          "intelligenceServiceId"
+          "intelligenceServiceId",
+          "version",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -295507,8 +296604,8 @@
       },
       "IdentityResolutionSettings": {
         "required": [
-          "identifierConfigs",
           "matchingRules",
+          "identifierConfigs",
           "version"
         ],
         "type": "object",
@@ -296231,9 +297328,9 @@
       },
       "CreateDataMappingInput": {
         "required": [
-          "mappingTo",
           "displayName",
-          "mappingFrom"
+          "mappingFrom",
+          "mappingTo"
         ],
         "type": "object",
         "properties": {
@@ -296264,13 +297361,13 @@
       },
       "DataMapping": {
         "required": [
+          "displayName",
           "createdAt",
           "mappingTo",
-          "updatedAt",
-          "displayName",
-          "mappingFrom",
+          "version",
           "id",
-          "version"
+          "mappingFrom",
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -296343,12 +297440,12 @@
       },
       "RecallObservationInfo": {
         "required": [
-          "createdAt",
           "content",
-          "updatedAt",
+          "createdAt",
+          "occurredAt",
           "id",
           "source",
-          "occurredAt"
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -296409,12 +297506,12 @@
       },
       "RecallSummaryInfo": {
         "required": [
-          "createdAt",
           "content",
-          "updatedAt",
+          "createdAt",
+          "occurredAt",
           "id",
           "conversationId",
-          "occurredAt"
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -297096,12 +298193,12 @@
       },
       "TraitExtractionStrategy": {
         "required": [
-          "createdAt",
-          "updatedAt",
           "displayName",
-          "id",
+          "createdAt",
           "version",
-          "storeId"
+          "id",
+          "storeId",
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -297347,11 +298444,11 @@
       },
       "ObservationExtractionStrategy": {
         "required": [
-          "createdAt",
-          "updatedAt",
           "displayName",
+          "createdAt",
+          "version",
           "id",
-          "version"
+          "updatedAt"
         ],
         "type": "object",
         "properties": {
@@ -300265,13 +301362,9 @@
         }
       },
       "messaging.v2.channels_account_metadata.request": {
-        "required": [
-          "accountType",
-          "hasAcceptedTos"
-        ],
         "type": "object",
         "properties": {
-          "accountType": {
+          "account_type": {
             "enum": [
               "ISV",
               "DIRECT"
@@ -300279,35 +301372,35 @@
             "type": "string",
             "description": "Whether this account is an ISV (independent software vendor) or a direct customer. Only settable by a parent account."
           },
-          "hasAcceptedTos": {
+          "has_accepted_tos": {
             "type": "boolean",
-            "description": "Whether this account has accepted the WhatsApp terms of service. Only settable by a parent account, and only to true."
+            "description": "Whether this account has accepted the WhatsApp terms of service. Only settable by a parent account."
           }
         }
       },
       "messaging.v2.channels_account_metadata.response": {
         "type": "object",
         "properties": {
-          "isParentAccount": {
+          "is_parent_account": {
             "type": "boolean",
             "description": "True if this account has no parent account."
           },
-          "parentAccount": {
+          "parent_account": {
             "type": "string",
-            "description": "The account SID whose terms-of-service acceptance and account type this reflects: this account's own SID if isParentAccount is true, otherwise the parent's SID."
+            "description": "The account SID whose terms-of-service acceptance and account type this reflects: this account's own SID if is_parent_account is true, otherwise the parent's SID."
           },
-          "hasAcceptedTos": {
+          "has_accepted_tos": {
             "type": "boolean",
-            "description": "Whether parentAccount has accepted the WhatsApp terms of service."
+            "description": "Whether parent_account has accepted the WhatsApp terms of service."
           },
-          "accountType": {
+          "account_type": {
             "enum": [
               "ISV",
               "DIRECT",
               "NOT_SET_YET"
             ],
             "type": "string",
-            "description": "parentAccount's declared account type, or NOT_SET_YET if never set."
+            "description": "parent_account's declared account type, or NOT_SET_YET if never set."
           }
         }
       },
@@ -303271,10 +304364,10 @@
       },
       "numbers.v1.a2p_registration_details_fetch": {
         "required": [
-          "externalPhoneNumberStatus",
-          "phoneNumberSid",
           "accountSid",
-          "phoneNumber"
+          "phoneNumber",
+          "externalPhoneNumberStatus",
+          "phoneNumberSid"
         ],
         "type": "object",
         "properties": {
@@ -303820,10 +304913,10 @@
       },
       "numbers.v2.a2p_registration_details_fetch": {
         "required": [
-          "externalPhoneNumberStatus",
-          "phoneNumberSid",
           "accountSid",
-          "phoneNumber"
+          "phoneNumber",
+          "externalPhoneNumberStatus",
+          "phoneNumberSid"
         ],
         "type": "object",
         "properties": {
@@ -327770,13 +328863,14 @@
       "description": "Poll the status of a long-running operation."
     },
     {
+      "name": "ConversationsV2Import",
+      "description": "Import an account's past voice recordings and conversations into Conversation Orchestrator."
+    },
+    {
       "name": "EventsV1EventType"
     },
     {
       "name": "EventsV1Index"
-    },
-    {
-      "name": "EventsV1Replay"
     },
     {
       "name": "EventsV1Schema"

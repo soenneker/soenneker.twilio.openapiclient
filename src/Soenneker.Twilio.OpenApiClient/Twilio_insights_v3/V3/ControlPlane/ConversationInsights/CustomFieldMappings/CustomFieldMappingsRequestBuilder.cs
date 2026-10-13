@@ -4,7 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Models;
-using Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Capacity;
+using Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Item;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -18,17 +18,24 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.Conv
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomFieldMappingsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The Capacity property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Capacity.CapacityRequestBuilder Capacity
+        /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_insights_v3.v3.ControlPlane.ConversationInsights.CustomFieldMappings.item collection</summary>
+        /// <param name="position">The unique identifier of the custom field mapping, as returned in `id` when the mapping was created.</param>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Item.WithMappingItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Item.WithMappingItemRequestBuilder this[string position]
         {
-            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Capacity.CapacityRequestBuilder(PathParameters, RequestAdapter);
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("mappingId", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Item.WithMappingItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.CustomFieldMappingsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CustomFieldMappingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappings", pathParameters)
+        public CustomFieldMappingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappings{?pageSize*,pageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,45 +43,45 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.Conv
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CustomFieldMappingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappings", rawUrl)
+        public CustomFieldMappingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappings{?pageSize*,pageToken*}", rawUrl)
         {
         }
         /// <summary>
-        /// Returns custom field mappings registered for the account.
+        /// Returns the custom field mappings registered for the account, one page ata time. Use `pageSize` to limit the number of mappings returned, and pass`meta.nextToken` from a response as `pageToken` to fetch the next page.On the last page, `meta.nextToken` is `null`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingsList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings400Response">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings401Response">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings403Response">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings429Response">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingsList?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingsList?> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.CustomFieldMappingsRequestBuilder.CustomFieldMappingsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingsList> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingsList> GetAsync(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.CustomFieldMappingsRequestBuilder.CustomFieldMappingsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings400Response.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings401Response.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings403Response.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings429Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings500Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings401Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings403Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3ListCustomFieldMappings500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingsList>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingsList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Registers a custom field for an account under a category, sourced from anupstream entity — selected via the `entityMetadata.sourceType`discriminator, which determines the required shape of `entityMetadata`.Only the `MEASURE` category is supported for now.For sources with a resolvable field-path concept, validates that`entityMetadata.field` resolves on the entity&apos;s latest active version bycalling that source&apos;s own resolution API (the Intelligence fetch-operatorAPI for `sourceType: INTELLIGENCE_OPERATOR`), then performs an idempotentupsert keyed on (accountSid, category, name).`entityMetadata.sourceType` plus that variant&apos;s own identity field(`operatorId` for `INTELLIGENCE_OPERATOR`) must match the existingregistration&apos;s owner for the upsert to succeed — a mismatch returns`409`. Enforces the per-account, per-category capacity limit.
+        /// Registers a custom field for the account. `entityMetadata.sourceType`selects where the field&apos;s value comes from, and the matching property on`entityMetadata` (`intelligenceOperator` for `INTELLIGENCE_OPERATOR`)carries its details. Only the `MEASURE` category is supported for now.The request is validated before the mapping is created:- `name` contains only letters, digits and `_`, and is not already  registered for the account (otherwise `409`);- `description`, when present, is at most 150 characters;- for `INTELLIGENCE_OPERATOR`, the operator has an active version with  `outputFormat` `JSON`, and `entityMetadata.intelligenceOperator.field`  is one or two `.`-separated segments that resolve to a `number` or  `integer` property in that version&apos;s output schema (otherwise `400`);- the account has a free slot in the category; by default an account can  register up to 3 custom measures (otherwise `403`). Use  `GET /v3/ControlPlane/ConversationInsights/CustomFieldMappingsCapacity`  to check the remaining slots.Create-only: if a mapping with the same `name` already exists for theaccount, `409` is returned with the existing mapping&apos;s `id` and nothingis changed. To modify an existing mapping, use`PATCH /v3/ControlPlane/ConversationInsights/CustomFieldMappings/{mappingId}`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse"/></returns>
-        /// <param name="body">Registration payload for a single custom field sourced from an upstreamentity. The target account is supplied via the I-Twilio-Auth-Accountheader, not this body.</param>
+        /// <param name="body">Registration payload for a single custom field. The mapping is created inthe account identified by the request&apos;s credentials.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateCustomFieldMapping400Response">When receiving a 400 status code</exception>
@@ -83,6 +90,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.Conv
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateCustomFieldMapping409Response">When receiving a 409 status code</exception>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateCustomFieldMapping429Response">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateCustomFieldMapping500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateCustomFieldMapping503Response">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse?> PostAsync(global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -102,21 +110,22 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.Conv
                 { "409", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateCustomFieldMapping409Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateCustomFieldMapping429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateCustomFieldMapping500Response.CreateFromDiscriminatorValue },
+                { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3CreateCustomFieldMapping503Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns custom field mappings registered for the account.
+        /// Returns the custom field mappings registered for the account, one page ata time. Use `pageSize` to limit the number of mappings returned, and pass`meta.nextToken` from a response as `pageToken` to fetch the next page.On the last page, `meta.nextToken` is `null`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.CustomFieldMappingsRequestBuilder.CustomFieldMappingsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.CustomFieldMappingsRequestBuilder.CustomFieldMappingsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -125,10 +134,10 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.Conv
             return requestInfo;
         }
         /// <summary>
-        /// Registers a custom field for an account under a category, sourced from anupstream entity — selected via the `entityMetadata.sourceType`discriminator, which determines the required shape of `entityMetadata`.Only the `MEASURE` category is supported for now.For sources with a resolvable field-path concept, validates that`entityMetadata.field` resolves on the entity&apos;s latest active version bycalling that source&apos;s own resolution API (the Intelligence fetch-operatorAPI for `sourceType: INTELLIGENCE_OPERATOR`), then performs an idempotentupsert keyed on (accountSid, category, name).`entityMetadata.sourceType` plus that variant&apos;s own identity field(`operatorId` for `INTELLIGENCE_OPERATOR`) must match the existingregistration&apos;s owner for the upsert to succeed — a mismatch returns`409`. Enforces the per-account, per-category capacity limit.
+        /// Registers a custom field for the account. `entityMetadata.sourceType`selects where the field&apos;s value comes from, and the matching property on`entityMetadata` (`intelligenceOperator` for `INTELLIGENCE_OPERATOR`)carries its details. Only the `MEASURE` category is supported for now.The request is validated before the mapping is created:- `name` contains only letters, digits and `_`, and is not already  registered for the account (otherwise `409`);- `description`, when present, is at most 150 characters;- for `INTELLIGENCE_OPERATOR`, the operator has an active version with  `outputFormat` `JSON`, and `entityMetadata.intelligenceOperator.field`  is one or two `.`-separated segments that resolve to a `number` or  `integer` property in that version&apos;s output schema (otherwise `400`);- the account has a free slot in the category; by default an account can  register up to 3 custom measures (otherwise `403`). Use  `GET /v3/ControlPlane/ConversationInsights/CustomFieldMappingsCapacity`  to check the remaining slots.Create-only: if a mapping with the same `name` already exists for theaccount, `409` is returned with the existing mapping&apos;s `id` and nothingis changed. To modify an existing mapping, use`PATCH /v3/ControlPlane/ConversationInsights/CustomFieldMappings/{mappingId}`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">Registration payload for a single custom field sourced from an upstreamentity. The target account is supplied via the I-Twilio-Auth-Accountheader, not this body.</param>
+        /// <param name="body">Registration payload for a single custom field. The mapping is created inthe account identified by the request&apos;s credentials.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -154,6 +163,26 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.Conv
         public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.CustomFieldMappingsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.CustomFieldMappingsRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// Returns the custom field mappings registered for the account, one page ata time. Use `pageSize` to limit the number of mappings returned, and pass`meta.nextToken` from a response as `pageToken` to fetch the next page.On the last page, `meta.nextToken` is `null`.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class CustomFieldMappingsRequestBuilderGetQueryParameters 
+        {
+            /// <summary>The maximum number of resources to return</summary>
+            [QueryParameter("pageSize")]
+            public int? PageSize { get; set; }
+            /// <summary>Token for pagination</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("pageToken")]
+            public string? PageToken { get; set; }
+#nullable restore
+#else
+            [QueryParameter("pageToken")]
+            public string PageToken { get; set; }
+#endif
         }
     }
 }

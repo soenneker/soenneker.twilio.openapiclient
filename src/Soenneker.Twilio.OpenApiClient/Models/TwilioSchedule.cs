@@ -23,7 +23,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The timeSlots property</summary>
+        /// <summary>The time_slots property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimeSlots { get; set; }
@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "timeSlots", n => { TimeSlots = n.GetStringValue(); } },
+                { "time_slots", n => { TimeSlots = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -77,7 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("timeSlots", TimeSlots);
+            writer.WriteStringValue("time_slots", TimeSlots);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -8,20 +8,28 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// All custom field mappings registered for an account.
+    /// A page of custom field mappings registered for the account. The mappingsare under `items`, and `meta.key` is `items`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomFieldMappingsList : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The mappings property</summary>
+        /// <summary>The items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse>? Mappings { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse> Mappings { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse> Items { get; set; }
+#endif
+        /// <summary>The pagination metadata containing navigation tokens and result information.By convention, this schema should be added to the response payload&apos;s&apos;meta&apos; attribute.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta? Meta { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingsList"/> and sets the default values.
@@ -48,7 +56,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "mappings", n => { Mappings = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse>(global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse>(global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta>(global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +67,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse>("mappings", Mappings);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse>("items", Items);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PaginationMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

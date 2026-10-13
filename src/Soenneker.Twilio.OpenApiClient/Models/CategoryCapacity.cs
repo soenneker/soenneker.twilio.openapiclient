@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Slots consumed and remaining for the measure category. Empty when notapplicable for the account.
+    /// Slots consumed and remaining for the measure category. By default anaccount can register up to 3 custom measures, so `consumed + remaining`is the account&apos;s limit. Registering a new mapping when `remaining` is`0` returns `403`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CategoryCapacity : IAdditionalDataHolder, IParsable

@@ -8,16 +8,16 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Registration payload for a single custom field sourced from an upstreamentity. The target account is supplied via the I-Twilio-Auth-Accountheader, not this body.
+    /// Registration payload for a single custom field. The mapping is created inthe account identified by the request&apos;s credentials.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomFieldMappingRequest : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The type of field being registered. Only `MEASURE` is supported.</summary>
+        /// <summary>The category of the custom field. Supported values:- `MEASURE`: a numeric value that can be aggregated and queried as a  measure in Conversations Insights.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.MappingCategory? Category { get; set; }
-        /// <summary>Optional, free-text description of this custom field mapping.Display-only — not part of any uniqueness check.</summary>
+        /// <summary>Optional, free-text description of this custom field mapping, up to150 characters. Display-only — not part of any uniqueness check.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -25,7 +25,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Reference to the upstream entity that sources this field. Shape isselected by the `sourceType` discriminator and owned by that upstream, notby this API — adding a new upstream means adding a variant here, notchanging the request shape.Every variant carries `sourceType` via `EntityMetadataBase`, so a clientthat does not recognise a newly added variant can still deserialize thecommon fields rather than failing outright.The owner check for idempotent upserts is scoped to `sourceType` plus thatvariant&apos;s own identity field (`operatorId` for `INTELLIGENCE_OPERATOR`); amismatch against an existing registration&apos;s owner returns `409`.</summary>
+        /// <summary>Identifies the entity that supplies this field&apos;s value. `sourceType`selects the source, and the property named for that source carries itsdetails. Exactly that one source property must be present:| `sourceType` | Required property ||---|---|| `INTELLIGENCE_OPERATOR` | `intelligenceOperator` |A request whose `sourceType` doesn&apos;t match the source property it sends,or that sends any other property, is rejected with `400`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadata? EntityMetadata { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadata EntityMetadata { get; set; }
 #endif
-        /// <summary>Customer-facing name for the field; becomes the ClickHouse Map key andthe platform field alias. Unique per account across every`sourceType` — the Map key namespace is account-global.</summary>
+        /// <summary>Name of the custom field, used to reference it in Insights queries.Contains only letters, digits and `_`, and must not be empty.Must be unique within the account across every `sourceType`;registering an existing name returns `409`. Cannot be changed afterregistration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

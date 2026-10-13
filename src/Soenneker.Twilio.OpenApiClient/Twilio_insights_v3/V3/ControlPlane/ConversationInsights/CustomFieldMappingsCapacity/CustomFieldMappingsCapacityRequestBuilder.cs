@@ -9,28 +9,28 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Capacity
+namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappingsCapacity
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_insights_v3\v3\ControlPlane\ConversationInsights\CustomFieldMappings\Capacity
+    /// Builds and executes requests for operations under \twilio_insights_v3\v3\ControlPlane\ConversationInsights\CustomFieldMappingsCapacity
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CapacityRequestBuilder : BaseRequestBuilder
+    public partial class CustomFieldMappingsCapacityRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Capacity.CapacityRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappingsCapacity.CustomFieldMappingsCapacityRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CapacityRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappings/Capacity", pathParameters)
+        public CustomFieldMappingsCapacityRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappingsCapacity", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Capacity.CapacityRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappingsCapacity.CustomFieldMappingsCapacityRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CapacityRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappings/Capacity", rawUrl)
+        public CustomFieldMappingsCapacityRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_insights_v3/v3/ControlPlane/ConversationInsights/CustomFieldMappingsCapacity", rawUrl)
         {
         }
         /// <summary>
@@ -84,11 +84,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.Conv
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Capacity.CapacityRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappingsCapacity.CustomFieldMappingsCapacityRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Capacity.CapacityRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappingsCapacity.CustomFieldMappingsCapacityRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.Capacity.CapacityRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappingsCapacity.CustomFieldMappingsCapacityRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

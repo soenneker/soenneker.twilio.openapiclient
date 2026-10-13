@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>The type of field being registered. Only `MEASURE` is supported.</summary>
+    /// <summary>The category of the custom field. Supported values:- `MEASURE`: a numeric value that can be aggregated and queried as a  measure in Conversations Insights.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum MappingCategory
     {

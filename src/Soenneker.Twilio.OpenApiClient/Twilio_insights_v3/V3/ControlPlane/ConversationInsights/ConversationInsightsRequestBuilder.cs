@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings;
+using Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappingsCapacity;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.Conv
         public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.CustomFieldMappingsRequestBuilder CustomFieldMappings
         {
             get => new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappings.CustomFieldMappingsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The CustomFieldMappingsCapacity property</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappingsCapacity.CustomFieldMappingsCapacityRequestBuilder CustomFieldMappingsCapacity
+        {
+            get => new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.CustomFieldMappingsCapacity.CustomFieldMappingsCapacityRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.ConversationInsights.ConversationInsightsRequestBuilder"/> and sets the default values.

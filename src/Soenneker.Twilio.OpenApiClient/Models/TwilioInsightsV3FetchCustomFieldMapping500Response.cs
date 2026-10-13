@@ -10,7 +10,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class TwilioInsightsV3FetchCustomFieldMappings429Response : ApiException, IAdditionalDataHolder, IParsable
+    public partial class TwilioInsightsV3FetchCustomFieldMapping500Response : ApiException, IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,29 +32,29 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A map of parameters related to the error, for example, a `params.twilioErrorCodeUrl` might hold a URL or link to additional information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings429ResponseParams? Params { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping500ResponseParams? Params { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings429ResponseParams Params { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping500ResponseParams Params { get; set; }
 #endif
         /// <summary>Whether the error is a user error (true) or a system error (false)</summary>
         public bool? UserError { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings429Response"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping500Response"/> and sets the default values.
         /// </summary>
-        public TwilioInsightsV3FetchCustomFieldMappings429Response()
+        public TwilioInsightsV3FetchCustomFieldMapping500Response()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings429Response"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping500Response"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings429Response CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping500Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings429Response();
+            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping500Response();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "code", n => { Code = n.GetIntValue(); } },
                 { "httpStatusCode", n => { HttpStatusCode = n.GetIntValue(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
-                { "params", n => { Params = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings429ResponseParams>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings429ResponseParams.CreateFromDiscriminatorValue); } },
+                { "params", n => { Params = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping500ResponseParams>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping500ResponseParams.CreateFromDiscriminatorValue); } },
                 { "userError", n => { UserError = n.GetBoolValue(); } },
             };
         }
@@ -81,7 +81,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("code", Code);
             writer.WriteIntValue("httpStatusCode", HttpStatusCode);
             writer.WriteStringValue("message", MessageEscaped);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappings429ResponseParams>("params", Params);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping500ResponseParams>("params", Params);
             writer.WriteBoolValue("userError", UserError);
             writer.WriteAdditionalData(AdditionalData);
         }

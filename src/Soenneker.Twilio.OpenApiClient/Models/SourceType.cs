@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
-    /// <summary>The kind of upstream entity that sources this field. The value names theentity type itself, so the identifier carried in `entityMetadata` isunambiguous without a lookup (`INTELLIGENCE_OPERATOR` carries an`operatorId`).Adding a new upstream means adding a value here plus its own`entityMetadata` variant — the request shape is unchanged.</summary>
+    /// <summary>The kind of entity that supplies the custom field&apos;s value. Each value hasa matching property on `entityMetadata` that carries that source&apos;sdetails. Supported values:- `INTELLIGENCE_OPERATOR`: the value is read from the output of a  Conversational Intelligence operator. Details go in  `entityMetadata.intelligenceOperator`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SourceType
     {

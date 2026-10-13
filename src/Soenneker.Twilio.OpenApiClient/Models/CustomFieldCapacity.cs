@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Custom field mapping slot capacity for the account. Only the `measure`category is supported for now; it is an empty object when custommeasures are not applicable for the account.
+    /// Custom field mapping slot capacity for the account, by category. Only the`measure` category is supported for now; the object is empty when custommeasures are not available for the account.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomFieldCapacity : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Slots consumed and remaining for the measure category. Empty when notapplicable for the account.</summary>
+        /// <summary>Slots consumed and remaining for the measure category. By default anaccount can register up to 3 custom measures, so `consumed + remaining`is the account&apos;s limit. Registering a new mapping when `remaining` is`0` returns `403`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Twilio.OpenApiClient.Models.CategoryCapacity? Measure { get; set; }

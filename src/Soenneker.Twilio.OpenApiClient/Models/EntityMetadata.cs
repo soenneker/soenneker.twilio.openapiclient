@@ -8,38 +8,22 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Reference to the upstream entity that sources this field. Shape isselected by the `sourceType` discriminator and owned by that upstream, notby this API — adding a new upstream means adding a variant here, notchanging the request shape.Every variant carries `sourceType` via `EntityMetadataBase`, so a clientthat does not recognise a newly added variant can still deserialize thecommon fields rather than failing outright.The owner check for idempotent upserts is scoped to `sourceType` plus thatvariant&apos;s own identity field (`operatorId` for `INTELLIGENCE_OPERATOR`); amismatch against an existing registration&apos;s owner returns `409`.
+    /// Identifies the entity that supplies this field&apos;s value. `sourceType`selects the source, and the property named for that source carries itsdetails. Exactly that one source property must be present:| `sourceType` | Required property ||---|---|| `INTELLIGENCE_OPERATOR` | `intelligenceOperator` |A request whose `sourceType` doesn&apos;t match the source property it sends,or that sends any other property, is rejected with `400`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EntityMetadata : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Annotation fieldPath key; generic identifier that determines theoutput-schema field. Resolved against the operator identified by`operatorId`.</summary>
+        /// <summary>Details of a custom field whose value is read from a ConversationalIntelligence operator&apos;s output. The operator must:- have an active version;- have `outputFormat` `JSON` (`TEXT` and `CLASSIFICATION` operators  are rejected).Requests that reference an ineligible operator are rejected with `400`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Field { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSource? IntelligenceOperator { get; set; }
 #nullable restore
 #else
-        public string Field { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSource IntelligenceOperator { get; set; }
 #endif
-        /// <summary>The Intelligence operator ID. Part of the owner check foridempotent upserts — a mismatch against the existingregistration&apos;s `(sourceType, operatorId)` returns `409`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? OperatorId { get; set; }
-#nullable restore
-#else
-        public string OperatorId { get; set; }
-#endif
-        /// <summary>Optional, display-only name of the operator as supplied atregistration time. Not part of any uniqueness or validation logic.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? OperatorName { get; set; }
-#nullable restore
-#else
-        public string OperatorName { get; set; }
-#endif
-        /// <summary>The kind of upstream entity that sources this field. The value names theentity type itself, so the identifier carried in `entityMetadata` isunambiguous without a lookup (`INTELLIGENCE_OPERATOR` carries an`operatorId`).Adding a new upstream means adding a value here plus its own`entityMetadata` variant — the request shape is unchanged.</summary>
+        /// <summary>The kind of entity that supplies the custom field&apos;s value. Each value hasa matching property on `entityMetadata` that carries that source&apos;sdetails. Supported values:- `INTELLIGENCE_OPERATOR`: the value is read from the output of a  Conversational Intelligence operator. Details go in  `entityMetadata.intelligenceOperator`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.SourceType? SourceType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadata"/> and sets the default values.
@@ -66,9 +50,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "field", n => { Field = n.GetStringValue(); } },
-                { "operatorId", n => { OperatorId = n.GetStringValue(); } },
-                { "operatorName", n => { OperatorName = n.GetStringValue(); } },
+                { "intelligenceOperator", n => { IntelligenceOperator = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSource>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSource.CreateFromDiscriminatorValue); } },
                 { "sourceType", n => { SourceType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SourceType>(); } },
             };
         }
@@ -79,9 +61,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("field", Field);
-            writer.WriteStringValue("operatorId", OperatorId);
-            writer.WriteStringValue("operatorName", OperatorName);
+            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSource>("intelligenceOperator", IntelligenceOperator);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SourceType>("sourceType", SourceType);
             writer.WriteAdditionalData(AdditionalData);
         }
