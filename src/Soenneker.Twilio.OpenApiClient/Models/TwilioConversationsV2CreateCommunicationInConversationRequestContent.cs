@@ -8,38 +8,27 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// The content of the Communication.
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TwilioConversationsV2CreateCommunicationInConversationRequestContent : IAdditionalDataHolder, IParsable
+    public partial class TwilioConversationsV2CreateCommunicationInConversationRequestContent : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The text property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Text { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText? TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText { get; set; }
 #nullable restore
 #else
-        public string Text { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText { get; set; }
 #endif
-        /// <summary>The transcription property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentTranscription? Transcription { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription? TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentTranscription Transcription { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription { get; set; }
 #endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentType? Type { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent"/> and sets the default values.
-        /// </summary>
-        public TwilioConversationsV2CreateCommunicationInConversationRequestContent()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -48,7 +37,17 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent();
+            if("TEXT".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText = new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText();
+            }
+            else if("TRANSCRIPTION".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription = new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,12 +55,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText != null)
             {
-                { "text", n => { Text = n.GetStringValue(); } },
-                { "transcription", n => { Transcription = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentTranscription>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentTranscription.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentType>(); } },
-            };
+                return TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText.GetFieldDeserializers();
+            }
+            else if(TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription != null)
+            {
+                return TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -70,10 +72,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("text", Text);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentTranscription>("transcription", Transcription);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentType>("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText>(null, TwilioConversationsV2CreateCommunicationInConversationRequestContentContentText);
+            }
+            else if(TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription>(null, TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription);
+            }
         }
     }
 }

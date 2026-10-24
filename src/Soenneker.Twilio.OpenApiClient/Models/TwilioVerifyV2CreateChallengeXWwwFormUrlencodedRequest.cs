@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of objects that describe the Fields included in the Challenge. Each object contains the label and value of the field, the label can be up to 36 characters in length and the value can be up to 128 characters in length. Used when `factor_type` is `push`. There can be up to 20 details fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequestDetailsFieldsItem>? DetailsFields { get; set; }
+        public UntypedNode? DetailsFields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequestDetailsFieldsItem> DetailsFields { get; set; }
+        public UntypedNode DetailsFields { get; set; }
 #endif
         /// <summary>Shown to the user when the push notification arrives. Required when `factor_type` is `push`. Can be up to 256 characters in length</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -51,10 +51,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Details provided to give context about the Challenge. Not shown to the end user. It must be a stringified JSON with only strings values eg. `{&quot;ip&quot;: &quot;172.168.1.234&quot;}`. Can be up to 1024 characters in length</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequestHiddenDetails? HiddenDetails { get; set; }
+        public UntypedNode? HiddenDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequestHiddenDetails HiddenDetails { get; set; }
+        public UntypedNode HiddenDetails { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -82,11 +82,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "AuthPayload", n => { AuthPayload = n.GetStringValue(); } },
-                { "Details.Fields", n => { DetailsFields = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequestDetailsFieldsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequestDetailsFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Details.Fields", n => { DetailsFields = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "Details.Message", n => { DetailsMessage = n.GetStringValue(); } },
                 { "ExpirationDate", n => { ExpirationDate = n.GetDateTimeOffsetValue(); } },
                 { "FactorSid", n => { FactorSid = n.GetStringValue(); } },
-                { "HiddenDetails", n => { HiddenDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequestHiddenDetails>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequestHiddenDetails.CreateFromDiscriminatorValue); } },
+                { "HiddenDetails", n => { HiddenDetails = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -97,11 +97,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("AuthPayload", AuthPayload);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequestDetailsFieldsItem>("Details.Fields", DetailsFields);
+            writer.WriteObjectValue<UntypedNode>("Details.Fields", DetailsFields);
             writer.WriteStringValue("Details.Message", DetailsMessage);
             writer.WriteDateTimeOffsetValue("ExpirationDate", ExpirationDate);
             writer.WriteStringValue("FactorSid", FactorSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequestHiddenDetails>("HiddenDetails", HiddenDetails);
+            writer.WriteObjectValue<UntypedNode>("HiddenDetails", HiddenDetails);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

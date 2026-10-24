@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.TrustProducts
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_trusthub_v1.v1.TrustProducts.item collection</summary>
         /// <param name="position">The unique string that we created to identify the Trust Product resource.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.TrustProducts.Item.SItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.TrustProducts.Item.SItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.TrustProducts.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.TrustProducts.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("s%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.TrustProducts.Item.SItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.TrustProducts.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.TrustProducts
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

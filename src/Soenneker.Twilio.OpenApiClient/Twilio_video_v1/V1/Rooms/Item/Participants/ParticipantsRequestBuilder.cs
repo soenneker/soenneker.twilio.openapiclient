@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participa
     {
         /// <summary>Participants in video rooms</summary>
         /// <param name="position">The SID of the RoomParticipant resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participants.Item.ParticipantSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participants.Item.ParticipantSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participants.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participants.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("participantS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participants.Item.ParticipantSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid2", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participants.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participa
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ParticipantsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{roomS%2Did}/Participants{?DateCreatedAfter*,DateCreatedBefore*,Identity*,Page*,PageSize*,PageToken*,Status*}", pathParameters)
+        public ParticipantsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{sid}/Participants{?DateCreatedAfter*,DateCreatedBefore*,Identity*,Page*,PageSize*,PageToken*,Status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Participa
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ParticipantsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{roomS%2Did}/Participants{?DateCreatedAfter*,DateCreatedBefore*,Identity*,Page*,PageSize*,PageToken*,Status*}", rawUrl)
+        public ParticipantsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{sid}/Participants{?DateCreatedAfter*,DateCreatedBefore*,Identity*,Page*,PageSize*,PageToken*,Status*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListRoomParticipantResponse"/></returns>

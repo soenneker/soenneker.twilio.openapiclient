@@ -57,10 +57,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A single-level JSON object used to pass custom parameters to payment processors. (Required for ACH payments). The information that has to be included here depends on the &lt;Pay&gt; Connector. [Read more](https://www.twilio.com/console/voice/pay-connectors).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreatePaymentsXWwwFormUrlencodedRequestParameter? Parameter { get; set; }
+        public UntypedNode? Parameter { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreatePaymentsXWwwFormUrlencodedRequestParameter Parameter { get; set; }
+        public UntypedNode Parameter { get; set; }
 #endif
         /// <summary>This is the unique name corresponding to the Pay Connector installed in the Twilio Add-ons. Learn more about [&lt;Pay&gt; Connectors](https://www.twilio.com/console/voice/pay-connectors). The default value is `Default`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,7 +137,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "IdempotencyKey", n => { IdempotencyKey = n.GetStringValue(); } },
                 { "Input", n => { Input = n.GetStringValue(); } },
                 { "MinPostalCodeLength", n => { MinPostalCodeLength = n.GetIntValue(); } },
-                { "Parameter", n => { Parameter = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreatePaymentsXWwwFormUrlencodedRequestParameter>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreatePaymentsXWwwFormUrlencodedRequestParameter.CreateFromDiscriminatorValue); } },
+                { "Parameter", n => { Parameter = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "PaymentConnector", n => { PaymentConnector = n.GetStringValue(); } },
                 { "PaymentMethod", n => { PaymentMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PaymentsEnumPaymentMethod>(); } },
                 { "PostalCode", n => { PostalCode = n.GetBoolValue(); } },
@@ -164,7 +164,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("IdempotencyKey", IdempotencyKey);
             writer.WriteStringValue("Input", Input);
             writer.WriteIntValue("MinPostalCodeLength", MinPostalCodeLength);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreatePaymentsXWwwFormUrlencodedRequestParameter>("Parameter", Parameter);
+            writer.WriteObjectValue<UntypedNode>("Parameter", Parameter);
             writer.WriteStringValue("PaymentConnector", PaymentConnector);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.PaymentsEnumPaymentMethod>("PaymentMethod", PaymentMethod);
             writer.WriteBoolValue("PostalCode", PostalCode);

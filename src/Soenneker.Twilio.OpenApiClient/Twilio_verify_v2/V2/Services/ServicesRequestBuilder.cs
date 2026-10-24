@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_verify_v2.v2.Services.item collection</summary>
         /// <param name="position">The Twilio-provided string that uniquely identifies the Verification Service resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.ServiceSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.ServiceSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.WithServiceSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.WithServiceSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("serviceS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.ServiceSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("serviceSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.WithServiceSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

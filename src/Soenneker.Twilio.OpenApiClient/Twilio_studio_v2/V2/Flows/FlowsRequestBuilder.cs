@@ -26,14 +26,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows
         }
         /// <summary>Studio flows</summary>
         /// <param name="position">The SID of the Flow resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.FlowSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.FlowSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.WithFlowSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.WithFlowSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("flowS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.FlowSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("flowSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.WithFlowSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -128,7 +128,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

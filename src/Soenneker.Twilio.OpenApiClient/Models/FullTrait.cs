@@ -36,10 +36,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The value of a trait. Can be a string, integer, boolean, or an array of these types (arrays cannot contain nested arrays).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FullTraitValue? Value { get; set; }
+        public UntypedNode? Value { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FullTraitValue Value { get; set; }
+        public UntypedNode Value { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.FullTrait"/> and sets the default values.
@@ -69,7 +69,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
                 { "traitGroup", n => { TraitGroup = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FullTraitValue>(global::Soenneker.Twilio.OpenApiClient.Models.FullTraitValue.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteStringValue("traitGroup", TraitGroup);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FullTraitValue>("value", Value);
+            writer.WriteObjectValue<UntypedNode>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

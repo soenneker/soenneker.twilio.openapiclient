@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Sims
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_preview.wireless.Sims.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Sims.Item.SItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Sims.Item.SItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Sims.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Sims.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("s%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Sims.Item.SItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_preview.Wireless.Sims.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

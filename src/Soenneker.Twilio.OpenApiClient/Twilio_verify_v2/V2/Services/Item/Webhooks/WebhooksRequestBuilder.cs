@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Webhooks
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_verify_v2\v2\Services\{serviceS-id}\Webhooks
+    /// Builds and executes requests for operations under \twilio_verify_v2\v2\Services\{serviceSid}\Webhooks
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WebhooksRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Webho
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WebhooksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceS%2Did}/Webhooks{?Page*,PageSize*,PageToken*}", pathParameters)
+        public WebhooksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceSid}/Webhooks{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Webho
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WebhooksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceS%2Did}/Webhooks{?Page*,PageSize*,PageToken*}", rawUrl)
+        public WebhooksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceSid}/Webhooks{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Webho
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

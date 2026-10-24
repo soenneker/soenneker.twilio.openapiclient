@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>JSON object describing Media Channel including Source and Participants</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2CreateTranscriptXWwwFormUrlencodedRequestChannel? Channel { get; set; }
+        public UntypedNode? Channel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2CreateTranscriptXWwwFormUrlencodedRequestChannel Channel { get; set; }
+        public UntypedNode Channel { get; set; }
 #endif
         /// <summary>Used to store client provided metadata. Maximum of 64 double-byte UTF8 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Channel", n => { Channel = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2CreateTranscriptXWwwFormUrlencodedRequestChannel>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2CreateTranscriptXWwwFormUrlencodedRequestChannel.CreateFromDiscriminatorValue); } },
+                { "Channel", n => { Channel = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "CustomerKey", n => { CustomerKey = n.GetStringValue(); } },
                 { "MediaStartTime", n => { MediaStartTime = n.GetDateTimeOffsetValue(); } },
                 { "ServiceSid", n => { ServiceSid = n.GetStringValue(); } },
@@ -78,7 +78,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2CreateTranscriptXWwwFormUrlencodedRequestChannel>("Channel", Channel);
+            writer.WriteObjectValue<UntypedNode>("Channel", Channel);
             writer.WriteStringValue("CustomerKey", CustomerKey);
             writer.WriteDateTimeOffsetValue("MediaStartTime", MediaStartTime);
             writer.WriteStringValue("ServiceSid", ServiceSid);

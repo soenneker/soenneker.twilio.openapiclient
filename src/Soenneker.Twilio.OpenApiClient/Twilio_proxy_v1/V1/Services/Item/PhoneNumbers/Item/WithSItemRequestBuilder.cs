@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.PhoneNumbers.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_proxy_v1\v1\Services\{serviceS-id}\PhoneNumbers\{sid}
+    /// Builds and executes requests for operations under \twilio_proxy_v1\v1\Services\{serviceSid}\PhoneNumbers\{sid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.PhoneN
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{serviceS%2Did}/PhoneNumbers/{sid}", pathParameters)
+        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{serviceSid}/PhoneNumbers/{sid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.PhoneN
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{serviceS%2Did}/PhoneNumbers/{sid}", rawUrl)
+        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_proxy_v1/v1/Services/{serviceSid}/PhoneNumbers/{sid}", rawUrl)
         {
         }
         /// <summary>
@@ -144,7 +144,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_proxy_v1.V1.Services.Item.PhoneN
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

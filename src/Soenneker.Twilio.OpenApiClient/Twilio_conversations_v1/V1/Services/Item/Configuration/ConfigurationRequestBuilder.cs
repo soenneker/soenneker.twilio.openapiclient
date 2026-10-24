@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Ite
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConfigurationRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Services/{chatServiceS%2Did}/Configuration", pathParameters)
+        public ConfigurationRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Services/{sid}/Configuration", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Ite
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConfigurationRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Services/{chatServiceS%2Did}/Configuration", rawUrl)
+        public ConfigurationRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Services/{sid}/Configuration", rawUrl)
         {
         }
         /// <summary>
@@ -121,7 +121,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Ite
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

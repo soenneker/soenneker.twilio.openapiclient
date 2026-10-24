@@ -46,10 +46,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The unique identifier for the Language Operator. Assigned by Twilio (TTID).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get; private set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get; private set; }
 #endif
         /// <summary>The structure of the result returned by the Language Operator (specific to what the LLM returns, not the entirety of the Operator Result resource).Available values:- `TEXT`:  The Operator will return plaintext from the LLM.- `JSON`: the Operator will return a structured object with schema defined in `output_schema`- `CLASSIFICATION`: The Operator will return the determined classifier string.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.OperatorOutputFormat? OutputFormat { get; set; }
@@ -140,7 +140,6 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("dateCreated", DateCreated);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("displayName", DisplayName);
-            writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorOutputFormat>("outputFormat", OutputFormat);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorVersion200ResponseOutputSchema>("outputSchema", OutputSchema);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3FetchOperatorVersion200ResponseParameters>("parameters", Parameters);

@@ -9,7 +9,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.RegistrationsJson
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{accountS-id}\SIP\Domains\{domainS-id}\Auth\Registrations.json
+    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{s-id}\SIP\Domains\{domainS-id}\Auth\Registrations.json
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RegistrationsJsonRequestBuilder : BaseRequestBuilder
@@ -19,7 +19,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RegistrationsJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/SIP/Domains/{domainS%2Did}/Auth/Registrations.json", pathParameters)
+        public RegistrationsJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/SIP/Domains/{domainS%2Did}/Auth/Registrations.json", pathParameters)
         {
         }
         /// <summary>
@@ -27,7 +27,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RegistrationsJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/SIP/Domains/{domainS%2Did}/Auth/Registrations.json", rawUrl)
+        public RegistrationsJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/SIP/Domains/{domainS%2Did}/Auth/Registrations.json", rawUrl)
         {
         }
     }

@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversation
     {
         /// <summary>A Message resource represents a message in a conversation.</summary>
         /// <param name="position">A 34 character string that uniquely identifies this resource.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.Messages.Item.MessageSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.Messages.Item.MessageSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.Messages.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.Messages.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("messageS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.Messages.Item.MessageSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid2", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.Messages.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversation
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Conversations/{conversationS%2Did}/Messages{?Order*,Page*,PageSize*,PageToken*}", pathParameters)
+        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Conversations/{sid}/Messages{?Order*,Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversation
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Conversations/{conversationS%2Did}/Messages{?Order*,Page*,PageSize*,PageToken*}", rawUrl)
+        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v1/v1/Conversations/{sid}/Messages{?Order*,Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversation
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SigningKeys
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{accountS-id}\SigningKeys
+    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{s-id}\SigningKeys
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SigningKeysRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.item.SigningKeys.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SigningKeys.Item.WithSidJsonItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SigningKeys.Item.WithSidJsonItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SigningKeys.Item.WithSid2JsonItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SigningKeys.Item.WithSid2JsonItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sid", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SigningKeys.Item.WithSidJsonItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid2", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SigningKeys.Item.WithSid2JsonItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SigningKeysRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/SigningKeys", pathParameters)
+        public SigningKeysRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/SigningKeys", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SigningKeysRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/SigningKeys", rawUrl)
+        public SigningKeysRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/SigningKeys", rawUrl)
         {
         }
     }

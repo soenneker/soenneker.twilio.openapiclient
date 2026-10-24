@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The set of parameters that are the attributes of the Supporting Documents resource which are derived Supporting Document Types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateSupportingDocumentXWwwFormUrlencodedRequestAttributes? Attributes { get; set; }
+        public UntypedNode? Attributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateSupportingDocumentXWwwFormUrlencodedRequestAttributes Attributes { get; set; }
+        public UntypedNode Attributes { get; set; }
 #endif
         /// <summary>The string that you assigned to describe the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateSupportingDocumentXWwwFormUrlencodedRequestAttributes>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateSupportingDocumentXWwwFormUrlencodedRequestAttributes.CreateFromDiscriminatorValue); } },
+                { "Attributes", n => { Attributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "FriendlyName", n => { FriendlyName = n.GetStringValue(); } },
                 { "Type", n => { Type = n.GetStringValue(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2CreateSupportingDocumentXWwwFormUrlencodedRequestAttributes>("Attributes", Attributes);
+            writer.WriteObjectValue<UntypedNode>("Attributes", Attributes);
             writer.WriteStringValue("FriendlyName", FriendlyName);
             writer.WriteStringValue("Type", Type);
             writer.WriteAdditionalData(AdditionalData);

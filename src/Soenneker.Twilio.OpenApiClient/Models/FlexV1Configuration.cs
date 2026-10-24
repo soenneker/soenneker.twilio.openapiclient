@@ -25,18 +25,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Agent conversation end methods.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationAgentConvEndMethods? AgentConvEndMethods { get; set; }
+        public UntypedNode? AgentConvEndMethods { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationAgentConvEndMethods AgentConvEndMethods { get; set; }
+        public UntypedNode AgentConvEndMethods { get; set; }
 #endif
         /// <summary>An object that contains application-specific data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationAttributes? Attributes { get; set; }
+        public UntypedNode? Attributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationAttributes Attributes { get; set; }
+        public UntypedNode Attributes { get; set; }
 #endif
         /// <summary>Whether call recording is enabled.</summary>
         public bool? CallRecordingEnabled { get; set; }
@@ -51,10 +51,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Settings for different limits for Flex Conversations channels attachments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationChannelConfigsItem>? ChannelConfigs { get; set; }
+        public UntypedNode? ChannelConfigs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationChannelConfigsItem> ChannelConfigs { get; set; }
+        public UntypedNode ChannelConfigs { get; set; }
 #endif
         /// <summary>The SID of the chat service this user belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,18 +67,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Citrix voice vdi configuration and settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationCitrixVoiceVdi? CitrixVoiceVdi { get; set; }
+        public UntypedNode? CitrixVoiceVdi { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationCitrixVoiceVdi CitrixVoiceVdi { get; set; }
+        public UntypedNode CitrixVoiceVdi { get; set; }
 #endif
         /// <summary>An object that contains the CRM attributes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationCrmAttributes? CrmAttributes { get; set; }
+        public UntypedNode? CrmAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationCrmAttributes CrmAttributes { get; set; }
+        public UntypedNode CrmAttributes { get; set; }
 #endif
         /// <summary>The CRM Callback URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,20 +113,20 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Configurable parameters for Debugger Integration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationDebuggerIntegration? DebuggerIntegration { get; set; }
+        public UntypedNode? DebuggerIntegration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationDebuggerIntegration DebuggerIntegration { get; set; }
+        public UntypedNode DebuggerIntegration { get; set; }
 #endif
         /// <summary>Setting this to true will redirect Flex UI to the URL set in flex_url</summary>
         public bool? FlexInsightsDrilldown { get; set; }
         /// <summary>Object with enabled/disabled flag with list of workspaces.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationFlexInsightsHr? FlexInsightsHr { get; set; }
+        public UntypedNode? FlexInsightsHr { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationFlexInsightsHr FlexInsightsHr { get; set; }
+        public UntypedNode FlexInsightsHr { get; set; }
 #endif
         /// <summary>The SID of the Flex instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -147,10 +147,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Configurable parameters for Flex UI Status report.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationFlexUiStatusReport? FlexUiStatusReport { get; set; }
+        public UntypedNode? FlexUiStatusReport { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationFlexUiStatusReport FlexUiStatusReport { get; set; }
+        public UntypedNode FlexUiStatusReport { get; set; }
 #endif
         /// <summary>URL to redirect to in case drilldown is enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -163,18 +163,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of objects that contain the configurations for the Integrations supported in this configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationIntegrationsItem>? Integrations { get; set; }
+        public UntypedNode? Integrations { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationIntegrationsItem> Integrations { get; set; }
+        public UntypedNode Integrations { get; set; }
 #endif
         /// <summary>Configurable parameters for Markdown.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationMarkdown? Markdown { get; set; }
+        public UntypedNode? Markdown { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationMarkdown Markdown { get; set; }
+        public UntypedNode Markdown { get; set; }
 #endif
         /// <summary>The SID of the Messaging service instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -187,52 +187,52 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Configurable parameters for Notifications.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationNotifications? Notifications { get; set; }
+        public UntypedNode? Notifications { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationNotifications Notifications { get; set; }
+        public UntypedNode Notifications { get; set; }
 #endif
         /// <summary>Presence and presence ttl configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationOfflineConfig? OfflineConfig { get; set; }
+        public UntypedNode? OfflineConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationOfflineConfig OfflineConfig { get; set; }
+        public UntypedNode OfflineConfig { get; set; }
 #endif
         /// <summary>The list of outbound call flows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationOutboundCallFlows? OutboundCallFlows { get; set; }
+        public UntypedNode? OutboundCallFlows { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationOutboundCallFlows OutboundCallFlows { get; set; }
+        public UntypedNode OutboundCallFlows { get; set; }
 #endif
         /// <summary>The plugin service attributes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationPluginServiceAttributes? PluginServiceAttributes { get; set; }
+        public UntypedNode? PluginServiceAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationPluginServiceAttributes PluginServiceAttributes { get; set; }
+        public UntypedNode PluginServiceAttributes { get; set; }
 #endif
         /// <summary>Whether the plugin service enabled.</summary>
         public bool? PluginServiceEnabled { get; set; }
         /// <summary>The list of public attributes, which are visible to unauthenticated clients.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationPublicAttributes? PublicAttributes { get; set; }
+        public UntypedNode? PublicAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationPublicAttributes PublicAttributes { get; set; }
+        public UntypedNode PublicAttributes { get; set; }
 #endif
         /// <summary>Configurable parameters for Queues Statistics.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationQueueStatsConfiguration? QueueStatsConfiguration { get; set; }
+        public UntypedNode? QueueStatsConfiguration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationQueueStatsConfiguration QueueStatsConfiguration { get; set; }
+        public UntypedNode QueueStatsConfiguration { get; set; }
 #endif
         /// <summary>The URL where the Flex instance is hosted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -271,10 +271,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Skill description for TaskRouter workers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterSkillsItem>? TaskrouterSkills { get; set; }
+        public UntypedNode? TaskrouterSkills { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterSkillsItem> TaskrouterSkills { get; set; }
+        public UntypedNode TaskrouterSkills { get; set; }
 #endif
         /// <summary>The SID of the TaskRouter Target TaskQueue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -295,26 +295,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The list of TaskRouter TaskQueues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterTaskqueuesItem>? TaskrouterTaskqueues { get; set; }
+        public UntypedNode? TaskrouterTaskqueues { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterTaskqueuesItem> TaskrouterTaskqueues { get; set; }
+        public UntypedNode TaskrouterTaskqueues { get; set; }
 #endif
         /// <summary>The TaskRouter Worker attributes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterWorkerAttributes? TaskrouterWorkerAttributes { get; set; }
+        public UntypedNode? TaskrouterWorkerAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterWorkerAttributes TaskrouterWorkerAttributes { get; set; }
+        public UntypedNode TaskrouterWorkerAttributes { get; set; }
 #endif
         /// <summary>The TaskRouter default channel capacities and availability for workers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterWorkerChannels? TaskrouterWorkerChannels { get; set; }
+        public UntypedNode? TaskrouterWorkerChannels { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterWorkerChannels TaskrouterWorkerChannels { get; set; }
+        public UntypedNode TaskrouterWorkerChannels { get; set; }
 #endif
         /// <summary>The SID of the TaskRouter Workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -327,18 +327,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The object that describes Flex UI characteristics and settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationUiAttributes? UiAttributes { get; set; }
+        public UntypedNode? UiAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationUiAttributes UiAttributes { get; set; }
+        public UntypedNode UiAttributes { get; set; }
 #endif
         /// <summary>The object that defines the NPM packages and versions to be used in Hosted Flex.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationUiDependencies? UiDependencies { get; set; }
+        public UntypedNode? UiDependencies { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationUiDependencies UiDependencies { get; set; }
+        public UntypedNode UiDependencies { get; set; }
 #endif
         /// <summary>The primary language of the Flex UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -390,51 +390,51 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "agent_conv_end_methods", n => { AgentConvEndMethods = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationAgentConvEndMethods>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationAgentConvEndMethods.CreateFromDiscriminatorValue); } },
-                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationAttributes>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationAttributes.CreateFromDiscriminatorValue); } },
+                { "agent_conv_end_methods", n => { AgentConvEndMethods = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "attributes", n => { Attributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "call_recording_enabled", n => { CallRecordingEnabled = n.GetBoolValue(); } },
                 { "call_recording_webhook_url", n => { CallRecordingWebhookUrl = n.GetStringValue(); } },
-                { "channel_configs", n => { ChannelConfigs = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationChannelConfigsItem>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationChannelConfigsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "channel_configs", n => { ChannelConfigs = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "chat_service_instance_sid", n => { ChatServiceInstanceSid = n.GetStringValue(); } },
-                { "citrix_voice_vdi", n => { CitrixVoiceVdi = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationCitrixVoiceVdi>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationCitrixVoiceVdi.CreateFromDiscriminatorValue); } },
-                { "crm_attributes", n => { CrmAttributes = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationCrmAttributes>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationCrmAttributes.CreateFromDiscriminatorValue); } },
+                { "citrix_voice_vdi", n => { CitrixVoiceVdi = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "crm_attributes", n => { CrmAttributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "crm_callback_url", n => { CrmCallbackUrl = n.GetStringValue(); } },
                 { "crm_enabled", n => { CrmEnabled = n.GetBoolValue(); } },
                 { "crm_fallback_url", n => { CrmFallbackUrl = n.GetStringValue(); } },
                 { "crm_type", n => { CrmType = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "debugger_integration", n => { DebuggerIntegration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationDebuggerIntegration>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationDebuggerIntegration.CreateFromDiscriminatorValue); } },
+                { "debugger_integration", n => { DebuggerIntegration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "flex_insights_drilldown", n => { FlexInsightsDrilldown = n.GetBoolValue(); } },
-                { "flex_insights_hr", n => { FlexInsightsHr = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationFlexInsightsHr>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationFlexInsightsHr.CreateFromDiscriminatorValue); } },
+                { "flex_insights_hr", n => { FlexInsightsHr = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "flex_instance_sid", n => { FlexInstanceSid = n.GetStringValue(); } },
                 { "flex_service_instance_sid", n => { FlexServiceInstanceSid = n.GetStringValue(); } },
-                { "flex_ui_status_report", n => { FlexUiStatusReport = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationFlexUiStatusReport>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationFlexUiStatusReport.CreateFromDiscriminatorValue); } },
+                { "flex_ui_status_report", n => { FlexUiStatusReport = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "flex_url", n => { FlexUrl = n.GetStringValue(); } },
-                { "integrations", n => { Integrations = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationIntegrationsItem>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationIntegrationsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "markdown", n => { Markdown = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationMarkdown>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationMarkdown.CreateFromDiscriminatorValue); } },
+                { "integrations", n => { Integrations = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "markdown", n => { Markdown = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "messaging_service_instance_sid", n => { MessagingServiceInstanceSid = n.GetStringValue(); } },
-                { "notifications", n => { Notifications = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationNotifications>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationNotifications.CreateFromDiscriminatorValue); } },
-                { "offline_config", n => { OfflineConfig = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationOfflineConfig>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationOfflineConfig.CreateFromDiscriminatorValue); } },
-                { "outbound_call_flows", n => { OutboundCallFlows = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationOutboundCallFlows>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationOutboundCallFlows.CreateFromDiscriminatorValue); } },
-                { "plugin_service_attributes", n => { PluginServiceAttributes = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationPluginServiceAttributes>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationPluginServiceAttributes.CreateFromDiscriminatorValue); } },
+                { "notifications", n => { Notifications = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "offline_config", n => { OfflineConfig = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "outbound_call_flows", n => { OutboundCallFlows = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "plugin_service_attributes", n => { PluginServiceAttributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "plugin_service_enabled", n => { PluginServiceEnabled = n.GetBoolValue(); } },
-                { "public_attributes", n => { PublicAttributes = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationPublicAttributes>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationPublicAttributes.CreateFromDiscriminatorValue); } },
-                { "queue_stats_configuration", n => { QueueStatsConfiguration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationQueueStatsConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationQueueStatsConfiguration.CreateFromDiscriminatorValue); } },
+                { "public_attributes", n => { PublicAttributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "queue_stats_configuration", n => { QueueStatsConfiguration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "runtime_domain", n => { RuntimeDomain = n.GetStringValue(); } },
                 { "serverless_service_sids", n => { ServerlessServiceSids = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "service_version", n => { ServiceVersion = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationEnumStatus>(); } },
                 { "taskrouter_offline_activity_sid", n => { TaskrouterOfflineActivitySid = n.GetStringValue(); } },
-                { "taskrouter_skills", n => { TaskrouterSkills = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterSkillsItem>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterSkillsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "taskrouter_skills", n => { TaskrouterSkills = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "taskrouter_target_taskqueue_sid", n => { TaskrouterTargetTaskqueueSid = n.GetStringValue(); } },
                 { "taskrouter_target_workflow_sid", n => { TaskrouterTargetWorkflowSid = n.GetStringValue(); } },
-                { "taskrouter_taskqueues", n => { TaskrouterTaskqueues = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterTaskqueuesItem>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterTaskqueuesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "taskrouter_worker_attributes", n => { TaskrouterWorkerAttributes = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterWorkerAttributes>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterWorkerAttributes.CreateFromDiscriminatorValue); } },
-                { "taskrouter_worker_channels", n => { TaskrouterWorkerChannels = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterWorkerChannels>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterWorkerChannels.CreateFromDiscriminatorValue); } },
+                { "taskrouter_taskqueues", n => { TaskrouterTaskqueues = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "taskrouter_worker_attributes", n => { TaskrouterWorkerAttributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "taskrouter_worker_channels", n => { TaskrouterWorkerChannels = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "taskrouter_workspace_sid", n => { TaskrouterWorkspaceSid = n.GetStringValue(); } },
-                { "ui_attributes", n => { UiAttributes = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationUiAttributes>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationUiAttributes.CreateFromDiscriminatorValue); } },
-                { "ui_dependencies", n => { UiDependencies = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationUiDependencies>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationUiDependencies.CreateFromDiscriminatorValue); } },
+                { "ui_attributes", n => { UiAttributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "ui_dependencies", n => { UiDependencies = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "ui_language", n => { UiLanguage = n.GetStringValue(); } },
                 { "ui_version", n => { UiVersion = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -448,51 +448,51 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationAgentConvEndMethods>("agent_conv_end_methods", AgentConvEndMethods);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationAttributes>("attributes", Attributes);
+            writer.WriteObjectValue<UntypedNode>("agent_conv_end_methods", AgentConvEndMethods);
+            writer.WriteObjectValue<UntypedNode>("attributes", Attributes);
             writer.WriteBoolValue("call_recording_enabled", CallRecordingEnabled);
             writer.WriteStringValue("call_recording_webhook_url", CallRecordingWebhookUrl);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationChannelConfigsItem>("channel_configs", ChannelConfigs);
+            writer.WriteObjectValue<UntypedNode>("channel_configs", ChannelConfigs);
             writer.WriteStringValue("chat_service_instance_sid", ChatServiceInstanceSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationCitrixVoiceVdi>("citrix_voice_vdi", CitrixVoiceVdi);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationCrmAttributes>("crm_attributes", CrmAttributes);
+            writer.WriteObjectValue<UntypedNode>("citrix_voice_vdi", CitrixVoiceVdi);
+            writer.WriteObjectValue<UntypedNode>("crm_attributes", CrmAttributes);
             writer.WriteStringValue("crm_callback_url", CrmCallbackUrl);
             writer.WriteBoolValue("crm_enabled", CrmEnabled);
             writer.WriteStringValue("crm_fallback_url", CrmFallbackUrl);
             writer.WriteStringValue("crm_type", CrmType);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationDebuggerIntegration>("debugger_integration", DebuggerIntegration);
+            writer.WriteObjectValue<UntypedNode>("debugger_integration", DebuggerIntegration);
             writer.WriteBoolValue("flex_insights_drilldown", FlexInsightsDrilldown);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationFlexInsightsHr>("flex_insights_hr", FlexInsightsHr);
+            writer.WriteObjectValue<UntypedNode>("flex_insights_hr", FlexInsightsHr);
             writer.WriteStringValue("flex_instance_sid", FlexInstanceSid);
             writer.WriteStringValue("flex_service_instance_sid", FlexServiceInstanceSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationFlexUiStatusReport>("flex_ui_status_report", FlexUiStatusReport);
+            writer.WriteObjectValue<UntypedNode>("flex_ui_status_report", FlexUiStatusReport);
             writer.WriteStringValue("flex_url", FlexUrl);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationIntegrationsItem>("integrations", Integrations);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationMarkdown>("markdown", Markdown);
+            writer.WriteObjectValue<UntypedNode>("integrations", Integrations);
+            writer.WriteObjectValue<UntypedNode>("markdown", Markdown);
             writer.WriteStringValue("messaging_service_instance_sid", MessagingServiceInstanceSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationNotifications>("notifications", Notifications);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationOfflineConfig>("offline_config", OfflineConfig);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationOutboundCallFlows>("outbound_call_flows", OutboundCallFlows);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationPluginServiceAttributes>("plugin_service_attributes", PluginServiceAttributes);
+            writer.WriteObjectValue<UntypedNode>("notifications", Notifications);
+            writer.WriteObjectValue<UntypedNode>("offline_config", OfflineConfig);
+            writer.WriteObjectValue<UntypedNode>("outbound_call_flows", OutboundCallFlows);
+            writer.WriteObjectValue<UntypedNode>("plugin_service_attributes", PluginServiceAttributes);
             writer.WriteBoolValue("plugin_service_enabled", PluginServiceEnabled);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationPublicAttributes>("public_attributes", PublicAttributes);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationQueueStatsConfiguration>("queue_stats_configuration", QueueStatsConfiguration);
+            writer.WriteObjectValue<UntypedNode>("public_attributes", PublicAttributes);
+            writer.WriteObjectValue<UntypedNode>("queue_stats_configuration", QueueStatsConfiguration);
             writer.WriteStringValue("runtime_domain", RuntimeDomain);
             writer.WriteCollectionOfPrimitiveValues<string>("serverless_service_sids", ServerlessServiceSids);
             writer.WriteStringValue("service_version", ServiceVersion);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationEnumStatus>("status", Status);
             writer.WriteStringValue("taskrouter_offline_activity_sid", TaskrouterOfflineActivitySid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterSkillsItem>("taskrouter_skills", TaskrouterSkills);
+            writer.WriteObjectValue<UntypedNode>("taskrouter_skills", TaskrouterSkills);
             writer.WriteStringValue("taskrouter_target_taskqueue_sid", TaskrouterTargetTaskqueueSid);
             writer.WriteStringValue("taskrouter_target_workflow_sid", TaskrouterTargetWorkflowSid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterTaskqueuesItem>("taskrouter_taskqueues", TaskrouterTaskqueues);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterWorkerAttributes>("taskrouter_worker_attributes", TaskrouterWorkerAttributes);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationTaskrouterWorkerChannels>("taskrouter_worker_channels", TaskrouterWorkerChannels);
+            writer.WriteObjectValue<UntypedNode>("taskrouter_taskqueues", TaskrouterTaskqueues);
+            writer.WriteObjectValue<UntypedNode>("taskrouter_worker_attributes", TaskrouterWorkerAttributes);
+            writer.WriteObjectValue<UntypedNode>("taskrouter_worker_channels", TaskrouterWorkerChannels);
             writer.WriteStringValue("taskrouter_workspace_sid", TaskrouterWorkspaceSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationUiAttributes>("ui_attributes", UiAttributes);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1ConfigurationUiDependencies>("ui_dependencies", UiDependencies);
+            writer.WriteObjectValue<UntypedNode>("ui_attributes", UiAttributes);
+            writer.WriteObjectValue<UntypedNode>("ui_dependencies", UiDependencies);
             writer.WriteStringValue("ui_language", UiLanguage);
             writer.WriteStringValue("ui_version", UiVersion);
             writer.WriteStringValue("url", Url);

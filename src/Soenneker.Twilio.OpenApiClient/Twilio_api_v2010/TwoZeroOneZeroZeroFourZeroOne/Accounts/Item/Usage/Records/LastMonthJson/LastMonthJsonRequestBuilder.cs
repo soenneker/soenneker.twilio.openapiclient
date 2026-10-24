@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LastMonthJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/Usage/Records/LastMonth.json{?Category*,EndDate*,IncludeSubaccounts*,Page*,PageSize*,PageToken*,StartDate*}", pathParameters)
+        public LastMonthJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/Usage/Records/LastMonth.json{?Category*,EndDate*,IncludeSubaccounts*,Page*,PageSize*,PageToken*,StartDate*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LastMonthJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/Usage/Records/LastMonth.json{?Category*,EndDate*,IncludeSubaccounts*,Page*,PageSize*,PageToken*,StartDate*}", rawUrl)
+        public LastMonthJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/Usage/Records/LastMonth.json{?Category*,EndDate*,IncludeSubaccounts*,Page*,PageSize*,PageToken*,StartDate*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListUsageRecordLastMonthResponse"/></returns>

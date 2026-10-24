@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.ConnectionPolicies.I
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sid", position);
+                urlTplParams.Add("sid2", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.ConnectionPolicies.Item.Targets.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.ConnectionPolicies.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TargetsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v1/v1/ConnectionPolicies/{connectionPolicyS%2Did}/Targets{?Page*,PageSize*,PageToken*}", pathParameters)
+        public TargetsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v1/v1/ConnectionPolicies/{sid}/Targets{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.ConnectionPolicies.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TargetsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v1/v1/ConnectionPolicies/{connectionPolicyS%2Did}/Targets{?Page*,PageSize*,PageToken*}", rawUrl)
+        public TargetsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_voice_v1/v1/ConnectionPolicies/{sid}/Targets{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListConnectionPolicyTargetResponse"/></returns>
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.ConnectionPolicies.I
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

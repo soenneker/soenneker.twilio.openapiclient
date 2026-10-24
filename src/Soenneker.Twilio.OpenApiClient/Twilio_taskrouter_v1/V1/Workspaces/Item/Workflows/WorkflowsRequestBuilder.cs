@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.Workflows
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_taskrouter_v1\v1\Workspaces\{s-id}\Workflows
+    /// Builds and executes requests for operations under \twilio_taskrouter_v1\v1\Workspaces\{workspaceSid}\Workflows
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_taskrouter_v1.v1.Workspaces.item.Workflows.item collection</summary>
         /// <param name="position">The SID of the Workflow resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.Workflows.Item.SItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.Workflows.Item.SItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.Workflows.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.Workflows.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("s%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.Workflows.Item.SItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.Workflows.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkflowsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{s%2Did}/Workflows{?FriendlyName*,Page*,PageSize*,PageToken*}", pathParameters)
+        public WorkflowsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{workspaceSid}/Workflows{?FriendlyName*,Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkflowsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{s%2Did}/Workflows{?FriendlyName*,Page*,PageSize*,PageToken*}", rawUrl)
+        public WorkflowsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{workspaceSid}/Workflows{?FriendlyName*,Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListWorkflowResponse"/></returns>
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

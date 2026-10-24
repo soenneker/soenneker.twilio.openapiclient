@@ -85,10 +85,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{&quot;os&quot;: &quot;Android&quot;}`. Can be up to 1024 characters in length.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorXWwwFormUrlencodedRequestMetadata? Metadata { get; set; }
+        public UntypedNode? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
+        public UntypedNode Metadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -128,7 +128,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "Config.TimeStep", n => { ConfigTimeStep = n.GetIntValue(); } },
                 { "FactorType", n => { FactorType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumFactorTypes>(); } },
                 { "FriendlyName", n => { FriendlyName = n.GetStringValue(); } },
-                { "Metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
+                { "Metadata", n => { Metadata = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -151,7 +151,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("Config.TimeStep", ConfigTimeStep);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumFactorTypes>("FactorType", FactorType);
             writer.WriteStringValue("FriendlyName", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorXWwwFormUrlencodedRequestMetadata>("Metadata", Metadata);
+            writer.WriteObjectValue<UntypedNode>("Metadata", Metadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

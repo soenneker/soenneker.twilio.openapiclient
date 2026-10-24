@@ -9,7 +9,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.SIP.Domains.Item.Auth.CallsJson
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{accountS-id}\SIP\Domains\{domainS-id}\Auth\Calls.json
+    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{s-id}\SIP\Domains\{domainS-id}\Auth\Calls.json
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CallsJsonRequestBuilder : BaseRequestBuilder
@@ -19,7 +19,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CallsJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/SIP/Domains/{domainS%2Did}/Auth/Calls.json", pathParameters)
+        public CallsJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/SIP/Domains/{domainS%2Did}/Auth/Calls.json", pathParameters)
         {
         }
         /// <summary>
@@ -27,7 +27,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CallsJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/SIP/Domains/{domainS%2Did}/Auth/Calls.json", rawUrl)
+        public CallsJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/SIP/Domains/{domainS%2Did}/Auth/Calls.json", rawUrl)
         {
         }
     }

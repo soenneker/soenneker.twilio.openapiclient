@@ -25,18 +25,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestAlexa? Alexa { get; set; }
+        public UntypedNode? Alexa { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestAlexa Alexa { get; set; }
+        public UntypedNode Alexa { get; set; }
 #endif
         /// <summary>The APNS-specific payload that overrides corresponding attributes in the generic payload for APNS Bindings. This property maps to the APNS `Payload` item, therefore the `aps` key must be used to change standard attributes. Adds custom key-value pairs to the root of the dictionary. See the [APNS documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html) for more details. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestApn? Apn { get; set; }
+        public UntypedNode? Apn { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestApn Apn { get; set; }
+        public UntypedNode Apn { get; set; }
 #endif
         /// <summary>The notification text. For FCM and GCM, translates to `data.twi_body`. For APNS, translates to `aps.alert.body`. For SMS, translates to `body`. SMS requires either this `body` value, or `media_urls` attribute defined in the `sms` parameter of the notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The custom key-value pairs of the notification&apos;s payload. For FCM and GCM, this value translates to `data` in the FCM and GCM payloads. FCM and GCM [reserve certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref) that cannot be used in those channels. For APNS, attributes of `data` are inserted into the APNS payload as custom properties outside of the `aps` dictionary. In all channels, we reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed and are rejected as 400 Bad request with no delivery attempted. For SMS, this parameter is not supported and is omitted from deliveries to those channels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestData? Data { get; set; }
+        public UntypedNode? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestData Data { get; set; }
+        public UntypedNode Data { get; set; }
 #endif
         /// <summary>URL to send webhooks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,26 +65,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestFacebookMessenger? FacebookMessenger { get; set; }
+        public UntypedNode? FacebookMessenger { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestFacebookMessenger FacebookMessenger { get; set; }
+        public UntypedNode FacebookMessenger { get; set; }
 #endif
         /// <summary>The FCM-specific payload that overrides corresponding attributes in the generic payload for FCM Bindings. This property maps to the root JSON dictionary. See the [FCM documentation](https://firebase.google.com/docs/cloud-messaging/http-server-ref#downstream) for more details. Target parameters `to`, `registration_ids`, `condition`, and `notification_key` are not allowed in this parameter. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed. FCM also [reserves certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref), which cannot be used in that channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestFcm? Fcm { get; set; }
+        public UntypedNode? Fcm { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestFcm Fcm { get; set; }
+        public UntypedNode Fcm { get; set; }
 #endif
         /// <summary>The GCM-specific payload that overrides corresponding attributes in the generic payload for GCM Bindings.  This property maps to the root JSON dictionary. See the [GCM documentation](https://firebase.google.com/docs/cloud-messaging/http-server-ref) for more details. Target parameters `to`, `registration_ids`, and `notification_key` are not allowed. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed. GCM also [reserves certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestGcm? Gcm { get; set; }
+        public UntypedNode? Gcm { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestGcm Gcm { get; set; }
+        public UntypedNode Gcm { get; set; }
 #endif
         /// <summary>The `identity` value that uniquely identifies the new resource&apos;s [User](https://www.twilio.com/docs/chat/rest/user-resource) within the [Service](https://www.twilio.com/docs/notify/api/service-resource). Delivery will be attempted only to Bindings with an Identity in this list. No more than 20 items are allowed in this list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,10 +107,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SMS-specific payload that overrides corresponding attributes in the generic payload for SMS Bindings.  Each attribute in this value maps to the corresponding `form` parameter of the Twilio [Message](https://www.twilio.com/docs/sms/quickstart) resource.  These parameters of the Message resource are supported in snake case format: `body`, `media_urls`, `status_callback`, and `max_price`.  The `status_callback` parameter overrides the corresponding parameter in the messaging service, if configured. The `media_urls` property expects a JSON array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestSms? Sms { get; set; }
+        public UntypedNode? Sms { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestSms Sms { get; set; }
+        public UntypedNode Sms { get; set; }
 #endif
         /// <summary>The name of the sound to be played for the notification. For FCM and GCM, this Translates to `data.twi_sound`.  For APNS, this translates to `aps.sound`.  SMS does not support this property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -172,18 +172,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Action", n => { Action = n.GetStringValue(); } },
-                { "Alexa", n => { Alexa = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestAlexa>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestAlexa.CreateFromDiscriminatorValue); } },
-                { "Apn", n => { Apn = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestApn>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestApn.CreateFromDiscriminatorValue); } },
+                { "Alexa", n => { Alexa = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "Apn", n => { Apn = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "Body", n => { Body = n.GetStringValue(); } },
-                { "Data", n => { Data = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestData>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestData.CreateFromDiscriminatorValue); } },
+                { "Data", n => { Data = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "DeliveryCallbackUrl", n => { DeliveryCallbackUrl = n.GetStringValue(); } },
-                { "FacebookMessenger", n => { FacebookMessenger = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestFacebookMessenger>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestFacebookMessenger.CreateFromDiscriminatorValue); } },
-                { "Fcm", n => { Fcm = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestFcm>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestFcm.CreateFromDiscriminatorValue); } },
-                { "Gcm", n => { Gcm = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestGcm>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestGcm.CreateFromDiscriminatorValue); } },
+                { "FacebookMessenger", n => { FacebookMessenger = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "Fcm", n => { Fcm = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "Gcm", n => { Gcm = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "Identity", n => { Identity = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "Priority", n => { Priority = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NotificationEnumPriority>(); } },
                 { "Segment", n => { Segment = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "Sms", n => { Sms = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestSms>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestSms.CreateFromDiscriminatorValue); } },
+                { "Sms", n => { Sms = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "Sound", n => { Sound = n.GetStringValue(); } },
                 { "Tag", n => { Tag = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "Title", n => { Title = n.GetStringValue(); } },
@@ -199,18 +199,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Action", Action);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestAlexa>("Alexa", Alexa);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestApn>("Apn", Apn);
+            writer.WriteObjectValue<UntypedNode>("Alexa", Alexa);
+            writer.WriteObjectValue<UntypedNode>("Apn", Apn);
             writer.WriteStringValue("Body", Body);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestData>("Data", Data);
+            writer.WriteObjectValue<UntypedNode>("Data", Data);
             writer.WriteStringValue("DeliveryCallbackUrl", DeliveryCallbackUrl);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestFacebookMessenger>("FacebookMessenger", FacebookMessenger);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestFcm>("Fcm", Fcm);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestGcm>("Gcm", Gcm);
+            writer.WriteObjectValue<UntypedNode>("FacebookMessenger", FacebookMessenger);
+            writer.WriteObjectValue<UntypedNode>("Fcm", Fcm);
+            writer.WriteObjectValue<UntypedNode>("Gcm", Gcm);
             writer.WriteCollectionOfPrimitiveValues<string>("Identity", Identity);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NotificationEnumPriority>("Priority", Priority);
             writer.WriteCollectionOfPrimitiveValues<string>("Segment", Segment);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNotifyV1CreateNotificationXWwwFormUrlencodedRequestSms>("Sms", Sms);
+            writer.WriteObjectValue<UntypedNode>("Sms", Sms);
             writer.WriteStringValue("Sound", Sound);
             writer.WriteCollectionOfPrimitiveValues<string>("Tag", Tag);
             writer.WriteStringValue("Title", Title);

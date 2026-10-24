@@ -35,10 +35,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Segments of a conversation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversationsSegmentsItem>? Segments { get; set; }
+        public UntypedNode? Segments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversationsSegmentsItem> Segments { get; set; }
+        public UntypedNode Segments { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversations"/> and sets the default values.
@@ -69,7 +69,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "conversation_id", n => { ConversationId = n.GetStringValue(); } },
                 { "segment_count", n => { SegmentCount = n.GetIntValue(); } },
-                { "segments", n => { Segments = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversationsSegmentsItem>(global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversationsSegmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "segments", n => { Segments = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("account_id", AccountId);
             writer.WriteStringValue("conversation_id", ConversationId);
             writer.WriteIntValue("segment_count", SegmentCount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsConversationsSegmentsItem>("segments", Segments);
+            writer.WriteObjectValue<UntypedNode>("segments", Segments);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

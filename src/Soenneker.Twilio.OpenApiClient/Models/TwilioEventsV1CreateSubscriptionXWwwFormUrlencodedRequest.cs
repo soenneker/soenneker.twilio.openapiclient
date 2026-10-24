@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An array of objects containing the subscribed Event Types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSubscriptionXWwwFormUrlencodedRequestTypesItem>? Types { get; set; }
+        public UntypedNode? Types { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSubscriptionXWwwFormUrlencodedRequestTypesItem> Types { get; set; }
+        public UntypedNode Types { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSubscriptionXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "Description", n => { Description = n.GetStringValue(); } },
                 { "SinkSid", n => { SinkSid = n.GetStringValue(); } },
-                { "Types", n => { Types = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSubscriptionXWwwFormUrlencodedRequestTypesItem>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSubscriptionXWwwFormUrlencodedRequestTypesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Types", n => { Types = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Description", Description);
             writer.WriteStringValue("SinkSid", SinkSid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSubscriptionXWwwFormUrlencodedRequestTypesItem>("Types", Types);
+            writer.WriteObjectValue<UntypedNode>("Types", Types);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

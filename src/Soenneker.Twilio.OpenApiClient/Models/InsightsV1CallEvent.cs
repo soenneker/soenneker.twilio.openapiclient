@@ -33,18 +33,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>`object` Represents the connection between Twilio and our immediate carrier partners. The events here describe the call lifecycle as reported by Twilio&apos;s carrier media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventCarrierEdge? CarrierEdge { get; set; }
+        public UntypedNode? CarrierEdge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventCarrierEdge CarrierEdge { get; set; }
+        public UntypedNode CarrierEdge { get; set; }
 #endif
         /// <summary>`object` Represents the Twilio media gateway for Client calls. The events here describe the call lifecycle as reported by Twilio&apos;s Voice SDK media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventClientEdge? ClientEdge { get; set; }
+        public UntypedNode? ClientEdge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventClientEdge ClientEdge { get; set; }
+        public UntypedNode ClientEdge { get; set; }
 #endif
         /// <summary>Contains information about the Conversation Relay (CRelay) connection used in calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -77,18 +77,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>`object` Represents the Voice SDK running locally in the browser or in the Android/iOS application. The events here are emitted by the Voice SDK in response to certain call progress events, network changes, or call quality conditions. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSdkEdge? SdkEdge { get; set; }
+        public UntypedNode? SdkEdge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSdkEdge SdkEdge { get; set; }
+        public UntypedNode SdkEdge { get; set; }
 #endif
         /// <summary>`object` Represents the Twilio media gateway for SIP interface and SIP trunking calls. The events here describe the call lifecycle as reported by Twilio&apos;s public media gateways. See [Details: Call Summary](https://www.twilio.com/docs/voice/voice-insights/api/call/details-call-summary#edges-and-their-properties) for the object properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSipEdge? SipEdge { get; set; }
+        public UntypedNode? SipEdge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSipEdge SipEdge { get; set; }
+        public UntypedNode SipEdge { get; set; }
 #endif
         /// <summary>Event time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -125,15 +125,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "call_sid", n => { CallSid = n.GetStringValue(); } },
-                { "carrier_edge", n => { CarrierEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventCarrierEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventCarrierEdge.CreateFromDiscriminatorValue); } },
-                { "client_edge", n => { ClientEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventClientEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventClientEdge.CreateFromDiscriminatorValue); } },
+                { "carrier_edge", n => { CarrierEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "client_edge", n => { ClientEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "conversation_relay_data", n => { ConversationRelayData = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventConversationRelayData>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventConversationRelayData.CreateFromDiscriminatorValue); } },
                 { "edge", n => { Edge = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.EventEnumTwilioEdge>(); } },
                 { "group", n => { Group = n.GetStringValue(); } },
                 { "level", n => { Level = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.EventEnumLevel>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "sdk_edge", n => { SdkEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSdkEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSdkEdge.CreateFromDiscriminatorValue); } },
-                { "sip_edge", n => { SipEdge = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSipEdge>(global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSipEdge.CreateFromDiscriminatorValue); } },
+                { "sdk_edge", n => { SdkEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "sip_edge", n => { SipEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetStringValue(); } },
             };
         }
@@ -146,15 +146,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
             writer.WriteStringValue("call_sid", CallSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventCarrierEdge>("carrier_edge", CarrierEdge);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventClientEdge>("client_edge", ClientEdge);
+            writer.WriteObjectValue<UntypedNode>("carrier_edge", CarrierEdge);
+            writer.WriteObjectValue<UntypedNode>("client_edge", ClientEdge);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventConversationRelayData>("conversation_relay_data", ConversationRelayData);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.EventEnumTwilioEdge>("edge", Edge);
             writer.WriteStringValue("group", Group);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.EventEnumLevel>("level", Level);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSdkEdge>("sdk_edge", SdkEdge);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventSipEdge>("sip_edge", SipEdge);
+            writer.WriteObjectValue<UntypedNode>("sdk_edge", SdkEdge);
+            writer.WriteObjectValue<UntypedNode>("sip_edge", SipEdge);
             writer.WriteStringValue("timestamp", Timestamp);
             writer.WriteAdditionalData(AdditionalData);
         }

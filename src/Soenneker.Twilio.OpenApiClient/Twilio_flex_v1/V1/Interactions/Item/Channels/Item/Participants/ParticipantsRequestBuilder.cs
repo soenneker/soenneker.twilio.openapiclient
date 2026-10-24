@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.Participants
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_flex_v1\v1\Interactions\{interactionS-id}\Channels\{channelS-id}\Participants
+    /// Builds and executes requests for operations under \twilio_flex_v1\v1\Interactions\{sid}\Channels\{sid2}\Participants
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ParticipantsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sid", position);
+                urlTplParams.Add("sid3", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.Participants.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ParticipantsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{interactionS%2Did}/Channels/{channelS%2Did}/Participants{?Page*,PageSize*,PageToken*}", pathParameters)
+        public ParticipantsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{sid}/Channels/{sid2}/Participants{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ParticipantsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{interactionS%2Did}/Channels/{channelS%2Did}/Participants{?Page*,PageSize*,PageToken*}", rawUrl)
+        public ParticipantsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{sid}/Channels/{sid2}/Participants{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

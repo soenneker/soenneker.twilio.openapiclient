@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>This is a list of objects that describes a contact&apos;s opt-in status. Each object contains the following fields: `contact_id`, which must be a string representing phone number in [E.164 format](https://www.twilio.com/docs/glossary/what-e164); `correlation_id`, a unique 32-character UUID used to uniquely map the request item with the response item; `sender_id`, which can be either a valid messaging service SID or a from phone number; `status`, a string representing the consent status. Can be one of [`opt-in`, `opt-out`]; `source`, a string indicating the medium through which the consent was collected. Can be one of [`website`, `offline`, `opt-in-message`, `opt-out-message`, `others`]; `date_of_consent`, an optional datetime string field in ISO-8601 format that captures the exact date and time when the user gave or revoked consent. If not provided, it will be empty.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkConsentsXWwwFormUrlencodedRequestItemsItem>? Items { get; set; }
+        public UntypedNode? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkConsentsXWwwFormUrlencodedRequestItemsItem> Items { get; set; }
+        public UntypedNode Items { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkConsentsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkConsentsXWwwFormUrlencodedRequestItemsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkConsentsXWwwFormUrlencodedRequestItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Items", n => { Items = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkConsentsXWwwFormUrlencodedRequestItemsItem>("Items", Items);
+            writer.WriteObjectValue<UntypedNode>("Items", Items);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

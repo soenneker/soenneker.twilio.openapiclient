@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Transcrip
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTtItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{roomS%2Did}/Transcriptions/{ttid}", pathParameters)
+        public WithTtItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{sid}/Transcriptions/{ttid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Transcrip
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTtItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{roomS%2Did}/Transcriptions/{ttid}", rawUrl)
+        public WithTtItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{sid}/Transcriptions/{ttid}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VideoV1RoomRoomTranscriptions"/></returns>
@@ -97,7 +97,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Transcrip
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

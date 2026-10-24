@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services
     {
         /// <summary>Containers for sync objects</summary>
         /// <param name="position">The SID of the Service resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.ServiceSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.ServiceSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.WithServiceSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.WithServiceSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("serviceS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.ServiceSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("serviceSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.WithServiceSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

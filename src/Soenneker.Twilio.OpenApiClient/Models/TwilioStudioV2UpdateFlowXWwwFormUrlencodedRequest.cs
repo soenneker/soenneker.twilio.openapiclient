@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>JSON representation of flow definition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2UpdateFlowXWwwFormUrlencodedRequestDefinition? Definition { get; set; }
+        public UntypedNode? Definition { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2UpdateFlowXWwwFormUrlencodedRequestDefinition Definition { get; set; }
+        public UntypedNode Definition { get; set; }
 #endif
         /// <summary>The string that you assigned to describe the Flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "AuthorSid", n => { AuthorSid = n.GetStringValue(); } },
                 { "CommitMessage", n => { CommitMessage = n.GetStringValue(); } },
-                { "Definition", n => { Definition = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2UpdateFlowXWwwFormUrlencodedRequestDefinition>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2UpdateFlowXWwwFormUrlencodedRequestDefinition.CreateFromDiscriminatorValue); } },
+                { "Definition", n => { Definition = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "FriendlyName", n => { FriendlyName = n.GetStringValue(); } },
                 { "Status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2FlowEnumStatus>(); } },
             };
@@ -89,7 +89,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("AuthorSid", AuthorSid);
             writer.WriteStringValue("CommitMessage", CommitMessage);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2UpdateFlowXWwwFormUrlencodedRequestDefinition>("Definition", Definition);
+            writer.WriteObjectValue<UntypedNode>("Definition", Definition);
             writer.WriteStringValue("FriendlyName", FriendlyName);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2FlowEnumStatus>("Status", Status);
             writer.WriteAdditionalData(AdditionalData);

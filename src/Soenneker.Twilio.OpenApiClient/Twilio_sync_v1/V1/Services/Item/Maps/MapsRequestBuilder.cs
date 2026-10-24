@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps
     {
         /// <summary>Sync map objects</summary>
         /// <param name="position">The SID of the Sync Map resource to fetch. Can be the Sync Map&apos;s `sid` or its `unique_name`.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps.Item.MapSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps.Item.MapSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("mapS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps.Item.MapSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MapsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_sync_v1/v1/Services/{serviceS%2Did}/Maps{?Page*,PageSize*,PageToken*}", pathParameters)
+        public MapsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_sync_v1/v1/Services/{serviceSid}/Maps{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MapsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_sync_v1/v1/Services/{serviceS%2Did}/Maps{?Page*,PageSize*,PageToken*}", rawUrl)
+        public MapsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_sync_v1/v1/Services/{serviceSid}/Maps{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListSyncMapResponse"/></returns>
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Maps
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFourZeroOne.Accounts.Item.IncomingPhoneNumbers.Item.AssignedAddOns.Item.ExtensionsJson
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{accountS-id}\IncomingPhoneNumbers\{resourceS-id}\AssignedAddOns\{assignedAddOnS-id}\Extensions.json
+    /// Builds and executes requests for operations under \twilio_api_v2010\2010-04-01\Accounts\{s-id}\IncomingPhoneNumbers\{sid2-id}\AssignedAddOns\{sid3-id}\Extensions.json
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExtensionsJsonRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExtensionsJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/IncomingPhoneNumbers/{resourceS%2Did}/AssignedAddOns/{assignedAddOnS%2Did}/Extensions.json{?Page*,PageSize*,PageToken*}", pathParameters)
+        public ExtensionsJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/IncomingPhoneNumbers/{sid2%2Did}/AssignedAddOns/{sid3%2Did}/Extensions.json{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExtensionsJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/IncomingPhoneNumbers/{resourceS%2Did}/AssignedAddOns/{assignedAddOnS%2Did}/Extensions.json{?Page*,PageSize*,PageToken*}", rawUrl)
+        public ExtensionsJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/IncomingPhoneNumbers/{sid2%2Did}/AssignedAddOns/{sid3%2Did}/Extensions.json{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configu
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_flex_v1.v1.PluginService.Configurations.item collection</summary>
         /// <param name="position">The SID of the Flex Plugin Configuration resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configurations.Item.ConfigurationSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configurations.Item.ConfigurationSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configurations.Item.WithConfigurationSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configurations.Item.WithConfigurationSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("configurationS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configurations.Item.ConfigurationSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("configurationSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configurations.Item.WithConfigurationSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.PluginService.Configu
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

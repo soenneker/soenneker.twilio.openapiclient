@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entities.Item.Challenges
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_verify_v2\v2\Services\{serviceS-id}\Entities\{identity}\Challenges
+    /// Builds and executes requests for operations under \twilio_verify_v2\v2\Services\{serviceSid}\Entities\{identity}\Challenges
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChallengesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_verify_v2.v2.Services.item.Entities.item.Challenges.item collection</summary>
         /// <param name="position">A 34 character string that uniquely identifies this Challenge.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entities.Item.Challenges.Item.ChallengeSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entities.Item.Challenges.Item.ChallengeSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entities.Item.Challenges.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entities.Item.Challenges.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("challengeS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entities.Item.Challenges.Item.ChallengeSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entities.Item.Challenges.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entit
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChallengesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceS%2Did}/Entities/{identity}/Challenges{?FactorSid*,Order*,Page*,PageSize*,PageToken*,Status*}", pathParameters)
+        public ChallengesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceSid}/Entities/{identity}/Challenges{?FactorSid*,Order*,Page*,PageSize*,PageToken*,Status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entit
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChallengesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceS%2Did}/Entities/{identity}/Challenges{?FactorSid*,Order*,Page*,PageSize*,PageToken*,Status*}", rawUrl)
+        public ChallengesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceSid}/Entities/{identity}/Challenges{?FactorSid*,Order*,Page*,PageSize*,PageToken*,Status*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entit
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

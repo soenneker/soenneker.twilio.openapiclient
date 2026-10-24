@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Revision
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRevisionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowS%2Did}/Revisions/{revision}", pathParameters)
+        public WithRevisionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowSid}/Revisions/{revision}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Revision
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRevisionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowS%2Did}/Revisions/{revision}", rawUrl)
+        public WithRevisionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowSid}/Revisions/{revision}", rawUrl)
         {
         }
         /// <summary>

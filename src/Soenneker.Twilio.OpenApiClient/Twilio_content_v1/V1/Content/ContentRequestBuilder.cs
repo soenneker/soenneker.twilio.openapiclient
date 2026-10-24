@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_content_v1.V1.Content
     {
         /// <summary>A Content resource represents rich messaging content.</summary>
         /// <param name="position">The Twilio-provided string that uniquely identifies the Content resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_content_v1.V1.Content.Item.ContentSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_content_v1.V1.Content.Item.ContentSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_content_v1.V1.Content.Item.WithContentSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_content_v1.V1.Content.Item.WithContentSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("contentS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_content_v1.V1.Content.Item.ContentSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("contentSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_content_v1.V1.Content.Item.WithContentSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

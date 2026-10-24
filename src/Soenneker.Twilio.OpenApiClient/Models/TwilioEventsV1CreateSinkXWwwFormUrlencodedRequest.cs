@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The information required for Twilio to connect to the provided Sink encoded as JSON.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSinkXWwwFormUrlencodedRequestSinkConfiguration? SinkConfiguration { get; set; }
+        public UntypedNode? SinkConfiguration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSinkXWwwFormUrlencodedRequestSinkConfiguration SinkConfiguration { get; set; }
+        public UntypedNode SinkConfiguration { get; set; }
 #endif
         /// <summary>The Sink type. Can only be &quot;kinesis&quot; or &quot;webhook&quot; currently.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType? SinkType { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Description", n => { Description = n.GetStringValue(); } },
-                { "SinkConfiguration", n => { SinkConfiguration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSinkXWwwFormUrlencodedRequestSinkConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSinkXWwwFormUrlencodedRequestSinkConfiguration.CreateFromDiscriminatorValue); } },
+                { "SinkConfiguration", n => { SinkConfiguration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "SinkType", n => { SinkType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType>(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Description", Description);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSinkXWwwFormUrlencodedRequestSinkConfiguration>("SinkConfiguration", SinkConfiguration);
+            writer.WriteObjectValue<UntypedNode>("SinkConfiguration", SinkConfiguration);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType>("SinkType", SinkType);
             writer.WriteAdditionalData(AdditionalData);
         }

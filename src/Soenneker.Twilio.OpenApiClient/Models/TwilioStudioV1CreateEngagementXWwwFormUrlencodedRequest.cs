@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON string we will add to your flow&apos;s context and that you can access as variables inside your flow. For example, if you pass in `Parameters={&apos;name&apos;:&apos;Zeke&apos;}` then inside a widget you can reference the variable `{{flow.data.name}}` which will return the string &apos;Zeke&apos;. Note: the JSON value must explicitly be passed as a string, not as a hash object. Depending on your particular HTTP library, you may need to add quotes or URL encode your JSON string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV1CreateEngagementXWwwFormUrlencodedRequestParameters? Parameters { get; set; }
+        public UntypedNode? Parameters { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV1CreateEngagementXWwwFormUrlencodedRequestParameters Parameters { get; set; }
+        public UntypedNode Parameters { get; set; }
 #endif
         /// <summary>The Contact phone number to start a Studio Flow Engagement, available as variable `{{contact.channel.address}}`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "From", n => { From = n.GetStringValue(); } },
-                { "Parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV1CreateEngagementXWwwFormUrlencodedRequestParameters>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV1CreateEngagementXWwwFormUrlencodedRequestParameters.CreateFromDiscriminatorValue); } },
+                { "Parameters", n => { Parameters = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "To", n => { To = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("From", From);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV1CreateEngagementXWwwFormUrlencodedRequestParameters>("Parameters", Parameters);
+            writer.WriteObjectValue<UntypedNode>("Parameters", Parameters);
             writer.WriteStringValue("To", To);
             writer.WriteAdditionalData(AdditionalData);
         }

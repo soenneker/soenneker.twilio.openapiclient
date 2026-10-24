@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of objects where each object represents a contact&apos;s details. Each object includes the following fields: `contact_id`, which must be a string representing phone number in [E.164 format](https://www.twilio.com/docs/glossary/what-e164); `correlation_id`, a unique 32-character UUID that maps the response to the original request; `country_iso_code`, a string representing the country using the ISO format (e.g., US for the United States); and `zip_code`, a string representing the postal code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkContactsXWwwFormUrlencodedRequestItemsItem>? Items { get; set; }
+        public UntypedNode? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkContactsXWwwFormUrlencodedRequestItemsItem> Items { get; set; }
+        public UntypedNode Items { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkContactsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkContactsXWwwFormUrlencodedRequestItemsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkContactsXWwwFormUrlencodedRequestItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Items", n => { Items = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1CreateBulkContactsXWwwFormUrlencodedRequestItemsItem>("Items", Items);
+            writer.WriteObjectValue<UntypedNode>("Items", Items);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

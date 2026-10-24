@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The JSON object with the configuration that must be provided when installing a given Add-on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnConfigurationSchema? ConfigurationSchema { get; set; }
+        public UntypedNode? ConfigurationSchema { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnConfigurationSchema ConfigurationSchema { get; set; }
+        public UntypedNode ConfigurationSchema { get; set; }
 #endif
         /// <summary>A short description of the Add-on&apos;s functionality.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,7 +95,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "configuration_schema", n => { ConfigurationSchema = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnConfigurationSchema>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnConfigurationSchema.CreateFromDiscriminatorValue); } },
+                { "configuration_schema", n => { ConfigurationSchema = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnLinksProperty.CreateFromDiscriminatorValue); } },
@@ -111,7 +111,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnConfigurationSchema>("configuration_schema", ConfigurationSchema);
+            writer.WriteObjectValue<UntypedNode>("configuration_schema", ConfigurationSchema);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewMarketplaceAvailableAddOnLinksProperty>("links", Links);

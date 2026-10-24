@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item.Roles
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_ip_messaging_v2\v2\Services\{serviceS-id}\Roles
+    /// Builds and executes requests for operations under \twilio_ip_messaging_v2\v2\Services\{serviceSid}\Roles
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RolesRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RolesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceS%2Did}/Roles{?Page*,PageSize*,PageToken*}", pathParameters)
+        public RolesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceSid}/Roles{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RolesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceS%2Did}/Roles{?Page*,PageSize*,PageToken*}", rawUrl)
+        public RolesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceSid}/Roles{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2ListRole200Response"/></returns>
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

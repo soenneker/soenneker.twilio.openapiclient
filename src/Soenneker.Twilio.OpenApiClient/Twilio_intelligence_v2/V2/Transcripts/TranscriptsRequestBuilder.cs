@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_intelligence_v2.v2.Transcripts.item collection</summary>
         /// <param name="position">A 34 character string that uniquely identifies this Transcript.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.Item.SItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.Item.SItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.Item.WithTranscriptSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.Item.WithTranscriptSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("s%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.Item.SItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("transcriptSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts.Item.WithTranscriptSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v2.V2.Transcripts
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

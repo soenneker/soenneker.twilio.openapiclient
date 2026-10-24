@@ -63,10 +63,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The limits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceLimits? Limits { get; set; }
+        public UntypedNode? Limits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceLimits Limits { get; set; }
+        public UntypedNode Limits { get; set; }
 #endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,18 +79,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The media property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceMedia? Media { get; set; }
+        public UntypedNode? Media { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceMedia Media { get; set; }
+        public UntypedNode Media { get; set; }
 #endif
         /// <summary>The notifications property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceNotifications? Notifications { get; set; }
+        public UntypedNode? Notifications { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceNotifications Notifications { get; set; }
+        public UntypedNode Notifications { get; set; }
 #endif
         /// <summary>The post_webhook_retry_count property</summary>
         public int? PostWebhookRetryCount { get; set; }
@@ -187,10 +187,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "default_channel_role_sid", n => { DefaultChannelRoleSid = n.GetStringValue(); } },
                 { "default_service_role_sid", n => { DefaultServiceRoleSid = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
-                { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceLimits>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceLimits.CreateFromDiscriminatorValue); } },
+                { "limits", n => { Limits = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceLinksProperty.CreateFromDiscriminatorValue); } },
-                { "media", n => { Media = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceMedia>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceMedia.CreateFromDiscriminatorValue); } },
-                { "notifications", n => { Notifications = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceNotifications>(global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceNotifications.CreateFromDiscriminatorValue); } },
+                { "media", n => { Media = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "notifications", n => { Notifications = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "post_webhook_retry_count", n => { PostWebhookRetryCount = n.GetIntValue(); } },
                 { "post_webhook_url", n => { PostWebhookUrl = n.GetStringValue(); } },
                 { "pre_webhook_retry_count", n => { PreWebhookRetryCount = n.GetIntValue(); } },
@@ -219,10 +219,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("default_channel_role_sid", DefaultChannelRoleSid);
             writer.WriteStringValue("default_service_role_sid", DefaultServiceRoleSid);
             writer.WriteStringValue("friendly_name", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceLimits>("limits", Limits);
+            writer.WriteObjectValue<UntypedNode>("limits", Limits);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceLinksProperty>("links", Links);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceMedia>("media", Media);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IpMessagingV2ServiceNotifications>("notifications", Notifications);
+            writer.WriteObjectValue<UntypedNode>("media", Media);
+            writer.WriteObjectValue<UntypedNode>("notifications", Notifications);
             writer.WriteIntValue("post_webhook_retry_count", PostWebhookRetryCount);
             writer.WriteStringValue("post_webhook_url", PostWebhookUrl);
             writer.WriteIntValue("pre_webhook_retry_count", PreWebhookRetryCount);

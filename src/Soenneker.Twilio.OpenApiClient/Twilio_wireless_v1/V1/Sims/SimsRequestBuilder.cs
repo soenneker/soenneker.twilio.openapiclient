@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.V1.Sims
     {
         /// <summary>A resource representing a Programmable Wireless SIM</summary>
         /// <param name="position">The SID or the `unique_name` of the Sim resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.V1.Sims.Item.SItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.V1.Sims.Item.SItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.V1.Sims.Item.WithSimSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.V1.Sims.Item.WithSimSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("s%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.V1.Sims.Item.SItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("simSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_wireless_v1.V1.Sims.Item.WithSimSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

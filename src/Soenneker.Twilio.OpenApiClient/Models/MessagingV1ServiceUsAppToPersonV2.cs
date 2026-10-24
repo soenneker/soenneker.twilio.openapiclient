@@ -65,10 +65,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Details indicating why a campaign registration failed. These errors can indicate one or more fields that were incorrect or did not meet review requirements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonV2ErrorsItem>? Errors { get; set; }
+        public UntypedNode? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonV2ErrorsItem> Errors { get; set; }
+        public UntypedNode Errors { get; set; }
 #endif
         /// <summary>Indicate that this SMS campaign will send messages that contain links.</summary>
         public bool? HasEmbeddedLinks { get; set; }
@@ -161,10 +161,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Rate limit and/or classification set by each carrier, Ex. AT&amp;T or T-Mobile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonV2RateLimits? RateLimits { get; set; }
+        public UntypedNode? RateLimits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonV2RateLimits RateLimits { get; set; }
+        public UntypedNode RateLimits { get; set; }
 #endif
         /// <summary>The unique string that identifies a US A2P Compliance resource `QE2c6890da8086d771620e9b13fadeba0b`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -234,7 +234,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "direct_lending", n => { DirectLending = n.GetBoolValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonV2ErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonV2ErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "has_embedded_links", n => { HasEmbeddedLinks = n.GetBoolValue(); } },
                 { "has_embedded_phone", n => { HasEmbeddedPhone = n.GetBoolValue(); } },
                 { "help_keywords", n => { HelpKeywords = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -249,7 +249,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "opt_out_keywords", n => { OptOutKeywords = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "opt_out_message", n => { OptOutMessage = n.GetStringValue(); } },
                 { "privacy_policy_url", n => { PrivacyPolicyUrl = n.GetStringValue(); } },
-                { "rate_limits", n => { RateLimits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonV2RateLimits>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonV2RateLimits.CreateFromDiscriminatorValue); } },
+                { "rate_limits", n => { RateLimits = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "subscriber_opt_in", n => { SubscriberOptIn = n.GetBoolValue(); } },
                 { "terms_and_conditions_url", n => { TermsAndConditionsUrl = n.GetStringValue(); } },
@@ -273,7 +273,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("direct_lending", DirectLending);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonV2ErrorsItem>("errors", Errors);
+            writer.WriteObjectValue<UntypedNode>("errors", Errors);
             writer.WriteBoolValue("has_embedded_links", HasEmbeddedLinks);
             writer.WriteBoolValue("has_embedded_phone", HasEmbeddedPhone);
             writer.WriteCollectionOfPrimitiveValues<string>("help_keywords", HelpKeywords);
@@ -288,7 +288,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("opt_out_keywords", OptOutKeywords);
             writer.WriteStringValue("opt_out_message", OptOutMessage);
             writer.WriteStringValue("privacy_policy_url", PrivacyPolicyUrl);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonV2RateLimits>("rate_limits", RateLimits);
+            writer.WriteObjectValue<UntypedNode>("rate_limits", RateLimits);
             writer.WriteStringValue("sid", Sid);
             writer.WriteBoolValue("subscriber_opt_in", SubscriberOptIn);
             writer.WriteStringValue("terms_and_conditions_url", TermsAndConditionsUrl);

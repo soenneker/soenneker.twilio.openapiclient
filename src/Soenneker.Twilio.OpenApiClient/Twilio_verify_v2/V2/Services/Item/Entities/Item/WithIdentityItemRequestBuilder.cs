@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entities.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_verify_v2\v2\Services\{serviceS-id}\Entities\{identity}
+    /// Builds and executes requests for operations under \twilio_verify_v2\v2\Services\{serviceSid}\Entities\{identity}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithIdentityItemRequestBuilder : BaseRequestBuilder
@@ -34,7 +34,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entit
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithIdentityItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceS%2Did}/Entities/{identity}", pathParameters)
+        public WithIdentityItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceSid}/Entities/{identity}", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Entit
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithIdentityItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceS%2Did}/Entities/{identity}", rawUrl)
+        public WithIdentityItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceSid}/Entities/{identity}", rawUrl)
         {
         }
         /// <summary>

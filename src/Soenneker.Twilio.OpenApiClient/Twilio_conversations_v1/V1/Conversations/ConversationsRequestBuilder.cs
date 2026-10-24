@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversation
     {
         /// <summary>A Conversation resource represents an omnichannel group conversation with an ordered list of messages and a participant roster.</summary>
         /// <param name="position">A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.ConversationSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.ConversationSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("conversationS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.ConversationSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversations.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversation
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

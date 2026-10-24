@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The set of parameters that are the attributes of the Supporting Documents resource which are listed in the Supporting Document Types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentAttributes? Attributes { get; set; }
+        public UntypedNode? Attributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentAttributes Attributes { get; set; }
+        public UntypedNode Attributes { get; set; }
 #endif
         /// <summary>The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of errors that occurred during the registering RC Bundle</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentErrorsItem>? Errors { get; set; }
+        public UntypedNode? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentErrorsItem> Errors { get; set; }
+        public UntypedNode Errors { get; set; }
 #endif
         /// <summary>The failure reason of the Supporting Document Resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,10 +118,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentAttributes>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentAttributes.CreateFromDiscriminatorValue); } },
+                { "attributes", n => { Attributes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "failure_reason", n => { FailureReason = n.GetStringValue(); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "mime_type", n => { MimeType = n.GetStringValue(); } },
@@ -139,10 +139,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentAttributes>("attributes", Attributes);
+            writer.WriteObjectValue<UntypedNode>("attributes", Attributes);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV2RegulatoryComplianceSupportingDocumentErrorsItem>("errors", Errors);
+            writer.WriteObjectValue<UntypedNode>("errors", Errors);
             writer.WriteStringValue("failure_reason", FailureReason);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteStringValue("mime_type", MimeType);

@@ -17,18 +17,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>JSON representing the Media Properties for the new Participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequestMediaProperties? MediaProperties { get; set; }
+        public UntypedNode? MediaProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequestMediaProperties MediaProperties { get; set; }
+        public UntypedNode MediaProperties { get; set; }
 #endif
         /// <summary>Object representing the Routing Properties for the new Participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequestRoutingProperties? RoutingProperties { get; set; }
+        public UntypedNode? RoutingProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequestRoutingProperties RoutingProperties { get; set; }
+        public UntypedNode RoutingProperties { get; set; }
 #endif
         /// <summary>Participant type. Can be: `agent`, `customer`, `supervisor`, `external`, `unknown`</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType? Type { get; set; }
@@ -57,8 +57,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "MediaProperties", n => { MediaProperties = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequestMediaProperties>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequestMediaProperties.CreateFromDiscriminatorValue); } },
-                { "RoutingProperties", n => { RoutingProperties = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequestRoutingProperties>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequestRoutingProperties.CreateFromDiscriminatorValue); } },
+                { "MediaProperties", n => { MediaProperties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "RoutingProperties", n => { RoutingProperties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "Type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType>(); } },
             };
         }
@@ -69,8 +69,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequestMediaProperties>("MediaProperties", MediaProperties);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequestRoutingProperties>("RoutingProperties", RoutingProperties);
+            writer.WriteObjectValue<UntypedNode>("MediaProperties", MediaProperties);
+            writer.WriteObjectValue<UntypedNode>("RoutingProperties", RoutingProperties);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType>("Type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

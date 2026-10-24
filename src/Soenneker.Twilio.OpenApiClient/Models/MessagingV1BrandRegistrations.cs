@@ -63,10 +63,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of errors that occurred during the brand registration process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsErrorsItem>? Errors { get; set; }
+        public UntypedNode? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsErrorsItem> Errors { get; set; }
+        public UntypedNode Errors { get; set; }
 #endif
         /// <summary>DEPRECATED. A reason why brand registration has failed. Only applicable when status is FAILED.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -161,7 +161,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "customer_profile_bundle_sid", n => { CustomerProfileBundleSid = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "failure_reason", n => { FailureReason = n.GetStringValue(); } },
                 { "government_entity", n => { GovernmentEntity = n.GetBoolValue(); } },
                 { "identity_status", n => { IdentityStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumIdentityStatus>(); } },
@@ -191,7 +191,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("customer_profile_bundle_sid", CustomerProfileBundleSid);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsErrorsItem>("errors", Errors);
+            writer.WriteObjectValue<UntypedNode>("errors", Errors);
             writer.WriteStringValue("failure_reason", FailureReason);
             writer.WriteBoolValue("government_entity", GovernmentEntity);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumIdentityStatus>("identity_status", IdentityStatus);

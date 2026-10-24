@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MediaJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/Messages/{messageS%2Did}/Media.json{?DateCreated*,DateCreated%3C*,DateCreated%3E*,Page*,PageSize*,PageToken*}", pathParameters)
+        public MediaJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/Messages/{messageS%2Did}/Media.json{?DateCreated*,DateCreated%3C*,DateCreated%3E*,Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MediaJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/Messages/{messageS%2Did}/Media.json{?DateCreated*,DateCreated%3C*,DateCreated%3E*,Page*,PageSize*,PageToken*}", rawUrl)
+        public MediaJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/Messages/{messageS%2Did}/Media.json{?DateCreated*,DateCreated%3C*,DateCreated%3E*,Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

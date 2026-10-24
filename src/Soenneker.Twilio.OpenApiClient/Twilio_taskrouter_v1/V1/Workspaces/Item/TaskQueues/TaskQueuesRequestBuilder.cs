@@ -15,7 +15,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_taskrouter_v1\v1\Workspaces\{s-id}\TaskQueues
+    /// Builds and executes requests for operations under \twilio_taskrouter_v1\v1\Workspaces\{workspaceSid}\TaskQueues
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaskQueuesRequestBuilder : BaseRequestBuilder
@@ -32,14 +32,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
         }
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_taskrouter_v1.v1.Workspaces.item.TaskQueues.item collection</summary>
         /// <param name="position">The SID of the TaskQueue resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues.Item.SItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues.Item.SItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("s%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues.Item.SItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item.TaskQueues.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -47,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TaskQueuesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{s%2Did}/TaskQueues{?EvaluateWorkerAttributes*,FriendlyName*,Ordering*,Page*,PageSize*,PageToken*,WorkerSid*}", pathParameters)
+        public TaskQueuesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{workspaceSid}/TaskQueues{?EvaluateWorkerAttributes*,FriendlyName*,Ordering*,Page*,PageSize*,PageToken*,WorkerSid*}", pathParameters)
         {
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TaskQueuesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{s%2Did}/TaskQueues{?EvaluateWorkerAttributes*,FriendlyName*,Ordering*,Page*,PageSize*,PageToken*,WorkerSid*}", rawUrl)
+        public TaskQueuesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_taskrouter_v1/v1/Workspaces/{workspaceSid}/TaskQueues{?EvaluateWorkerAttributes*,FriendlyName*,Ordering*,Page*,PageSize*,PageToken*,WorkerSid*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListTaskQueueResponse"/></returns>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_taskrouter_v1.V1.Workspaces.Item
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

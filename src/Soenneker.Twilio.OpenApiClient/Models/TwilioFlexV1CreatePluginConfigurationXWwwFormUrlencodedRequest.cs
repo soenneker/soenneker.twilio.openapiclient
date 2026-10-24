@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of objects that describe the plugin versions included in the configuration. Each object contains the sid of the plugin version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreatePluginConfigurationXWwwFormUrlencodedRequestPluginsItem>? Plugins { get; set; }
+        public UntypedNode? Plugins { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreatePluginConfigurationXWwwFormUrlencodedRequestPluginsItem> Plugins { get; set; }
+        public UntypedNode Plugins { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreatePluginConfigurationXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "Description", n => { Description = n.GetStringValue(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
-                { "Plugins", n => { Plugins = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreatePluginConfigurationXWwwFormUrlencodedRequestPluginsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreatePluginConfigurationXWwwFormUrlencodedRequestPluginsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Plugins", n => { Plugins = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Description", Description);
             writer.WriteStringValue("Name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreatePluginConfigurationXWwwFormUrlencodedRequestPluginsItem>("Plugins", Plugins);
+            writer.WriteObjectValue<UntypedNode>("Plugins", Plugins);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

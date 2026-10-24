@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistr
     {
         /// <summary>A Messaging Service resource to add and fetch Brand Registrations.</summary>
         /// <param name="position">The SID of the Brand Registration resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistrations.Item.BrandRegistrationSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistrations.Item.BrandRegistrationSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistrations.Item.WithBrandRegistrationSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistrations.Item.WithBrandRegistrationSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("brandRegistrationS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistrations.Item.BrandRegistrationSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("brandRegistrationSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistrations.Item.WithBrandRegistrationSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.A2p.BrandRegistr
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

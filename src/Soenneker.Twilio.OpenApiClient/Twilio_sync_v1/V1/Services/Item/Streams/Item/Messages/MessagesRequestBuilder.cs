@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Streams.Item.Messages
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_sync_v1\v1\Services\{serviceS-id}\Streams\{s-id}\Messages
+    /// Builds and executes requests for operations under \twilio_sync_v1\v1\Services\{serviceSid}\Streams\{streamSid}\Messages
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MessagesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Streams
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_sync_v1/v1/Services/{serviceS%2Did}/Streams/{s%2Did}/Messages", pathParameters)
+        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_sync_v1/v1/Services/{serviceSid}/Streams/{streamSid}/Messages", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Streams
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_sync_v1/v1/Services/{serviceS%2Did}/Streams/{s%2Did}/Messages", rawUrl)
+        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_sync_v1/v1/Services/{serviceSid}/Streams/{streamSid}/Messages", rawUrl)
         {
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_sync_v1.V1.Services.Item.Streams
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

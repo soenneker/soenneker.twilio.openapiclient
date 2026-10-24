@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Subscriptions
     {
         /// <summary>Subscription to send Event Types to a Sink</summary>
         /// <param name="position">A 34 character string that uniquely identifies this Subscription.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Subscriptions.Item.SItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Subscriptions.Item.SItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Subscriptions.Item.WithSubscriptionSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Subscriptions.Item.WithSubscriptionSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("s%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Subscriptions.Item.SItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("subscriptionSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Subscriptions.Item.WithSubscriptionSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_events_v1.V1.Subscriptions
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

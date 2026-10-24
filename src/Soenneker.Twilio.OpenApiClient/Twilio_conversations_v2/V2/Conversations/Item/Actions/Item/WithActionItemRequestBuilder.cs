@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversations.Item.Actions.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_conversations_v2\v2\Conversations\{conversation-id}\Actions\{actionId}
+    /// Builds and executes requests for operations under \twilio_conversations_v2\v2\Conversations\{id}\Actions\{actionId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithActionItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversation
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithActionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{conversation%2Did}/Actions/{actionId}", pathParameters)
+        public WithActionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{id}/Actions/{actionId}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v2.V2.Conversation
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithActionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{conversation%2Did}/Actions/{actionId}", rawUrl)
+        public WithActionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_conversations_v2/v2/Conversations/{id}/Actions/{actionId}", rawUrl)
         {
         }
         /// <summary>

@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item.Channels
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_ip_messaging_v1\v1\Services\{serviceS-id}\Channels
+    /// Builds and executes requests for operations under \twilio_ip_messaging_v1\v1\Services\{serviceSid}\Channels
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChannelsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_ip_messaging_v1.v1.Services.item.Channels.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item.Channels.Item.ChannelSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item.Channels.Item.ChannelSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item.Channels.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item.Channels.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("channelS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item.Channels.Item.ChannelSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item.Channels.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v1/v1/Services/{serviceS%2Did}/Channels{?Page*,PageSize*,PageToken*,Type*}", pathParameters)
+        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v1/v1/Services/{serviceSid}/Channels{?Page*,PageSize*,PageToken*,Type*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v1/v1/Services/{serviceS%2Did}/Channels{?Page*,PageSize*,PageToken*,Type*}", rawUrl)
+        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v1/v1/Services/{serviceSid}/Channels{?Page*,PageSize*,PageToken*,Type*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV1ListChannel200Response"/></returns>
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v1.V1.Services.Item
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

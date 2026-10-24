@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks
     {
         /// <summary>Represents a SIP trunk</summary>
         /// <param name="position">The unique string that we created to identify the Trunk resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.SItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.SItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.WithTrunkSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.WithTrunkSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("s%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.SItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("trunkSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.WithTrunkSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

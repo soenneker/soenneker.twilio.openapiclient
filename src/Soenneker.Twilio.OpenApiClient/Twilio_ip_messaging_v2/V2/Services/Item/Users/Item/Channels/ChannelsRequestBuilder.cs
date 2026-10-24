@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item.Users.Item.Channels
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_ip_messaging_v2\v2\Services\{serviceS-id}\Users\{s-id}\Channels
+    /// Builds and executes requests for operations under \twilio_ip_messaging_v2\v2\Services\{serviceSid}\Users\{sid}\Channels
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChannelsRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceS%2Did}/Users/{s%2Did}/Channels{?Page*,PageSize*,PageToken*}", pathParameters)
+        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceSid}/Users/{sid}/Channels{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceS%2Did}/Users/{s%2Did}/Channels{?Page*,PageSize*,PageToken*}", rawUrl)
+        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceSid}/Users/{sid}/Channels{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2ListUserChannel200Response"/></returns>

@@ -23,8 +23,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.MappingTraitItem> Mappings { get; set; }
 #endif
-        /// <summary>The destination data type, which determines where to write the data and the required configuration parameters.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TraitsType? Type { get; set; }
+        /// <summary>The type property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Type { get; set; }
+#nullable restore
+#else
+        public string Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.DataMappingToTypes"/> and sets the default values.
         /// </summary>
@@ -51,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "mappings", n => { Mappings = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MappingTraitItem>(global::Soenneker.Twilio.OpenApiClient.Models.MappingTraitItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TraitsType>(); } },
+                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -62,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MappingTraitItem>("mappings", Mappings);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TraitsType>("type", Type);
+            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.Item.ItemAssignments
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_numbers_v2\v2\RegulatoryCompliance\Bundles\{bundleS-id}\ItemAssignments
+    /// Builds and executes requests for operations under \twilio_numbers_v2\v2\RegulatoryCompliance\Bundles\{sid}\ItemAssignments
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ItemAssignmentsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sid", position);
+                urlTplParams.Add("sid2", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.Item.ItemAssignments.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ItemAssignmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{bundleS%2Did}/ItemAssignments{?Page*,PageSize*,PageToken*}", pathParameters)
+        public ItemAssignmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{sid}/ItemAssignments{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ItemAssignmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{bundleS%2Did}/ItemAssignments{?Page*,PageSize*,PageToken*}", rawUrl)
+        public ItemAssignmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{sid}/ItemAssignments{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

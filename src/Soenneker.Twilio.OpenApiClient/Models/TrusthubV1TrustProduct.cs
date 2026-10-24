@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The error codes associated with the rejection of the Trust Product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductErrorsItem>? Errors { get; set; }
+        public UntypedNode? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductErrorsItem> Errors { get; set; }
+        public UntypedNode Errors { get; set; }
 #endif
         /// <summary>The string that you assigned to describe the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,7 +123,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinksProperty.CreateFromDiscriminatorValue); } },
                 { "policy_sid", n => { PolicySid = n.GetStringValue(); } },
@@ -145,7 +145,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
             writer.WriteStringValue("email", Email);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductErrorsItem>("errors", Errors);
+            writer.WriteObjectValue<UntypedNode>("errors", Errors);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1TrustProductLinksProperty>("links", Links);
             writer.WriteStringValue("policy_sid", PolicySid);

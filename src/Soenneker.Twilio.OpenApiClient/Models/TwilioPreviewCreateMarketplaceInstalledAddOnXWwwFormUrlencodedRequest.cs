@@ -27,10 +27,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The JSON object that represents the configuration of the new Add-on being installed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewCreateMarketplaceInstalledAddOnXWwwFormUrlencodedRequestConfiguration? Configuration { get; set; }
+        public UntypedNode? Configuration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewCreateMarketplaceInstalledAddOnXWwwFormUrlencodedRequestConfiguration Configuration { get; set; }
+        public UntypedNode Configuration { get; set; }
 #endif
         /// <summary>An application-defined string that uniquely identifies the resource. This value must be unique within the Account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "AcceptTermsOfService", n => { AcceptTermsOfService = n.GetBoolValue(); } },
                 { "AvailableAddOnSid", n => { AvailableAddOnSid = n.GetStringValue(); } },
-                { "Configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewCreateMarketplaceInstalledAddOnXWwwFormUrlencodedRequestConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewCreateMarketplaceInstalledAddOnXWwwFormUrlencodedRequestConfiguration.CreateFromDiscriminatorValue); } },
+                { "Configuration", n => { Configuration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "UniqueName", n => { UniqueName = n.GetStringValue(); } },
             };
         }
@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("AcceptTermsOfService", AcceptTermsOfService);
             writer.WriteStringValue("AvailableAddOnSid", AvailableAddOnSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewCreateMarketplaceInstalledAddOnXWwwFormUrlencodedRequestConfiguration>("Configuration", Configuration);
+            writer.WriteObjectValue<UntypedNode>("Configuration", Configuration);
             writer.WriteStringValue("UniqueName", UniqueName);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows
     {
         /// <summary>Studio flows</summary>
         /// <param name="position">The SID of the Flow resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.FlowSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.FlowSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.WithFlowSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.WithFlowSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("flowS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.FlowSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("flowSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.WithFlowSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

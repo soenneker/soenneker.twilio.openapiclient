@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The policy_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreatePolicyRequestPolicyDetails? PolicyDetails { get; set; }
+        public UntypedNode? PolicyDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreatePolicyRequestPolicyDetails PolicyDetails { get; set; }
+        public UntypedNode PolicyDetails { get; set; }
 #endif
         /// <summary>The description of the policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "policy_details", n => { PolicyDetails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreatePolicyRequestPolicyDetails>(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreatePolicyRequestPolicyDetails.CreateFromDiscriminatorValue); } },
+                { "policy_details", n => { PolicyDetails = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -96,7 +96,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeV1ServiceCreatePolicyRequestPolicyDetails>("policy_details", PolicyDetails);
+            writer.WriteObjectValue<UntypedNode>("policy_details", PolicyDetails);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

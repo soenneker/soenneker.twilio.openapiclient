@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Passkeys.VerifyFactor
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_verify_v2\v2\Services\{serviceS-id}\Passkeys\VerifyFactor
+    /// Builds and executes requests for operations under \twilio_verify_v2\v2\Services\{serviceSid}\Passkeys\VerifyFactor
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VerifyFactorRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Passk
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VerifyFactorRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceS%2Did}/Passkeys/VerifyFactor", pathParameters)
+        public VerifyFactorRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceSid}/Passkeys/VerifyFactor", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_verify_v2.V2.Services.Item.Passk
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VerifyFactorRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceS%2Did}/Passkeys/VerifyFactor", rawUrl)
+        public VerifyFactorRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_verify_v2/v2/Services/{serviceSid}/Passkeys/VerifyFactor", rawUrl)
         {
         }
         /// <summary>

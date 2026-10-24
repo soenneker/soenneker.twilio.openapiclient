@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_flex_v1\v1\Interactions\{interactionS-id}\Channels
+    /// Builds and executes requests for operations under \twilio_flex_v1\v1\Interactions\{sid}\Channels
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChannelsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_flex_v1.v1.Interactions.item.Channels.item collection</summary>
         /// <param name="position">The unique string created by Twilio to identify an Interaction Channel resource, prefixed with UO.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.ChannelSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.ChannelSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("channelS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.ChannelSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid2", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{interactionS%2Did}/Channels{?Page*,PageSize*,PageToken*}", pathParameters)
+        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{sid}/Channels{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{interactionS%2Did}/Channels{?Page*,PageSize*,PageToken*}", rawUrl)
+        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{sid}/Channels{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

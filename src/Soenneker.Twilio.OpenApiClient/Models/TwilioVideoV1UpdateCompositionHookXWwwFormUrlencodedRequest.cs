@@ -65,10 +65,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON object that describes the video layout of the composition hook in terms of regions. See [Specifying Video Layouts](https://www.twilio.com/docs/video/api/compositions-resource#specifying-video-layouts) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateCompositionHookXWwwFormUrlencodedRequestVideoLayout? VideoLayout { get; set; }
+        public UntypedNode? VideoLayout { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateCompositionHookXWwwFormUrlencodedRequestVideoLayout VideoLayout { get; set; }
+        public UntypedNode VideoLayout { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateCompositionHookXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -104,7 +104,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "StatusCallback", n => { StatusCallback = n.GetStringValue(); } },
                 { "StatusCallbackMethod", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateCompositionHookXWwwFormUrlencodedRequestStatusCallbackMethod>(); } },
                 { "Trim", n => { Trim = n.GetBoolValue(); } },
-                { "VideoLayout", n => { VideoLayout = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateCompositionHookXWwwFormUrlencodedRequestVideoLayout>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateCompositionHookXWwwFormUrlencodedRequestVideoLayout.CreateFromDiscriminatorValue); } },
+                { "VideoLayout", n => { VideoLayout = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -123,7 +123,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("StatusCallback", StatusCallback);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateCompositionHookXWwwFormUrlencodedRequestStatusCallbackMethod>("StatusCallbackMethod", StatusCallbackMethod);
             writer.WriteBoolValue("Trim", Trim);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateCompositionHookXWwwFormUrlencodedRequestVideoLayout>("VideoLayout", VideoLayout);
+            writer.WriteObjectValue<UntypedNode>("VideoLayout", VideoLayout);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

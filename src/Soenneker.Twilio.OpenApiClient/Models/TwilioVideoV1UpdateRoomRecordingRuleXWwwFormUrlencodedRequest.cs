@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON-encoded array of recording rules.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateRoomRecordingRuleXWwwFormUrlencodedRequestRules? Rules { get; set; }
+        public UntypedNode? Rules { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateRoomRecordingRuleXWwwFormUrlencodedRequestRules Rules { get; set; }
+        public UntypedNode Rules { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateRoomRecordingRuleXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Rules", n => { Rules = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateRoomRecordingRuleXWwwFormUrlencodedRequestRules>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateRoomRecordingRuleXWwwFormUrlencodedRequestRules.CreateFromDiscriminatorValue); } },
+                { "Rules", n => { Rules = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1UpdateRoomRecordingRuleXWwwFormUrlencodedRequestRules>("Rules", Rules);
+            writer.WriteObjectValue<UntypedNode>("Rules", Rules);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

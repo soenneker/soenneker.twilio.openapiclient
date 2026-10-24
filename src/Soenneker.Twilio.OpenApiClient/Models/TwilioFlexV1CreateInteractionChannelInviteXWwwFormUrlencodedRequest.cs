@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Interaction&apos;s routing logic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelInviteXWwwFormUrlencodedRequestRouting? Routing { get; set; }
+        public UntypedNode? Routing { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelInviteXWwwFormUrlencodedRequestRouting Routing { get; set; }
+        public UntypedNode Routing { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelInviteXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Routing", n => { Routing = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelInviteXWwwFormUrlencodedRequestRouting>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelInviteXWwwFormUrlencodedRequestRouting.CreateFromDiscriminatorValue); } },
+                { "Routing", n => { Routing = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelInviteXWwwFormUrlencodedRequestRouting>("Routing", Routing);
+            writer.WriteObjectValue<UntypedNode>("Routing", Routing);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engageme
     {
         /// <summary>[DEPRECATED] Excecutions of Studio flows</summary>
         /// <param name="position">The SID of the Engagement resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engagements.Item.EngagementSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engagements.Item.EngagementSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engagements.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engagements.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("engagementS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engagements.Item.EngagementSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engagements.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engageme
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EngagementsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{flowS%2Did}/Engagements{?Page*,PageSize*,PageToken*}", pathParameters)
+        public EngagementsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{flowSid}/Engagements{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engageme
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EngagementsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{flowS%2Did}/Engagements{?Page*,PageSize*,PageToken*}", rawUrl)
+        public EngagementsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v1/v1/Flows/{flowSid}/Engagements{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v1.V1.Flows.Item.Engageme
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

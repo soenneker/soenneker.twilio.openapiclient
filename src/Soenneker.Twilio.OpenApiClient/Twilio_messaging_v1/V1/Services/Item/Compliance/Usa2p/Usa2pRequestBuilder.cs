@@ -41,7 +41,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.Services.Item.Co
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Usa2pRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/Services/{messagingServiceS%2Did}/Compliance/Usa2p{?Page*,PageSize*,PageToken*}", pathParameters)
+        public Usa2pRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/Services/{serviceSid}/Compliance/Usa2p{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.Services.Item.Co
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Usa2pRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/Services/{messagingServiceS%2Did}/Compliance/Usa2p{?Page*,PageSize*,PageToken*}", rawUrl)
+        public Usa2pRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_messaging_v1/v1/Services/{serviceSid}/Compliance/Usa2p{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListUsAppToPersonResponse"/></returns>
@@ -116,7 +116,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.Services.Item.Co
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

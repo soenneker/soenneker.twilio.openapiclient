@@ -275,18 +275,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of rejection reasons and codes describing why a Tollfree Verification has been rejected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationRejectionReasonsItem>? RejectionReasons { get; set; }
+        public UntypedNode? RejectionReasons { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationRejectionReasonsItem> RejectionReasons { get; set; }
+        public UntypedNode RejectionReasons { get; set; }
 #endif
         /// <summary>The URLs of the documents associated with the Tollfree Verification resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationResourceLinks? ResourceLinks { get; set; }
+        public UntypedNode? ResourceLinks { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationResourceLinks ResourceLinks { get; set; }
+        public UntypedNode ResourceLinks { get; set; }
 #endif
         /// <summary>The unique string to identify Tollfree Verification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -430,8 +430,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "production_message_sample", n => { ProductionMessageSample = n.GetStringValue(); } },
                 { "regulated_item_sid", n => { RegulatedItemSid = n.GetStringValue(); } },
                 { "rejection_reason", n => { RejectionReason = n.GetStringValue(); } },
-                { "rejection_reasons", n => { RejectionReasons = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationRejectionReasonsItem>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationRejectionReasonsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "resource_links", n => { ResourceLinks = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationResourceLinks>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationResourceLinks.CreateFromDiscriminatorValue); } },
+                { "rejection_reasons", n => { RejectionReasons = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "resource_links", n => { ResourceLinks = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TollfreeVerificationEnumStatus>(); } },
                 { "terms_and_conditions_url", n => { TermsAndConditionsUrl = n.GetStringValue(); } },
@@ -492,8 +492,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("production_message_sample", ProductionMessageSample);
             writer.WriteStringValue("regulated_item_sid", RegulatedItemSid);
             writer.WriteStringValue("rejection_reason", RejectionReason);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationRejectionReasonsItem>("rejection_reasons", RejectionReasons);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1TollfreeVerificationResourceLinks>("resource_links", ResourceLinks);
+            writer.WriteObjectValue<UntypedNode>("rejection_reasons", RejectionReasons);
+            writer.WriteObjectValue<UntypedNode>("resource_links", ResourceLinks);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TollfreeVerificationEnumStatus>("status", Status);
             writer.WriteStringValue("terms_and_conditions_url", TermsAndConditionsUrl);

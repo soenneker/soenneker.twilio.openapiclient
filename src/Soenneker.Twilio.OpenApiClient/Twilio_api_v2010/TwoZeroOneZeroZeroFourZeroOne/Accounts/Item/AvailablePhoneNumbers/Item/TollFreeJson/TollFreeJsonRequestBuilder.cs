@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TollFreeJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/AvailablePhoneNumbers/{countryCode%2Did}/TollFree.json{?AreaCode*,Beta*,Contains*,Distance*,ExcludeAllAddressRequired*,ExcludeForeignAddressRequired*,ExcludeLocalAddressRequired*,FaxEnabled*,InLata*,InLocality*,InPostalCode*,InRateCenter*,InRegion*,MmsEnabled*,NearLatLong*,NearNumber*,Page*,PageSize*,PageToken*,SmsEnabled*,VoiceEnabled*}", pathParameters)
+        public TollFreeJsonRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/AvailablePhoneNumbers/{countryCode%2Did}/TollFree.json{?AreaCode*,Beta*,Contains*,Distance*,ExcludeAllAddressRequired*,ExcludeForeignAddressRequired*,ExcludeLocalAddressRequired*,FaxEnabled*,InLata*,InLocality*,InPostalCode*,InRateCenter*,InRegion*,MmsEnabled*,NearLatLong*,NearNumber*,Page*,PageSize*,PageToken*,SmsEnabled*,VoiceEnabled*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_api_v2010.TwoZeroOneZeroZeroFour
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TollFreeJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{accountS%2Did}/AvailablePhoneNumbers/{countryCode%2Did}/TollFree.json{?AreaCode*,Beta*,Contains*,Distance*,ExcludeAllAddressRequired*,ExcludeForeignAddressRequired*,ExcludeLocalAddressRequired*,FaxEnabled*,InLata*,InLocality*,InPostalCode*,InRateCenter*,InRegion*,MmsEnabled*,NearLatLong*,NearNumber*,Page*,PageSize*,PageToken*,SmsEnabled*,VoiceEnabled*}", rawUrl)
+        public TollFreeJsonRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_api_v2010/2010-04-01/Accounts/{s%2Did}/AvailablePhoneNumbers/{countryCode%2Did}/TollFree.json{?AreaCode*,Beta*,Contains*,Distance*,ExcludeAllAddressRequired*,ExcludeForeignAddressRequired*,ExcludeLocalAddressRequired*,FaxEnabled*,InLata*,InLocality*,InPostalCode*,InRateCenter*,InRegion*,MmsEnabled*,NearLatLong*,NearNumber*,Page*,PageSize*,PageToken*,SmsEnabled*,VoiceEnabled*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ListAvailablePhoneNumberTollFreeResponse"/></returns>

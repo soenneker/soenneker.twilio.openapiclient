@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sid", position);
+                urlTplParams.Add("sid2", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProfiles.Item.Networks.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NetworksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/NetworkAccessProfiles/{networkAccessProfileS%2Did}/Networks{?Page*,PageSize*,PageToken*}", pathParameters)
+        public NetworksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/NetworkAccessProfiles/{sid}/Networks{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NetworksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/NetworkAccessProfiles/{networkAccessProfileS%2Did}/Networks{?Page*,PageSize*,PageToken*}", rawUrl)
+        public NetworksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_supersim_v1/v1/NetworkAccessProfiles/{sid}/Networks{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

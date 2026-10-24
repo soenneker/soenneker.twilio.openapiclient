@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Interaction&apos;s channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionXWwwFormUrlencodedRequestChannel? Channel { get; set; }
+        public UntypedNode? Channel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionXWwwFormUrlencodedRequestChannel Channel { get; set; }
+        public UntypedNode Channel { get; set; }
 #endif
         /// <summary>The Interaction context sid is used for adding a context lookup sid</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,10 +33,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Interaction&apos;s routing logic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionXWwwFormUrlencodedRequestRouting? Routing { get; set; }
+        public UntypedNode? Routing { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionXWwwFormUrlencodedRequestRouting Routing { get; set; }
+        public UntypedNode Routing { get; set; }
 #endif
         /// <summary>The unique identifier for Interaction level webhook</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,9 +71,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Channel", n => { Channel = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionXWwwFormUrlencodedRequestChannel>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionXWwwFormUrlencodedRequestChannel.CreateFromDiscriminatorValue); } },
+                { "Channel", n => { Channel = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "InteractionContextSid", n => { InteractionContextSid = n.GetStringValue(); } },
-                { "Routing", n => { Routing = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionXWwwFormUrlencodedRequestRouting>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionXWwwFormUrlencodedRequestRouting.CreateFromDiscriminatorValue); } },
+                { "Routing", n => { Routing = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "WebhookTtid", n => { WebhookTtid = n.GetStringValue(); } },
             };
         }
@@ -84,9 +84,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionXWwwFormUrlencodedRequestChannel>("Channel", Channel);
+            writer.WriteObjectValue<UntypedNode>("Channel", Channel);
             writer.WriteStringValue("InteractionContextSid", InteractionContextSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionXWwwFormUrlencodedRequestRouting>("Routing", Routing);
+            writer.WriteObjectValue<UntypedNode>("Routing", Routing);
             writer.WriteStringValue("WebhookTtid", WebhookTtid);
             writer.WriteAdditionalData(AdditionalData);
         }

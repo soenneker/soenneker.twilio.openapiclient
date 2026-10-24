@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The \`Policy\` object is a collection that specifies the allowed Twilio permissions for the restricted key.For more information on the permissions available with restricted API keys, refer to the [Twilio documentation](https://www.twilio.com/docs/iam/api-keys/restricted-api-keys#permissions-available-with-restricted-api-keys).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateNewKeyXWwwFormUrlencodedRequestPolicy? Policy { get; set; }
+        public UntypedNode? Policy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateNewKeyXWwwFormUrlencodedRequestPolicy Policy { get; set; }
+        public UntypedNode Policy { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateNewKeyXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "AccountSid", n => { AccountSid = n.GetStringValue(); } },
                 { "FriendlyName", n => { FriendlyName = n.GetStringValue(); } },
                 { "KeyType", n => { KeyType = n.GetStringValue(); } },
-                { "Policy", n => { Policy = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateNewKeyXWwwFormUrlencodedRequestPolicy>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateNewKeyXWwwFormUrlencodedRequestPolicy.CreateFromDiscriminatorValue); } },
+                { "Policy", n => { Policy = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("AccountSid", AccountSid);
             writer.WriteStringValue("FriendlyName", FriendlyName);
             writer.WriteStringValue("KeyType", KeyType);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1CreateNewKeyXWwwFormUrlencodedRequestPolicy>("Policy", Policy);
+            writer.WriteObjectValue<UntypedNode>("Policy", Policy);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

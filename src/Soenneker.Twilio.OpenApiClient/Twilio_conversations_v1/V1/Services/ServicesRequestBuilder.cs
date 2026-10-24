@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services
     {
         /// <summary>A Service resource is a top-level conversation resource container that serves as a data silo.</summary>
         /// <param name="position">A 34 character string that uniquely identifies this resource.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Item.ChatServiceSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Item.ChatServiceSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("chatServiceS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Item.ChatServiceSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Services
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

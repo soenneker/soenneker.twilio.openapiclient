@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Channels.Item.Participants.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_flex_v1\v1\Interactions\{interactionS-id}\Channels\{channelS-id}\Participants\{sid}
+    /// Builds and executes requests for operations under \twilio_flex_v1\v1\Interactions\{sid}\Channels\{sid2}\Participants\{sid3}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{interactionS%2Did}/Channels/{channelS%2Did}/Participants/{sid}", pathParameters)
+        public WithSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{sid}/Channels/{sid2}/Participants/{sid3}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{interactionS%2Did}/Channels/{channelS%2Did}/Participants/{sid}", rawUrl)
+        public WithSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_flex_v1/v1/Interactions/{sid}/Channels/{sid2}/Participants/{sid3}", rawUrl)
         {
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.Cha
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

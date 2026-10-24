@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item.Bindings
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_ip_messaging_v2\v2\Services\{serviceS-id}\Bindings
+    /// Builds and executes requests for operations under \twilio_ip_messaging_v2\v2\Services\{serviceSid}\Bindings
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BindingsRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BindingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceS%2Did}/Bindings{?BindingType*,Identity*,Page*,PageSize*,PageToken*}", pathParameters)
+        public BindingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceSid}/Bindings{?BindingType*,Identity*,Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BindingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceS%2Did}/Bindings{?BindingType*,Identity*,Page*,PageSize*,PageToken*}", rawUrl)
+        public BindingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceSid}/Bindings{?BindingType*,Identity*,Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2ListBinding200Response"/></returns>

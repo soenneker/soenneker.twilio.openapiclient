@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_flex_v1.v1.Interactions.item collection</summary>
         /// <param name="position">The SID of the Interaction resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.InteractionSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.InteractionSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("interactionS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.InteractionSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Interactions
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

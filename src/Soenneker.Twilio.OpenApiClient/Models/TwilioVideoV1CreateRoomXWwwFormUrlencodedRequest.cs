@@ -37,10 +37,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A collection of Recording Rules that describe how to include or exclude matching tracks for recording</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestRecordingRules? RecordingRules { get; set; }
+        public UntypedNode? RecordingRules { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestRecordingRules RecordingRules { get; set; }
+        public UntypedNode RecordingRules { get; set; }
 #endif
         /// <summary>Whether to start recording when Participants connect.</summary>
         public bool? RecordParticipantsOnConnect { get; set; }
@@ -117,7 +117,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "MaxParticipants", n => { MaxParticipants = n.GetIntValue(); } },
                 { "MediaRegion", n => { MediaRegion = n.GetStringValue(); } },
                 { "RecordParticipantsOnConnect", n => { RecordParticipantsOnConnect = n.GetBoolValue(); } },
-                { "RecordingRules", n => { RecordingRules = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestRecordingRules>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestRecordingRules.CreateFromDiscriminatorValue); } },
+                { "RecordingRules", n => { RecordingRules = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "StatusCallback", n => { StatusCallback = n.GetStringValue(); } },
                 { "StatusCallbackMethod", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestStatusCallbackMethod>(); } },
                 { "TranscribeParticipantsOnConnect", n => { TranscribeParticipantsOnConnect = n.GetBoolValue(); } },
@@ -142,7 +142,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("MaxParticipantDuration", MaxParticipantDuration);
             writer.WriteIntValue("MaxParticipants", MaxParticipants);
             writer.WriteStringValue("MediaRegion", MediaRegion);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestRecordingRules>("RecordingRules", RecordingRules);
+            writer.WriteObjectValue<UntypedNode>("RecordingRules", RecordingRules);
             writer.WriteBoolValue("RecordParticipantsOnConnect", RecordParticipantsOnConnect);
             writer.WriteStringValue("StatusCallback", StatusCallback);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestStatusCallbackMethod>("StatusCallbackMethod", StatusCallbackMethod);

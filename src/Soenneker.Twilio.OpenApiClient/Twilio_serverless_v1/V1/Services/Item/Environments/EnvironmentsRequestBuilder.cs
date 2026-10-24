@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.E
     {
         /// <summary>Represents a deployed build of a given set of Functions and/or Assets at a specific URL.</summary>
         /// <param name="position">The SID of the Environment resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.Environments.Item.EnvironmentSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.Environments.Item.EnvironmentSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.Environments.Item.WithEnvironmentSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.Environments.Item.WithEnvironmentSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("environmentS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.Environments.Item.EnvironmentSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("environmentSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.Environments.Item.WithEnvironmentSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.E
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EnvironmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_serverless_v1/v1/Services/{serviceS%2Did}/Environments{?Page*,PageSize*,PageToken*}", pathParameters)
+        public EnvironmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_serverless_v1/v1/Services/{serviceSid}/Environments{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.E
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EnvironmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_serverless_v1/v1/Services/{serviceS%2Did}/Environments{?Page*,PageSize*,PageToken*}", rawUrl)
+        public EnvironmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_serverless_v1/v1/Services/{serviceSid}/Environments{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_serverless_v1.V1.Services.Item.E
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

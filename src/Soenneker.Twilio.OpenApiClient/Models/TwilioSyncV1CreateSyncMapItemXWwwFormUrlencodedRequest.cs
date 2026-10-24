@@ -19,10 +19,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON string that represents an arbitrary, schema-less object that the Map Item stores. Can be up to 16 KiB in length.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateSyncMapItemXWwwFormUrlencodedRequestData? Data { get; set; }
+        public UntypedNode? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateSyncMapItemXWwwFormUrlencodedRequestData Data { get; set; }
+        public UntypedNode Data { get; set; }
 #endif
         /// <summary>How long, [in seconds](https://www.twilio.com/docs/sync/limits#sync-payload-limits), before the Map Item expires (time-to-live) and is deleted.</summary>
         public int? ItemTtl { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "CollectionTtl", n => { CollectionTtl = n.GetIntValue(); } },
-                { "Data", n => { Data = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateSyncMapItemXWwwFormUrlencodedRequestData>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateSyncMapItemXWwwFormUrlencodedRequestData.CreateFromDiscriminatorValue); } },
+                { "Data", n => { Data = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "ItemTtl", n => { ItemTtl = n.GetIntValue(); } },
                 { "Key", n => { Key = n.GetStringValue(); } },
                 { "Ttl", n => { Ttl = n.GetIntValue(); } },
@@ -76,7 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("CollectionTtl", CollectionTtl);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateSyncMapItemXWwwFormUrlencodedRequestData>("Data", Data);
+            writer.WriteObjectValue<UntypedNode>("Data", Data);
             writer.WriteIntValue("ItemTtl", ItemTtl);
             writer.WriteStringValue("Key", Key);
             writer.WriteIntValue("Ttl", Ttl);

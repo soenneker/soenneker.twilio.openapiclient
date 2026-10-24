@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON string that represents an arbitrary, schema-less object that makes up the Stream Message body. Can be up to 4 KiB in length.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateStreamMessageXWwwFormUrlencodedRequestData? Data { get; set; }
+        public UntypedNode? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateStreamMessageXWwwFormUrlencodedRequestData Data { get; set; }
+        public UntypedNode Data { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateStreamMessageXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Data", n => { Data = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateStreamMessageXWwwFormUrlencodedRequestData>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateStreamMessageXWwwFormUrlencodedRequestData.CreateFromDiscriminatorValue); } },
+                { "Data", n => { Data = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateStreamMessageXWwwFormUrlencodedRequestData>("Data", Data);
+            writer.WriteObjectValue<UntypedNode>("Data", Data);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

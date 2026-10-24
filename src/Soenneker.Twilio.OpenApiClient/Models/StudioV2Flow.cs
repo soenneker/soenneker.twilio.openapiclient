@@ -45,18 +45,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>JSON representation of flow definition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowDefinition? Definition { get; set; }
+        public UntypedNode? Definition { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowDefinition Definition { get; set; }
+        public UntypedNode Definition { get; set; }
 #endif
         /// <summary>List of error in the flow definition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowErrorsItem>? Errors { get; set; }
+        public UntypedNode? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowErrorsItem> Errors { get; set; }
+        public UntypedNode Errors { get; set; }
 #endif
         /// <summary>The string that you assigned to describe the Flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,10 +99,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of warnings in the flow definition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowWarningsItem>? Warnings { get; set; }
+        public UntypedNode? Warnings { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowWarningsItem> Warnings { get; set; }
+        public UntypedNode Warnings { get; set; }
 #endif
         /// <summary>The webhook_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -143,8 +143,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "commit_message", n => { CommitMessage = n.GetStringValue(); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "definition", n => { Definition = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowDefinition>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowDefinition.CreateFromDiscriminatorValue); } },
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowErrorsItem>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "definition", n => { Definition = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "errors", n => { Errors = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinksProperty.CreateFromDiscriminatorValue); } },
                 { "revision", n => { Revision = n.GetIntValue(); } },
@@ -152,7 +152,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2FlowEnumStatus>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "valid", n => { Valid = n.GetBoolValue(); } },
-                { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowWarningsItem>(global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowWarningsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "warnings", n => { Warnings = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "webhook_url", n => { WebhookUrl = n.GetStringValue(); } },
             };
         }
@@ -168,8 +168,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("commit_message", CommitMessage);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowDefinition>("definition", Definition);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowErrorsItem>("errors", Errors);
+            writer.WriteObjectValue<UntypedNode>("definition", Definition);
+            writer.WriteObjectValue<UntypedNode>("errors", Errors);
             writer.WriteStringValue("friendly_name", FriendlyName);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowLinksProperty>("links", Links);
             writer.WriteIntValue("revision", Revision);
@@ -177,7 +177,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioStudioV2FlowEnumStatus>("status", Status);
             writer.WriteStringValue("url", Url);
             writer.WriteBoolValue("valid", Valid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.StudioV2FlowWarningsItem>("warnings", Warnings);
+            writer.WriteObjectValue<UntypedNode>("warnings", Warnings);
             writer.WriteStringValue("webhook_url", WebhookUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

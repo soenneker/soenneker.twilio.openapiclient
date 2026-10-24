@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.RecordingRules
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_video_v1\v1\Rooms\{roomS-id}\RecordingRules
+    /// Builds and executes requests for operations under \twilio_video_v1\v1\Rooms\{sid}\RecordingRules
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RecordingRulesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Recording
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordingRulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{roomS%2Did}/RecordingRules", pathParameters)
+        public RecordingRulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{sid}/RecordingRules", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Recording
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordingRulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{roomS%2Did}/RecordingRules", rawUrl)
+        public RecordingRulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_video_v1/v1/Rooms/{sid}/RecordingRules", rawUrl)
         {
         }
         /// <summary>
@@ -109,7 +109,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_video_v1.V1.Rooms.Item.Recording
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

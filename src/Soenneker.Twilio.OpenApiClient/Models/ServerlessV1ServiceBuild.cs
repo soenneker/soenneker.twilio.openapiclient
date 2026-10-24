@@ -25,10 +25,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The list of Asset Version resource SIDs that are included in the Build.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildAssetVersionsItem>? AssetVersions { get; set; }
+        public UntypedNode? AssetVersions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildAssetVersionsItem> AssetVersions { get; set; }
+        public UntypedNode AssetVersions { get; set; }
 #endif
         /// <summary>The date and time in GMT when the Build resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
         public DateTimeOffset? DateCreated { get; set; }
@@ -37,18 +37,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of objects that describe the Dependencies included in the Build. Each object contains the `name` and `version` of the dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildDependenciesItem>? Dependencies { get; set; }
+        public UntypedNode? Dependencies { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildDependenciesItem> Dependencies { get; set; }
+        public UntypedNode Dependencies { get; set; }
 #endif
         /// <summary>The list of Function Version resource SIDs that are included in the Build.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildFunctionVersionsItem>? FunctionVersions { get; set; }
+        public UntypedNode? FunctionVersions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildFunctionVersionsItem> FunctionVersions { get; set; }
+        public UntypedNode FunctionVersions { get; set; }
 #endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,11 +112,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "asset_versions", n => { AssetVersions = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildAssetVersionsItem>(global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildAssetVersionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "asset_versions", n => { AssetVersions = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "dependencies", n => { Dependencies = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildDependenciesItem>(global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildDependenciesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "function_versions", n => { FunctionVersions = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildFunctionVersionsItem>(global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildFunctionVersionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "dependencies", n => { Dependencies = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "function_versions", n => { FunctionVersions = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildLinksProperty.CreateFromDiscriminatorValue); } },
                 { "runtime", n => { Runtime = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BuildEnumRuntime>(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
@@ -133,11 +133,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildAssetVersionsItem>("asset_versions", AssetVersions);
+            writer.WriteObjectValue<UntypedNode>("asset_versions", AssetVersions);
             writer.WriteDateTimeOffsetValue("date_created", DateCreated);
             writer.WriteDateTimeOffsetValue("date_updated", DateUpdated);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildDependenciesItem>("dependencies", Dependencies);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildFunctionVersionsItem>("function_versions", FunctionVersions);
+            writer.WriteObjectValue<UntypedNode>("dependencies", Dependencies);
+            writer.WriteObjectValue<UntypedNode>("function_versions", FunctionVersions);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ServerlessV1ServiceBuildLinksProperty>("links", Links);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BuildEnumRuntime>("runtime", Runtime);
             writer.WriteStringValue("service_sid", ServiceSid);

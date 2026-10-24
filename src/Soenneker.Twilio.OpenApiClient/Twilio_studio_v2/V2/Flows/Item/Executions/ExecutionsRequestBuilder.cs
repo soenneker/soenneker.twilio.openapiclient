@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executio
     {
         /// <summary>Executions of Studio flows</summary>
         /// <param name="position">The SID of the Execution resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.ExecutionSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.ExecutionSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("executionS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.ExecutionSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executio
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExecutionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowS%2Did}/Executions{?DateCreatedFrom*,DateCreatedTo*,Page*,PageSize*,PageToken*,status*}", pathParameters)
+        public ExecutionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowSid}/Executions{?DateCreatedFrom*,DateCreatedTo*,Page*,PageSize*,PageToken*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executio
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExecutionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowS%2Did}/Executions{?DateCreatedFrom*,DateCreatedTo*,Page*,PageSize*,PageToken*,status*}", rawUrl)
+        public ExecutionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowSid}/Executions{?DateCreatedFrom*,DateCreatedTo*,Page*,PageSize*,PageToken*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executio
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

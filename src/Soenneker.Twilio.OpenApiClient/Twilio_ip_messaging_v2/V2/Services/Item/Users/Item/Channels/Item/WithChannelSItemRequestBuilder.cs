@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item.Users.Item.Channels.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_ip_messaging_v2\v2\Services\{serviceS-id}\Users\{s-id}\Channels\{channelSid}
+    /// Builds and executes requests for operations under \twilio_ip_messaging_v2\v2\Services\{serviceSid}\Users\{sid}\Channels\{channelSid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithChannelSItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithChannelSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceS%2Did}/Users/{s%2Did}/Channels/{channelSid}", pathParameters)
+        public WithChannelSItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceSid}/Users/{sid}/Channels/{channelSid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithChannelSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceS%2Did}/Users/{s%2Did}/Channels/{channelSid}", rawUrl)
+        public WithChannelSItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_ip_messaging_v2/v2/Services/{serviceSid}/Users/{sid}/Channels/{channelSid}", rawUrl)
         {
         }
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -126,7 +126,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_ip_messaging_v2.V2.Services.Item
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

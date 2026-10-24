@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.Item.Evaluations
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_trusthub_v1\v1\CustomerProfiles\{customerProfileS-id}\Evaluations
+    /// Builds and executes requests for operations under \twilio_trusthub_v1\v1\CustomerProfiles\{sid}\Evaluations
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EvaluationsRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sid", position);
+                urlTplParams.Add("sid2", position);
                 return new global::Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.Item.Evaluations.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EvaluationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/CustomerProfiles/{customerProfileS%2Did}/Evaluations{?Page*,PageSize*,PageToken*}", pathParameters)
+        public EvaluationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/CustomerProfiles/{sid}/Evaluations{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EvaluationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/CustomerProfiles/{customerProfileS%2Did}/Evaluations{?Page*,PageSize*,PageToken*}", rawUrl)
+        public EvaluationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trusthub_v1/v1/CustomerProfiles/{sid}/Evaluations{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.CustomerProfiles.
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

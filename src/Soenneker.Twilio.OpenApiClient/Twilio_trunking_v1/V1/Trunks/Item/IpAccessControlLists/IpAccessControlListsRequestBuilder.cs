@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.IpAcc
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IpAccessControlListsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{s%2Did}/IpAccessControlLists{?Page*,PageSize*,PageToken*}", pathParameters)
+        public IpAccessControlListsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{trunkSid}/IpAccessControlLists{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.IpAcc
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IpAccessControlListsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{s%2Did}/IpAccessControlLists{?Page*,PageSize*,PageToken*}", rawUrl)
+        public IpAccessControlListsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_trunking_v1/v1/Trunks/{trunkSid}/IpAccessControlLists{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trunking_v1.V1.Trunks.Item.IpAcc
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

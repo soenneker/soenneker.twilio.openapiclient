@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.Item.ReplaceItems
 {
     /// <summary>
-    /// Builds and executes requests for operations under \twilio_numbers_v2\v2\RegulatoryCompliance\Bundles\{bundleS-id}\ReplaceItems
+    /// Builds and executes requests for operations under \twilio_numbers_v2\v2\RegulatoryCompliance\Bundles\{sid}\ReplaceItems
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReplaceItemsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReplaceItemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{bundleS%2Did}/ReplaceItems", pathParameters)
+        public ReplaceItemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{sid}/ReplaceItems", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReplaceItemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{bundleS%2Did}/ReplaceItems", rawUrl)
+        public ReplaceItemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_numbers_v2/v2/RegulatoryCompliance/Bundles/{sid}/ReplaceItems", rawUrl)
         {
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

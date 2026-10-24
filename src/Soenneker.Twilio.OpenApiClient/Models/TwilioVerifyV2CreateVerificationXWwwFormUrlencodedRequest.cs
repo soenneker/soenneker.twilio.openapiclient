@@ -41,10 +41,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>[`email`](https://www.twilio.com/docs/verify/email) channel configuration in json format. The fields &apos;from&apos; and &apos;from_name&apos; are optional but if included the &apos;from&apos; field must have a valid email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateVerificationXWwwFormUrlencodedRequestChannelConfiguration? ChannelConfiguration { get; set; }
+        public UntypedNode? ChannelConfiguration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateVerificationXWwwFormUrlencodedRequestChannelConfiguration ChannelConfiguration { get; set; }
+        public UntypedNode ChannelConfiguration { get; set; }
 #endif
         /// <summary>A pre-generated code to use for verification. The code can be between 4 and 10 characters, inclusive.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,10 +100,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The custom key-value pairs of Programmable Rate Limits. Keys correspond to `unique_name` fields defined when [creating your Rate Limit](https://www.twilio.com/docs/verify/api/service-rate-limits). Associated value pairs represent values in the request that you are rate limiting on. You may include multiple Rate Limit values in each request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateVerificationXWwwFormUrlencodedRequestRateLimits? RateLimits { get; set; }
+        public UntypedNode? RateLimits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateVerificationXWwwFormUrlencodedRequestRateLimits RateLimits { get; set; }
+        public UntypedNode RateLimits { get; set; }
 #endif
         /// <summary>Risk_check overrides Fraud Prevention measures like Fraud Guard, Geo Permissions etc per verification attempt basis, allowing Verify to block traffic considered fraudulent if enabled or bypass active protections if disabled. Can be: `enable`(default) or `disable`. For SMS channel only.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.VerificationEnumRiskCheck? RiskCheck { get; set; }
@@ -183,7 +183,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "Amount", n => { Amount = n.GetStringValue(); } },
                 { "AppHash", n => { AppHash = n.GetStringValue(); } },
                 { "Channel", n => { Channel = n.GetStringValue(); } },
-                { "ChannelConfiguration", n => { ChannelConfiguration = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateVerificationXWwwFormUrlencodedRequestChannelConfiguration>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateVerificationXWwwFormUrlencodedRequestChannelConfiguration.CreateFromDiscriminatorValue); } },
+                { "ChannelConfiguration", n => { ChannelConfiguration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "CustomCode", n => { CustomCode = n.GetStringValue(); } },
                 { "CustomFriendlyName", n => { CustomFriendlyName = n.GetStringValue(); } },
                 { "CustomMessage", n => { CustomMessage = n.GetStringValue(); } },
@@ -191,7 +191,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "EnableSnaClientToken", n => { EnableSnaClientToken = n.GetBoolValue(); } },
                 { "Locale", n => { Locale = n.GetStringValue(); } },
                 { "Payee", n => { Payee = n.GetStringValue(); } },
-                { "RateLimits", n => { RateLimits = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateVerificationXWwwFormUrlencodedRequestRateLimits>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateVerificationXWwwFormUrlencodedRequestRateLimits.CreateFromDiscriminatorValue); } },
+                { "RateLimits", n => { RateLimits = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "RiskCheck", n => { RiskCheck = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VerificationEnumRiskCheck>(); } },
                 { "SendDigits", n => { SendDigits = n.GetStringValue(); } },
                 { "Tags", n => { Tags = n.GetStringValue(); } },
@@ -211,7 +211,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("Amount", Amount);
             writer.WriteStringValue("AppHash", AppHash);
             writer.WriteStringValue("Channel", Channel);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateVerificationXWwwFormUrlencodedRequestChannelConfiguration>("ChannelConfiguration", ChannelConfiguration);
+            writer.WriteObjectValue<UntypedNode>("ChannelConfiguration", ChannelConfiguration);
             writer.WriteStringValue("CustomCode", CustomCode);
             writer.WriteStringValue("CustomFriendlyName", CustomFriendlyName);
             writer.WriteStringValue("CustomMessage", CustomMessage);
@@ -219,7 +219,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("EnableSnaClientToken", EnableSnaClientToken);
             writer.WriteStringValue("Locale", Locale);
             writer.WriteStringValue("Payee", Payee);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateVerificationXWwwFormUrlencodedRequestRateLimits>("RateLimits", RateLimits);
+            writer.WriteObjectValue<UntypedNode>("RateLimits", RateLimits);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VerificationEnumRiskCheck>("RiskCheck", RiskCheck);
             writer.WriteStringValue("SendDigits", SendDigits);
             writer.WriteStringValue("Tags", Tags);

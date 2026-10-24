@@ -29,14 +29,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice
         }
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_insights_v1.v1.Voice.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item.CallSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item.CallSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item.WithCallSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item.WithCallSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("callS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item.CallSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("callSid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Voice.Item.WithCallSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channel
     {
         /// <summary>Channels represent chat rooms</summary>
         /// <param name="position">The Twilio-provided string that uniquely identifies the Channel resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channels.Item.ChannelSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channels.Item.ChannelSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channels.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channels.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("channelS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channels.Item.ChannelSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channels.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channel
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v1/v1/Services/{serviceS%2Did}/Channels{?Page*,PageSize*,PageToken*,Type*}", pathParameters)
+        public ChannelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v1/v1/Services/{serviceSid}/Channels{?Page*,PageSize*,PageToken*,Type*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channel
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v1/v1/Services/{serviceS%2Did}/Channels{?Page*,PageSize*,PageToken*,Type*}", rawUrl)
+        public ChannelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_chat_v1/v1/Services/{serviceSid}/Channels{?Page*,PageSize*,PageToken*,Type*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1ListChannel200Response"/></returns>
@@ -110,7 +110,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_chat_v1.V1.Services.Item.Channel
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

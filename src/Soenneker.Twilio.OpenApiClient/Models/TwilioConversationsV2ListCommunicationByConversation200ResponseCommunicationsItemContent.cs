@@ -37,13 +37,13 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListCommunicationByConversation200ResponseCommunicationsItemContent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListCommunicationByConversation200ResponseCommunicationsItemContent();
-            if("ConversationsV2ContentText".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("TEXT".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ConversationsV2ContentText = new global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentText();
             }
-            else if("ConversationsV2ContentTranscription".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("TRANSCRIPTION".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ConversationsV2ContentTranscription = new global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ContentTranscription();
             }

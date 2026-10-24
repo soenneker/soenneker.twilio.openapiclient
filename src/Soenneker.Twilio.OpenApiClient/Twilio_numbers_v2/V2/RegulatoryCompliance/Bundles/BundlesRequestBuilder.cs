@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_numbers_v2.v2.RegulatoryCompliance.Bundles.item collection</summary>
         /// <param name="position">The unique string that we created to identify the Bundle resource.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.Item.BundleSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.Item.BundleSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("bundleS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.Item.BundleSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryCompliance.Bundles.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.RegulatoryComplian
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

@@ -23,10 +23,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The minimum, average, maximum, and total time (in seconds) that Workers spent in each Activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersCumulativeStatisticsActivityDurationsItem>? ActivityDurations { get; set; }
+        public UntypedNode? ActivityDurations { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersCumulativeStatisticsActivityDurationsItem> ActivityDurations { get; set; }
+        public UntypedNode ActivityDurations { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "activity_durations", n => { ActivityDurations = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersCumulativeStatisticsActivityDurationsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersCumulativeStatisticsActivityDurationsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "activity_durations", n => { ActivityDurations = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "end_time", n => { EndTime = n.GetDateTimeOffsetValue(); } },
                 { "reservations_accepted", n => { ReservationsAccepted = n.GetIntValue(); } },
                 { "reservations_canceled", n => { ReservationsCanceled = n.GetIntValue(); } },
@@ -115,7 +115,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkerWorkersCumulativeStatisticsActivityDurationsItem>("activity_durations", ActivityDurations);
+            writer.WriteObjectValue<UntypedNode>("activity_durations", ActivityDurations);
             writer.WriteDateTimeOffsetValue("end_time", EndTime);
             writer.WriteIntValue("reservations_accepted", ReservationsAccepted);
             writer.WriteIntValue("reservations_canceled", ReservationsCanceled);

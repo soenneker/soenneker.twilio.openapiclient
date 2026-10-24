@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOn
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_marketplace_v1.v1.AvailableAddOns.item collection</summary>
         /// <param name="position">The SID of the AvailableAddOn resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOns.Item.AvailableAddOnSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOns.Item.AvailableAddOnSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOns.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOns.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("availableAddOnS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOns.Item.AvailableAddOnSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.AvailableAddOns.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

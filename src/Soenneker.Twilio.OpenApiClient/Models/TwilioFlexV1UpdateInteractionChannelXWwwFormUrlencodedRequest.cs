@@ -17,10 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>It changes the state of associated tasks. Routing status is required, When the channel status is set to `inactive`. Allowed Value for routing status is `closed`. Otherwise Optional, if not specified, all tasks will be set to `wrapping`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1UpdateInteractionChannelXWwwFormUrlencodedRequestRouting? Routing { get; set; }
+        public UntypedNode? Routing { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1UpdateInteractionChannelXWwwFormUrlencodedRequestRouting Routing { get; set; }
+        public UntypedNode Routing { get; set; }
 #endif
         /// <summary>The Status property</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelEnumUpdateChannelStatus? Status { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Routing", n => { Routing = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1UpdateInteractionChannelXWwwFormUrlencodedRequestRouting>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1UpdateInteractionChannelXWwwFormUrlencodedRequestRouting.CreateFromDiscriminatorValue); } },
+                { "Routing", n => { Routing = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "Status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelEnumUpdateChannelStatus>(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1UpdateInteractionChannelXWwwFormUrlencodedRequestRouting>("Routing", Routing);
+            writer.WriteObjectValue<UntypedNode>("Routing", Routing);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelEnumUpdateChannelStatus>("Status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }

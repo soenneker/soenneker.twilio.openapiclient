@@ -61,10 +61,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Detailed information for each of the words of the given Sentence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentenceWordsItem>? Words { get; set; }
+        public UntypedNode? Words { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentenceWordsItem> Words { get; set; }
+        public UntypedNode Words { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentence"/> and sets the default values.
@@ -100,7 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "start_time", n => { StartTime = n.GetStringValue(); } },
                 { "transcript", n => { Transcript = n.GetStringValue(); } },
-                { "words", n => { Words = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentenceWordsItem>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentenceWordsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "words", n => { Words = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -117,7 +117,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("sid", Sid);
             writer.WriteStringValue("start_time", StartTime);
             writer.WriteStringValue("transcript", Transcript);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceV2TranscriptSentenceWordsItem>("words", Words);
+            writer.WriteObjectValue<UntypedNode>("words", Words);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

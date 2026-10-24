@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOn
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_marketplace_v1.v1.InstalledAddOns.item collection</summary>
         /// <param name="position">The SID of the InstalledAddOn resource to delete.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOns.Item.InstalledAddOnSItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOns.Item.InstalledAddOnSItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOns.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOns.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("installedAddOnS%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOns.Item.InstalledAddOnSItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOns.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -127,7 +127,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOn
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

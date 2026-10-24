@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.HostedNumbers.Authorizat
     {
         /// <summary>Gets an item from the Soenneker.Twilio.OpenApiClient.twilio_preview.HostedNumbers.AuthorizationDocuments.item collection</summary>
         /// <param name="position">A 34 character string that uniquely identifies this AuthorizationDocument.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_preview.HostedNumbers.AuthorizationDocuments.Item.SItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_preview.HostedNumbers.AuthorizationDocuments.Item.SItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_preview.HostedNumbers.AuthorizationDocuments.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_preview.HostedNumbers.AuthorizationDocuments.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("s%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_preview.HostedNumbers.AuthorizationDocuments.Item.SItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_preview.HostedNumbers.AuthorizationDocuments.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.HostedNumbers.Authorizat
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

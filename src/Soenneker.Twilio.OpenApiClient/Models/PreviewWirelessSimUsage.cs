@@ -25,42 +25,42 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The commands_costs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageCommandsCosts? CommandsCosts { get; set; }
+        public UntypedNode? CommandsCosts { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageCommandsCosts CommandsCosts { get; set; }
+        public UntypedNode CommandsCosts { get; set; }
 #endif
         /// <summary>The commands_usage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageCommandsUsage? CommandsUsage { get; set; }
+        public UntypedNode? CommandsUsage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageCommandsUsage CommandsUsage { get; set; }
+        public UntypedNode CommandsUsage { get; set; }
 #endif
         /// <summary>The data_costs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageDataCosts? DataCosts { get; set; }
+        public UntypedNode? DataCosts { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageDataCosts DataCosts { get; set; }
+        public UntypedNode DataCosts { get; set; }
 #endif
         /// <summary>The data_usage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageDataUsage? DataUsage { get; set; }
+        public UntypedNode? DataUsage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageDataUsage DataUsage { get; set; }
+        public UntypedNode DataUsage { get; set; }
 #endif
         /// <summary>The period property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsagePeriod? Period { get; set; }
+        public UntypedNode? Period { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsagePeriod Period { get; set; }
+        public UntypedNode Period { get; set; }
 #endif
         /// <summary>The sim_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,11 +112,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "commands_costs", n => { CommandsCosts = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageCommandsCosts>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageCommandsCosts.CreateFromDiscriminatorValue); } },
-                { "commands_usage", n => { CommandsUsage = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageCommandsUsage>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageCommandsUsage.CreateFromDiscriminatorValue); } },
-                { "data_costs", n => { DataCosts = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageDataCosts>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageDataCosts.CreateFromDiscriminatorValue); } },
-                { "data_usage", n => { DataUsage = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageDataUsage>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageDataUsage.CreateFromDiscriminatorValue); } },
-                { "period", n => { Period = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsagePeriod>(global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsagePeriod.CreateFromDiscriminatorValue); } },
+                { "commands_costs", n => { CommandsCosts = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "commands_usage", n => { CommandsUsage = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "data_costs", n => { DataCosts = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "data_usage", n => { DataUsage = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "period", n => { Period = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "sim_sid", n => { SimSid = n.GetStringValue(); } },
                 { "sim_unique_name", n => { SimUniqueName = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -130,11 +130,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageCommandsCosts>("commands_costs", CommandsCosts);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageCommandsUsage>("commands_usage", CommandsUsage);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageDataCosts>("data_costs", DataCosts);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsageDataUsage>("data_usage", DataUsage);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsagePeriod>("period", Period);
+            writer.WriteObjectValue<UntypedNode>("commands_costs", CommandsCosts);
+            writer.WriteObjectValue<UntypedNode>("commands_usage", CommandsUsage);
+            writer.WriteObjectValue<UntypedNode>("data_costs", DataCosts);
+            writer.WriteObjectValue<UntypedNode>("data_usage", DataUsage);
+            writer.WriteObjectValue<UntypedNode>("period", Period);
             writer.WriteStringValue("sim_sid", SimSid);
             writer.WriteStringValue("sim_unique_name", SimUniqueName);
             writer.WriteStringValue("url", Url);

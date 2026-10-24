@@ -21,10 +21,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Participant objects to include in the new session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateSessionXWwwFormUrlencodedRequestParticipantsItem>? Participants { get; set; }
+        public UntypedNode? Participants { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateSessionXWwwFormUrlencodedRequestParticipantsItem> Participants { get; set; }
+        public UntypedNode Participants { get; set; }
 #endif
         /// <summary>The status of the Session. Can be: `open`, `in-progress`, `closed`, `failed`, or `unknown`.</summary>
         public global::Soenneker.Twilio.OpenApiClient.Models.SessionEnumStatus? Status { get; set; }
@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "DateExpiry", n => { DateExpiry = n.GetDateTimeOffsetValue(); } },
                 { "Mode", n => { Mode = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SessionEnumMode>(); } },
-                { "Participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateSessionXWwwFormUrlencodedRequestParticipantsItem>(global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateSessionXWwwFormUrlencodedRequestParticipantsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Participants", n => { Participants = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "Status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SessionEnumStatus>(); } },
                 { "Ttl", n => { Ttl = n.GetIntValue(); } },
                 { "UniqueName", n => { UniqueName = n.GetStringValue(); } },
@@ -80,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("DateExpiry", DateExpiry);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SessionEnumMode>("Mode", Mode);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1CreateSessionXWwwFormUrlencodedRequestParticipantsItem>("Participants", Participants);
+            writer.WriteObjectValue<UntypedNode>("Participants", Participants);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SessionEnumStatus>("Status", Status);
             writer.WriteIntValue("Ttl", Ttl);
             writer.WriteStringValue("UniqueName", UniqueName);

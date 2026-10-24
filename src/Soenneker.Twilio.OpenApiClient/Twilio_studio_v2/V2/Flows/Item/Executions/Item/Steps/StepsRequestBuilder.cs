@@ -20,14 +20,14 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executio
     {
         /// <summary>Individual steps within an execution</summary>
         /// <param name="position">The SID of the ExecutionStep resource to fetch.</param>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.Steps.Item.SItemRequestBuilder"/></returns>
-        public global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.Steps.Item.SItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.Steps.Item.WithSItemRequestBuilder"/></returns>
+        public global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.Steps.Item.WithSItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("s%2Did", position);
-                return new global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.Steps.Item.SItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sid2", position);
+                return new global::Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executions.Item.Steps.Item.WithSItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executio
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StepsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowS%2Did}/Executions/{executionS%2Did}/Steps{?Page*,PageSize*,PageToken*}", pathParameters)
+        public StepsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowSid}/Executions/{sid}/Steps{?Page*,PageSize*,PageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_studio_v2.V2.Flows.Item.Executio
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StepsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowS%2Did}/Executions/{executionS%2Did}/Steps{?Page*,PageSize*,PageToken*}", rawUrl)
+        public StepsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/twilio_studio_v2/v2/Flows/{flowSid}/Executions/{sid}/Steps{?Page*,PageSize*,PageToken*}", rawUrl)
         {
         }
         /// <summary>

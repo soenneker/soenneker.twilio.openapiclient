@@ -58,10 +58,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The emails of the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileEmails? Emails { get; set; }
+        public UntypedNode? Emails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileEmails Emails { get; set; }
+        public UntypedNode Emails { get; set; }
 #endif
         /// <summary>The logo URL of the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,10 +82,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The phone numbers of the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfilePhoneNumbers? PhoneNumbers { get; set; }
+        public UntypedNode? PhoneNumbers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfilePhoneNumbers PhoneNumbers { get; set; }
+        public UntypedNode PhoneNumbers { get; set; }
 #endif
         /// <summary>The privacy URL of the sender. Must be a publicly accessible HTTP or HTTPS URI associated with the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -116,10 +116,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The websites of the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileWebsites? Websites { get; set; }
+        public UntypedNode? Websites { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileWebsites Websites { get; set; }
+        public UntypedNode Websites { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfile"/> and sets the default values.
@@ -151,15 +151,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "banner_url", n => { BannerUrl = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "emails", n => { Emails = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileEmails>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileEmails.CreateFromDiscriminatorValue); } },
+                { "emails", n => { Emails = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "logo_url", n => { LogoUrl = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "phone_numbers", n => { PhoneNumbers = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfilePhoneNumbers>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfilePhoneNumbers.CreateFromDiscriminatorValue); } },
+                { "phone_numbers", n => { PhoneNumbers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "privacy_url", n => { PrivacyUrl = n.GetStringValue(); } },
                 { "terms_of_service_url", n => { TermsOfServiceUrl = n.GetStringValue(); } },
                 { "use_case", n => { UseCase = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileUseCase>(); } },
                 { "vertical", n => { Vertical = n.GetStringValue(); } },
-                { "websites", n => { Websites = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileWebsites>(global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileWebsites.CreateFromDiscriminatorValue); } },
+                { "websites", n => { Websites = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -174,15 +174,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("address", Address);
             writer.WriteStringValue("banner_url", BannerUrl);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileEmails>("emails", Emails);
+            writer.WriteObjectValue<UntypedNode>("emails", Emails);
             writer.WriteStringValue("logo_url", LogoUrl);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfilePhoneNumbers>("phone_numbers", PhoneNumbers);
+            writer.WriteObjectValue<UntypedNode>("phone_numbers", PhoneNumbers);
             writer.WriteStringValue("privacy_url", PrivacyUrl);
             writer.WriteStringValue("terms_of_service_url", TermsOfServiceUrl);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileUseCase>("use_case", UseCase);
             writer.WriteStringValue("vertical", Vertical);
-            writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2ChannelsSenderProfileWebsites>("websites", Websites);
+            writer.WriteObjectValue<UntypedNode>("websites", Websites);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
