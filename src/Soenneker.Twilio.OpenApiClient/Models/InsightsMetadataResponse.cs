@@ -18,8 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cubes") is { } nullNodeCubes && nullNodeCubes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cubes = null;
-            if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("cubes") is null) { _explicitNullValueCubes = default!; _explicitNullProperties?.Remove("cubes"); }
+            else if (parseNode.GetChildNode("cubes") is { } nullNodeCubes && nullNodeCubes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cubes = null;
+            if (parseNode.GetChildNode("domain") is null) { _explicitNullValueDomain = default!; _explicitNullProperties?.Remove("domain"); }
+            else if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of data cubes available in the domain, each containing measures and dimensions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponseCubesItem>? Cubes { get => _explicitNullValueCubes; set { _explicitNullValueCubes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cubes"); else _explicitNullProperties?.Remove("cubes"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponseCubesItem>? Cubes { get => _explicitNullValueCubes; set { _explicitNullValueCubes = value; AdditionalData?.Remove("cubes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cubes"); else _explicitNullProperties?.Remove("cubes"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponseCubesItem>? _explicitNullValueCubes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponseCubesItem> Cubes { get => _explicitNullValueCubes; set { _explicitNullValueCubes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cubes"); else _explicitNullProperties?.Remove("cubes"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponseCubesItem> Cubes { get => _explicitNullValueCubes; set { _explicitNullValueCubes = value; AdditionalData?.Remove("cubes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cubes"); else _explicitNullProperties?.Remove("cubes"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.InsightsMetadataResponseCubesItem> _explicitNullValueCubes = default!;
 #endif
         /// <summary>The business domain name for which metadata is being provided</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string _explicitNullValueDomain = default!;
 #endif
         /// <summary>

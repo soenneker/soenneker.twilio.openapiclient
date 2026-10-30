@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("installed_add_ons") is { } nullNodeInstalledAddOns && nullNodeInstalledAddOns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstalledAddOns = null;
-            if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
+            if (parseNode.GetChildNode("installed_add_ons") is null) { _explicitNullValueInstalledAddOns = default!; _explicitNullProperties?.Remove("installed_add_ons"); }
+            else if (parseNode.GetChildNode("installed_add_ons") is { } nullNodeInstalledAddOns && nullNodeInstalledAddOns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstalledAddOns = null;
+            if (parseNode.GetChildNode("meta") is null) { _explicitNullValueMeta = default!; _explicitNullProperties?.Remove("meta"); }
+            else if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The installed_add_ons property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOn>? InstalledAddOns { get => _explicitNullValueInstalledAddOns; set { _explicitNullValueInstalledAddOns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installed_add_ons"); else _explicitNullProperties?.Remove("installed_add_ons"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOn>? InstalledAddOns { get => _explicitNullValueInstalledAddOns; set { _explicitNullValueInstalledAddOns = value; AdditionalData?.Remove("installed_add_ons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installed_add_ons"); else _explicitNullProperties?.Remove("installed_add_ons"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOn>? _explicitNullValueInstalledAddOns = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOn> InstalledAddOns { get => _explicitNullValueInstalledAddOns; set { _explicitNullValueInstalledAddOns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installed_add_ons"); else _explicitNullProperties?.Remove("installed_add_ons"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOn> InstalledAddOns { get => _explicitNullValueInstalledAddOns; set { _explicitNullValueInstalledAddOns = value; AdditionalData?.Remove("installed_add_ons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installed_add_ons"); else _explicitNullProperties?.Remove("installed_add_ons"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOn> _explicitNullValueInstalledAddOns = default!;
 #endif
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListInstalledAddOnResponseMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListInstalledAddOnResponseMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ListInstalledAddOnResponseMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListInstalledAddOnResponseMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListInstalledAddOnResponseMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ListInstalledAddOnResponseMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>

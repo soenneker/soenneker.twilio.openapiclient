@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Configuration") is { } nullNodeConfiguration && nullNodeConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configuration = null;
+            if (parseNode.GetChildNode("Configuration") is null) { _explicitNullValueConfiguration = default!; _explicitNullProperties?.Remove("Configuration"); }
+            else if (parseNode.GetChildNode("Configuration") is { } nullNodeConfiguration && nullNodeConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configuration = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A collection of properties that describe transcription behaviour.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomTranscriptionsXWwwFormUrlencodedRequestConfiguration? Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomTranscriptionsXWwwFormUrlencodedRequestConfiguration? Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; AdditionalData?.Remove("Configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomTranscriptionsXWwwFormUrlencodedRequestConfiguration? _explicitNullValueConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomTranscriptionsXWwwFormUrlencodedRequestConfiguration Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomTranscriptionsXWwwFormUrlencodedRequestConfiguration Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; AdditionalData?.Remove("Configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomTranscriptionsXWwwFormUrlencodedRequestConfiguration _explicitNullValueConfiguration = default!;
 #endif
         /// <summary>

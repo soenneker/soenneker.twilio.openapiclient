@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("VettingId") is { } nullNodeVettingId && nullNodeVettingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VettingId = null;
-            if (parseNode.GetChildNode("VettingProvider") is { } nullNodeVettingProvider && nullNodeVettingProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VettingProvider = null;
+            if (parseNode.GetChildNode("VettingId") is null) { _explicitNullValueVettingId = default!; _explicitNullProperties?.Remove("VettingId"); }
+            else if (parseNode.GetChildNode("VettingId") is { } nullNodeVettingId && nullNodeVettingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VettingId = null;
+            if (parseNode.GetChildNode("VettingProvider") is null) { _explicitNullValueVettingProvider = default!; _explicitNullProperties?.Remove("VettingProvider"); }
+            else if (parseNode.GetChildNode("VettingProvider") is { } nullNodeVettingProvider && nullNodeVettingProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VettingProvider = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The unique ID of the vetting</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VettingId { get => _explicitNullValueVettingId; set { _explicitNullValueVettingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VettingId"); else _explicitNullProperties?.Remove("VettingId"); } }
+        public string? VettingId { get => _explicitNullValueVettingId; set { _explicitNullValueVettingId = value; AdditionalData?.Remove("VettingId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VettingId"); else _explicitNullProperties?.Remove("VettingId"); } }
         private string? _explicitNullValueVettingId = default!;
 #nullable restore
 #else
-        public string VettingId { get => _explicitNullValueVettingId; set { _explicitNullValueVettingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VettingId"); else _explicitNullProperties?.Remove("VettingId"); } }
+        public string VettingId { get => _explicitNullValueVettingId; set { _explicitNullValueVettingId = value; AdditionalData?.Remove("VettingId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VettingId"); else _explicitNullProperties?.Remove("VettingId"); } }
         private string _explicitNullValueVettingId = default!;
 #endif
         /// <summary>The third-party provider that has conducted the vetting. One of “CampaignVerify” (Campaign Verify tokens) or “AEGIS” (Secondary Vetting).</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.BrandVettingEnumVettingProvider? VettingProvider { get => _explicitNullValueVettingProvider; set { _explicitNullValueVettingProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VettingProvider"); else _explicitNullProperties?.Remove("VettingProvider"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.BrandVettingEnumVettingProvider? VettingProvider { get => _explicitNullValueVettingProvider; set { _explicitNullValueVettingProvider = value; AdditionalData?.Remove("VettingProvider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VettingProvider"); else _explicitNullProperties?.Remove("VettingProvider"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.BrandVettingEnumVettingProvider? _explicitNullValueVettingProvider = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateBrandVettingXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "VettingId", n => { VettingId = n.GetStringValue(); } },
-                { "VettingProvider", n => { VettingProvider = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BrandVettingEnumVettingProvider>(); } },
+                { "VettingProvider", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.BrandVettingEnumVettingProvider>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVettingProvider = default; _explicitNullProperties?.Remove("VettingProvider"); AdditionalData["VettingProvider"] = unknown; } else { VettingProvider = parsed; AdditionalData.Remove("VettingProvider"); } } },
             };
         }
         /// <summary>

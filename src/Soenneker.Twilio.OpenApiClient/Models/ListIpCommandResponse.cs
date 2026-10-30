@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ip_commands") is { } nullNodeIpCommands && nullNodeIpCommands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpCommands = null;
-            if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
+            if (parseNode.GetChildNode("ip_commands") is null) { _explicitNullValueIpCommands = default!; _explicitNullProperties?.Remove("ip_commands"); }
+            else if (parseNode.GetChildNode("ip_commands") is { } nullNodeIpCommands && nullNodeIpCommands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpCommands = null;
+            if (parseNode.GetChildNode("meta") is null) { _explicitNullValueMeta = default!; _explicitNullProperties?.Remove("meta"); }
+            else if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The ip_commands property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1IpCommand>? IpCommands { get => _explicitNullValueIpCommands; set { _explicitNullValueIpCommands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_commands"); else _explicitNullProperties?.Remove("ip_commands"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1IpCommand>? IpCommands { get => _explicitNullValueIpCommands; set { _explicitNullValueIpCommands = value; AdditionalData?.Remove("ip_commands"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_commands"); else _explicitNullProperties?.Remove("ip_commands"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1IpCommand>? _explicitNullValueIpCommands = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1IpCommand> IpCommands { get => _explicitNullValueIpCommands; set { _explicitNullValueIpCommands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_commands"); else _explicitNullProperties?.Remove("ip_commands"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1IpCommand> IpCommands { get => _explicitNullValueIpCommands; set { _explicitNullValueIpCommands = value; AdditionalData?.Remove("ip_commands"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_commands"); else _explicitNullProperties?.Remove("ip_commands"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1IpCommand> _explicitNullValueIpCommands = default!;
 #endif
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListIpCommandResponseMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListIpCommandResponseMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ListIpCommandResponseMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListIpCommandResponseMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListIpCommandResponseMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ListIpCommandResponseMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>

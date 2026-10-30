@@ -18,7 +18,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("measure") is { } nullNodeMeasure && nullNodeMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Measure = null;
+            if (parseNode.GetChildNode("measure") is null) { _explicitNullValueMeasure = default!; _explicitNullProperties?.Remove("measure"); }
+            else if (parseNode.GetChildNode("measure") is { } nullNodeMeasure && nullNodeMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Measure = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Slots consumed and remaining for the measure category. By default anaccount can register up to 3 custom measures, so `consumed + remaining`is the account&apos;s limit. Registering a new mapping when `remaining` is`0` returns `403`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CategoryCapacity? Measure { get => _explicitNullValueMeasure; set { _explicitNullValueMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("measure"); else _explicitNullProperties?.Remove("measure"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CategoryCapacity? Measure { get => _explicitNullValueMeasure; set { _explicitNullValueMeasure = value; AdditionalData?.Remove("measure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("measure"); else _explicitNullProperties?.Remove("measure"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.CategoryCapacity? _explicitNullValueMeasure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CategoryCapacity Measure { get => _explicitNullValueMeasure; set { _explicitNullValueMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("measure"); else _explicitNullProperties?.Remove("measure"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CategoryCapacity Measure { get => _explicitNullValueMeasure; set { _explicitNullValueMeasure = value; AdditionalData?.Remove("measure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("measure"); else _explicitNullProperties?.Remove("measure"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.CategoryCapacity _explicitNullValueMeasure = default!;
 #endif
         /// <summary>

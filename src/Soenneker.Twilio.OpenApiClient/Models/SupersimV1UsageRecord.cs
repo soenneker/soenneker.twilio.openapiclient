@@ -17,27 +17,38 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("billed_unit") is { } nullNodeBilledUnit && nullNodeBilledUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BilledUnit = null;
-            if (parseNode.GetChildNode("data_download") is { } nullNodeDataDownload && nullNodeDataDownload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataDownload = null;
-            if (parseNode.GetChildNode("data_total") is { } nullNodeDataTotal && nullNodeDataTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataTotal = null;
-            if (parseNode.GetChildNode("data_total_billed") is { } nullNodeDataTotalBilled && nullNodeDataTotalBilled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataTotalBilled = null;
-            if (parseNode.GetChildNode("data_upload") is { } nullNodeDataUpload && nullNodeDataUpload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataUpload = null;
-            if (parseNode.GetChildNode("fleet_sid") is { } nullNodeFleetSid && nullNodeFleetSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FleetSid = null;
-            if (parseNode.GetChildNode("iso_country") is { } nullNodeIsoCountry && nullNodeIsoCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsoCountry = null;
-            if (parseNode.GetChildNode("network_sid") is { } nullNodeNetworkSid && nullNodeNetworkSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkSid = null;
-            if (parseNode.GetChildNode("period") is { } nullNodePeriod && nullNodePeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Period = null;
-            if (parseNode.GetChildNode("sim_sid") is { } nullNodeSimSid && nullNodeSimSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimSid = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("billed_unit") is null) { _explicitNullValueBilledUnit = default!; _explicitNullProperties?.Remove("billed_unit"); }
+            else if (parseNode.GetChildNode("billed_unit") is { } nullNodeBilledUnit && nullNodeBilledUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BilledUnit = null;
+            if (parseNode.GetChildNode("data_download") is null) { _explicitNullValueDataDownload = default!; _explicitNullProperties?.Remove("data_download"); }
+            else if (parseNode.GetChildNode("data_download") is { } nullNodeDataDownload && nullNodeDataDownload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataDownload = null;
+            if (parseNode.GetChildNode("data_total") is null) { _explicitNullValueDataTotal = default!; _explicitNullProperties?.Remove("data_total"); }
+            else if (parseNode.GetChildNode("data_total") is { } nullNodeDataTotal && nullNodeDataTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataTotal = null;
+            if (parseNode.GetChildNode("data_total_billed") is null) { _explicitNullValueDataTotalBilled = default!; _explicitNullProperties?.Remove("data_total_billed"); }
+            else if (parseNode.GetChildNode("data_total_billed") is { } nullNodeDataTotalBilled && nullNodeDataTotalBilled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataTotalBilled = null;
+            if (parseNode.GetChildNode("data_upload") is null) { _explicitNullValueDataUpload = default!; _explicitNullProperties?.Remove("data_upload"); }
+            else if (parseNode.GetChildNode("data_upload") is { } nullNodeDataUpload && nullNodeDataUpload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataUpload = null;
+            if (parseNode.GetChildNode("fleet_sid") is null) { _explicitNullValueFleetSid = default!; _explicitNullProperties?.Remove("fleet_sid"); }
+            else if (parseNode.GetChildNode("fleet_sid") is { } nullNodeFleetSid && nullNodeFleetSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FleetSid = null;
+            if (parseNode.GetChildNode("iso_country") is null) { _explicitNullValueIsoCountry = default!; _explicitNullProperties?.Remove("iso_country"); }
+            else if (parseNode.GetChildNode("iso_country") is { } nullNodeIsoCountry && nullNodeIsoCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsoCountry = null;
+            if (parseNode.GetChildNode("network_sid") is null) { _explicitNullValueNetworkSid = default!; _explicitNullProperties?.Remove("network_sid"); }
+            else if (parseNode.GetChildNode("network_sid") is { } nullNodeNetworkSid && nullNodeNetworkSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkSid = null;
+            if (parseNode.GetChildNode("period") is null) { _explicitNullValuePeriod = default!; _explicitNullProperties?.Remove("period"); }
+            else if (parseNode.GetChildNode("period") is { } nullNodePeriod && nullNodePeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Period = null;
+            if (parseNode.GetChildNode("sim_sid") is null) { _explicitNullValueSimSid = default!; _explicitNullProperties?.Remove("sim_sid"); }
+            else if (parseNode.GetChildNode("sim_sid") is { } nullNodeSimSid && nullNodeSimSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimSid = null;
         }
 
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that incurred the usage.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -45,73 +56,73 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The currency in which the billed amounts are measured, specified in the 3 letter ISO 4127 format (e.g. `USD`, `EUR`, `JPY`). This can be null when data_toal_billed is 0 and we do not yet have billing information for the corresponding data usage. Refer to [Data Usage Processing](https://www.twilio.com/docs/iot/supersim/api/usage-record-resource#data-usage-processing) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BilledUnit { get => _explicitNullValueBilledUnit; set { _explicitNullValueBilledUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billed_unit"); else _explicitNullProperties?.Remove("billed_unit"); } }
+        public string? BilledUnit { get => _explicitNullValueBilledUnit; set { _explicitNullValueBilledUnit = value; AdditionalData?.Remove("billed_unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billed_unit"); else _explicitNullProperties?.Remove("billed_unit"); } }
         private string? _explicitNullValueBilledUnit = default!;
 #nullable restore
 #else
-        public string BilledUnit { get => _explicitNullValueBilledUnit; set { _explicitNullValueBilledUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billed_unit"); else _explicitNullProperties?.Remove("billed_unit"); } }
+        public string BilledUnit { get => _explicitNullValueBilledUnit; set { _explicitNullValueBilledUnit = value; AdditionalData?.Remove("billed_unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billed_unit"); else _explicitNullProperties?.Remove("billed_unit"); } }
         private string _explicitNullValueBilledUnit = default!;
 #endif
         /// <summary>Total data downloaded in bytes, aggregated by the query parameters.</summary>
-        public long? DataDownload { get => _explicitNullValueDataDownload; set { _explicitNullValueDataDownload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_download"); else _explicitNullProperties?.Remove("data_download"); } }
+        public long? DataDownload { get => _explicitNullValueDataDownload; set { _explicitNullValueDataDownload = value; AdditionalData?.Remove("data_download"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_download"); else _explicitNullProperties?.Remove("data_download"); } }
         private long? _explicitNullValueDataDownload = default!;
         /// <summary>Total of data_upload and data_download.</summary>
-        public long? DataTotal { get => _explicitNullValueDataTotal; set { _explicitNullValueDataTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_total"); else _explicitNullProperties?.Remove("data_total"); } }
+        public long? DataTotal { get => _explicitNullValueDataTotal; set { _explicitNullValueDataTotal = value; AdditionalData?.Remove("data_total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_total"); else _explicitNullProperties?.Remove("data_total"); } }
         private long? _explicitNullValueDataTotal = default!;
         /// <summary>Total amount in the `billed_unit` that was charged for the data uploaded or downloaded. Will return 0 for usage prior to February 1, 2022. Value may be 0 despite `data_total` being greater than 0 if the data usage is still being processed by Twilio&apos;s billing system. Refer to [Data Usage Processing](https://www.twilio.com/docs/iot/supersim/api/usage-record-resource#data-usage-processing) for more details.</summary>
-        public double? DataTotalBilled { get => _explicitNullValueDataTotalBilled; set { _explicitNullValueDataTotalBilled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_total_billed"); else _explicitNullProperties?.Remove("data_total_billed"); } }
+        public double? DataTotalBilled { get => _explicitNullValueDataTotalBilled; set { _explicitNullValueDataTotalBilled = value; AdditionalData?.Remove("data_total_billed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_total_billed"); else _explicitNullProperties?.Remove("data_total_billed"); } }
         private double? _explicitNullValueDataTotalBilled = default!;
         /// <summary>Total data uploaded in bytes, aggregated by the query parameters.</summary>
-        public long? DataUpload { get => _explicitNullValueDataUpload; set { _explicitNullValueDataUpload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_upload"); else _explicitNullProperties?.Remove("data_upload"); } }
+        public long? DataUpload { get => _explicitNullValueDataUpload; set { _explicitNullValueDataUpload = value; AdditionalData?.Remove("data_upload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_upload"); else _explicitNullProperties?.Remove("data_upload"); } }
         private long? _explicitNullValueDataUpload = default!;
         /// <summary>SID of the Fleet resource the usage occurred on. Value will only be present when either a value for the `Fleet` query parameter is provided or when UsageRecords are grouped by `fleet`. Otherwise, the value will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FleetSid { get => _explicitNullValueFleetSid; set { _explicitNullValueFleetSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet_sid"); else _explicitNullProperties?.Remove("fleet_sid"); } }
+        public string? FleetSid { get => _explicitNullValueFleetSid; set { _explicitNullValueFleetSid = value; AdditionalData?.Remove("fleet_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet_sid"); else _explicitNullProperties?.Remove("fleet_sid"); } }
         private string? _explicitNullValueFleetSid = default!;
 #nullable restore
 #else
-        public string FleetSid { get => _explicitNullValueFleetSid; set { _explicitNullValueFleetSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet_sid"); else _explicitNullProperties?.Remove("fleet_sid"); } }
+        public string FleetSid { get => _explicitNullValueFleetSid; set { _explicitNullValueFleetSid = value; AdditionalData?.Remove("fleet_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fleet_sid"); else _explicitNullProperties?.Remove("fleet_sid"); } }
         private string _explicitNullValueFleetSid = default!;
 #endif
         /// <summary>Alpha-2 ISO Country Code that the usage occurred in. Value will only be present when either a value for the `IsoCountry` query parameter is provided or when UsageRecords are grouped by `isoCountry`. Otherwise, the value will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iso_country"); else _explicitNullProperties?.Remove("iso_country"); } }
+        public string? IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; AdditionalData?.Remove("iso_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iso_country"); else _explicitNullProperties?.Remove("iso_country"); } }
         private string? _explicitNullValueIsoCountry = default!;
 #nullable restore
 #else
-        public string IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iso_country"); else _explicitNullProperties?.Remove("iso_country"); } }
+        public string IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; AdditionalData?.Remove("iso_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iso_country"); else _explicitNullProperties?.Remove("iso_country"); } }
         private string _explicitNullValueIsoCountry = default!;
 #endif
         /// <summary>SID of the Network resource the usage occurred on. Value will only be present when either a value for the `Network` query parameter is provided or when UsageRecords are grouped by `network`. Otherwise, the value will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NetworkSid { get => _explicitNullValueNetworkSid; set { _explicitNullValueNetworkSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_sid"); else _explicitNullProperties?.Remove("network_sid"); } }
+        public string? NetworkSid { get => _explicitNullValueNetworkSid; set { _explicitNullValueNetworkSid = value; AdditionalData?.Remove("network_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_sid"); else _explicitNullProperties?.Remove("network_sid"); } }
         private string? _explicitNullValueNetworkSid = default!;
 #nullable restore
 #else
-        public string NetworkSid { get => _explicitNullValueNetworkSid; set { _explicitNullValueNetworkSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_sid"); else _explicitNullProperties?.Remove("network_sid"); } }
+        public string NetworkSid { get => _explicitNullValueNetworkSid; set { _explicitNullValueNetworkSid = value; AdditionalData?.Remove("network_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_sid"); else _explicitNullProperties?.Remove("network_sid"); } }
         private string _explicitNullValueNetworkSid = default!;
 #endif
         /// <summary>The time period for which the usage is reported. The period is represented as a pair of `start_time` and `end_time` timestamps specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Period { get => _explicitNullValuePeriod; set { _explicitNullValuePeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period"); else _explicitNullProperties?.Remove("period"); } }
+        public UntypedNode? Period { get => _explicitNullValuePeriod; set { _explicitNullValuePeriod = value; AdditionalData?.Remove("period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period"); else _explicitNullProperties?.Remove("period"); } }
         private UntypedNode? _explicitNullValuePeriod = default!;
 #nullable restore
 #else
-        public UntypedNode Period { get => _explicitNullValuePeriod; set { _explicitNullValuePeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period"); else _explicitNullProperties?.Remove("period"); } }
+        public UntypedNode Period { get => _explicitNullValuePeriod; set { _explicitNullValuePeriod = value; AdditionalData?.Remove("period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period"); else _explicitNullProperties?.Remove("period"); } }
         private UntypedNode _explicitNullValuePeriod = default!;
 #endif
         /// <summary>SID of a Sim resource to which the UsageRecord belongs. Value will only be present when either a value for the `Sim` query parameter is provided or when UsageRecords are grouped by `sim`. Otherwise, the value will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SimSid { get => _explicitNullValueSimSid; set { _explicitNullValueSimSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_sid"); else _explicitNullProperties?.Remove("sim_sid"); } }
+        public string? SimSid { get => _explicitNullValueSimSid; set { _explicitNullValueSimSid = value; AdditionalData?.Remove("sim_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_sid"); else _explicitNullProperties?.Remove("sim_sid"); } }
         private string? _explicitNullValueSimSid = default!;
 #nullable restore
 #else
-        public string SimSid { get => _explicitNullValueSimSid; set { _explicitNullValueSimSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_sid"); else _explicitNullProperties?.Remove("sim_sid"); } }
+        public string SimSid { get => _explicitNullValueSimSid; set { _explicitNullValueSimSid = value; AdditionalData?.Remove("sim_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_sid"); else _explicitNullProperties?.Remove("sim_sid"); } }
         private string _explicitNullValueSimSid = default!;
 #endif
         /// <summary>

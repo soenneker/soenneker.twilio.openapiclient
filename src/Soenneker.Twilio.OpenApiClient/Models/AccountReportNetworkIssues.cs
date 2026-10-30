@@ -18,8 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sdk") is { } nullNodeSdk && nullNodeSdk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sdk = null;
-            if (parseNode.GetChildNode("twilio_gateway") is { } nullNodeTwilioGateway && nullNodeTwilioGateway.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioGateway = null;
+            if (parseNode.GetChildNode("sdk") is null) { _explicitNullValueSdk = default!; _explicitNullProperties?.Remove("sdk"); }
+            else if (parseNode.GetChildNode("sdk") is { } nullNodeSdk && nullNodeSdk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sdk = null;
+            if (parseNode.GetChildNode("twilio_gateway") is null) { _explicitNullValueTwilioGateway = default!; _explicitNullProperties?.Remove("twilio_gateway"); }
+            else if (parseNode.GetChildNode("twilio_gateway") is { } nullNodeTwilioGateway && nullNodeTwilioGateway.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioGateway = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Network issues of calls for client type. This is indicative of local network issues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk? Sdk { get => _explicitNullValueSdk; set { _explicitNullValueSdk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdk"); else _explicitNullProperties?.Remove("sdk"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk? Sdk { get => _explicitNullValueSdk; set { _explicitNullValueSdk = value; AdditionalData?.Remove("sdk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdk"); else _explicitNullProperties?.Remove("sdk"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk? _explicitNullValueSdk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk Sdk { get => _explicitNullValueSdk; set { _explicitNullValueSdk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdk"); else _explicitNullProperties?.Remove("sdk"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk Sdk { get => _explicitNullValueSdk; set { _explicitNullValueSdk = value; AdditionalData?.Remove("sdk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdk"); else _explicitNullProperties?.Remove("sdk"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk _explicitNullValueSdk = default!;
 #endif
         /// <summary>Network related metrics for Twilio Gateway calls only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway? TwilioGateway { get => _explicitNullValueTwilioGateway; set { _explicitNullValueTwilioGateway = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_gateway"); else _explicitNullProperties?.Remove("twilio_gateway"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway? TwilioGateway { get => _explicitNullValueTwilioGateway; set { _explicitNullValueTwilioGateway = value; AdditionalData?.Remove("twilio_gateway"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_gateway"); else _explicitNullProperties?.Remove("twilio_gateway"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway? _explicitNullValueTwilioGateway = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway TwilioGateway { get => _explicitNullValueTwilioGateway; set { _explicitNullValueTwilioGateway = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_gateway"); else _explicitNullProperties?.Remove("twilio_gateway"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway TwilioGateway { get => _explicitNullValueTwilioGateway; set { _explicitNullValueTwilioGateway = value; AdditionalData?.Remove("twilio_gateway"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_gateway"); else _explicitNullProperties?.Remove("twilio_gateway"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway _explicitNullValueTwilioGateway = default!;
 #endif
         /// <summary>

@@ -17,23 +17,25 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ChatStatus") is { } nullNodeChatStatus && nullNodeChatStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChatStatus = null;
-            if (parseNode.GetChildNode("PostEngagementData") is { } nullNodePostEngagementData && nullNodePostEngagementData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostEngagementData = null;
+            if (parseNode.GetChildNode("ChatStatus") is null) { _explicitNullValueChatStatus = default!; _explicitNullProperties?.Remove("ChatStatus"); }
+            else if (parseNode.GetChildNode("ChatStatus") is { } nullNodeChatStatus && nullNodeChatStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChatStatus = null;
+            if (parseNode.GetChildNode("PostEngagementData") is null) { _explicitNullValuePostEngagementData = default!; _explicitNullProperties?.Remove("PostEngagementData"); }
+            else if (parseNode.GetChildNode("PostEngagementData") is { } nullNodePostEngagementData && nullNodePostEngagementData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostEngagementData = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ChatStatus property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WebChannelEnumChatStatus? ChatStatus { get => _explicitNullValueChatStatus; set { _explicitNullValueChatStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatStatus"); else _explicitNullProperties?.Remove("ChatStatus"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WebChannelEnumChatStatus? ChatStatus { get => _explicitNullValueChatStatus; set { _explicitNullValueChatStatus = value; AdditionalData?.Remove("ChatStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatStatus"); else _explicitNullProperties?.Remove("ChatStatus"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.WebChannelEnumChatStatus? _explicitNullValueChatStatus = default!;
         /// <summary>The post-engagement data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PostEngagementData { get => _explicitNullValuePostEngagementData; set { _explicitNullValuePostEngagementData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostEngagementData"); else _explicitNullProperties?.Remove("PostEngagementData"); } }
+        public string? PostEngagementData { get => _explicitNullValuePostEngagementData; set { _explicitNullValuePostEngagementData = value; AdditionalData?.Remove("PostEngagementData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostEngagementData"); else _explicitNullProperties?.Remove("PostEngagementData"); } }
         private string? _explicitNullValuePostEngagementData = default!;
 #nullable restore
 #else
-        public string PostEngagementData { get => _explicitNullValuePostEngagementData; set { _explicitNullValuePostEngagementData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostEngagementData"); else _explicitNullProperties?.Remove("PostEngagementData"); } }
+        public string PostEngagementData { get => _explicitNullValuePostEngagementData; set { _explicitNullValuePostEngagementData = value; AdditionalData?.Remove("PostEngagementData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostEngagementData"); else _explicitNullProperties?.Remove("PostEngagementData"); } }
         private string _explicitNullValuePostEngagementData = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "ChatStatus", n => { ChatStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebChannelEnumChatStatus>(); } },
+                { "ChatStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebChannelEnumChatStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChatStatus = default; _explicitNullProperties?.Remove("ChatStatus"); AdditionalData["ChatStatus"] = unknown; } else { ChatStatus = parsed; AdditionalData.Remove("ChatStatus"); } } },
                 { "PostEngagementData", n => { PostEngagementData = n.GetStringValue(); } },
             };
         }

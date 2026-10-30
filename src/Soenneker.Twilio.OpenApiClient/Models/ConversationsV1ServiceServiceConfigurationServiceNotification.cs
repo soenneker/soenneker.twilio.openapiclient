@@ -17,33 +17,40 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("added_to_conversation") is { } nullNodeAddedToConversation && nullNodeAddedToConversation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedToConversation = null;
-            if (parseNode.GetChildNode("chat_service_sid") is { } nullNodeChatServiceSid && nullNodeChatServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChatServiceSid = null;
-            if (parseNode.GetChildNode("log_enabled") is { } nullNodeLogEnabled && nullNodeLogEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogEnabled = null;
-            if (parseNode.GetChildNode("new_message") is { } nullNodeNewMessage && nullNodeNewMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMessage = null;
-            if (parseNode.GetChildNode("removed_from_conversation") is { } nullNodeRemovedFromConversation && nullNodeRemovedFromConversation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemovedFromConversation = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("added_to_conversation") is null) { _explicitNullValueAddedToConversation = default!; _explicitNullProperties?.Remove("added_to_conversation"); }
+            else if (parseNode.GetChildNode("added_to_conversation") is { } nullNodeAddedToConversation && nullNodeAddedToConversation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedToConversation = null;
+            if (parseNode.GetChildNode("chat_service_sid") is null) { _explicitNullValueChatServiceSid = default!; _explicitNullProperties?.Remove("chat_service_sid"); }
+            else if (parseNode.GetChildNode("chat_service_sid") is { } nullNodeChatServiceSid && nullNodeChatServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChatServiceSid = null;
+            if (parseNode.GetChildNode("log_enabled") is null) { _explicitNullValueLogEnabled = default!; _explicitNullProperties?.Remove("log_enabled"); }
+            else if (parseNode.GetChildNode("log_enabled") is { } nullNodeLogEnabled && nullNodeLogEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogEnabled = null;
+            if (parseNode.GetChildNode("new_message") is null) { _explicitNullValueNewMessage = default!; _explicitNullProperties?.Remove("new_message"); }
+            else if (parseNode.GetChildNode("new_message") is { } nullNodeNewMessage && nullNodeNewMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMessage = null;
+            if (parseNode.GetChildNode("removed_from_conversation") is null) { _explicitNullValueRemovedFromConversation = default!; _explicitNullProperties?.Remove("removed_from_conversation"); }
+            else if (parseNode.GetChildNode("removed_from_conversation") is { } nullNodeRemovedFromConversation && nullNodeRemovedFromConversation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemovedFromConversation = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>The Push Notification configuration for being added to a Conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AddedToConversation { get => _explicitNullValueAddedToConversation; set { _explicitNullValueAddedToConversation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_to_conversation"); else _explicitNullProperties?.Remove("added_to_conversation"); } }
+        public UntypedNode? AddedToConversation { get => _explicitNullValueAddedToConversation; set { _explicitNullValueAddedToConversation = value; AdditionalData?.Remove("added_to_conversation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_to_conversation"); else _explicitNullProperties?.Remove("added_to_conversation"); } }
         private UntypedNode? _explicitNullValueAddedToConversation = default!;
 #nullable restore
 #else
-        public UntypedNode AddedToConversation { get => _explicitNullValueAddedToConversation; set { _explicitNullValueAddedToConversation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_to_conversation"); else _explicitNullProperties?.Remove("added_to_conversation"); } }
+        public UntypedNode AddedToConversation { get => _explicitNullValueAddedToConversation; set { _explicitNullValueAddedToConversation = value; AdditionalData?.Remove("added_to_conversation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_to_conversation"); else _explicitNullProperties?.Remove("added_to_conversation"); } }
         private UntypedNode _explicitNullValueAddedToConversation = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -51,44 +58,44 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Configuration applies to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChatServiceSid { get => _explicitNullValueChatServiceSid; set { _explicitNullValueChatServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chat_service_sid"); else _explicitNullProperties?.Remove("chat_service_sid"); } }
+        public string? ChatServiceSid { get => _explicitNullValueChatServiceSid; set { _explicitNullValueChatServiceSid = value; AdditionalData?.Remove("chat_service_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chat_service_sid"); else _explicitNullProperties?.Remove("chat_service_sid"); } }
         private string? _explicitNullValueChatServiceSid = default!;
 #nullable restore
 #else
-        public string ChatServiceSid { get => _explicitNullValueChatServiceSid; set { _explicitNullValueChatServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chat_service_sid"); else _explicitNullProperties?.Remove("chat_service_sid"); } }
+        public string ChatServiceSid { get => _explicitNullValueChatServiceSid; set { _explicitNullValueChatServiceSid = value; AdditionalData?.Remove("chat_service_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chat_service_sid"); else _explicitNullProperties?.Remove("chat_service_sid"); } }
         private string _explicitNullValueChatServiceSid = default!;
 #endif
         /// <summary>Weather the notification logging is enabled.</summary>
-        public bool? LogEnabled { get => _explicitNullValueLogEnabled; set { _explicitNullValueLogEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log_enabled"); else _explicitNullProperties?.Remove("log_enabled"); } }
+        public bool? LogEnabled { get => _explicitNullValueLogEnabled; set { _explicitNullValueLogEnabled = value; AdditionalData?.Remove("log_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log_enabled"); else _explicitNullProperties?.Remove("log_enabled"); } }
         private bool? _explicitNullValueLogEnabled = default!;
         /// <summary>The Push Notification configuration for New Messages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NewMessage { get => _explicitNullValueNewMessage; set { _explicitNullValueNewMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_message"); else _explicitNullProperties?.Remove("new_message"); } }
+        public UntypedNode? NewMessage { get => _explicitNullValueNewMessage; set { _explicitNullValueNewMessage = value; AdditionalData?.Remove("new_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_message"); else _explicitNullProperties?.Remove("new_message"); } }
         private UntypedNode? _explicitNullValueNewMessage = default!;
 #nullable restore
 #else
-        public UntypedNode NewMessage { get => _explicitNullValueNewMessage; set { _explicitNullValueNewMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_message"); else _explicitNullProperties?.Remove("new_message"); } }
+        public UntypedNode NewMessage { get => _explicitNullValueNewMessage; set { _explicitNullValueNewMessage = value; AdditionalData?.Remove("new_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_message"); else _explicitNullProperties?.Remove("new_message"); } }
         private UntypedNode _explicitNullValueNewMessage = default!;
 #endif
         /// <summary>The Push Notification configuration for being removed from a Conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RemovedFromConversation { get => _explicitNullValueRemovedFromConversation; set { _explicitNullValueRemovedFromConversation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removed_from_conversation"); else _explicitNullProperties?.Remove("removed_from_conversation"); } }
+        public UntypedNode? RemovedFromConversation { get => _explicitNullValueRemovedFromConversation; set { _explicitNullValueRemovedFromConversation = value; AdditionalData?.Remove("removed_from_conversation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removed_from_conversation"); else _explicitNullProperties?.Remove("removed_from_conversation"); } }
         private UntypedNode? _explicitNullValueRemovedFromConversation = default!;
 #nullable restore
 #else
-        public UntypedNode RemovedFromConversation { get => _explicitNullValueRemovedFromConversation; set { _explicitNullValueRemovedFromConversation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removed_from_conversation"); else _explicitNullProperties?.Remove("removed_from_conversation"); } }
+        public UntypedNode RemovedFromConversation { get => _explicitNullValueRemovedFromConversation; set { _explicitNullValueRemovedFromConversation = value; AdditionalData?.Remove("removed_from_conversation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removed_from_conversation"); else _explicitNullProperties?.Remove("removed_from_conversation"); } }
         private UntypedNode _explicitNullValueRemovedFromConversation = default!;
 #endif
         /// <summary>An absolute API resource URL for this configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

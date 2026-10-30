@@ -18,17 +18,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("audioChannelIndex") is { } nullNodeAudioChannelIndex && nullNodeAudioChannelIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioChannelIndex = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("audioChannelIndex") is null) { _explicitNullValueAudioChannelIndex = default!; _explicitNullProperties?.Remove("audioChannelIndex"); }
+            else if (parseNode.GetChildNode("audioChannelIndex") is { } nullNodeAudioChannelIndex && nullNodeAudioChannelIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioChannelIndex = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>One-based index of the audio channel in a multi-channel recording associated with this role.</summary>
-        public int? AudioChannelIndex { get => _explicitNullValueAudioChannelIndex; set { _explicitNullValueAudioChannelIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioChannelIndex"); else _explicitNullProperties?.Remove("audioChannelIndex"); } }
+        public int? AudioChannelIndex { get => _explicitNullValueAudioChannelIndex; set { _explicitNullValueAudioChannelIndex = value; AdditionalData?.Remove("audioChannelIndex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioChannelIndex"); else _explicitNullProperties?.Remove("audioChannelIndex"); } }
         private int? _explicitNullValueAudioChannelIndex = default!;
         /// <summary>The participant role to apply when inferring participants.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionParticipantDefaultType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionParticipantDefaultType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionParticipantDefaultType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionParticipantDefault"/> and sets the default values.
@@ -56,7 +58,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "audioChannelIndex", n => { AudioChannelIndex = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionParticipantDefaultType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionParticipantDefaultType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

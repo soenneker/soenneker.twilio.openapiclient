@@ -17,15 +17,24 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
-            if (parseNode.GetChildNode("DateCreated") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
-            if (parseNode.GetChildNode("DateUpdated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
-            if (parseNode.GetChildNode("Identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
-            if (parseNode.GetChildNode("LastReadMessageIndex") is { } nullNodeLastReadMessageIndex && nullNodeLastReadMessageIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastReadMessageIndex = null;
-            if (parseNode.GetChildNode("LastReadTimestamp") is { } nullNodeLastReadTimestamp && nullNodeLastReadTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastReadTimestamp = null;
-            if (parseNode.GetChildNode("MessagingBinding.ProjectedAddress") is { } nullNodeMessagingBindingProjectedAddress && nullNodeMessagingBindingProjectedAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingBindingProjectedAddress = null;
-            if (parseNode.GetChildNode("MessagingBinding.ProxyAddress") is { } nullNodeMessagingBindingProxyAddress && nullNodeMessagingBindingProxyAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingBindingProxyAddress = null;
-            if (parseNode.GetChildNode("RoleSid") is { } nullNodeRoleSid && nullNodeRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleSid = null;
+            if (parseNode.GetChildNode("Attributes") is null) { _explicitNullValueAttributes = default!; _explicitNullProperties?.Remove("Attributes"); }
+            else if (parseNode.GetChildNode("Attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("DateCreated") is null) { _explicitNullValueDateCreated = default!; _explicitNullProperties?.Remove("DateCreated"); }
+            else if (parseNode.GetChildNode("DateCreated") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("DateUpdated") is null) { _explicitNullValueDateUpdated = default!; _explicitNullProperties?.Remove("DateUpdated"); }
+            else if (parseNode.GetChildNode("DateUpdated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
+            if (parseNode.GetChildNode("Identity") is null) { _explicitNullValueIdentity = default!; _explicitNullProperties?.Remove("Identity"); }
+            else if (parseNode.GetChildNode("Identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("LastReadMessageIndex") is null) { _explicitNullValueLastReadMessageIndex = default!; _explicitNullProperties?.Remove("LastReadMessageIndex"); }
+            else if (parseNode.GetChildNode("LastReadMessageIndex") is { } nullNodeLastReadMessageIndex && nullNodeLastReadMessageIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastReadMessageIndex = null;
+            if (parseNode.GetChildNode("LastReadTimestamp") is null) { _explicitNullValueLastReadTimestamp = default!; _explicitNullProperties?.Remove("LastReadTimestamp"); }
+            else if (parseNode.GetChildNode("LastReadTimestamp") is { } nullNodeLastReadTimestamp && nullNodeLastReadTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastReadTimestamp = null;
+            if (parseNode.GetChildNode("MessagingBinding.ProjectedAddress") is null) { _explicitNullValueMessagingBindingProjectedAddress = default!; _explicitNullProperties?.Remove("MessagingBinding.ProjectedAddress"); }
+            else if (parseNode.GetChildNode("MessagingBinding.ProjectedAddress") is { } nullNodeMessagingBindingProjectedAddress && nullNodeMessagingBindingProjectedAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingBindingProjectedAddress = null;
+            if (parseNode.GetChildNode("MessagingBinding.ProxyAddress") is null) { _explicitNullValueMessagingBindingProxyAddress = default!; _explicitNullProperties?.Remove("MessagingBinding.ProxyAddress"); }
+            else if (parseNode.GetChildNode("MessagingBinding.ProxyAddress") is { } nullNodeMessagingBindingProxyAddress && nullNodeMessagingBindingProxyAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingBindingProxyAddress = null;
+            if (parseNode.GetChildNode("RoleSid") is null) { _explicitNullValueRoleSid = default!; _explicitNullProperties?.Remove("RoleSid"); }
+            else if (parseNode.GetChildNode("RoleSid") is { } nullNodeRoleSid && nullNodeRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,70 +42,70 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An optional string metadata field you can use to store any data you wish. The string value must contain structurally valid JSON if specified.  **Note** that if the attributes are not set &quot;{}&quot; will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
+        public string? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("Attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
         private string? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public string Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
+        public string Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("Attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
         private string _explicitNullValueAttributes = default!;
 #endif
         /// <summary>The date that this resource was created.</summary>
-        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateCreated"); else _explicitNullProperties?.Remove("DateCreated"); } }
+        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; AdditionalData?.Remove("DateCreated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateCreated"); else _explicitNullProperties?.Remove("DateCreated"); } }
         private DateTimeOffset? _explicitNullValueDateCreated = default!;
         /// <summary>The date that this resource was last updated.</summary>
-        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateUpdated"); else _explicitNullProperties?.Remove("DateUpdated"); } }
+        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; AdditionalData?.Remove("DateUpdated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateUpdated"); else _explicitNullProperties?.Remove("DateUpdated"); } }
         private DateTimeOffset? _explicitNullValueDateUpdated = default!;
         /// <summary>A unique string identifier for the conversation participant as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource). This parameter is non-null if (and only if) the participant is using the Conversations SDK to communicate. Limited to 256 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("Identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
         private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("Identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
         private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>Index of last “read” message in the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for the Participant.</summary>
-        public int? LastReadMessageIndex { get => _explicitNullValueLastReadMessageIndex; set { _explicitNullValueLastReadMessageIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastReadMessageIndex"); else _explicitNullProperties?.Remove("LastReadMessageIndex"); } }
+        public int? LastReadMessageIndex { get => _explicitNullValueLastReadMessageIndex; set { _explicitNullValueLastReadMessageIndex = value; AdditionalData?.Remove("LastReadMessageIndex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastReadMessageIndex"); else _explicitNullProperties?.Remove("LastReadMessageIndex"); } }
         private int? _explicitNullValueLastReadMessageIndex = default!;
         /// <summary>Timestamp of last “read” message in the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for the Participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastReadTimestamp { get => _explicitNullValueLastReadTimestamp; set { _explicitNullValueLastReadTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastReadTimestamp"); else _explicitNullProperties?.Remove("LastReadTimestamp"); } }
+        public string? LastReadTimestamp { get => _explicitNullValueLastReadTimestamp; set { _explicitNullValueLastReadTimestamp = value; AdditionalData?.Remove("LastReadTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastReadTimestamp"); else _explicitNullProperties?.Remove("LastReadTimestamp"); } }
         private string? _explicitNullValueLastReadTimestamp = default!;
 #nullable restore
 #else
-        public string LastReadTimestamp { get => _explicitNullValueLastReadTimestamp; set { _explicitNullValueLastReadTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastReadTimestamp"); else _explicitNullProperties?.Remove("LastReadTimestamp"); } }
+        public string LastReadTimestamp { get => _explicitNullValueLastReadTimestamp; set { _explicitNullValueLastReadTimestamp = value; AdditionalData?.Remove("LastReadTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastReadTimestamp"); else _explicitNullProperties?.Remove("LastReadTimestamp"); } }
         private string _explicitNullValueLastReadTimestamp = default!;
 #endif
         /// <summary>The address of the Twilio phone number that is used in Group MMS. &apos;null&apos; value will remove it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessagingBindingProjectedAddress { get => _explicitNullValueMessagingBindingProjectedAddress; set { _explicitNullValueMessagingBindingProjectedAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingBinding.ProjectedAddress"); else _explicitNullProperties?.Remove("MessagingBinding.ProjectedAddress"); } }
+        public string? MessagingBindingProjectedAddress { get => _explicitNullValueMessagingBindingProjectedAddress; set { _explicitNullValueMessagingBindingProjectedAddress = value; AdditionalData?.Remove("MessagingBinding.ProjectedAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingBinding.ProjectedAddress"); else _explicitNullProperties?.Remove("MessagingBinding.ProjectedAddress"); } }
         private string? _explicitNullValueMessagingBindingProjectedAddress = default!;
 #nullable restore
 #else
-        public string MessagingBindingProjectedAddress { get => _explicitNullValueMessagingBindingProjectedAddress; set { _explicitNullValueMessagingBindingProjectedAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingBinding.ProjectedAddress"); else _explicitNullProperties?.Remove("MessagingBinding.ProjectedAddress"); } }
+        public string MessagingBindingProjectedAddress { get => _explicitNullValueMessagingBindingProjectedAddress; set { _explicitNullValueMessagingBindingProjectedAddress = value; AdditionalData?.Remove("MessagingBinding.ProjectedAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingBinding.ProjectedAddress"); else _explicitNullProperties?.Remove("MessagingBinding.ProjectedAddress"); } }
         private string _explicitNullValueMessagingBindingProjectedAddress = default!;
 #endif
         /// <summary>The address of the Twilio phone number that the participant is in contact with. &apos;null&apos; value will remove it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessagingBindingProxyAddress { get => _explicitNullValueMessagingBindingProxyAddress; set { _explicitNullValueMessagingBindingProxyAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingBinding.ProxyAddress"); else _explicitNullProperties?.Remove("MessagingBinding.ProxyAddress"); } }
+        public string? MessagingBindingProxyAddress { get => _explicitNullValueMessagingBindingProxyAddress; set { _explicitNullValueMessagingBindingProxyAddress = value; AdditionalData?.Remove("MessagingBinding.ProxyAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingBinding.ProxyAddress"); else _explicitNullProperties?.Remove("MessagingBinding.ProxyAddress"); } }
         private string? _explicitNullValueMessagingBindingProxyAddress = default!;
 #nullable restore
 #else
-        public string MessagingBindingProxyAddress { get => _explicitNullValueMessagingBindingProxyAddress; set { _explicitNullValueMessagingBindingProxyAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingBinding.ProxyAddress"); else _explicitNullProperties?.Remove("MessagingBinding.ProxyAddress"); } }
+        public string MessagingBindingProxyAddress { get => _explicitNullValueMessagingBindingProxyAddress; set { _explicitNullValueMessagingBindingProxyAddress = value; AdditionalData?.Remove("MessagingBinding.ProxyAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingBinding.ProxyAddress"); else _explicitNullProperties?.Remove("MessagingBinding.ProxyAddress"); } }
         private string _explicitNullValueMessagingBindingProxyAddress = default!;
 #endif
         /// <summary>The SID of a conversation-level [Role](https://www.twilio.com/docs/conversations/api/role-resource) to assign to the participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoleSid { get => _explicitNullValueRoleSid; set { _explicitNullValueRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoleSid"); else _explicitNullProperties?.Remove("RoleSid"); } }
+        public string? RoleSid { get => _explicitNullValueRoleSid; set { _explicitNullValueRoleSid = value; AdditionalData?.Remove("RoleSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoleSid"); else _explicitNullProperties?.Remove("RoleSid"); } }
         private string? _explicitNullValueRoleSid = default!;
 #nullable restore
 #else
-        public string RoleSid { get => _explicitNullValueRoleSid; set { _explicitNullValueRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoleSid"); else _explicitNullProperties?.Remove("RoleSid"); } }
+        public string RoleSid { get => _explicitNullValueRoleSid; set { _explicitNullValueRoleSid = value; AdditionalData?.Remove("RoleSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoleSid"); else _explicitNullProperties?.Remove("RoleSid"); } }
         private string _explicitNullValueRoleSid = default!;
 #endif
         /// <summary>

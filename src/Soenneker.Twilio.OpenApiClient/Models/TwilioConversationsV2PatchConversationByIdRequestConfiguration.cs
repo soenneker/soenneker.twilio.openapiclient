@@ -18,7 +18,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("statusCallbacks") is { } nullNodeStatusCallbacks && nullNodeStatusCallbacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbacks = null;
+            if (parseNode.GetChildNode("statusCallbacks") is null) { _explicitNullValueStatusCallbacks = default!; _explicitNullProperties?.Remove("statusCallbacks"); }
+            else if (parseNode.GetChildNode("statusCallbacks") is { } nullNodeStatusCallbacks && nullNodeStatusCallbacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbacks = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of webhook configurations for this conversation. Send an empty array to clear all callbacks and stop webhook delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig>? StatusCallbacks { get => _explicitNullValueStatusCallbacks; set { _explicitNullValueStatusCallbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCallbacks"); else _explicitNullProperties?.Remove("statusCallbacks"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig>? StatusCallbacks { get => _explicitNullValueStatusCallbacks; set { _explicitNullValueStatusCallbacks = value; AdditionalData?.Remove("statusCallbacks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCallbacks"); else _explicitNullProperties?.Remove("statusCallbacks"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig>? _explicitNullValueStatusCallbacks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig> StatusCallbacks { get => _explicitNullValueStatusCallbacks; set { _explicitNullValueStatusCallbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCallbacks"); else _explicitNullProperties?.Remove("statusCallbacks"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig> StatusCallbacks { get => _explicitNullValueStatusCallbacks; set { _explicitNullValueStatusCallbacks = value; AdditionalData?.Remove("statusCallbacks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCallbacks"); else _explicitNullProperties?.Remove("statusCallbacks"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig> _explicitNullValueStatusCallbacks = default!;
 #endif
         /// <summary>

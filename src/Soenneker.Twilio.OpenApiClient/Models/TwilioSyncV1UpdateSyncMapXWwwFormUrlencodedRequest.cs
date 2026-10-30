@@ -17,17 +17,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CollectionTtl") is { } nullNodeCollectionTtl && nullNodeCollectionTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionTtl = null;
-            if (parseNode.GetChildNode("Ttl") is { } nullNodeTtl && nullNodeTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ttl = null;
+            if (parseNode.GetChildNode("CollectionTtl") is null) { _explicitNullValueCollectionTtl = default!; _explicitNullProperties?.Remove("CollectionTtl"); }
+            else if (parseNode.GetChildNode("CollectionTtl") is { } nullNodeCollectionTtl && nullNodeCollectionTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionTtl = null;
+            if (parseNode.GetChildNode("Ttl") is null) { _explicitNullValueTtl = default!; _explicitNullProperties?.Remove("Ttl"); }
+            else if (parseNode.GetChildNode("Ttl") is { } nullNodeTtl && nullNodeTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ttl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>How long, [in seconds](https://www.twilio.com/docs/sync/limits#sync-payload-limits), before the Sync Map expires (time-to-live) and is deleted.</summary>
-        public int? CollectionTtl { get => _explicitNullValueCollectionTtl; set { _explicitNullValueCollectionTtl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CollectionTtl"); else _explicitNullProperties?.Remove("CollectionTtl"); } }
+        public int? CollectionTtl { get => _explicitNullValueCollectionTtl; set { _explicitNullValueCollectionTtl = value; AdditionalData?.Remove("CollectionTtl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CollectionTtl"); else _explicitNullProperties?.Remove("CollectionTtl"); } }
         private int? _explicitNullValueCollectionTtl = default!;
         /// <summary>An alias for `collection_ttl`. If both parameters are provided, this value is ignored.</summary>
-        public int? Ttl { get => _explicitNullValueTtl; set { _explicitNullValueTtl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Ttl"); else _explicitNullProperties?.Remove("Ttl"); } }
+        public int? Ttl { get => _explicitNullValueTtl; set { _explicitNullValueTtl = value; AdditionalData?.Remove("Ttl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Ttl"); else _explicitNullProperties?.Remove("Ttl"); } }
         private int? _explicitNullValueTtl = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1UpdateSyncMapXWwwFormUrlencodedRequest"/> and sets the default values.

@@ -18,42 +18,47 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("crawlDepth") is { } nullNodeCrawlDepth && nullNodeCrawlDepth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CrawlDepth = null;
-            if (parseNode.GetChildNode("crawlPeriod") is { } nullNodeCrawlPeriod && nullNodeCrawlPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CrawlPeriod = null;
-            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("crawlDepth") is null) { _explicitNullValueCrawlDepth = default!; _explicitNullProperties?.Remove("crawlDepth"); }
+            else if (parseNode.GetChildNode("crawlDepth") is { } nullNodeCrawlDepth && nullNodeCrawlDepth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CrawlDepth = null;
+            if (parseNode.GetChildNode("crawlPeriod") is null) { _explicitNullValueCrawlPeriod = default!; _explicitNullProperties?.Remove("crawlPeriod"); }
+            else if (parseNode.GetChildNode("crawlPeriod") is { } nullNodeCrawlPeriod && nullNodeCrawlPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CrawlPeriod = null;
+            if (parseNode.GetChildNode("errors") is null) { _explicitNullValueErrors = default!; _explicitNullProperties?.Remove("errors"); }
+            else if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The maximum depth to crawl from the source URL</summary>
-        public int? CrawlDepth { get => _explicitNullValueCrawlDepth; set { _explicitNullValueCrawlDepth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crawlDepth"); else _explicitNullProperties?.Remove("crawlDepth"); } }
+        public int? CrawlDepth { get => _explicitNullValueCrawlDepth; set { _explicitNullValueCrawlDepth = value; AdditionalData?.Remove("crawlDepth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crawlDepth"); else _explicitNullProperties?.Remove("crawlDepth"); } }
         private int? _explicitNullValueCrawlDepth = default!;
         /// <summary>Frequency of re-crawling the website for updated content</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod? CrawlPeriod { get => _explicitNullValueCrawlPeriod; set { _explicitNullValueCrawlPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crawlPeriod"); else _explicitNullProperties?.Remove("crawlPeriod"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod? CrawlPeriod { get => _explicitNullValueCrawlPeriod; set { _explicitNullValueCrawlPeriod = value; AdditionalData?.Remove("crawlPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crawlPeriod"); else _explicitNullProperties?.Remove("crawlPeriod"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod? _explicitNullValueCrawlPeriod = default!;
         /// <summary>Processing errors encountered during web crawling, grouped by title.Array of error groups, where each group has a title and list of error instances.Only present when crawl errors occurred.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup> _explicitNullValueErrors = default!;
 #endif
         /// <summary>Web based knowledge sources</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WebType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WebType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.WebType? _explicitNullValueType = default!;
         /// <summary>The URL to crawl for web content</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
@@ -83,9 +88,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "crawlDepth", n => { CrawlDepth = n.GetIntValue(); } },
-                { "crawlPeriod", n => { CrawlPeriod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod>(); } },
+                { "crawlPeriod", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetailsCrawlPeriod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCrawlPeriod = default; _explicitNullProperties?.Remove("crawlPeriod"); AdditionalData["crawlPeriod"] = unknown; } else { CrawlPeriod = parsed; AdditionalData.Remove("crawlPeriod"); } } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup>(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeErrorGroup.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WebType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }

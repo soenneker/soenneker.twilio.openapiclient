@@ -17,13 +17,20 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Configuration") is { } nullNodeConfiguration && nullNodeConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configuration = null;
-            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("Documentation") is { } nullNodeDocumentation && nullNodeDocumentation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documentation = null;
-            if (parseNode.GetChildNode("ModuleInfo") is { } nullNodeModuleInfo && nullNodeModuleInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModuleInfo = null;
-            if (parseNode.GetChildNode("Policies") is { } nullNodePolicies && nullNodePolicies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Policies = null;
-            if (parseNode.GetChildNode("Pricing") is { } nullNodePricing && nullNodePricing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pricing = null;
-            if (parseNode.GetChildNode("Support") is { } nullNodeSupport && nullNodeSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Support = null;
+            if (parseNode.GetChildNode("Configuration") is null) { _explicitNullValueConfiguration = default!; _explicitNullProperties?.Remove("Configuration"); }
+            else if (parseNode.GetChildNode("Configuration") is { } nullNodeConfiguration && nullNodeConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configuration = null;
+            if (parseNode.GetChildNode("Description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("Description"); }
+            else if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("Documentation") is null) { _explicitNullValueDocumentation = default!; _explicitNullProperties?.Remove("Documentation"); }
+            else if (parseNode.GetChildNode("Documentation") is { } nullNodeDocumentation && nullNodeDocumentation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documentation = null;
+            if (parseNode.GetChildNode("ModuleInfo") is null) { _explicitNullValueModuleInfo = default!; _explicitNullProperties?.Remove("ModuleInfo"); }
+            else if (parseNode.GetChildNode("ModuleInfo") is { } nullNodeModuleInfo && nullNodeModuleInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModuleInfo = null;
+            if (parseNode.GetChildNode("Policies") is null) { _explicitNullValuePolicies = default!; _explicitNullProperties?.Remove("Policies"); }
+            else if (parseNode.GetChildNode("Policies") is { } nullNodePolicies && nullNodePolicies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Policies = null;
+            if (parseNode.GetChildNode("Pricing") is null) { _explicitNullValuePricing = default!; _explicitNullProperties?.Remove("Pricing"); }
+            else if (parseNode.GetChildNode("Pricing") is { } nullNodePricing && nullNodePricing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pricing = null;
+            if (parseNode.GetChildNode("Support") is null) { _explicitNullValueSupport = default!; _explicitNullProperties?.Remove("Support"); }
+            else if (parseNode.GetChildNode("Support") is { } nullNodeSupport && nullNodeSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Support = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,71 +38,71 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON object for providing Listing-specific configuration. Contains button setup, notification URL, and more.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
+        public string? Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; AdditionalData?.Remove("Configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
         private string? _explicitNullValueConfiguration = default!;
 #nullable restore
 #else
-        public string Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
+        public string Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; AdditionalData?.Remove("Configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
         private string _explicitNullValueConfiguration = default!;
 #endif
         /// <summary>A JSON object describing the Listing. You can define the main body of the description, highlight key features or aspects of the Listing, and provide code samples for developers if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("Description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("Description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>A JSON object for providing comprehensive information, instructions, and resources related to the Listing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Documentation { get => _explicitNullValueDocumentation; set { _explicitNullValueDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Documentation"); else _explicitNullProperties?.Remove("Documentation"); } }
+        public string? Documentation { get => _explicitNullValueDocumentation; set { _explicitNullValueDocumentation = value; AdditionalData?.Remove("Documentation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Documentation"); else _explicitNullProperties?.Remove("Documentation"); } }
         private string? _explicitNullValueDocumentation = default!;
 #nullable restore
 #else
-        public string Documentation { get => _explicitNullValueDocumentation; set { _explicitNullValueDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Documentation"); else _explicitNullProperties?.Remove("Documentation"); } }
+        public string Documentation { get => _explicitNullValueDocumentation; set { _explicitNullValueDocumentation = value; AdditionalData?.Remove("Documentation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Documentation"); else _explicitNullProperties?.Remove("Documentation"); } }
         private string _explicitNullValueDocumentation = default!;
 #endif
         /// <summary>A JSON object containing essential attributes that define a Listing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ModuleInfo { get => _explicitNullValueModuleInfo; set { _explicitNullValueModuleInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModuleInfo"); else _explicitNullProperties?.Remove("ModuleInfo"); } }
+        public string? ModuleInfo { get => _explicitNullValueModuleInfo; set { _explicitNullValueModuleInfo = value; AdditionalData?.Remove("ModuleInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModuleInfo"); else _explicitNullProperties?.Remove("ModuleInfo"); } }
         private string? _explicitNullValueModuleInfo = default!;
 #nullable restore
 #else
-        public string ModuleInfo { get => _explicitNullValueModuleInfo; set { _explicitNullValueModuleInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModuleInfo"); else _explicitNullProperties?.Remove("ModuleInfo"); } }
+        public string ModuleInfo { get => _explicitNullValueModuleInfo; set { _explicitNullValueModuleInfo = value; AdditionalData?.Remove("ModuleInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModuleInfo"); else _explicitNullProperties?.Remove("ModuleInfo"); } }
         private string _explicitNullValueModuleInfo = default!;
 #endif
         /// <summary>A JSON object describing the Listing&apos;s privacy and legal policies. The maximum file size for Policies is 5MB.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Policies { get => _explicitNullValuePolicies; set { _explicitNullValuePolicies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Policies"); else _explicitNullProperties?.Remove("Policies"); } }
+        public string? Policies { get => _explicitNullValuePolicies; set { _explicitNullValuePolicies = value; AdditionalData?.Remove("Policies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Policies"); else _explicitNullProperties?.Remove("Policies"); } }
         private string? _explicitNullValuePolicies = default!;
 #nullable restore
 #else
-        public string Policies { get => _explicitNullValuePolicies; set { _explicitNullValuePolicies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Policies"); else _explicitNullProperties?.Remove("Policies"); } }
+        public string Policies { get => _explicitNullValuePolicies; set { _explicitNullValuePolicies = value; AdditionalData?.Remove("Policies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Policies"); else _explicitNullProperties?.Remove("Policies"); } }
         private string _explicitNullValuePolicies = default!;
 #endif
         /// <summary>A JSON object for providing Listing&apos;s purchase options.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Pricing"); else _explicitNullProperties?.Remove("Pricing"); } }
+        public string? Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("Pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Pricing"); else _explicitNullProperties?.Remove("Pricing"); } }
         private string? _explicitNullValuePricing = default!;
 #nullable restore
 #else
-        public string Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Pricing"); else _explicitNullProperties?.Remove("Pricing"); } }
+        public string Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; AdditionalData?.Remove("Pricing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Pricing"); else _explicitNullProperties?.Remove("Pricing"); } }
         private string _explicitNullValuePricing = default!;
 #endif
         /// <summary>A JSON object containing information on how Marketplace users can obtain support for the Listing. Use this parameter to provide details such as contact information and support description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Support { get => _explicitNullValueSupport; set { _explicitNullValueSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Support"); else _explicitNullProperties?.Remove("Support"); } }
+        public string? Support { get => _explicitNullValueSupport; set { _explicitNullValueSupport = value; AdditionalData?.Remove("Support"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Support"); else _explicitNullProperties?.Remove("Support"); } }
         private string? _explicitNullValueSupport = default!;
 #nullable restore
 #else
-        public string Support { get => _explicitNullValueSupport; set { _explicitNullValueSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Support"); else _explicitNullProperties?.Remove("Support"); } }
+        public string Support { get => _explicitNullValueSupport; set { _explicitNullValueSupport = value; AdditionalData?.Remove("Support"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Support"); else _explicitNullProperties?.Remove("Support"); } }
         private string _explicitNullValueSupport = default!;
 #endif
         /// <summary>

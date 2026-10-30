@@ -17,21 +17,24 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("LastReadMessageIndex") is { } nullNodeLastReadMessageIndex && nullNodeLastReadMessageIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastReadMessageIndex = null;
-            if (parseNode.GetChildNode("LastReadTimestamp") is { } nullNodeLastReadTimestamp && nullNodeLastReadTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastReadTimestamp = null;
-            if (parseNode.GetChildNode("NotificationLevel") is { } nullNodeNotificationLevel && nullNodeNotificationLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationLevel = null;
+            if (parseNode.GetChildNode("LastReadMessageIndex") is null) { _explicitNullValueLastReadMessageIndex = default!; _explicitNullProperties?.Remove("LastReadMessageIndex"); }
+            else if (parseNode.GetChildNode("LastReadMessageIndex") is { } nullNodeLastReadMessageIndex && nullNodeLastReadMessageIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastReadMessageIndex = null;
+            if (parseNode.GetChildNode("LastReadTimestamp") is null) { _explicitNullValueLastReadTimestamp = default!; _explicitNullProperties?.Remove("LastReadTimestamp"); }
+            else if (parseNode.GetChildNode("LastReadTimestamp") is { } nullNodeLastReadTimestamp && nullNodeLastReadTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastReadTimestamp = null;
+            if (parseNode.GetChildNode("NotificationLevel") is null) { _explicitNullValueNotificationLevel = default!; _explicitNullProperties?.Remove("NotificationLevel"); }
+            else if (parseNode.GetChildNode("NotificationLevel") is { } nullNodeNotificationLevel && nullNodeNotificationLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationLevel = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The index of the last Message in the Conversation that the Participant has read.</summary>
-        public int? LastReadMessageIndex { get => _explicitNullValueLastReadMessageIndex; set { _explicitNullValueLastReadMessageIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastReadMessageIndex"); else _explicitNullProperties?.Remove("LastReadMessageIndex"); } }
+        public int? LastReadMessageIndex { get => _explicitNullValueLastReadMessageIndex; set { _explicitNullValueLastReadMessageIndex = value; AdditionalData?.Remove("LastReadMessageIndex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastReadMessageIndex"); else _explicitNullProperties?.Remove("LastReadMessageIndex"); } }
         private int? _explicitNullValueLastReadMessageIndex = default!;
         /// <summary>The date of the last message read in conversation by the user, given in ISO 8601 format.</summary>
-        public DateTimeOffset? LastReadTimestamp { get => _explicitNullValueLastReadTimestamp; set { _explicitNullValueLastReadTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastReadTimestamp"); else _explicitNullProperties?.Remove("LastReadTimestamp"); } }
+        public DateTimeOffset? LastReadTimestamp { get => _explicitNullValueLastReadTimestamp; set { _explicitNullValueLastReadTimestamp = value; AdditionalData?.Remove("LastReadTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastReadTimestamp"); else _explicitNullProperties?.Remove("LastReadTimestamp"); } }
         private DateTimeOffset? _explicitNullValueLastReadTimestamp = default!;
         /// <summary>The Notification Level of this User Conversation. One of `default` or `muted`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ServiceUserConversationEnumNotificationLevel? NotificationLevel { get => _explicitNullValueNotificationLevel; set { _explicitNullValueNotificationLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationLevel"); else _explicitNullProperties?.Remove("NotificationLevel"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ServiceUserConversationEnumNotificationLevel? NotificationLevel { get => _explicitNullValueNotificationLevel; set { _explicitNullValueNotificationLevel = value; AdditionalData?.Remove("NotificationLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationLevel"); else _explicitNullProperties?.Remove("NotificationLevel"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ServiceUserConversationEnumNotificationLevel? _explicitNullValueNotificationLevel = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1UpdateServiceUserConversationXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -60,7 +63,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "LastReadMessageIndex", n => { LastReadMessageIndex = n.GetIntValue(); } },
                 { "LastReadTimestamp", n => { LastReadTimestamp = n.GetDateTimeOffsetValue(); } },
-                { "NotificationLevel", n => { NotificationLevel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceUserConversationEnumNotificationLevel>(); } },
+                { "NotificationLevel", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceUserConversationEnumNotificationLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNotificationLevel = default; _explicitNullProperties?.Remove("NotificationLevel"); AdditionalData["NotificationLevel"] = unknown; } else { NotificationLevel = parsed; AdditionalData.Remove("NotificationLevel"); } } },
             };
         }
         /// <summary>

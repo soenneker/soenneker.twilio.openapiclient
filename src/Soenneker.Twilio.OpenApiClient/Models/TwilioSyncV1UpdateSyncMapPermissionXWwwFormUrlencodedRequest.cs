@@ -17,21 +17,24 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Manage") is { } nullNodeManage && nullNodeManage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Manage = null;
-            if (parseNode.GetChildNode("Read") is { } nullNodeRead && nullNodeRead.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Read = null;
-            if (parseNode.GetChildNode("Write") is { } nullNodeWrite && nullNodeWrite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Write = null;
+            if (parseNode.GetChildNode("Manage") is null) { _explicitNullValueManage = default!; _explicitNullProperties?.Remove("Manage"); }
+            else if (parseNode.GetChildNode("Manage") is { } nullNodeManage && nullNodeManage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Manage = null;
+            if (parseNode.GetChildNode("Read") is null) { _explicitNullValueRead = default!; _explicitNullProperties?.Remove("Read"); }
+            else if (parseNode.GetChildNode("Read") is { } nullNodeRead && nullNodeRead.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Read = null;
+            if (parseNode.GetChildNode("Write") is null) { _explicitNullValueWrite = default!; _explicitNullProperties?.Remove("Write"); }
+            else if (parseNode.GetChildNode("Write") is { } nullNodeWrite && nullNodeWrite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Write = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the identity can delete the Sync Map. Default value is `false`.</summary>
-        public bool? Manage { get => _explicitNullValueManage; set { _explicitNullValueManage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Manage"); else _explicitNullProperties?.Remove("Manage"); } }
+        public bool? Manage { get => _explicitNullValueManage; set { _explicitNullValueManage = value; AdditionalData?.Remove("Manage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Manage"); else _explicitNullProperties?.Remove("Manage"); } }
         private bool? _explicitNullValueManage = default!;
         /// <summary>Whether the identity can read the Sync Map and its Items. Default value is `false`.</summary>
-        public bool? Read { get => _explicitNullValueRead; set { _explicitNullValueRead = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Read"); else _explicitNullProperties?.Remove("Read"); } }
+        public bool? Read { get => _explicitNullValueRead; set { _explicitNullValueRead = value; AdditionalData?.Remove("Read"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Read"); else _explicitNullProperties?.Remove("Read"); } }
         private bool? _explicitNullValueRead = default!;
         /// <summary>Whether the identity can create, update, and delete Items in the Sync Map. Default value is `false`.</summary>
-        public bool? Write { get => _explicitNullValueWrite; set { _explicitNullValueWrite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Write"); else _explicitNullProperties?.Remove("Write"); } }
+        public bool? Write { get => _explicitNullValueWrite; set { _explicitNullValueWrite = value; AdditionalData?.Remove("Write"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Write"); else _explicitNullProperties?.Remove("Write"); } }
         private bool? _explicitNullValueWrite = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1UpdateSyncMapPermissionXWwwFormUrlencodedRequest"/> and sets the default values.

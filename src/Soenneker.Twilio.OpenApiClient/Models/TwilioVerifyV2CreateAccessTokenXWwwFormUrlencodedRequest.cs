@@ -17,10 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("FactorFriendlyName") is { } nullNodeFactorFriendlyName && nullNodeFactorFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FactorFriendlyName = null;
-            if (parseNode.GetChildNode("FactorType") is { } nullNodeFactorType && nullNodeFactorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FactorType = null;
-            if (parseNode.GetChildNode("Identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
-            if (parseNode.GetChildNode("Ttl") is { } nullNodeTtl && nullNodeTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ttl = null;
+            if (parseNode.GetChildNode("FactorFriendlyName") is null) { _explicitNullValueFactorFriendlyName = default!; _explicitNullProperties?.Remove("FactorFriendlyName"); }
+            else if (parseNode.GetChildNode("FactorFriendlyName") is { } nullNodeFactorFriendlyName && nullNodeFactorFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FactorFriendlyName = null;
+            if (parseNode.GetChildNode("FactorType") is null) { _explicitNullValueFactorType = default!; _explicitNullProperties?.Remove("FactorType"); }
+            else if (parseNode.GetChildNode("FactorType") is { } nullNodeFactorType && nullNodeFactorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FactorType = null;
+            if (parseNode.GetChildNode("Identity") is null) { _explicitNullValueIdentity = default!; _explicitNullProperties?.Remove("Identity"); }
+            else if (parseNode.GetChildNode("Identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("Ttl") is null) { _explicitNullValueTtl = default!; _explicitNullProperties?.Remove("Ttl"); }
+            else if (parseNode.GetChildNode("Ttl") is { } nullNodeTtl && nullNodeTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ttl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,28 +32,28 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The friendly name of the factor that is going to be created with this access token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FactorFriendlyName { get => _explicitNullValueFactorFriendlyName; set { _explicitNullValueFactorFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FactorFriendlyName"); else _explicitNullProperties?.Remove("FactorFriendlyName"); } }
+        public string? FactorFriendlyName { get => _explicitNullValueFactorFriendlyName; set { _explicitNullValueFactorFriendlyName = value; AdditionalData?.Remove("FactorFriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FactorFriendlyName"); else _explicitNullProperties?.Remove("FactorFriendlyName"); } }
         private string? _explicitNullValueFactorFriendlyName = default!;
 #nullable restore
 #else
-        public string FactorFriendlyName { get => _explicitNullValueFactorFriendlyName; set { _explicitNullValueFactorFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FactorFriendlyName"); else _explicitNullProperties?.Remove("FactorFriendlyName"); } }
+        public string FactorFriendlyName { get => _explicitNullValueFactorFriendlyName; set { _explicitNullValueFactorFriendlyName = value; AdditionalData?.Remove("FactorFriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FactorFriendlyName"); else _explicitNullProperties?.Remove("FactorFriendlyName"); } }
         private string _explicitNullValueFactorFriendlyName = default!;
 #endif
         /// <summary>The Type of the Factor. Currently only `push` is supported.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccessTokenEnumFactorTypes? FactorType { get => _explicitNullValueFactorType; set { _explicitNullValueFactorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FactorType"); else _explicitNullProperties?.Remove("FactorType"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccessTokenEnumFactorTypes? FactorType { get => _explicitNullValueFactorType; set { _explicitNullValueFactorType = value; AdditionalData?.Remove("FactorType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FactorType"); else _explicitNullProperties?.Remove("FactorType"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.AccessTokenEnumFactorTypes? _explicitNullValueFactorType = default!;
         /// <summary>The unique external identifier for the Entity of the Service. This identifier should be immutable, not PII, and generated by your external system, such as your user&apos;s UUID, GUID, or SID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("Identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
         private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("Identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
         private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>How long, in seconds, the access token is valid. Can be an integer between 60 and 300. Default is 60.</summary>
-        public int? Ttl { get => _explicitNullValueTtl; set { _explicitNullValueTtl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Ttl"); else _explicitNullProperties?.Remove("Ttl"); } }
+        public int? Ttl { get => _explicitNullValueTtl; set { _explicitNullValueTtl = value; AdditionalData?.Remove("Ttl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Ttl"); else _explicitNullProperties?.Remove("Ttl"); } }
         private int? _explicitNullValueTtl = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateAccessTokenXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -77,7 +81,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "FactorFriendlyName", n => { FactorFriendlyName = n.GetStringValue(); } },
-                { "FactorType", n => { FactorType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AccessTokenEnumFactorTypes>(); } },
+                { "FactorType", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AccessTokenEnumFactorTypes>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFactorType = default; _explicitNullProperties?.Remove("FactorType"); AdditionalData["FactorType"] = unknown; } else { FactorType = parsed; AdditionalData.Remove("FactorType"); } } },
                 { "Identity", n => { Identity = n.GetStringValue(); } },
                 { "Ttl", n => { Ttl = n.GetIntValue(); } },
             };

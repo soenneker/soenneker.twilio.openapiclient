@@ -17,9 +17,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("MoveToDraft") is { } nullNodeMoveToDraft && nullNodeMoveToDraft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveToDraft = null;
-            if (parseNode.GetChildNode("TargetAccountSid") is { } nullNodeTargetAccountSid && nullNodeTargetAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetAccountSid = null;
+            if (parseNode.GetChildNode("FriendlyName") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("FriendlyName"); }
+            else if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("MoveToDraft") is null) { _explicitNullValueMoveToDraft = default!; _explicitNullProperties?.Remove("MoveToDraft"); }
+            else if (parseNode.GetChildNode("MoveToDraft") is { } nullNodeMoveToDraft && nullNodeMoveToDraft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveToDraft = null;
+            if (parseNode.GetChildNode("TargetAccountSid") is null) { _explicitNullValueTargetAccountSid = default!; _explicitNullProperties?.Remove("TargetAccountSid"); }
+            else if (parseNode.GetChildNode("TargetAccountSid") is { } nullNodeTargetAccountSid && nullNodeTargetAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetAccountSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The string that you assigned to describe the cloned bundle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>If set to true, the cloned bundle will be in the DRAFT state, else it will be twilio-approved</summary>
-        public bool? MoveToDraft { get => _explicitNullValueMoveToDraft; set { _explicitNullValueMoveToDraft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MoveToDraft"); else _explicitNullProperties?.Remove("MoveToDraft"); } }
+        public bool? MoveToDraft { get => _explicitNullValueMoveToDraft; set { _explicitNullValueMoveToDraft = value; AdditionalData?.Remove("MoveToDraft"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MoveToDraft"); else _explicitNullProperties?.Remove("MoveToDraft"); } }
         private bool? _explicitNullValueMoveToDraft = default!;
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) where the bundle needs to be cloned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetAccountSid { get => _explicitNullValueTargetAccountSid; set { _explicitNullValueTargetAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TargetAccountSid"); else _explicitNullProperties?.Remove("TargetAccountSid"); } }
+        public string? TargetAccountSid { get => _explicitNullValueTargetAccountSid; set { _explicitNullValueTargetAccountSid = value; AdditionalData?.Remove("TargetAccountSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TargetAccountSid"); else _explicitNullProperties?.Remove("TargetAccountSid"); } }
         private string? _explicitNullValueTargetAccountSid = default!;
 #nullable restore
 #else
-        public string TargetAccountSid { get => _explicitNullValueTargetAccountSid; set { _explicitNullValueTargetAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TargetAccountSid"); else _explicitNullProperties?.Remove("TargetAccountSid"); } }
+        public string TargetAccountSid { get => _explicitNullValueTargetAccountSid; set { _explicitNullValueTargetAccountSid = value; AdditionalData?.Remove("TargetAccountSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TargetAccountSid"); else _explicitNullProperties?.Remove("TargetAccountSid"); } }
         private string _explicitNullValueTargetAccountSid = default!;
 #endif
         /// <summary>

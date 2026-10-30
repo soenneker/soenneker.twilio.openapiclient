@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.DialingPermissions.C
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_voice_v1.V1.DialingPermissions.Countries.Item.HighRiskSpecialPrefixes.HighRiskSpecialPrefixesRequestBuilder.HighRiskSpecialPrefixesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://voice.twilio.com", "/twilio_voice_v1/v1/DialingPermissions/Countries/{isoCode}/HighRiskSpecialPrefixes", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

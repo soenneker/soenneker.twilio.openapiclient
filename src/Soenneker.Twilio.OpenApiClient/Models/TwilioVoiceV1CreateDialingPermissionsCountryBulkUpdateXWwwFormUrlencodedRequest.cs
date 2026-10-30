@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("UpdateRequest") is { } nullNodeUpdateRequest && nullNodeUpdateRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateRequest = null;
+            if (parseNode.GetChildNode("UpdateRequest") is null) { _explicitNullValueUpdateRequest = default!; _explicitNullProperties?.Remove("UpdateRequest"); }
+            else if (parseNode.GetChildNode("UpdateRequest") is { } nullNodeUpdateRequest && nullNodeUpdateRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>URL encoded JSON array of update objects. example : `[ { &quot;iso_code&quot;: &quot;GB&quot;, &quot;low_risk_numbers_enabled&quot;: &quot;true&quot;, &quot;high_risk_special_numbers_enabled&quot;:&quot;true&quot;, &quot;high_risk_tollfraud_numbers_enabled&quot;: &quot;false&quot; } ]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdateRequest { get => _explicitNullValueUpdateRequest; set { _explicitNullValueUpdateRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdateRequest"); else _explicitNullProperties?.Remove("UpdateRequest"); } }
+        public string? UpdateRequest { get => _explicitNullValueUpdateRequest; set { _explicitNullValueUpdateRequest = value; AdditionalData?.Remove("UpdateRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdateRequest"); else _explicitNullProperties?.Remove("UpdateRequest"); } }
         private string? _explicitNullValueUpdateRequest = default!;
 #nullable restore
 #else
-        public string UpdateRequest { get => _explicitNullValueUpdateRequest; set { _explicitNullValueUpdateRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdateRequest"); else _explicitNullProperties?.Remove("UpdateRequest"); } }
+        public string UpdateRequest { get => _explicitNullValueUpdateRequest; set { _explicitNullValueUpdateRequest = value; AdditionalData?.Remove("UpdateRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdateRequest"); else _explicitNullProperties?.Remove("UpdateRequest"); } }
         private string _explicitNullValueUpdateRequest = default!;
 #endif
         /// <summary>

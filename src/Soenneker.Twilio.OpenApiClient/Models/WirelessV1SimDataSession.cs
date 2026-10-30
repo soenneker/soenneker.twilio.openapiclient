@@ -17,32 +17,48 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("cell_id") is { } nullNodeCellId && nullNodeCellId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CellId = null;
-            if (parseNode.GetChildNode("cell_location_estimate") is { } nullNodeCellLocationEstimate && nullNodeCellLocationEstimate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CellLocationEstimate = null;
-            if (parseNode.GetChildNode("end") is { } nullNodeEnd && nullNodeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) End = null;
-            if (parseNode.GetChildNode("imei") is { } nullNodeImei && nullNodeImei.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Imei = null;
-            if (parseNode.GetChildNode("last_updated") is { } nullNodeLastUpdated && nullNodeLastUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdated = null;
-            if (parseNode.GetChildNode("operator_country") is { } nullNodeOperatorCountry && nullNodeOperatorCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorCountry = null;
-            if (parseNode.GetChildNode("operator_mcc") is { } nullNodeOperatorMcc && nullNodeOperatorMcc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorMcc = null;
-            if (parseNode.GetChildNode("operator_mnc") is { } nullNodeOperatorMnc && nullNodeOperatorMnc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorMnc = null;
-            if (parseNode.GetChildNode("operator_name") is { } nullNodeOperatorName && nullNodeOperatorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorName = null;
-            if (parseNode.GetChildNode("packets_downloaded") is { } nullNodePacketsDownloaded && nullNodePacketsDownloaded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PacketsDownloaded = null;
-            if (parseNode.GetChildNode("packets_uploaded") is { } nullNodePacketsUploaded && nullNodePacketsUploaded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PacketsUploaded = null;
-            if (parseNode.GetChildNode("radio_link") is { } nullNodeRadioLink && nullNodeRadioLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RadioLink = null;
-            if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
-            if (parseNode.GetChildNode("sim_sid") is { } nullNodeSimSid && nullNodeSimSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimSid = null;
-            if (parseNode.GetChildNode("start") is { } nullNodeStart && nullNodeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Start = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("cell_id") is null) { _explicitNullValueCellId = default!; _explicitNullProperties?.Remove("cell_id"); }
+            else if (parseNode.GetChildNode("cell_id") is { } nullNodeCellId && nullNodeCellId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CellId = null;
+            if (parseNode.GetChildNode("cell_location_estimate") is null) { _explicitNullValueCellLocationEstimate = default!; _explicitNullProperties?.Remove("cell_location_estimate"); }
+            else if (parseNode.GetChildNode("cell_location_estimate") is { } nullNodeCellLocationEstimate && nullNodeCellLocationEstimate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CellLocationEstimate = null;
+            if (parseNode.GetChildNode("end") is null) { _explicitNullValueEnd = default!; _explicitNullProperties?.Remove("end"); }
+            else if (parseNode.GetChildNode("end") is { } nullNodeEnd && nullNodeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) End = null;
+            if (parseNode.GetChildNode("imei") is null) { _explicitNullValueImei = default!; _explicitNullProperties?.Remove("imei"); }
+            else if (parseNode.GetChildNode("imei") is { } nullNodeImei && nullNodeImei.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Imei = null;
+            if (parseNode.GetChildNode("last_updated") is null) { _explicitNullValueLastUpdated = default!; _explicitNullProperties?.Remove("last_updated"); }
+            else if (parseNode.GetChildNode("last_updated") is { } nullNodeLastUpdated && nullNodeLastUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdated = null;
+            if (parseNode.GetChildNode("operator_country") is null) { _explicitNullValueOperatorCountry = default!; _explicitNullProperties?.Remove("operator_country"); }
+            else if (parseNode.GetChildNode("operator_country") is { } nullNodeOperatorCountry && nullNodeOperatorCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorCountry = null;
+            if (parseNode.GetChildNode("operator_mcc") is null) { _explicitNullValueOperatorMcc = default!; _explicitNullProperties?.Remove("operator_mcc"); }
+            else if (parseNode.GetChildNode("operator_mcc") is { } nullNodeOperatorMcc && nullNodeOperatorMcc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorMcc = null;
+            if (parseNode.GetChildNode("operator_mnc") is null) { _explicitNullValueOperatorMnc = default!; _explicitNullProperties?.Remove("operator_mnc"); }
+            else if (parseNode.GetChildNode("operator_mnc") is { } nullNodeOperatorMnc && nullNodeOperatorMnc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorMnc = null;
+            if (parseNode.GetChildNode("operator_name") is null) { _explicitNullValueOperatorName = default!; _explicitNullProperties?.Remove("operator_name"); }
+            else if (parseNode.GetChildNode("operator_name") is { } nullNodeOperatorName && nullNodeOperatorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorName = null;
+            if (parseNode.GetChildNode("packets_downloaded") is null) { _explicitNullValuePacketsDownloaded = default!; _explicitNullProperties?.Remove("packets_downloaded"); }
+            else if (parseNode.GetChildNode("packets_downloaded") is { } nullNodePacketsDownloaded && nullNodePacketsDownloaded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PacketsDownloaded = null;
+            if (parseNode.GetChildNode("packets_uploaded") is null) { _explicitNullValuePacketsUploaded = default!; _explicitNullProperties?.Remove("packets_uploaded"); }
+            else if (parseNode.GetChildNode("packets_uploaded") is { } nullNodePacketsUploaded && nullNodePacketsUploaded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PacketsUploaded = null;
+            if (parseNode.GetChildNode("radio_link") is null) { _explicitNullValueRadioLink = default!; _explicitNullProperties?.Remove("radio_link"); }
+            else if (parseNode.GetChildNode("radio_link") is { } nullNodeRadioLink && nullNodeRadioLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RadioLink = null;
+            if (parseNode.GetChildNode("sid") is null) { _explicitNullValueSid = default!; _explicitNullProperties?.Remove("sid"); }
+            else if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
+            if (parseNode.GetChildNode("sim_sid") is null) { _explicitNullValueSimSid = default!; _explicitNullProperties?.Remove("sim_sid"); }
+            else if (parseNode.GetChildNode("sim_sid") is { } nullNodeSimSid && nullNodeSimSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimSid = null;
+            if (parseNode.GetChildNode("start") is null) { _explicitNullValueStart = default!; _explicitNullProperties?.Remove("start"); }
+            else if (parseNode.GetChildNode("start") is { } nullNodeStart && nullNodeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Start = null;
         }
 
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the DataSession resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -50,117 +66,117 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The unique ID of the cellular tower that the device was attached to at the moment when the Data Session was last updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CellId { get => _explicitNullValueCellId; set { _explicitNullValueCellId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cell_id"); else _explicitNullProperties?.Remove("cell_id"); } }
+        public string? CellId { get => _explicitNullValueCellId; set { _explicitNullValueCellId = value; AdditionalData?.Remove("cell_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cell_id"); else _explicitNullProperties?.Remove("cell_id"); } }
         private string? _explicitNullValueCellId = default!;
 #nullable restore
 #else
-        public string CellId { get => _explicitNullValueCellId; set { _explicitNullValueCellId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cell_id"); else _explicitNullProperties?.Remove("cell_id"); } }
+        public string CellId { get => _explicitNullValueCellId; set { _explicitNullValueCellId = value; AdditionalData?.Remove("cell_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cell_id"); else _explicitNullProperties?.Remove("cell_id"); } }
         private string _explicitNullValueCellId = default!;
 #endif
         /// <summary>An object that describes the estimated location in latitude and longitude where the device&apos;s Data Session took place. The location is derived from the `cell_id` when the Data Session was last updated. See [Cell Location Estimate Object](https://www.twilio.com/docs/iot/wireless/api/datasession-resource#cell-location-estimate-object). </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CellLocationEstimate { get => _explicitNullValueCellLocationEstimate; set { _explicitNullValueCellLocationEstimate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cell_location_estimate"); else _explicitNullProperties?.Remove("cell_location_estimate"); } }
+        public UntypedNode? CellLocationEstimate { get => _explicitNullValueCellLocationEstimate; set { _explicitNullValueCellLocationEstimate = value; AdditionalData?.Remove("cell_location_estimate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cell_location_estimate"); else _explicitNullProperties?.Remove("cell_location_estimate"); } }
         private UntypedNode? _explicitNullValueCellLocationEstimate = default!;
 #nullable restore
 #else
-        public UntypedNode CellLocationEstimate { get => _explicitNullValueCellLocationEstimate; set { _explicitNullValueCellLocationEstimate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cell_location_estimate"); else _explicitNullProperties?.Remove("cell_location_estimate"); } }
+        public UntypedNode CellLocationEstimate { get => _explicitNullValueCellLocationEstimate; set { _explicitNullValueCellLocationEstimate = value; AdditionalData?.Remove("cell_location_estimate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cell_location_estimate"); else _explicitNullProperties?.Remove("cell_location_estimate"); } }
         private UntypedNode _explicitNullValueCellLocationEstimate = default!;
 #endif
         /// <summary>The date that the record ended, given as GMT in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.</summary>
-        public DateTimeOffset? End { get => _explicitNullValueEnd; set { _explicitNullValueEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end"); else _explicitNullProperties?.Remove("end"); } }
+        public DateTimeOffset? End { get => _explicitNullValueEnd; set { _explicitNullValueEnd = value; AdditionalData?.Remove("end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end"); else _explicitNullProperties?.Remove("end"); } }
         private DateTimeOffset? _explicitNullValueEnd = default!;
         /// <summary>The &apos;international mobile equipment identity&apos; is the unique ID of the device using the SIM to connect. An IMEI is a 15-digit string: 14 digits for the device identifier plus a check digit calculated using the Luhn formula.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Imei { get => _explicitNullValueImei; set { _explicitNullValueImei = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imei"); else _explicitNullProperties?.Remove("imei"); } }
+        public string? Imei { get => _explicitNullValueImei; set { _explicitNullValueImei = value; AdditionalData?.Remove("imei"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imei"); else _explicitNullProperties?.Remove("imei"); } }
         private string? _explicitNullValueImei = default!;
 #nullable restore
 #else
-        public string Imei { get => _explicitNullValueImei; set { _explicitNullValueImei = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imei"); else _explicitNullProperties?.Remove("imei"); } }
+        public string Imei { get => _explicitNullValueImei; set { _explicitNullValueImei = value; AdditionalData?.Remove("imei"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imei"); else _explicitNullProperties?.Remove("imei"); } }
         private string _explicitNullValueImei = default!;
 #endif
         /// <summary>The date that the resource was last updated, given as GMT in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.</summary>
-        public DateTimeOffset? LastUpdated { get => _explicitNullValueLastUpdated; set { _explicitNullValueLastUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_updated"); else _explicitNullProperties?.Remove("last_updated"); } }
+        public DateTimeOffset? LastUpdated { get => _explicitNullValueLastUpdated; set { _explicitNullValueLastUpdated = value; AdditionalData?.Remove("last_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_updated"); else _explicitNullProperties?.Remove("last_updated"); } }
         private DateTimeOffset? _explicitNullValueLastUpdated = default!;
         /// <summary>The three letter country code representing where the device&apos;s Data Session took place. This is determined by looking up the `operator_mcc`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OperatorCountry { get => _explicitNullValueOperatorCountry; set { _explicitNullValueOperatorCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_country"); else _explicitNullProperties?.Remove("operator_country"); } }
+        public string? OperatorCountry { get => _explicitNullValueOperatorCountry; set { _explicitNullValueOperatorCountry = value; AdditionalData?.Remove("operator_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_country"); else _explicitNullProperties?.Remove("operator_country"); } }
         private string? _explicitNullValueOperatorCountry = default!;
 #nullable restore
 #else
-        public string OperatorCountry { get => _explicitNullValueOperatorCountry; set { _explicitNullValueOperatorCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_country"); else _explicitNullProperties?.Remove("operator_country"); } }
+        public string OperatorCountry { get => _explicitNullValueOperatorCountry; set { _explicitNullValueOperatorCountry = value; AdditionalData?.Remove("operator_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_country"); else _explicitNullProperties?.Remove("operator_country"); } }
         private string _explicitNullValueOperatorCountry = default!;
 #endif
         /// <summary>The &apos;mobile country code&apos; is the unique ID of the home country where the Data Session took place. See: [MCC/MNC lookup](http://mcc-mnc.com/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OperatorMcc { get => _explicitNullValueOperatorMcc; set { _explicitNullValueOperatorMcc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_mcc"); else _explicitNullProperties?.Remove("operator_mcc"); } }
+        public string? OperatorMcc { get => _explicitNullValueOperatorMcc; set { _explicitNullValueOperatorMcc = value; AdditionalData?.Remove("operator_mcc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_mcc"); else _explicitNullProperties?.Remove("operator_mcc"); } }
         private string? _explicitNullValueOperatorMcc = default!;
 #nullable restore
 #else
-        public string OperatorMcc { get => _explicitNullValueOperatorMcc; set { _explicitNullValueOperatorMcc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_mcc"); else _explicitNullProperties?.Remove("operator_mcc"); } }
+        public string OperatorMcc { get => _explicitNullValueOperatorMcc; set { _explicitNullValueOperatorMcc = value; AdditionalData?.Remove("operator_mcc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_mcc"); else _explicitNullProperties?.Remove("operator_mcc"); } }
         private string _explicitNullValueOperatorMcc = default!;
 #endif
         /// <summary>The &apos;mobile network code&apos; is the unique ID specific to the mobile operator network where the Data Session took place.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OperatorMnc { get => _explicitNullValueOperatorMnc; set { _explicitNullValueOperatorMnc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_mnc"); else _explicitNullProperties?.Remove("operator_mnc"); } }
+        public string? OperatorMnc { get => _explicitNullValueOperatorMnc; set { _explicitNullValueOperatorMnc = value; AdditionalData?.Remove("operator_mnc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_mnc"); else _explicitNullProperties?.Remove("operator_mnc"); } }
         private string? _explicitNullValueOperatorMnc = default!;
 #nullable restore
 #else
-        public string OperatorMnc { get => _explicitNullValueOperatorMnc; set { _explicitNullValueOperatorMnc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_mnc"); else _explicitNullProperties?.Remove("operator_mnc"); } }
+        public string OperatorMnc { get => _explicitNullValueOperatorMnc; set { _explicitNullValueOperatorMnc = value; AdditionalData?.Remove("operator_mnc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_mnc"); else _explicitNullProperties?.Remove("operator_mnc"); } }
         private string _explicitNullValueOperatorMnc = default!;
 #endif
         /// <summary>The friendly name of the mobile operator network that the [SIM](https://www.twilio.com/docs/iot/wireless/api/sim-resource)-connected device is attached to. This is determined by looking up the `operator_mnc`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OperatorName { get => _explicitNullValueOperatorName; set { _explicitNullValueOperatorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_name"); else _explicitNullProperties?.Remove("operator_name"); } }
+        public string? OperatorName { get => _explicitNullValueOperatorName; set { _explicitNullValueOperatorName = value; AdditionalData?.Remove("operator_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_name"); else _explicitNullProperties?.Remove("operator_name"); } }
         private string? _explicitNullValueOperatorName = default!;
 #nullable restore
 #else
-        public string OperatorName { get => _explicitNullValueOperatorName; set { _explicitNullValueOperatorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_name"); else _explicitNullProperties?.Remove("operator_name"); } }
+        public string OperatorName { get => _explicitNullValueOperatorName; set { _explicitNullValueOperatorName = value; AdditionalData?.Remove("operator_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_name"); else _explicitNullProperties?.Remove("operator_name"); } }
         private string _explicitNullValueOperatorName = default!;
 #endif
         /// <summary>The number of packets downloaded by the device between the `start` time and when the Data Session was last updated.</summary>
-        public int? PacketsDownloaded { get => _explicitNullValuePacketsDownloaded; set { _explicitNullValuePacketsDownloaded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packets_downloaded"); else _explicitNullProperties?.Remove("packets_downloaded"); } }
+        public int? PacketsDownloaded { get => _explicitNullValuePacketsDownloaded; set { _explicitNullValuePacketsDownloaded = value; AdditionalData?.Remove("packets_downloaded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packets_downloaded"); else _explicitNullProperties?.Remove("packets_downloaded"); } }
         private int? _explicitNullValuePacketsDownloaded = default!;
         /// <summary>The number of packets uploaded by the device between the `start` time and when the Data Session was last updated.</summary>
-        public int? PacketsUploaded { get => _explicitNullValuePacketsUploaded; set { _explicitNullValuePacketsUploaded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packets_uploaded"); else _explicitNullProperties?.Remove("packets_uploaded"); } }
+        public int? PacketsUploaded { get => _explicitNullValuePacketsUploaded; set { _explicitNullValuePacketsUploaded = value; AdditionalData?.Remove("packets_uploaded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packets_uploaded"); else _explicitNullProperties?.Remove("packets_uploaded"); } }
         private int? _explicitNullValuePacketsUploaded = default!;
         /// <summary>The generation of wireless technology that the device was using.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RadioLink { get => _explicitNullValueRadioLink; set { _explicitNullValueRadioLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radio_link"); else _explicitNullProperties?.Remove("radio_link"); } }
+        public string? RadioLink { get => _explicitNullValueRadioLink; set { _explicitNullValueRadioLink = value; AdditionalData?.Remove("radio_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radio_link"); else _explicitNullProperties?.Remove("radio_link"); } }
         private string? _explicitNullValueRadioLink = default!;
 #nullable restore
 #else
-        public string RadioLink { get => _explicitNullValueRadioLink; set { _explicitNullValueRadioLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radio_link"); else _explicitNullProperties?.Remove("radio_link"); } }
+        public string RadioLink { get => _explicitNullValueRadioLink; set { _explicitNullValueRadioLink = value; AdditionalData?.Remove("radio_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radio_link"); else _explicitNullProperties?.Remove("radio_link"); } }
         private string _explicitNullValueRadioLink = default!;
 #endif
         /// <summary>The unique string that we created to identify the DataSession resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string? _explicitNullValueSid = default!;
 #nullable restore
 #else
-        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string _explicitNullValueSid = default!;
 #endif
         /// <summary>The SID of the [Sim resource](https://www.twilio.com/docs/iot/wireless/api/sim-resource) that the Data Session is for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SimSid { get => _explicitNullValueSimSid; set { _explicitNullValueSimSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_sid"); else _explicitNullProperties?.Remove("sim_sid"); } }
+        public string? SimSid { get => _explicitNullValueSimSid; set { _explicitNullValueSimSid = value; AdditionalData?.Remove("sim_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_sid"); else _explicitNullProperties?.Remove("sim_sid"); } }
         private string? _explicitNullValueSimSid = default!;
 #nullable restore
 #else
-        public string SimSid { get => _explicitNullValueSimSid; set { _explicitNullValueSimSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_sid"); else _explicitNullProperties?.Remove("sim_sid"); } }
+        public string SimSid { get => _explicitNullValueSimSid; set { _explicitNullValueSimSid = value; AdditionalData?.Remove("sim_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_sid"); else _explicitNullProperties?.Remove("sim_sid"); } }
         private string _explicitNullValueSimSid = default!;
 #endif
         /// <summary>The date that the Data Session started, given as GMT in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.</summary>
-        public DateTimeOffset? Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
+        public DateTimeOffset? Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; AdditionalData?.Remove("start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
         private DateTimeOffset? _explicitNullValueStart = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.WirelessV1SimDataSession"/> and sets the default values.

@@ -18,7 +18,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("outbound_carrier_calling") is { } nullNodeOutboundCarrierCalling && nullNodeOutboundCarrierCalling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundCarrierCalling = null;
+            if (parseNode.GetChildNode("outbound_carrier_calling") is null) { _explicitNullValueOutboundCarrierCalling = default!; _explicitNullProperties?.Remove("outbound_carrier_calling"); }
+            else if (parseNode.GetChildNode("outbound_carrier_calling") is { } nullNodeOutboundCarrierCalling && nullNodeOutboundCarrierCalling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundCarrierCalling = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>KYT metrics for outbound carrier calling.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling? OutboundCarrierCalling { get => _explicitNullValueOutboundCarrierCalling; set { _explicitNullValueOutboundCarrierCalling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_carrier_calling"); else _explicitNullProperties?.Remove("outbound_carrier_calling"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling? OutboundCarrierCalling { get => _explicitNullValueOutboundCarrierCalling; set { _explicitNullValueOutboundCarrierCalling = value; AdditionalData?.Remove("outbound_carrier_calling"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_carrier_calling"); else _explicitNullProperties?.Remove("outbound_carrier_calling"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling? _explicitNullValueOutboundCarrierCalling = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling OutboundCarrierCalling { get => _explicitNullValueOutboundCarrierCalling; set { _explicitNullValueOutboundCarrierCalling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_carrier_calling"); else _explicitNullProperties?.Remove("outbound_carrier_calling"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling OutboundCarrierCalling { get => _explicitNullValueOutboundCarrierCalling; set { _explicitNullValueOutboundCarrierCalling = value; AdditionalData?.Remove("outbound_carrier_calling"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_carrier_calling"); else _explicitNullProperties?.Remove("outbound_carrier_calling"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling _explicitNullValueOutboundCarrierCalling = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CredentialListSid") is { } nullNodeCredentialListSid && nullNodeCredentialListSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CredentialListSid = null;
+            if (parseNode.GetChildNode("CredentialListSid") is null) { _explicitNullValueCredentialListSid = default!; _explicitNullProperties?.Remove("CredentialListSid"); }
+            else if (parseNode.GetChildNode("CredentialListSid") is { } nullNodeCredentialListSid && nullNodeCredentialListSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CredentialListSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A 34 character string that uniquely identifies the CredentialList resource to map to the SIP domain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CredentialListSid { get => _explicitNullValueCredentialListSid; set { _explicitNullValueCredentialListSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CredentialListSid"); else _explicitNullProperties?.Remove("CredentialListSid"); } }
+        public string? CredentialListSid { get => _explicitNullValueCredentialListSid; set { _explicitNullValueCredentialListSid = value; AdditionalData?.Remove("CredentialListSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CredentialListSid"); else _explicitNullProperties?.Remove("CredentialListSid"); } }
         private string? _explicitNullValueCredentialListSid = default!;
 #nullable restore
 #else
-        public string CredentialListSid { get => _explicitNullValueCredentialListSid; set { _explicitNullValueCredentialListSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CredentialListSid"); else _explicitNullProperties?.Remove("CredentialListSid"); } }
+        public string CredentialListSid { get => _explicitNullValueCredentialListSid; set { _explicitNullValueCredentialListSid = value; AdditionalData?.Remove("CredentialListSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CredentialListSid"); else _explicitNullProperties?.Remove("CredentialListSid"); } }
         private string _explicitNullValueCredentialListSid = default!;
 #endif
         /// <summary>

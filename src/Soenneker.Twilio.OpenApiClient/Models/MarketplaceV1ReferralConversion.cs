@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("converted_account_sid") is { } nullNodeConvertedAccountSid && nullNodeConvertedAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConvertedAccountSid = null;
+            if (parseNode.GetChildNode("converted_account_sid") is null) { _explicitNullValueConvertedAccountSid = default!; _explicitNullProperties?.Remove("converted_account_sid"); }
+            else if (parseNode.GetChildNode("converted_account_sid") is { } nullNodeConvertedAccountSid && nullNodeConvertedAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConvertedAccountSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The converted_account_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConvertedAccountSid { get => _explicitNullValueConvertedAccountSid; set { _explicitNullValueConvertedAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("converted_account_sid"); else _explicitNullProperties?.Remove("converted_account_sid"); } }
+        public string? ConvertedAccountSid { get => _explicitNullValueConvertedAccountSid; set { _explicitNullValueConvertedAccountSid = value; AdditionalData?.Remove("converted_account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("converted_account_sid"); else _explicitNullProperties?.Remove("converted_account_sid"); } }
         private string? _explicitNullValueConvertedAccountSid = default!;
 #nullable restore
 #else
-        public string ConvertedAccountSid { get => _explicitNullValueConvertedAccountSid; set { _explicitNullValueConvertedAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("converted_account_sid"); else _explicitNullProperties?.Remove("converted_account_sid"); } }
+        public string ConvertedAccountSid { get => _explicitNullValueConvertedAccountSid; set { _explicitNullValueConvertedAccountSid = value; AdditionalData?.Remove("converted_account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("converted_account_sid"); else _explicitNullProperties?.Remove("converted_account_sid"); } }
         private string _explicitNullValueConvertedAccountSid = default!;
 #endif
         /// <summary>

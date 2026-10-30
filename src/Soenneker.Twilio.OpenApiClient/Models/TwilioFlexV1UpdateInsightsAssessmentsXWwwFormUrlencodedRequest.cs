@@ -17,9 +17,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AnswerId") is { } nullNodeAnswerId && nullNodeAnswerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerId = null;
-            if (parseNode.GetChildNode("AnswerText") is { } nullNodeAnswerText && nullNodeAnswerText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerText = null;
-            if (parseNode.GetChildNode("Offset") is { } nullNodeOffset && nullNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offset = null;
+            if (parseNode.GetChildNode("AnswerId") is null) { _explicitNullValueAnswerId = default!; _explicitNullProperties?.Remove("AnswerId"); }
+            else if (parseNode.GetChildNode("AnswerId") is { } nullNodeAnswerId && nullNodeAnswerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerId = null;
+            if (parseNode.GetChildNode("AnswerText") is null) { _explicitNullValueAnswerText = default!; _explicitNullProperties?.Remove("AnswerText"); }
+            else if (parseNode.GetChildNode("AnswerText") is { } nullNodeAnswerText && nullNodeAnswerText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerText = null;
+            if (parseNode.GetChildNode("Offset") is null) { _explicitNullValueOffset = default!; _explicitNullProperties?.Remove("Offset"); }
+            else if (parseNode.GetChildNode("Offset") is { } nullNodeOffset && nullNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offset = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,25 +30,25 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The id of the answer selected by user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AnswerId { get => _explicitNullValueAnswerId; set { _explicitNullValueAnswerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerId"); else _explicitNullProperties?.Remove("AnswerId"); } }
+        public string? AnswerId { get => _explicitNullValueAnswerId; set { _explicitNullValueAnswerId = value; AdditionalData?.Remove("AnswerId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerId"); else _explicitNullProperties?.Remove("AnswerId"); } }
         private string? _explicitNullValueAnswerId = default!;
 #nullable restore
 #else
-        public string AnswerId { get => _explicitNullValueAnswerId; set { _explicitNullValueAnswerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerId"); else _explicitNullProperties?.Remove("AnswerId"); } }
+        public string AnswerId { get => _explicitNullValueAnswerId; set { _explicitNullValueAnswerId = value; AdditionalData?.Remove("AnswerId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerId"); else _explicitNullProperties?.Remove("AnswerId"); } }
         private string _explicitNullValueAnswerId = default!;
 #endif
         /// <summary>The answer text selected by user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AnswerText { get => _explicitNullValueAnswerText; set { _explicitNullValueAnswerText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerText"); else _explicitNullProperties?.Remove("AnswerText"); } }
+        public string? AnswerText { get => _explicitNullValueAnswerText; set { _explicitNullValueAnswerText = value; AdditionalData?.Remove("AnswerText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerText"); else _explicitNullProperties?.Remove("AnswerText"); } }
         private string? _explicitNullValueAnswerText = default!;
 #nullable restore
 #else
-        public string AnswerText { get => _explicitNullValueAnswerText; set { _explicitNullValueAnswerText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerText"); else _explicitNullProperties?.Remove("AnswerText"); } }
+        public string AnswerText { get => _explicitNullValueAnswerText; set { _explicitNullValueAnswerText = value; AdditionalData?.Remove("AnswerText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerText"); else _explicitNullProperties?.Remove("AnswerText"); } }
         private string _explicitNullValueAnswerText = default!;
 #endif
         /// <summary>The offset of the conversation</summary>
-        public double? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Offset"); else _explicitNullProperties?.Remove("Offset"); } }
+        public double? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; AdditionalData?.Remove("Offset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Offset"); else _explicitNullProperties?.Remove("Offset"); } }
         private double? _explicitNullValueOffset = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1UpdateInsightsAssessmentsXWwwFormUrlencodedRequest"/> and sets the default values.

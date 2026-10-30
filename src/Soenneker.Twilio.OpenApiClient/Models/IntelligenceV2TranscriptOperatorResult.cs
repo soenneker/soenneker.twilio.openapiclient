@@ -17,149 +17,165 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("extract_match") is { } nullNodeExtractMatch && nullNodeExtractMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtractMatch = null;
-            if (parseNode.GetChildNode("extract_results") is { } nullNodeExtractResults && nullNodeExtractResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtractResults = null;
-            if (parseNode.GetChildNode("json_results") is { } nullNodeJsonResults && nullNodeJsonResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JsonResults = null;
-            if (parseNode.GetChildNode("label_probabilities") is { } nullNodeLabelProbabilities && nullNodeLabelProbabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelProbabilities = null;
-            if (parseNode.GetChildNode("match_probability") is { } nullNodeMatchProbability && nullNodeMatchProbability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchProbability = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("normalized_result") is { } nullNodeNormalizedResult && nullNodeNormalizedResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NormalizedResult = null;
-            if (parseNode.GetChildNode("operator_sid") is { } nullNodeOperatorSid && nullNodeOperatorSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorSid = null;
-            if (parseNode.GetChildNode("operator_type") is { } nullNodeOperatorType && nullNodeOperatorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorType = null;
-            if (parseNode.GetChildNode("predicted_label") is { } nullNodePredictedLabel && nullNodePredictedLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PredictedLabel = null;
-            if (parseNode.GetChildNode("predicted_probability") is { } nullNodePredictedProbability && nullNodePredictedProbability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PredictedProbability = null;
-            if (parseNode.GetChildNode("text_generation_results") is { } nullNodeTextGenerationResults && nullNodeTextGenerationResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextGenerationResults = null;
-            if (parseNode.GetChildNode("transcript_sid") is { } nullNodeTranscriptSid && nullNodeTranscriptSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptSid = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
-            if (parseNode.GetChildNode("utterance_match") is { } nullNodeUtteranceMatch && nullNodeUtteranceMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtteranceMatch = null;
-            if (parseNode.GetChildNode("utterance_results") is { } nullNodeUtteranceResults && nullNodeUtteranceResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtteranceResults = null;
+            if (parseNode.GetChildNode("extract_match") is null) { _explicitNullValueExtractMatch = default!; _explicitNullProperties?.Remove("extract_match"); }
+            else if (parseNode.GetChildNode("extract_match") is { } nullNodeExtractMatch && nullNodeExtractMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtractMatch = null;
+            if (parseNode.GetChildNode("extract_results") is null) { _explicitNullValueExtractResults = default!; _explicitNullProperties?.Remove("extract_results"); }
+            else if (parseNode.GetChildNode("extract_results") is { } nullNodeExtractResults && nullNodeExtractResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtractResults = null;
+            if (parseNode.GetChildNode("json_results") is null) { _explicitNullValueJsonResults = default!; _explicitNullProperties?.Remove("json_results"); }
+            else if (parseNode.GetChildNode("json_results") is { } nullNodeJsonResults && nullNodeJsonResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JsonResults = null;
+            if (parseNode.GetChildNode("label_probabilities") is null) { _explicitNullValueLabelProbabilities = default!; _explicitNullProperties?.Remove("label_probabilities"); }
+            else if (parseNode.GetChildNode("label_probabilities") is { } nullNodeLabelProbabilities && nullNodeLabelProbabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelProbabilities = null;
+            if (parseNode.GetChildNode("match_probability") is null) { _explicitNullValueMatchProbability = default!; _explicitNullProperties?.Remove("match_probability"); }
+            else if (parseNode.GetChildNode("match_probability") is { } nullNodeMatchProbability && nullNodeMatchProbability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchProbability = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("normalized_result") is null) { _explicitNullValueNormalizedResult = default!; _explicitNullProperties?.Remove("normalized_result"); }
+            else if (parseNode.GetChildNode("normalized_result") is { } nullNodeNormalizedResult && nullNodeNormalizedResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NormalizedResult = null;
+            if (parseNode.GetChildNode("operator_sid") is null) { _explicitNullValueOperatorSid = default!; _explicitNullProperties?.Remove("operator_sid"); }
+            else if (parseNode.GetChildNode("operator_sid") is { } nullNodeOperatorSid && nullNodeOperatorSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorSid = null;
+            if (parseNode.GetChildNode("operator_type") is null) { _explicitNullValueOperatorType = default!; _explicitNullProperties?.Remove("operator_type"); }
+            else if (parseNode.GetChildNode("operator_type") is { } nullNodeOperatorType && nullNodeOperatorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorType = null;
+            if (parseNode.GetChildNode("predicted_label") is null) { _explicitNullValuePredictedLabel = default!; _explicitNullProperties?.Remove("predicted_label"); }
+            else if (parseNode.GetChildNode("predicted_label") is { } nullNodePredictedLabel && nullNodePredictedLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PredictedLabel = null;
+            if (parseNode.GetChildNode("predicted_probability") is null) { _explicitNullValuePredictedProbability = default!; _explicitNullProperties?.Remove("predicted_probability"); }
+            else if (parseNode.GetChildNode("predicted_probability") is { } nullNodePredictedProbability && nullNodePredictedProbability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PredictedProbability = null;
+            if (parseNode.GetChildNode("text_generation_results") is null) { _explicitNullValueTextGenerationResults = default!; _explicitNullProperties?.Remove("text_generation_results"); }
+            else if (parseNode.GetChildNode("text_generation_results") is { } nullNodeTextGenerationResults && nullNodeTextGenerationResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextGenerationResults = null;
+            if (parseNode.GetChildNode("transcript_sid") is null) { _explicitNullValueTranscriptSid = default!; _explicitNullProperties?.Remove("transcript_sid"); }
+            else if (parseNode.GetChildNode("transcript_sid") is { } nullNodeTranscriptSid && nullNodeTranscriptSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptSid = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("utterance_match") is null) { _explicitNullValueUtteranceMatch = default!; _explicitNullProperties?.Remove("utterance_match"); }
+            else if (parseNode.GetChildNode("utterance_match") is { } nullNodeUtteranceMatch && nullNodeUtteranceMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtteranceMatch = null;
+            if (parseNode.GetChildNode("utterance_results") is null) { _explicitNullValueUtteranceResults = default!; _explicitNullProperties?.Remove("utterance_results"); }
+            else if (parseNode.GetChildNode("utterance_results") is { } nullNodeUtteranceResults && nullNodeUtteranceResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtteranceResults = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Boolean to tell if extract Language Understanding Processing model matches results.</summary>
-        public bool? ExtractMatch { get => _explicitNullValueExtractMatch; set { _explicitNullValueExtractMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract_match"); else _explicitNullProperties?.Remove("extract_match"); } }
+        public bool? ExtractMatch { get => _explicitNullValueExtractMatch; set { _explicitNullValueExtractMatch = value; AdditionalData?.Remove("extract_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract_match"); else _explicitNullProperties?.Remove("extract_match"); } }
         private bool? _explicitNullValueExtractMatch = default!;
         /// <summary>List of text extraction results. This might be available on classify-extract model outputs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ExtractResults { get => _explicitNullValueExtractResults; set { _explicitNullValueExtractResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract_results"); else _explicitNullProperties?.Remove("extract_results"); } }
+        public UntypedNode? ExtractResults { get => _explicitNullValueExtractResults; set { _explicitNullValueExtractResults = value; AdditionalData?.Remove("extract_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract_results"); else _explicitNullProperties?.Remove("extract_results"); } }
         private UntypedNode? _explicitNullValueExtractResults = default!;
 #nullable restore
 #else
-        public UntypedNode ExtractResults { get => _explicitNullValueExtractResults; set { _explicitNullValueExtractResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract_results"); else _explicitNullProperties?.Remove("extract_results"); } }
+        public UntypedNode ExtractResults { get => _explicitNullValueExtractResults; set { _explicitNullValueExtractResults = value; AdditionalData?.Remove("extract_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract_results"); else _explicitNullProperties?.Remove("extract_results"); } }
         private UntypedNode _explicitNullValueExtractResults = default!;
 #endif
         /// <summary>The json_results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? JsonResults { get => _explicitNullValueJsonResults; set { _explicitNullValueJsonResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("json_results"); else _explicitNullProperties?.Remove("json_results"); } }
+        public UntypedNode? JsonResults { get => _explicitNullValueJsonResults; set { _explicitNullValueJsonResults = value; AdditionalData?.Remove("json_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("json_results"); else _explicitNullProperties?.Remove("json_results"); } }
         private UntypedNode? _explicitNullValueJsonResults = default!;
 #nullable restore
 #else
-        public UntypedNode JsonResults { get => _explicitNullValueJsonResults; set { _explicitNullValueJsonResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("json_results"); else _explicitNullProperties?.Remove("json_results"); } }
+        public UntypedNode JsonResults { get => _explicitNullValueJsonResults; set { _explicitNullValueJsonResults = value; AdditionalData?.Remove("json_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("json_results"); else _explicitNullProperties?.Remove("json_results"); } }
         private UntypedNode _explicitNullValueJsonResults = default!;
 #endif
         /// <summary>The labels probabilities. This might be available on conversation classify model outputs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? LabelProbabilities { get => _explicitNullValueLabelProbabilities; set { _explicitNullValueLabelProbabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_probabilities"); else _explicitNullProperties?.Remove("label_probabilities"); } }
+        public UntypedNode? LabelProbabilities { get => _explicitNullValueLabelProbabilities; set { _explicitNullValueLabelProbabilities = value; AdditionalData?.Remove("label_probabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_probabilities"); else _explicitNullProperties?.Remove("label_probabilities"); } }
         private UntypedNode? _explicitNullValueLabelProbabilities = default!;
 #nullable restore
 #else
-        public UntypedNode LabelProbabilities { get => _explicitNullValueLabelProbabilities; set { _explicitNullValueLabelProbabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_probabilities"); else _explicitNullProperties?.Remove("label_probabilities"); } }
+        public UntypedNode LabelProbabilities { get => _explicitNullValueLabelProbabilities; set { _explicitNullValueLabelProbabilities = value; AdditionalData?.Remove("label_probabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_probabilities"); else _explicitNullProperties?.Remove("label_probabilities"); } }
         private UntypedNode _explicitNullValueLabelProbabilities = default!;
 #endif
         /// <summary>Percentage of &apos;matching&apos; class needed to consider a sentence matches</summary>
-        public double? MatchProbability { get => _explicitNullValueMatchProbability; set { _explicitNullValueMatchProbability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("match_probability"); else _explicitNullProperties?.Remove("match_probability"); } }
+        public double? MatchProbability { get => _explicitNullValueMatchProbability; set { _explicitNullValueMatchProbability = value; AdditionalData?.Remove("match_probability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("match_probability"); else _explicitNullProperties?.Remove("match_probability"); } }
         private double? _explicitNullValueMatchProbability = default!;
         /// <summary>The name of the applied Language Understanding.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Normalized output of extraction stage which matches Label.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NormalizedResult { get => _explicitNullValueNormalizedResult; set { _explicitNullValueNormalizedResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_result"); else _explicitNullProperties?.Remove("normalized_result"); } }
+        public string? NormalizedResult { get => _explicitNullValueNormalizedResult; set { _explicitNullValueNormalizedResult = value; AdditionalData?.Remove("normalized_result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_result"); else _explicitNullProperties?.Remove("normalized_result"); } }
         private string? _explicitNullValueNormalizedResult = default!;
 #nullable restore
 #else
-        public string NormalizedResult { get => _explicitNullValueNormalizedResult; set { _explicitNullValueNormalizedResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_result"); else _explicitNullProperties?.Remove("normalized_result"); } }
+        public string NormalizedResult { get => _explicitNullValueNormalizedResult; set { _explicitNullValueNormalizedResult = value; AdditionalData?.Remove("normalized_result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_result"); else _explicitNullProperties?.Remove("normalized_result"); } }
         private string _explicitNullValueNormalizedResult = default!;
 #endif
         /// <summary>A 34 character string that identifies this Language Understanding operator sid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OperatorSid { get => _explicitNullValueOperatorSid; set { _explicitNullValueOperatorSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_sid"); else _explicitNullProperties?.Remove("operator_sid"); } }
+        public string? OperatorSid { get => _explicitNullValueOperatorSid; set { _explicitNullValueOperatorSid = value; AdditionalData?.Remove("operator_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_sid"); else _explicitNullProperties?.Remove("operator_sid"); } }
         private string? _explicitNullValueOperatorSid = default!;
 #nullable restore
 #else
-        public string OperatorSid { get => _explicitNullValueOperatorSid; set { _explicitNullValueOperatorSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_sid"); else _explicitNullProperties?.Remove("operator_sid"); } }
+        public string OperatorSid { get => _explicitNullValueOperatorSid; set { _explicitNullValueOperatorSid = value; AdditionalData?.Remove("operator_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_sid"); else _explicitNullProperties?.Remove("operator_sid"); } }
         private string _explicitNullValueOperatorSid = default!;
 #endif
         /// <summary>The type of the applied Language Understanding Operator. One of conversation-classify, utterance-classify, extract, extract-normalize, or pii-extract</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultEnumOperatorType? OperatorType { get => _explicitNullValueOperatorType; set { _explicitNullValueOperatorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_type"); else _explicitNullProperties?.Remove("operator_type"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultEnumOperatorType? OperatorType { get => _explicitNullValueOperatorType; set { _explicitNullValueOperatorType = value; AdditionalData?.Remove("operator_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator_type"); else _explicitNullProperties?.Remove("operator_type"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultEnumOperatorType? _explicitNullValueOperatorType = default!;
         /// <summary>The &apos;matching&apos; class. This might be available on conversation classify model outputs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PredictedLabel { get => _explicitNullValuePredictedLabel; set { _explicitNullValuePredictedLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicted_label"); else _explicitNullProperties?.Remove("predicted_label"); } }
+        public string? PredictedLabel { get => _explicitNullValuePredictedLabel; set { _explicitNullValuePredictedLabel = value; AdditionalData?.Remove("predicted_label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicted_label"); else _explicitNullProperties?.Remove("predicted_label"); } }
         private string? _explicitNullValuePredictedLabel = default!;
 #nullable restore
 #else
-        public string PredictedLabel { get => _explicitNullValuePredictedLabel; set { _explicitNullValuePredictedLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicted_label"); else _explicitNullProperties?.Remove("predicted_label"); } }
+        public string PredictedLabel { get => _explicitNullValuePredictedLabel; set { _explicitNullValuePredictedLabel = value; AdditionalData?.Remove("predicted_label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicted_label"); else _explicitNullProperties?.Remove("predicted_label"); } }
         private string _explicitNullValuePredictedLabel = default!;
 #endif
         /// <summary>Percentage of &apos;matching&apos; class needed to consider a sentence matches.</summary>
-        public double? PredictedProbability { get => _explicitNullValuePredictedProbability; set { _explicitNullValuePredictedProbability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicted_probability"); else _explicitNullProperties?.Remove("predicted_probability"); } }
+        public double? PredictedProbability { get => _explicitNullValuePredictedProbability; set { _explicitNullValuePredictedProbability = value; AdditionalData?.Remove("predicted_probability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicted_probability"); else _explicitNullProperties?.Remove("predicted_probability"); } }
         private double? _explicitNullValuePredictedProbability = default!;
         /// <summary>Output of a text generation operator for example Conversation Sumamary.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TextGenerationResults { get => _explicitNullValueTextGenerationResults; set { _explicitNullValueTextGenerationResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_generation_results"); else _explicitNullProperties?.Remove("text_generation_results"); } }
+        public UntypedNode? TextGenerationResults { get => _explicitNullValueTextGenerationResults; set { _explicitNullValueTextGenerationResults = value; AdditionalData?.Remove("text_generation_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_generation_results"); else _explicitNullProperties?.Remove("text_generation_results"); } }
         private UntypedNode? _explicitNullValueTextGenerationResults = default!;
 #nullable restore
 #else
-        public UntypedNode TextGenerationResults { get => _explicitNullValueTextGenerationResults; set { _explicitNullValueTextGenerationResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_generation_results"); else _explicitNullProperties?.Remove("text_generation_results"); } }
+        public UntypedNode TextGenerationResults { get => _explicitNullValueTextGenerationResults; set { _explicitNullValueTextGenerationResults = value; AdditionalData?.Remove("text_generation_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_generation_results"); else _explicitNullProperties?.Remove("text_generation_results"); } }
         private UntypedNode _explicitNullValueTextGenerationResults = default!;
 #endif
         /// <summary>A 34 character string that uniquely identifies this Transcript.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TranscriptSid { get => _explicitNullValueTranscriptSid; set { _explicitNullValueTranscriptSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript_sid"); else _explicitNullProperties?.Remove("transcript_sid"); } }
+        public string? TranscriptSid { get => _explicitNullValueTranscriptSid; set { _explicitNullValueTranscriptSid = value; AdditionalData?.Remove("transcript_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript_sid"); else _explicitNullProperties?.Remove("transcript_sid"); } }
         private string? _explicitNullValueTranscriptSid = default!;
 #nullable restore
 #else
-        public string TranscriptSid { get => _explicitNullValueTranscriptSid; set { _explicitNullValueTranscriptSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript_sid"); else _explicitNullProperties?.Remove("transcript_sid"); } }
+        public string TranscriptSid { get => _explicitNullValueTranscriptSid; set { _explicitNullValueTranscriptSid = value; AdditionalData?.Remove("transcript_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript_sid"); else _explicitNullProperties?.Remove("transcript_sid"); } }
         private string _explicitNullValueTranscriptSid = default!;
 #endif
         /// <summary>The URL of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>Boolean to tell if Utterance matches results.</summary>
-        public bool? UtteranceMatch { get => _explicitNullValueUtteranceMatch; set { _explicitNullValueUtteranceMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utterance_match"); else _explicitNullProperties?.Remove("utterance_match"); } }
+        public bool? UtteranceMatch { get => _explicitNullValueUtteranceMatch; set { _explicitNullValueUtteranceMatch = value; AdditionalData?.Remove("utterance_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utterance_match"); else _explicitNullProperties?.Remove("utterance_match"); } }
         private bool? _explicitNullValueUtteranceMatch = default!;
         /// <summary>List of mapped utterance object which matches sentences.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? UtteranceResults { get => _explicitNullValueUtteranceResults; set { _explicitNullValueUtteranceResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utterance_results"); else _explicitNullProperties?.Remove("utterance_results"); } }
+        public UntypedNode? UtteranceResults { get => _explicitNullValueUtteranceResults; set { _explicitNullValueUtteranceResults = value; AdditionalData?.Remove("utterance_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utterance_results"); else _explicitNullProperties?.Remove("utterance_results"); } }
         private UntypedNode? _explicitNullValueUtteranceResults = default!;
 #nullable restore
 #else
-        public UntypedNode UtteranceResults { get => _explicitNullValueUtteranceResults; set { _explicitNullValueUtteranceResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utterance_results"); else _explicitNullProperties?.Remove("utterance_results"); } }
+        public UntypedNode UtteranceResults { get => _explicitNullValueUtteranceResults; set { _explicitNullValueUtteranceResults = value; AdditionalData?.Remove("utterance_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utterance_results"); else _explicitNullProperties?.Remove("utterance_results"); } }
         private UntypedNode _explicitNullValueUtteranceResults = default!;
 #endif
         /// <summary>
@@ -195,7 +211,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "normalized_result", n => { NormalizedResult = n.GetStringValue(); } },
                 { "operator_sid", n => { OperatorSid = n.GetStringValue(); } },
-                { "operator_type", n => { OperatorType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultEnumOperatorType>(); } },
+                { "operator_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultEnumOperatorType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperatorType = default; _explicitNullProperties?.Remove("operator_type"); AdditionalData["operator_type"] = unknown; } else { OperatorType = parsed; AdditionalData.Remove("operator_type"); } } },
                 { "predicted_label", n => { PredictedLabel = n.GetStringValue(); } },
                 { "predicted_probability", n => { PredictedProbability = n.GetDoubleValue(); } },
                 { "text_generation_results", n => { TextGenerationResults = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },

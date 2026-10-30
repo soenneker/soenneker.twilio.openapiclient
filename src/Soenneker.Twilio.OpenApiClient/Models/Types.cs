@@ -18,20 +18,34 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("twilio/call-to-action") is { } nullNodeTwilioCallToAction && nullNodeTwilioCallToAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioCallToAction = null;
-            if (parseNode.GetChildNode("twilio/card") is { } nullNodeTwilioCard && nullNodeTwilioCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioCard = null;
-            if (parseNode.GetChildNode("twilio/carousel") is { } nullNodeTwilioCarousel && nullNodeTwilioCarousel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioCarousel = null;
-            if (parseNode.GetChildNode("twilio/catalog") is { } nullNodeTwilioCatalog && nullNodeTwilioCatalog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioCatalog = null;
-            if (parseNode.GetChildNode("twilio/flows") is { } nullNodeTwilioFlows && nullNodeTwilioFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioFlows = null;
-            if (parseNode.GetChildNode("twilio/list-picker") is { } nullNodeTwilioListPicker && nullNodeTwilioListPicker.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioListPicker = null;
-            if (parseNode.GetChildNode("twilio/location") is { } nullNodeTwilioLocation && nullNodeTwilioLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioLocation = null;
-            if (parseNode.GetChildNode("twilio/media") is { } nullNodeTwilioMedia && nullNodeTwilioMedia.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioMedia = null;
-            if (parseNode.GetChildNode("twilio/quick-reply") is { } nullNodeTwilioQuickReply && nullNodeTwilioQuickReply.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioQuickReply = null;
-            if (parseNode.GetChildNode("twilio/schedule") is { } nullNodeTwilioSchedule && nullNodeTwilioSchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioSchedule = null;
-            if (parseNode.GetChildNode("twilio/text") is { } nullNodeTwilioText && nullNodeTwilioText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioText = null;
-            if (parseNode.GetChildNode("whatsapp/authentication") is { } nullNodeWhatsappAuthentication && nullNodeWhatsappAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappAuthentication = null;
-            if (parseNode.GetChildNode("whatsapp/card") is { } nullNodeWhatsappCard && nullNodeWhatsappCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappCard = null;
-            if (parseNode.GetChildNode("whatsapp/flows") is { } nullNodeWhatsappFlows && nullNodeWhatsappFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappFlows = null;
+            if (parseNode.GetChildNode("twilio/call-to-action") is null) { _explicitNullValueTwilioCallToAction = default!; _explicitNullProperties?.Remove("twilio/call-to-action"); }
+            else if (parseNode.GetChildNode("twilio/call-to-action") is { } nullNodeTwilioCallToAction && nullNodeTwilioCallToAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioCallToAction = null;
+            if (parseNode.GetChildNode("twilio/card") is null) { _explicitNullValueTwilioCard = default!; _explicitNullProperties?.Remove("twilio/card"); }
+            else if (parseNode.GetChildNode("twilio/card") is { } nullNodeTwilioCard && nullNodeTwilioCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioCard = null;
+            if (parseNode.GetChildNode("twilio/carousel") is null) { _explicitNullValueTwilioCarousel = default!; _explicitNullProperties?.Remove("twilio/carousel"); }
+            else if (parseNode.GetChildNode("twilio/carousel") is { } nullNodeTwilioCarousel && nullNodeTwilioCarousel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioCarousel = null;
+            if (parseNode.GetChildNode("twilio/catalog") is null) { _explicitNullValueTwilioCatalog = default!; _explicitNullProperties?.Remove("twilio/catalog"); }
+            else if (parseNode.GetChildNode("twilio/catalog") is { } nullNodeTwilioCatalog && nullNodeTwilioCatalog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioCatalog = null;
+            if (parseNode.GetChildNode("twilio/flows") is null) { _explicitNullValueTwilioFlows = default!; _explicitNullProperties?.Remove("twilio/flows"); }
+            else if (parseNode.GetChildNode("twilio/flows") is { } nullNodeTwilioFlows && nullNodeTwilioFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioFlows = null;
+            if (parseNode.GetChildNode("twilio/list-picker") is null) { _explicitNullValueTwilioListPicker = default!; _explicitNullProperties?.Remove("twilio/list-picker"); }
+            else if (parseNode.GetChildNode("twilio/list-picker") is { } nullNodeTwilioListPicker && nullNodeTwilioListPicker.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioListPicker = null;
+            if (parseNode.GetChildNode("twilio/location") is null) { _explicitNullValueTwilioLocation = default!; _explicitNullProperties?.Remove("twilio/location"); }
+            else if (parseNode.GetChildNode("twilio/location") is { } nullNodeTwilioLocation && nullNodeTwilioLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioLocation = null;
+            if (parseNode.GetChildNode("twilio/media") is null) { _explicitNullValueTwilioMedia = default!; _explicitNullProperties?.Remove("twilio/media"); }
+            else if (parseNode.GetChildNode("twilio/media") is { } nullNodeTwilioMedia && nullNodeTwilioMedia.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioMedia = null;
+            if (parseNode.GetChildNode("twilio/quick-reply") is null) { _explicitNullValueTwilioQuickReply = default!; _explicitNullProperties?.Remove("twilio/quick-reply"); }
+            else if (parseNode.GetChildNode("twilio/quick-reply") is { } nullNodeTwilioQuickReply && nullNodeTwilioQuickReply.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioQuickReply = null;
+            if (parseNode.GetChildNode("twilio/schedule") is null) { _explicitNullValueTwilioSchedule = default!; _explicitNullProperties?.Remove("twilio/schedule"); }
+            else if (parseNode.GetChildNode("twilio/schedule") is { } nullNodeTwilioSchedule && nullNodeTwilioSchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioSchedule = null;
+            if (parseNode.GetChildNode("twilio/text") is null) { _explicitNullValueTwilioText = default!; _explicitNullProperties?.Remove("twilio/text"); }
+            else if (parseNode.GetChildNode("twilio/text") is { } nullNodeTwilioText && nullNodeTwilioText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioText = null;
+            if (parseNode.GetChildNode("whatsapp/authentication") is null) { _explicitNullValueWhatsappAuthentication = default!; _explicitNullProperties?.Remove("whatsapp/authentication"); }
+            else if (parseNode.GetChildNode("whatsapp/authentication") is { } nullNodeWhatsappAuthentication && nullNodeWhatsappAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappAuthentication = null;
+            if (parseNode.GetChildNode("whatsapp/card") is null) { _explicitNullValueWhatsappCard = default!; _explicitNullProperties?.Remove("whatsapp/card"); }
+            else if (parseNode.GetChildNode("whatsapp/card") is { } nullNodeWhatsappCard && nullNodeWhatsappCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappCard = null;
+            if (parseNode.GetChildNode("whatsapp/flows") is null) { _explicitNullValueWhatsappFlows = default!; _explicitNullProperties?.Remove("whatsapp/flows"); }
+            else if (parseNode.GetChildNode("whatsapp/flows") is { } nullNodeWhatsappFlows && nullNodeWhatsappFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappFlows = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,141 +53,141 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>twilio/call-to-action buttons let recipients tap to trigger actions such as launching a website or making a phone call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCallToAction? TwilioCallToAction { get => _explicitNullValueTwilioCallToAction; set { _explicitNullValueTwilioCallToAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/call-to-action"); else _explicitNullProperties?.Remove("twilio/call-to-action"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCallToAction? TwilioCallToAction { get => _explicitNullValueTwilioCallToAction; set { _explicitNullValueTwilioCallToAction = value; AdditionalData?.Remove("twilio/call-to-action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/call-to-action"); else _explicitNullProperties?.Remove("twilio/call-to-action"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioCallToAction? _explicitNullValueTwilioCallToAction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCallToAction TwilioCallToAction { get => _explicitNullValueTwilioCallToAction; set { _explicitNullValueTwilioCallToAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/call-to-action"); else _explicitNullProperties?.Remove("twilio/call-to-action"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCallToAction TwilioCallToAction { get => _explicitNullValueTwilioCallToAction; set { _explicitNullValueTwilioCallToAction = value; AdditionalData?.Remove("twilio/call-to-action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/call-to-action"); else _explicitNullProperties?.Remove("twilio/call-to-action"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioCallToAction _explicitNullValueTwilioCallToAction = default!;
 #endif
         /// <summary>twilio/card is a structured template which can be used to send a series of related information. It must include a title and at least one additional field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCard? TwilioCard { get => _explicitNullValueTwilioCard; set { _explicitNullValueTwilioCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/card"); else _explicitNullProperties?.Remove("twilio/card"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCard? TwilioCard { get => _explicitNullValueTwilioCard; set { _explicitNullValueTwilioCard = value; AdditionalData?.Remove("twilio/card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/card"); else _explicitNullProperties?.Remove("twilio/card"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioCard? _explicitNullValueTwilioCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCard TwilioCard { get => _explicitNullValueTwilioCard; set { _explicitNullValueTwilioCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/card"); else _explicitNullProperties?.Remove("twilio/card"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCard TwilioCard { get => _explicitNullValueTwilioCard; set { _explicitNullValueTwilioCard = value; AdditionalData?.Remove("twilio/card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/card"); else _explicitNullProperties?.Remove("twilio/card"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioCard _explicitNullValueTwilioCard = default!;
 #endif
         /// <summary>twilio/carousel templates allow you to send a single text message accompanied by a set of up to 10 carousel cards in a horizontally scrollable view</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCarousel? TwilioCarousel { get => _explicitNullValueTwilioCarousel; set { _explicitNullValueTwilioCarousel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/carousel"); else _explicitNullProperties?.Remove("twilio/carousel"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCarousel? TwilioCarousel { get => _explicitNullValueTwilioCarousel; set { _explicitNullValueTwilioCarousel = value; AdditionalData?.Remove("twilio/carousel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/carousel"); else _explicitNullProperties?.Remove("twilio/carousel"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioCarousel? _explicitNullValueTwilioCarousel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCarousel TwilioCarousel { get => _explicitNullValueTwilioCarousel; set { _explicitNullValueTwilioCarousel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/carousel"); else _explicitNullProperties?.Remove("twilio/carousel"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCarousel TwilioCarousel { get => _explicitNullValueTwilioCarousel; set { _explicitNullValueTwilioCarousel = value; AdditionalData?.Remove("twilio/carousel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/carousel"); else _explicitNullProperties?.Remove("twilio/carousel"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioCarousel _explicitNullValueTwilioCarousel = default!;
 #endif
         /// <summary>twilio/catalog type lets recipients view list of catalog products, ask questions about products, order products.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCatalog? TwilioCatalog { get => _explicitNullValueTwilioCatalog; set { _explicitNullValueTwilioCatalog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/catalog"); else _explicitNullProperties?.Remove("twilio/catalog"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCatalog? TwilioCatalog { get => _explicitNullValueTwilioCatalog; set { _explicitNullValueTwilioCatalog = value; AdditionalData?.Remove("twilio/catalog"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/catalog"); else _explicitNullProperties?.Remove("twilio/catalog"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioCatalog? _explicitNullValueTwilioCatalog = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCatalog TwilioCatalog { get => _explicitNullValueTwilioCatalog; set { _explicitNullValueTwilioCatalog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/catalog"); else _explicitNullProperties?.Remove("twilio/catalog"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioCatalog TwilioCatalog { get => _explicitNullValueTwilioCatalog; set { _explicitNullValueTwilioCatalog = value; AdditionalData?.Remove("twilio/catalog"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/catalog"); else _explicitNullProperties?.Remove("twilio/catalog"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioCatalog _explicitNullValueTwilioCatalog = default!;
 #endif
         /// <summary>twilio/flows templates allow you to send multiple messages in a set order with text or select options</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlows? TwilioFlows { get => _explicitNullValueTwilioFlows; set { _explicitNullValueTwilioFlows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/flows"); else _explicitNullProperties?.Remove("twilio/flows"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlows? TwilioFlows { get => _explicitNullValueTwilioFlows; set { _explicitNullValueTwilioFlows = value; AdditionalData?.Remove("twilio/flows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/flows"); else _explicitNullProperties?.Remove("twilio/flows"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlows? _explicitNullValueTwilioFlows = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlows TwilioFlows { get => _explicitNullValueTwilioFlows; set { _explicitNullValueTwilioFlows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/flows"); else _explicitNullProperties?.Remove("twilio/flows"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlows TwilioFlows { get => _explicitNullValueTwilioFlows; set { _explicitNullValueTwilioFlows = value; AdditionalData?.Remove("twilio/flows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/flows"); else _explicitNullProperties?.Remove("twilio/flows"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlows _explicitNullValueTwilioFlows = default!;
 #endif
         /// <summary>twilio/list-picker includes a menu of up to 10 options, which offers a simple way for users to make a selection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioListPicker? TwilioListPicker { get => _explicitNullValueTwilioListPicker; set { _explicitNullValueTwilioListPicker = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/list-picker"); else _explicitNullProperties?.Remove("twilio/list-picker"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioListPicker? TwilioListPicker { get => _explicitNullValueTwilioListPicker; set { _explicitNullValueTwilioListPicker = value; AdditionalData?.Remove("twilio/list-picker"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/list-picker"); else _explicitNullProperties?.Remove("twilio/list-picker"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioListPicker? _explicitNullValueTwilioListPicker = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioListPicker TwilioListPicker { get => _explicitNullValueTwilioListPicker; set { _explicitNullValueTwilioListPicker = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/list-picker"); else _explicitNullProperties?.Remove("twilio/list-picker"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioListPicker TwilioListPicker { get => _explicitNullValueTwilioListPicker; set { _explicitNullValueTwilioListPicker = value; AdditionalData?.Remove("twilio/list-picker"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/list-picker"); else _explicitNullProperties?.Remove("twilio/list-picker"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioListPicker _explicitNullValueTwilioListPicker = default!;
 #endif
         /// <summary>twilio/location type contains a location pin and an optional label, which can be used to enhance delivery notifications or connect recipients to physical experiences you offer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioLocation? TwilioLocation { get => _explicitNullValueTwilioLocation; set { _explicitNullValueTwilioLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/location"); else _explicitNullProperties?.Remove("twilio/location"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioLocation? TwilioLocation { get => _explicitNullValueTwilioLocation; set { _explicitNullValueTwilioLocation = value; AdditionalData?.Remove("twilio/location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/location"); else _explicitNullProperties?.Remove("twilio/location"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioLocation? _explicitNullValueTwilioLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioLocation TwilioLocation { get => _explicitNullValueTwilioLocation; set { _explicitNullValueTwilioLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/location"); else _explicitNullProperties?.Remove("twilio/location"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioLocation TwilioLocation { get => _explicitNullValueTwilioLocation; set { _explicitNullValueTwilioLocation = value; AdditionalData?.Remove("twilio/location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/location"); else _explicitNullProperties?.Remove("twilio/location"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioLocation _explicitNullValueTwilioLocation = default!;
 #endif
         /// <summary>twilio/media is used to send file attachments, or to send long text via MMS in the US and Canada. As such, the twilio/media type must contain at least ONE of text or media content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMedia? TwilioMedia { get => _explicitNullValueTwilioMedia; set { _explicitNullValueTwilioMedia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/media"); else _explicitNullProperties?.Remove("twilio/media"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMedia? TwilioMedia { get => _explicitNullValueTwilioMedia; set { _explicitNullValueTwilioMedia = value; AdditionalData?.Remove("twilio/media"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/media"); else _explicitNullProperties?.Remove("twilio/media"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioMedia? _explicitNullValueTwilioMedia = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMedia TwilioMedia { get => _explicitNullValueTwilioMedia; set { _explicitNullValueTwilioMedia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/media"); else _explicitNullProperties?.Remove("twilio/media"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMedia TwilioMedia { get => _explicitNullValueTwilioMedia; set { _explicitNullValueTwilioMedia = value; AdditionalData?.Remove("twilio/media"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/media"); else _explicitNullProperties?.Remove("twilio/media"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioMedia _explicitNullValueTwilioMedia = default!;
 #endif
         /// <summary>twilio/quick-reply templates let recipients tap, rather than type, to respond to the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioQuickReply? TwilioQuickReply { get => _explicitNullValueTwilioQuickReply; set { _explicitNullValueTwilioQuickReply = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/quick-reply"); else _explicitNullProperties?.Remove("twilio/quick-reply"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioQuickReply? TwilioQuickReply { get => _explicitNullValueTwilioQuickReply; set { _explicitNullValueTwilioQuickReply = value; AdditionalData?.Remove("twilio/quick-reply"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/quick-reply"); else _explicitNullProperties?.Remove("twilio/quick-reply"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioQuickReply? _explicitNullValueTwilioQuickReply = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioQuickReply TwilioQuickReply { get => _explicitNullValueTwilioQuickReply; set { _explicitNullValueTwilioQuickReply = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/quick-reply"); else _explicitNullProperties?.Remove("twilio/quick-reply"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioQuickReply TwilioQuickReply { get => _explicitNullValueTwilioQuickReply; set { _explicitNullValueTwilioQuickReply = value; AdditionalData?.Remove("twilio/quick-reply"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/quick-reply"); else _explicitNullProperties?.Remove("twilio/quick-reply"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioQuickReply _explicitNullValueTwilioQuickReply = default!;
 #endif
         /// <summary>twilio/schedule templates allow us to send a message with a schedule with different time slots</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSchedule? TwilioSchedule { get => _explicitNullValueTwilioSchedule; set { _explicitNullValueTwilioSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/schedule"); else _explicitNullProperties?.Remove("twilio/schedule"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSchedule? TwilioSchedule { get => _explicitNullValueTwilioSchedule; set { _explicitNullValueTwilioSchedule = value; AdditionalData?.Remove("twilio/schedule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/schedule"); else _explicitNullProperties?.Remove("twilio/schedule"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioSchedule? _explicitNullValueTwilioSchedule = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSchedule TwilioSchedule { get => _explicitNullValueTwilioSchedule; set { _explicitNullValueTwilioSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/schedule"); else _explicitNullProperties?.Remove("twilio/schedule"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSchedule TwilioSchedule { get => _explicitNullValueTwilioSchedule; set { _explicitNullValueTwilioSchedule = value; AdditionalData?.Remove("twilio/schedule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/schedule"); else _explicitNullProperties?.Remove("twilio/schedule"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioSchedule _explicitNullValueTwilioSchedule = default!;
 #endif
         /// <summary>Type containing only plain text-based content</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioText? TwilioText { get => _explicitNullValueTwilioText; set { _explicitNullValueTwilioText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/text"); else _explicitNullProperties?.Remove("twilio/text"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioText? TwilioText { get => _explicitNullValueTwilioText; set { _explicitNullValueTwilioText = value; AdditionalData?.Remove("twilio/text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/text"); else _explicitNullProperties?.Remove("twilio/text"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioText? _explicitNullValueTwilioText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioText TwilioText { get => _explicitNullValueTwilioText; set { _explicitNullValueTwilioText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/text"); else _explicitNullProperties?.Remove("twilio/text"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioText TwilioText { get => _explicitNullValueTwilioText; set { _explicitNullValueTwilioText = value; AdditionalData?.Remove("twilio/text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio/text"); else _explicitNullProperties?.Remove("twilio/text"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioText _explicitNullValueTwilioText = default!;
 #endif
         /// <summary>whatsApp/authentication templates let companies deliver WA approved one-time-password button.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappAuthentication? WhatsappAuthentication { get => _explicitNullValueWhatsappAuthentication; set { _explicitNullValueWhatsappAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/authentication"); else _explicitNullProperties?.Remove("whatsapp/authentication"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappAuthentication? WhatsappAuthentication { get => _explicitNullValueWhatsappAuthentication; set { _explicitNullValueWhatsappAuthentication = value; AdditionalData?.Remove("whatsapp/authentication"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/authentication"); else _explicitNullProperties?.Remove("whatsapp/authentication"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.WhatsappAuthentication? _explicitNullValueWhatsappAuthentication = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappAuthentication WhatsappAuthentication { get => _explicitNullValueWhatsappAuthentication; set { _explicitNullValueWhatsappAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/authentication"); else _explicitNullProperties?.Remove("whatsapp/authentication"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappAuthentication WhatsappAuthentication { get => _explicitNullValueWhatsappAuthentication; set { _explicitNullValueWhatsappAuthentication = value; AdditionalData?.Remove("whatsapp/authentication"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/authentication"); else _explicitNullProperties?.Remove("whatsapp/authentication"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.WhatsappAuthentication _explicitNullValueWhatsappAuthentication = default!;
 #endif
         /// <summary>whatsapp/card is a structured template which can be used to send a series of related information. It must include a body and at least one additional field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappCard? WhatsappCard { get => _explicitNullValueWhatsappCard; set { _explicitNullValueWhatsappCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/card"); else _explicitNullProperties?.Remove("whatsapp/card"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappCard? WhatsappCard { get => _explicitNullValueWhatsappCard; set { _explicitNullValueWhatsappCard = value; AdditionalData?.Remove("whatsapp/card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/card"); else _explicitNullProperties?.Remove("whatsapp/card"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.WhatsappCard? _explicitNullValueWhatsappCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappCard WhatsappCard { get => _explicitNullValueWhatsappCard; set { _explicitNullValueWhatsappCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/card"); else _explicitNullProperties?.Remove("whatsapp/card"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappCard WhatsappCard { get => _explicitNullValueWhatsappCard; set { _explicitNullValueWhatsappCard = value; AdditionalData?.Remove("whatsapp/card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/card"); else _explicitNullProperties?.Remove("whatsapp/card"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.WhatsappCard _explicitNullValueWhatsappCard = default!;
 #endif
         /// <summary>whatsapp/flows templates allow you to send multiple messages in a set order with text or select options</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappFlows? WhatsappFlows { get => _explicitNullValueWhatsappFlows; set { _explicitNullValueWhatsappFlows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/flows"); else _explicitNullProperties?.Remove("whatsapp/flows"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappFlows? WhatsappFlows { get => _explicitNullValueWhatsappFlows; set { _explicitNullValueWhatsappFlows = value; AdditionalData?.Remove("whatsapp/flows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/flows"); else _explicitNullProperties?.Remove("whatsapp/flows"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.WhatsappFlows? _explicitNullValueWhatsappFlows = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappFlows WhatsappFlows { get => _explicitNullValueWhatsappFlows; set { _explicitNullValueWhatsappFlows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/flows"); else _explicitNullProperties?.Remove("whatsapp/flows"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WhatsappFlows WhatsappFlows { get => _explicitNullValueWhatsappFlows; set { _explicitNullValueWhatsappFlows = value; AdditionalData?.Remove("whatsapp/flows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp/flows"); else _explicitNullProperties?.Remove("whatsapp/flows"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.WhatsappFlows _explicitNullValueWhatsappFlows = default!;
 #endif
         /// <summary>

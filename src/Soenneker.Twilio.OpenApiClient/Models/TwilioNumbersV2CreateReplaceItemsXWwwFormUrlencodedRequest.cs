@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("FromBundleSid") is { } nullNodeFromBundleSid && nullNodeFromBundleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromBundleSid = null;
+            if (parseNode.GetChildNode("FromBundleSid") is null) { _explicitNullValueFromBundleSid = default!; _explicitNullProperties?.Remove("FromBundleSid"); }
+            else if (parseNode.GetChildNode("FromBundleSid") is { } nullNodeFromBundleSid && nullNodeFromBundleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromBundleSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The source bundle sid to copy the item assignments from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromBundleSid { get => _explicitNullValueFromBundleSid; set { _explicitNullValueFromBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromBundleSid"); else _explicitNullProperties?.Remove("FromBundleSid"); } }
+        public string? FromBundleSid { get => _explicitNullValueFromBundleSid; set { _explicitNullValueFromBundleSid = value; AdditionalData?.Remove("FromBundleSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromBundleSid"); else _explicitNullProperties?.Remove("FromBundleSid"); } }
         private string? _explicitNullValueFromBundleSid = default!;
 #nullable restore
 #else
-        public string FromBundleSid { get => _explicitNullValueFromBundleSid; set { _explicitNullValueFromBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromBundleSid"); else _explicitNullProperties?.Remove("FromBundleSid"); } }
+        public string FromBundleSid { get => _explicitNullValueFromBundleSid; set { _explicitNullValueFromBundleSid = value; AdditionalData?.Remove("FromBundleSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromBundleSid"); else _explicitNullProperties?.Remove("FromBundleSid"); } }
         private string _explicitNullValueFromBundleSid = default!;
 #endif
         /// <summary>

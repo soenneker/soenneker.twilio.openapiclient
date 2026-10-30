@@ -17,45 +17,49 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CallbackMethod") is { } nullNodeCallbackMethod && nullNodeCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackMethod = null;
-            if (parseNode.GetChildNode("CallbackUrl") is { } nullNodeCallbackUrl && nullNodeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackUrl = null;
-            if (parseNode.GetChildNode("Payload") is { } nullNodePayload && nullNodePayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payload = null;
-            if (parseNode.GetChildNode("Sim") is { } nullNodeSim && nullNodeSim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sim = null;
+            if (parseNode.GetChildNode("CallbackMethod") is null) { _explicitNullValueCallbackMethod = default!; _explicitNullProperties?.Remove("CallbackMethod"); }
+            else if (parseNode.GetChildNode("CallbackMethod") is { } nullNodeCallbackMethod && nullNodeCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackMethod = null;
+            if (parseNode.GetChildNode("CallbackUrl") is null) { _explicitNullValueCallbackUrl = default!; _explicitNullProperties?.Remove("CallbackUrl"); }
+            else if (parseNode.GetChildNode("CallbackUrl") is { } nullNodeCallbackUrl && nullNodeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackUrl = null;
+            if (parseNode.GetChildNode("Payload") is null) { _explicitNullValuePayload = default!; _explicitNullProperties?.Remove("Payload"); }
+            else if (parseNode.GetChildNode("Payload") is { } nullNodePayload && nullNodePayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payload = null;
+            if (parseNode.GetChildNode("Sim") is null) { _explicitNullValueSim = default!; _explicitNullProperties?.Remove("Sim"); }
+            else if (parseNode.GetChildNode("Sim") is { } nullNodeSim && nullNodeSim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sim = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The HTTP method we should use to call `callback_url`. Can be: `GET` or `POST` and the default is POST.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateSmsCommandXWwwFormUrlencodedRequestCallbackMethod? CallbackMethod { get => _explicitNullValueCallbackMethod; set { _explicitNullValueCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackMethod"); else _explicitNullProperties?.Remove("CallbackMethod"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateSmsCommandXWwwFormUrlencodedRequestCallbackMethod? CallbackMethod { get => _explicitNullValueCallbackMethod; set { _explicitNullValueCallbackMethod = value; AdditionalData?.Remove("CallbackMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackMethod"); else _explicitNullProperties?.Remove("CallbackMethod"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateSmsCommandXWwwFormUrlencodedRequestCallbackMethod? _explicitNullValueCallbackMethod = default!;
         /// <summary>The URL we should call using the `callback_method` after we have sent the command.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackUrl"); else _explicitNullProperties?.Remove("CallbackUrl"); } }
+        public string? CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; AdditionalData?.Remove("CallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackUrl"); else _explicitNullProperties?.Remove("CallbackUrl"); } }
         private string? _explicitNullValueCallbackUrl = default!;
 #nullable restore
 #else
-        public string CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackUrl"); else _explicitNullProperties?.Remove("CallbackUrl"); } }
+        public string CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; AdditionalData?.Remove("CallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackUrl"); else _explicitNullProperties?.Remove("CallbackUrl"); } }
         private string _explicitNullValueCallbackUrl = default!;
 #endif
         /// <summary>The message body of the SMS Command.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Payload"); else _explicitNullProperties?.Remove("Payload"); } }
+        public string? Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; AdditionalData?.Remove("Payload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Payload"); else _explicitNullProperties?.Remove("Payload"); } }
         private string? _explicitNullValuePayload = default!;
 #nullable restore
 #else
-        public string Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Payload"); else _explicitNullProperties?.Remove("Payload"); } }
+        public string Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; AdditionalData?.Remove("Payload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Payload"); else _explicitNullProperties?.Remove("Payload"); } }
         private string _explicitNullValuePayload = default!;
 #endif
         /// <summary>The `sid` or `unique_name` of the [SIM](https://www.twilio.com/docs/iot/supersim/api/sim-resource) to send the SMS Command to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sim { get => _explicitNullValueSim; set { _explicitNullValueSim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Sim"); else _explicitNullProperties?.Remove("Sim"); } }
+        public string? Sim { get => _explicitNullValueSim; set { _explicitNullValueSim = value; AdditionalData?.Remove("Sim"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Sim"); else _explicitNullProperties?.Remove("Sim"); } }
         private string? _explicitNullValueSim = default!;
 #nullable restore
 #else
-        public string Sim { get => _explicitNullValueSim; set { _explicitNullValueSim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Sim"); else _explicitNullProperties?.Remove("Sim"); } }
+        public string Sim { get => _explicitNullValueSim; set { _explicitNullValueSim = value; AdditionalData?.Remove("Sim"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Sim"); else _explicitNullProperties?.Remove("Sim"); } }
         private string _explicitNullValueSim = default!;
 #endif
         /// <summary>
@@ -83,7 +87,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "CallbackMethod", n => { CallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateSmsCommandXWwwFormUrlencodedRequestCallbackMethod>(); } },
+                { "CallbackMethod", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateSmsCommandXWwwFormUrlencodedRequestCallbackMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCallbackMethod = default; _explicitNullProperties?.Remove("CallbackMethod"); AdditionalData["CallbackMethod"] = unknown; } else { CallbackMethod = parsed; AdditionalData.Remove("CallbackMethod"); } } },
                 { "CallbackUrl", n => { CallbackUrl = n.GetStringValue(); } },
                 { "Payload", n => { Payload = n.GetStringValue(); } },
                 { "Sim", n => { Sim = n.GetStringValue(); } },

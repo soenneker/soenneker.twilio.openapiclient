@@ -17,18 +17,30 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("address_country_match") is { } nullNodeAddressCountryMatch && nullNodeAddressCountryMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressCountryMatch = null;
-            if (parseNode.GetChildNode("address_lines_match") is { } nullNodeAddressLinesMatch && nullNodeAddressLinesMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressLinesMatch = null;
-            if (parseNode.GetChildNode("city_match") is { } nullNodeCityMatch && nullNodeCityMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CityMatch = null;
-            if (parseNode.GetChildNode("date_of_birth_match") is { } nullNodeDateOfBirthMatch && nullNodeDateOfBirthMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateOfBirthMatch = null;
-            if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
-            if (parseNode.GetChildNode("error_message") is { } nullNodeErrorMessage && nullNodeErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessage = null;
-            if (parseNode.GetChildNode("first_name_match") is { } nullNodeFirstNameMatch && nullNodeFirstNameMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstNameMatch = null;
-            if (parseNode.GetChildNode("last_name_match") is { } nullNodeLastNameMatch && nullNodeLastNameMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastNameMatch = null;
-            if (parseNode.GetChildNode("national_id_match") is { } nullNodeNationalIdMatch && nullNodeNationalIdMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NationalIdMatch = null;
-            if (parseNode.GetChildNode("postal_code_match") is { } nullNodePostalCodeMatch && nullNodePostalCodeMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostalCodeMatch = null;
-            if (parseNode.GetChildNode("state_match") is { } nullNodeStateMatch && nullNodeStateMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateMatch = null;
-            if (parseNode.GetChildNode("summary_score") is { } nullNodeSummaryScore && nullNodeSummaryScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SummaryScore = null;
+            if (parseNode.GetChildNode("address_country_match") is null) { _explicitNullValueAddressCountryMatch = default!; _explicitNullProperties?.Remove("address_country_match"); }
+            else if (parseNode.GetChildNode("address_country_match") is { } nullNodeAddressCountryMatch && nullNodeAddressCountryMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressCountryMatch = null;
+            if (parseNode.GetChildNode("address_lines_match") is null) { _explicitNullValueAddressLinesMatch = default!; _explicitNullProperties?.Remove("address_lines_match"); }
+            else if (parseNode.GetChildNode("address_lines_match") is { } nullNodeAddressLinesMatch && nullNodeAddressLinesMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressLinesMatch = null;
+            if (parseNode.GetChildNode("city_match") is null) { _explicitNullValueCityMatch = default!; _explicitNullProperties?.Remove("city_match"); }
+            else if (parseNode.GetChildNode("city_match") is { } nullNodeCityMatch && nullNodeCityMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CityMatch = null;
+            if (parseNode.GetChildNode("date_of_birth_match") is null) { _explicitNullValueDateOfBirthMatch = default!; _explicitNullProperties?.Remove("date_of_birth_match"); }
+            else if (parseNode.GetChildNode("date_of_birth_match") is { } nullNodeDateOfBirthMatch && nullNodeDateOfBirthMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateOfBirthMatch = null;
+            if (parseNode.GetChildNode("error_code") is null) { _explicitNullValueErrorCode = default!; _explicitNullProperties?.Remove("error_code"); }
+            else if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
+            if (parseNode.GetChildNode("error_message") is null) { _explicitNullValueErrorMessage = default!; _explicitNullProperties?.Remove("error_message"); }
+            else if (parseNode.GetChildNode("error_message") is { } nullNodeErrorMessage && nullNodeErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessage = null;
+            if (parseNode.GetChildNode("first_name_match") is null) { _explicitNullValueFirstNameMatch = default!; _explicitNullProperties?.Remove("first_name_match"); }
+            else if (parseNode.GetChildNode("first_name_match") is { } nullNodeFirstNameMatch && nullNodeFirstNameMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstNameMatch = null;
+            if (parseNode.GetChildNode("last_name_match") is null) { _explicitNullValueLastNameMatch = default!; _explicitNullProperties?.Remove("last_name_match"); }
+            else if (parseNode.GetChildNode("last_name_match") is { } nullNodeLastNameMatch && nullNodeLastNameMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastNameMatch = null;
+            if (parseNode.GetChildNode("national_id_match") is null) { _explicitNullValueNationalIdMatch = default!; _explicitNullProperties?.Remove("national_id_match"); }
+            else if (parseNode.GetChildNode("national_id_match") is { } nullNodeNationalIdMatch && nullNodeNationalIdMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NationalIdMatch = null;
+            if (parseNode.GetChildNode("postal_code_match") is null) { _explicitNullValuePostalCodeMatch = default!; _explicitNullProperties?.Remove("postal_code_match"); }
+            else if (parseNode.GetChildNode("postal_code_match") is { } nullNodePostalCodeMatch && nullNodePostalCodeMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostalCodeMatch = null;
+            if (parseNode.GetChildNode("state_match") is null) { _explicitNullValueStateMatch = default!; _explicitNullProperties?.Remove("state_match"); }
+            else if (parseNode.GetChildNode("state_match") is { } nullNodeStateMatch && nullNodeStateMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateMatch = null;
+            if (parseNode.GetChildNode("summary_score") is null) { _explicitNullValueSummaryScore = default!; _explicitNullProperties?.Remove("summary_score"); }
+            else if (parseNode.GetChildNode("summary_score") is { } nullNodeSummaryScore && nullNodeSummaryScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SummaryScore = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,108 +48,108 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The address_country_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressCountryMatch { get => _explicitNullValueAddressCountryMatch; set { _explicitNullValueAddressCountryMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_country_match"); else _explicitNullProperties?.Remove("address_country_match"); } }
+        public string? AddressCountryMatch { get => _explicitNullValueAddressCountryMatch; set { _explicitNullValueAddressCountryMatch = value; AdditionalData?.Remove("address_country_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_country_match"); else _explicitNullProperties?.Remove("address_country_match"); } }
         private string? _explicitNullValueAddressCountryMatch = default!;
 #nullable restore
 #else
-        public string AddressCountryMatch { get => _explicitNullValueAddressCountryMatch; set { _explicitNullValueAddressCountryMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_country_match"); else _explicitNullProperties?.Remove("address_country_match"); } }
+        public string AddressCountryMatch { get => _explicitNullValueAddressCountryMatch; set { _explicitNullValueAddressCountryMatch = value; AdditionalData?.Remove("address_country_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_country_match"); else _explicitNullProperties?.Remove("address_country_match"); } }
         private string _explicitNullValueAddressCountryMatch = default!;
 #endif
         /// <summary>The address_lines_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressLinesMatch { get => _explicitNullValueAddressLinesMatch; set { _explicitNullValueAddressLinesMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_lines_match"); else _explicitNullProperties?.Remove("address_lines_match"); } }
+        public string? AddressLinesMatch { get => _explicitNullValueAddressLinesMatch; set { _explicitNullValueAddressLinesMatch = value; AdditionalData?.Remove("address_lines_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_lines_match"); else _explicitNullProperties?.Remove("address_lines_match"); } }
         private string? _explicitNullValueAddressLinesMatch = default!;
 #nullable restore
 #else
-        public string AddressLinesMatch { get => _explicitNullValueAddressLinesMatch; set { _explicitNullValueAddressLinesMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_lines_match"); else _explicitNullProperties?.Remove("address_lines_match"); } }
+        public string AddressLinesMatch { get => _explicitNullValueAddressLinesMatch; set { _explicitNullValueAddressLinesMatch = value; AdditionalData?.Remove("address_lines_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_lines_match"); else _explicitNullProperties?.Remove("address_lines_match"); } }
         private string _explicitNullValueAddressLinesMatch = default!;
 #endif
         /// <summary>The city_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CityMatch { get => _explicitNullValueCityMatch; set { _explicitNullValueCityMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("city_match"); else _explicitNullProperties?.Remove("city_match"); } }
+        public string? CityMatch { get => _explicitNullValueCityMatch; set { _explicitNullValueCityMatch = value; AdditionalData?.Remove("city_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("city_match"); else _explicitNullProperties?.Remove("city_match"); } }
         private string? _explicitNullValueCityMatch = default!;
 #nullable restore
 #else
-        public string CityMatch { get => _explicitNullValueCityMatch; set { _explicitNullValueCityMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("city_match"); else _explicitNullProperties?.Remove("city_match"); } }
+        public string CityMatch { get => _explicitNullValueCityMatch; set { _explicitNullValueCityMatch = value; AdditionalData?.Remove("city_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("city_match"); else _explicitNullProperties?.Remove("city_match"); } }
         private string _explicitNullValueCityMatch = default!;
 #endif
         /// <summary>The date_of_birth_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DateOfBirthMatch { get => _explicitNullValueDateOfBirthMatch; set { _explicitNullValueDateOfBirthMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_of_birth_match"); else _explicitNullProperties?.Remove("date_of_birth_match"); } }
+        public string? DateOfBirthMatch { get => _explicitNullValueDateOfBirthMatch; set { _explicitNullValueDateOfBirthMatch = value; AdditionalData?.Remove("date_of_birth_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_of_birth_match"); else _explicitNullProperties?.Remove("date_of_birth_match"); } }
         private string? _explicitNullValueDateOfBirthMatch = default!;
 #nullable restore
 #else
-        public string DateOfBirthMatch { get => _explicitNullValueDateOfBirthMatch; set { _explicitNullValueDateOfBirthMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_of_birth_match"); else _explicitNullProperties?.Remove("date_of_birth_match"); } }
+        public string DateOfBirthMatch { get => _explicitNullValueDateOfBirthMatch; set { _explicitNullValueDateOfBirthMatch = value; AdditionalData?.Remove("date_of_birth_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_of_birth_match"); else _explicitNullProperties?.Remove("date_of_birth_match"); } }
         private string _explicitNullValueDateOfBirthMatch = default!;
 #endif
         /// <summary>The error_code property</summary>
-        public int? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
+        public int? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; AdditionalData?.Remove("error_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
         private int? _explicitNullValueErrorCode = default!;
         /// <summary>The error_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
+        public string? ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; AdditionalData?.Remove("error_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
         private string? _explicitNullValueErrorMessage = default!;
 #nullable restore
 #else
-        public string ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
+        public string ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; AdditionalData?.Remove("error_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
         private string _explicitNullValueErrorMessage = default!;
 #endif
         /// <summary>The first_name_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstNameMatch { get => _explicitNullValueFirstNameMatch; set { _explicitNullValueFirstNameMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name_match"); else _explicitNullProperties?.Remove("first_name_match"); } }
+        public string? FirstNameMatch { get => _explicitNullValueFirstNameMatch; set { _explicitNullValueFirstNameMatch = value; AdditionalData?.Remove("first_name_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name_match"); else _explicitNullProperties?.Remove("first_name_match"); } }
         private string? _explicitNullValueFirstNameMatch = default!;
 #nullable restore
 #else
-        public string FirstNameMatch { get => _explicitNullValueFirstNameMatch; set { _explicitNullValueFirstNameMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name_match"); else _explicitNullProperties?.Remove("first_name_match"); } }
+        public string FirstNameMatch { get => _explicitNullValueFirstNameMatch; set { _explicitNullValueFirstNameMatch = value; AdditionalData?.Remove("first_name_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name_match"); else _explicitNullProperties?.Remove("first_name_match"); } }
         private string _explicitNullValueFirstNameMatch = default!;
 #endif
         /// <summary>The last_name_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastNameMatch { get => _explicitNullValueLastNameMatch; set { _explicitNullValueLastNameMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name_match"); else _explicitNullProperties?.Remove("last_name_match"); } }
+        public string? LastNameMatch { get => _explicitNullValueLastNameMatch; set { _explicitNullValueLastNameMatch = value; AdditionalData?.Remove("last_name_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name_match"); else _explicitNullProperties?.Remove("last_name_match"); } }
         private string? _explicitNullValueLastNameMatch = default!;
 #nullable restore
 #else
-        public string LastNameMatch { get => _explicitNullValueLastNameMatch; set { _explicitNullValueLastNameMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name_match"); else _explicitNullProperties?.Remove("last_name_match"); } }
+        public string LastNameMatch { get => _explicitNullValueLastNameMatch; set { _explicitNullValueLastNameMatch = value; AdditionalData?.Remove("last_name_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name_match"); else _explicitNullProperties?.Remove("last_name_match"); } }
         private string _explicitNullValueLastNameMatch = default!;
 #endif
         /// <summary>The national_id_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NationalIdMatch { get => _explicitNullValueNationalIdMatch; set { _explicitNullValueNationalIdMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_id_match"); else _explicitNullProperties?.Remove("national_id_match"); } }
+        public string? NationalIdMatch { get => _explicitNullValueNationalIdMatch; set { _explicitNullValueNationalIdMatch = value; AdditionalData?.Remove("national_id_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_id_match"); else _explicitNullProperties?.Remove("national_id_match"); } }
         private string? _explicitNullValueNationalIdMatch = default!;
 #nullable restore
 #else
-        public string NationalIdMatch { get => _explicitNullValueNationalIdMatch; set { _explicitNullValueNationalIdMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_id_match"); else _explicitNullProperties?.Remove("national_id_match"); } }
+        public string NationalIdMatch { get => _explicitNullValueNationalIdMatch; set { _explicitNullValueNationalIdMatch = value; AdditionalData?.Remove("national_id_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_id_match"); else _explicitNullProperties?.Remove("national_id_match"); } }
         private string _explicitNullValueNationalIdMatch = default!;
 #endif
         /// <summary>The postal_code_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PostalCodeMatch { get => _explicitNullValuePostalCodeMatch; set { _explicitNullValuePostalCodeMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postal_code_match"); else _explicitNullProperties?.Remove("postal_code_match"); } }
+        public string? PostalCodeMatch { get => _explicitNullValuePostalCodeMatch; set { _explicitNullValuePostalCodeMatch = value; AdditionalData?.Remove("postal_code_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postal_code_match"); else _explicitNullProperties?.Remove("postal_code_match"); } }
         private string? _explicitNullValuePostalCodeMatch = default!;
 #nullable restore
 #else
-        public string PostalCodeMatch { get => _explicitNullValuePostalCodeMatch; set { _explicitNullValuePostalCodeMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postal_code_match"); else _explicitNullProperties?.Remove("postal_code_match"); } }
+        public string PostalCodeMatch { get => _explicitNullValuePostalCodeMatch; set { _explicitNullValuePostalCodeMatch = value; AdditionalData?.Remove("postal_code_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postal_code_match"); else _explicitNullProperties?.Remove("postal_code_match"); } }
         private string _explicitNullValuePostalCodeMatch = default!;
 #endif
         /// <summary>The state_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StateMatch { get => _explicitNullValueStateMatch; set { _explicitNullValueStateMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_match"); else _explicitNullProperties?.Remove("state_match"); } }
+        public string? StateMatch { get => _explicitNullValueStateMatch; set { _explicitNullValueStateMatch = value; AdditionalData?.Remove("state_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_match"); else _explicitNullProperties?.Remove("state_match"); } }
         private string? _explicitNullValueStateMatch = default!;
 #nullable restore
 #else
-        public string StateMatch { get => _explicitNullValueStateMatch; set { _explicitNullValueStateMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_match"); else _explicitNullProperties?.Remove("state_match"); } }
+        public string StateMatch { get => _explicitNullValueStateMatch; set { _explicitNullValueStateMatch = value; AdditionalData?.Remove("state_match"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_match"); else _explicitNullProperties?.Remove("state_match"); } }
         private string _explicitNullValueStateMatch = default!;
 #endif
         /// <summary>The summary_score property</summary>
-        public int? SummaryScore { get => _explicitNullValueSummaryScore; set { _explicitNullValueSummaryScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary_score"); else _explicitNullProperties?.Remove("summary_score"); } }
+        public int? SummaryScore { get => _explicitNullValueSummaryScore; set { _explicitNullValueSummaryScore = value; AdditionalData?.Remove("summary_score"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary_score"); else _explicitNullProperties?.Remove("summary_score"); } }
         private int? _explicitNullValueSummaryScore = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IdentityMatchInfo"/> and sets the default values.

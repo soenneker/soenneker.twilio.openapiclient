@@ -17,12 +17,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ChatFriendlyName") is { } nullNodeChatFriendlyName && nullNodeChatFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChatFriendlyName = null;
-            if (parseNode.GetChildNode("ChatUniqueName") is { } nullNodeChatUniqueName && nullNodeChatUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChatUniqueName = null;
-            if (parseNode.GetChildNode("CustomerFriendlyName") is { } nullNodeCustomerFriendlyName && nullNodeCustomerFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerFriendlyName = null;
-            if (parseNode.GetChildNode("FlexFlowSid") is { } nullNodeFlexFlowSid && nullNodeFlexFlowSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlexFlowSid = null;
-            if (parseNode.GetChildNode("Identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
-            if (parseNode.GetChildNode("PreEngagementData") is { } nullNodePreEngagementData && nullNodePreEngagementData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreEngagementData = null;
+            if (parseNode.GetChildNode("ChatFriendlyName") is null) { _explicitNullValueChatFriendlyName = default!; _explicitNullProperties?.Remove("ChatFriendlyName"); }
+            else if (parseNode.GetChildNode("ChatFriendlyName") is { } nullNodeChatFriendlyName && nullNodeChatFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChatFriendlyName = null;
+            if (parseNode.GetChildNode("ChatUniqueName") is null) { _explicitNullValueChatUniqueName = default!; _explicitNullProperties?.Remove("ChatUniqueName"); }
+            else if (parseNode.GetChildNode("ChatUniqueName") is { } nullNodeChatUniqueName && nullNodeChatUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChatUniqueName = null;
+            if (parseNode.GetChildNode("CustomerFriendlyName") is null) { _explicitNullValueCustomerFriendlyName = default!; _explicitNullProperties?.Remove("CustomerFriendlyName"); }
+            else if (parseNode.GetChildNode("CustomerFriendlyName") is { } nullNodeCustomerFriendlyName && nullNodeCustomerFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerFriendlyName = null;
+            if (parseNode.GetChildNode("FlexFlowSid") is null) { _explicitNullValueFlexFlowSid = default!; _explicitNullProperties?.Remove("FlexFlowSid"); }
+            else if (parseNode.GetChildNode("FlexFlowSid") is { } nullNodeFlexFlowSid && nullNodeFlexFlowSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlexFlowSid = null;
+            if (parseNode.GetChildNode("Identity") is null) { _explicitNullValueIdentity = default!; _explicitNullProperties?.Remove("Identity"); }
+            else if (parseNode.GetChildNode("Identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("PreEngagementData") is null) { _explicitNullValuePreEngagementData = default!; _explicitNullProperties?.Remove("PreEngagementData"); }
+            else if (parseNode.GetChildNode("PreEngagementData") is { } nullNodePreEngagementData && nullNodePreEngagementData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreEngagementData = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,61 +36,61 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The chat channel&apos;s friendly name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChatFriendlyName { get => _explicitNullValueChatFriendlyName; set { _explicitNullValueChatFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatFriendlyName"); else _explicitNullProperties?.Remove("ChatFriendlyName"); } }
+        public string? ChatFriendlyName { get => _explicitNullValueChatFriendlyName; set { _explicitNullValueChatFriendlyName = value; AdditionalData?.Remove("ChatFriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatFriendlyName"); else _explicitNullProperties?.Remove("ChatFriendlyName"); } }
         private string? _explicitNullValueChatFriendlyName = default!;
 #nullable restore
 #else
-        public string ChatFriendlyName { get => _explicitNullValueChatFriendlyName; set { _explicitNullValueChatFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatFriendlyName"); else _explicitNullProperties?.Remove("ChatFriendlyName"); } }
+        public string ChatFriendlyName { get => _explicitNullValueChatFriendlyName; set { _explicitNullValueChatFriendlyName = value; AdditionalData?.Remove("ChatFriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatFriendlyName"); else _explicitNullProperties?.Remove("ChatFriendlyName"); } }
         private string _explicitNullValueChatFriendlyName = default!;
 #endif
         /// <summary>The chat channel&apos;s unique name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChatUniqueName { get => _explicitNullValueChatUniqueName; set { _explicitNullValueChatUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatUniqueName"); else _explicitNullProperties?.Remove("ChatUniqueName"); } }
+        public string? ChatUniqueName { get => _explicitNullValueChatUniqueName; set { _explicitNullValueChatUniqueName = value; AdditionalData?.Remove("ChatUniqueName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatUniqueName"); else _explicitNullProperties?.Remove("ChatUniqueName"); } }
         private string? _explicitNullValueChatUniqueName = default!;
 #nullable restore
 #else
-        public string ChatUniqueName { get => _explicitNullValueChatUniqueName; set { _explicitNullValueChatUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatUniqueName"); else _explicitNullProperties?.Remove("ChatUniqueName"); } }
+        public string ChatUniqueName { get => _explicitNullValueChatUniqueName; set { _explicitNullValueChatUniqueName = value; AdditionalData?.Remove("ChatUniqueName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatUniqueName"); else _explicitNullProperties?.Remove("ChatUniqueName"); } }
         private string _explicitNullValueChatUniqueName = default!;
 #endif
         /// <summary>The chat participant&apos;s friendly name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerFriendlyName { get => _explicitNullValueCustomerFriendlyName; set { _explicitNullValueCustomerFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerFriendlyName"); else _explicitNullProperties?.Remove("CustomerFriendlyName"); } }
+        public string? CustomerFriendlyName { get => _explicitNullValueCustomerFriendlyName; set { _explicitNullValueCustomerFriendlyName = value; AdditionalData?.Remove("CustomerFriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerFriendlyName"); else _explicitNullProperties?.Remove("CustomerFriendlyName"); } }
         private string? _explicitNullValueCustomerFriendlyName = default!;
 #nullable restore
 #else
-        public string CustomerFriendlyName { get => _explicitNullValueCustomerFriendlyName; set { _explicitNullValueCustomerFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerFriendlyName"); else _explicitNullProperties?.Remove("CustomerFriendlyName"); } }
+        public string CustomerFriendlyName { get => _explicitNullValueCustomerFriendlyName; set { _explicitNullValueCustomerFriendlyName = value; AdditionalData?.Remove("CustomerFriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerFriendlyName"); else _explicitNullProperties?.Remove("CustomerFriendlyName"); } }
         private string _explicitNullValueCustomerFriendlyName = default!;
 #endif
         /// <summary>The SID of the Flex Flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlexFlowSid { get => _explicitNullValueFlexFlowSid; set { _explicitNullValueFlexFlowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FlexFlowSid"); else _explicitNullProperties?.Remove("FlexFlowSid"); } }
+        public string? FlexFlowSid { get => _explicitNullValueFlexFlowSid; set { _explicitNullValueFlexFlowSid = value; AdditionalData?.Remove("FlexFlowSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FlexFlowSid"); else _explicitNullProperties?.Remove("FlexFlowSid"); } }
         private string? _explicitNullValueFlexFlowSid = default!;
 #nullable restore
 #else
-        public string FlexFlowSid { get => _explicitNullValueFlexFlowSid; set { _explicitNullValueFlexFlowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FlexFlowSid"); else _explicitNullProperties?.Remove("FlexFlowSid"); } }
+        public string FlexFlowSid { get => _explicitNullValueFlexFlowSid; set { _explicitNullValueFlexFlowSid = value; AdditionalData?.Remove("FlexFlowSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FlexFlowSid"); else _explicitNullProperties?.Remove("FlexFlowSid"); } }
         private string _explicitNullValueFlexFlowSid = default!;
 #endif
         /// <summary>The chat identity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("Identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
         private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("Identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
         private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>The pre-engagement data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreEngagementData { get => _explicitNullValuePreEngagementData; set { _explicitNullValuePreEngagementData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreEngagementData"); else _explicitNullProperties?.Remove("PreEngagementData"); } }
+        public string? PreEngagementData { get => _explicitNullValuePreEngagementData; set { _explicitNullValuePreEngagementData = value; AdditionalData?.Remove("PreEngagementData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreEngagementData"); else _explicitNullProperties?.Remove("PreEngagementData"); } }
         private string? _explicitNullValuePreEngagementData = default!;
 #nullable restore
 #else
-        public string PreEngagementData { get => _explicitNullValuePreEngagementData; set { _explicitNullValuePreEngagementData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreEngagementData"); else _explicitNullProperties?.Remove("PreEngagementData"); } }
+        public string PreEngagementData { get => _explicitNullValuePreEngagementData; set { _explicitNullValuePreEngagementData = value; AdditionalData?.Remove("PreEngagementData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreEngagementData"); else _explicitNullProperties?.Remove("PreEngagementData"); } }
         private string _explicitNullValuePreEngagementData = default!;
 #endif
         /// <summary>

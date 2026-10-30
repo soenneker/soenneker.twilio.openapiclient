@@ -17,9 +17,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("MediaProperties") is { } nullNodeMediaProperties && nullNodeMediaProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaProperties = null;
-            if (parseNode.GetChildNode("RoutingProperties") is { } nullNodeRoutingProperties && nullNodeRoutingProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutingProperties = null;
-            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("MediaProperties") is null) { _explicitNullValueMediaProperties = default!; _explicitNullProperties?.Remove("MediaProperties"); }
+            else if (parseNode.GetChildNode("MediaProperties") is { } nullNodeMediaProperties && nullNodeMediaProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaProperties = null;
+            if (parseNode.GetChildNode("RoutingProperties") is null) { _explicitNullValueRoutingProperties = default!; _explicitNullProperties?.Remove("RoutingProperties"); }
+            else if (parseNode.GetChildNode("RoutingProperties") is { } nullNodeRoutingProperties && nullNodeRoutingProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutingProperties = null;
+            if (parseNode.GetChildNode("Type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("Type"); }
+            else if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,25 +30,25 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>JSON representing the Media Properties for the new Participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? MediaProperties { get => _explicitNullValueMediaProperties; set { _explicitNullValueMediaProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MediaProperties"); else _explicitNullProperties?.Remove("MediaProperties"); } }
+        public UntypedNode? MediaProperties { get => _explicitNullValueMediaProperties; set { _explicitNullValueMediaProperties = value; AdditionalData?.Remove("MediaProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MediaProperties"); else _explicitNullProperties?.Remove("MediaProperties"); } }
         private UntypedNode? _explicitNullValueMediaProperties = default!;
 #nullable restore
 #else
-        public UntypedNode MediaProperties { get => _explicitNullValueMediaProperties; set { _explicitNullValueMediaProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MediaProperties"); else _explicitNullProperties?.Remove("MediaProperties"); } }
+        public UntypedNode MediaProperties { get => _explicitNullValueMediaProperties; set { _explicitNullValueMediaProperties = value; AdditionalData?.Remove("MediaProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MediaProperties"); else _explicitNullProperties?.Remove("MediaProperties"); } }
         private UntypedNode _explicitNullValueMediaProperties = default!;
 #endif
         /// <summary>Object representing the Routing Properties for the new Participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RoutingProperties { get => _explicitNullValueRoutingProperties; set { _explicitNullValueRoutingProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutingProperties"); else _explicitNullProperties?.Remove("RoutingProperties"); } }
+        public UntypedNode? RoutingProperties { get => _explicitNullValueRoutingProperties; set { _explicitNullValueRoutingProperties = value; AdditionalData?.Remove("RoutingProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutingProperties"); else _explicitNullProperties?.Remove("RoutingProperties"); } }
         private UntypedNode? _explicitNullValueRoutingProperties = default!;
 #nullable restore
 #else
-        public UntypedNode RoutingProperties { get => _explicitNullValueRoutingProperties; set { _explicitNullValueRoutingProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutingProperties"); else _explicitNullProperties?.Remove("RoutingProperties"); } }
+        public UntypedNode RoutingProperties { get => _explicitNullValueRoutingProperties; set { _explicitNullValueRoutingProperties = value; AdditionalData?.Remove("RoutingProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutingProperties"); else _explicitNullProperties?.Remove("RoutingProperties"); } }
         private UntypedNode _explicitNullValueRoutingProperties = default!;
 #endif
         /// <summary>Participant type. Can be: `agent`, `customer`, `supervisor`, `external`, `unknown`</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1CreateInteractionChannelParticipantXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -74,7 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "MediaProperties", n => { MediaProperties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "RoutingProperties", n => { RoutingProperties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "Type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType>(); } },
+                { "Type", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.InteractionChannelParticipantEnumType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("Type"); AdditionalData["Type"] = unknown; } else { Type = parsed; AdditionalData.Remove("Type"); } } },
             };
         }
         /// <summary>

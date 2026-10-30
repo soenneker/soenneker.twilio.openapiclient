@@ -17,12 +17,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("EventCallbackUrl") is { } nullNodeEventCallbackUrl && nullNodeEventCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventCallbackUrl = null;
-            if (parseNode.GetChildNode("EventsFilter") is { } nullNodeEventsFilter && nullNodeEventsFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventsFilter = null;
-            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("MultiTaskEnabled") is { } nullNodeMultiTaskEnabled && nullNodeMultiTaskEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiTaskEnabled = null;
-            if (parseNode.GetChildNode("PrioritizeQueueOrder") is { } nullNodePrioritizeQueueOrder && nullNodePrioritizeQueueOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrioritizeQueueOrder = null;
-            if (parseNode.GetChildNode("Template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
+            if (parseNode.GetChildNode("EventCallbackUrl") is null) { _explicitNullValueEventCallbackUrl = default!; _explicitNullProperties?.Remove("EventCallbackUrl"); }
+            else if (parseNode.GetChildNode("EventCallbackUrl") is { } nullNodeEventCallbackUrl && nullNodeEventCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventCallbackUrl = null;
+            if (parseNode.GetChildNode("EventsFilter") is null) { _explicitNullValueEventsFilter = default!; _explicitNullProperties?.Remove("EventsFilter"); }
+            else if (parseNode.GetChildNode("EventsFilter") is { } nullNodeEventsFilter && nullNodeEventsFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventsFilter = null;
+            if (parseNode.GetChildNode("FriendlyName") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("FriendlyName"); }
+            else if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("MultiTaskEnabled") is null) { _explicitNullValueMultiTaskEnabled = default!; _explicitNullProperties?.Remove("MultiTaskEnabled"); }
+            else if (parseNode.GetChildNode("MultiTaskEnabled") is { } nullNodeMultiTaskEnabled && nullNodeMultiTaskEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiTaskEnabled = null;
+            if (parseNode.GetChildNode("PrioritizeQueueOrder") is null) { _explicitNullValuePrioritizeQueueOrder = default!; _explicitNullProperties?.Remove("PrioritizeQueueOrder"); }
+            else if (parseNode.GetChildNode("PrioritizeQueueOrder") is { } nullNodePrioritizeQueueOrder && nullNodePrioritizeQueueOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrioritizeQueueOrder = null;
+            if (parseNode.GetChildNode("Template") is null) { _explicitNullValueTemplate = default!; _explicitNullProperties?.Remove("Template"); }
+            else if (parseNode.GetChildNode("Template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,47 +36,47 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URL we should call when an event occurs. If provided, the Workspace will publish events to this URL, for example, to collect data for reporting. See [Workspace Events](https://www.twilio.com/docs/taskrouter/api/event) for more information. This parameter supports Twilio&apos;s [Webhooks (HTTP callbacks) Connection Overrides](https://www.twilio.com/docs/usage/webhooks/webhooks-connection-overrides).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventCallbackUrl { get => _explicitNullValueEventCallbackUrl; set { _explicitNullValueEventCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventCallbackUrl"); else _explicitNullProperties?.Remove("EventCallbackUrl"); } }
+        public string? EventCallbackUrl { get => _explicitNullValueEventCallbackUrl; set { _explicitNullValueEventCallbackUrl = value; AdditionalData?.Remove("EventCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventCallbackUrl"); else _explicitNullProperties?.Remove("EventCallbackUrl"); } }
         private string? _explicitNullValueEventCallbackUrl = default!;
 #nullable restore
 #else
-        public string EventCallbackUrl { get => _explicitNullValueEventCallbackUrl; set { _explicitNullValueEventCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventCallbackUrl"); else _explicitNullProperties?.Remove("EventCallbackUrl"); } }
+        public string EventCallbackUrl { get => _explicitNullValueEventCallbackUrl; set { _explicitNullValueEventCallbackUrl = value; AdditionalData?.Remove("EventCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventCallbackUrl"); else _explicitNullProperties?.Remove("EventCallbackUrl"); } }
         private string _explicitNullValueEventCallbackUrl = default!;
 #endif
         /// <summary>The list of Workspace events for which to call event_callback_url. For example, if `EventsFilter=task.created, task.canceled, worker.activity.update`, then TaskRouter will call event_callback_url only when a task is created, canceled, or a Worker activity is updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventsFilter { get => _explicitNullValueEventsFilter; set { _explicitNullValueEventsFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventsFilter"); else _explicitNullProperties?.Remove("EventsFilter"); } }
+        public string? EventsFilter { get => _explicitNullValueEventsFilter; set { _explicitNullValueEventsFilter = value; AdditionalData?.Remove("EventsFilter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventsFilter"); else _explicitNullProperties?.Remove("EventsFilter"); } }
         private string? _explicitNullValueEventsFilter = default!;
 #nullable restore
 #else
-        public string EventsFilter { get => _explicitNullValueEventsFilter; set { _explicitNullValueEventsFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventsFilter"); else _explicitNullProperties?.Remove("EventsFilter"); } }
+        public string EventsFilter { get => _explicitNullValueEventsFilter; set { _explicitNullValueEventsFilter = value; AdditionalData?.Remove("EventsFilter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventsFilter"); else _explicitNullProperties?.Remove("EventsFilter"); } }
         private string _explicitNullValueEventsFilter = default!;
 #endif
         /// <summary>A descriptive string that you create to describe the Workspace resource. It can be up to 64 characters long. For example: `Customer Support` or `2014 Election Campaign`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>Whether to enable multi-tasking. Can be: `true` to enable multi-tasking, or `false` to disable it. However, all workspaces should be created as multi-tasking. The default is `true`. Multi-tasking allows Workers to handle multiple Tasks simultaneously. When enabled (`true`), each Worker can receive parallel reservations up to the per-channel maximums defined in the Workers section. In single-tasking mode (legacy mode), each Worker will only receive a new reservation when the previous task is completed. Learn more at [Multitasking](https://www.twilio.com/docs/taskrouter/multitasking).</summary>
-        public bool? MultiTaskEnabled { get => _explicitNullValueMultiTaskEnabled; set { _explicitNullValueMultiTaskEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MultiTaskEnabled"); else _explicitNullProperties?.Remove("MultiTaskEnabled"); } }
+        public bool? MultiTaskEnabled { get => _explicitNullValueMultiTaskEnabled; set { _explicitNullValueMultiTaskEnabled = value; AdditionalData?.Remove("MultiTaskEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MultiTaskEnabled"); else _explicitNullProperties?.Remove("MultiTaskEnabled"); } }
         private bool? _explicitNullValueMultiTaskEnabled = default!;
         /// <summary>The type of TaskQueue to prioritize when Workers are receiving Tasks from both types of TaskQueues. Can be: `LIFO` or `FIFO` and the default is `FIFO`. For more information, see [Queue Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder? PrioritizeQueueOrder { get => _explicitNullValuePrioritizeQueueOrder; set { _explicitNullValuePrioritizeQueueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrioritizeQueueOrder"); else _explicitNullProperties?.Remove("PrioritizeQueueOrder"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder? PrioritizeQueueOrder { get => _explicitNullValuePrioritizeQueueOrder; set { _explicitNullValuePrioritizeQueueOrder = value; AdditionalData?.Remove("PrioritizeQueueOrder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrioritizeQueueOrder"); else _explicitNullProperties?.Remove("PrioritizeQueueOrder"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder? _explicitNullValuePrioritizeQueueOrder = default!;
         /// <summary>An available template name. Can be: `NONE` or `FIFO` and the default is `NONE`. Pre-configures the Workspace with the Workflow and Activities specified in the template. `NONE` will create a Workspace with only a set of default activities. `FIFO` will configure TaskRouter with a set of default activities and a single TaskQueue for first-in, first-out distribution, which can be useful when you are getting started with TaskRouter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Template"); else _explicitNullProperties?.Remove("Template"); } }
+        public string? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("Template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Template"); else _explicitNullProperties?.Remove("Template"); } }
         private string? _explicitNullValueTemplate = default!;
 #nullable restore
 #else
-        public string Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Template"); else _explicitNullProperties?.Remove("Template"); } }
+        public string Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("Template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Template"); else _explicitNullProperties?.Remove("Template"); } }
         private string _explicitNullValueTemplate = default!;
 #endif
         /// <summary>
@@ -102,7 +108,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "EventsFilter", n => { EventsFilter = n.GetStringValue(); } },
                 { "FriendlyName", n => { FriendlyName = n.GetStringValue(); } },
                 { "MultiTaskEnabled", n => { MultiTaskEnabled = n.GetBoolValue(); } },
-                { "PrioritizeQueueOrder", n => { PrioritizeQueueOrder = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder>(); } },
+                { "PrioritizeQueueOrder", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePrioritizeQueueOrder = default; _explicitNullProperties?.Remove("PrioritizeQueueOrder"); AdditionalData["PrioritizeQueueOrder"] = unknown; } else { PrioritizeQueueOrder = parsed; AdditionalData.Remove("PrioritizeQueueOrder"); } } },
                 { "Template", n => { Template = n.GetStringValue(); } },
             };
         }

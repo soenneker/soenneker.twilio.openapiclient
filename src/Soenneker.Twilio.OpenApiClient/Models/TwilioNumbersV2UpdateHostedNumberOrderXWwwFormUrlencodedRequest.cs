@@ -17,27 +17,30 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("VerificationCallDelay") is { } nullNodeVerificationCallDelay && nullNodeVerificationCallDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationCallDelay = null;
-            if (parseNode.GetChildNode("VerificationCallExtension") is { } nullNodeVerificationCallExtension && nullNodeVerificationCallExtension.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationCallExtension = null;
+            if (parseNode.GetChildNode("Status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("Status"); }
+            else if (parseNode.GetChildNode("Status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("VerificationCallDelay") is null) { _explicitNullValueVerificationCallDelay = default!; _explicitNullProperties?.Remove("VerificationCallDelay"); }
+            else if (parseNode.GetChildNode("VerificationCallDelay") is { } nullNodeVerificationCallDelay && nullNodeVerificationCallDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationCallDelay = null;
+            if (parseNode.GetChildNode("VerificationCallExtension") is null) { _explicitNullValueVerificationCallExtension = default!; _explicitNullProperties?.Remove("VerificationCallExtension"); }
+            else if (parseNode.GetChildNode("VerificationCallExtension") is { } nullNodeVerificationCallExtension && nullNodeVerificationCallExtension.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationCallExtension = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Status of this resource. It can hold one of the values: 1. Twilio Processing 2. Received, 3. Pending LOA, 4. Carrier Processing, 5. Completed, 6. Action Required, 7. Failed. See the [HostedNumberOrders Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/hosted-number-order-resource#status-values) section for more information on each of these statuses.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Status"); else _explicitNullProperties?.Remove("Status"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("Status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Status"); else _explicitNullProperties?.Remove("Status"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumStatus? _explicitNullValueStatus = default!;
         /// <summary>The number of seconds to wait before initiating the ownership verification call. Can be a value between 0 and 60, inclusive.</summary>
-        public int? VerificationCallDelay { get => _explicitNullValueVerificationCallDelay; set { _explicitNullValueVerificationCallDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerificationCallDelay"); else _explicitNullProperties?.Remove("VerificationCallDelay"); } }
+        public int? VerificationCallDelay { get => _explicitNullValueVerificationCallDelay; set { _explicitNullValueVerificationCallDelay = value; AdditionalData?.Remove("VerificationCallDelay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerificationCallDelay"); else _explicitNullProperties?.Remove("VerificationCallDelay"); } }
         private int? _explicitNullValueVerificationCallDelay = default!;
         /// <summary>The numerical extension to dial when making the ownership verification call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerificationCallExtension { get => _explicitNullValueVerificationCallExtension; set { _explicitNullValueVerificationCallExtension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerificationCallExtension"); else _explicitNullProperties?.Remove("VerificationCallExtension"); } }
+        public string? VerificationCallExtension { get => _explicitNullValueVerificationCallExtension; set { _explicitNullValueVerificationCallExtension = value; AdditionalData?.Remove("VerificationCallExtension"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerificationCallExtension"); else _explicitNullProperties?.Remove("VerificationCallExtension"); } }
         private string? _explicitNullValueVerificationCallExtension = default!;
 #nullable restore
 #else
-        public string VerificationCallExtension { get => _explicitNullValueVerificationCallExtension; set { _explicitNullValueVerificationCallExtension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerificationCallExtension"); else _explicitNullProperties?.Remove("VerificationCallExtension"); } }
+        public string VerificationCallExtension { get => _explicitNullValueVerificationCallExtension; set { _explicitNullValueVerificationCallExtension = value; AdditionalData?.Remove("VerificationCallExtension"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerificationCallExtension"); else _explicitNullProperties?.Remove("VerificationCallExtension"); } }
         private string _explicitNullValueVerificationCallExtension = default!;
 #endif
         /// <summary>
@@ -65,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumStatus>(); } },
+                { "Status", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("Status"); AdditionalData["Status"] = unknown; } else { Status = parsed; AdditionalData.Remove("Status"); } } },
                 { "VerificationCallDelay", n => { VerificationCallDelay = n.GetIntValue(); } },
                 { "VerificationCallExtension", n => { VerificationCallExtension = n.GetStringValue(); } },
             };

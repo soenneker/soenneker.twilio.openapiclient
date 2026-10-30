@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("us_app_to_person_usecases") is { } nullNodeUsAppToPersonUsecases && nullNodeUsAppToPersonUsecases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsAppToPersonUsecases = null;
+            if (parseNode.GetChildNode("us_app_to_person_usecases") is null) { _explicitNullValueUsAppToPersonUsecases = default!; _explicitNullProperties?.Remove("us_app_to_person_usecases"); }
+            else if (parseNode.GetChildNode("us_app_to_person_usecases") is { } nullNodeUsAppToPersonUsecases && nullNodeUsAppToPersonUsecases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsAppToPersonUsecases = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Human readable name, code, description and post_approval_required (indicates whether or not post approval is required for this Use Case) of A2P Campaign Use Cases.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? UsAppToPersonUsecases { get => _explicitNullValueUsAppToPersonUsecases; set { _explicitNullValueUsAppToPersonUsecases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_app_to_person_usecases"); else _explicitNullProperties?.Remove("us_app_to_person_usecases"); } }
+        public UntypedNode? UsAppToPersonUsecases { get => _explicitNullValueUsAppToPersonUsecases; set { _explicitNullValueUsAppToPersonUsecases = value; AdditionalData?.Remove("us_app_to_person_usecases"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_app_to_person_usecases"); else _explicitNullProperties?.Remove("us_app_to_person_usecases"); } }
         private UntypedNode? _explicitNullValueUsAppToPersonUsecases = default!;
 #nullable restore
 #else
-        public UntypedNode UsAppToPersonUsecases { get => _explicitNullValueUsAppToPersonUsecases; set { _explicitNullValueUsAppToPersonUsecases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_app_to_person_usecases"); else _explicitNullProperties?.Remove("us_app_to_person_usecases"); } }
+        public UntypedNode UsAppToPersonUsecases { get => _explicitNullValueUsAppToPersonUsecases; set { _explicitNullValueUsAppToPersonUsecases = value; AdditionalData?.Remove("us_app_to_person_usecases"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_app_to_person_usecases"); else _explicitNullProperties?.Remove("us_app_to_person_usecases"); } }
         private UntypedNode _explicitNullValueUsAppToPersonUsecases = default!;
 #endif
         /// <summary>

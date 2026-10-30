@@ -18,9 +18,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("answer_rate") is { } nullNodeAnswerRate && nullNodeAnswerRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerRate = null;
-            if (parseNode.GetChildNode("call_count") is { } nullNodeCallCount && nullNodeCallCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallCount = null;
-            if (parseNode.GetChildNode("percentage") is { } nullNodePercentage && nullNodePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Percentage = null;
+            if (parseNode.GetChildNode("answer_rate") is null) { _explicitNullValueAnswerRate = default!; _explicitNullProperties?.Remove("answer_rate"); }
+            else if (parseNode.GetChildNode("answer_rate") is { } nullNodeAnswerRate && nullNodeAnswerRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerRate = null;
+            if (parseNode.GetChildNode("call_count") is null) { _explicitNullValueCallCount = default!; _explicitNullProperties?.Remove("call_count"); }
+            else if (parseNode.GetChildNode("call_count") is { } nullNodeCallCount && nullNodeCallCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallCount = null;
+            if (parseNode.GetChildNode("percentage") is null) { _explicitNullValuePercentage = default!; _explicitNullProperties?.Remove("percentage"); }
+            else if (parseNode.GetChildNode("percentage") is { } nullNodePercentage && nullNodePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Percentage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Answer rate for each STIR/SHAKEN attestation category.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenAnswerRate? AnswerRate { get => _explicitNullValueAnswerRate; set { _explicitNullValueAnswerRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_rate"); else _explicitNullProperties?.Remove("answer_rate"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenAnswerRate? AnswerRate { get => _explicitNullValueAnswerRate; set { _explicitNullValueAnswerRate = value; AdditionalData?.Remove("answer_rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_rate"); else _explicitNullProperties?.Remove("answer_rate"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.StirShakenAnswerRate? _explicitNullValueAnswerRate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenAnswerRate AnswerRate { get => _explicitNullValueAnswerRate; set { _explicitNullValueAnswerRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_rate"); else _explicitNullProperties?.Remove("answer_rate"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenAnswerRate AnswerRate { get => _explicitNullValueAnswerRate; set { _explicitNullValueAnswerRate = value; AdditionalData?.Remove("answer_rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_rate"); else _explicitNullProperties?.Remove("answer_rate"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.StirShakenAnswerRate _explicitNullValueAnswerRate = default!;
 #endif
         /// <summary>Total number of calls for each STIR/SHAKEN attestation category.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenCallCount? CallCount { get => _explicitNullValueCallCount; set { _explicitNullValueCallCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_count"); else _explicitNullProperties?.Remove("call_count"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenCallCount? CallCount { get => _explicitNullValueCallCount; set { _explicitNullValueCallCount = value; AdditionalData?.Remove("call_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_count"); else _explicitNullProperties?.Remove("call_count"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.StirShakenCallCount? _explicitNullValueCallCount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenCallCount CallCount { get => _explicitNullValueCallCount; set { _explicitNullValueCallCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_count"); else _explicitNullProperties?.Remove("call_count"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenCallCount CallCount { get => _explicitNullValueCallCount; set { _explicitNullValueCallCount = value; AdditionalData?.Remove("call_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_count"); else _explicitNullProperties?.Remove("call_count"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.StirShakenCallCount _explicitNullValueCallCount = default!;
 #endif
         /// <summary>Percentage of calls for each STIR/SHAKEN attestation category.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenPercentage? Percentage { get => _explicitNullValuePercentage; set { _explicitNullValuePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage"); else _explicitNullProperties?.Remove("percentage"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenPercentage? Percentage { get => _explicitNullValuePercentage; set { _explicitNullValuePercentage = value; AdditionalData?.Remove("percentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage"); else _explicitNullProperties?.Remove("percentage"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.StirShakenPercentage? _explicitNullValuePercentage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenPercentage Percentage { get => _explicitNullValuePercentage; set { _explicitNullValuePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage"); else _explicitNullProperties?.Remove("percentage"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StirShakenPercentage Percentage { get => _explicitNullValuePercentage; set { _explicitNullValuePercentage = value; AdditionalData?.Remove("percentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage"); else _explicitNullProperties?.Remove("percentage"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.StirShakenPercentage _explicitNullValuePercentage = default!;
 #endif
         /// <summary>

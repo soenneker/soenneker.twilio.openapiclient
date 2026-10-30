@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ip_address") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
-            if (parseNode.GetChildNode("ip_address_version") is { } nullNodeIpAddressVersion && nullNodeIpAddressVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddressVersion = null;
+            if (parseNode.GetChildNode("ip_address") is null) { _explicitNullValueIpAddress = default!; _explicitNullProperties?.Remove("ip_address"); }
+            else if (parseNode.GetChildNode("ip_address") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
+            if (parseNode.GetChildNode("ip_address_version") is null) { _explicitNullValueIpAddressVersion = default!; _explicitNullProperties?.Remove("ip_address_version"); }
+            else if (parseNode.GetChildNode("ip_address_version") is { } nullNodeIpAddressVersion && nullNodeIpAddressVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddressVersion = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>IP address assigned to the given Super SIM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        public string? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; AdditionalData?.Remove("ip_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
         private string? _explicitNullValueIpAddress = default!;
 #nullable restore
 #else
-        public string IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        public string IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; AdditionalData?.Remove("ip_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
         private string _explicitNullValueIpAddress = default!;
 #endif
         /// <summary>IP address version of the corresponding IP address</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.SimIpAddressEnumIpAddressVersion? IpAddressVersion { get => _explicitNullValueIpAddressVersion; set { _explicitNullValueIpAddressVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address_version"); else _explicitNullProperties?.Remove("ip_address_version"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SimIpAddressEnumIpAddressVersion? IpAddressVersion { get => _explicitNullValueIpAddressVersion; set { _explicitNullValueIpAddressVersion = value; AdditionalData?.Remove("ip_address_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address_version"); else _explicitNullProperties?.Remove("ip_address_version"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.SimIpAddressEnumIpAddressVersion? _explicitNullValueIpAddressVersion = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1SimSimIpAddress"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
-                { "ip_address_version", n => { IpAddressVersion = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SimIpAddressEnumIpAddressVersion>(); } },
+                { "ip_address_version", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SimIpAddressEnumIpAddressVersion>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIpAddressVersion = default; _explicitNullProperties?.Remove("ip_address_version"); AdditionalData["ip_address_version"] = unknown; } else { IpAddressVersion = parsed; AdditionalData.Remove("ip_address_version"); } } },
             };
         }
         /// <summary>

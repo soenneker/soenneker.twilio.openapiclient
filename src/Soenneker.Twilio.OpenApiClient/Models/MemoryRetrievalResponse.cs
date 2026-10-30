@@ -18,10 +18,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("communications") is { } nullNodeCommunications && nullNodeCommunications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Communications = null;
-            if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
-            if (parseNode.GetChildNode("observations") is { } nullNodeObservations && nullNodeObservations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Observations = null;
-            if (parseNode.GetChildNode("summaries") is { } nullNodeSummaries && nullNodeSummaries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summaries = null;
+            if (parseNode.GetChildNode("communications") is null) { _explicitNullValueCommunications = default!; _explicitNullProperties?.Remove("communications"); }
+            else if (parseNode.GetChildNode("communications") is { } nullNodeCommunications && nullNodeCommunications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Communications = null;
+            if (parseNode.GetChildNode("meta") is null) { _explicitNullValueMeta = default!; _explicitNullProperties?.Remove("meta"); }
+            else if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
+            if (parseNode.GetChildNode("observations") is null) { _explicitNullValueObservations = default!; _explicitNullProperties?.Remove("observations"); }
+            else if (parseNode.GetChildNode("observations") is { } nullNodeObservations && nullNodeObservations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Observations = null;
+            if (parseNode.GetChildNode("summaries") is null) { _explicitNullValueSummaries = default!; _explicitNullProperties?.Remove("summaries"); }
+            else if (parseNode.GetChildNode("summaries") is { } nullNodeSummaries && nullNodeSummaries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summaries = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Array of recent communication context.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Communication>? Communications { get => _explicitNullValueCommunications; set { _explicitNullValueCommunications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communications"); else _explicitNullProperties?.Remove("communications"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Communication>? Communications { get => _explicitNullValueCommunications; set { _explicitNullValueCommunications = value; AdditionalData?.Remove("communications"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communications"); else _explicitNullProperties?.Remove("communications"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Communication>? _explicitNullValueCommunications = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Communication> Communications { get => _explicitNullValueCommunications; set { _explicitNullValueCommunications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communications"); else _explicitNullProperties?.Remove("communications"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Communication> Communications { get => _explicitNullValueCommunications; set { _explicitNullValueCommunications = value; AdditionalData?.Remove("communications"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communications"); else _explicitNullProperties?.Remove("communications"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMemoryV1Communication> _explicitNullValueCommunications = default!;
 #endif
         /// <summary>Metadata about the retrieval operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MemoryRetrievalResponseMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MemoryRetrievalResponseMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.MemoryRetrievalResponseMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MemoryRetrievalResponseMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MemoryRetrievalResponseMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.MemoryRetrievalResponseMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>Array of observation memories.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.RecallObservationInfo>? Observations { get => _explicitNullValueObservations; set { _explicitNullValueObservations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("observations"); else _explicitNullProperties?.Remove("observations"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.RecallObservationInfo>? Observations { get => _explicitNullValueObservations; set { _explicitNullValueObservations = value; AdditionalData?.Remove("observations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("observations"); else _explicitNullProperties?.Remove("observations"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.RecallObservationInfo>? _explicitNullValueObservations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.RecallObservationInfo> Observations { get => _explicitNullValueObservations; set { _explicitNullValueObservations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("observations"); else _explicitNullProperties?.Remove("observations"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.RecallObservationInfo> Observations { get => _explicitNullValueObservations; set { _explicitNullValueObservations = value; AdditionalData?.Remove("observations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("observations"); else _explicitNullProperties?.Remove("observations"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.RecallObservationInfo> _explicitNullValueObservations = default!;
 #endif
         /// <summary>Array of summary memories derived from observations at the end of conversations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.RecallSummaryInfo>? Summaries { get => _explicitNullValueSummaries; set { _explicitNullValueSummaries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summaries"); else _explicitNullProperties?.Remove("summaries"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.RecallSummaryInfo>? Summaries { get => _explicitNullValueSummaries; set { _explicitNullValueSummaries = value; AdditionalData?.Remove("summaries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summaries"); else _explicitNullProperties?.Remove("summaries"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.RecallSummaryInfo>? _explicitNullValueSummaries = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.RecallSummaryInfo> Summaries { get => _explicitNullValueSummaries; set { _explicitNullValueSummaries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summaries"); else _explicitNullProperties?.Remove("summaries"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.RecallSummaryInfo> Summaries { get => _explicitNullValueSummaries; set { _explicitNullValueSummaries = value; AdditionalData?.Remove("summaries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summaries"); else _explicitNullProperties?.Remove("summaries"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.RecallSummaryInfo> _explicitNullValueSummaries = default!;
 #endif
         /// <summary>

@@ -17,21 +17,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("cumulative") is { } nullNodeCumulative && nullNodeCumulative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cumulative = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
-            if (parseNode.GetChildNode("worker_sid") is { } nullNodeWorkerSid && nullNodeWorkerSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerSid = null;
-            if (parseNode.GetChildNode("workspace_sid") is { } nullNodeWorkspaceSid && nullNodeWorkspaceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkspaceSid = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("cumulative") is null) { _explicitNullValueCumulative = default!; _explicitNullProperties?.Remove("cumulative"); }
+            else if (parseNode.GetChildNode("cumulative") is { } nullNodeCumulative && nullNodeCumulative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cumulative = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("worker_sid") is null) { _explicitNullValueWorkerSid = default!; _explicitNullProperties?.Remove("worker_sid"); }
+            else if (parseNode.GetChildNode("worker_sid") is { } nullNodeWorkerSid && nullNodeWorkerSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerSid = null;
+            if (parseNode.GetChildNode("workspace_sid") is null) { _explicitNullValueWorkspaceSid = default!; _explicitNullProperties?.Remove("workspace_sid"); }
+            else if (parseNode.GetChildNode("workspace_sid") is { } nullNodeWorkspaceSid && nullNodeWorkspaceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkspaceSid = null;
         }
 
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Worker resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,41 +44,41 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An object that contains the cumulative statistics for the Worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Cumulative { get => _explicitNullValueCumulative; set { _explicitNullValueCumulative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cumulative"); else _explicitNullProperties?.Remove("cumulative"); } }
+        public UntypedNode? Cumulative { get => _explicitNullValueCumulative; set { _explicitNullValueCumulative = value; AdditionalData?.Remove("cumulative"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cumulative"); else _explicitNullProperties?.Remove("cumulative"); } }
         private UntypedNode? _explicitNullValueCumulative = default!;
 #nullable restore
 #else
-        public UntypedNode Cumulative { get => _explicitNullValueCumulative; set { _explicitNullValueCumulative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cumulative"); else _explicitNullProperties?.Remove("cumulative"); } }
+        public UntypedNode Cumulative { get => _explicitNullValueCumulative; set { _explicitNullValueCumulative = value; AdditionalData?.Remove("cumulative"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cumulative"); else _explicitNullProperties?.Remove("cumulative"); } }
         private UntypedNode _explicitNullValueCumulative = default!;
 #endif
         /// <summary>The absolute URL of the WorkerChannel statistics resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>The SID of the Worker that contains the WorkerChannel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerSid { get => _explicitNullValueWorkerSid; set { _explicitNullValueWorkerSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("worker_sid"); else _explicitNullProperties?.Remove("worker_sid"); } }
+        public string? WorkerSid { get => _explicitNullValueWorkerSid; set { _explicitNullValueWorkerSid = value; AdditionalData?.Remove("worker_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("worker_sid"); else _explicitNullProperties?.Remove("worker_sid"); } }
         private string? _explicitNullValueWorkerSid = default!;
 #nullable restore
 #else
-        public string WorkerSid { get => _explicitNullValueWorkerSid; set { _explicitNullValueWorkerSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("worker_sid"); else _explicitNullProperties?.Remove("worker_sid"); } }
+        public string WorkerSid { get => _explicitNullValueWorkerSid; set { _explicitNullValueWorkerSid = value; AdditionalData?.Remove("worker_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("worker_sid"); else _explicitNullProperties?.Remove("worker_sid"); } }
         private string _explicitNullValueWorkerSid = default!;
 #endif
         /// <summary>The SID of the Workspace that contains the WorkerChannel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkspaceSid { get => _explicitNullValueWorkspaceSid; set { _explicitNullValueWorkspaceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace_sid"); else _explicitNullProperties?.Remove("workspace_sid"); } }
+        public string? WorkspaceSid { get => _explicitNullValueWorkspaceSid; set { _explicitNullValueWorkspaceSid = value; AdditionalData?.Remove("workspace_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace_sid"); else _explicitNullProperties?.Remove("workspace_sid"); } }
         private string? _explicitNullValueWorkspaceSid = default!;
 #nullable restore
 #else
-        public string WorkspaceSid { get => _explicitNullValueWorkspaceSid; set { _explicitNullValueWorkspaceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace_sid"); else _explicitNullProperties?.Remove("workspace_sid"); } }
+        public string WorkspaceSid { get => _explicitNullValueWorkspaceSid; set { _explicitNullValueWorkspaceSid = value; AdditionalData?.Remove("workspace_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace_sid"); else _explicitNullProperties?.Remove("workspace_sid"); } }
         private string _explicitNullValueWorkspaceSid = default!;
 #endif
         /// <summary>

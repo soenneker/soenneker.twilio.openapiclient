@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("IpAccessControlListSid") is { } nullNodeIpAccessControlListSid && nullNodeIpAccessControlListSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAccessControlListSid = null;
+            if (parseNode.GetChildNode("IpAccessControlListSid") is null) { _explicitNullValueIpAccessControlListSid = default!; _explicitNullProperties?.Remove("IpAccessControlListSid"); }
+            else if (parseNode.GetChildNode("IpAccessControlListSid") is { } nullNodeIpAccessControlListSid && nullNodeIpAccessControlListSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAccessControlListSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID of the IpAccessControlList resource to map to the SIP domain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpAccessControlListSid { get => _explicitNullValueIpAccessControlListSid; set { _explicitNullValueIpAccessControlListSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IpAccessControlListSid"); else _explicitNullProperties?.Remove("IpAccessControlListSid"); } }
+        public string? IpAccessControlListSid { get => _explicitNullValueIpAccessControlListSid; set { _explicitNullValueIpAccessControlListSid = value; AdditionalData?.Remove("IpAccessControlListSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IpAccessControlListSid"); else _explicitNullProperties?.Remove("IpAccessControlListSid"); } }
         private string? _explicitNullValueIpAccessControlListSid = default!;
 #nullable restore
 #else
-        public string IpAccessControlListSid { get => _explicitNullValueIpAccessControlListSid; set { _explicitNullValueIpAccessControlListSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IpAccessControlListSid"); else _explicitNullProperties?.Remove("IpAccessControlListSid"); } }
+        public string IpAccessControlListSid { get => _explicitNullValueIpAccessControlListSid; set { _explicitNullValueIpAccessControlListSid = value; AdditionalData?.Remove("IpAccessControlListSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IpAccessControlListSid"); else _explicitNullProperties?.Remove("IpAccessControlListSid"); } }
         private string _explicitNullValueIpAccessControlListSid = default!;
 #endif
         /// <summary>

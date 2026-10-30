@@ -17,12 +17,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AddressSid") is { } nullNodeAddressSid && nullNodeAddressSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressSid = null;
-            if (parseNode.GetChildNode("CcEmails") is { } nullNodeCcEmails && nullNodeCcEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CcEmails = null;
-            if (parseNode.GetChildNode("ContactPhoneNumber") is { } nullNodeContactPhoneNumber && nullNodeContactPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactPhoneNumber = null;
-            if (parseNode.GetChildNode("ContactTitle") is { } nullNodeContactTitle && nullNodeContactTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactTitle = null;
-            if (parseNode.GetChildNode("Email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("HostedNumberOrderSids") is { } nullNodeHostedNumberOrderSids && nullNodeHostedNumberOrderSids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedNumberOrderSids = null;
+            if (parseNode.GetChildNode("AddressSid") is null) { _explicitNullValueAddressSid = default!; _explicitNullProperties?.Remove("AddressSid"); }
+            else if (parseNode.GetChildNode("AddressSid") is { } nullNodeAddressSid && nullNodeAddressSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressSid = null;
+            if (parseNode.GetChildNode("CcEmails") is null) { _explicitNullValueCcEmails = default!; _explicitNullProperties?.Remove("CcEmails"); }
+            else if (parseNode.GetChildNode("CcEmails") is { } nullNodeCcEmails && nullNodeCcEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CcEmails = null;
+            if (parseNode.GetChildNode("ContactPhoneNumber") is null) { _explicitNullValueContactPhoneNumber = default!; _explicitNullProperties?.Remove("ContactPhoneNumber"); }
+            else if (parseNode.GetChildNode("ContactPhoneNumber") is { } nullNodeContactPhoneNumber && nullNodeContactPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactPhoneNumber = null;
+            if (parseNode.GetChildNode("ContactTitle") is null) { _explicitNullValueContactTitle = default!; _explicitNullProperties?.Remove("ContactTitle"); }
+            else if (parseNode.GetChildNode("ContactTitle") is { } nullNodeContactTitle && nullNodeContactTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactTitle = null;
+            if (parseNode.GetChildNode("Email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("Email"); }
+            else if (parseNode.GetChildNode("Email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("HostedNumberOrderSids") is null) { _explicitNullValueHostedNumberOrderSids = default!; _explicitNullProperties?.Remove("HostedNumberOrderSids"); }
+            else if (parseNode.GetChildNode("HostedNumberOrderSids") is { } nullNodeHostedNumberOrderSids && nullNodeHostedNumberOrderSids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedNumberOrderSids = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,61 +36,61 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A 34 character string that uniquely identifies the Address resource that is associated with this AuthorizationDocument.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressSid"); else _explicitNullProperties?.Remove("AddressSid"); } }
+        public string? AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; AdditionalData?.Remove("AddressSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressSid"); else _explicitNullProperties?.Remove("AddressSid"); } }
         private string? _explicitNullValueAddressSid = default!;
 #nullable restore
 #else
-        public string AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressSid"); else _explicitNullProperties?.Remove("AddressSid"); } }
+        public string AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; AdditionalData?.Remove("AddressSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressSid"); else _explicitNullProperties?.Remove("AddressSid"); } }
         private string _explicitNullValueAddressSid = default!;
 #endif
         /// <summary>Email recipients who will be informed when an Authorization Document has been sent and signed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CcEmails { get => _explicitNullValueCcEmails; set { _explicitNullValueCcEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CcEmails"); else _explicitNullProperties?.Remove("CcEmails"); } }
+        public List<string>? CcEmails { get => _explicitNullValueCcEmails; set { _explicitNullValueCcEmails = value; AdditionalData?.Remove("CcEmails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CcEmails"); else _explicitNullProperties?.Remove("CcEmails"); } }
         private List<string>? _explicitNullValueCcEmails = default!;
 #nullable restore
 #else
-        public List<string> CcEmails { get => _explicitNullValueCcEmails; set { _explicitNullValueCcEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CcEmails"); else _explicitNullProperties?.Remove("CcEmails"); } }
+        public List<string> CcEmails { get => _explicitNullValueCcEmails; set { _explicitNullValueCcEmails = value; AdditionalData?.Remove("CcEmails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CcEmails"); else _explicitNullProperties?.Remove("CcEmails"); } }
         private List<string> _explicitNullValueCcEmails = default!;
 #endif
         /// <summary>The contact phone number of the person authorized to sign the Authorization Document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactPhoneNumber { get => _explicitNullValueContactPhoneNumber; set { _explicitNullValueContactPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactPhoneNumber"); else _explicitNullProperties?.Remove("ContactPhoneNumber"); } }
+        public string? ContactPhoneNumber { get => _explicitNullValueContactPhoneNumber; set { _explicitNullValueContactPhoneNumber = value; AdditionalData?.Remove("ContactPhoneNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactPhoneNumber"); else _explicitNullProperties?.Remove("ContactPhoneNumber"); } }
         private string? _explicitNullValueContactPhoneNumber = default!;
 #nullable restore
 #else
-        public string ContactPhoneNumber { get => _explicitNullValueContactPhoneNumber; set { _explicitNullValueContactPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactPhoneNumber"); else _explicitNullProperties?.Remove("ContactPhoneNumber"); } }
+        public string ContactPhoneNumber { get => _explicitNullValueContactPhoneNumber; set { _explicitNullValueContactPhoneNumber = value; AdditionalData?.Remove("ContactPhoneNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactPhoneNumber"); else _explicitNullProperties?.Remove("ContactPhoneNumber"); } }
         private string _explicitNullValueContactPhoneNumber = default!;
 #endif
         /// <summary>The title of the person authorized to sign the Authorization Document for this phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactTitle { get => _explicitNullValueContactTitle; set { _explicitNullValueContactTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactTitle"); else _explicitNullProperties?.Remove("ContactTitle"); } }
+        public string? ContactTitle { get => _explicitNullValueContactTitle; set { _explicitNullValueContactTitle = value; AdditionalData?.Remove("ContactTitle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactTitle"); else _explicitNullProperties?.Remove("ContactTitle"); } }
         private string? _explicitNullValueContactTitle = default!;
 #nullable restore
 #else
-        public string ContactTitle { get => _explicitNullValueContactTitle; set { _explicitNullValueContactTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactTitle"); else _explicitNullProperties?.Remove("ContactTitle"); } }
+        public string ContactTitle { get => _explicitNullValueContactTitle; set { _explicitNullValueContactTitle = value; AdditionalData?.Remove("ContactTitle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactTitle"); else _explicitNullProperties?.Remove("ContactTitle"); } }
         private string _explicitNullValueContactTitle = default!;
 #endif
         /// <summary>Email that this AuthorizationDocument will be sent to for signing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Email"); else _explicitNullProperties?.Remove("Email"); } }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("Email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Email"); else _explicitNullProperties?.Remove("Email"); } }
         private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Email"); else _explicitNullProperties?.Remove("Email"); } }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("Email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Email"); else _explicitNullProperties?.Remove("Email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>A list of HostedNumberOrder sids that this AuthorizationDocument will authorize for hosting phone number capabilities on Twilio&apos;s platform.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? HostedNumberOrderSids { get => _explicitNullValueHostedNumberOrderSids; set { _explicitNullValueHostedNumberOrderSids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HostedNumberOrderSids"); else _explicitNullProperties?.Remove("HostedNumberOrderSids"); } }
+        public List<string>? HostedNumberOrderSids { get => _explicitNullValueHostedNumberOrderSids; set { _explicitNullValueHostedNumberOrderSids = value; AdditionalData?.Remove("HostedNumberOrderSids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HostedNumberOrderSids"); else _explicitNullProperties?.Remove("HostedNumberOrderSids"); } }
         private List<string>? _explicitNullValueHostedNumberOrderSids = default!;
 #nullable restore
 #else
-        public List<string> HostedNumberOrderSids { get => _explicitNullValueHostedNumberOrderSids; set { _explicitNullValueHostedNumberOrderSids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HostedNumberOrderSids"); else _explicitNullProperties?.Remove("HostedNumberOrderSids"); } }
+        public List<string> HostedNumberOrderSids { get => _explicitNullValueHostedNumberOrderSids; set { _explicitNullValueHostedNumberOrderSids = value; AdditionalData?.Remove("HostedNumberOrderSids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HostedNumberOrderSids"); else _explicitNullProperties?.Remove("HostedNumberOrderSids"); } }
         private List<string> _explicitNullValueHostedNumberOrderSids = default!;
 #endif
         /// <summary>

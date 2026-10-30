@@ -17,45 +17,49 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("inputSource") is { } nullNodeInputSource && nullNodeInputSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputSource = null;
-            if (parseNode.GetChildNode("participants") is { } nullNodeParticipants && nullNodeParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Participants = null;
-            if (parseNode.GetChildNode("sourceId") is { } nullNodeSourceId && nullNodeSourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceId = null;
-            if (parseNode.GetChildNode("transcriptionConfigurationId") is { } nullNodeTranscriptionConfigurationId && nullNodeTranscriptionConfigurationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionConfigurationId = null;
+            if (parseNode.GetChildNode("inputSource") is null) { _explicitNullValueInputSource = default!; _explicitNullProperties?.Remove("inputSource"); }
+            else if (parseNode.GetChildNode("inputSource") is { } nullNodeInputSource && nullNodeInputSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputSource = null;
+            if (parseNode.GetChildNode("participants") is null) { _explicitNullValueParticipants = default!; _explicitNullProperties?.Remove("participants"); }
+            else if (parseNode.GetChildNode("participants") is { } nullNodeParticipants && nullNodeParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Participants = null;
+            if (parseNode.GetChildNode("sourceId") is null) { _explicitNullValueSourceId = default!; _explicitNullProperties?.Remove("sourceId"); }
+            else if (parseNode.GetChildNode("sourceId") is { } nullNodeSourceId && nullNodeSourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceId = null;
+            if (parseNode.GetChildNode("transcriptionConfigurationId") is null) { _explicitNullValueTranscriptionConfigurationId = default!; _explicitNullProperties?.Remove("transcriptionConfigurationId"); }
+            else if (parseNode.GetChildNode("transcriptionConfigurationId") is { } nullNodeTranscriptionConfigurationId && nullNodeTranscriptionConfigurationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionConfigurationId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Discriminator indicating the input source type</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.SourceIdInputSource? InputSource { get => _explicitNullValueInputSource; set { _explicitNullValueInputSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputSource"); else _explicitNullProperties?.Remove("inputSource"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SourceIdInputSource? InputSource { get => _explicitNullValueInputSource; set { _explicitNullValueInputSource = value; AdditionalData?.Remove("inputSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputSource"); else _explicitNullProperties?.Remove("inputSource"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.SourceIdInputSource? _explicitNullValueInputSource = default!;
         /// <summary>Array of participants in the conversation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>? Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>? Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; AdditionalData?.Remove("participants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>? _explicitNullValueParticipants = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant> Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant> Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; AdditionalData?.Remove("participants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant> _explicitNullValueParticipants = default!;
 #endif
         /// <summary>The SID or TTID of the source audio to transcribe (e.g. a Twilio Recording SID).When provided, audioStartedAt is inferred from the recording&apos;s start timeand does not need to be supplied by the caller.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceId { get => _explicitNullValueSourceId; set { _explicitNullValueSourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceId"); else _explicitNullProperties?.Remove("sourceId"); } }
+        public string? SourceId { get => _explicitNullValueSourceId; set { _explicitNullValueSourceId = value; AdditionalData?.Remove("sourceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceId"); else _explicitNullProperties?.Remove("sourceId"); } }
         private string? _explicitNullValueSourceId = default!;
 #nullable restore
 #else
-        public string SourceId { get => _explicitNullValueSourceId; set { _explicitNullValueSourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceId"); else _explicitNullProperties?.Remove("sourceId"); } }
+        public string SourceId { get => _explicitNullValueSourceId; set { _explicitNullValueSourceId = value; AdditionalData?.Remove("sourceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceId"); else _explicitNullProperties?.Remove("sourceId"); } }
         private string _explicitNullValueSourceId = default!;
 #endif
         /// <summary>The ID of the transcription configuration to use</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TranscriptionConfigurationId { get => _explicitNullValueTranscriptionConfigurationId; set { _explicitNullValueTranscriptionConfigurationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptionConfigurationId"); else _explicitNullProperties?.Remove("transcriptionConfigurationId"); } }
+        public string? TranscriptionConfigurationId { get => _explicitNullValueTranscriptionConfigurationId; set { _explicitNullValueTranscriptionConfigurationId = value; AdditionalData?.Remove("transcriptionConfigurationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptionConfigurationId"); else _explicitNullProperties?.Remove("transcriptionConfigurationId"); } }
         private string? _explicitNullValueTranscriptionConfigurationId = default!;
 #nullable restore
 #else
-        public string TranscriptionConfigurationId { get => _explicitNullValueTranscriptionConfigurationId; set { _explicitNullValueTranscriptionConfigurationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptionConfigurationId"); else _explicitNullProperties?.Remove("transcriptionConfigurationId"); } }
+        public string TranscriptionConfigurationId { get => _explicitNullValueTranscriptionConfigurationId; set { _explicitNullValueTranscriptionConfigurationId = value; AdditionalData?.Remove("transcriptionConfigurationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptionConfigurationId"); else _explicitNullProperties?.Remove("transcriptionConfigurationId"); } }
         private string _explicitNullValueTranscriptionConfigurationId = default!;
 #endif
         /// <summary>
@@ -83,7 +87,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inputSource", n => { InputSource = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SourceIdInputSource>(); } },
+                { "inputSource", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SourceIdInputSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInputSource = default; _explicitNullProperties?.Remove("inputSource"); AdditionalData["inputSource"] = unknown; } else { InputSource = parsed; AdditionalData.Remove("inputSource"); } } },
                 { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "sourceId", n => { SourceId = n.GetStringValue(); } },
                 { "transcriptionConfigurationId", n => { TranscriptionConfigurationId = n.GetStringValue(); } },

@@ -18,8 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("messaging_limit") is { } nullNodeMessagingLimit && nullNodeMessagingLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingLimit = null;
-            if (parseNode.GetChildNode("quality_rating") is { } nullNodeQualityRating && nullNodeQualityRating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QualityRating = null;
+            if (parseNode.GetChildNode("messaging_limit") is null) { _explicitNullValueMessagingLimit = default!; _explicitNullProperties?.Remove("messaging_limit"); }
+            else if (parseNode.GetChildNode("messaging_limit") is { } nullNodeMessagingLimit && nullNodeMessagingLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingLimit = null;
+            if (parseNode.GetChildNode("quality_rating") is null) { _explicitNullValueQualityRating = default!; _explicitNullProperties?.Remove("quality_rating"); }
+            else if (parseNode.GetChildNode("quality_rating") is { } nullNodeQualityRating && nullNodeQualityRating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QualityRating = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The messaging limit of the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessagingLimit { get => _explicitNullValueMessagingLimit; set { _explicitNullValueMessagingLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_limit"); else _explicitNullProperties?.Remove("messaging_limit"); } }
+        public string? MessagingLimit { get => _explicitNullValueMessagingLimit; set { _explicitNullValueMessagingLimit = value; AdditionalData?.Remove("messaging_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_limit"); else _explicitNullProperties?.Remove("messaging_limit"); } }
         private string? _explicitNullValueMessagingLimit = default!;
 #nullable restore
 #else
-        public string MessagingLimit { get => _explicitNullValueMessagingLimit; set { _explicitNullValueMessagingLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_limit"); else _explicitNullProperties?.Remove("messaging_limit"); } }
+        public string MessagingLimit { get => _explicitNullValueMessagingLimit; set { _explicitNullValueMessagingLimit = value; AdditionalData?.Remove("messaging_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_limit"); else _explicitNullProperties?.Remove("messaging_limit"); } }
         private string _explicitNullValueMessagingLimit = default!;
 #endif
         /// <summary>The quality rating of the sender.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QualityRating { get => _explicitNullValueQualityRating; set { _explicitNullValueQualityRating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality_rating"); else _explicitNullProperties?.Remove("quality_rating"); } }
+        public string? QualityRating { get => _explicitNullValueQualityRating; set { _explicitNullValueQualityRating = value; AdditionalData?.Remove("quality_rating"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality_rating"); else _explicitNullProperties?.Remove("quality_rating"); } }
         private string? _explicitNullValueQualityRating = default!;
 #nullable restore
 #else
-        public string QualityRating { get => _explicitNullValueQualityRating; set { _explicitNullValueQualityRating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality_rating"); else _explicitNullProperties?.Remove("quality_rating"); } }
+        public string QualityRating { get => _explicitNullValueQualityRating; set { _explicitNullValueQualityRating = value; AdditionalData?.Remove("quality_rating"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality_rating"); else _explicitNullProperties?.Remove("quality_rating"); } }
         private string _explicitNullValueQualityRating = default!;
 #endif
         /// <summary>

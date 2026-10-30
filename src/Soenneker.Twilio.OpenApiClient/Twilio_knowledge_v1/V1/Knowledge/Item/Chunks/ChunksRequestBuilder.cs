@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.Item.C
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.Item.Chunks.ChunksRequestBuilder.ChunksRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://knowledge.twilio.com", "/twilio_knowledge_v1/v1/Knowledge/{id}/Chunks", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

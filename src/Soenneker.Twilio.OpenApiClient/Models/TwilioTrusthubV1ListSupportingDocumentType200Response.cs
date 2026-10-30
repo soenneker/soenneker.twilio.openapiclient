@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
-            if (parseNode.GetChildNode("supporting_document_types") is { } nullNodeSupportingDocumentTypes && nullNodeSupportingDocumentTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportingDocumentTypes = null;
+            if (parseNode.GetChildNode("meta") is null) { _explicitNullValueMeta = default!; _explicitNullProperties?.Remove("meta"); }
+            else if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
+            if (parseNode.GetChildNode("supporting_document_types") is null) { _explicitNullValueSupportingDocumentTypes = default!; _explicitNullProperties?.Remove("supporting_document_types"); }
+            else if (parseNode.GetChildNode("supporting_document_types") is { } nullNodeSupportingDocumentTypes && nullNodeSupportingDocumentTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportingDocumentTypes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1ListSupportingDocumentType200ResponseMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1ListSupportingDocumentType200ResponseMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1ListSupportingDocumentType200ResponseMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1ListSupportingDocumentType200ResponseMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1ListSupportingDocumentType200ResponseMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1ListSupportingDocumentType200ResponseMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>The supporting_document_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1SupportingDocumentType>? SupportingDocumentTypes { get => _explicitNullValueSupportingDocumentTypes; set { _explicitNullValueSupportingDocumentTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_document_types"); else _explicitNullProperties?.Remove("supporting_document_types"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1SupportingDocumentType>? SupportingDocumentTypes { get => _explicitNullValueSupportingDocumentTypes; set { _explicitNullValueSupportingDocumentTypes = value; AdditionalData?.Remove("supporting_document_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_document_types"); else _explicitNullProperties?.Remove("supporting_document_types"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1SupportingDocumentType>? _explicitNullValueSupportingDocumentTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1SupportingDocumentType> SupportingDocumentTypes { get => _explicitNullValueSupportingDocumentTypes; set { _explicitNullValueSupportingDocumentTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_document_types"); else _explicitNullProperties?.Remove("supporting_document_types"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1SupportingDocumentType> SupportingDocumentTypes { get => _explicitNullValueSupportingDocumentTypes; set { _explicitNullValueSupportingDocumentTypes = value; AdditionalData?.Remove("supporting_document_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_document_types"); else _explicitNullProperties?.Remove("supporting_document_types"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1SupportingDocumentType> _explicitNullValueSupportingDocumentTypes = default!;
 #endif
         /// <summary>

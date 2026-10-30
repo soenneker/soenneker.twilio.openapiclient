@@ -18,21 +18,24 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("channels") is { } nullNodeChannels && nullNodeChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channels = null;
-            if (parseNode.GetChildNode("track") is { } nullNodeTrack && nullNodeTrack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Track = null;
-            if (parseNode.GetChildNode("trim") is { } nullNodeTrim && nullNodeTrim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trim = null;
+            if (parseNode.GetChildNode("channels") is null) { _explicitNullValueChannels = default!; _explicitNullProperties?.Remove("channels"); }
+            else if (parseNode.GetChildNode("channels") is { } nullNodeChannels && nullNodeChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channels = null;
+            if (parseNode.GetChildNode("track") is null) { _explicitNullValueTrack = default!; _explicitNullProperties?.Remove("track"); }
+            else if (parseNode.GetChildNode("track") is { } nullNodeTrack && nullNodeTrack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Track = null;
+            if (parseNode.GetChildNode("trim") is null) { _explicitNullValueTrim = default!; _explicitNullProperties?.Remove("trim"); }
+            else if (parseNode.GetChildNode("trim") is { } nullNodeTrim && nullNodeTrim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trim = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of channels to be composed.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyChannels? Channels { get => _explicitNullValueChannels; set { _explicitNullValueChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channels"); else _explicitNullProperties?.Remove("channels"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyChannels? Channels { get => _explicitNullValueChannels; set { _explicitNullValueChannels = value; AdditionalData?.Remove("channels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channels"); else _explicitNullProperties?.Remove("channels"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyChannels? _explicitNullValueChannels = default!;
         /// <summary>The audio track to record for the call.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyTrack? Track { get => _explicitNullValueTrack; set { _explicitNullValueTrack = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("track"); else _explicitNullProperties?.Remove("track"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyTrack? Track { get => _explicitNullValueTrack; set { _explicitNullValueTrack = value; AdditionalData?.Remove("track"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("track"); else _explicitNullProperties?.Remove("track"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyTrack? _explicitNullValueTrack = default!;
         /// <summary>Trim the silence in the recordings.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyTrim? Trim { get => _explicitNullValueTrim; set { _explicitNullValueTrim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trim"); else _explicitNullProperties?.Remove("trim"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyTrim? Trim { get => _explicitNullValueTrim; set { _explicitNullValueTrim = value; AdditionalData?.Remove("trim"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trim"); else _explicitNullProperties?.Remove("trim"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyTrim? _explicitNullValueTrim = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicy"/> and sets the default values.
@@ -59,9 +62,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channels", n => { Channels = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyChannels>(); } },
-                { "track", n => { Track = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyTrack>(); } },
-                { "trim", n => { Trim = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyTrim>(); } },
+                { "channels", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyChannels>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChannels = default; _explicitNullProperties?.Remove("channels"); AdditionalData["channels"] = unknown; } else { Channels = parsed; AdditionalData.Remove("channels"); } } },
+                { "track", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyTrack>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTrack = default; _explicitNullProperties?.Remove("track"); AdditionalData["track"] = unknown; } else { Track = parsed; AdditionalData.Remove("track"); } } },
+                { "trim", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicyTrim>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTrim = default; _explicitNullProperties?.Remove("trim"); AdditionalData["trim"] = unknown; } else { Trim = parsed; AdditionalData.Remove("trim"); } } },
             };
         }
         /// <summary>

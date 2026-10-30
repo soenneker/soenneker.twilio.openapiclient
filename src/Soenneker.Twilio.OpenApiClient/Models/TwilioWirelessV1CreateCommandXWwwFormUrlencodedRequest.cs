@@ -17,64 +17,71 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CallbackMethod") is { } nullNodeCallbackMethod && nullNodeCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackMethod = null;
-            if (parseNode.GetChildNode("CallbackUrl") is { } nullNodeCallbackUrl && nullNodeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackUrl = null;
-            if (parseNode.GetChildNode("Command") is { } nullNodeCommand && nullNodeCommand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Command = null;
-            if (parseNode.GetChildNode("CommandMode") is { } nullNodeCommandMode && nullNodeCommandMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommandMode = null;
-            if (parseNode.GetChildNode("DeliveryReceiptRequested") is { } nullNodeDeliveryReceiptRequested && nullNodeDeliveryReceiptRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryReceiptRequested = null;
-            if (parseNode.GetChildNode("IncludeSid") is { } nullNodeIncludeSid && nullNodeIncludeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeSid = null;
-            if (parseNode.GetChildNode("Sim") is { } nullNodeSim && nullNodeSim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sim = null;
+            if (parseNode.GetChildNode("CallbackMethod") is null) { _explicitNullValueCallbackMethod = default!; _explicitNullProperties?.Remove("CallbackMethod"); }
+            else if (parseNode.GetChildNode("CallbackMethod") is { } nullNodeCallbackMethod && nullNodeCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackMethod = null;
+            if (parseNode.GetChildNode("CallbackUrl") is null) { _explicitNullValueCallbackUrl = default!; _explicitNullProperties?.Remove("CallbackUrl"); }
+            else if (parseNode.GetChildNode("CallbackUrl") is { } nullNodeCallbackUrl && nullNodeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackUrl = null;
+            if (parseNode.GetChildNode("Command") is null) { _explicitNullValueCommand = default!; _explicitNullProperties?.Remove("Command"); }
+            else if (parseNode.GetChildNode("Command") is { } nullNodeCommand && nullNodeCommand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Command = null;
+            if (parseNode.GetChildNode("CommandMode") is null) { _explicitNullValueCommandMode = default!; _explicitNullProperties?.Remove("CommandMode"); }
+            else if (parseNode.GetChildNode("CommandMode") is { } nullNodeCommandMode && nullNodeCommandMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommandMode = null;
+            if (parseNode.GetChildNode("DeliveryReceiptRequested") is null) { _explicitNullValueDeliveryReceiptRequested = default!; _explicitNullProperties?.Remove("DeliveryReceiptRequested"); }
+            else if (parseNode.GetChildNode("DeliveryReceiptRequested") is { } nullNodeDeliveryReceiptRequested && nullNodeDeliveryReceiptRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryReceiptRequested = null;
+            if (parseNode.GetChildNode("IncludeSid") is null) { _explicitNullValueIncludeSid = default!; _explicitNullProperties?.Remove("IncludeSid"); }
+            else if (parseNode.GetChildNode("IncludeSid") is { } nullNodeIncludeSid && nullNodeIncludeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeSid = null;
+            if (parseNode.GetChildNode("Sim") is null) { _explicitNullValueSim = default!; _explicitNullProperties?.Remove("Sim"); }
+            else if (parseNode.GetChildNode("Sim") is { } nullNodeSim && nullNodeSim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sim = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The HTTP method we use to call `callback_url`. Can be: `POST` or `GET`, and the default is `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1CreateCommandXWwwFormUrlencodedRequestCallbackMethod? CallbackMethod { get => _explicitNullValueCallbackMethod; set { _explicitNullValueCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackMethod"); else _explicitNullProperties?.Remove("CallbackMethod"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1CreateCommandXWwwFormUrlencodedRequestCallbackMethod? CallbackMethod { get => _explicitNullValueCallbackMethod; set { _explicitNullValueCallbackMethod = value; AdditionalData?.Remove("CallbackMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackMethod"); else _explicitNullProperties?.Remove("CallbackMethod"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1CreateCommandXWwwFormUrlencodedRequestCallbackMethod? _explicitNullValueCallbackMethod = default!;
         /// <summary>The URL we call using the `callback_url` when the Command has finished sending, whether the command was delivered or it failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackUrl"); else _explicitNullProperties?.Remove("CallbackUrl"); } }
+        public string? CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; AdditionalData?.Remove("CallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackUrl"); else _explicitNullProperties?.Remove("CallbackUrl"); } }
         private string? _explicitNullValueCallbackUrl = default!;
 #nullable restore
 #else
-        public string CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackUrl"); else _explicitNullProperties?.Remove("CallbackUrl"); } }
+        public string CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; AdditionalData?.Remove("CallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackUrl"); else _explicitNullProperties?.Remove("CallbackUrl"); } }
         private string _explicitNullValueCallbackUrl = default!;
 #endif
         /// <summary>The message body of the Command. Can be plain text in text mode or a Base64 encoded byte string in binary mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Command"); else _explicitNullProperties?.Remove("Command"); } }
+        public string? Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; AdditionalData?.Remove("Command"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Command"); else _explicitNullProperties?.Remove("Command"); } }
         private string? _explicitNullValueCommand = default!;
 #nullable restore
 #else
-        public string Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Command"); else _explicitNullProperties?.Remove("Command"); } }
+        public string Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; AdditionalData?.Remove("Command"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Command"); else _explicitNullProperties?.Remove("Command"); } }
         private string _explicitNullValueCommand = default!;
 #endif
         /// <summary>The mode used to send the SMS message. Can be: `text` or `binary`. The default SMS mode is `text`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CommandEnumCommandMode? CommandMode { get => _explicitNullValueCommandMode; set { _explicitNullValueCommandMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CommandMode"); else _explicitNullProperties?.Remove("CommandMode"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CommandEnumCommandMode? CommandMode { get => _explicitNullValueCommandMode; set { _explicitNullValueCommandMode = value; AdditionalData?.Remove("CommandMode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CommandMode"); else _explicitNullProperties?.Remove("CommandMode"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.CommandEnumCommandMode? _explicitNullValueCommandMode = default!;
         /// <summary>Whether to request delivery receipt from the recipient. For Commands that request delivery receipt, the Command state transitions to &apos;delivered&apos; once the server has received a delivery receipt from the device. The default value is `true`.</summary>
-        public bool? DeliveryReceiptRequested { get => _explicitNullValueDeliveryReceiptRequested; set { _explicitNullValueDeliveryReceiptRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryReceiptRequested"); else _explicitNullProperties?.Remove("DeliveryReceiptRequested"); } }
+        public bool? DeliveryReceiptRequested { get => _explicitNullValueDeliveryReceiptRequested; set { _explicitNullValueDeliveryReceiptRequested = value; AdditionalData?.Remove("DeliveryReceiptRequested"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryReceiptRequested"); else _explicitNullProperties?.Remove("DeliveryReceiptRequested"); } }
         private bool? _explicitNullValueDeliveryReceiptRequested = default!;
         /// <summary>Whether to include the SID of the command in the message body. Can be: `none`, `start`, or `end`, and the default behavior is `none`. When sending a Command to a SIM in text mode, we can automatically include the SID of the Command in the message body, which could be used to ensure that the device does not process the same Command more than once.  A value of `start` will prepend the message with the Command SID, and `end` will append it to the end, separating the Command SID from the message body with a space. The length of the Command SID is included in the 160 character limit so the SMS body must be 128 characters or less before the Command SID is included.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IncludeSid { get => _explicitNullValueIncludeSid; set { _explicitNullValueIncludeSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IncludeSid"); else _explicitNullProperties?.Remove("IncludeSid"); } }
+        public string? IncludeSid { get => _explicitNullValueIncludeSid; set { _explicitNullValueIncludeSid = value; AdditionalData?.Remove("IncludeSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IncludeSid"); else _explicitNullProperties?.Remove("IncludeSid"); } }
         private string? _explicitNullValueIncludeSid = default!;
 #nullable restore
 #else
-        public string IncludeSid { get => _explicitNullValueIncludeSid; set { _explicitNullValueIncludeSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IncludeSid"); else _explicitNullProperties?.Remove("IncludeSid"); } }
+        public string IncludeSid { get => _explicitNullValueIncludeSid; set { _explicitNullValueIncludeSid = value; AdditionalData?.Remove("IncludeSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IncludeSid"); else _explicitNullProperties?.Remove("IncludeSid"); } }
         private string _explicitNullValueIncludeSid = default!;
 #endif
         /// <summary>The `sid` or `unique_name` of the [SIM](https://www.twilio.com/docs/iot/wireless/api/sim-resource) to send the Command to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sim { get => _explicitNullValueSim; set { _explicitNullValueSim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Sim"); else _explicitNullProperties?.Remove("Sim"); } }
+        public string? Sim { get => _explicitNullValueSim; set { _explicitNullValueSim = value; AdditionalData?.Remove("Sim"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Sim"); else _explicitNullProperties?.Remove("Sim"); } }
         private string? _explicitNullValueSim = default!;
 #nullable restore
 #else
-        public string Sim { get => _explicitNullValueSim; set { _explicitNullValueSim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Sim"); else _explicitNullProperties?.Remove("Sim"); } }
+        public string Sim { get => _explicitNullValueSim; set { _explicitNullValueSim = value; AdditionalData?.Remove("Sim"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Sim"); else _explicitNullProperties?.Remove("Sim"); } }
         private string _explicitNullValueSim = default!;
 #endif
         /// <summary>
@@ -102,10 +109,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "CallbackMethod", n => { CallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1CreateCommandXWwwFormUrlencodedRequestCallbackMethod>(); } },
+                { "CallbackMethod", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1CreateCommandXWwwFormUrlencodedRequestCallbackMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCallbackMethod = default; _explicitNullProperties?.Remove("CallbackMethod"); AdditionalData["CallbackMethod"] = unknown; } else { CallbackMethod = parsed; AdditionalData.Remove("CallbackMethod"); } } },
                 { "CallbackUrl", n => { CallbackUrl = n.GetStringValue(); } },
                 { "Command", n => { Command = n.GetStringValue(); } },
-                { "CommandMode", n => { CommandMode = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CommandEnumCommandMode>(); } },
+                { "CommandMode", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CommandEnumCommandMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCommandMode = default; _explicitNullProperties?.Remove("CommandMode"); AdditionalData["CommandMode"] = unknown; } else { CommandMode = parsed; AdditionalData.Remove("CommandMode"); } } },
                 { "DeliveryReceiptRequested", n => { DeliveryReceiptRequested = n.GetBoolValue(); } },
                 { "IncludeSid", n => { IncludeSid = n.GetStringValue(); } },
                 { "Sim", n => { Sim = n.GetStringValue(); } },

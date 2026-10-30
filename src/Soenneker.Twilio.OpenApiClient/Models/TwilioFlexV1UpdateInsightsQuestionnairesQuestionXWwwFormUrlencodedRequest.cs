@@ -17,56 +17,61 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AllowNa") is { } nullNodeAllowNa && nullNodeAllowNa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowNa = null;
-            if (parseNode.GetChildNode("AnswerSetId") is { } nullNodeAnswerSetId && nullNodeAnswerSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerSetId = null;
-            if (parseNode.GetChildNode("CategorySid") is { } nullNodeCategorySid && nullNodeCategorySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategorySid = null;
-            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("Question") is { } nullNodeQuestion && nullNodeQuestion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Question = null;
+            if (parseNode.GetChildNode("AllowNa") is null) { _explicitNullValueAllowNa = default!; _explicitNullProperties?.Remove("AllowNa"); }
+            else if (parseNode.GetChildNode("AllowNa") is { } nullNodeAllowNa && nullNodeAllowNa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowNa = null;
+            if (parseNode.GetChildNode("AnswerSetId") is null) { _explicitNullValueAnswerSetId = default!; _explicitNullProperties?.Remove("AnswerSetId"); }
+            else if (parseNode.GetChildNode("AnswerSetId") is { } nullNodeAnswerSetId && nullNodeAnswerSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerSetId = null;
+            if (parseNode.GetChildNode("CategorySid") is null) { _explicitNullValueCategorySid = default!; _explicitNullProperties?.Remove("CategorySid"); }
+            else if (parseNode.GetChildNode("CategorySid") is { } nullNodeCategorySid && nullNodeCategorySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategorySid = null;
+            if (parseNode.GetChildNode("Description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("Description"); }
+            else if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("Question") is null) { _explicitNullValueQuestion = default!; _explicitNullProperties?.Remove("Question"); }
+            else if (parseNode.GetChildNode("Question") is { } nullNodeQuestion && nullNodeQuestion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Question = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The flag to enable for disable NA for answer.</summary>
-        public bool? AllowNa { get => _explicitNullValueAllowNa; set { _explicitNullValueAllowNa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowNa"); else _explicitNullProperties?.Remove("AllowNa"); } }
+        public bool? AllowNa { get => _explicitNullValueAllowNa; set { _explicitNullValueAllowNa = value; AdditionalData?.Remove("AllowNa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowNa"); else _explicitNullProperties?.Remove("AllowNa"); } }
         private bool? _explicitNullValueAllowNa = default!;
         /// <summary>The answer_set for the question.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AnswerSetId { get => _explicitNullValueAnswerSetId; set { _explicitNullValueAnswerSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerSetId"); else _explicitNullProperties?.Remove("AnswerSetId"); } }
+        public string? AnswerSetId { get => _explicitNullValueAnswerSetId; set { _explicitNullValueAnswerSetId = value; AdditionalData?.Remove("AnswerSetId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerSetId"); else _explicitNullProperties?.Remove("AnswerSetId"); } }
         private string? _explicitNullValueAnswerSetId = default!;
 #nullable restore
 #else
-        public string AnswerSetId { get => _explicitNullValueAnswerSetId; set { _explicitNullValueAnswerSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerSetId"); else _explicitNullProperties?.Remove("AnswerSetId"); } }
+        public string AnswerSetId { get => _explicitNullValueAnswerSetId; set { _explicitNullValueAnswerSetId = value; AdditionalData?.Remove("AnswerSetId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnswerSetId"); else _explicitNullProperties?.Remove("AnswerSetId"); } }
         private string _explicitNullValueAnswerSetId = default!;
 #endif
         /// <summary>The SID of the category</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CategorySid { get => _explicitNullValueCategorySid; set { _explicitNullValueCategorySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CategorySid"); else _explicitNullProperties?.Remove("CategorySid"); } }
+        public string? CategorySid { get => _explicitNullValueCategorySid; set { _explicitNullValueCategorySid = value; AdditionalData?.Remove("CategorySid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CategorySid"); else _explicitNullProperties?.Remove("CategorySid"); } }
         private string? _explicitNullValueCategorySid = default!;
 #nullable restore
 #else
-        public string CategorySid { get => _explicitNullValueCategorySid; set { _explicitNullValueCategorySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CategorySid"); else _explicitNullProperties?.Remove("CategorySid"); } }
+        public string CategorySid { get => _explicitNullValueCategorySid; set { _explicitNullValueCategorySid = value; AdditionalData?.Remove("CategorySid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CategorySid"); else _explicitNullProperties?.Remove("CategorySid"); } }
         private string _explicitNullValueCategorySid = default!;
 #endif
         /// <summary>The description for the question.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("Description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("Description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The question.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Question"); else _explicitNullProperties?.Remove("Question"); } }
+        public string? Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; AdditionalData?.Remove("Question"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Question"); else _explicitNullProperties?.Remove("Question"); } }
         private string? _explicitNullValueQuestion = default!;
 #nullable restore
 #else
-        public string Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Question"); else _explicitNullProperties?.Remove("Question"); } }
+        public string Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; AdditionalData?.Remove("Question"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Question"); else _explicitNullProperties?.Remove("Question"); } }
         private string _explicitNullValueQuestion = default!;
 #endif
         /// <summary>

@@ -18,9 +18,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("columnName") is { } nullNodeColumnName && nullNodeColumnName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColumnName = null;
-            if (parseNode.GetChildNode("traitGroup") is { } nullNodeTraitGroup && nullNodeTraitGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraitGroup = null;
-            if (parseNode.GetChildNode("traitName") is { } nullNodeTraitName && nullNodeTraitName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraitName = null;
+            if (parseNode.GetChildNode("columnName") is null) { _explicitNullValueColumnName = default!; _explicitNullProperties?.Remove("columnName"); }
+            else if (parseNode.GetChildNode("columnName") is { } nullNodeColumnName && nullNodeColumnName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColumnName = null;
+            if (parseNode.GetChildNode("traitGroup") is null) { _explicitNullValueTraitGroup = default!; _explicitNullProperties?.Remove("traitGroup"); }
+            else if (parseNode.GetChildNode("traitGroup") is { } nullNodeTraitGroup && nullNodeTraitGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraitGroup = null;
+            if (parseNode.GetChildNode("traitName") is null) { _explicitNullValueTraitName = default!; _explicitNullProperties?.Remove("traitName"); }
+            else if (parseNode.GetChildNode("traitName") is { } nullNodeTraitName && nullNodeTraitName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraitName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The name of the column in the CSV header</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ColumnName { get => _explicitNullValueColumnName; set { _explicitNullValueColumnName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columnName"); else _explicitNullProperties?.Remove("columnName"); } }
+        public string? ColumnName { get => _explicitNullValueColumnName; set { _explicitNullValueColumnName = value; AdditionalData?.Remove("columnName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columnName"); else _explicitNullProperties?.Remove("columnName"); } }
         private string? _explicitNullValueColumnName = default!;
 #nullable restore
 #else
-        public string ColumnName { get => _explicitNullValueColumnName; set { _explicitNullValueColumnName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columnName"); else _explicitNullProperties?.Remove("columnName"); } }
+        public string ColumnName { get => _explicitNullValueColumnName; set { _explicitNullValueColumnName = value; AdditionalData?.Remove("columnName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columnName"); else _explicitNullProperties?.Remove("columnName"); } }
         private string _explicitNullValueColumnName = default!;
 #endif
         /// <summary>The trait group to which this trait belongs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TraitGroup { get => _explicitNullValueTraitGroup; set { _explicitNullValueTraitGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitGroup"); else _explicitNullProperties?.Remove("traitGroup"); } }
+        public string? TraitGroup { get => _explicitNullValueTraitGroup; set { _explicitNullValueTraitGroup = value; AdditionalData?.Remove("traitGroup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitGroup"); else _explicitNullProperties?.Remove("traitGroup"); } }
         private string? _explicitNullValueTraitGroup = default!;
 #nullable restore
 #else
-        public string TraitGroup { get => _explicitNullValueTraitGroup; set { _explicitNullValueTraitGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitGroup"); else _explicitNullProperties?.Remove("traitGroup"); } }
+        public string TraitGroup { get => _explicitNullValueTraitGroup; set { _explicitNullValueTraitGroup = value; AdditionalData?.Remove("traitGroup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitGroup"); else _explicitNullProperties?.Remove("traitGroup"); } }
         private string _explicitNullValueTraitGroup = default!;
 #endif
         /// <summary>The name of the trait in the trait group</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TraitName { get => _explicitNullValueTraitName; set { _explicitNullValueTraitName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitName"); else _explicitNullProperties?.Remove("traitName"); } }
+        public string? TraitName { get => _explicitNullValueTraitName; set { _explicitNullValueTraitName = value; AdditionalData?.Remove("traitName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitName"); else _explicitNullProperties?.Remove("traitName"); } }
         private string? _explicitNullValueTraitName = default!;
 #nullable restore
 #else
-        public string TraitName { get => _explicitNullValueTraitName; set { _explicitNullValueTraitName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitName"); else _explicitNullProperties?.Remove("traitName"); } }
+        public string TraitName { get => _explicitNullValueTraitName; set { _explicitNullValueTraitName = value; AdditionalData?.Remove("traitName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitName"); else _explicitNullProperties?.Remove("traitName"); } }
         private string _explicitNullValueTraitName = default!;
 #endif
         /// <summary>

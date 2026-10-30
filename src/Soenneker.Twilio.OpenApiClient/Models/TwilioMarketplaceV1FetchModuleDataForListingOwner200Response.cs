@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("listings") is { } nullNodeListings && nullNodeListings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Listings = null;
+            if (parseNode.GetChildNode("listings") is null) { _explicitNullValueListings = default!; _explicitNullProperties?.Remove("listings"); }
+            else if (parseNode.GetChildNode("listings") is { } nullNodeListings && nullNodeListings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Listings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The listings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMarketplaceV1FetchModuleDataForListingOwner200ResponseListingsItem>? Listings { get => _explicitNullValueListings; set { _explicitNullValueListings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listings"); else _explicitNullProperties?.Remove("listings"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMarketplaceV1FetchModuleDataForListingOwner200ResponseListingsItem>? Listings { get => _explicitNullValueListings; set { _explicitNullValueListings = value; AdditionalData?.Remove("listings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listings"); else _explicitNullProperties?.Remove("listings"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMarketplaceV1FetchModuleDataForListingOwner200ResponseListingsItem>? _explicitNullValueListings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMarketplaceV1FetchModuleDataForListingOwner200ResponseListingsItem> Listings { get => _explicitNullValueListings; set { _explicitNullValueListings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listings"); else _explicitNullProperties?.Remove("listings"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMarketplaceV1FetchModuleDataForListingOwner200ResponseListingsItem> Listings { get => _explicitNullValueListings; set { _explicitNullValueListings = value; AdditionalData?.Remove("listings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listings"); else _explicitNullProperties?.Remove("listings"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMarketplaceV1FetchModuleDataForListingOwner200ResponseListingsItem> _explicitNullValueListings = default!;
 #endif
         /// <summary>

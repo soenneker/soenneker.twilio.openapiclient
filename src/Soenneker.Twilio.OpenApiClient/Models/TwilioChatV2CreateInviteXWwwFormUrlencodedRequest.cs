@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
-            if (parseNode.GetChildNode("RoleSid") is { } nullNodeRoleSid && nullNodeRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleSid = null;
+            if (parseNode.GetChildNode("Identity") is null) { _explicitNullValueIdentity = default!; _explicitNullProperties?.Remove("Identity"); }
+            else if (parseNode.GetChildNode("Identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("RoleSid") is null) { _explicitNullValueRoleSid = default!; _explicitNullProperties?.Remove("RoleSid"); }
+            else if (parseNode.GetChildNode("RoleSid") is { } nullNodeRoleSid && nullNodeRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The `identity` value that uniquely identifies the new resource&apos;s [User](https://www.twilio.com/docs/chat/rest/user-resource) within the [Service](https://www.twilio.com/docs/chat/rest/service-resource). See [access tokens](https://www.twilio.com/docs/chat/create-tokens) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("Identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
         private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("Identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identity"); else _explicitNullProperties?.Remove("Identity"); } }
         private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>The SID of the [Role](https://www.twilio.com/docs/chat/rest/role-resource) assigned to the new member.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoleSid { get => _explicitNullValueRoleSid; set { _explicitNullValueRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoleSid"); else _explicitNullProperties?.Remove("RoleSid"); } }
+        public string? RoleSid { get => _explicitNullValueRoleSid; set { _explicitNullValueRoleSid = value; AdditionalData?.Remove("RoleSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoleSid"); else _explicitNullProperties?.Remove("RoleSid"); } }
         private string? _explicitNullValueRoleSid = default!;
 #nullable restore
 #else
-        public string RoleSid { get => _explicitNullValueRoleSid; set { _explicitNullValueRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoleSid"); else _explicitNullProperties?.Remove("RoleSid"); } }
+        public string RoleSid { get => _explicitNullValueRoleSid; set { _explicitNullValueRoleSid = value; AdditionalData?.Remove("RoleSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoleSid"); else _explicitNullProperties?.Remove("RoleSid"); } }
         private string _explicitNullValueRoleSid = default!;
 #endif
         /// <summary>

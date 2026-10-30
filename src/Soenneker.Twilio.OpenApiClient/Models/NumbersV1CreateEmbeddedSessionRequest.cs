@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("themeSetId") is { } nullNodeThemeSetId && nullNodeThemeSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThemeSetId = null;
+            if (parseNode.GetChildNode("themeSetId") is null) { _explicitNullValueThemeSetId = default!; _explicitNullProperties?.Remove("themeSetId"); }
+            else if (parseNode.GetChildNode("themeSetId") is { } nullNodeThemeSetId && nullNodeThemeSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThemeSetId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Theme ID for the Compliance Embeddable UI. Overrides the theme set during registration creation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThemeSetId { get => _explicitNullValueThemeSetId; set { _explicitNullValueThemeSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSetId"); else _explicitNullProperties?.Remove("themeSetId"); } }
+        public string? ThemeSetId { get => _explicitNullValueThemeSetId; set { _explicitNullValueThemeSetId = value; AdditionalData?.Remove("themeSetId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSetId"); else _explicitNullProperties?.Remove("themeSetId"); } }
         private string? _explicitNullValueThemeSetId = default!;
 #nullable restore
 #else
-        public string ThemeSetId { get => _explicitNullValueThemeSetId; set { _explicitNullValueThemeSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSetId"); else _explicitNullProperties?.Remove("themeSetId"); } }
+        public string ThemeSetId { get => _explicitNullValueThemeSetId; set { _explicitNullValueThemeSetId = value; AdditionalData?.Remove("themeSetId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("themeSetId"); else _explicitNullProperties?.Remove("themeSetId"); } }
         private string _explicitNullValueThemeSetId = default!;
 #endif
         /// <summary>

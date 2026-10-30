@@ -17,54 +17,60 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AssignmentStatus") is { } nullNodeAssignmentStatus && nullNodeAssignmentStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignmentStatus = null;
-            if (parseNode.GetChildNode("Attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
-            if (parseNode.GetChildNode("Priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
-            if (parseNode.GetChildNode("Reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
-            if (parseNode.GetChildNode("TaskChannel") is { } nullNodeTaskChannel && nullNodeTaskChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskChannel = null;
-            if (parseNode.GetChildNode("VirtualStartTime") is { } nullNodeVirtualStartTime && nullNodeVirtualStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VirtualStartTime = null;
+            if (parseNode.GetChildNode("AssignmentStatus") is null) { _explicitNullValueAssignmentStatus = default!; _explicitNullProperties?.Remove("AssignmentStatus"); }
+            else if (parseNode.GetChildNode("AssignmentStatus") is { } nullNodeAssignmentStatus && nullNodeAssignmentStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignmentStatus = null;
+            if (parseNode.GetChildNode("Attributes") is null) { _explicitNullValueAttributes = default!; _explicitNullProperties?.Remove("Attributes"); }
+            else if (parseNode.GetChildNode("Attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("Priority") is null) { _explicitNullValuePriority = default!; _explicitNullProperties?.Remove("Priority"); }
+            else if (parseNode.GetChildNode("Priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("Reason") is null) { _explicitNullValueReason = default!; _explicitNullProperties?.Remove("Reason"); }
+            else if (parseNode.GetChildNode("Reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("TaskChannel") is null) { _explicitNullValueTaskChannel = default!; _explicitNullProperties?.Remove("TaskChannel"); }
+            else if (parseNode.GetChildNode("TaskChannel") is { } nullNodeTaskChannel && nullNodeTaskChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskChannel = null;
+            if (parseNode.GetChildNode("VirtualStartTime") is null) { _explicitNullValueVirtualStartTime = default!; _explicitNullProperties?.Remove("VirtualStartTime"); }
+            else if (parseNode.GetChildNode("VirtualStartTime") is { } nullNodeVirtualStartTime && nullNodeVirtualStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VirtualStartTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The current status of the Task&apos;s assignment. Can be: `pending`, `reserved`, `assigned`, `canceled`, `wrapping`, or `completed`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskEnumStatus? AssignmentStatus { get => _explicitNullValueAssignmentStatus; set { _explicitNullValueAssignmentStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssignmentStatus"); else _explicitNullProperties?.Remove("AssignmentStatus"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskEnumStatus? AssignmentStatus { get => _explicitNullValueAssignmentStatus; set { _explicitNullValueAssignmentStatus = value; AdditionalData?.Remove("AssignmentStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssignmentStatus"); else _explicitNullProperties?.Remove("AssignmentStatus"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TaskEnumStatus? _explicitNullValueAssignmentStatus = default!;
         /// <summary>The JSON string that describes the custom attributes of the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
+        public string? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("Attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
         private string? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public string Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
+        public string Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("Attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
         private string _explicitNullValueAttributes = default!;
 #endif
         /// <summary>The Task&apos;s new priority value. When supplied, the Task takes on the specified priority unless it matches a Workflow Target with a Priority set. Value can be 0 to 2^31^ (2,147,483,647).</summary>
-        public int? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
+        public int? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("Priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
         private int? _explicitNullValuePriority = default!;
         /// <summary>The reason that the Task was canceled or completed. This parameter is required only if the Task is canceled or completed. Setting this value queues the task for deletion and logs the reason.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Reason"); else _explicitNullProperties?.Remove("Reason"); } }
+        public string? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; AdditionalData?.Remove("Reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Reason"); else _explicitNullProperties?.Remove("Reason"); } }
         private string? _explicitNullValueReason = default!;
 #nullable restore
 #else
-        public string Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Reason"); else _explicitNullProperties?.Remove("Reason"); } }
+        public string Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; AdditionalData?.Remove("Reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Reason"); else _explicitNullProperties?.Remove("Reason"); } }
         private string _explicitNullValueReason = default!;
 #endif
         /// <summary>When MultiTasking is enabled, specify the TaskChannel with the task to update. Can be the TaskChannel&apos;s SID or its `unique_name`, such as `voice`, `sms`, or `default`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskChannel { get => _explicitNullValueTaskChannel; set { _explicitNullValueTaskChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaskChannel"); else _explicitNullProperties?.Remove("TaskChannel"); } }
+        public string? TaskChannel { get => _explicitNullValueTaskChannel; set { _explicitNullValueTaskChannel = value; AdditionalData?.Remove("TaskChannel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaskChannel"); else _explicitNullProperties?.Remove("TaskChannel"); } }
         private string? _explicitNullValueTaskChannel = default!;
 #nullable restore
 #else
-        public string TaskChannel { get => _explicitNullValueTaskChannel; set { _explicitNullValueTaskChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaskChannel"); else _explicitNullProperties?.Remove("TaskChannel"); } }
+        public string TaskChannel { get => _explicitNullValueTaskChannel; set { _explicitNullValueTaskChannel = value; AdditionalData?.Remove("TaskChannel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaskChannel"); else _explicitNullProperties?.Remove("TaskChannel"); } }
         private string _explicitNullValueTaskChannel = default!;
 #endif
         /// <summary>The task&apos;s new virtual start time value. When supplied, the Task takes on the specified virtual start time. Value can&apos;t be in the future or before the year of 1900.</summary>
-        public DateTimeOffset? VirtualStartTime { get => _explicitNullValueVirtualStartTime; set { _explicitNullValueVirtualStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VirtualStartTime"); else _explicitNullProperties?.Remove("VirtualStartTime"); } }
+        public DateTimeOffset? VirtualStartTime { get => _explicitNullValueVirtualStartTime; set { _explicitNullValueVirtualStartTime = value; AdditionalData?.Remove("VirtualStartTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VirtualStartTime"); else _explicitNullProperties?.Remove("VirtualStartTime"); } }
         private DateTimeOffset? _explicitNullValueVirtualStartTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -91,7 +97,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "AssignmentStatus", n => { AssignmentStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskEnumStatus>(); } },
+                { "AssignmentStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskEnumStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAssignmentStatus = default; _explicitNullProperties?.Remove("AssignmentStatus"); AdditionalData["AssignmentStatus"] = unknown; } else { AssignmentStatus = parsed; AdditionalData.Remove("AssignmentStatus"); } } },
                 { "Attributes", n => { Attributes = n.GetStringValue(); } },
                 { "Priority", n => { Priority = n.GetIntValue(); } },
                 { "Reason", n => { Reason = n.GetStringValue(); } },

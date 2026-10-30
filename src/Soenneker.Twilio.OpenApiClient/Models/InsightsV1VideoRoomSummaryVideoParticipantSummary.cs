@@ -17,33 +17,50 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("codecs") is { } nullNodeCodecs && nullNodeCodecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Codecs = null;
-            if (parseNode.GetChildNode("duration_sec") is { } nullNodeDurationSec && nullNodeDurationSec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationSec = null;
-            if (parseNode.GetChildNode("edge_location") is { } nullNodeEdgeLocation && nullNodeEdgeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EdgeLocation = null;
-            if (parseNode.GetChildNode("end_reason") is { } nullNodeEndReason && nullNodeEndReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndReason = null;
-            if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
-            if (parseNode.GetChildNode("error_code_url") is { } nullNodeErrorCodeUrl && nullNodeErrorCodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCodeUrl = null;
-            if (parseNode.GetChildNode("join_time") is { } nullNodeJoinTime && nullNodeJoinTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JoinTime = null;
-            if (parseNode.GetChildNode("leave_time") is { } nullNodeLeaveTime && nullNodeLeaveTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeaveTime = null;
-            if (parseNode.GetChildNode("media_region") is { } nullNodeMediaRegion && nullNodeMediaRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaRegion = null;
-            if (parseNode.GetChildNode("participant_identity") is { } nullNodeParticipantIdentity && nullNodeParticipantIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantIdentity = null;
-            if (parseNode.GetChildNode("participant_sid") is { } nullNodeParticipantSid && nullNodeParticipantSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantSid = null;
-            if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
-            if (parseNode.GetChildNode("publisher_info") is { } nullNodePublisherInfo && nullNodePublisherInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublisherInfo = null;
-            if (parseNode.GetChildNode("room_sid") is { } nullNodeRoomSid && nullNodeRoomSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoomSid = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("codecs") is null) { _explicitNullValueCodecs = default!; _explicitNullProperties?.Remove("codecs"); }
+            else if (parseNode.GetChildNode("codecs") is { } nullNodeCodecs && nullNodeCodecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Codecs = null;
+            if (parseNode.GetChildNode("duration_sec") is null) { _explicitNullValueDurationSec = default!; _explicitNullProperties?.Remove("duration_sec"); }
+            else if (parseNode.GetChildNode("duration_sec") is { } nullNodeDurationSec && nullNodeDurationSec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationSec = null;
+            if (parseNode.GetChildNode("edge_location") is null) { _explicitNullValueEdgeLocation = default!; _explicitNullProperties?.Remove("edge_location"); }
+            else if (parseNode.GetChildNode("edge_location") is { } nullNodeEdgeLocation && nullNodeEdgeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EdgeLocation = null;
+            if (parseNode.GetChildNode("end_reason") is null) { _explicitNullValueEndReason = default!; _explicitNullProperties?.Remove("end_reason"); }
+            else if (parseNode.GetChildNode("end_reason") is { } nullNodeEndReason && nullNodeEndReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndReason = null;
+            if (parseNode.GetChildNode("error_code") is null) { _explicitNullValueErrorCode = default!; _explicitNullProperties?.Remove("error_code"); }
+            else if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
+            if (parseNode.GetChildNode("error_code_url") is null) { _explicitNullValueErrorCodeUrl = default!; _explicitNullProperties?.Remove("error_code_url"); }
+            else if (parseNode.GetChildNode("error_code_url") is { } nullNodeErrorCodeUrl && nullNodeErrorCodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCodeUrl = null;
+            if (parseNode.GetChildNode("join_time") is null) { _explicitNullValueJoinTime = default!; _explicitNullProperties?.Remove("join_time"); }
+            else if (parseNode.GetChildNode("join_time") is { } nullNodeJoinTime && nullNodeJoinTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JoinTime = null;
+            if (parseNode.GetChildNode("leave_time") is null) { _explicitNullValueLeaveTime = default!; _explicitNullProperties?.Remove("leave_time"); }
+            else if (parseNode.GetChildNode("leave_time") is { } nullNodeLeaveTime && nullNodeLeaveTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeaveTime = null;
+            if (parseNode.GetChildNode("media_region") is null) { _explicitNullValueMediaRegion = default!; _explicitNullProperties?.Remove("media_region"); }
+            else if (parseNode.GetChildNode("media_region") is { } nullNodeMediaRegion && nullNodeMediaRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaRegion = null;
+            if (parseNode.GetChildNode("participant_identity") is null) { _explicitNullValueParticipantIdentity = default!; _explicitNullProperties?.Remove("participant_identity"); }
+            else if (parseNode.GetChildNode("participant_identity") is { } nullNodeParticipantIdentity && nullNodeParticipantIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantIdentity = null;
+            if (parseNode.GetChildNode("participant_sid") is null) { _explicitNullValueParticipantSid = default!; _explicitNullProperties?.Remove("participant_sid"); }
+            else if (parseNode.GetChildNode("participant_sid") is { } nullNodeParticipantSid && nullNodeParticipantSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantSid = null;
+            if (parseNode.GetChildNode("properties") is null) { _explicitNullValueProperties = default!; _explicitNullProperties?.Remove("properties"); }
+            else if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+            if (parseNode.GetChildNode("publisher_info") is null) { _explicitNullValuePublisherInfo = default!; _explicitNullProperties?.Remove("publisher_info"); }
+            else if (parseNode.GetChildNode("publisher_info") is { } nullNodePublisherInfo && nullNodePublisherInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublisherInfo = null;
+            if (parseNode.GetChildNode("room_sid") is null) { _explicitNullValueRoomSid = default!; _explicitNullProperties?.Remove("room_sid"); }
+            else if (parseNode.GetChildNode("room_sid") is { } nullNodeRoomSid && nullNodeRoomSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoomSid = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Account SID associated with the room.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -51,112 +68,112 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Codecs detected from the participant. Can be `VP8`, `H264`, or `VP9`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumCodec?>? Codecs { get => _explicitNullValueCodecs; set { _explicitNullValueCodecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("codecs"); else _explicitNullProperties?.Remove("codecs"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumCodec?>? Codecs { get => _explicitNullValueCodecs; set { _explicitNullValueCodecs = value; AdditionalData?.Remove("codecs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("codecs"); else _explicitNullProperties?.Remove("codecs"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumCodec?>? _explicitNullValueCodecs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumCodec?> Codecs { get => _explicitNullValueCodecs; set { _explicitNullValueCodecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("codecs"); else _explicitNullProperties?.Remove("codecs"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumCodec?> Codecs { get => _explicitNullValueCodecs; set { _explicitNullValueCodecs = value; AdditionalData?.Remove("codecs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("codecs"); else _explicitNullProperties?.Remove("codecs"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumCodec?> _explicitNullValueCodecs = default!;
 #endif
         /// <summary>Amount of time in seconds the participant was in the room.</summary>
-        public long? DurationSec { get => _explicitNullValueDurationSec; set { _explicitNullValueDurationSec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_sec"); else _explicitNullProperties?.Remove("duration_sec"); } }
+        public long? DurationSec { get => _explicitNullValueDurationSec; set { _explicitNullValueDurationSec = value; AdditionalData?.Remove("duration_sec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_sec"); else _explicitNullProperties?.Remove("duration_sec"); } }
         private long? _explicitNullValueDurationSec = default!;
         /// <summary>The edge_location property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumEdgeLocation? EdgeLocation { get => _explicitNullValueEdgeLocation; set { _explicitNullValueEdgeLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edge_location"); else _explicitNullProperties?.Remove("edge_location"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumEdgeLocation? EdgeLocation { get => _explicitNullValueEdgeLocation; set { _explicitNullValueEdgeLocation = value; AdditionalData?.Remove("edge_location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edge_location"); else _explicitNullProperties?.Remove("edge_location"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumEdgeLocation? _explicitNullValueEdgeLocation = default!;
         /// <summary>Reason the participant left the room. See [the list of possible values here](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#end_reason).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndReason { get => _explicitNullValueEndReason; set { _explicitNullValueEndReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_reason"); else _explicitNullProperties?.Remove("end_reason"); } }
+        public string? EndReason { get => _explicitNullValueEndReason; set { _explicitNullValueEndReason = value; AdditionalData?.Remove("end_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_reason"); else _explicitNullProperties?.Remove("end_reason"); } }
         private string? _explicitNullValueEndReason = default!;
 #nullable restore
 #else
-        public string EndReason { get => _explicitNullValueEndReason; set { _explicitNullValueEndReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_reason"); else _explicitNullProperties?.Remove("end_reason"); } }
+        public string EndReason { get => _explicitNullValueEndReason; set { _explicitNullValueEndReason = value; AdditionalData?.Remove("end_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_reason"); else _explicitNullProperties?.Remove("end_reason"); } }
         private string _explicitNullValueEndReason = default!;
 #endif
         /// <summary>Errors encountered by the participant.</summary>
-        public int? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
+        public int? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; AdditionalData?.Remove("error_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
         private int? _explicitNullValueErrorCode = default!;
         /// <summary>Twilio error code dictionary link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorCodeUrl { get => _explicitNullValueErrorCodeUrl; set { _explicitNullValueErrorCodeUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code_url"); else _explicitNullProperties?.Remove("error_code_url"); } }
+        public string? ErrorCodeUrl { get => _explicitNullValueErrorCodeUrl; set { _explicitNullValueErrorCodeUrl = value; AdditionalData?.Remove("error_code_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code_url"); else _explicitNullProperties?.Remove("error_code_url"); } }
         private string? _explicitNullValueErrorCodeUrl = default!;
 #nullable restore
 #else
-        public string ErrorCodeUrl { get => _explicitNullValueErrorCodeUrl; set { _explicitNullValueErrorCodeUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code_url"); else _explicitNullProperties?.Remove("error_code_url"); } }
+        public string ErrorCodeUrl { get => _explicitNullValueErrorCodeUrl; set { _explicitNullValueErrorCodeUrl = value; AdditionalData?.Remove("error_code_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code_url"); else _explicitNullProperties?.Remove("error_code_url"); } }
         private string _explicitNullValueErrorCodeUrl = default!;
 #endif
         /// <summary>When the participant joined the room.</summary>
-        public DateTimeOffset? JoinTime { get => _explicitNullValueJoinTime; set { _explicitNullValueJoinTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("join_time"); else _explicitNullProperties?.Remove("join_time"); } }
+        public DateTimeOffset? JoinTime { get => _explicitNullValueJoinTime; set { _explicitNullValueJoinTime = value; AdditionalData?.Remove("join_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("join_time"); else _explicitNullProperties?.Remove("join_time"); } }
         private DateTimeOffset? _explicitNullValueJoinTime = default!;
         /// <summary>When the participant left the room.</summary>
-        public DateTimeOffset? LeaveTime { get => _explicitNullValueLeaveTime; set { _explicitNullValueLeaveTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leave_time"); else _explicitNullProperties?.Remove("leave_time"); } }
+        public DateTimeOffset? LeaveTime { get => _explicitNullValueLeaveTime; set { _explicitNullValueLeaveTime = value; AdditionalData?.Remove("leave_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leave_time"); else _explicitNullProperties?.Remove("leave_time"); } }
         private DateTimeOffset? _explicitNullValueLeaveTime = default!;
         /// <summary>The media_region property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumTwilioRealm? MediaRegion { get => _explicitNullValueMediaRegion; set { _explicitNullValueMediaRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_region"); else _explicitNullProperties?.Remove("media_region"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumTwilioRealm? MediaRegion { get => _explicitNullValueMediaRegion; set { _explicitNullValueMediaRegion = value; AdditionalData?.Remove("media_region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_region"); else _explicitNullProperties?.Remove("media_region"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumTwilioRealm? _explicitNullValueMediaRegion = default!;
         /// <summary>The application-defined string that uniquely identifies the participant within a Room.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParticipantIdentity { get => _explicitNullValueParticipantIdentity; set { _explicitNullValueParticipantIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_identity"); else _explicitNullProperties?.Remove("participant_identity"); } }
+        public string? ParticipantIdentity { get => _explicitNullValueParticipantIdentity; set { _explicitNullValueParticipantIdentity = value; AdditionalData?.Remove("participant_identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_identity"); else _explicitNullProperties?.Remove("participant_identity"); } }
         private string? _explicitNullValueParticipantIdentity = default!;
 #nullable restore
 #else
-        public string ParticipantIdentity { get => _explicitNullValueParticipantIdentity; set { _explicitNullValueParticipantIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_identity"); else _explicitNullProperties?.Remove("participant_identity"); } }
+        public string ParticipantIdentity { get => _explicitNullValueParticipantIdentity; set { _explicitNullValueParticipantIdentity = value; AdditionalData?.Remove("participant_identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_identity"); else _explicitNullProperties?.Remove("participant_identity"); } }
         private string _explicitNullValueParticipantIdentity = default!;
 #endif
         /// <summary>Unique identifier for the participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
+        public string? ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; AdditionalData?.Remove("participant_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
         private string? _explicitNullValueParticipantSid = default!;
 #nullable restore
 #else
-        public string ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
+        public string ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; AdditionalData?.Remove("participant_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
         private string _explicitNullValueParticipantSid = default!;
 #endif
         /// <summary>Object containing information about the participant&apos;s data from the room. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#properties) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        public UntypedNode? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
         private UntypedNode? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public UntypedNode Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        public UntypedNode Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
         private UntypedNode _explicitNullValueProperties = default!;
 #endif
         /// <summary>Object containing information about the SDK name and version. See [below](https://www.twilio.com/docs/video/troubleshooting/video-log-analyzer-api#publisher_info) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PublisherInfo { get => _explicitNullValuePublisherInfo; set { _explicitNullValuePublisherInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_info"); else _explicitNullProperties?.Remove("publisher_info"); } }
+        public UntypedNode? PublisherInfo { get => _explicitNullValuePublisherInfo; set { _explicitNullValuePublisherInfo = value; AdditionalData?.Remove("publisher_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_info"); else _explicitNullProperties?.Remove("publisher_info"); } }
         private UntypedNode? _explicitNullValuePublisherInfo = default!;
 #nullable restore
 #else
-        public UntypedNode PublisherInfo { get => _explicitNullValuePublisherInfo; set { _explicitNullValuePublisherInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_info"); else _explicitNullProperties?.Remove("publisher_info"); } }
+        public UntypedNode PublisherInfo { get => _explicitNullValuePublisherInfo; set { _explicitNullValuePublisherInfo = value; AdditionalData?.Remove("publisher_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_info"); else _explicitNullProperties?.Remove("publisher_info"); } }
         private UntypedNode _explicitNullValuePublisherInfo = default!;
 #endif
         /// <summary>Unique identifier for the room.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoomSid { get => _explicitNullValueRoomSid; set { _explicitNullValueRoomSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room_sid"); else _explicitNullProperties?.Remove("room_sid"); } }
+        public string? RoomSid { get => _explicitNullValueRoomSid; set { _explicitNullValueRoomSid = value; AdditionalData?.Remove("room_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room_sid"); else _explicitNullProperties?.Remove("room_sid"); } }
         private string? _explicitNullValueRoomSid = default!;
 #nullable restore
 #else
-        public string RoomSid { get => _explicitNullValueRoomSid; set { _explicitNullValueRoomSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room_sid"); else _explicitNullProperties?.Remove("room_sid"); } }
+        public string RoomSid { get => _explicitNullValueRoomSid; set { _explicitNullValueRoomSid = value; AdditionalData?.Remove("room_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room_sid"); else _explicitNullProperties?.Remove("room_sid"); } }
         private string _explicitNullValueRoomSid = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumRoomStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumRoomStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumRoomStatus? _explicitNullValueStatus = default!;
         /// <summary>URL of the participant resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
@@ -187,19 +204,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "codecs", n => { Codecs = n.GetCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumCodec>()?.AsList(); } },
                 { "duration_sec", n => { DurationSec = n.GetLongValue(); } },
-                { "edge_location", n => { EdgeLocation = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumEdgeLocation>(); } },
+                { "edge_location", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumEdgeLocation>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEdgeLocation = default; _explicitNullProperties?.Remove("edge_location"); AdditionalData["edge_location"] = unknown; } else { EdgeLocation = parsed; AdditionalData.Remove("edge_location"); } } },
                 { "end_reason", n => { EndReason = n.GetStringValue(); } },
                 { "error_code", n => { ErrorCode = n.GetIntValue(); } },
                 { "error_code_url", n => { ErrorCodeUrl = n.GetStringValue(); } },
                 { "join_time", n => { JoinTime = n.GetDateTimeOffsetValue(); } },
                 { "leave_time", n => { LeaveTime = n.GetDateTimeOffsetValue(); } },
-                { "media_region", n => { MediaRegion = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumTwilioRealm>(); } },
+                { "media_region", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumTwilioRealm>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMediaRegion = default; _explicitNullProperties?.Remove("media_region"); AdditionalData["media_region"] = unknown; } else { MediaRegion = parsed; AdditionalData.Remove("media_region"); } } },
                 { "participant_identity", n => { ParticipantIdentity = n.GetStringValue(); } },
                 { "participant_sid", n => { ParticipantSid = n.GetStringValue(); } },
                 { "properties", n => { Properties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "publisher_info", n => { PublisherInfo = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "room_sid", n => { RoomSid = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumRoomStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VideoParticipantSummaryEnumRoomStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }

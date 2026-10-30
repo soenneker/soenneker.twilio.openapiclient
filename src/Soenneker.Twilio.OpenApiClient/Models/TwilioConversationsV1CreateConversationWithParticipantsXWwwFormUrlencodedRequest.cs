@@ -17,18 +17,30 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
-            if (parseNode.GetChildNode("Bindings.Email.Address") is { } nullNodeBindingsEmailAddress && nullNodeBindingsEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BindingsEmailAddress = null;
-            if (parseNode.GetChildNode("Bindings.Email.Name") is { } nullNodeBindingsEmailName && nullNodeBindingsEmailName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BindingsEmailName = null;
-            if (parseNode.GetChildNode("DateCreated") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
-            if (parseNode.GetChildNode("DateUpdated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
-            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("MessagingServiceSid") is { } nullNodeMessagingServiceSid && nullNodeMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingServiceSid = null;
-            if (parseNode.GetChildNode("Participant") is { } nullNodeParticipant && nullNodeParticipant.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Participant = null;
-            if (parseNode.GetChildNode("State") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
-            if (parseNode.GetChildNode("Timers.Closed") is { } nullNodeTimersClosed && nullNodeTimersClosed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimersClosed = null;
-            if (parseNode.GetChildNode("Timers.Inactive") is { } nullNodeTimersInactive && nullNodeTimersInactive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimersInactive = null;
-            if (parseNode.GetChildNode("UniqueName") is { } nullNodeUniqueName && nullNodeUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueName = null;
+            if (parseNode.GetChildNode("Attributes") is null) { _explicitNullValueAttributes = default!; _explicitNullProperties?.Remove("Attributes"); }
+            else if (parseNode.GetChildNode("Attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("Bindings.Email.Address") is null) { _explicitNullValueBindingsEmailAddress = default!; _explicitNullProperties?.Remove("Bindings.Email.Address"); }
+            else if (parseNode.GetChildNode("Bindings.Email.Address") is { } nullNodeBindingsEmailAddress && nullNodeBindingsEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BindingsEmailAddress = null;
+            if (parseNode.GetChildNode("Bindings.Email.Name") is null) { _explicitNullValueBindingsEmailName = default!; _explicitNullProperties?.Remove("Bindings.Email.Name"); }
+            else if (parseNode.GetChildNode("Bindings.Email.Name") is { } nullNodeBindingsEmailName && nullNodeBindingsEmailName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BindingsEmailName = null;
+            if (parseNode.GetChildNode("DateCreated") is null) { _explicitNullValueDateCreated = default!; _explicitNullProperties?.Remove("DateCreated"); }
+            else if (parseNode.GetChildNode("DateCreated") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("DateUpdated") is null) { _explicitNullValueDateUpdated = default!; _explicitNullProperties?.Remove("DateUpdated"); }
+            else if (parseNode.GetChildNode("DateUpdated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
+            if (parseNode.GetChildNode("FriendlyName") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("FriendlyName"); }
+            else if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("MessagingServiceSid") is null) { _explicitNullValueMessagingServiceSid = default!; _explicitNullProperties?.Remove("MessagingServiceSid"); }
+            else if (parseNode.GetChildNode("MessagingServiceSid") is { } nullNodeMessagingServiceSid && nullNodeMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingServiceSid = null;
+            if (parseNode.GetChildNode("Participant") is null) { _explicitNullValueParticipant = default!; _explicitNullProperties?.Remove("Participant"); }
+            else if (parseNode.GetChildNode("Participant") is { } nullNodeParticipant && nullNodeParticipant.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Participant = null;
+            if (parseNode.GetChildNode("State") is null) { _explicitNullValueState = default!; _explicitNullProperties?.Remove("State"); }
+            else if (parseNode.GetChildNode("State") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("Timers.Closed") is null) { _explicitNullValueTimersClosed = default!; _explicitNullProperties?.Remove("Timers.Closed"); }
+            else if (parseNode.GetChildNode("Timers.Closed") is { } nullNodeTimersClosed && nullNodeTimersClosed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimersClosed = null;
+            if (parseNode.GetChildNode("Timers.Inactive") is null) { _explicitNullValueTimersInactive = default!; _explicitNullProperties?.Remove("Timers.Inactive"); }
+            else if (parseNode.GetChildNode("Timers.Inactive") is { } nullNodeTimersInactive && nullNodeTimersInactive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimersInactive = null;
+            if (parseNode.GetChildNode("UniqueName") is null) { _explicitNullValueUniqueName = default!; _explicitNullProperties?.Remove("UniqueName"); }
+            else if (parseNode.GetChildNode("UniqueName") is { } nullNodeUniqueName && nullNodeUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,100 +48,100 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An optional string metadata field you can use to store any data you wish. The string value must contain structurally valid JSON if specified.  **Note** that if the attributes are not set &quot;{}&quot; will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
+        public string? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("Attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
         private string? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public string Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
+        public string Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("Attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
         private string _explicitNullValueAttributes = default!;
 #endif
         /// <summary>The default email address that will be used when sending outbound emails in this conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BindingsEmailAddress { get => _explicitNullValueBindingsEmailAddress; set { _explicitNullValueBindingsEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bindings.Email.Address"); else _explicitNullProperties?.Remove("Bindings.Email.Address"); } }
+        public string? BindingsEmailAddress { get => _explicitNullValueBindingsEmailAddress; set { _explicitNullValueBindingsEmailAddress = value; AdditionalData?.Remove("Bindings.Email.Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bindings.Email.Address"); else _explicitNullProperties?.Remove("Bindings.Email.Address"); } }
         private string? _explicitNullValueBindingsEmailAddress = default!;
 #nullable restore
 #else
-        public string BindingsEmailAddress { get => _explicitNullValueBindingsEmailAddress; set { _explicitNullValueBindingsEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bindings.Email.Address"); else _explicitNullProperties?.Remove("Bindings.Email.Address"); } }
+        public string BindingsEmailAddress { get => _explicitNullValueBindingsEmailAddress; set { _explicitNullValueBindingsEmailAddress = value; AdditionalData?.Remove("Bindings.Email.Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bindings.Email.Address"); else _explicitNullProperties?.Remove("Bindings.Email.Address"); } }
         private string _explicitNullValueBindingsEmailAddress = default!;
 #endif
         /// <summary>The default name that will be used when sending outbound emails in this conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BindingsEmailName { get => _explicitNullValueBindingsEmailName; set { _explicitNullValueBindingsEmailName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bindings.Email.Name"); else _explicitNullProperties?.Remove("Bindings.Email.Name"); } }
+        public string? BindingsEmailName { get => _explicitNullValueBindingsEmailName; set { _explicitNullValueBindingsEmailName = value; AdditionalData?.Remove("Bindings.Email.Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bindings.Email.Name"); else _explicitNullProperties?.Remove("Bindings.Email.Name"); } }
         private string? _explicitNullValueBindingsEmailName = default!;
 #nullable restore
 #else
-        public string BindingsEmailName { get => _explicitNullValueBindingsEmailName; set { _explicitNullValueBindingsEmailName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bindings.Email.Name"); else _explicitNullProperties?.Remove("Bindings.Email.Name"); } }
+        public string BindingsEmailName { get => _explicitNullValueBindingsEmailName; set { _explicitNullValueBindingsEmailName = value; AdditionalData?.Remove("Bindings.Email.Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bindings.Email.Name"); else _explicitNullProperties?.Remove("Bindings.Email.Name"); } }
         private string _explicitNullValueBindingsEmailName = default!;
 #endif
         /// <summary>The date that this resource was created.</summary>
-        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateCreated"); else _explicitNullProperties?.Remove("DateCreated"); } }
+        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; AdditionalData?.Remove("DateCreated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateCreated"); else _explicitNullProperties?.Remove("DateCreated"); } }
         private DateTimeOffset? _explicitNullValueDateCreated = default!;
         /// <summary>The date that this resource was last updated.</summary>
-        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateUpdated"); else _explicitNullProperties?.Remove("DateUpdated"); } }
+        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; AdditionalData?.Remove("DateUpdated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateUpdated"); else _explicitNullProperties?.Remove("DateUpdated"); } }
         private DateTimeOffset? _explicitNullValueDateUpdated = default!;
         /// <summary>The human-readable name of this conversation, limited to 256 characters. Optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The unique ID of the [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource) this conversation belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
+        public string? MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; AdditionalData?.Remove("MessagingServiceSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
         private string? _explicitNullValueMessagingServiceSid = default!;
 #nullable restore
 #else
-        public string MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
+        public string MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; AdditionalData?.Remove("MessagingServiceSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
         private string _explicitNullValueMessagingServiceSid = default!;
 #endif
         /// <summary>The participant to be added to the conversation in JSON format. The JSON object attributes are as parameters in [Participant Resource](https://www.twilio.com/docs/conversations/api/conversation-participant-resource). The maximum number of participants that can be added in a single request is 10.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Participant { get => _explicitNullValueParticipant; set { _explicitNullValueParticipant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Participant"); else _explicitNullProperties?.Remove("Participant"); } }
+        public List<string>? Participant { get => _explicitNullValueParticipant; set { _explicitNullValueParticipant = value; AdditionalData?.Remove("Participant"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Participant"); else _explicitNullProperties?.Remove("Participant"); } }
         private List<string>? _explicitNullValueParticipant = default!;
 #nullable restore
 #else
-        public List<string> Participant { get => _explicitNullValueParticipant; set { _explicitNullValueParticipant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Participant"); else _explicitNullProperties?.Remove("Participant"); } }
+        public List<string> Participant { get => _explicitNullValueParticipant; set { _explicitNullValueParticipant = value; AdditionalData?.Remove("Participant"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Participant"); else _explicitNullProperties?.Remove("Participant"); } }
         private List<string> _explicitNullValueParticipant = default!;
 #endif
         /// <summary>Current state of this conversation. Can be either `initializing`, `active`, `inactive` or `closed` and defaults to `active`</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationWithParticipantsEnumState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("State"); else _explicitNullProperties?.Remove("State"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationWithParticipantsEnumState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("State"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("State"); else _explicitNullProperties?.Remove("State"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ConversationWithParticipantsEnumState? _explicitNullValueState = default!;
         /// <summary>ISO8601 duration when conversation will be switched to `closed` state. Minimum value for this timer is 10 minutes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimersClosed { get => _explicitNullValueTimersClosed; set { _explicitNullValueTimersClosed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timers.Closed"); else _explicitNullProperties?.Remove("Timers.Closed"); } }
+        public string? TimersClosed { get => _explicitNullValueTimersClosed; set { _explicitNullValueTimersClosed = value; AdditionalData?.Remove("Timers.Closed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timers.Closed"); else _explicitNullProperties?.Remove("Timers.Closed"); } }
         private string? _explicitNullValueTimersClosed = default!;
 #nullable restore
 #else
-        public string TimersClosed { get => _explicitNullValueTimersClosed; set { _explicitNullValueTimersClosed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timers.Closed"); else _explicitNullProperties?.Remove("Timers.Closed"); } }
+        public string TimersClosed { get => _explicitNullValueTimersClosed; set { _explicitNullValueTimersClosed = value; AdditionalData?.Remove("Timers.Closed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timers.Closed"); else _explicitNullProperties?.Remove("Timers.Closed"); } }
         private string _explicitNullValueTimersClosed = default!;
 #endif
         /// <summary>ISO8601 duration when conversation will be switched to `inactive` state. Minimum value for this timer is 1 minute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimersInactive { get => _explicitNullValueTimersInactive; set { _explicitNullValueTimersInactive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timers.Inactive"); else _explicitNullProperties?.Remove("Timers.Inactive"); } }
+        public string? TimersInactive { get => _explicitNullValueTimersInactive; set { _explicitNullValueTimersInactive = value; AdditionalData?.Remove("Timers.Inactive"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timers.Inactive"); else _explicitNullProperties?.Remove("Timers.Inactive"); } }
         private string? _explicitNullValueTimersInactive = default!;
 #nullable restore
 #else
-        public string TimersInactive { get => _explicitNullValueTimersInactive; set { _explicitNullValueTimersInactive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timers.Inactive"); else _explicitNullProperties?.Remove("Timers.Inactive"); } }
+        public string TimersInactive { get => _explicitNullValueTimersInactive; set { _explicitNullValueTimersInactive = value; AdditionalData?.Remove("Timers.Inactive"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timers.Inactive"); else _explicitNullProperties?.Remove("Timers.Inactive"); } }
         private string _explicitNullValueTimersInactive = default!;
 #endif
         /// <summary>An application-defined string that uniquely identifies the resource. It can be used to address the resource in place of the resource&apos;s `sid` in the URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        public string? UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; AdditionalData?.Remove("UniqueName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
         private string? _explicitNullValueUniqueName = default!;
 #nullable restore
 #else
-        public string UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        public string UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; AdditionalData?.Remove("UniqueName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
         private string _explicitNullValueUniqueName = default!;
 #endif
         /// <summary>
@@ -165,7 +177,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "FriendlyName", n => { FriendlyName = n.GetStringValue(); } },
                 { "MessagingServiceSid", n => { MessagingServiceSid = n.GetStringValue(); } },
                 { "Participant", n => { Participant = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "State", n => { State = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationWithParticipantsEnumState>(); } },
+                { "State", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationWithParticipantsEnumState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueState = default; _explicitNullProperties?.Remove("State"); AdditionalData["State"] = unknown; } else { State = parsed; AdditionalData.Remove("State"); } } },
                 { "Timers.Closed", n => { TimersClosed = n.GetStringValue(); } },
                 { "Timers.Inactive", n => { TimersInactive = n.GetStringValue(); } },
                 { "UniqueName", n => { UniqueName = n.GetStringValue(); } },

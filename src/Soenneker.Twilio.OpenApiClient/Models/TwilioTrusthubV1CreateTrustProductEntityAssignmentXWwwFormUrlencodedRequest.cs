@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ObjectSid") is { } nullNodeObjectSid && nullNodeObjectSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectSid = null;
+            if (parseNode.GetChildNode("ObjectSid") is null) { _explicitNullValueObjectSid = default!; _explicitNullProperties?.Remove("ObjectSid"); }
+            else if (parseNode.GetChildNode("ObjectSid") is { } nullNodeObjectSid && nullNodeObjectSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID of an object bag that holds information of the different items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectSid { get => _explicitNullValueObjectSid; set { _explicitNullValueObjectSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ObjectSid"); else _explicitNullProperties?.Remove("ObjectSid"); } }
+        public string? ObjectSid { get => _explicitNullValueObjectSid; set { _explicitNullValueObjectSid = value; AdditionalData?.Remove("ObjectSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ObjectSid"); else _explicitNullProperties?.Remove("ObjectSid"); } }
         private string? _explicitNullValueObjectSid = default!;
 #nullable restore
 #else
-        public string ObjectSid { get => _explicitNullValueObjectSid; set { _explicitNullValueObjectSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ObjectSid"); else _explicitNullProperties?.Remove("ObjectSid"); } }
+        public string ObjectSid { get => _explicitNullValueObjectSid; set { _explicitNullValueObjectSid = value; AdditionalData?.Remove("ObjectSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ObjectSid"); else _explicitNullProperties?.Remove("ObjectSid"); } }
         private string _explicitNullValueObjectSid = default!;
 #endif
         /// <summary>

@@ -17,25 +17,44 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("AppHash") is { } nullNodeAppHash && nullNodeAppHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppHash = null;
-            if (parseNode.GetChildNode("Channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
-            if (parseNode.GetChildNode("ChannelConfiguration") is { } nullNodeChannelConfiguration && nullNodeChannelConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelConfiguration = null;
-            if (parseNode.GetChildNode("CustomCode") is { } nullNodeCustomCode && nullNodeCustomCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomCode = null;
-            if (parseNode.GetChildNode("CustomFriendlyName") is { } nullNodeCustomFriendlyName && nullNodeCustomFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFriendlyName = null;
-            if (parseNode.GetChildNode("CustomMessage") is { } nullNodeCustomMessage && nullNodeCustomMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMessage = null;
-            if (parseNode.GetChildNode("DeviceIp") is { } nullNodeDeviceIp && nullNodeDeviceIp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceIp = null;
-            if (parseNode.GetChildNode("EnableSnaClientToken") is { } nullNodeEnableSnaClientToken && nullNodeEnableSnaClientToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableSnaClientToken = null;
-            if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("Payee") is { } nullNodePayee && nullNodePayee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payee = null;
-            if (parseNode.GetChildNode("RateLimits") is { } nullNodeRateLimits && nullNodeRateLimits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimits = null;
-            if (parseNode.GetChildNode("RiskCheck") is { } nullNodeRiskCheck && nullNodeRiskCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RiskCheck = null;
-            if (parseNode.GetChildNode("SendDigits") is { } nullNodeSendDigits && nullNodeSendDigits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendDigits = null;
-            if (parseNode.GetChildNode("Tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
-            if (parseNode.GetChildNode("TemplateCustomSubstitutions") is { } nullNodeTemplateCustomSubstitutions && nullNodeTemplateCustomSubstitutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateCustomSubstitutions = null;
-            if (parseNode.GetChildNode("Templates") is { } nullNodeTemplates && nullNodeTemplates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Templates = null;
-            if (parseNode.GetChildNode("TemplateSid") is { } nullNodeTemplateSid && nullNodeTemplateSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateSid = null;
-            if (parseNode.GetChildNode("To") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
+            if (parseNode.GetChildNode("Amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("Amount"); }
+            else if (parseNode.GetChildNode("Amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("AppHash") is null) { _explicitNullValueAppHash = default!; _explicitNullProperties?.Remove("AppHash"); }
+            else if (parseNode.GetChildNode("AppHash") is { } nullNodeAppHash && nullNodeAppHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppHash = null;
+            if (parseNode.GetChildNode("Channel") is null) { _explicitNullValueChannel = default!; _explicitNullProperties?.Remove("Channel"); }
+            else if (parseNode.GetChildNode("Channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("ChannelConfiguration") is null) { _explicitNullValueChannelConfiguration = default!; _explicitNullProperties?.Remove("ChannelConfiguration"); }
+            else if (parseNode.GetChildNode("ChannelConfiguration") is { } nullNodeChannelConfiguration && nullNodeChannelConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelConfiguration = null;
+            if (parseNode.GetChildNode("CustomCode") is null) { _explicitNullValueCustomCode = default!; _explicitNullProperties?.Remove("CustomCode"); }
+            else if (parseNode.GetChildNode("CustomCode") is { } nullNodeCustomCode && nullNodeCustomCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomCode = null;
+            if (parseNode.GetChildNode("CustomFriendlyName") is null) { _explicitNullValueCustomFriendlyName = default!; _explicitNullProperties?.Remove("CustomFriendlyName"); }
+            else if (parseNode.GetChildNode("CustomFriendlyName") is { } nullNodeCustomFriendlyName && nullNodeCustomFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFriendlyName = null;
+            if (parseNode.GetChildNode("CustomMessage") is null) { _explicitNullValueCustomMessage = default!; _explicitNullProperties?.Remove("CustomMessage"); }
+            else if (parseNode.GetChildNode("CustomMessage") is { } nullNodeCustomMessage && nullNodeCustomMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMessage = null;
+            if (parseNode.GetChildNode("DeviceIp") is null) { _explicitNullValueDeviceIp = default!; _explicitNullProperties?.Remove("DeviceIp"); }
+            else if (parseNode.GetChildNode("DeviceIp") is { } nullNodeDeviceIp && nullNodeDeviceIp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceIp = null;
+            if (parseNode.GetChildNode("EnableSnaClientToken") is null) { _explicitNullValueEnableSnaClientToken = default!; _explicitNullProperties?.Remove("EnableSnaClientToken"); }
+            else if (parseNode.GetChildNode("EnableSnaClientToken") is { } nullNodeEnableSnaClientToken && nullNodeEnableSnaClientToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableSnaClientToken = null;
+            if (parseNode.GetChildNode("Locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("Locale"); }
+            else if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("Payee") is null) { _explicitNullValuePayee = default!; _explicitNullProperties?.Remove("Payee"); }
+            else if (parseNode.GetChildNode("Payee") is { } nullNodePayee && nullNodePayee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payee = null;
+            if (parseNode.GetChildNode("RateLimits") is null) { _explicitNullValueRateLimits = default!; _explicitNullProperties?.Remove("RateLimits"); }
+            else if (parseNode.GetChildNode("RateLimits") is { } nullNodeRateLimits && nullNodeRateLimits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimits = null;
+            if (parseNode.GetChildNode("RiskCheck") is null) { _explicitNullValueRiskCheck = default!; _explicitNullProperties?.Remove("RiskCheck"); }
+            else if (parseNode.GetChildNode("RiskCheck") is { } nullNodeRiskCheck && nullNodeRiskCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RiskCheck = null;
+            if (parseNode.GetChildNode("SendDigits") is null) { _explicitNullValueSendDigits = default!; _explicitNullProperties?.Remove("SendDigits"); }
+            else if (parseNode.GetChildNode("SendDigits") is { } nullNodeSendDigits && nullNodeSendDigits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendDigits = null;
+            if (parseNode.GetChildNode("Tags") is null) { _explicitNullValueTags = default!; _explicitNullProperties?.Remove("Tags"); }
+            else if (parseNode.GetChildNode("Tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+            if (parseNode.GetChildNode("TemplateCustomSubstitutions") is null) { _explicitNullValueTemplateCustomSubstitutions = default!; _explicitNullProperties?.Remove("TemplateCustomSubstitutions"); }
+            else if (parseNode.GetChildNode("TemplateCustomSubstitutions") is { } nullNodeTemplateCustomSubstitutions && nullNodeTemplateCustomSubstitutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateCustomSubstitutions = null;
+            if (parseNode.GetChildNode("Templates") is null) { _explicitNullValueTemplates = default!; _explicitNullProperties?.Remove("Templates"); }
+            else if (parseNode.GetChildNode("Templates") is { } nullNodeTemplates && nullNodeTemplates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Templates = null;
+            if (parseNode.GetChildNode("TemplateSid") is null) { _explicitNullValueTemplateSid = default!; _explicitNullProperties?.Remove("TemplateSid"); }
+            else if (parseNode.GetChildNode("TemplateSid") is { } nullNodeTemplateSid && nullNodeTemplateSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateSid = null;
+            if (parseNode.GetChildNode("To") is null) { _explicitNullValueTo = default!; _explicitNullProperties?.Remove("To"); }
+            else if (parseNode.GetChildNode("To") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -43,178 +62,178 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The amount of the associated PSD2 compliant transaction. Requires the PSD2 Service flag enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Amount"); else _explicitNullProperties?.Remove("Amount"); } }
+        public string? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("Amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Amount"); else _explicitNullProperties?.Remove("Amount"); } }
         private string? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public string Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Amount"); else _explicitNullProperties?.Remove("Amount"); } }
+        public string Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("Amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Amount"); else _explicitNullProperties?.Remove("Amount"); } }
         private string _explicitNullValueAmount = default!;
 #endif
         /// <summary>Your [App Hash](https://developers.google.com/identity/sms-retriever/verify#computing_your_apps_hash_string) to be appended at the end of your verification SMS body. Applies only to SMS. Example SMS body: `&lt;#&gt; Your AppName verification code is: 1234 He42w354ol9`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppHash { get => _explicitNullValueAppHash; set { _explicitNullValueAppHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AppHash"); else _explicitNullProperties?.Remove("AppHash"); } }
+        public string? AppHash { get => _explicitNullValueAppHash; set { _explicitNullValueAppHash = value; AdditionalData?.Remove("AppHash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AppHash"); else _explicitNullProperties?.Remove("AppHash"); } }
         private string? _explicitNullValueAppHash = default!;
 #nullable restore
 #else
-        public string AppHash { get => _explicitNullValueAppHash; set { _explicitNullValueAppHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AppHash"); else _explicitNullProperties?.Remove("AppHash"); } }
+        public string AppHash { get => _explicitNullValueAppHash; set { _explicitNullValueAppHash = value; AdditionalData?.Remove("AppHash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AppHash"); else _explicitNullProperties?.Remove("AppHash"); } }
         private string _explicitNullValueAppHash = default!;
 #endif
         /// <summary>The verification method to use. One of: [`email`](https://www.twilio.com/docs/verify/email), `sms`, `whatsapp`, `call`, `sna` or `auto`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Channel"); else _explicitNullProperties?.Remove("Channel"); } }
+        public string? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("Channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Channel"); else _explicitNullProperties?.Remove("Channel"); } }
         private string? _explicitNullValueChannel = default!;
 #nullable restore
 #else
-        public string Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Channel"); else _explicitNullProperties?.Remove("Channel"); } }
+        public string Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("Channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Channel"); else _explicitNullProperties?.Remove("Channel"); } }
         private string _explicitNullValueChannel = default!;
 #endif
         /// <summary>[`email`](https://www.twilio.com/docs/verify/email) channel configuration in json format. The fields &apos;from&apos; and &apos;from_name&apos; are optional but if included the &apos;from&apos; field must have a valid email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ChannelConfiguration { get => _explicitNullValueChannelConfiguration; set { _explicitNullValueChannelConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelConfiguration"); else _explicitNullProperties?.Remove("ChannelConfiguration"); } }
+        public UntypedNode? ChannelConfiguration { get => _explicitNullValueChannelConfiguration; set { _explicitNullValueChannelConfiguration = value; AdditionalData?.Remove("ChannelConfiguration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelConfiguration"); else _explicitNullProperties?.Remove("ChannelConfiguration"); } }
         private UntypedNode? _explicitNullValueChannelConfiguration = default!;
 #nullable restore
 #else
-        public UntypedNode ChannelConfiguration { get => _explicitNullValueChannelConfiguration; set { _explicitNullValueChannelConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelConfiguration"); else _explicitNullProperties?.Remove("ChannelConfiguration"); } }
+        public UntypedNode ChannelConfiguration { get => _explicitNullValueChannelConfiguration; set { _explicitNullValueChannelConfiguration = value; AdditionalData?.Remove("ChannelConfiguration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelConfiguration"); else _explicitNullProperties?.Remove("ChannelConfiguration"); } }
         private UntypedNode _explicitNullValueChannelConfiguration = default!;
 #endif
         /// <summary>A pre-generated code to use for verification. The code can be between 4 and 10 characters, inclusive.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomCode { get => _explicitNullValueCustomCode; set { _explicitNullValueCustomCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomCode"); else _explicitNullProperties?.Remove("CustomCode"); } }
+        public string? CustomCode { get => _explicitNullValueCustomCode; set { _explicitNullValueCustomCode = value; AdditionalData?.Remove("CustomCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomCode"); else _explicitNullProperties?.Remove("CustomCode"); } }
         private string? _explicitNullValueCustomCode = default!;
 #nullable restore
 #else
-        public string CustomCode { get => _explicitNullValueCustomCode; set { _explicitNullValueCustomCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomCode"); else _explicitNullProperties?.Remove("CustomCode"); } }
+        public string CustomCode { get => _explicitNullValueCustomCode; set { _explicitNullValueCustomCode = value; AdditionalData?.Remove("CustomCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomCode"); else _explicitNullProperties?.Remove("CustomCode"); } }
         private string _explicitNullValueCustomCode = default!;
 #endif
         /// <summary>A custom user defined friendly name that overwrites the existing one in the verification message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomFriendlyName { get => _explicitNullValueCustomFriendlyName; set { _explicitNullValueCustomFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomFriendlyName"); else _explicitNullProperties?.Remove("CustomFriendlyName"); } }
+        public string? CustomFriendlyName { get => _explicitNullValueCustomFriendlyName; set { _explicitNullValueCustomFriendlyName = value; AdditionalData?.Remove("CustomFriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomFriendlyName"); else _explicitNullProperties?.Remove("CustomFriendlyName"); } }
         private string? _explicitNullValueCustomFriendlyName = default!;
 #nullable restore
 #else
-        public string CustomFriendlyName { get => _explicitNullValueCustomFriendlyName; set { _explicitNullValueCustomFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomFriendlyName"); else _explicitNullProperties?.Remove("CustomFriendlyName"); } }
+        public string CustomFriendlyName { get => _explicitNullValueCustomFriendlyName; set { _explicitNullValueCustomFriendlyName = value; AdditionalData?.Remove("CustomFriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomFriendlyName"); else _explicitNullProperties?.Remove("CustomFriendlyName"); } }
         private string _explicitNullValueCustomFriendlyName = default!;
 #endif
         /// <summary>The text of a custom message to use for the verification [DEPRECATED].</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomMessage"); else _explicitNullProperties?.Remove("CustomMessage"); } }
+        public string? CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; AdditionalData?.Remove("CustomMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomMessage"); else _explicitNullProperties?.Remove("CustomMessage"); } }
         private string? _explicitNullValueCustomMessage = default!;
 #nullable restore
 #else
-        public string CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomMessage"); else _explicitNullProperties?.Remove("CustomMessage"); } }
+        public string CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; AdditionalData?.Remove("CustomMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomMessage"); else _explicitNullProperties?.Remove("CustomMessage"); } }
         private string _explicitNullValueCustomMessage = default!;
 #endif
         /// <summary>Strongly encouraged if using the auto channel. The IP address of the client&apos;s device. If provided, it has to be a valid IPv4 or IPv6 address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeviceIp { get => _explicitNullValueDeviceIp; set { _explicitNullValueDeviceIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeviceIp"); else _explicitNullProperties?.Remove("DeviceIp"); } }
+        public string? DeviceIp { get => _explicitNullValueDeviceIp; set { _explicitNullValueDeviceIp = value; AdditionalData?.Remove("DeviceIp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeviceIp"); else _explicitNullProperties?.Remove("DeviceIp"); } }
         private string? _explicitNullValueDeviceIp = default!;
 #nullable restore
 #else
-        public string DeviceIp { get => _explicitNullValueDeviceIp; set { _explicitNullValueDeviceIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeviceIp"); else _explicitNullProperties?.Remove("DeviceIp"); } }
+        public string DeviceIp { get => _explicitNullValueDeviceIp; set { _explicitNullValueDeviceIp = value; AdditionalData?.Remove("DeviceIp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeviceIp"); else _explicitNullProperties?.Remove("DeviceIp"); } }
         private string _explicitNullValueDeviceIp = default!;
 #endif
         /// <summary>An optional Boolean value to indicate the requirement of sna client token in the SNA URL invocation response for added security. This token must match in the Verification Check request to confirm phone number verification.</summary>
-        public bool? EnableSnaClientToken { get => _explicitNullValueEnableSnaClientToken; set { _explicitNullValueEnableSnaClientToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableSnaClientToken"); else _explicitNullProperties?.Remove("EnableSnaClientToken"); } }
+        public bool? EnableSnaClientToken { get => _explicitNullValueEnableSnaClientToken; set { _explicitNullValueEnableSnaClientToken = value; AdditionalData?.Remove("EnableSnaClientToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableSnaClientToken"); else _explicitNullProperties?.Remove("EnableSnaClientToken"); } }
         private bool? _explicitNullValueEnableSnaClientToken = default!;
         /// <summary>Locale will automatically resolve based on phone number country code for SMS, WhatsApp, and call channel verifications. It will fallback to English or the template’s default translation if the selected translation is not available. This parameter will override the automatic locale resolution. [See supported languages and more information here](https://www.twilio.com/docs/verify/supported-languages).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private string? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private string _explicitNullValueLocale = default!;
 #endif
         /// <summary>The payee of the associated PSD2 compliant transaction. Requires the PSD2 Service flag enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Payee { get => _explicitNullValuePayee; set { _explicitNullValuePayee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Payee"); else _explicitNullProperties?.Remove("Payee"); } }
+        public string? Payee { get => _explicitNullValuePayee; set { _explicitNullValuePayee = value; AdditionalData?.Remove("Payee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Payee"); else _explicitNullProperties?.Remove("Payee"); } }
         private string? _explicitNullValuePayee = default!;
 #nullable restore
 #else
-        public string Payee { get => _explicitNullValuePayee; set { _explicitNullValuePayee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Payee"); else _explicitNullProperties?.Remove("Payee"); } }
+        public string Payee { get => _explicitNullValuePayee; set { _explicitNullValuePayee = value; AdditionalData?.Remove("Payee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Payee"); else _explicitNullProperties?.Remove("Payee"); } }
         private string _explicitNullValuePayee = default!;
 #endif
         /// <summary>The custom key-value pairs of Programmable Rate Limits. Keys correspond to `unique_name` fields defined when [creating your Rate Limit](https://www.twilio.com/docs/verify/api/service-rate-limits). Associated value pairs represent values in the request that you are rate limiting on. You may include multiple Rate Limit values in each request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RateLimits { get => _explicitNullValueRateLimits; set { _explicitNullValueRateLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateLimits"); else _explicitNullProperties?.Remove("RateLimits"); } }
+        public UntypedNode? RateLimits { get => _explicitNullValueRateLimits; set { _explicitNullValueRateLimits = value; AdditionalData?.Remove("RateLimits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateLimits"); else _explicitNullProperties?.Remove("RateLimits"); } }
         private UntypedNode? _explicitNullValueRateLimits = default!;
 #nullable restore
 #else
-        public UntypedNode RateLimits { get => _explicitNullValueRateLimits; set { _explicitNullValueRateLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateLimits"); else _explicitNullProperties?.Remove("RateLimits"); } }
+        public UntypedNode RateLimits { get => _explicitNullValueRateLimits; set { _explicitNullValueRateLimits = value; AdditionalData?.Remove("RateLimits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateLimits"); else _explicitNullProperties?.Remove("RateLimits"); } }
         private UntypedNode _explicitNullValueRateLimits = default!;
 #endif
         /// <summary>Risk_check overrides Fraud Prevention measures like Fraud Guard, Geo Permissions etc per verification attempt basis, allowing Verify to block traffic considered fraudulent if enabled or bypass active protections if disabled. Can be: `enable`(default) or `disable`. For SMS channel only.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VerificationEnumRiskCheck? RiskCheck { get => _explicitNullValueRiskCheck; set { _explicitNullValueRiskCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RiskCheck"); else _explicitNullProperties?.Remove("RiskCheck"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VerificationEnumRiskCheck? RiskCheck { get => _explicitNullValueRiskCheck; set { _explicitNullValueRiskCheck = value; AdditionalData?.Remove("RiskCheck"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RiskCheck"); else _explicitNullProperties?.Remove("RiskCheck"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.VerificationEnumRiskCheck? _explicitNullValueRiskCheck = default!;
         /// <summary>The digits to send after a phone call is answered, for example, to dial an extension. For more information, see the Programmable Voice documentation of [sendDigits](https://www.twilio.com/docs/voice/twiml/number#attributes-sendDigits).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SendDigits { get => _explicitNullValueSendDigits; set { _explicitNullValueSendDigits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SendDigits"); else _explicitNullProperties?.Remove("SendDigits"); } }
+        public string? SendDigits { get => _explicitNullValueSendDigits; set { _explicitNullValueSendDigits = value; AdditionalData?.Remove("SendDigits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SendDigits"); else _explicitNullProperties?.Remove("SendDigits"); } }
         private string? _explicitNullValueSendDigits = default!;
 #nullable restore
 #else
-        public string SendDigits { get => _explicitNullValueSendDigits; set { _explicitNullValueSendDigits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SendDigits"); else _explicitNullProperties?.Remove("SendDigits"); } }
+        public string SendDigits { get => _explicitNullValueSendDigits; set { _explicitNullValueSendDigits = value; AdditionalData?.Remove("SendDigits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SendDigits"); else _explicitNullProperties?.Remove("SendDigits"); } }
         private string _explicitNullValueSendDigits = default!;
 #endif
         /// <summary>A string containing a JSON map of key value pairs of tags to be recorded as metadata for the message. The tags will also be included as part of the verification and message status event type payloads. The object may contain up to 10 tags. Keys and values can each be up to 128 characters in length. **This value should not contain PII.**</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Tags"); else _explicitNullProperties?.Remove("Tags"); } }
+        public string? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("Tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Tags"); else _explicitNullProperties?.Remove("Tags"); } }
         private string? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public string Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Tags"); else _explicitNullProperties?.Remove("Tags"); } }
+        public string Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("Tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Tags"); else _explicitNullProperties?.Remove("Tags"); } }
         private string _explicitNullValueTags = default!;
 #endif
         /// <summary>A stringified JSON object in which the keys are the template&apos;s special variables and the values are the variables substitutions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateCustomSubstitutions { get => _explicitNullValueTemplateCustomSubstitutions; set { _explicitNullValueTemplateCustomSubstitutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TemplateCustomSubstitutions"); else _explicitNullProperties?.Remove("TemplateCustomSubstitutions"); } }
+        public string? TemplateCustomSubstitutions { get => _explicitNullValueTemplateCustomSubstitutions; set { _explicitNullValueTemplateCustomSubstitutions = value; AdditionalData?.Remove("TemplateCustomSubstitutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TemplateCustomSubstitutions"); else _explicitNullProperties?.Remove("TemplateCustomSubstitutions"); } }
         private string? _explicitNullValueTemplateCustomSubstitutions = default!;
 #nullable restore
 #else
-        public string TemplateCustomSubstitutions { get => _explicitNullValueTemplateCustomSubstitutions; set { _explicitNullValueTemplateCustomSubstitutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TemplateCustomSubstitutions"); else _explicitNullProperties?.Remove("TemplateCustomSubstitutions"); } }
+        public string TemplateCustomSubstitutions { get => _explicitNullValueTemplateCustomSubstitutions; set { _explicitNullValueTemplateCustomSubstitutions = value; AdditionalData?.Remove("TemplateCustomSubstitutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TemplateCustomSubstitutions"); else _explicitNullProperties?.Remove("TemplateCustomSubstitutions"); } }
         private string _explicitNullValueTemplateCustomSubstitutions = default!;
 #endif
         /// <summary>A stringified JSON array of template entries, ordered by preference. Each entry is an object with the following fields: `sid` (string, required, matching `^HJ[0-9a-fA-F]{32}$`) — the SID of the message [template](https://www.twilio.com/docs/verify/api/templates) to apply; and `substitutions` (object, optional) — a key-value map in which the keys are the template&apos;s special variables and the values are their substitution values. The array may contain up to 10 entries. If provided, `Templates` takes precedence over `TemplateSid` and `TemplateCustomSubstitutions`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Templates { get => _explicitNullValueTemplates; set { _explicitNullValueTemplates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Templates"); else _explicitNullProperties?.Remove("Templates"); } }
+        public string? Templates { get => _explicitNullValueTemplates; set { _explicitNullValueTemplates = value; AdditionalData?.Remove("Templates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Templates"); else _explicitNullProperties?.Remove("Templates"); } }
         private string? _explicitNullValueTemplates = default!;
 #nullable restore
 #else
-        public string Templates { get => _explicitNullValueTemplates; set { _explicitNullValueTemplates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Templates"); else _explicitNullProperties?.Remove("Templates"); } }
+        public string Templates { get => _explicitNullValueTemplates; set { _explicitNullValueTemplates = value; AdditionalData?.Remove("Templates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Templates"); else _explicitNullProperties?.Remove("Templates"); } }
         private string _explicitNullValueTemplates = default!;
 #endif
         /// <summary>The message [template](https://www.twilio.com/docs/verify/api/templates). If provided, will override the default template for the Service. SMS and Voice channels only. If the `Templates` parameter is also provided, `Templates` takes precedence over this parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateSid { get => _explicitNullValueTemplateSid; set { _explicitNullValueTemplateSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TemplateSid"); else _explicitNullProperties?.Remove("TemplateSid"); } }
+        public string? TemplateSid { get => _explicitNullValueTemplateSid; set { _explicitNullValueTemplateSid = value; AdditionalData?.Remove("TemplateSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TemplateSid"); else _explicitNullProperties?.Remove("TemplateSid"); } }
         private string? _explicitNullValueTemplateSid = default!;
 #nullable restore
 #else
-        public string TemplateSid { get => _explicitNullValueTemplateSid; set { _explicitNullValueTemplateSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TemplateSid"); else _explicitNullProperties?.Remove("TemplateSid"); } }
+        public string TemplateSid { get => _explicitNullValueTemplateSid; set { _explicitNullValueTemplateSid = value; AdditionalData?.Remove("TemplateSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TemplateSid"); else _explicitNullProperties?.Remove("TemplateSid"); } }
         private string _explicitNullValueTemplateSid = default!;
 #endif
         /// <summary>The phone number or [email](https://www.twilio.com/docs/verify/email) to verify. Phone numbers must be in [E.164 format](https://www.twilio.com/docs/glossary/what-e164).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("To"); else _explicitNullProperties?.Remove("To"); } }
+        public string? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("To"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("To"); else _explicitNullProperties?.Remove("To"); } }
         private string? _explicitNullValueTo = default!;
 #nullable restore
 #else
-        public string To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("To"); else _explicitNullProperties?.Remove("To"); } }
+        public string To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("To"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("To"); else _explicitNullProperties?.Remove("To"); } }
         private string _explicitNullValueTo = default!;
 #endif
         /// <summary>
@@ -254,7 +273,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "Locale", n => { Locale = n.GetStringValue(); } },
                 { "Payee", n => { Payee = n.GetStringValue(); } },
                 { "RateLimits", n => { RateLimits = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "RiskCheck", n => { RiskCheck = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VerificationEnumRiskCheck>(); } },
+                { "RiskCheck", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.VerificationEnumRiskCheck>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRiskCheck = default; _explicitNullProperties?.Remove("RiskCheck"); AdditionalData["RiskCheck"] = unknown; } else { RiskCheck = parsed; AdditionalData.Remove("RiskCheck"); } } },
                 { "SendDigits", n => { SendDigits = n.GetStringValue(); } },
                 { "Tags", n => { Tags = n.GetStringValue(); } },
                 { "TemplateCustomSubstitutions", n => { TemplateCustomSubstitutions = n.GetStringValue(); } },

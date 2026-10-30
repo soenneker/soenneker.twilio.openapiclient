@@ -17,9 +17,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("domain_sid") is { } nullNodeDomainSid && nullNodeDomainSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainSid = null;
-            if (parseNode.GetChildNode("messaging_service_sid") is { } nullNodeMessagingServiceSid && nullNodeMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingServiceSid = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("domain_sid") is null) { _explicitNullValueDomainSid = default!; _explicitNullProperties?.Remove("domain_sid"); }
+            else if (parseNode.GetChildNode("domain_sid") is { } nullNodeDomainSid && nullNodeDomainSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainSid = null;
+            if (parseNode.GetChildNode("messaging_service_sid") is null) { _explicitNullValueMessagingServiceSid = default!; _explicitNullProperties?.Remove("messaging_service_sid"); }
+            else if (parseNode.GetChildNode("messaging_service_sid") is { } nullNodeMessagingServiceSid && nullNodeMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingServiceSid = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The unique string identifies the domain resource</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DomainSid { get => _explicitNullValueDomainSid; set { _explicitNullValueDomainSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_sid"); else _explicitNullProperties?.Remove("domain_sid"); } }
+        public string? DomainSid { get => _explicitNullValueDomainSid; set { _explicitNullValueDomainSid = value; AdditionalData?.Remove("domain_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_sid"); else _explicitNullProperties?.Remove("domain_sid"); } }
         private string? _explicitNullValueDomainSid = default!;
 #nullable restore
 #else
-        public string DomainSid { get => _explicitNullValueDomainSid; set { _explicitNullValueDomainSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_sid"); else _explicitNullProperties?.Remove("domain_sid"); } }
+        public string DomainSid { get => _explicitNullValueDomainSid; set { _explicitNullValueDomainSid = value; AdditionalData?.Remove("domain_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_sid"); else _explicitNullProperties?.Remove("domain_sid"); } }
         private string _explicitNullValueDomainSid = default!;
 #endif
         /// <summary>The unique string that identifies the messaging service</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_service_sid"); else _explicitNullProperties?.Remove("messaging_service_sid"); } }
+        public string? MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; AdditionalData?.Remove("messaging_service_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_service_sid"); else _explicitNullProperties?.Remove("messaging_service_sid"); } }
         private string? _explicitNullValueMessagingServiceSid = default!;
 #nullable restore
 #else
-        public string MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_service_sid"); else _explicitNullProperties?.Remove("messaging_service_sid"); } }
+        public string MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; AdditionalData?.Remove("messaging_service_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_service_sid"); else _explicitNullProperties?.Remove("messaging_service_sid"); } }
         private string _explicitNullValueMessagingServiceSid = default!;
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Iccid") is { } nullNodeIccid && nullNodeIccid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Iccid = null;
-            if (parseNode.GetChildNode("RegistrationCode") is { } nullNodeRegistrationCode && nullNodeRegistrationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistrationCode = null;
+            if (parseNode.GetChildNode("Iccid") is null) { _explicitNullValueIccid = default!; _explicitNullProperties?.Remove("Iccid"); }
+            else if (parseNode.GetChildNode("Iccid") is { } nullNodeIccid && nullNodeIccid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Iccid = null;
+            if (parseNode.GetChildNode("RegistrationCode") is null) { _explicitNullValueRegistrationCode = default!; _explicitNullProperties?.Remove("RegistrationCode"); }
+            else if (parseNode.GetChildNode("RegistrationCode") is { } nullNodeRegistrationCode && nullNodeRegistrationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistrationCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) of the Super SIM to be added to your Account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Iccid { get => _explicitNullValueIccid; set { _explicitNullValueIccid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Iccid"); else _explicitNullProperties?.Remove("Iccid"); } }
+        public string? Iccid { get => _explicitNullValueIccid; set { _explicitNullValueIccid = value; AdditionalData?.Remove("Iccid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Iccid"); else _explicitNullProperties?.Remove("Iccid"); } }
         private string? _explicitNullValueIccid = default!;
 #nullable restore
 #else
-        public string Iccid { get => _explicitNullValueIccid; set { _explicitNullValueIccid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Iccid"); else _explicitNullProperties?.Remove("Iccid"); } }
+        public string Iccid { get => _explicitNullValueIccid; set { _explicitNullValueIccid = value; AdditionalData?.Remove("Iccid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Iccid"); else _explicitNullProperties?.Remove("Iccid"); } }
         private string _explicitNullValueIccid = default!;
 #endif
         /// <summary>The 10-digit code required to claim the Super SIM for your Account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegistrationCode { get => _explicitNullValueRegistrationCode; set { _explicitNullValueRegistrationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegistrationCode"); else _explicitNullProperties?.Remove("RegistrationCode"); } }
+        public string? RegistrationCode { get => _explicitNullValueRegistrationCode; set { _explicitNullValueRegistrationCode = value; AdditionalData?.Remove("RegistrationCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegistrationCode"); else _explicitNullProperties?.Remove("RegistrationCode"); } }
         private string? _explicitNullValueRegistrationCode = default!;
 #nullable restore
 #else
-        public string RegistrationCode { get => _explicitNullValueRegistrationCode; set { _explicitNullValueRegistrationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegistrationCode"); else _explicitNullProperties?.Remove("RegistrationCode"); } }
+        public string RegistrationCode { get => _explicitNullValueRegistrationCode; set { _explicitNullValueRegistrationCode = value; AdditionalData?.Remove("RegistrationCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegistrationCode"); else _explicitNullProperties?.Remove("RegistrationCode"); } }
         private string _explicitNullValueRegistrationCode = default!;
 #endif
         /// <summary>

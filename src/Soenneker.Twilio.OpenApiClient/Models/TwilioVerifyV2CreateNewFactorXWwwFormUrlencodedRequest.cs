@@ -17,20 +17,34 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Binding.Alg") is { } nullNodeBindingAlg && nullNodeBindingAlg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BindingAlg = null;
-            if (parseNode.GetChildNode("Binding.PublicKey") is { } nullNodeBindingPublicKey && nullNodeBindingPublicKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BindingPublicKey = null;
-            if (parseNode.GetChildNode("Binding.Secret") is { } nullNodeBindingSecret && nullNodeBindingSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BindingSecret = null;
-            if (parseNode.GetChildNode("Config.Alg") is { } nullNodeConfigAlg && nullNodeConfigAlg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigAlg = null;
-            if (parseNode.GetChildNode("Config.AppId") is { } nullNodeConfigAppId && nullNodeConfigAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigAppId = null;
-            if (parseNode.GetChildNode("Config.CodeLength") is { } nullNodeConfigCodeLength && nullNodeConfigCodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigCodeLength = null;
-            if (parseNode.GetChildNode("Config.NotificationPlatform") is { } nullNodeConfigNotificationPlatform && nullNodeConfigNotificationPlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigNotificationPlatform = null;
-            if (parseNode.GetChildNode("Config.NotificationToken") is { } nullNodeConfigNotificationToken && nullNodeConfigNotificationToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigNotificationToken = null;
-            if (parseNode.GetChildNode("Config.SdkVersion") is { } nullNodeConfigSdkVersion && nullNodeConfigSdkVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigSdkVersion = null;
-            if (parseNode.GetChildNode("Config.Skew") is { } nullNodeConfigSkew && nullNodeConfigSkew.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigSkew = null;
-            if (parseNode.GetChildNode("Config.TimeStep") is { } nullNodeConfigTimeStep && nullNodeConfigTimeStep.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigTimeStep = null;
-            if (parseNode.GetChildNode("FactorType") is { } nullNodeFactorType && nullNodeFactorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FactorType = null;
-            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("Metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("Binding.Alg") is null) { _explicitNullValueBindingAlg = default!; _explicitNullProperties?.Remove("Binding.Alg"); }
+            else if (parseNode.GetChildNode("Binding.Alg") is { } nullNodeBindingAlg && nullNodeBindingAlg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BindingAlg = null;
+            if (parseNode.GetChildNode("Binding.PublicKey") is null) { _explicitNullValueBindingPublicKey = default!; _explicitNullProperties?.Remove("Binding.PublicKey"); }
+            else if (parseNode.GetChildNode("Binding.PublicKey") is { } nullNodeBindingPublicKey && nullNodeBindingPublicKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BindingPublicKey = null;
+            if (parseNode.GetChildNode("Binding.Secret") is null) { _explicitNullValueBindingSecret = default!; _explicitNullProperties?.Remove("Binding.Secret"); }
+            else if (parseNode.GetChildNode("Binding.Secret") is { } nullNodeBindingSecret && nullNodeBindingSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BindingSecret = null;
+            if (parseNode.GetChildNode("Config.Alg") is null) { _explicitNullValueConfigAlg = default!; _explicitNullProperties?.Remove("Config.Alg"); }
+            else if (parseNode.GetChildNode("Config.Alg") is { } nullNodeConfigAlg && nullNodeConfigAlg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigAlg = null;
+            if (parseNode.GetChildNode("Config.AppId") is null) { _explicitNullValueConfigAppId = default!; _explicitNullProperties?.Remove("Config.AppId"); }
+            else if (parseNode.GetChildNode("Config.AppId") is { } nullNodeConfigAppId && nullNodeConfigAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigAppId = null;
+            if (parseNode.GetChildNode("Config.CodeLength") is null) { _explicitNullValueConfigCodeLength = default!; _explicitNullProperties?.Remove("Config.CodeLength"); }
+            else if (parseNode.GetChildNode("Config.CodeLength") is { } nullNodeConfigCodeLength && nullNodeConfigCodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigCodeLength = null;
+            if (parseNode.GetChildNode("Config.NotificationPlatform") is null) { _explicitNullValueConfigNotificationPlatform = default!; _explicitNullProperties?.Remove("Config.NotificationPlatform"); }
+            else if (parseNode.GetChildNode("Config.NotificationPlatform") is { } nullNodeConfigNotificationPlatform && nullNodeConfigNotificationPlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigNotificationPlatform = null;
+            if (parseNode.GetChildNode("Config.NotificationToken") is null) { _explicitNullValueConfigNotificationToken = default!; _explicitNullProperties?.Remove("Config.NotificationToken"); }
+            else if (parseNode.GetChildNode("Config.NotificationToken") is { } nullNodeConfigNotificationToken && nullNodeConfigNotificationToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigNotificationToken = null;
+            if (parseNode.GetChildNode("Config.SdkVersion") is null) { _explicitNullValueConfigSdkVersion = default!; _explicitNullProperties?.Remove("Config.SdkVersion"); }
+            else if (parseNode.GetChildNode("Config.SdkVersion") is { } nullNodeConfigSdkVersion && nullNodeConfigSdkVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigSdkVersion = null;
+            if (parseNode.GetChildNode("Config.Skew") is null) { _explicitNullValueConfigSkew = default!; _explicitNullProperties?.Remove("Config.Skew"); }
+            else if (parseNode.GetChildNode("Config.Skew") is { } nullNodeConfigSkew && nullNodeConfigSkew.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigSkew = null;
+            if (parseNode.GetChildNode("Config.TimeStep") is null) { _explicitNullValueConfigTimeStep = default!; _explicitNullProperties?.Remove("Config.TimeStep"); }
+            else if (parseNode.GetChildNode("Config.TimeStep") is { } nullNodeConfigTimeStep && nullNodeConfigTimeStep.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigTimeStep = null;
+            if (parseNode.GetChildNode("FactorType") is null) { _explicitNullValueFactorType = default!; _explicitNullProperties?.Remove("FactorType"); }
+            else if (parseNode.GetChildNode("FactorType") is { } nullNodeFactorType && nullNodeFactorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FactorType = null;
+            if (parseNode.GetChildNode("FriendlyName") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("FriendlyName"); }
+            else if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("Metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("Metadata"); }
+            else if (parseNode.GetChildNode("Metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,99 +52,99 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The algorithm used when `factor_type` is `push`. Algorithm supported: `ES256`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BindingAlg { get => _explicitNullValueBindingAlg; set { _explicitNullValueBindingAlg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.Alg"); else _explicitNullProperties?.Remove("Binding.Alg"); } }
+        public string? BindingAlg { get => _explicitNullValueBindingAlg; set { _explicitNullValueBindingAlg = value; AdditionalData?.Remove("Binding.Alg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.Alg"); else _explicitNullProperties?.Remove("Binding.Alg"); } }
         private string? _explicitNullValueBindingAlg = default!;
 #nullable restore
 #else
-        public string BindingAlg { get => _explicitNullValueBindingAlg; set { _explicitNullValueBindingAlg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.Alg"); else _explicitNullProperties?.Remove("Binding.Alg"); } }
+        public string BindingAlg { get => _explicitNullValueBindingAlg; set { _explicitNullValueBindingAlg = value; AdditionalData?.Remove("Binding.Alg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.Alg"); else _explicitNullProperties?.Remove("Binding.Alg"); } }
         private string _explicitNullValueBindingAlg = default!;
 #endif
         /// <summary>The Ecdsa public key in PKIX, ASN.1 DER format encoded in Base64.Required when `factor_type` is `push`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BindingPublicKey { get => _explicitNullValueBindingPublicKey; set { _explicitNullValueBindingPublicKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.PublicKey"); else _explicitNullProperties?.Remove("Binding.PublicKey"); } }
+        public string? BindingPublicKey { get => _explicitNullValueBindingPublicKey; set { _explicitNullValueBindingPublicKey = value; AdditionalData?.Remove("Binding.PublicKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.PublicKey"); else _explicitNullProperties?.Remove("Binding.PublicKey"); } }
         private string? _explicitNullValueBindingPublicKey = default!;
 #nullable restore
 #else
-        public string BindingPublicKey { get => _explicitNullValueBindingPublicKey; set { _explicitNullValueBindingPublicKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.PublicKey"); else _explicitNullProperties?.Remove("Binding.PublicKey"); } }
+        public string BindingPublicKey { get => _explicitNullValueBindingPublicKey; set { _explicitNullValueBindingPublicKey = value; AdditionalData?.Remove("Binding.PublicKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.PublicKey"); else _explicitNullProperties?.Remove("Binding.PublicKey"); } }
         private string _explicitNullValueBindingPublicKey = default!;
 #endif
         /// <summary>The shared secret for TOTP factors encoded in Base32. This can be provided when creating the Factor, otherwise it will be generated.Used when `factor_type` is `totp`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BindingSecret { get => _explicitNullValueBindingSecret; set { _explicitNullValueBindingSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.Secret"); else _explicitNullProperties?.Remove("Binding.Secret"); } }
+        public string? BindingSecret { get => _explicitNullValueBindingSecret; set { _explicitNullValueBindingSecret = value; AdditionalData?.Remove("Binding.Secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.Secret"); else _explicitNullProperties?.Remove("Binding.Secret"); } }
         private string? _explicitNullValueBindingSecret = default!;
 #nullable restore
 #else
-        public string BindingSecret { get => _explicitNullValueBindingSecret; set { _explicitNullValueBindingSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.Secret"); else _explicitNullProperties?.Remove("Binding.Secret"); } }
+        public string BindingSecret { get => _explicitNullValueBindingSecret; set { _explicitNullValueBindingSecret = value; AdditionalData?.Remove("Binding.Secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Binding.Secret"); else _explicitNullProperties?.Remove("Binding.Secret"); } }
         private string _explicitNullValueBindingSecret = default!;
 #endif
         /// <summary>The ConfigAlg property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumTotpAlgorithms? ConfigAlg { get => _explicitNullValueConfigAlg; set { _explicitNullValueConfigAlg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.Alg"); else _explicitNullProperties?.Remove("Config.Alg"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumTotpAlgorithms? ConfigAlg { get => _explicitNullValueConfigAlg; set { _explicitNullValueConfigAlg = value; AdditionalData?.Remove("Config.Alg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.Alg"); else _explicitNullProperties?.Remove("Config.Alg"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumTotpAlgorithms? _explicitNullValueConfigAlg = default!;
         /// <summary>The ID that uniquely identifies your app in the Google or Apple store, such as `com.example.myapp`. It can be up to 100 characters long.Required when `factor_type` is `push`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigAppId { get => _explicitNullValueConfigAppId; set { _explicitNullValueConfigAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.AppId"); else _explicitNullProperties?.Remove("Config.AppId"); } }
+        public string? ConfigAppId { get => _explicitNullValueConfigAppId; set { _explicitNullValueConfigAppId = value; AdditionalData?.Remove("Config.AppId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.AppId"); else _explicitNullProperties?.Remove("Config.AppId"); } }
         private string? _explicitNullValueConfigAppId = default!;
 #nullable restore
 #else
-        public string ConfigAppId { get => _explicitNullValueConfigAppId; set { _explicitNullValueConfigAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.AppId"); else _explicitNullProperties?.Remove("Config.AppId"); } }
+        public string ConfigAppId { get => _explicitNullValueConfigAppId; set { _explicitNullValueConfigAppId = value; AdditionalData?.Remove("Config.AppId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.AppId"); else _explicitNullProperties?.Remove("Config.AppId"); } }
         private string _explicitNullValueConfigAppId = default!;
 #endif
         /// <summary>Number of digits for generated TOTP codes. Must be between 3 and 8, inclusive. The default value is defined at the service level in the property `totp.code_length`. If not configured defaults to 6.Used when `factor_type` is `totp`</summary>
-        public int? ConfigCodeLength { get => _explicitNullValueConfigCodeLength; set { _explicitNullValueConfigCodeLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.CodeLength"); else _explicitNullProperties?.Remove("Config.CodeLength"); } }
+        public int? ConfigCodeLength { get => _explicitNullValueConfigCodeLength; set { _explicitNullValueConfigCodeLength = value; AdditionalData?.Remove("Config.CodeLength"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.CodeLength"); else _explicitNullProperties?.Remove("Config.CodeLength"); } }
         private int? _explicitNullValueConfigCodeLength = default!;
         /// <summary>The ConfigNotificationPlatform property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumNotificationPlatforms? ConfigNotificationPlatform { get => _explicitNullValueConfigNotificationPlatform; set { _explicitNullValueConfigNotificationPlatform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.NotificationPlatform"); else _explicitNullProperties?.Remove("Config.NotificationPlatform"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumNotificationPlatforms? ConfigNotificationPlatform { get => _explicitNullValueConfigNotificationPlatform; set { _explicitNullValueConfigNotificationPlatform = value; AdditionalData?.Remove("Config.NotificationPlatform"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.NotificationPlatform"); else _explicitNullProperties?.Remove("Config.NotificationPlatform"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumNotificationPlatforms? _explicitNullValueConfigNotificationPlatform = default!;
         /// <summary>For APN, the device token. For FCM, the registration token. It is used to send the push notifications. Must be between 32 and 255 characters long.Required when `factor_type` is `push`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigNotificationToken { get => _explicitNullValueConfigNotificationToken; set { _explicitNullValueConfigNotificationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.NotificationToken"); else _explicitNullProperties?.Remove("Config.NotificationToken"); } }
+        public string? ConfigNotificationToken { get => _explicitNullValueConfigNotificationToken; set { _explicitNullValueConfigNotificationToken = value; AdditionalData?.Remove("Config.NotificationToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.NotificationToken"); else _explicitNullProperties?.Remove("Config.NotificationToken"); } }
         private string? _explicitNullValueConfigNotificationToken = default!;
 #nullable restore
 #else
-        public string ConfigNotificationToken { get => _explicitNullValueConfigNotificationToken; set { _explicitNullValueConfigNotificationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.NotificationToken"); else _explicitNullProperties?.Remove("Config.NotificationToken"); } }
+        public string ConfigNotificationToken { get => _explicitNullValueConfigNotificationToken; set { _explicitNullValueConfigNotificationToken = value; AdditionalData?.Remove("Config.NotificationToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.NotificationToken"); else _explicitNullProperties?.Remove("Config.NotificationToken"); } }
         private string _explicitNullValueConfigNotificationToken = default!;
 #endif
         /// <summary>The Verify Push SDK version used to configure the factorRequired when `factor_type` is `push`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigSdkVersion { get => _explicitNullValueConfigSdkVersion; set { _explicitNullValueConfigSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.SdkVersion"); else _explicitNullProperties?.Remove("Config.SdkVersion"); } }
+        public string? ConfigSdkVersion { get => _explicitNullValueConfigSdkVersion; set { _explicitNullValueConfigSdkVersion = value; AdditionalData?.Remove("Config.SdkVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.SdkVersion"); else _explicitNullProperties?.Remove("Config.SdkVersion"); } }
         private string? _explicitNullValueConfigSdkVersion = default!;
 #nullable restore
 #else
-        public string ConfigSdkVersion { get => _explicitNullValueConfigSdkVersion; set { _explicitNullValueConfigSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.SdkVersion"); else _explicitNullProperties?.Remove("Config.SdkVersion"); } }
+        public string ConfigSdkVersion { get => _explicitNullValueConfigSdkVersion; set { _explicitNullValueConfigSdkVersion = value; AdditionalData?.Remove("Config.SdkVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.SdkVersion"); else _explicitNullProperties?.Remove("Config.SdkVersion"); } }
         private string _explicitNullValueConfigSdkVersion = default!;
 #endif
         /// <summary>The number of time-steps, past and future, that are valid for validation of TOTP codes. Must be between 0 and 2, inclusive. The default value is defined at the service level in the property `totp.skew`. If not configured defaults to 1.Used when `factor_type` is `totp`</summary>
-        public int? ConfigSkew { get => _explicitNullValueConfigSkew; set { _explicitNullValueConfigSkew = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.Skew"); else _explicitNullProperties?.Remove("Config.Skew"); } }
+        public int? ConfigSkew { get => _explicitNullValueConfigSkew; set { _explicitNullValueConfigSkew = value; AdditionalData?.Remove("Config.Skew"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.Skew"); else _explicitNullProperties?.Remove("Config.Skew"); } }
         private int? _explicitNullValueConfigSkew = default!;
         /// <summary>Defines how often, in seconds, are TOTP codes generated. i.e, a new TOTP code is generated every time_step seconds. Must be between 20 and 60 seconds, inclusive. The default value is defined at the service level in the property `totp.time_step`. Defaults to 30 seconds if not configured.Used when `factor_type` is `totp`</summary>
-        public int? ConfigTimeStep { get => _explicitNullValueConfigTimeStep; set { _explicitNullValueConfigTimeStep = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.TimeStep"); else _explicitNullProperties?.Remove("Config.TimeStep"); } }
+        public int? ConfigTimeStep { get => _explicitNullValueConfigTimeStep; set { _explicitNullValueConfigTimeStep = value; AdditionalData?.Remove("Config.TimeStep"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.TimeStep"); else _explicitNullProperties?.Remove("Config.TimeStep"); } }
         private int? _explicitNullValueConfigTimeStep = default!;
         /// <summary>The Type of this Factor. Currently `push` and `totp` are supported.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumFactorTypes? FactorType { get => _explicitNullValueFactorType; set { _explicitNullValueFactorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FactorType"); else _explicitNullProperties?.Remove("FactorType"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumFactorTypes? FactorType { get => _explicitNullValueFactorType; set { _explicitNullValueFactorType = value; AdditionalData?.Remove("FactorType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FactorType"); else _explicitNullProperties?.Remove("FactorType"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumFactorTypes? _explicitNullValueFactorType = default!;
         /// <summary>The friendly name of this Factor. This can be any string up to 64 characters, meant for humans to distinguish between Factors.For `factor_type` `push`, this could be a device name.For `factor_type` `totp`, this value is used as the “account name” in constructing the `binding.uri` property.At the same time, we recommend avoiding providing PII.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>Custom metadata associated with the factor. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{&quot;os&quot;: &quot;Android&quot;}`. Can be up to 1024 characters in length.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Metadata"); else _explicitNullProperties?.Remove("Metadata"); } }
+        public UntypedNode? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("Metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Metadata"); else _explicitNullProperties?.Remove("Metadata"); } }
         private UntypedNode? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public UntypedNode Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Metadata"); else _explicitNullProperties?.Remove("Metadata"); } }
+        public UntypedNode Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("Metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Metadata"); else _explicitNullProperties?.Remove("Metadata"); } }
         private UntypedNode _explicitNullValueMetadata = default!;
 #endif
         /// <summary>
@@ -161,15 +175,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "Binding.Alg", n => { BindingAlg = n.GetStringValue(); } },
                 { "Binding.PublicKey", n => { BindingPublicKey = n.GetStringValue(); } },
                 { "Binding.Secret", n => { BindingSecret = n.GetStringValue(); } },
-                { "Config.Alg", n => { ConfigAlg = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumTotpAlgorithms>(); } },
+                { "Config.Alg", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumTotpAlgorithms>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueConfigAlg = default; _explicitNullProperties?.Remove("Config.Alg"); AdditionalData["Config.Alg"] = unknown; } else { ConfigAlg = parsed; AdditionalData.Remove("Config.Alg"); } } },
                 { "Config.AppId", n => { ConfigAppId = n.GetStringValue(); } },
                 { "Config.CodeLength", n => { ConfigCodeLength = n.GetIntValue(); } },
-                { "Config.NotificationPlatform", n => { ConfigNotificationPlatform = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumNotificationPlatforms>(); } },
+                { "Config.NotificationPlatform", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumNotificationPlatforms>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueConfigNotificationPlatform = default; _explicitNullProperties?.Remove("Config.NotificationPlatform"); AdditionalData["Config.NotificationPlatform"] = unknown; } else { ConfigNotificationPlatform = parsed; AdditionalData.Remove("Config.NotificationPlatform"); } } },
                 { "Config.NotificationToken", n => { ConfigNotificationToken = n.GetStringValue(); } },
                 { "Config.SdkVersion", n => { ConfigSdkVersion = n.GetStringValue(); } },
                 { "Config.Skew", n => { ConfigSkew = n.GetIntValue(); } },
                 { "Config.TimeStep", n => { ConfigTimeStep = n.GetIntValue(); } },
-                { "FactorType", n => { FactorType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumFactorTypes>(); } },
+                { "FactorType", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NewFactorEnumFactorTypes>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFactorType = default; _explicitNullProperties?.Remove("FactorType"); AdditionalData["FactorType"] = unknown; } else { FactorType = parsed; AdditionalData.Remove("FactorType"); } } },
                 { "FriendlyName", n => { FriendlyName = n.GetStringValue(); } },
                 { "Metadata", n => { Metadata = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };

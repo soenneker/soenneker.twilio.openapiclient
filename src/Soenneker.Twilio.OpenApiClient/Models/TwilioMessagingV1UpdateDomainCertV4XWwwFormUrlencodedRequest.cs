@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("TlsCert") is { } nullNodeTlsCert && nullNodeTlsCert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TlsCert = null;
+            if (parseNode.GetChildNode("TlsCert") is null) { _explicitNullValueTlsCert = default!; _explicitNullProperties?.Remove("TlsCert"); }
+            else if (parseNode.GetChildNode("TlsCert") is { } nullNodeTlsCert && nullNodeTlsCert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TlsCert = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Contains the full TLS certificate and private for this domain in PEM format: https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail. Twilio uses this information to process HTTPS traffic sent to your domain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TlsCert { get => _explicitNullValueTlsCert; set { _explicitNullValueTlsCert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TlsCert"); else _explicitNullProperties?.Remove("TlsCert"); } }
+        public string? TlsCert { get => _explicitNullValueTlsCert; set { _explicitNullValueTlsCert = value; AdditionalData?.Remove("TlsCert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TlsCert"); else _explicitNullProperties?.Remove("TlsCert"); } }
         private string? _explicitNullValueTlsCert = default!;
 #nullable restore
 #else
-        public string TlsCert { get => _explicitNullValueTlsCert; set { _explicitNullValueTlsCert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TlsCert"); else _explicitNullProperties?.Remove("TlsCert"); } }
+        public string TlsCert { get => _explicitNullValueTlsCert; set { _explicitNullValueTlsCert = value; AdditionalData?.Remove("TlsCert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TlsCert"); else _explicitNullProperties?.Remove("TlsCert"); } }
         private string _explicitNullValueTlsCert = default!;
 #endif
         /// <summary>

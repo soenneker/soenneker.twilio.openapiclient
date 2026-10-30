@@ -17,9 +17,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sendCodeAttempts") is { } nullNodeSendCodeAttempts && nullNodeSendCodeAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendCodeAttempts = null;
-            if (parseNode.GetChildNode("to") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
-            if (parseNode.GetChildNode("verificationSid") is { } nullNodeVerificationSid && nullNodeVerificationSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationSid = null;
+            if (parseNode.GetChildNode("sendCodeAttempts") is null) { _explicitNullValueSendCodeAttempts = default!; _explicitNullProperties?.Remove("sendCodeAttempts"); }
+            else if (parseNode.GetChildNode("sendCodeAttempts") is { } nullNodeSendCodeAttempts && nullNodeSendCodeAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendCodeAttempts = null;
+            if (parseNode.GetChildNode("to") is null) { _explicitNullValueTo = default!; _explicitNullProperties?.Remove("to"); }
+            else if (parseNode.GetChildNode("to") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
+            if (parseNode.GetChildNode("verificationSid") is null) { _explicitNullValueVerificationSid = default!; _explicitNullProperties?.Remove("verificationSid"); }
+            else if (parseNode.GetChildNode("verificationSid") is { } nullNodeVerificationSid && nullNodeVerificationSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>An array of verification attempt objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationSendCodeAttemptsItem>? SendCodeAttempts { get => _explicitNullValueSendCodeAttempts; set { _explicitNullValueSendCodeAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendCodeAttempts"); else _explicitNullProperties?.Remove("sendCodeAttempts"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationSendCodeAttemptsItem>? SendCodeAttempts { get => _explicitNullValueSendCodeAttempts; set { _explicitNullValueSendCodeAttempts = value; AdditionalData?.Remove("sendCodeAttempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendCodeAttempts"); else _explicitNullProperties?.Remove("sendCodeAttempts"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationSendCodeAttemptsItem>? _explicitNullValueSendCodeAttempts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationSendCodeAttemptsItem> SendCodeAttempts { get => _explicitNullValueSendCodeAttempts; set { _explicitNullValueSendCodeAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendCodeAttempts"); else _explicitNullProperties?.Remove("sendCodeAttempts"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationSendCodeAttemptsItem> SendCodeAttempts { get => _explicitNullValueSendCodeAttempts; set { _explicitNullValueSendCodeAttempts = value; AdditionalData?.Remove("sendCodeAttempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendCodeAttempts"); else _explicitNullProperties?.Remove("sendCodeAttempts"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SmsVerificationSendCodeAttemptsItem> _explicitNullValueSendCodeAttempts = default!;
 #endif
         /// <summary>The phone number being verified in E.164 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        public string? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
         private string? _explicitNullValueTo = default!;
 #nullable restore
 #else
-        public string To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        public string To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
         private string _explicitNullValueTo = default!;
 #endif
         /// <summary>The unique SID of this verification resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerificationSid { get => _explicitNullValueVerificationSid; set { _explicitNullValueVerificationSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verificationSid"); else _explicitNullProperties?.Remove("verificationSid"); } }
+        public string? VerificationSid { get => _explicitNullValueVerificationSid; set { _explicitNullValueVerificationSid = value; AdditionalData?.Remove("verificationSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verificationSid"); else _explicitNullProperties?.Remove("verificationSid"); } }
         private string? _explicitNullValueVerificationSid = default!;
 #nullable restore
 #else
-        public string VerificationSid { get => _explicitNullValueVerificationSid; set { _explicitNullValueVerificationSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verificationSid"); else _explicitNullProperties?.Remove("verificationSid"); } }
+        public string VerificationSid { get => _explicitNullValueVerificationSid; set { _explicitNullValueVerificationSid = value; AdditionalData?.Remove("verificationSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verificationSid"); else _explicitNullProperties?.Remove("verificationSid"); } }
         private string _explicitNullValueVerificationSid = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("entityMetadata") is { } nullNodeEntityMetadata && nullNodeEntityMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityMetadata = null;
+            if (parseNode.GetChildNode("entityMetadata") is null) { _explicitNullValueEntityMetadata = default!; _explicitNullProperties?.Remove("entityMetadata"); }
+            else if (parseNode.GetChildNode("entityMetadata") is { } nullNodeEntityMetadata && nullNodeEntityMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityMetadata = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Updatable subset of `entityMetadata`. `sourceType` must equal themapping&apos;s current `sourceType` (it cannot be changed), and the propertynamed for that source carries the fields to update:| `sourceType` | Update property | Updatable fields ||---|---|---|| `INTELLIGENCE_OPERATOR` | `intelligenceOperator` | `field` |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadataUpdate? EntityMetadata { get => _explicitNullValueEntityMetadata; set { _explicitNullValueEntityMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entityMetadata"); else _explicitNullProperties?.Remove("entityMetadata"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadataUpdate? EntityMetadata { get => _explicitNullValueEntityMetadata; set { _explicitNullValueEntityMetadata = value; AdditionalData?.Remove("entityMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entityMetadata"); else _explicitNullProperties?.Remove("entityMetadata"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadataUpdate? _explicitNullValueEntityMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadataUpdate EntityMetadata { get => _explicitNullValueEntityMetadata; set { _explicitNullValueEntityMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entityMetadata"); else _explicitNullProperties?.Remove("entityMetadata"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadataUpdate EntityMetadata { get => _explicitNullValueEntityMetadata; set { _explicitNullValueEntityMetadata = value; AdditionalData?.Remove("entityMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entityMetadata"); else _explicitNullProperties?.Remove("entityMetadata"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadataUpdate _explicitNullValueEntityMetadata = default!;
 #endif
         /// <summary>

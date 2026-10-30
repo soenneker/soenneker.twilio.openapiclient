@@ -17,24 +17,32 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("aws_credentials_sid") is { } nullNodeAwsCredentialsSid && nullNodeAwsCredentialsSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AwsCredentialsSid = null;
-            if (parseNode.GetChildNode("aws_s3_url") is { } nullNodeAwsS3Url && nullNodeAwsS3Url.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AwsS3Url = null;
-            if (parseNode.GetChildNode("aws_storage_enabled") is { } nullNodeAwsStorageEnabled && nullNodeAwsStorageEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AwsStorageEnabled = null;
-            if (parseNode.GetChildNode("encryption_enabled") is { } nullNodeEncryptionEnabled && nullNodeEncryptionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncryptionEnabled = null;
-            if (parseNode.GetChildNode("encryption_key_sid") is { } nullNodeEncryptionKeySid && nullNodeEncryptionKeySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncryptionKeySid = null;
-            if (parseNode.GetChildNode("friendly_name") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("aws_credentials_sid") is null) { _explicitNullValueAwsCredentialsSid = default!; _explicitNullProperties?.Remove("aws_credentials_sid"); }
+            else if (parseNode.GetChildNode("aws_credentials_sid") is { } nullNodeAwsCredentialsSid && nullNodeAwsCredentialsSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AwsCredentialsSid = null;
+            if (parseNode.GetChildNode("aws_s3_url") is null) { _explicitNullValueAwsS3Url = default!; _explicitNullProperties?.Remove("aws_s3_url"); }
+            else if (parseNode.GetChildNode("aws_s3_url") is { } nullNodeAwsS3Url && nullNodeAwsS3Url.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AwsS3Url = null;
+            if (parseNode.GetChildNode("aws_storage_enabled") is null) { _explicitNullValueAwsStorageEnabled = default!; _explicitNullProperties?.Remove("aws_storage_enabled"); }
+            else if (parseNode.GetChildNode("aws_storage_enabled") is { } nullNodeAwsStorageEnabled && nullNodeAwsStorageEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AwsStorageEnabled = null;
+            if (parseNode.GetChildNode("encryption_enabled") is null) { _explicitNullValueEncryptionEnabled = default!; _explicitNullProperties?.Remove("encryption_enabled"); }
+            else if (parseNode.GetChildNode("encryption_enabled") is { } nullNodeEncryptionEnabled && nullNodeEncryptionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncryptionEnabled = null;
+            if (parseNode.GetChildNode("encryption_key_sid") is null) { _explicitNullValueEncryptionKeySid = default!; _explicitNullProperties?.Remove("encryption_key_sid"); }
+            else if (parseNode.GetChildNode("encryption_key_sid") is { } nullNodeEncryptionKeySid && nullNodeEncryptionKeySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncryptionKeySid = null;
+            if (parseNode.GetChildNode("friendly_name") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("friendly_name"); }
+            else if (parseNode.GetChildNode("friendly_name") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CompositionSettings resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -42,57 +50,57 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID of the stored Credential resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AwsCredentialsSid { get => _explicitNullValueAwsCredentialsSid; set { _explicitNullValueAwsCredentialsSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_credentials_sid"); else _explicitNullProperties?.Remove("aws_credentials_sid"); } }
+        public string? AwsCredentialsSid { get => _explicitNullValueAwsCredentialsSid; set { _explicitNullValueAwsCredentialsSid = value; AdditionalData?.Remove("aws_credentials_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_credentials_sid"); else _explicitNullProperties?.Remove("aws_credentials_sid"); } }
         private string? _explicitNullValueAwsCredentialsSid = default!;
 #nullable restore
 #else
-        public string AwsCredentialsSid { get => _explicitNullValueAwsCredentialsSid; set { _explicitNullValueAwsCredentialsSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_credentials_sid"); else _explicitNullProperties?.Remove("aws_credentials_sid"); } }
+        public string AwsCredentialsSid { get => _explicitNullValueAwsCredentialsSid; set { _explicitNullValueAwsCredentialsSid = value; AdditionalData?.Remove("aws_credentials_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_credentials_sid"); else _explicitNullProperties?.Remove("aws_credentials_sid"); } }
         private string _explicitNullValueAwsCredentialsSid = default!;
 #endif
         /// <summary>The URL of the AWS S3 bucket where the compositions are stored. We only support DNS-compliant URLs like `https://documentation-example-twilio-bucket/compositions`, where `compositions` is the path in which you want the compositions to be stored. This URL accepts only URI-valid characters, as described in the [RFC 3986](https://tools.ietf.org/html/rfc3986#section-2).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AwsS3Url { get => _explicitNullValueAwsS3Url; set { _explicitNullValueAwsS3Url = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_s3_url"); else _explicitNullProperties?.Remove("aws_s3_url"); } }
+        public string? AwsS3Url { get => _explicitNullValueAwsS3Url; set { _explicitNullValueAwsS3Url = value; AdditionalData?.Remove("aws_s3_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_s3_url"); else _explicitNullProperties?.Remove("aws_s3_url"); } }
         private string? _explicitNullValueAwsS3Url = default!;
 #nullable restore
 #else
-        public string AwsS3Url { get => _explicitNullValueAwsS3Url; set { _explicitNullValueAwsS3Url = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_s3_url"); else _explicitNullProperties?.Remove("aws_s3_url"); } }
+        public string AwsS3Url { get => _explicitNullValueAwsS3Url; set { _explicitNullValueAwsS3Url = value; AdditionalData?.Remove("aws_s3_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_s3_url"); else _explicitNullProperties?.Remove("aws_s3_url"); } }
         private string _explicitNullValueAwsS3Url = default!;
 #endif
         /// <summary>Whether all compositions are written to the `aws_s3_url`. When `false`, all compositions are stored in our cloud.</summary>
-        public bool? AwsStorageEnabled { get => _explicitNullValueAwsStorageEnabled; set { _explicitNullValueAwsStorageEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_storage_enabled"); else _explicitNullProperties?.Remove("aws_storage_enabled"); } }
+        public bool? AwsStorageEnabled { get => _explicitNullValueAwsStorageEnabled; set { _explicitNullValueAwsStorageEnabled = value; AdditionalData?.Remove("aws_storage_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_storage_enabled"); else _explicitNullProperties?.Remove("aws_storage_enabled"); } }
         private bool? _explicitNullValueAwsStorageEnabled = default!;
         /// <summary>Whether all compositions are stored in an encrypted form. The default is `false`.</summary>
-        public bool? EncryptionEnabled { get => _explicitNullValueEncryptionEnabled; set { _explicitNullValueEncryptionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encryption_enabled"); else _explicitNullProperties?.Remove("encryption_enabled"); } }
+        public bool? EncryptionEnabled { get => _explicitNullValueEncryptionEnabled; set { _explicitNullValueEncryptionEnabled = value; AdditionalData?.Remove("encryption_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encryption_enabled"); else _explicitNullProperties?.Remove("encryption_enabled"); } }
         private bool? _explicitNullValueEncryptionEnabled = default!;
         /// <summary>The SID of the Public Key resource used for encryption.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EncryptionKeySid { get => _explicitNullValueEncryptionKeySid; set { _explicitNullValueEncryptionKeySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encryption_key_sid"); else _explicitNullProperties?.Remove("encryption_key_sid"); } }
+        public string? EncryptionKeySid { get => _explicitNullValueEncryptionKeySid; set { _explicitNullValueEncryptionKeySid = value; AdditionalData?.Remove("encryption_key_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encryption_key_sid"); else _explicitNullProperties?.Remove("encryption_key_sid"); } }
         private string? _explicitNullValueEncryptionKeySid = default!;
 #nullable restore
 #else
-        public string EncryptionKeySid { get => _explicitNullValueEncryptionKeySid; set { _explicitNullValueEncryptionKeySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encryption_key_sid"); else _explicitNullProperties?.Remove("encryption_key_sid"); } }
+        public string EncryptionKeySid { get => _explicitNullValueEncryptionKeySid; set { _explicitNullValueEncryptionKeySid = value; AdditionalData?.Remove("encryption_key_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encryption_key_sid"); else _explicitNullProperties?.Remove("encryption_key_sid"); } }
         private string _explicitNullValueEncryptionKeySid = default!;
 #endif
         /// <summary>The string that you assigned to describe the resource and that will be shown in the console</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("friendly_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("friendly_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The absolute URL of the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

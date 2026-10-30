@@ -17,9 +17,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("NotificationEmail") is { } nullNodeNotificationEmail && nullNodeNotificationEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationEmail = null;
-            if (parseNode.GetChildNode("PrimaryProfileSid") is { } nullNodePrimaryProfileSid && nullNodePrimaryProfileSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryProfileSid = null;
-            if (parseNode.GetChildNode("ThemeSetId") is { } nullNodeThemeSetId && nullNodeThemeSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThemeSetId = null;
+            if (parseNode.GetChildNode("NotificationEmail") is null) { _explicitNullValueNotificationEmail = default!; _explicitNullProperties?.Remove("NotificationEmail"); }
+            else if (parseNode.GetChildNode("NotificationEmail") is { } nullNodeNotificationEmail && nullNodeNotificationEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationEmail = null;
+            if (parseNode.GetChildNode("PrimaryProfileSid") is null) { _explicitNullValuePrimaryProfileSid = default!; _explicitNullProperties?.Remove("PrimaryProfileSid"); }
+            else if (parseNode.GetChildNode("PrimaryProfileSid") is { } nullNodePrimaryProfileSid && nullNodePrimaryProfileSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryProfileSid = null;
+            if (parseNode.GetChildNode("ThemeSetId") is null) { _explicitNullValueThemeSetId = default!; _explicitNullProperties?.Remove("ThemeSetId"); }
+            else if (parseNode.GetChildNode("ThemeSetId") is { } nullNodeThemeSetId && nullNodeThemeSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThemeSetId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The email address that approval status updates will be sent to. If not specified, the email address associated with your primary customer profile will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationEmail { get => _explicitNullValueNotificationEmail; set { _explicitNullValueNotificationEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationEmail"); else _explicitNullProperties?.Remove("NotificationEmail"); } }
+        public string? NotificationEmail { get => _explicitNullValueNotificationEmail; set { _explicitNullValueNotificationEmail = value; AdditionalData?.Remove("NotificationEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationEmail"); else _explicitNullProperties?.Remove("NotificationEmail"); } }
         private string? _explicitNullValueNotificationEmail = default!;
 #nullable restore
 #else
-        public string NotificationEmail { get => _explicitNullValueNotificationEmail; set { _explicitNullValueNotificationEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationEmail"); else _explicitNullProperties?.Remove("NotificationEmail"); } }
+        public string NotificationEmail { get => _explicitNullValueNotificationEmail; set { _explicitNullValueNotificationEmail = value; AdditionalData?.Remove("NotificationEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationEmail"); else _explicitNullProperties?.Remove("NotificationEmail"); } }
         private string _explicitNullValueNotificationEmail = default!;
 #endif
         /// <summary>The unique SID identifier of the Primary Customer Profile that should be used as a parent. Only necessary when creating a secondary Customer Profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryProfileSid { get => _explicitNullValuePrimaryProfileSid; set { _explicitNullValuePrimaryProfileSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimaryProfileSid"); else _explicitNullProperties?.Remove("PrimaryProfileSid"); } }
+        public string? PrimaryProfileSid { get => _explicitNullValuePrimaryProfileSid; set { _explicitNullValuePrimaryProfileSid = value; AdditionalData?.Remove("PrimaryProfileSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimaryProfileSid"); else _explicitNullProperties?.Remove("PrimaryProfileSid"); } }
         private string? _explicitNullValuePrimaryProfileSid = default!;
 #nullable restore
 #else
-        public string PrimaryProfileSid { get => _explicitNullValuePrimaryProfileSid; set { _explicitNullValuePrimaryProfileSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimaryProfileSid"); else _explicitNullProperties?.Remove("PrimaryProfileSid"); } }
+        public string PrimaryProfileSid { get => _explicitNullValuePrimaryProfileSid; set { _explicitNullValuePrimaryProfileSid = value; AdditionalData?.Remove("PrimaryProfileSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimaryProfileSid"); else _explicitNullProperties?.Remove("PrimaryProfileSid"); } }
         private string _explicitNullValuePrimaryProfileSid = default!;
 #endif
         /// <summary>Theme id for styling the inquiry form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThemeSetId { get => _explicitNullValueThemeSetId; set { _explicitNullValueThemeSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ThemeSetId"); else _explicitNullProperties?.Remove("ThemeSetId"); } }
+        public string? ThemeSetId { get => _explicitNullValueThemeSetId; set { _explicitNullValueThemeSetId = value; AdditionalData?.Remove("ThemeSetId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ThemeSetId"); else _explicitNullProperties?.Remove("ThemeSetId"); } }
         private string? _explicitNullValueThemeSetId = default!;
 #nullable restore
 #else
-        public string ThemeSetId { get => _explicitNullValueThemeSetId; set { _explicitNullValueThemeSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ThemeSetId"); else _explicitNullProperties?.Remove("ThemeSetId"); } }
+        public string ThemeSetId { get => _explicitNullValueThemeSetId; set { _explicitNullValueThemeSetId = value; AdditionalData?.Remove("ThemeSetId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ThemeSetId"); else _explicitNullProperties?.Remove("ThemeSetId"); } }
         private string _explicitNullValueThemeSetId = default!;
 #endif
         /// <summary>

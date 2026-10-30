@@ -17,10 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
-            if (parseNode.GetChildNode("InteractionContextSid") is { } nullNodeInteractionContextSid && nullNodeInteractionContextSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteractionContextSid = null;
-            if (parseNode.GetChildNode("Routing") is { } nullNodeRouting && nullNodeRouting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Routing = null;
-            if (parseNode.GetChildNode("WebhookTtid") is { } nullNodeWebhookTtid && nullNodeWebhookTtid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookTtid = null;
+            if (parseNode.GetChildNode("Channel") is null) { _explicitNullValueChannel = default!; _explicitNullProperties?.Remove("Channel"); }
+            else if (parseNode.GetChildNode("Channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("InteractionContextSid") is null) { _explicitNullValueInteractionContextSid = default!; _explicitNullProperties?.Remove("InteractionContextSid"); }
+            else if (parseNode.GetChildNode("InteractionContextSid") is { } nullNodeInteractionContextSid && nullNodeInteractionContextSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteractionContextSid = null;
+            if (parseNode.GetChildNode("Routing") is null) { _explicitNullValueRouting = default!; _explicitNullProperties?.Remove("Routing"); }
+            else if (parseNode.GetChildNode("Routing") is { } nullNodeRouting && nullNodeRouting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Routing = null;
+            if (parseNode.GetChildNode("WebhookTtid") is null) { _explicitNullValueWebhookTtid = default!; _explicitNullProperties?.Remove("WebhookTtid"); }
+            else if (parseNode.GetChildNode("WebhookTtid") is { } nullNodeWebhookTtid && nullNodeWebhookTtid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookTtid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Interaction&apos;s channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Channel"); else _explicitNullProperties?.Remove("Channel"); } }
+        public UntypedNode? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("Channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Channel"); else _explicitNullProperties?.Remove("Channel"); } }
         private UntypedNode? _explicitNullValueChannel = default!;
 #nullable restore
 #else
-        public UntypedNode Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Channel"); else _explicitNullProperties?.Remove("Channel"); } }
+        public UntypedNode Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("Channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Channel"); else _explicitNullProperties?.Remove("Channel"); } }
         private UntypedNode _explicitNullValueChannel = default!;
 #endif
         /// <summary>The Interaction context sid is used for adding a context lookup sid</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InteractionContextSid { get => _explicitNullValueInteractionContextSid; set { _explicitNullValueInteractionContextSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InteractionContextSid"); else _explicitNullProperties?.Remove("InteractionContextSid"); } }
+        public string? InteractionContextSid { get => _explicitNullValueInteractionContextSid; set { _explicitNullValueInteractionContextSid = value; AdditionalData?.Remove("InteractionContextSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InteractionContextSid"); else _explicitNullProperties?.Remove("InteractionContextSid"); } }
         private string? _explicitNullValueInteractionContextSid = default!;
 #nullable restore
 #else
-        public string InteractionContextSid { get => _explicitNullValueInteractionContextSid; set { _explicitNullValueInteractionContextSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InteractionContextSid"); else _explicitNullProperties?.Remove("InteractionContextSid"); } }
+        public string InteractionContextSid { get => _explicitNullValueInteractionContextSid; set { _explicitNullValueInteractionContextSid = value; AdditionalData?.Remove("InteractionContextSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InteractionContextSid"); else _explicitNullProperties?.Remove("InteractionContextSid"); } }
         private string _explicitNullValueInteractionContextSid = default!;
 #endif
         /// <summary>The Interaction&apos;s routing logic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Routing { get => _explicitNullValueRouting; set { _explicitNullValueRouting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Routing"); else _explicitNullProperties?.Remove("Routing"); } }
+        public UntypedNode? Routing { get => _explicitNullValueRouting; set { _explicitNullValueRouting = value; AdditionalData?.Remove("Routing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Routing"); else _explicitNullProperties?.Remove("Routing"); } }
         private UntypedNode? _explicitNullValueRouting = default!;
 #nullable restore
 #else
-        public UntypedNode Routing { get => _explicitNullValueRouting; set { _explicitNullValueRouting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Routing"); else _explicitNullProperties?.Remove("Routing"); } }
+        public UntypedNode Routing { get => _explicitNullValueRouting; set { _explicitNullValueRouting = value; AdditionalData?.Remove("Routing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Routing"); else _explicitNullProperties?.Remove("Routing"); } }
         private UntypedNode _explicitNullValueRouting = default!;
 #endif
         /// <summary>The unique identifier for Interaction level webhook</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhookTtid { get => _explicitNullValueWebhookTtid; set { _explicitNullValueWebhookTtid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookTtid"); else _explicitNullProperties?.Remove("WebhookTtid"); } }
+        public string? WebhookTtid { get => _explicitNullValueWebhookTtid; set { _explicitNullValueWebhookTtid = value; AdditionalData?.Remove("WebhookTtid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookTtid"); else _explicitNullProperties?.Remove("WebhookTtid"); } }
         private string? _explicitNullValueWebhookTtid = default!;
 #nullable restore
 #else
-        public string WebhookTtid { get => _explicitNullValueWebhookTtid; set { _explicitNullValueWebhookTtid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookTtid"); else _explicitNullProperties?.Remove("WebhookTtid"); } }
+        public string WebhookTtid { get => _explicitNullValueWebhookTtid; set { _explicitNullValueWebhookTtid = value; AdditionalData?.Remove("WebhookTtid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookTtid"); else _explicitNullProperties?.Remove("WebhookTtid"); } }
         private string _explicitNullValueWebhookTtid = default!;
 #endif
         /// <summary>

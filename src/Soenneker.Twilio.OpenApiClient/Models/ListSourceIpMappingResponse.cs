@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
-            if (parseNode.GetChildNode("source_ip_mappings") is { } nullNodeSourceIpMappings && nullNodeSourceIpMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceIpMappings = null;
+            if (parseNode.GetChildNode("meta") is null) { _explicitNullValueMeta = default!; _explicitNullProperties?.Remove("meta"); }
+            else if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
+            if (parseNode.GetChildNode("source_ip_mappings") is null) { _explicitNullValueSourceIpMappings = default!; _explicitNullProperties?.Remove("source_ip_mappings"); }
+            else if (parseNode.GetChildNode("source_ip_mappings") is { } nullNodeSourceIpMappings && nullNodeSourceIpMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceIpMappings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListSourceIpMappingResponseMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListSourceIpMappingResponseMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ListSourceIpMappingResponseMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ListSourceIpMappingResponseMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ListSourceIpMappingResponseMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ListSourceIpMappingResponseMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>The source_ip_mappings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1SourceIpMapping>? SourceIpMappings { get => _explicitNullValueSourceIpMappings; set { _explicitNullValueSourceIpMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_ip_mappings"); else _explicitNullProperties?.Remove("source_ip_mappings"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1SourceIpMapping>? SourceIpMappings { get => _explicitNullValueSourceIpMappings; set { _explicitNullValueSourceIpMappings = value; AdditionalData?.Remove("source_ip_mappings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_ip_mappings"); else _explicitNullProperties?.Remove("source_ip_mappings"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1SourceIpMapping>? _explicitNullValueSourceIpMappings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1SourceIpMapping> SourceIpMappings { get => _explicitNullValueSourceIpMappings; set { _explicitNullValueSourceIpMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_ip_mappings"); else _explicitNullProperties?.Remove("source_ip_mappings"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1SourceIpMapping> SourceIpMappings { get => _explicitNullValueSourceIpMappings; set { _explicitNullValueSourceIpMappings = value; AdditionalData?.Remove("source_ip_mappings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_ip_mappings"); else _explicitNullProperties?.Remove("source_ip_mappings"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV1SourceIpMapping> _explicitNullValueSourceIpMappings = default!;
 #endif
         /// <summary>

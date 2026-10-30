@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PauseBehavior") is { } nullNodePauseBehavior && nullNodePauseBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PauseBehavior = null;
-            if (parseNode.GetChildNode("Status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("PauseBehavior") is null) { _explicitNullValuePauseBehavior = default!; _explicitNullProperties?.Remove("PauseBehavior"); }
+            else if (parseNode.GetChildNode("PauseBehavior") is { } nullNodePauseBehavior && nullNodePauseBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PauseBehavior = null;
+            if (parseNode.GetChildNode("Status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("Status"); }
+            else if (parseNode.GetChildNode("Status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Whether to record during a pause. Can be: `skip` or `silence` and the default is `silence`. `skip` does not record during the pause period, while `silence` will replace the actual audio of the call with silence during the pause period. This parameter only applies when setting `status` is set to `paused`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PauseBehavior { get => _explicitNullValuePauseBehavior; set { _explicitNullValuePauseBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PauseBehavior"); else _explicitNullProperties?.Remove("PauseBehavior"); } }
+        public string? PauseBehavior { get => _explicitNullValuePauseBehavior; set { _explicitNullValuePauseBehavior = value; AdditionalData?.Remove("PauseBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PauseBehavior"); else _explicitNullProperties?.Remove("PauseBehavior"); } }
         private string? _explicitNullValuePauseBehavior = default!;
 #nullable restore
 #else
-        public string PauseBehavior { get => _explicitNullValuePauseBehavior; set { _explicitNullValuePauseBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PauseBehavior"); else _explicitNullProperties?.Remove("PauseBehavior"); } }
+        public string PauseBehavior { get => _explicitNullValuePauseBehavior; set { _explicitNullValuePauseBehavior = value; AdditionalData?.Remove("PauseBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PauseBehavior"); else _explicitNullProperties?.Remove("PauseBehavior"); } }
         private string _explicitNullValuePauseBehavior = default!;
 #endif
         /// <summary>The status of the recording. Can be: `processing`, `completed` and `absent`. For more detailed statuses on in-progress recordings, check out how to [Update a Recording Resource](https://www.twilio.com/docs/voice/api/recording#update-a-recording-resource).</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceRecordingEnumStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Status"); else _explicitNullProperties?.Remove("Status"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceRecordingEnumStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("Status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Status"); else _explicitNullProperties?.Remove("Status"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ConferenceRecordingEnumStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConferenceRecordingXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "PauseBehavior", n => { PauseBehavior = n.GetStringValue(); } },
-                { "Status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceRecordingEnumStatus>(); } },
+                { "Status", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceRecordingEnumStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("Status"); AdditionalData["Status"] = unknown; } else { Status = parsed; AdditionalData.Remove("Status"); } } },
             };
         }
         /// <summary>

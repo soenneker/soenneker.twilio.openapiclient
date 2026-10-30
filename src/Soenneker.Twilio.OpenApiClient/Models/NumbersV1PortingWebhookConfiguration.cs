@@ -17,10 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("notifications_of") is { } nullNodeNotificationsOf && nullNodeNotificationsOf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsOf = null;
-            if (parseNode.GetChildNode("port_in_target_url") is { } nullNodePortInTargetUrl && nullNodePortInTargetUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortInTargetUrl = null;
-            if (parseNode.GetChildNode("port_out_target_url") is { } nullNodePortOutTargetUrl && nullNodePortOutTargetUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortOutTargetUrl = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("notifications_of") is null) { _explicitNullValueNotificationsOf = default!; _explicitNullProperties?.Remove("notifications_of"); }
+            else if (parseNode.GetChildNode("notifications_of") is { } nullNodeNotificationsOf && nullNodeNotificationsOf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsOf = null;
+            if (parseNode.GetChildNode("port_in_target_url") is null) { _explicitNullValuePortInTargetUrl = default!; _explicitNullProperties?.Remove("port_in_target_url"); }
+            else if (parseNode.GetChildNode("port_in_target_url") is { } nullNodePortInTargetUrl && nullNodePortInTargetUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortInTargetUrl = null;
+            if (parseNode.GetChildNode("port_out_target_url") is null) { _explicitNullValuePortOutTargetUrl = default!; _explicitNullProperties?.Remove("port_out_target_url"); }
+            else if (parseNode.GetChildNode("port_out_target_url") is { } nullNodePortOutTargetUrl && nullNodePortOutTargetUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortOutTargetUrl = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list to filter what notification events to receive for this account and its sub accounts. If it is an empty list, then it means that there are no filters for the notifications events to send in each webhook and all events will get sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? NotificationsOf { get => _explicitNullValueNotificationsOf; set { _explicitNullValueNotificationsOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notifications_of"); else _explicitNullProperties?.Remove("notifications_of"); } }
+        public List<string>? NotificationsOf { get => _explicitNullValueNotificationsOf; set { _explicitNullValueNotificationsOf = value; AdditionalData?.Remove("notifications_of"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notifications_of"); else _explicitNullProperties?.Remove("notifications_of"); } }
         private List<string>? _explicitNullValueNotificationsOf = default!;
 #nullable restore
 #else
-        public List<string> NotificationsOf { get => _explicitNullValueNotificationsOf; set { _explicitNullValueNotificationsOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notifications_of"); else _explicitNullProperties?.Remove("notifications_of"); } }
+        public List<string> NotificationsOf { get => _explicitNullValueNotificationsOf; set { _explicitNullValueNotificationsOf = value; AdditionalData?.Remove("notifications_of"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notifications_of"); else _explicitNullProperties?.Remove("notifications_of"); } }
         private List<string> _explicitNullValueNotificationsOf = default!;
 #endif
         /// <summary>The complete webhook url that will be called when a notification event for port in request or port in phone number happens</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortInTargetUrl { get => _explicitNullValuePortInTargetUrl; set { _explicitNullValuePortInTargetUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_target_url"); else _explicitNullProperties?.Remove("port_in_target_url"); } }
+        public string? PortInTargetUrl { get => _explicitNullValuePortInTargetUrl; set { _explicitNullValuePortInTargetUrl = value; AdditionalData?.Remove("port_in_target_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_target_url"); else _explicitNullProperties?.Remove("port_in_target_url"); } }
         private string? _explicitNullValuePortInTargetUrl = default!;
 #nullable restore
 #else
-        public string PortInTargetUrl { get => _explicitNullValuePortInTargetUrl; set { _explicitNullValuePortInTargetUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_target_url"); else _explicitNullProperties?.Remove("port_in_target_url"); } }
+        public string PortInTargetUrl { get => _explicitNullValuePortInTargetUrl; set { _explicitNullValuePortInTargetUrl = value; AdditionalData?.Remove("port_in_target_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_target_url"); else _explicitNullProperties?.Remove("port_in_target_url"); } }
         private string _explicitNullValuePortInTargetUrl = default!;
 #endif
         /// <summary>The complete webhook url that will be called when a notification event for a port out phone number happens.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortOutTargetUrl { get => _explicitNullValuePortOutTargetUrl; set { _explicitNullValuePortOutTargetUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_out_target_url"); else _explicitNullProperties?.Remove("port_out_target_url"); } }
+        public string? PortOutTargetUrl { get => _explicitNullValuePortOutTargetUrl; set { _explicitNullValuePortOutTargetUrl = value; AdditionalData?.Remove("port_out_target_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_out_target_url"); else _explicitNullProperties?.Remove("port_out_target_url"); } }
         private string? _explicitNullValuePortOutTargetUrl = default!;
 #nullable restore
 #else
-        public string PortOutTargetUrl { get => _explicitNullValuePortOutTargetUrl; set { _explicitNullValuePortOutTargetUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_out_target_url"); else _explicitNullProperties?.Remove("port_out_target_url"); } }
+        public string PortOutTargetUrl { get => _explicitNullValuePortOutTargetUrl; set { _explicitNullValuePortOutTargetUrl = value; AdditionalData?.Remove("port_out_target_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_out_target_url"); else _explicitNullProperties?.Remove("port_out_target_url"); } }
         private string _explicitNullValuePortOutTargetUrl = default!;
 #endif
         /// <summary>The URL of the webhook configuration request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

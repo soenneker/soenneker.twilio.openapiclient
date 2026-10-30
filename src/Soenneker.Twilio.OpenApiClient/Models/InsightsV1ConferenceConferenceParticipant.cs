@@ -17,207 +17,234 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("call_direction") is { } nullNodeCallDirection && nullNodeCallDirection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallDirection = null;
-            if (parseNode.GetChildNode("call_sid") is { } nullNodeCallSid && nullNodeCallSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallSid = null;
-            if (parseNode.GetChildNode("call_status") is { } nullNodeCallStatus && nullNodeCallStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallStatus = null;
-            if (parseNode.GetChildNode("call_type") is { } nullNodeCallType && nullNodeCallType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallType = null;
-            if (parseNode.GetChildNode("coached_participants") is { } nullNodeCoachedParticipants && nullNodeCoachedParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoachedParticipants = null;
-            if (parseNode.GetChildNode("conference_region") is { } nullNodeConferenceRegion && nullNodeConferenceRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceRegion = null;
-            if (parseNode.GetChildNode("conference_sid") is { } nullNodeConferenceSid && nullNodeConferenceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceSid = null;
-            if (parseNode.GetChildNode("country_code") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
-            if (parseNode.GetChildNode("duration_seconds") is { } nullNodeDurationSeconds && nullNodeDurationSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationSeconds = null;
-            if (parseNode.GetChildNode("events") is { } nullNodeEvents && nullNodeEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Events = null;
-            if (parseNode.GetChildNode("from") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
-            if (parseNode.GetChildNode("is_coach") is { } nullNodeIsCoach && nullNodeIsCoach.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCoach = null;
-            if (parseNode.GetChildNode("is_moderator") is { } nullNodeIsModerator && nullNodeIsModerator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsModerator = null;
-            if (parseNode.GetChildNode("jitter_buffer_size") is { } nullNodeJitterBufferSize && nullNodeJitterBufferSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JitterBufferSize = null;
-            if (parseNode.GetChildNode("join_time") is { } nullNodeJoinTime && nullNodeJoinTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JoinTime = null;
-            if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
-            if (parseNode.GetChildNode("leave_time") is { } nullNodeLeaveTime && nullNodeLeaveTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeaveTime = null;
-            if (parseNode.GetChildNode("metrics") is { } nullNodeMetrics && nullNodeMetrics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metrics = null;
-            if (parseNode.GetChildNode("outbound_queue_length") is { } nullNodeOutboundQueueLength && nullNodeOutboundQueueLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundQueueLength = null;
-            if (parseNode.GetChildNode("outbound_time_in_queue") is { } nullNodeOutboundTimeInQueue && nullNodeOutboundTimeInQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundTimeInQueue = null;
-            if (parseNode.GetChildNode("participant_region") is { } nullNodeParticipantRegion && nullNodeParticipantRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantRegion = null;
-            if (parseNode.GetChildNode("participant_sid") is { } nullNodeParticipantSid && nullNodeParticipantSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantSid = null;
-            if (parseNode.GetChildNode("processing_state") is { } nullNodeProcessingState && nullNodeProcessingState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessingState = null;
-            if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
-            if (parseNode.GetChildNode("to") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("call_direction") is null) { _explicitNullValueCallDirection = default!; _explicitNullProperties?.Remove("call_direction"); }
+            else if (parseNode.GetChildNode("call_direction") is { } nullNodeCallDirection && nullNodeCallDirection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallDirection = null;
+            if (parseNode.GetChildNode("call_sid") is null) { _explicitNullValueCallSid = default!; _explicitNullProperties?.Remove("call_sid"); }
+            else if (parseNode.GetChildNode("call_sid") is { } nullNodeCallSid && nullNodeCallSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallSid = null;
+            if (parseNode.GetChildNode("call_status") is null) { _explicitNullValueCallStatus = default!; _explicitNullProperties?.Remove("call_status"); }
+            else if (parseNode.GetChildNode("call_status") is { } nullNodeCallStatus && nullNodeCallStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallStatus = null;
+            if (parseNode.GetChildNode("call_type") is null) { _explicitNullValueCallType = default!; _explicitNullProperties?.Remove("call_type"); }
+            else if (parseNode.GetChildNode("call_type") is { } nullNodeCallType && nullNodeCallType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallType = null;
+            if (parseNode.GetChildNode("coached_participants") is null) { _explicitNullValueCoachedParticipants = default!; _explicitNullProperties?.Remove("coached_participants"); }
+            else if (parseNode.GetChildNode("coached_participants") is { } nullNodeCoachedParticipants && nullNodeCoachedParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoachedParticipants = null;
+            if (parseNode.GetChildNode("conference_region") is null) { _explicitNullValueConferenceRegion = default!; _explicitNullProperties?.Remove("conference_region"); }
+            else if (parseNode.GetChildNode("conference_region") is { } nullNodeConferenceRegion && nullNodeConferenceRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceRegion = null;
+            if (parseNode.GetChildNode("conference_sid") is null) { _explicitNullValueConferenceSid = default!; _explicitNullProperties?.Remove("conference_sid"); }
+            else if (parseNode.GetChildNode("conference_sid") is { } nullNodeConferenceSid && nullNodeConferenceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceSid = null;
+            if (parseNode.GetChildNode("country_code") is null) { _explicitNullValueCountryCode = default!; _explicitNullProperties?.Remove("country_code"); }
+            else if (parseNode.GetChildNode("country_code") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
+            if (parseNode.GetChildNode("duration_seconds") is null) { _explicitNullValueDurationSeconds = default!; _explicitNullProperties?.Remove("duration_seconds"); }
+            else if (parseNode.GetChildNode("duration_seconds") is { } nullNodeDurationSeconds && nullNodeDurationSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationSeconds = null;
+            if (parseNode.GetChildNode("events") is null) { _explicitNullValueEvents = default!; _explicitNullProperties?.Remove("events"); }
+            else if (parseNode.GetChildNode("events") is { } nullNodeEvents && nullNodeEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Events = null;
+            if (parseNode.GetChildNode("from") is null) { _explicitNullValueFrom = default!; _explicitNullProperties?.Remove("from"); }
+            else if (parseNode.GetChildNode("from") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
+            if (parseNode.GetChildNode("is_coach") is null) { _explicitNullValueIsCoach = default!; _explicitNullProperties?.Remove("is_coach"); }
+            else if (parseNode.GetChildNode("is_coach") is { } nullNodeIsCoach && nullNodeIsCoach.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCoach = null;
+            if (parseNode.GetChildNode("is_moderator") is null) { _explicitNullValueIsModerator = default!; _explicitNullProperties?.Remove("is_moderator"); }
+            else if (parseNode.GetChildNode("is_moderator") is { } nullNodeIsModerator && nullNodeIsModerator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsModerator = null;
+            if (parseNode.GetChildNode("jitter_buffer_size") is null) { _explicitNullValueJitterBufferSize = default!; _explicitNullProperties?.Remove("jitter_buffer_size"); }
+            else if (parseNode.GetChildNode("jitter_buffer_size") is { } nullNodeJitterBufferSize && nullNodeJitterBufferSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JitterBufferSize = null;
+            if (parseNode.GetChildNode("join_time") is null) { _explicitNullValueJoinTime = default!; _explicitNullProperties?.Remove("join_time"); }
+            else if (parseNode.GetChildNode("join_time") is { } nullNodeJoinTime && nullNodeJoinTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JoinTime = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("leave_time") is null) { _explicitNullValueLeaveTime = default!; _explicitNullProperties?.Remove("leave_time"); }
+            else if (parseNode.GetChildNode("leave_time") is { } nullNodeLeaveTime && nullNodeLeaveTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeaveTime = null;
+            if (parseNode.GetChildNode("metrics") is null) { _explicitNullValueMetrics = default!; _explicitNullProperties?.Remove("metrics"); }
+            else if (parseNode.GetChildNode("metrics") is { } nullNodeMetrics && nullNodeMetrics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metrics = null;
+            if (parseNode.GetChildNode("outbound_queue_length") is null) { _explicitNullValueOutboundQueueLength = default!; _explicitNullProperties?.Remove("outbound_queue_length"); }
+            else if (parseNode.GetChildNode("outbound_queue_length") is { } nullNodeOutboundQueueLength && nullNodeOutboundQueueLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundQueueLength = null;
+            if (parseNode.GetChildNode("outbound_time_in_queue") is null) { _explicitNullValueOutboundTimeInQueue = default!; _explicitNullProperties?.Remove("outbound_time_in_queue"); }
+            else if (parseNode.GetChildNode("outbound_time_in_queue") is { } nullNodeOutboundTimeInQueue && nullNodeOutboundTimeInQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundTimeInQueue = null;
+            if (parseNode.GetChildNode("participant_region") is null) { _explicitNullValueParticipantRegion = default!; _explicitNullProperties?.Remove("participant_region"); }
+            else if (parseNode.GetChildNode("participant_region") is { } nullNodeParticipantRegion && nullNodeParticipantRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantRegion = null;
+            if (parseNode.GetChildNode("participant_sid") is null) { _explicitNullValueParticipantSid = default!; _explicitNullProperties?.Remove("participant_sid"); }
+            else if (parseNode.GetChildNode("participant_sid") is { } nullNodeParticipantSid && nullNodeParticipantSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantSid = null;
+            if (parseNode.GetChildNode("processing_state") is null) { _explicitNullValueProcessingState = default!; _explicitNullProperties?.Remove("processing_state"); }
+            else if (parseNode.GetChildNode("processing_state") is { } nullNodeProcessingState && nullNodeProcessingState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessingState = null;
+            if (parseNode.GetChildNode("properties") is null) { _explicitNullValueProperties = default!; _explicitNullProperties?.Remove("properties"); }
+            else if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+            if (parseNode.GetChildNode("to") is null) { _explicitNullValueTo = default!; _explicitNullProperties?.Remove("to"); }
+            else if (parseNode.GetChildNode("to") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>The unique SID identifier of the Account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The call_direction property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallDirection? CallDirection { get => _explicitNullValueCallDirection; set { _explicitNullValueCallDirection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_direction"); else _explicitNullProperties?.Remove("call_direction"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallDirection? CallDirection { get => _explicitNullValueCallDirection; set { _explicitNullValueCallDirection = value; AdditionalData?.Remove("call_direction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_direction"); else _explicitNullProperties?.Remove("call_direction"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallDirection? _explicitNullValueCallDirection = default!;
         /// <summary>Unique SID identifier of the call that generated the Participant resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
+        public string? CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; AdditionalData?.Remove("call_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
         private string? _explicitNullValueCallSid = default!;
 #nullable restore
 #else
-        public string CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
+        public string CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; AdditionalData?.Remove("call_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
         private string _explicitNullValueCallSid = default!;
 #endif
         /// <summary>The call_status property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallStatus? CallStatus { get => _explicitNullValueCallStatus; set { _explicitNullValueCallStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_status"); else _explicitNullProperties?.Remove("call_status"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallStatus? CallStatus { get => _explicitNullValueCallStatus; set { _explicitNullValueCallStatus = value; AdditionalData?.Remove("call_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_status"); else _explicitNullProperties?.Remove("call_status"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallStatus? _explicitNullValueCallStatus = default!;
         /// <summary>The call_type property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallType? CallType { get => _explicitNullValueCallType; set { _explicitNullValueCallType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_type"); else _explicitNullProperties?.Remove("call_type"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallType? CallType { get => _explicitNullValueCallType; set { _explicitNullValueCallType = value; AdditionalData?.Remove("call_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_type"); else _explicitNullProperties?.Remove("call_type"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallType? _explicitNullValueCallType = default!;
         /// <summary>Call SIDs coached by this participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CoachedParticipants { get => _explicitNullValueCoachedParticipants; set { _explicitNullValueCoachedParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coached_participants"); else _explicitNullProperties?.Remove("coached_participants"); } }
+        public List<string>? CoachedParticipants { get => _explicitNullValueCoachedParticipants; set { _explicitNullValueCoachedParticipants = value; AdditionalData?.Remove("coached_participants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coached_participants"); else _explicitNullProperties?.Remove("coached_participants"); } }
         private List<string>? _explicitNullValueCoachedParticipants = default!;
 #nullable restore
 #else
-        public List<string> CoachedParticipants { get => _explicitNullValueCoachedParticipants; set { _explicitNullValueCoachedParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coached_participants"); else _explicitNullProperties?.Remove("coached_participants"); } }
+        public List<string> CoachedParticipants { get => _explicitNullValueCoachedParticipants; set { _explicitNullValueCoachedParticipants = value; AdditionalData?.Remove("coached_participants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coached_participants"); else _explicitNullProperties?.Remove("coached_participants"); } }
         private List<string> _explicitNullValueCoachedParticipants = default!;
 #endif
         /// <summary>The conference_region property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion? ConferenceRegion { get => _explicitNullValueConferenceRegion; set { _explicitNullValueConferenceRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conference_region"); else _explicitNullProperties?.Remove("conference_region"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion? ConferenceRegion { get => _explicitNullValueConferenceRegion; set { _explicitNullValueConferenceRegion = value; AdditionalData?.Remove("conference_region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conference_region"); else _explicitNullProperties?.Remove("conference_region"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion? _explicitNullValueConferenceRegion = default!;
         /// <summary>The unique SID identifier of the Conference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConferenceSid { get => _explicitNullValueConferenceSid; set { _explicitNullValueConferenceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conference_sid"); else _explicitNullProperties?.Remove("conference_sid"); } }
+        public string? ConferenceSid { get => _explicitNullValueConferenceSid; set { _explicitNullValueConferenceSid = value; AdditionalData?.Remove("conference_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conference_sid"); else _explicitNullProperties?.Remove("conference_sid"); } }
         private string? _explicitNullValueConferenceSid = default!;
 #nullable restore
 #else
-        public string ConferenceSid { get => _explicitNullValueConferenceSid; set { _explicitNullValueConferenceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conference_sid"); else _explicitNullProperties?.Remove("conference_sid"); } }
+        public string ConferenceSid { get => _explicitNullValueConferenceSid; set { _explicitNullValueConferenceSid = value; AdditionalData?.Remove("conference_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conference_sid"); else _explicitNullProperties?.Remove("conference_sid"); } }
         private string _explicitNullValueConferenceSid = default!;
 #endif
         /// <summary>ISO alpha-2 country code of the participant based on caller ID or called number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_code"); else _explicitNullProperties?.Remove("country_code"); } }
+        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("country_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_code"); else _explicitNullProperties?.Remove("country_code"); } }
         private string? _explicitNullValueCountryCode = default!;
 #nullable restore
 #else
-        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_code"); else _explicitNullProperties?.Remove("country_code"); } }
+        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("country_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_code"); else _explicitNullProperties?.Remove("country_code"); } }
         private string _explicitNullValueCountryCode = default!;
 #endif
         /// <summary>Participant durations in seconds.</summary>
-        public int? DurationSeconds { get => _explicitNullValueDurationSeconds; set { _explicitNullValueDurationSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_seconds"); else _explicitNullProperties?.Remove("duration_seconds"); } }
+        public int? DurationSeconds { get => _explicitNullValueDurationSeconds; set { _explicitNullValueDurationSeconds = value; AdditionalData?.Remove("duration_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_seconds"); else _explicitNullProperties?.Remove("duration_seconds"); } }
         private int? _explicitNullValueDurationSeconds = default!;
         /// <summary>Object containing information of actions taken by participants. Contains a dictionary of URL links to nested resources of this Conference Participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Events { get => _explicitNullValueEvents; set { _explicitNullValueEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events"); else _explicitNullProperties?.Remove("events"); } }
+        public UntypedNode? Events { get => _explicitNullValueEvents; set { _explicitNullValueEvents = value; AdditionalData?.Remove("events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events"); else _explicitNullProperties?.Remove("events"); } }
         private UntypedNode? _explicitNullValueEvents = default!;
 #nullable restore
 #else
-        public UntypedNode Events { get => _explicitNullValueEvents; set { _explicitNullValueEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events"); else _explicitNullProperties?.Remove("events"); } }
+        public UntypedNode Events { get => _explicitNullValueEvents; set { _explicitNullValueEvents = value; AdditionalData?.Remove("events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events"); else _explicitNullProperties?.Remove("events"); } }
         private UntypedNode _explicitNullValueEvents = default!;
 #endif
         /// <summary>Caller ID of the calling party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        public string? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; AdditionalData?.Remove("from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
         private string? _explicitNullValueFrom = default!;
 #nullable restore
 #else
-        public string From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        public string From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; AdditionalData?.Remove("from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
         private string _explicitNullValueFrom = default!;
 #endif
         /// <summary>Boolean. Indicated whether participant was a coach.</summary>
-        public bool? IsCoach { get => _explicitNullValueIsCoach; set { _explicitNullValueIsCoach = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_coach"); else _explicitNullProperties?.Remove("is_coach"); } }
+        public bool? IsCoach { get => _explicitNullValueIsCoach; set { _explicitNullValueIsCoach = value; AdditionalData?.Remove("is_coach"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_coach"); else _explicitNullProperties?.Remove("is_coach"); } }
         private bool? _explicitNullValueIsCoach = default!;
         /// <summary>Boolean. Indicates whether participant had startConferenceOnEnter=true or endConferenceOnExit=true.</summary>
-        public bool? IsModerator { get => _explicitNullValueIsModerator; set { _explicitNullValueIsModerator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_moderator"); else _explicitNullProperties?.Remove("is_moderator"); } }
+        public bool? IsModerator { get => _explicitNullValueIsModerator; set { _explicitNullValueIsModerator = value; AdditionalData?.Remove("is_moderator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_moderator"); else _explicitNullProperties?.Remove("is_moderator"); } }
         private bool? _explicitNullValueIsModerator = default!;
         /// <summary>The jitter_buffer_size property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumJitterBufferSize? JitterBufferSize { get => _explicitNullValueJitterBufferSize; set { _explicitNullValueJitterBufferSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jitter_buffer_size"); else _explicitNullProperties?.Remove("jitter_buffer_size"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumJitterBufferSize? JitterBufferSize { get => _explicitNullValueJitterBufferSize; set { _explicitNullValueJitterBufferSize = value; AdditionalData?.Remove("jitter_buffer_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jitter_buffer_size"); else _explicitNullProperties?.Remove("jitter_buffer_size"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumJitterBufferSize? _explicitNullValueJitterBufferSize = default!;
         /// <summary>ISO 8601 timestamp of participant join event.</summary>
-        public DateTimeOffset? JoinTime { get => _explicitNullValueJoinTime; set { _explicitNullValueJoinTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("join_time"); else _explicitNullProperties?.Remove("join_time"); } }
+        public DateTimeOffset? JoinTime { get => _explicitNullValueJoinTime; set { _explicitNullValueJoinTime = value; AdditionalData?.Remove("join_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("join_time"); else _explicitNullProperties?.Remove("join_time"); } }
         private DateTimeOffset? _explicitNullValueJoinTime = default!;
         /// <summary>The user-specified label of this participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
         private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
         private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>ISO 8601 timestamp of participant leave event.</summary>
-        public DateTimeOffset? LeaveTime { get => _explicitNullValueLeaveTime; set { _explicitNullValueLeaveTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leave_time"); else _explicitNullProperties?.Remove("leave_time"); } }
+        public DateTimeOffset? LeaveTime { get => _explicitNullValueLeaveTime; set { _explicitNullValueLeaveTime = value; AdditionalData?.Remove("leave_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leave_time"); else _explicitNullProperties?.Remove("leave_time"); } }
         private DateTimeOffset? _explicitNullValueLeaveTime = default!;
         /// <summary>Object. Contains participant call quality metrics.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
+        public UntypedNode? Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; AdditionalData?.Remove("metrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
         private UntypedNode? _explicitNullValueMetrics = default!;
 #nullable restore
 #else
-        public UntypedNode Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
+        public UntypedNode Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; AdditionalData?.Remove("metrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
         private UntypedNode _explicitNullValueMetrics = default!;
 #endif
         /// <summary>Add Participant API only. Estimated time in queue at call creation.</summary>
-        public int? OutboundQueueLength { get => _explicitNullValueOutboundQueueLength; set { _explicitNullValueOutboundQueueLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_queue_length"); else _explicitNullProperties?.Remove("outbound_queue_length"); } }
+        public int? OutboundQueueLength { get => _explicitNullValueOutboundQueueLength; set { _explicitNullValueOutboundQueueLength = value; AdditionalData?.Remove("outbound_queue_length"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_queue_length"); else _explicitNullProperties?.Remove("outbound_queue_length"); } }
         private int? _explicitNullValueOutboundQueueLength = default!;
         /// <summary>Add Participant API only. Actual time in queue in seconds.</summary>
-        public int? OutboundTimeInQueue { get => _explicitNullValueOutboundTimeInQueue; set { _explicitNullValueOutboundTimeInQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_time_in_queue"); else _explicitNullProperties?.Remove("outbound_time_in_queue"); } }
+        public int? OutboundTimeInQueue { get => _explicitNullValueOutboundTimeInQueue; set { _explicitNullValueOutboundTimeInQueue = value; AdditionalData?.Remove("outbound_time_in_queue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_time_in_queue"); else _explicitNullProperties?.Remove("outbound_time_in_queue"); } }
         private int? _explicitNullValueOutboundTimeInQueue = default!;
         /// <summary>The participant_region property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion? ParticipantRegion { get => _explicitNullValueParticipantRegion; set { _explicitNullValueParticipantRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_region"); else _explicitNullProperties?.Remove("participant_region"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion? ParticipantRegion { get => _explicitNullValueParticipantRegion; set { _explicitNullValueParticipantRegion = value; AdditionalData?.Remove("participant_region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_region"); else _explicitNullProperties?.Remove("participant_region"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion? _explicitNullValueParticipantRegion = default!;
         /// <summary>SID for this participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
+        public string? ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; AdditionalData?.Remove("participant_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
         private string? _explicitNullValueParticipantSid = default!;
 #nullable restore
 #else
-        public string ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
+        public string ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; AdditionalData?.Remove("participant_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
         private string _explicitNullValueParticipantSid = default!;
 #endif
         /// <summary>The processing_state property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumProcessingState? ProcessingState { get => _explicitNullValueProcessingState; set { _explicitNullValueProcessingState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processing_state"); else _explicitNullProperties?.Remove("processing_state"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumProcessingState? ProcessingState { get => _explicitNullValueProcessingState; set { _explicitNullValueProcessingState = value; AdditionalData?.Remove("processing_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processing_state"); else _explicitNullProperties?.Remove("processing_state"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumProcessingState? _explicitNullValueProcessingState = default!;
         /// <summary>Participant properties and metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        public UntypedNode? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
         private UntypedNode? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public UntypedNode Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        public UntypedNode Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
         private UntypedNode _explicitNullValueProperties = default!;
 #endif
         /// <summary>Called party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        public string? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
         private string? _explicitNullValueTo = default!;
 #nullable restore
 #else
-        public string To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        public string To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
         private string _explicitNullValueTo = default!;
 #endif
         /// <summary>The URL of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
@@ -246,12 +273,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "call_direction", n => { CallDirection = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallDirection>(); } },
+                { "call_direction", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallDirection>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCallDirection = default; _explicitNullProperties?.Remove("call_direction"); AdditionalData["call_direction"] = unknown; } else { CallDirection = parsed; AdditionalData.Remove("call_direction"); } } },
                 { "call_sid", n => { CallSid = n.GetStringValue(); } },
-                { "call_status", n => { CallStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallStatus>(); } },
-                { "call_type", n => { CallType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallType>(); } },
+                { "call_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCallStatus = default; _explicitNullProperties?.Remove("call_status"); AdditionalData["call_status"] = unknown; } else { CallStatus = parsed; AdditionalData.Remove("call_status"); } } },
+                { "call_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumCallType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCallType = default; _explicitNullProperties?.Remove("call_type"); AdditionalData["call_type"] = unknown; } else { CallType = parsed; AdditionalData.Remove("call_type"); } } },
                 { "coached_participants", n => { CoachedParticipants = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "conference_region", n => { ConferenceRegion = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion>(); } },
+                { "conference_region", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueConferenceRegion = default; _explicitNullProperties?.Remove("conference_region"); AdditionalData["conference_region"] = unknown; } else { ConferenceRegion = parsed; AdditionalData.Remove("conference_region"); } } },
                 { "conference_sid", n => { ConferenceSid = n.GetStringValue(); } },
                 { "country_code", n => { CountryCode = n.GetStringValue(); } },
                 { "duration_seconds", n => { DurationSeconds = n.GetIntValue(); } },
@@ -259,16 +286,16 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "from", n => { From = n.GetStringValue(); } },
                 { "is_coach", n => { IsCoach = n.GetBoolValue(); } },
                 { "is_moderator", n => { IsModerator = n.GetBoolValue(); } },
-                { "jitter_buffer_size", n => { JitterBufferSize = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumJitterBufferSize>(); } },
+                { "jitter_buffer_size", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumJitterBufferSize>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueJitterBufferSize = default; _explicitNullProperties?.Remove("jitter_buffer_size"); AdditionalData["jitter_buffer_size"] = unknown; } else { JitterBufferSize = parsed; AdditionalData.Remove("jitter_buffer_size"); } } },
                 { "join_time", n => { JoinTime = n.GetDateTimeOffsetValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "leave_time", n => { LeaveTime = n.GetDateTimeOffsetValue(); } },
                 { "metrics", n => { Metrics = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "outbound_queue_length", n => { OutboundQueueLength = n.GetIntValue(); } },
                 { "outbound_time_in_queue", n => { OutboundTimeInQueue = n.GetIntValue(); } },
-                { "participant_region", n => { ParticipantRegion = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion>(); } },
+                { "participant_region", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumRegion>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueParticipantRegion = default; _explicitNullProperties?.Remove("participant_region"); AdditionalData["participant_region"] = unknown; } else { ParticipantRegion = parsed; AdditionalData.Remove("participant_region"); } } },
                 { "participant_sid", n => { ParticipantSid = n.GetStringValue(); } },
-                { "processing_state", n => { ProcessingState = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumProcessingState>(); } },
+                { "processing_state", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceParticipantEnumProcessingState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProcessingState = default; _explicitNullProperties?.Remove("processing_state"); AdditionalData["processing_state"] = unknown; } else { ProcessingState = parsed; AdditionalData.Remove("processing_state"); } } },
                 { "properties", n => { Properties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "to", n => { To = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },

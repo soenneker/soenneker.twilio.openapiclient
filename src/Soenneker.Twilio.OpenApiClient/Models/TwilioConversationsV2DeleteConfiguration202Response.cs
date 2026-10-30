@@ -18,8 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("related") is { } nullNodeRelated && nullNodeRelated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Related = null;
-            if (parseNode.GetChildNode("statusUrl") is { } nullNodeStatusUrl && nullNodeStatusUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusUrl = null;
+            if (parseNode.GetChildNode("related") is null) { _explicitNullValueRelated = default!; _explicitNullProperties?.Remove("related"); }
+            else if (parseNode.GetChildNode("related") is { } nullNodeRelated && nullNodeRelated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Related = null;
+            if (parseNode.GetChildNode("statusUrl") is null) { _explicitNullValueStatusUrl = default!; _explicitNullProperties?.Remove("statusUrl"); }
+            else if (parseNode.GetChildNode("statusUrl") is { } nullNodeStatusUrl && nullNodeStatusUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Named resource identifiers associated with this operation. Keys depend on the operation type:- config-create, config-update, config-delete: configurationId- conversation-delete: conversationId</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2DeleteConfiguration202ResponseRelated? Related { get => _explicitNullValueRelated; set { _explicitNullValueRelated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related"); else _explicitNullProperties?.Remove("related"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2DeleteConfiguration202ResponseRelated? Related { get => _explicitNullValueRelated; set { _explicitNullValueRelated = value; AdditionalData?.Remove("related"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related"); else _explicitNullProperties?.Remove("related"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2DeleteConfiguration202ResponseRelated? _explicitNullValueRelated = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2DeleteConfiguration202ResponseRelated Related { get => _explicitNullValueRelated; set { _explicitNullValueRelated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related"); else _explicitNullProperties?.Remove("related"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2DeleteConfiguration202ResponseRelated Related { get => _explicitNullValueRelated; set { _explicitNullValueRelated = value; AdditionalData?.Remove("related"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related"); else _explicitNullProperties?.Remove("related"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2DeleteConfiguration202ResponseRelated _explicitNullValueRelated = default!;
 #endif
         /// <summary>URL to poll for operation status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusUrl { get => _explicitNullValueStatusUrl; set { _explicitNullValueStatusUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusUrl"); else _explicitNullProperties?.Remove("statusUrl"); } }
+        public string? StatusUrl { get => _explicitNullValueStatusUrl; set { _explicitNullValueStatusUrl = value; AdditionalData?.Remove("statusUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusUrl"); else _explicitNullProperties?.Remove("statusUrl"); } }
         private string? _explicitNullValueStatusUrl = default!;
 #nullable restore
 #else
-        public string StatusUrl { get => _explicitNullValueStatusUrl; set { _explicitNullValueStatusUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusUrl"); else _explicitNullProperties?.Remove("statusUrl"); } }
+        public string StatusUrl { get => _explicitNullValueStatusUrl; set { _explicitNullValueStatusUrl = value; AdditionalData?.Remove("statusUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusUrl"); else _explicitNullProperties?.Remove("statusUrl"); } }
         private string _explicitNullValueStatusUrl = default!;
 #endif
         /// <summary>

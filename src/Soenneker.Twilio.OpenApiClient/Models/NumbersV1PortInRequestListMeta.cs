@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("next_token") is { } nullNodeNextToken && nullNodeNextToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextToken = null;
-            if (parseNode.GetChildNode("previous_token") is { } nullNodePreviousToken && nullNodePreviousToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousToken = null;
+            if (parseNode.GetChildNode("next_token") is null) { _explicitNullValueNextToken = default!; _explicitNullProperties?.Remove("next_token"); }
+            else if (parseNode.GetChildNode("next_token") is { } nullNodeNextToken && nullNodeNextToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextToken = null;
+            if (parseNode.GetChildNode("previous_token") is null) { _explicitNullValuePreviousToken = default!; _explicitNullProperties?.Remove("previous_token"); }
+            else if (parseNode.GetChildNode("previous_token") is { } nullNodePreviousToken && nullNodePreviousToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousToken = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The next_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextToken { get => _explicitNullValueNextToken; set { _explicitNullValueNextToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_token"); else _explicitNullProperties?.Remove("next_token"); } }
+        public string? NextToken { get => _explicitNullValueNextToken; set { _explicitNullValueNextToken = value; AdditionalData?.Remove("next_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_token"); else _explicitNullProperties?.Remove("next_token"); } }
         private string? _explicitNullValueNextToken = default!;
 #nullable restore
 #else
-        public string NextToken { get => _explicitNullValueNextToken; set { _explicitNullValueNextToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_token"); else _explicitNullProperties?.Remove("next_token"); } }
+        public string NextToken { get => _explicitNullValueNextToken; set { _explicitNullValueNextToken = value; AdditionalData?.Remove("next_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_token"); else _explicitNullProperties?.Remove("next_token"); } }
         private string _explicitNullValueNextToken = default!;
 #endif
         /// <summary>The previous_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviousToken { get => _explicitNullValuePreviousToken; set { _explicitNullValuePreviousToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_token"); else _explicitNullProperties?.Remove("previous_token"); } }
+        public string? PreviousToken { get => _explicitNullValuePreviousToken; set { _explicitNullValuePreviousToken = value; AdditionalData?.Remove("previous_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_token"); else _explicitNullProperties?.Remove("previous_token"); } }
         private string? _explicitNullValuePreviousToken = default!;
 #nullable restore
 #else
-        public string PreviousToken { get => _explicitNullValuePreviousToken; set { _explicitNullValuePreviousToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_token"); else _explicitNullProperties?.Remove("previous_token"); } }
+        public string PreviousToken { get => _explicitNullValuePreviousToken; set { _explicitNullValuePreviousToken = value; AdditionalData?.Remove("previous_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previous_token"); else _explicitNullProperties?.Remove("previous_token"); } }
         private string _explicitNullValuePreviousToken = default!;
 #endif
         /// <summary>

@@ -17,14 +17,22 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AuthorizeRedirectUrl") is { } nullNodeAuthorizeRedirectUrl && nullNodeAuthorizeRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizeRedirectUrl = null;
-            if (parseNode.GetChildNode("CompanyName") is { } nullNodeCompanyName && nullNodeCompanyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyName = null;
-            if (parseNode.GetChildNode("DeauthorizeCallbackMethod") is { } nullNodeDeauthorizeCallbackMethod && nullNodeDeauthorizeCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeauthorizeCallbackMethod = null;
-            if (parseNode.GetChildNode("DeauthorizeCallbackUrl") is { } nullNodeDeauthorizeCallbackUrl && nullNodeDeauthorizeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeauthorizeCallbackUrl = null;
-            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("HomepageUrl") is { } nullNodeHomepageUrl && nullNodeHomepageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HomepageUrl = null;
-            if (parseNode.GetChildNode("Permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("AuthorizeRedirectUrl") is null) { _explicitNullValueAuthorizeRedirectUrl = default!; _explicitNullProperties?.Remove("AuthorizeRedirectUrl"); }
+            else if (parseNode.GetChildNode("AuthorizeRedirectUrl") is { } nullNodeAuthorizeRedirectUrl && nullNodeAuthorizeRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizeRedirectUrl = null;
+            if (parseNode.GetChildNode("CompanyName") is null) { _explicitNullValueCompanyName = default!; _explicitNullProperties?.Remove("CompanyName"); }
+            else if (parseNode.GetChildNode("CompanyName") is { } nullNodeCompanyName && nullNodeCompanyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyName = null;
+            if (parseNode.GetChildNode("DeauthorizeCallbackMethod") is null) { _explicitNullValueDeauthorizeCallbackMethod = default!; _explicitNullProperties?.Remove("DeauthorizeCallbackMethod"); }
+            else if (parseNode.GetChildNode("DeauthorizeCallbackMethod") is { } nullNodeDeauthorizeCallbackMethod && nullNodeDeauthorizeCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeauthorizeCallbackMethod = null;
+            if (parseNode.GetChildNode("DeauthorizeCallbackUrl") is null) { _explicitNullValueDeauthorizeCallbackUrl = default!; _explicitNullProperties?.Remove("DeauthorizeCallbackUrl"); }
+            else if (parseNode.GetChildNode("DeauthorizeCallbackUrl") is { } nullNodeDeauthorizeCallbackUrl && nullNodeDeauthorizeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeauthorizeCallbackUrl = null;
+            if (parseNode.GetChildNode("Description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("Description"); }
+            else if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("FriendlyName") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("FriendlyName"); }
+            else if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("HomepageUrl") is null) { _explicitNullValueHomepageUrl = default!; _explicitNullProperties?.Remove("HomepageUrl"); }
+            else if (parseNode.GetChildNode("HomepageUrl") is { } nullNodeHomepageUrl && nullNodeHomepageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HomepageUrl = null;
+            if (parseNode.GetChildNode("Permissions") is null) { _explicitNullValuePermissions = default!; _explicitNullProperties?.Remove("Permissions"); }
+            else if (parseNode.GetChildNode("Permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,74 +40,74 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URL to redirect the user to after we authenticate the user and obtain authorization to access the Connect App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorizeRedirectUrl { get => _explicitNullValueAuthorizeRedirectUrl; set { _explicitNullValueAuthorizeRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthorizeRedirectUrl"); else _explicitNullProperties?.Remove("AuthorizeRedirectUrl"); } }
+        public string? AuthorizeRedirectUrl { get => _explicitNullValueAuthorizeRedirectUrl; set { _explicitNullValueAuthorizeRedirectUrl = value; AdditionalData?.Remove("AuthorizeRedirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthorizeRedirectUrl"); else _explicitNullProperties?.Remove("AuthorizeRedirectUrl"); } }
         private string? _explicitNullValueAuthorizeRedirectUrl = default!;
 #nullable restore
 #else
-        public string AuthorizeRedirectUrl { get => _explicitNullValueAuthorizeRedirectUrl; set { _explicitNullValueAuthorizeRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthorizeRedirectUrl"); else _explicitNullProperties?.Remove("AuthorizeRedirectUrl"); } }
+        public string AuthorizeRedirectUrl { get => _explicitNullValueAuthorizeRedirectUrl; set { _explicitNullValueAuthorizeRedirectUrl = value; AdditionalData?.Remove("AuthorizeRedirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthorizeRedirectUrl"); else _explicitNullProperties?.Remove("AuthorizeRedirectUrl"); } }
         private string _explicitNullValueAuthorizeRedirectUrl = default!;
 #endif
         /// <summary>The company name to set for the Connect App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompanyName { get => _explicitNullValueCompanyName; set { _explicitNullValueCompanyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CompanyName"); else _explicitNullProperties?.Remove("CompanyName"); } }
+        public string? CompanyName { get => _explicitNullValueCompanyName; set { _explicitNullValueCompanyName = value; AdditionalData?.Remove("CompanyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CompanyName"); else _explicitNullProperties?.Remove("CompanyName"); } }
         private string? _explicitNullValueCompanyName = default!;
 #nullable restore
 #else
-        public string CompanyName { get => _explicitNullValueCompanyName; set { _explicitNullValueCompanyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CompanyName"); else _explicitNullProperties?.Remove("CompanyName"); } }
+        public string CompanyName { get => _explicitNullValueCompanyName; set { _explicitNullValueCompanyName = value; AdditionalData?.Remove("CompanyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CompanyName"); else _explicitNullProperties?.Remove("CompanyName"); } }
         private string _explicitNullValueCompanyName = default!;
 #endif
         /// <summary>The HTTP method to use when calling `deauthorize_callback_url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConnectAppXWwwFormUrlencodedRequestDeauthorizeCallbackMethod? DeauthorizeCallbackMethod { get => _explicitNullValueDeauthorizeCallbackMethod; set { _explicitNullValueDeauthorizeCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeauthorizeCallbackMethod"); else _explicitNullProperties?.Remove("DeauthorizeCallbackMethod"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConnectAppXWwwFormUrlencodedRequestDeauthorizeCallbackMethod? DeauthorizeCallbackMethod { get => _explicitNullValueDeauthorizeCallbackMethod; set { _explicitNullValueDeauthorizeCallbackMethod = value; AdditionalData?.Remove("DeauthorizeCallbackMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeauthorizeCallbackMethod"); else _explicitNullProperties?.Remove("DeauthorizeCallbackMethod"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConnectAppXWwwFormUrlencodedRequestDeauthorizeCallbackMethod? _explicitNullValueDeauthorizeCallbackMethod = default!;
         /// <summary>The URL to call using the `deauthorize_callback_method` to de-authorize the Connect App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeauthorizeCallbackUrl { get => _explicitNullValueDeauthorizeCallbackUrl; set { _explicitNullValueDeauthorizeCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeauthorizeCallbackUrl"); else _explicitNullProperties?.Remove("DeauthorizeCallbackUrl"); } }
+        public string? DeauthorizeCallbackUrl { get => _explicitNullValueDeauthorizeCallbackUrl; set { _explicitNullValueDeauthorizeCallbackUrl = value; AdditionalData?.Remove("DeauthorizeCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeauthorizeCallbackUrl"); else _explicitNullProperties?.Remove("DeauthorizeCallbackUrl"); } }
         private string? _explicitNullValueDeauthorizeCallbackUrl = default!;
 #nullable restore
 #else
-        public string DeauthorizeCallbackUrl { get => _explicitNullValueDeauthorizeCallbackUrl; set { _explicitNullValueDeauthorizeCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeauthorizeCallbackUrl"); else _explicitNullProperties?.Remove("DeauthorizeCallbackUrl"); } }
+        public string DeauthorizeCallbackUrl { get => _explicitNullValueDeauthorizeCallbackUrl; set { _explicitNullValueDeauthorizeCallbackUrl = value; AdditionalData?.Remove("DeauthorizeCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeauthorizeCallbackUrl"); else _explicitNullProperties?.Remove("DeauthorizeCallbackUrl"); } }
         private string _explicitNullValueDeauthorizeCallbackUrl = default!;
 #endif
         /// <summary>A description of the Connect App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("Description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("Description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>A descriptive string that you create to describe the resource. It can be up to 64 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>A public URL where users can obtain more information about this Connect App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HomepageUrl { get => _explicitNullValueHomepageUrl; set { _explicitNullValueHomepageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HomepageUrl"); else _explicitNullProperties?.Remove("HomepageUrl"); } }
+        public string? HomepageUrl { get => _explicitNullValueHomepageUrl; set { _explicitNullValueHomepageUrl = value; AdditionalData?.Remove("HomepageUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HomepageUrl"); else _explicitNullProperties?.Remove("HomepageUrl"); } }
         private string? _explicitNullValueHomepageUrl = default!;
 #nullable restore
 #else
-        public string HomepageUrl { get => _explicitNullValueHomepageUrl; set { _explicitNullValueHomepageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HomepageUrl"); else _explicitNullProperties?.Remove("HomepageUrl"); } }
+        public string HomepageUrl { get => _explicitNullValueHomepageUrl; set { _explicitNullValueHomepageUrl = value; AdditionalData?.Remove("HomepageUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HomepageUrl"); else _explicitNullProperties?.Remove("HomepageUrl"); } }
         private string _explicitNullValueHomepageUrl = default!;
 #endif
         /// <summary>A comma-separated list of the permissions you will request from the users of this ConnectApp.  Can include: `get-all` and `post-all`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConnectAppEnumPermission?>? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Permissions"); else _explicitNullProperties?.Remove("Permissions"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConnectAppEnumPermission?>? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; AdditionalData?.Remove("Permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Permissions"); else _explicitNullProperties?.Remove("Permissions"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.ConnectAppEnumPermission?>? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConnectAppEnumPermission?> Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Permissions"); else _explicitNullProperties?.Remove("Permissions"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConnectAppEnumPermission?> Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; AdditionalData?.Remove("Permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Permissions"); else _explicitNullProperties?.Remove("Permissions"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.ConnectAppEnumPermission?> _explicitNullValuePermissions = default!;
 #endif
         /// <summary>
@@ -129,7 +137,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "AuthorizeRedirectUrl", n => { AuthorizeRedirectUrl = n.GetStringValue(); } },
                 { "CompanyName", n => { CompanyName = n.GetStringValue(); } },
-                { "DeauthorizeCallbackMethod", n => { DeauthorizeCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConnectAppXWwwFormUrlencodedRequestDeauthorizeCallbackMethod>(); } },
+                { "DeauthorizeCallbackMethod", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConnectAppXWwwFormUrlencodedRequestDeauthorizeCallbackMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDeauthorizeCallbackMethod = default; _explicitNullProperties?.Remove("DeauthorizeCallbackMethod"); AdditionalData["DeauthorizeCallbackMethod"] = unknown; } else { DeauthorizeCallbackMethod = parsed; AdditionalData.Remove("DeauthorizeCallbackMethod"); } } },
                 { "DeauthorizeCallbackUrl", n => { DeauthorizeCallbackUrl = n.GetStringValue(); } },
                 { "Description", n => { Description = n.GetStringValue(); } },
                 { "FriendlyName", n => { FriendlyName = n.GetStringValue(); } },

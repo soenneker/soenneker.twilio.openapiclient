@@ -17,35 +17,40 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("inputCharacters") is { } nullNodeInputCharacters && nullNodeInputCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputCharacters = null;
-            if (parseNode.GetChildNode("inputTruncated") is { } nullNodeInputTruncated && nullNodeInputTruncated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputTruncated = null;
-            if (parseNode.GetChildNode("latencyMs") is { } nullNodeLatencyMs && nullNodeLatencyMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatencyMs = null;
-            if (parseNode.GetChildNode("outputCharacters") is { } nullNodeOutputCharacters && nullNodeOutputCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutputCharacters = null;
-            if (parseNode.GetChildNode("resolvedModel") is { } nullNodeResolvedModel && nullNodeResolvedModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolvedModel = null;
+            if (parseNode.GetChildNode("inputCharacters") is null) { _explicitNullValueInputCharacters = default!; _explicitNullProperties?.Remove("inputCharacters"); }
+            else if (parseNode.GetChildNode("inputCharacters") is { } nullNodeInputCharacters && nullNodeInputCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputCharacters = null;
+            if (parseNode.GetChildNode("inputTruncated") is null) { _explicitNullValueInputTruncated = default!; _explicitNullProperties?.Remove("inputTruncated"); }
+            else if (parseNode.GetChildNode("inputTruncated") is { } nullNodeInputTruncated && nullNodeInputTruncated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputTruncated = null;
+            if (parseNode.GetChildNode("latencyMs") is null) { _explicitNullValueLatencyMs = default!; _explicitNullProperties?.Remove("latencyMs"); }
+            else if (parseNode.GetChildNode("latencyMs") is { } nullNodeLatencyMs && nullNodeLatencyMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatencyMs = null;
+            if (parseNode.GetChildNode("outputCharacters") is null) { _explicitNullValueOutputCharacters = default!; _explicitNullProperties?.Remove("outputCharacters"); }
+            else if (parseNode.GetChildNode("outputCharacters") is { } nullNodeOutputCharacters && nullNodeOutputCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutputCharacters = null;
+            if (parseNode.GetChildNode("resolvedModel") is null) { _explicitNullValueResolvedModel = default!; _explicitNullProperties?.Remove("resolvedModel"); }
+            else if (parseNode.GetChildNode("resolvedModel") is { } nullNodeResolvedModel && nullNodeResolvedModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolvedModel = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of characters in the input sent to the model. Aligns with the billing unit.</summary>
-        public int? InputCharacters { get => _explicitNullValueInputCharacters; set { _explicitNullValueInputCharacters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputCharacters"); else _explicitNullProperties?.Remove("inputCharacters"); } }
+        public int? InputCharacters { get => _explicitNullValueInputCharacters; set { _explicitNullValueInputCharacters = value; AdditionalData?.Remove("inputCharacters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputCharacters"); else _explicitNullProperties?.Remove("inputCharacters"); } }
         private int? _explicitNullValueInputCharacters = default!;
         /// <summary>Whether the conversation input was truncated to fit the model&apos;s context window.</summary>
-        public bool? InputTruncated { get => _explicitNullValueInputTruncated; set { _explicitNullValueInputTruncated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputTruncated"); else _explicitNullProperties?.Remove("inputTruncated"); } }
+        public bool? InputTruncated { get => _explicitNullValueInputTruncated; set { _explicitNullValueInputTruncated = value; AdditionalData?.Remove("inputTruncated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputTruncated"); else _explicitNullProperties?.Remove("inputTruncated"); } }
         private bool? _explicitNullValueInputTruncated = default!;
         /// <summary>Operator execution time in milliseconds.</summary>
-        public int? LatencyMs { get => _explicitNullValueLatencyMs; set { _explicitNullValueLatencyMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latencyMs"); else _explicitNullProperties?.Remove("latencyMs"); } }
+        public int? LatencyMs { get => _explicitNullValueLatencyMs; set { _explicitNullValueLatencyMs = value; AdditionalData?.Remove("latencyMs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latencyMs"); else _explicitNullProperties?.Remove("latencyMs"); } }
         private int? _explicitNullValueLatencyMs = default!;
         /// <summary>Number of characters in the model&apos;s response. Aligns with the billing unit.</summary>
-        public int? OutputCharacters { get => _explicitNullValueOutputCharacters; set { _explicitNullValueOutputCharacters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputCharacters"); else _explicitNullProperties?.Remove("outputCharacters"); } }
+        public int? OutputCharacters { get => _explicitNullValueOutputCharacters; set { _explicitNullValueOutputCharacters = value; AdditionalData?.Remove("outputCharacters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputCharacters"); else _explicitNullProperties?.Remove("outputCharacters"); } }
         private int? _explicitNullValueOutputCharacters = default!;
         /// <summary>The underlying LLM model used for this execution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResolvedModel { get => _explicitNullValueResolvedModel; set { _explicitNullValueResolvedModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolvedModel"); else _explicitNullProperties?.Remove("resolvedModel"); } }
+        public string? ResolvedModel { get => _explicitNullValueResolvedModel; set { _explicitNullValueResolvedModel = value; AdditionalData?.Remove("resolvedModel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolvedModel"); else _explicitNullProperties?.Remove("resolvedModel"); } }
         private string? _explicitNullValueResolvedModel = default!;
 #nullable restore
 #else
-        public string ResolvedModel { get => _explicitNullValueResolvedModel; set { _explicitNullValueResolvedModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolvedModel"); else _explicitNullProperties?.Remove("resolvedModel"); } }
+        public string ResolvedModel { get => _explicitNullValueResolvedModel; set { _explicitNullValueResolvedModel = value; AdditionalData?.Remove("resolvedModel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolvedModel"); else _explicitNullProperties?.Remove("resolvedModel"); } }
         private string _explicitNullValueResolvedModel = default!;
 #endif
         /// <summary>

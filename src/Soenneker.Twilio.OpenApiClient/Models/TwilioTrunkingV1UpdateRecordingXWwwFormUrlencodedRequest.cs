@@ -17,17 +17,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
-            if (parseNode.GetChildNode("Trim") is { } nullNodeTrim && nullNodeTrim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trim = null;
+            if (parseNode.GetChildNode("Mode") is null) { _explicitNullValueMode = default!; _explicitNullProperties?.Remove("Mode"); }
+            else if (parseNode.GetChildNode("Mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
+            if (parseNode.GetChildNode("Trim") is null) { _explicitNullValueTrim = default!; _explicitNullProperties?.Remove("Trim"); }
+            else if (parseNode.GetChildNode("Trim") is { } nullNodeTrim && nullNodeTrim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trim = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The recording mode for the trunk. Can be do-not-record (default), record-from-ringing, record-from-answer, record-from-ringing-dual, or record-from-answer-dual.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumRecordingMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Mode"); else _explicitNullProperties?.Remove("Mode"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumRecordingMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; AdditionalData?.Remove("Mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Mode"); else _explicitNullProperties?.Remove("Mode"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumRecordingMode? _explicitNullValueMode = default!;
         /// <summary>The recording trim setting for the trunk. Can be do-not-trim (default) or trim-silence.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumRecordingTrim? Trim { get => _explicitNullValueTrim; set { _explicitNullValueTrim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Trim"); else _explicitNullProperties?.Remove("Trim"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumRecordingTrim? Trim { get => _explicitNullValueTrim; set { _explicitNullValueTrim = value; AdditionalData?.Remove("Trim"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Trim"); else _explicitNullProperties?.Remove("Trim"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumRecordingTrim? _explicitNullValueTrim = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1UpdateRecordingXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -54,8 +56,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Mode", n => { Mode = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumRecordingMode>(); } },
-                { "Trim", n => { Trim = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumRecordingTrim>(); } },
+                { "Mode", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumRecordingMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMode = default; _explicitNullProperties?.Remove("Mode"); AdditionalData["Mode"] = unknown; } else { Mode = parsed; AdditionalData.Remove("Mode"); } } },
+                { "Trim", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingEnumRecordingTrim>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTrim = default; _explicitNullProperties?.Remove("Trim"); AdditionalData["Trim"] = unknown; } else { Trim = parsed; AdditionalData.Remove("Trim"); } } },
             };
         }
         /// <summary>

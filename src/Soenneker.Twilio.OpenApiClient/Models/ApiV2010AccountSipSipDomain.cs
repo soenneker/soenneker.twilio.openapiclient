@@ -17,37 +17,58 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("api_version") is { } nullNodeApiVersion && nullNodeApiVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiVersion = null;
-            if (parseNode.GetChildNode("auth_type") is { } nullNodeAuthType && nullNodeAuthType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthType = null;
-            if (parseNode.GetChildNode("byoc_trunk_sid") is { } nullNodeByocTrunkSid && nullNodeByocTrunkSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByocTrunkSid = null;
-            if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
-            if (parseNode.GetChildNode("date_updated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
-            if (parseNode.GetChildNode("domain_name") is { } nullNodeDomainName && nullNodeDomainName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainName = null;
-            if (parseNode.GetChildNode("emergency_caller_sid") is { } nullNodeEmergencyCallerSid && nullNodeEmergencyCallerSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmergencyCallerSid = null;
-            if (parseNode.GetChildNode("emergency_calling_enabled") is { } nullNodeEmergencyCallingEnabled && nullNodeEmergencyCallingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmergencyCallingEnabled = null;
-            if (parseNode.GetChildNode("friendly_name") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("secure") is { } nullNodeSecure && nullNodeSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secure = null;
-            if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
-            if (parseNode.GetChildNode("sip_registration") is { } nullNodeSipRegistration && nullNodeSipRegistration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SipRegistration = null;
-            if (parseNode.GetChildNode("subresource_uris") is { } nullNodeSubresourceUris && nullNodeSubresourceUris.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubresourceUris = null;
-            if (parseNode.GetChildNode("uri") is { } nullNodeUri && nullNodeUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uri = null;
-            if (parseNode.GetChildNode("voice_fallback_method") is { } nullNodeVoiceFallbackMethod && nullNodeVoiceFallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceFallbackMethod = null;
-            if (parseNode.GetChildNode("voice_fallback_url") is { } nullNodeVoiceFallbackUrl && nullNodeVoiceFallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceFallbackUrl = null;
-            if (parseNode.GetChildNode("voice_method") is { } nullNodeVoiceMethod && nullNodeVoiceMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceMethod = null;
-            if (parseNode.GetChildNode("voice_status_callback_method") is { } nullNodeVoiceStatusCallbackMethod && nullNodeVoiceStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceStatusCallbackMethod = null;
-            if (parseNode.GetChildNode("voice_status_callback_url") is { } nullNodeVoiceStatusCallbackUrl && nullNodeVoiceStatusCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceStatusCallbackUrl = null;
-            if (parseNode.GetChildNode("voice_url") is { } nullNodeVoiceUrl && nullNodeVoiceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceUrl = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("api_version") is null) { _explicitNullValueApiVersion = default!; _explicitNullProperties?.Remove("api_version"); }
+            else if (parseNode.GetChildNode("api_version") is { } nullNodeApiVersion && nullNodeApiVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiVersion = null;
+            if (parseNode.GetChildNode("auth_type") is null) { _explicitNullValueAuthType = default!; _explicitNullProperties?.Remove("auth_type"); }
+            else if (parseNode.GetChildNode("auth_type") is { } nullNodeAuthType && nullNodeAuthType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthType = null;
+            if (parseNode.GetChildNode("byoc_trunk_sid") is null) { _explicitNullValueByocTrunkSid = default!; _explicitNullProperties?.Remove("byoc_trunk_sid"); }
+            else if (parseNode.GetChildNode("byoc_trunk_sid") is { } nullNodeByocTrunkSid && nullNodeByocTrunkSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByocTrunkSid = null;
+            if (parseNode.GetChildNode("date_created") is null) { _explicitNullValueDateCreated = default!; _explicitNullProperties?.Remove("date_created"); }
+            else if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("date_updated") is null) { _explicitNullValueDateUpdated = default!; _explicitNullProperties?.Remove("date_updated"); }
+            else if (parseNode.GetChildNode("date_updated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
+            if (parseNode.GetChildNode("domain_name") is null) { _explicitNullValueDomainName = default!; _explicitNullProperties?.Remove("domain_name"); }
+            else if (parseNode.GetChildNode("domain_name") is { } nullNodeDomainName && nullNodeDomainName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainName = null;
+            if (parseNode.GetChildNode("emergency_caller_sid") is null) { _explicitNullValueEmergencyCallerSid = default!; _explicitNullProperties?.Remove("emergency_caller_sid"); }
+            else if (parseNode.GetChildNode("emergency_caller_sid") is { } nullNodeEmergencyCallerSid && nullNodeEmergencyCallerSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmergencyCallerSid = null;
+            if (parseNode.GetChildNode("emergency_calling_enabled") is null) { _explicitNullValueEmergencyCallingEnabled = default!; _explicitNullProperties?.Remove("emergency_calling_enabled"); }
+            else if (parseNode.GetChildNode("emergency_calling_enabled") is { } nullNodeEmergencyCallingEnabled && nullNodeEmergencyCallingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmergencyCallingEnabled = null;
+            if (parseNode.GetChildNode("friendly_name") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("friendly_name"); }
+            else if (parseNode.GetChildNode("friendly_name") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("secure") is null) { _explicitNullValueSecure = default!; _explicitNullProperties?.Remove("secure"); }
+            else if (parseNode.GetChildNode("secure") is { } nullNodeSecure && nullNodeSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secure = null;
+            if (parseNode.GetChildNode("sid") is null) { _explicitNullValueSid = default!; _explicitNullProperties?.Remove("sid"); }
+            else if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
+            if (parseNode.GetChildNode("sip_registration") is null) { _explicitNullValueSipRegistration = default!; _explicitNullProperties?.Remove("sip_registration"); }
+            else if (parseNode.GetChildNode("sip_registration") is { } nullNodeSipRegistration && nullNodeSipRegistration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SipRegistration = null;
+            if (parseNode.GetChildNode("subresource_uris") is null) { _explicitNullValueSubresourceUris = default!; _explicitNullProperties?.Remove("subresource_uris"); }
+            else if (parseNode.GetChildNode("subresource_uris") is { } nullNodeSubresourceUris && nullNodeSubresourceUris.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubresourceUris = null;
+            if (parseNode.GetChildNode("uri") is null) { _explicitNullValueUri = default!; _explicitNullProperties?.Remove("uri"); }
+            else if (parseNode.GetChildNode("uri") is { } nullNodeUri && nullNodeUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uri = null;
+            if (parseNode.GetChildNode("voice_fallback_method") is null) { _explicitNullValueVoiceFallbackMethod = default!; _explicitNullProperties?.Remove("voice_fallback_method"); }
+            else if (parseNode.GetChildNode("voice_fallback_method") is { } nullNodeVoiceFallbackMethod && nullNodeVoiceFallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceFallbackMethod = null;
+            if (parseNode.GetChildNode("voice_fallback_url") is null) { _explicitNullValueVoiceFallbackUrl = default!; _explicitNullProperties?.Remove("voice_fallback_url"); }
+            else if (parseNode.GetChildNode("voice_fallback_url") is { } nullNodeVoiceFallbackUrl && nullNodeVoiceFallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceFallbackUrl = null;
+            if (parseNode.GetChildNode("voice_method") is null) { _explicitNullValueVoiceMethod = default!; _explicitNullProperties?.Remove("voice_method"); }
+            else if (parseNode.GetChildNode("voice_method") is { } nullNodeVoiceMethod && nullNodeVoiceMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceMethod = null;
+            if (parseNode.GetChildNode("voice_status_callback_method") is null) { _explicitNullValueVoiceStatusCallbackMethod = default!; _explicitNullProperties?.Remove("voice_status_callback_method"); }
+            else if (parseNode.GetChildNode("voice_status_callback_method") is { } nullNodeVoiceStatusCallbackMethod && nullNodeVoiceStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceStatusCallbackMethod = null;
+            if (parseNode.GetChildNode("voice_status_callback_url") is null) { _explicitNullValueVoiceStatusCallbackUrl = default!; _explicitNullProperties?.Remove("voice_status_callback_url"); }
+            else if (parseNode.GetChildNode("voice_status_callback_url") is { } nullNodeVoiceStatusCallbackUrl && nullNodeVoiceStatusCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceStatusCallbackUrl = null;
+            if (parseNode.GetChildNode("voice_url") is null) { _explicitNullValueVoiceUrl = default!; _explicitNullProperties?.Remove("voice_url"); }
+            else if (parseNode.GetChildNode("voice_url") is { } nullNodeVoiceUrl && nullNodeVoiceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceUrl = null;
         }
 
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the SipDomain resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -55,159 +76,159 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The API version used to process the call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_version"); else _explicitNullProperties?.Remove("api_version"); } }
+        public string? ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; AdditionalData?.Remove("api_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_version"); else _explicitNullProperties?.Remove("api_version"); } }
         private string? _explicitNullValueApiVersion = default!;
 #nullable restore
 #else
-        public string ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_version"); else _explicitNullProperties?.Remove("api_version"); } }
+        public string ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; AdditionalData?.Remove("api_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_version"); else _explicitNullProperties?.Remove("api_version"); } }
         private string _explicitNullValueApiVersion = default!;
 #endif
         /// <summary>The types of authentication you have mapped to your domain. Can be: `IP_ACL` and `CREDENTIAL_LIST`. If you have both defined for your domain, both will be returned in a comma delimited string. If `auth_type` is not defined, the domain will not be able to receive any traffic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthType { get => _explicitNullValueAuthType; set { _explicitNullValueAuthType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_type"); else _explicitNullProperties?.Remove("auth_type"); } }
+        public string? AuthType { get => _explicitNullValueAuthType; set { _explicitNullValueAuthType = value; AdditionalData?.Remove("auth_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_type"); else _explicitNullProperties?.Remove("auth_type"); } }
         private string? _explicitNullValueAuthType = default!;
 #nullable restore
 #else
-        public string AuthType { get => _explicitNullValueAuthType; set { _explicitNullValueAuthType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_type"); else _explicitNullProperties?.Remove("auth_type"); } }
+        public string AuthType { get => _explicitNullValueAuthType; set { _explicitNullValueAuthType = value; AdditionalData?.Remove("auth_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_type"); else _explicitNullProperties?.Remove("auth_type"); } }
         private string _explicitNullValueAuthType = default!;
 #endif
         /// <summary>The SID of the BYOC Trunk(Bring Your Own Carrier) resource that the Sip Domain will be associated with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ByocTrunkSid { get => _explicitNullValueByocTrunkSid; set { _explicitNullValueByocTrunkSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byoc_trunk_sid"); else _explicitNullProperties?.Remove("byoc_trunk_sid"); } }
+        public string? ByocTrunkSid { get => _explicitNullValueByocTrunkSid; set { _explicitNullValueByocTrunkSid = value; AdditionalData?.Remove("byoc_trunk_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byoc_trunk_sid"); else _explicitNullProperties?.Remove("byoc_trunk_sid"); } }
         private string? _explicitNullValueByocTrunkSid = default!;
 #nullable restore
 #else
-        public string ByocTrunkSid { get => _explicitNullValueByocTrunkSid; set { _explicitNullValueByocTrunkSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byoc_trunk_sid"); else _explicitNullProperties?.Remove("byoc_trunk_sid"); } }
+        public string ByocTrunkSid { get => _explicitNullValueByocTrunkSid; set { _explicitNullValueByocTrunkSid = value; AdditionalData?.Remove("byoc_trunk_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byoc_trunk_sid"); else _explicitNullProperties?.Remove("byoc_trunk_sid"); } }
         private string _explicitNullValueByocTrunkSid = default!;
 #endif
         /// <summary>The date and time in GMT that the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
+        public string? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; AdditionalData?.Remove("date_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
         private string? _explicitNullValueDateCreated = default!;
 #nullable restore
 #else
-        public string DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
+        public string DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; AdditionalData?.Remove("date_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
         private string _explicitNullValueDateCreated = default!;
 #endif
         /// <summary>The date and time in GMT that the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
+        public string? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; AdditionalData?.Remove("date_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
         private string? _explicitNullValueDateUpdated = default!;
 #nullable restore
 #else
-        public string DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
+        public string DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; AdditionalData?.Remove("date_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
         private string _explicitNullValueDateUpdated = default!;
 #endif
         /// <summary>The unique address you reserve on Twilio to which you route your SIP traffic. Domain names can contain letters, digits, and &quot;-&quot; and must end with `sip.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DomainName { get => _explicitNullValueDomainName; set { _explicitNullValueDomainName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_name"); else _explicitNullProperties?.Remove("domain_name"); } }
+        public string? DomainName { get => _explicitNullValueDomainName; set { _explicitNullValueDomainName = value; AdditionalData?.Remove("domain_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_name"); else _explicitNullProperties?.Remove("domain_name"); } }
         private string? _explicitNullValueDomainName = default!;
 #nullable restore
 #else
-        public string DomainName { get => _explicitNullValueDomainName; set { _explicitNullValueDomainName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_name"); else _explicitNullProperties?.Remove("domain_name"); } }
+        public string DomainName { get => _explicitNullValueDomainName; set { _explicitNullValueDomainName = value; AdditionalData?.Remove("domain_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_name"); else _explicitNullProperties?.Remove("domain_name"); } }
         private string _explicitNullValueDomainName = default!;
 #endif
         /// <summary>Whether an emergency caller sid is configured for the domain. If present, this phone number will be used as the callback for the emergency call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmergencyCallerSid { get => _explicitNullValueEmergencyCallerSid; set { _explicitNullValueEmergencyCallerSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emergency_caller_sid"); else _explicitNullProperties?.Remove("emergency_caller_sid"); } }
+        public string? EmergencyCallerSid { get => _explicitNullValueEmergencyCallerSid; set { _explicitNullValueEmergencyCallerSid = value; AdditionalData?.Remove("emergency_caller_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emergency_caller_sid"); else _explicitNullProperties?.Remove("emergency_caller_sid"); } }
         private string? _explicitNullValueEmergencyCallerSid = default!;
 #nullable restore
 #else
-        public string EmergencyCallerSid { get => _explicitNullValueEmergencyCallerSid; set { _explicitNullValueEmergencyCallerSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emergency_caller_sid"); else _explicitNullProperties?.Remove("emergency_caller_sid"); } }
+        public string EmergencyCallerSid { get => _explicitNullValueEmergencyCallerSid; set { _explicitNullValueEmergencyCallerSid = value; AdditionalData?.Remove("emergency_caller_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emergency_caller_sid"); else _explicitNullProperties?.Remove("emergency_caller_sid"); } }
         private string _explicitNullValueEmergencyCallerSid = default!;
 #endif
         /// <summary>Whether emergency calling is enabled for the domain. If enabled, allows emergency calls on the domain from phone numbers with validated addresses.</summary>
-        public bool? EmergencyCallingEnabled { get => _explicitNullValueEmergencyCallingEnabled; set { _explicitNullValueEmergencyCallingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emergency_calling_enabled"); else _explicitNullProperties?.Remove("emergency_calling_enabled"); } }
+        public bool? EmergencyCallingEnabled { get => _explicitNullValueEmergencyCallingEnabled; set { _explicitNullValueEmergencyCallingEnabled = value; AdditionalData?.Remove("emergency_calling_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emergency_calling_enabled"); else _explicitNullProperties?.Remove("emergency_calling_enabled"); } }
         private bool? _explicitNullValueEmergencyCallingEnabled = default!;
         /// <summary>The string that you assigned to describe the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("friendly_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("friendly_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>Whether secure SIP is enabled for the domain. If enabled, TLS will be enforced and SRTP will be negotiated on all incoming calls to this sip domain.</summary>
-        public bool? Secure { get => _explicitNullValueSecure; set { _explicitNullValueSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secure"); else _explicitNullProperties?.Remove("secure"); } }
+        public bool? Secure { get => _explicitNullValueSecure; set { _explicitNullValueSecure = value; AdditionalData?.Remove("secure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secure"); else _explicitNullProperties?.Remove("secure"); } }
         private bool? _explicitNullValueSecure = default!;
         /// <summary>The unique string that that we created to identify the SipDomain resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string? _explicitNullValueSid = default!;
 #nullable restore
 #else
-        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string _explicitNullValueSid = default!;
 #endif
         /// <summary>Whether to allow SIP Endpoints to register with the domain to receive calls.</summary>
-        public bool? SipRegistration { get => _explicitNullValueSipRegistration; set { _explicitNullValueSipRegistration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sip_registration"); else _explicitNullProperties?.Remove("sip_registration"); } }
+        public bool? SipRegistration { get => _explicitNullValueSipRegistration; set { _explicitNullValueSipRegistration = value; AdditionalData?.Remove("sip_registration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sip_registration"); else _explicitNullProperties?.Remove("sip_registration"); } }
         private bool? _explicitNullValueSipRegistration = default!;
         /// <summary>A list of mapping resources associated with the SIP Domain resource identified by their relative URIs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty? SubresourceUris { get => _explicitNullValueSubresourceUris; set { _explicitNullValueSubresourceUris = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subresource_uris"); else _explicitNullProperties?.Remove("subresource_uris"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty? SubresourceUris { get => _explicitNullValueSubresourceUris; set { _explicitNullValueSubresourceUris = value; AdditionalData?.Remove("subresource_uris"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subresource_uris"); else _explicitNullProperties?.Remove("subresource_uris"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty? _explicitNullValueSubresourceUris = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty SubresourceUris { get => _explicitNullValueSubresourceUris; set { _explicitNullValueSubresourceUris = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subresource_uris"); else _explicitNullProperties?.Remove("subresource_uris"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty SubresourceUris { get => _explicitNullValueSubresourceUris; set { _explicitNullValueSubresourceUris = value; AdditionalData?.Remove("subresource_uris"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subresource_uris"); else _explicitNullProperties?.Remove("subresource_uris"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty _explicitNullValueSubresourceUris = default!;
 #endif
         /// <summary>The URI of the resource, relative to `https://api.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Uri { get => _explicitNullValueUri; set { _explicitNullValueUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uri"); else _explicitNullProperties?.Remove("uri"); } }
+        public string? Uri { get => _explicitNullValueUri; set { _explicitNullValueUri = value; AdditionalData?.Remove("uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uri"); else _explicitNullProperties?.Remove("uri"); } }
         private string? _explicitNullValueUri = default!;
 #nullable restore
 #else
-        public string Uri { get => _explicitNullValueUri; set { _explicitNullValueUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uri"); else _explicitNullProperties?.Remove("uri"); } }
+        public string Uri { get => _explicitNullValueUri; set { _explicitNullValueUri = value; AdditionalData?.Remove("uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uri"); else _explicitNullProperties?.Remove("uri"); } }
         private string _explicitNullValueUri = default!;
 #endif
         /// <summary>The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceFallbackMethod? VoiceFallbackMethod { get => _explicitNullValueVoiceFallbackMethod; set { _explicitNullValueVoiceFallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_fallback_method"); else _explicitNullProperties?.Remove("voice_fallback_method"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceFallbackMethod? VoiceFallbackMethod { get => _explicitNullValueVoiceFallbackMethod; set { _explicitNullValueVoiceFallbackMethod = value; AdditionalData?.Remove("voice_fallback_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_fallback_method"); else _explicitNullProperties?.Remove("voice_fallback_method"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceFallbackMethod? _explicitNullValueVoiceFallbackMethod = default!;
         /// <summary>The URL that we call when an error occurs while retrieving or executing the TwiML requested from `voice_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VoiceFallbackUrl { get => _explicitNullValueVoiceFallbackUrl; set { _explicitNullValueVoiceFallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_fallback_url"); else _explicitNullProperties?.Remove("voice_fallback_url"); } }
+        public string? VoiceFallbackUrl { get => _explicitNullValueVoiceFallbackUrl; set { _explicitNullValueVoiceFallbackUrl = value; AdditionalData?.Remove("voice_fallback_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_fallback_url"); else _explicitNullProperties?.Remove("voice_fallback_url"); } }
         private string? _explicitNullValueVoiceFallbackUrl = default!;
 #nullable restore
 #else
-        public string VoiceFallbackUrl { get => _explicitNullValueVoiceFallbackUrl; set { _explicitNullValueVoiceFallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_fallback_url"); else _explicitNullProperties?.Remove("voice_fallback_url"); } }
+        public string VoiceFallbackUrl { get => _explicitNullValueVoiceFallbackUrl; set { _explicitNullValueVoiceFallbackUrl = value; AdditionalData?.Remove("voice_fallback_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_fallback_url"); else _explicitNullProperties?.Remove("voice_fallback_url"); } }
         private string _explicitNullValueVoiceFallbackUrl = default!;
 #endif
         /// <summary>The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceMethod? VoiceMethod { get => _explicitNullValueVoiceMethod; set { _explicitNullValueVoiceMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_method"); else _explicitNullProperties?.Remove("voice_method"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceMethod? VoiceMethod { get => _explicitNullValueVoiceMethod; set { _explicitNullValueVoiceMethod = value; AdditionalData?.Remove("voice_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_method"); else _explicitNullProperties?.Remove("voice_method"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceMethod? _explicitNullValueVoiceMethod = default!;
         /// <summary>The HTTP method we use to call `voice_status_callback_url`. Either `GET` or `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceStatusCallbackMethod? VoiceStatusCallbackMethod { get => _explicitNullValueVoiceStatusCallbackMethod; set { _explicitNullValueVoiceStatusCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_status_callback_method"); else _explicitNullProperties?.Remove("voice_status_callback_method"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceStatusCallbackMethod? VoiceStatusCallbackMethod { get => _explicitNullValueVoiceStatusCallbackMethod; set { _explicitNullValueVoiceStatusCallbackMethod = value; AdditionalData?.Remove("voice_status_callback_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_status_callback_method"); else _explicitNullProperties?.Remove("voice_status_callback_method"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceStatusCallbackMethod? _explicitNullValueVoiceStatusCallbackMethod = default!;
         /// <summary>The URL that we call to pass status parameters (such as call ended) to your application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VoiceStatusCallbackUrl { get => _explicitNullValueVoiceStatusCallbackUrl; set { _explicitNullValueVoiceStatusCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_status_callback_url"); else _explicitNullProperties?.Remove("voice_status_callback_url"); } }
+        public string? VoiceStatusCallbackUrl { get => _explicitNullValueVoiceStatusCallbackUrl; set { _explicitNullValueVoiceStatusCallbackUrl = value; AdditionalData?.Remove("voice_status_callback_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_status_callback_url"); else _explicitNullProperties?.Remove("voice_status_callback_url"); } }
         private string? _explicitNullValueVoiceStatusCallbackUrl = default!;
 #nullable restore
 #else
-        public string VoiceStatusCallbackUrl { get => _explicitNullValueVoiceStatusCallbackUrl; set { _explicitNullValueVoiceStatusCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_status_callback_url"); else _explicitNullProperties?.Remove("voice_status_callback_url"); } }
+        public string VoiceStatusCallbackUrl { get => _explicitNullValueVoiceStatusCallbackUrl; set { _explicitNullValueVoiceStatusCallbackUrl = value; AdditionalData?.Remove("voice_status_callback_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_status_callback_url"); else _explicitNullProperties?.Remove("voice_status_callback_url"); } }
         private string _explicitNullValueVoiceStatusCallbackUrl = default!;
 #endif
         /// <summary>The URL we call using the `voice_method` when the domain receives a call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VoiceUrl { get => _explicitNullValueVoiceUrl; set { _explicitNullValueVoiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_url"); else _explicitNullProperties?.Remove("voice_url"); } }
+        public string? VoiceUrl { get => _explicitNullValueVoiceUrl; set { _explicitNullValueVoiceUrl = value; AdditionalData?.Remove("voice_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_url"); else _explicitNullProperties?.Remove("voice_url"); } }
         private string? _explicitNullValueVoiceUrl = default!;
 #nullable restore
 #else
-        public string VoiceUrl { get => _explicitNullValueVoiceUrl; set { _explicitNullValueVoiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_url"); else _explicitNullProperties?.Remove("voice_url"); } }
+        public string VoiceUrl { get => _explicitNullValueVoiceUrl; set { _explicitNullValueVoiceUrl = value; AdditionalData?.Remove("voice_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_url"); else _explicitNullProperties?.Remove("voice_url"); } }
         private string _explicitNullValueVoiceUrl = default!;
 #endif
         /// <summary>
@@ -250,10 +271,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "sip_registration", n => { SipRegistration = n.GetBoolValue(); } },
                 { "subresource_uris", n => { SubresourceUris = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty>(global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainSubresourceUrisProperty.CreateFromDiscriminatorValue); } },
                 { "uri", n => { Uri = n.GetStringValue(); } },
-                { "voice_fallback_method", n => { VoiceFallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceFallbackMethod>(); } },
+                { "voice_fallback_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceFallbackMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVoiceFallbackMethod = default; _explicitNullProperties?.Remove("voice_fallback_method"); AdditionalData["voice_fallback_method"] = unknown; } else { VoiceFallbackMethod = parsed; AdditionalData.Remove("voice_fallback_method"); } } },
                 { "voice_fallback_url", n => { VoiceFallbackUrl = n.GetStringValue(); } },
-                { "voice_method", n => { VoiceMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceMethod>(); } },
-                { "voice_status_callback_method", n => { VoiceStatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceStatusCallbackMethod>(); } },
+                { "voice_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVoiceMethod = default; _explicitNullProperties?.Remove("voice_method"); AdditionalData["voice_method"] = unknown; } else { VoiceMethod = parsed; AdditionalData.Remove("voice_method"); } } },
+                { "voice_status_callback_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ApiV2010AccountSipSipDomainVoiceStatusCallbackMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVoiceStatusCallbackMethod = default; _explicitNullProperties?.Remove("voice_status_callback_method"); AdditionalData["voice_status_callback_method"] = unknown; } else { VoiceStatusCallbackMethod = parsed; AdditionalData.Remove("voice_status_callback_method"); } } },
                 { "voice_status_callback_url", n => { VoiceStatusCallbackUrl = n.GetStringValue(); } },
                 { "voice_url", n => { VoiceUrl = n.GetStringValue(); } },
             };

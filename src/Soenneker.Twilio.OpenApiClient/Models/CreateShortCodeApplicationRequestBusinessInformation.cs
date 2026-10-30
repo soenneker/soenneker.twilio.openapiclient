@@ -18,7 +18,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customer_facing_profile") is { } nullNodeCustomerFacingProfile && nullNodeCustomerFacingProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerFacingProfile = null;
+            if (parseNode.GetChildNode("customer_facing_profile") is null) { _explicitNullValueCustomerFacingProfile = default!; _explicitNullProperties?.Remove("customer_facing_profile"); }
+            else if (parseNode.GetChildNode("customer_facing_profile") is { } nullNodeCustomerFacingProfile && nullNodeCustomerFacingProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerFacingProfile = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The Compliance Profile SID for the customer-facing business profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerFacingProfile { get => _explicitNullValueCustomerFacingProfile; set { _explicitNullValueCustomerFacingProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_facing_profile"); else _explicitNullProperties?.Remove("customer_facing_profile"); } }
+        public string? CustomerFacingProfile { get => _explicitNullValueCustomerFacingProfile; set { _explicitNullValueCustomerFacingProfile = value; AdditionalData?.Remove("customer_facing_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_facing_profile"); else _explicitNullProperties?.Remove("customer_facing_profile"); } }
         private string? _explicitNullValueCustomerFacingProfile = default!;
 #nullable restore
 #else
-        public string CustomerFacingProfile { get => _explicitNullValueCustomerFacingProfile; set { _explicitNullValueCustomerFacingProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_facing_profile"); else _explicitNullProperties?.Remove("customer_facing_profile"); } }
+        public string CustomerFacingProfile { get => _explicitNullValueCustomerFacingProfile; set { _explicitNullValueCustomerFacingProfile = value; AdditionalData?.Remove("customer_facing_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_facing_profile"); else _explicitNullProperties?.Remove("customer_facing_profile"); } }
         private string _explicitNullValueCustomerFacingProfile = default!;
 #endif
         /// <summary>

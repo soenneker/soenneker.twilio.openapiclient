@@ -18,15 +18,24 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("double_opt_in_message") is { } nullNodeDoubleOptInMessage && nullNodeDoubleOptInMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DoubleOptInMessage = null;
-            if (parseNode.GetChildNode("double_opt_in_process") is { } nullNodeDoubleOptInProcess && nullNodeDoubleOptInProcess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DoubleOptInProcess = null;
-            if (parseNode.GetChildNode("double_opt_in_response_message") is { } nullNodeDoubleOptInResponseMessage && nullNodeDoubleOptInResponseMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DoubleOptInResponseMessage = null;
-            if (parseNode.GetChildNode("ivr_message") is { } nullNodeIvrMessage && nullNodeIvrMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IvrMessage = null;
-            if (parseNode.GetChildNode("keyword_message") is { } nullNodeKeywordMessage && nullNodeKeywordMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeywordMessage = null;
-            if (parseNode.GetChildNode("online_web_form_message") is { } nullNodeOnlineWebFormMessage && nullNodeOnlineWebFormMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlineWebFormMessage = null;
-            if (parseNode.GetChildNode("other_form_message") is { } nullNodeOtherFormMessage && nullNodeOtherFormMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OtherFormMessage = null;
-            if (parseNode.GetChildNode("sign_up_confirmation_message") is { } nullNodeSignUpConfirmationMessage && nullNodeSignUpConfirmationMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignUpConfirmationMessage = null;
-            if (parseNode.GetChildNode("sign_up_options") is { } nullNodeSignUpOptions && nullNodeSignUpOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignUpOptions = null;
+            if (parseNode.GetChildNode("double_opt_in_message") is null) { _explicitNullValueDoubleOptInMessage = default!; _explicitNullProperties?.Remove("double_opt_in_message"); }
+            else if (parseNode.GetChildNode("double_opt_in_message") is { } nullNodeDoubleOptInMessage && nullNodeDoubleOptInMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DoubleOptInMessage = null;
+            if (parseNode.GetChildNode("double_opt_in_process") is null) { _explicitNullValueDoubleOptInProcess = default!; _explicitNullProperties?.Remove("double_opt_in_process"); }
+            else if (parseNode.GetChildNode("double_opt_in_process") is { } nullNodeDoubleOptInProcess && nullNodeDoubleOptInProcess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DoubleOptInProcess = null;
+            if (parseNode.GetChildNode("double_opt_in_response_message") is null) { _explicitNullValueDoubleOptInResponseMessage = default!; _explicitNullProperties?.Remove("double_opt_in_response_message"); }
+            else if (parseNode.GetChildNode("double_opt_in_response_message") is { } nullNodeDoubleOptInResponseMessage && nullNodeDoubleOptInResponseMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DoubleOptInResponseMessage = null;
+            if (parseNode.GetChildNode("ivr_message") is null) { _explicitNullValueIvrMessage = default!; _explicitNullProperties?.Remove("ivr_message"); }
+            else if (parseNode.GetChildNode("ivr_message") is { } nullNodeIvrMessage && nullNodeIvrMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IvrMessage = null;
+            if (parseNode.GetChildNode("keyword_message") is null) { _explicitNullValueKeywordMessage = default!; _explicitNullProperties?.Remove("keyword_message"); }
+            else if (parseNode.GetChildNode("keyword_message") is { } nullNodeKeywordMessage && nullNodeKeywordMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeywordMessage = null;
+            if (parseNode.GetChildNode("online_web_form_message") is null) { _explicitNullValueOnlineWebFormMessage = default!; _explicitNullProperties?.Remove("online_web_form_message"); }
+            else if (parseNode.GetChildNode("online_web_form_message") is { } nullNodeOnlineWebFormMessage && nullNodeOnlineWebFormMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlineWebFormMessage = null;
+            if (parseNode.GetChildNode("other_form_message") is null) { _explicitNullValueOtherFormMessage = default!; _explicitNullProperties?.Remove("other_form_message"); }
+            else if (parseNode.GetChildNode("other_form_message") is { } nullNodeOtherFormMessage && nullNodeOtherFormMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OtherFormMessage = null;
+            if (parseNode.GetChildNode("sign_up_confirmation_message") is null) { _explicitNullValueSignUpConfirmationMessage = default!; _explicitNullProperties?.Remove("sign_up_confirmation_message"); }
+            else if (parseNode.GetChildNode("sign_up_confirmation_message") is { } nullNodeSignUpConfirmationMessage && nullNodeSignUpConfirmationMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignUpConfirmationMessage = null;
+            if (parseNode.GetChildNode("sign_up_options") is null) { _explicitNullValueSignUpOptions = default!; _explicitNullProperties?.Remove("sign_up_options"); }
+            else if (parseNode.GetChildNode("sign_up_options") is { } nullNodeSignUpOptions && nullNodeSignUpOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignUpOptions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,84 +43,84 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The double_opt_in_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DoubleOptInMessage { get => _explicitNullValueDoubleOptInMessage; set { _explicitNullValueDoubleOptInMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("double_opt_in_message"); else _explicitNullProperties?.Remove("double_opt_in_message"); } }
+        public string? DoubleOptInMessage { get => _explicitNullValueDoubleOptInMessage; set { _explicitNullValueDoubleOptInMessage = value; AdditionalData?.Remove("double_opt_in_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("double_opt_in_message"); else _explicitNullProperties?.Remove("double_opt_in_message"); } }
         private string? _explicitNullValueDoubleOptInMessage = default!;
 #nullable restore
 #else
-        public string DoubleOptInMessage { get => _explicitNullValueDoubleOptInMessage; set { _explicitNullValueDoubleOptInMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("double_opt_in_message"); else _explicitNullProperties?.Remove("double_opt_in_message"); } }
+        public string DoubleOptInMessage { get => _explicitNullValueDoubleOptInMessage; set { _explicitNullValueDoubleOptInMessage = value; AdditionalData?.Remove("double_opt_in_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("double_opt_in_message"); else _explicitNullProperties?.Remove("double_opt_in_message"); } }
         private string _explicitNullValueDoubleOptInMessage = default!;
 #endif
         /// <summary>The double_opt_in_process property</summary>
-        public bool? DoubleOptInProcess { get => _explicitNullValueDoubleOptInProcess; set { _explicitNullValueDoubleOptInProcess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("double_opt_in_process"); else _explicitNullProperties?.Remove("double_opt_in_process"); } }
+        public bool? DoubleOptInProcess { get => _explicitNullValueDoubleOptInProcess; set { _explicitNullValueDoubleOptInProcess = value; AdditionalData?.Remove("double_opt_in_process"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("double_opt_in_process"); else _explicitNullProperties?.Remove("double_opt_in_process"); } }
         private bool? _explicitNullValueDoubleOptInProcess = default!;
         /// <summary>The double_opt_in_response_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DoubleOptInResponseMessage { get => _explicitNullValueDoubleOptInResponseMessage; set { _explicitNullValueDoubleOptInResponseMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("double_opt_in_response_message"); else _explicitNullProperties?.Remove("double_opt_in_response_message"); } }
+        public string? DoubleOptInResponseMessage { get => _explicitNullValueDoubleOptInResponseMessage; set { _explicitNullValueDoubleOptInResponseMessage = value; AdditionalData?.Remove("double_opt_in_response_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("double_opt_in_response_message"); else _explicitNullProperties?.Remove("double_opt_in_response_message"); } }
         private string? _explicitNullValueDoubleOptInResponseMessage = default!;
 #nullable restore
 #else
-        public string DoubleOptInResponseMessage { get => _explicitNullValueDoubleOptInResponseMessage; set { _explicitNullValueDoubleOptInResponseMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("double_opt_in_response_message"); else _explicitNullProperties?.Remove("double_opt_in_response_message"); } }
+        public string DoubleOptInResponseMessage { get => _explicitNullValueDoubleOptInResponseMessage; set { _explicitNullValueDoubleOptInResponseMessage = value; AdditionalData?.Remove("double_opt_in_response_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("double_opt_in_response_message"); else _explicitNullProperties?.Remove("double_opt_in_response_message"); } }
         private string _explicitNullValueDoubleOptInResponseMessage = default!;
 #endif
         /// <summary>The ivr_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IvrMessage { get => _explicitNullValueIvrMessage; set { _explicitNullValueIvrMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ivr_message"); else _explicitNullProperties?.Remove("ivr_message"); } }
+        public string? IvrMessage { get => _explicitNullValueIvrMessage; set { _explicitNullValueIvrMessage = value; AdditionalData?.Remove("ivr_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ivr_message"); else _explicitNullProperties?.Remove("ivr_message"); } }
         private string? _explicitNullValueIvrMessage = default!;
 #nullable restore
 #else
-        public string IvrMessage { get => _explicitNullValueIvrMessage; set { _explicitNullValueIvrMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ivr_message"); else _explicitNullProperties?.Remove("ivr_message"); } }
+        public string IvrMessage { get => _explicitNullValueIvrMessage; set { _explicitNullValueIvrMessage = value; AdditionalData?.Remove("ivr_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ivr_message"); else _explicitNullProperties?.Remove("ivr_message"); } }
         private string _explicitNullValueIvrMessage = default!;
 #endif
         /// <summary>The keyword_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? KeywordMessage { get => _explicitNullValueKeywordMessage; set { _explicitNullValueKeywordMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword_message"); else _explicitNullProperties?.Remove("keyword_message"); } }
+        public string? KeywordMessage { get => _explicitNullValueKeywordMessage; set { _explicitNullValueKeywordMessage = value; AdditionalData?.Remove("keyword_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword_message"); else _explicitNullProperties?.Remove("keyword_message"); } }
         private string? _explicitNullValueKeywordMessage = default!;
 #nullable restore
 #else
-        public string KeywordMessage { get => _explicitNullValueKeywordMessage; set { _explicitNullValueKeywordMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword_message"); else _explicitNullProperties?.Remove("keyword_message"); } }
+        public string KeywordMessage { get => _explicitNullValueKeywordMessage; set { _explicitNullValueKeywordMessage = value; AdditionalData?.Remove("keyword_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword_message"); else _explicitNullProperties?.Remove("keyword_message"); } }
         private string _explicitNullValueKeywordMessage = default!;
 #endif
         /// <summary>The online_web_form_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OnlineWebFormMessage { get => _explicitNullValueOnlineWebFormMessage; set { _explicitNullValueOnlineWebFormMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("online_web_form_message"); else _explicitNullProperties?.Remove("online_web_form_message"); } }
+        public string? OnlineWebFormMessage { get => _explicitNullValueOnlineWebFormMessage; set { _explicitNullValueOnlineWebFormMessage = value; AdditionalData?.Remove("online_web_form_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("online_web_form_message"); else _explicitNullProperties?.Remove("online_web_form_message"); } }
         private string? _explicitNullValueOnlineWebFormMessage = default!;
 #nullable restore
 #else
-        public string OnlineWebFormMessage { get => _explicitNullValueOnlineWebFormMessage; set { _explicitNullValueOnlineWebFormMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("online_web_form_message"); else _explicitNullProperties?.Remove("online_web_form_message"); } }
+        public string OnlineWebFormMessage { get => _explicitNullValueOnlineWebFormMessage; set { _explicitNullValueOnlineWebFormMessage = value; AdditionalData?.Remove("online_web_form_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("online_web_form_message"); else _explicitNullProperties?.Remove("online_web_form_message"); } }
         private string _explicitNullValueOnlineWebFormMessage = default!;
 #endif
         /// <summary>The other_form_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OtherFormMessage { get => _explicitNullValueOtherFormMessage; set { _explicitNullValueOtherFormMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_form_message"); else _explicitNullProperties?.Remove("other_form_message"); } }
+        public string? OtherFormMessage { get => _explicitNullValueOtherFormMessage; set { _explicitNullValueOtherFormMessage = value; AdditionalData?.Remove("other_form_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_form_message"); else _explicitNullProperties?.Remove("other_form_message"); } }
         private string? _explicitNullValueOtherFormMessage = default!;
 #nullable restore
 #else
-        public string OtherFormMessage { get => _explicitNullValueOtherFormMessage; set { _explicitNullValueOtherFormMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_form_message"); else _explicitNullProperties?.Remove("other_form_message"); } }
+        public string OtherFormMessage { get => _explicitNullValueOtherFormMessage; set { _explicitNullValueOtherFormMessage = value; AdditionalData?.Remove("other_form_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_form_message"); else _explicitNullProperties?.Remove("other_form_message"); } }
         private string _explicitNullValueOtherFormMessage = default!;
 #endif
         /// <summary>The sign_up_confirmation_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignUpConfirmationMessage { get => _explicitNullValueSignUpConfirmationMessage; set { _explicitNullValueSignUpConfirmationMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_up_confirmation_message"); else _explicitNullProperties?.Remove("sign_up_confirmation_message"); } }
+        public string? SignUpConfirmationMessage { get => _explicitNullValueSignUpConfirmationMessage; set { _explicitNullValueSignUpConfirmationMessage = value; AdditionalData?.Remove("sign_up_confirmation_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_up_confirmation_message"); else _explicitNullProperties?.Remove("sign_up_confirmation_message"); } }
         private string? _explicitNullValueSignUpConfirmationMessage = default!;
 #nullable restore
 #else
-        public string SignUpConfirmationMessage { get => _explicitNullValueSignUpConfirmationMessage; set { _explicitNullValueSignUpConfirmationMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_up_confirmation_message"); else _explicitNullProperties?.Remove("sign_up_confirmation_message"); } }
+        public string SignUpConfirmationMessage { get => _explicitNullValueSignUpConfirmationMessage; set { _explicitNullValueSignUpConfirmationMessage = value; AdditionalData?.Remove("sign_up_confirmation_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_up_confirmation_message"); else _explicitNullProperties?.Remove("sign_up_confirmation_message"); } }
         private string _explicitNullValueSignUpConfirmationMessage = default!;
 #endif
         /// <summary>The sign_up_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUpSignUpOptionsItem?>? SignUpOptions { get => _explicitNullValueSignUpOptions; set { _explicitNullValueSignUpOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_up_options"); else _explicitNullProperties?.Remove("sign_up_options"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUpSignUpOptionsItem?>? SignUpOptions { get => _explicitNullValueSignUpOptions; set { _explicitNullValueSignUpOptions = value; AdditionalData?.Remove("sign_up_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_up_options"); else _explicitNullProperties?.Remove("sign_up_options"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUpSignUpOptionsItem?>? _explicitNullValueSignUpOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUpSignUpOptionsItem?> SignUpOptions { get => _explicitNullValueSignUpOptions; set { _explicitNullValueSignUpOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_up_options"); else _explicitNullProperties?.Remove("sign_up_options"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUpSignUpOptionsItem?> SignUpOptions { get => _explicitNullValueSignUpOptions; set { _explicitNullValueSignUpOptions = value; AdditionalData?.Remove("sign_up_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_up_options"); else _explicitNullProperties?.Remove("sign_up_options"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseUserSignUpSignUpOptionsItem?> _explicitNullValueSignUpOptions = default!;
 #endif
         /// <summary>

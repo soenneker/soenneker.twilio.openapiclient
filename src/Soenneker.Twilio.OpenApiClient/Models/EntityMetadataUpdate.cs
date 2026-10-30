@@ -18,8 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("intelligenceOperator") is { } nullNodeIntelligenceOperator && nullNodeIntelligenceOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntelligenceOperator = null;
-            if (parseNode.GetChildNode("sourceType") is { } nullNodeSourceType && nullNodeSourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceType = null;
+            if (parseNode.GetChildNode("intelligenceOperator") is null) { _explicitNullValueIntelligenceOperator = default!; _explicitNullProperties?.Remove("intelligenceOperator"); }
+            else if (parseNode.GetChildNode("intelligenceOperator") is { } nullNodeIntelligenceOperator && nullNodeIntelligenceOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntelligenceOperator = null;
+            if (parseNode.GetChildNode("sourceType") is null) { _explicitNullValueSourceType = default!; _explicitNullProperties?.Remove("sourceType"); }
+            else if (parseNode.GetChildNode("sourceType") is { } nullNodeSourceType && nullNodeSourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Updatable fields of a custom field mapping sourced from a ConversationalIntelligence operator. At least one field must be present. Currentlyonly `field` can be modified; `operatorId` and `operatorName` cannot beupdated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSourceUpdate? IntelligenceOperator { get => _explicitNullValueIntelligenceOperator; set { _explicitNullValueIntelligenceOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intelligenceOperator"); else _explicitNullProperties?.Remove("intelligenceOperator"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSourceUpdate? IntelligenceOperator { get => _explicitNullValueIntelligenceOperator; set { _explicitNullValueIntelligenceOperator = value; AdditionalData?.Remove("intelligenceOperator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intelligenceOperator"); else _explicitNullProperties?.Remove("intelligenceOperator"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSourceUpdate? _explicitNullValueIntelligenceOperator = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSourceUpdate IntelligenceOperator { get => _explicitNullValueIntelligenceOperator; set { _explicitNullValueIntelligenceOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intelligenceOperator"); else _explicitNullProperties?.Remove("intelligenceOperator"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSourceUpdate IntelligenceOperator { get => _explicitNullValueIntelligenceOperator; set { _explicitNullValueIntelligenceOperator = value; AdditionalData?.Remove("intelligenceOperator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intelligenceOperator"); else _explicitNullProperties?.Remove("intelligenceOperator"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSourceUpdate _explicitNullValueIntelligenceOperator = default!;
 #endif
         /// <summary>The kind of entity that supplies the custom field&apos;s value. Each value hasa matching property on `entityMetadata` that carries that source&apos;sdetails. Supported values:- `INTELLIGENCE_OPERATOR`: the value is read from the output of a  Conversational Intelligence operator. Details go in  `entityMetadata.intelligenceOperator`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.SourceType? SourceType { get => _explicitNullValueSourceType; set { _explicitNullValueSourceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceType"); else _explicitNullProperties?.Remove("sourceType"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SourceType? SourceType { get => _explicitNullValueSourceType; set { _explicitNullValueSourceType = value; AdditionalData?.Remove("sourceType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceType"); else _explicitNullProperties?.Remove("sourceType"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.SourceType? _explicitNullValueSourceType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.EntityMetadataUpdate"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "intelligenceOperator", n => { IntelligenceOperator = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSourceUpdate>(global::Soenneker.Twilio.OpenApiClient.Models.IntelligenceOperatorSourceUpdate.CreateFromDiscriminatorValue); } },
-                { "sourceType", n => { SourceType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SourceType>(); } },
+                { "sourceType", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SourceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSourceType = default; _explicitNullProperties?.Remove("sourceType"); AdditionalData["sourceType"] = unknown; } else { SourceType = parsed; AdditionalData.Remove("sourceType"); } } },
             };
         }
         /// <summary>

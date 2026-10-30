@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PolicySid") is { } nullNodePolicySid && nullNodePolicySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicySid = null;
+            if (parseNode.GetChildNode("PolicySid") is null) { _explicitNullValuePolicySid = default!; _explicitNullProperties?.Remove("PolicySid"); }
+            else if (parseNode.GetChildNode("PolicySid") is { } nullNodePolicySid && nullNodePolicySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicySid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The unique string of a policy that is associated to the customer_profile resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PolicySid { get => _explicitNullValuePolicySid; set { _explicitNullValuePolicySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PolicySid"); else _explicitNullProperties?.Remove("PolicySid"); } }
+        public string? PolicySid { get => _explicitNullValuePolicySid; set { _explicitNullValuePolicySid = value; AdditionalData?.Remove("PolicySid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PolicySid"); else _explicitNullProperties?.Remove("PolicySid"); } }
         private string? _explicitNullValuePolicySid = default!;
 #nullable restore
 #else
-        public string PolicySid { get => _explicitNullValuePolicySid; set { _explicitNullValuePolicySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PolicySid"); else _explicitNullProperties?.Remove("PolicySid"); } }
+        public string PolicySid { get => _explicitNullValuePolicySid; set { _explicitNullValuePolicySid = value; AdditionalData?.Remove("PolicySid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PolicySid"); else _explicitNullProperties?.Remove("PolicySid"); } }
         private string _explicitNullValuePolicySid = default!;
 #endif
         /// <summary>

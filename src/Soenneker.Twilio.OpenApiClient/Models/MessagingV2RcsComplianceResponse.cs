@@ -18,8 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("countries") is { } nullNodeCountries && nullNodeCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Countries = null;
-            if (parseNode.GetChildNode("registration_sid") is { } nullNodeRegistrationSid && nullNodeRegistrationSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistrationSid = null;
+            if (parseNode.GetChildNode("countries") is null) { _explicitNullValueCountries = default!; _explicitNullProperties?.Remove("countries"); }
+            else if (parseNode.GetChildNode("countries") is { } nullNodeCountries && nullNodeCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Countries = null;
+            if (parseNode.GetChildNode("registration_sid") is null) { _explicitNullValueRegistrationSid = default!; _explicitNullProperties?.Remove("registration_sid"); }
+            else if (parseNode.GetChildNode("registration_sid") is { } nullNodeRegistrationSid && nullNodeRegistrationSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistrationSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of country-specific compliance details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceCountryResponse>? Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceCountryResponse>? Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; AdditionalData?.Remove("countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceCountryResponse>? _explicitNullValueCountries = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceCountryResponse> Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceCountryResponse> Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; AdditionalData?.Remove("countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.MessagingV2RcsComplianceCountryResponse> _explicitNullValueCountries = default!;
 #endif
         /// <summary>The default compliance registration SID (e.g., from CR-Google) that applies to all countries unless overridden in the `countries` array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegistrationSid { get => _explicitNullValueRegistrationSid; set { _explicitNullValueRegistrationSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_sid"); else _explicitNullProperties?.Remove("registration_sid"); } }
+        public string? RegistrationSid { get => _explicitNullValueRegistrationSid; set { _explicitNullValueRegistrationSid = value; AdditionalData?.Remove("registration_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_sid"); else _explicitNullProperties?.Remove("registration_sid"); } }
         private string? _explicitNullValueRegistrationSid = default!;
 #nullable restore
 #else
-        public string RegistrationSid { get => _explicitNullValueRegistrationSid; set { _explicitNullValueRegistrationSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_sid"); else _explicitNullProperties?.Remove("registration_sid"); } }
+        public string RegistrationSid { get => _explicitNullValueRegistrationSid; set { _explicitNullValueRegistrationSid = value; AdditionalData?.Remove("registration_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registration_sid"); else _explicitNullProperties?.Remove("registration_sid"); } }
         private string _explicitNullValueRegistrationSid = default!;
 #endif
         /// <summary>

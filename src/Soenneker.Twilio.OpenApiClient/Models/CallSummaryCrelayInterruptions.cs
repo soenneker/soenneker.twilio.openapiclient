@@ -17,17 +17,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("agent_to_customer") is { } nullNodeAgentToCustomer && nullNodeAgentToCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentToCustomer = null;
-            if (parseNode.GetChildNode("customer_to_agent") is { } nullNodeCustomerToAgent && nullNodeCustomerToAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerToAgent = null;
+            if (parseNode.GetChildNode("agent_to_customer") is null) { _explicitNullValueAgentToCustomer = default!; _explicitNullProperties?.Remove("agent_to_customer"); }
+            else if (parseNode.GetChildNode("agent_to_customer") is { } nullNodeAgentToCustomer && nullNodeAgentToCustomer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentToCustomer = null;
+            if (parseNode.GetChildNode("customer_to_agent") is null) { _explicitNullValueCustomerToAgent = default!; _explicitNullProperties?.Remove("customer_to_agent"); }
+            else if (parseNode.GetChildNode("customer_to_agent") is { } nullNodeCustomerToAgent && nullNodeCustomerToAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerToAgent = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The agent_to_customer property</summary>
-        public int? AgentToCustomer { get => _explicitNullValueAgentToCustomer; set { _explicitNullValueAgentToCustomer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_to_customer"); else _explicitNullProperties?.Remove("agent_to_customer"); } }
+        public int? AgentToCustomer { get => _explicitNullValueAgentToCustomer; set { _explicitNullValueAgentToCustomer = value; AdditionalData?.Remove("agent_to_customer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_to_customer"); else _explicitNullProperties?.Remove("agent_to_customer"); } }
         private int? _explicitNullValueAgentToCustomer = default!;
         /// <summary>The customer_to_agent property</summary>
-        public int? CustomerToAgent { get => _explicitNullValueCustomerToAgent; set { _explicitNullValueCustomerToAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_to_agent"); else _explicitNullProperties?.Remove("customer_to_agent"); } }
+        public int? CustomerToAgent { get => _explicitNullValueCustomerToAgent; set { _explicitNullValueCustomerToAgent = value; AdditionalData?.Remove("customer_to_agent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_to_agent"); else _explicitNullProperties?.Remove("customer_to_agent"); } }
         private int? _explicitNullValueCustomerToAgent = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayInterruptions"/> and sets the default values.

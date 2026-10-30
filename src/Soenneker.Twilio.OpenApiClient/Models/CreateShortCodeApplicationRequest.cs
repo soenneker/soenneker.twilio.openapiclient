@@ -17,10 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("business_information") is { } nullNodeBusinessInformation && nullNodeBusinessInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessInformation = null;
-            if (parseNode.GetChildNode("friendly_name") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("iso_country") is { } nullNodeIsoCountry && nullNodeIsoCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsoCountry = null;
-            if (parseNode.GetChildNode("setup") is { } nullNodeSetup && nullNodeSetup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Setup = null;
+            if (parseNode.GetChildNode("business_information") is null) { _explicitNullValueBusinessInformation = default!; _explicitNullProperties?.Remove("business_information"); }
+            else if (parseNode.GetChildNode("business_information") is { } nullNodeBusinessInformation && nullNodeBusinessInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessInformation = null;
+            if (parseNode.GetChildNode("friendly_name") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("friendly_name"); }
+            else if (parseNode.GetChildNode("friendly_name") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("iso_country") is null) { _explicitNullValueIsoCountry = default!; _explicitNullProperties?.Remove("iso_country"); }
+            else if (parseNode.GetChildNode("iso_country") is { } nullNodeIsoCountry && nullNodeIsoCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsoCountry = null;
+            if (parseNode.GetChildNode("setup") is null) { _explicitNullValueSetup = default!; _explicitNullProperties?.Remove("setup"); }
+            else if (parseNode.GetChildNode("setup") is { } nullNodeSetup && nullNodeSetup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Setup = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Business information associated with the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestBusinessInformation? BusinessInformation { get => _explicitNullValueBusinessInformation; set { _explicitNullValueBusinessInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_information"); else _explicitNullProperties?.Remove("business_information"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestBusinessInformation? BusinessInformation { get => _explicitNullValueBusinessInformation; set { _explicitNullValueBusinessInformation = value; AdditionalData?.Remove("business_information"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_information"); else _explicitNullProperties?.Remove("business_information"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestBusinessInformation? _explicitNullValueBusinessInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestBusinessInformation BusinessInformation { get => _explicitNullValueBusinessInformation; set { _explicitNullValueBusinessInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_information"); else _explicitNullProperties?.Remove("business_information"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestBusinessInformation BusinessInformation { get => _explicitNullValueBusinessInformation; set { _explicitNullValueBusinessInformation = value; AdditionalData?.Remove("business_information"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_information"); else _explicitNullProperties?.Remove("business_information"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestBusinessInformation _explicitNullValueBusinessInformation = default!;
 #endif
         /// <summary>The friendly name for the short code application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("friendly_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("friendly_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The ISO country code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iso_country"); else _explicitNullProperties?.Remove("iso_country"); } }
+        public string? IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; AdditionalData?.Remove("iso_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iso_country"); else _explicitNullProperties?.Remove("iso_country"); } }
         private string? _explicitNullValueIsoCountry = default!;
 #nullable restore
 #else
-        public string IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iso_country"); else _explicitNullProperties?.Remove("iso_country"); } }
+        public string IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; AdditionalData?.Remove("iso_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iso_country"); else _explicitNullProperties?.Remove("iso_country"); } }
         private string _explicitNullValueIsoCountry = default!;
 #endif
         /// <summary>The setup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestSetup? Setup { get => _explicitNullValueSetup; set { _explicitNullValueSetup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup"); else _explicitNullProperties?.Remove("setup"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestSetup? Setup { get => _explicitNullValueSetup; set { _explicitNullValueSetup = value; AdditionalData?.Remove("setup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup"); else _explicitNullProperties?.Remove("setup"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestSetup? _explicitNullValueSetup = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestSetup Setup { get => _explicitNullValueSetup; set { _explicitNullValueSetup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup"); else _explicitNullProperties?.Remove("setup"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestSetup Setup { get => _explicitNullValueSetup; set { _explicitNullValueSetup = value; AdditionalData?.Remove("setup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setup"); else _explicitNullProperties?.Remove("setup"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationRequestSetup _explicitNullValueSetup = default!;
 #endif
         /// <summary>

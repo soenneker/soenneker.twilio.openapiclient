@@ -17,32 +17,36 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CollectionTtl") is { } nullNodeCollectionTtl && nullNodeCollectionTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionTtl = null;
-            if (parseNode.GetChildNode("Data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
-            if (parseNode.GetChildNode("ItemTtl") is { } nullNodeItemTtl && nullNodeItemTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemTtl = null;
-            if (parseNode.GetChildNode("Ttl") is { } nullNodeTtl && nullNodeTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ttl = null;
+            if (parseNode.GetChildNode("CollectionTtl") is null) { _explicitNullValueCollectionTtl = default!; _explicitNullProperties?.Remove("CollectionTtl"); }
+            else if (parseNode.GetChildNode("CollectionTtl") is { } nullNodeCollectionTtl && nullNodeCollectionTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionTtl = null;
+            if (parseNode.GetChildNode("Data") is null) { _explicitNullValueData = default!; _explicitNullProperties?.Remove("Data"); }
+            else if (parseNode.GetChildNode("Data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("ItemTtl") is null) { _explicitNullValueItemTtl = default!; _explicitNullProperties?.Remove("ItemTtl"); }
+            else if (parseNode.GetChildNode("ItemTtl") is { } nullNodeItemTtl && nullNodeItemTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemTtl = null;
+            if (parseNode.GetChildNode("Ttl") is null) { _explicitNullValueTtl = default!; _explicitNullProperties?.Remove("Ttl"); }
+            else if (parseNode.GetChildNode("Ttl") is { } nullNodeTtl && nullNodeTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ttl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>How long, [in seconds](https://www.twilio.com/docs/sync/limits#sync-payload-limits), before the Map Item&apos;s parent Sync Map expires (time-to-live) and is deleted. This parameter can only be used when the Map Item&apos;s `data` or `ttl` is updated in the same request.</summary>
-        public int? CollectionTtl { get => _explicitNullValueCollectionTtl; set { _explicitNullValueCollectionTtl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CollectionTtl"); else _explicitNullProperties?.Remove("CollectionTtl"); } }
+        public int? CollectionTtl { get => _explicitNullValueCollectionTtl; set { _explicitNullValueCollectionTtl = value; AdditionalData?.Remove("CollectionTtl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CollectionTtl"); else _explicitNullProperties?.Remove("CollectionTtl"); } }
         private int? _explicitNullValueCollectionTtl = default!;
         /// <summary>A JSON string that represents an arbitrary, schema-less object that the Map Item stores. Can be up to 16 KiB in length.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Data"); else _explicitNullProperties?.Remove("Data"); } }
+        public UntypedNode? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("Data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Data"); else _explicitNullProperties?.Remove("Data"); } }
         private UntypedNode? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public UntypedNode Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Data"); else _explicitNullProperties?.Remove("Data"); } }
+        public UntypedNode Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("Data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Data"); else _explicitNullProperties?.Remove("Data"); } }
         private UntypedNode _explicitNullValueData = default!;
 #endif
         /// <summary>How long, [in seconds](https://www.twilio.com/docs/sync/limits#sync-payload-limits), before the Map Item expires (time-to-live) and is deleted.</summary>
-        public int? ItemTtl { get => _explicitNullValueItemTtl; set { _explicitNullValueItemTtl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ItemTtl"); else _explicitNullProperties?.Remove("ItemTtl"); } }
+        public int? ItemTtl { get => _explicitNullValueItemTtl; set { _explicitNullValueItemTtl = value; AdditionalData?.Remove("ItemTtl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ItemTtl"); else _explicitNullProperties?.Remove("ItemTtl"); } }
         private int? _explicitNullValueItemTtl = default!;
         /// <summary>An alias for `item_ttl`. If both parameters are provided, this value is ignored.</summary>
-        public int? Ttl { get => _explicitNullValueTtl; set { _explicitNullValueTtl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Ttl"); else _explicitNullProperties?.Remove("Ttl"); } }
+        public int? Ttl { get => _explicitNullValueTtl; set { _explicitNullValueTtl = value; AdditionalData?.Remove("Ttl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Ttl"); else _explicitNullProperties?.Remove("Ttl"); } }
         private int? _explicitNullValueTtl = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1UpdateSyncMapItemXWwwFormUrlencodedRequest"/> and sets the default values.

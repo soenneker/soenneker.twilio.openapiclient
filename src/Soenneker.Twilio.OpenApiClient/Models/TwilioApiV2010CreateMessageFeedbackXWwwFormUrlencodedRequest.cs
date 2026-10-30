@@ -17,13 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Outcome") is { } nullNodeOutcome && nullNodeOutcome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Outcome = null;
+            if (parseNode.GetChildNode("Outcome") is null) { _explicitNullValueOutcome = default!; _explicitNullProperties?.Remove("Outcome"); }
+            else if (parseNode.GetChildNode("Outcome") is { } nullNodeOutcome && nullNodeOutcome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Outcome = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Reported outcome indicating whether there is confirmation that the Message recipient performed a tracked user action. Can be: `unconfirmed` or `confirmed`. For more details see [How to Optimize Message Deliverability with Message Feedback](https://www.twilio.com/docs/messaging/guides/send-message-feedback-to-twilio).</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessageFeedbackEnumOutcome? Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Outcome"); else _explicitNullProperties?.Remove("Outcome"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessageFeedbackEnumOutcome? Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; AdditionalData?.Remove("Outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Outcome"); else _explicitNullProperties?.Remove("Outcome"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.MessageFeedbackEnumOutcome? _explicitNullValueOutcome = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateMessageFeedbackXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Outcome", n => { Outcome = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessageFeedbackEnumOutcome>(); } },
+                { "Outcome", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessageFeedbackEnumOutcome>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOutcome = default; _explicitNullProperties?.Remove("Outcome"); AdditionalData["Outcome"] = unknown; } else { Outcome = parsed; AdditionalData.Remove("Outcome"); } } },
             };
         }
         /// <summary>

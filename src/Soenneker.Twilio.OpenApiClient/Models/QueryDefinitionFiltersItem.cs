@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("expressions") is { } nullNodeExpressions && nullNodeExpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expressions = null;
-            if (parseNode.GetChildNode("op") is { } nullNodeOp && nullNodeOp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Op = null;
+            if (parseNode.GetChildNode("expressions") is null) { _explicitNullValueExpressions = default!; _explicitNullProperties?.Remove("expressions"); }
+            else if (parseNode.GetChildNode("expressions") is { } nullNodeExpressions && nullNodeExpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expressions = null;
+            if (parseNode.GetChildNode("op") is null) { _explicitNullValueOp = default!; _explicitNullProperties?.Remove("op"); }
+            else if (parseNode.GetChildNode("op") is { } nullNodeOp && nullNodeOp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Op = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The expressions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemExpressionsItem>? Expressions { get => _explicitNullValueExpressions; set { _explicitNullValueExpressions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expressions"); else _explicitNullProperties?.Remove("expressions"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemExpressionsItem>? Expressions { get => _explicitNullValueExpressions; set { _explicitNullValueExpressions = value; AdditionalData?.Remove("expressions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expressions"); else _explicitNullProperties?.Remove("expressions"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemExpressionsItem>? _explicitNullValueExpressions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemExpressionsItem> Expressions { get => _explicitNullValueExpressions; set { _explicitNullValueExpressions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expressions"); else _explicitNullProperties?.Remove("expressions"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemExpressionsItem> Expressions { get => _explicitNullValueExpressions; set { _explicitNullValueExpressions = value; AdditionalData?.Remove("expressions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expressions"); else _explicitNullProperties?.Remove("expressions"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemExpressionsItem> _explicitNullValueExpressions = default!;
 #endif
         /// <summary>The op property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemOp? Op { get => _explicitNullValueOp; set { _explicitNullValueOp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("op"); else _explicitNullProperties?.Remove("op"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemOp? Op { get => _explicitNullValueOp; set { _explicitNullValueOp = value; AdditionalData?.Remove("op"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("op"); else _explicitNullProperties?.Remove("op"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemOp? _explicitNullValueOp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItem"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expressions", n => { Expressions = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemExpressionsItem>(global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemExpressionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "op", n => { Op = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemOp>(); } },
+                { "op", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.QueryDefinitionFiltersItemOp>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOp = default; _explicitNullProperties?.Remove("op"); AdditionalData["op"] = unknown; } else { Op = parsed; AdditionalData.Remove("op"); } } },
             };
         }
         /// <summary>

@@ -17,12 +17,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Changelog") is { } nullNodeChangelog && nullNodeChangelog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Changelog = null;
-            if (parseNode.GetChildNode("CliVersion") is { } nullNodeCliVersion && nullNodeCliVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CliVersion = null;
-            if (parseNode.GetChildNode("PluginUrl") is { } nullNodePluginUrl && nullNodePluginUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PluginUrl = null;
-            if (parseNode.GetChildNode("Private") is { } nullNodePrivate && nullNodePrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Private = null;
-            if (parseNode.GetChildNode("ValidateStatus") is { } nullNodeValidateStatus && nullNodeValidateStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidateStatus = null;
-            if (parseNode.GetChildNode("Version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+            if (parseNode.GetChildNode("Changelog") is null) { _explicitNullValueChangelog = default!; _explicitNullProperties?.Remove("Changelog"); }
+            else if (parseNode.GetChildNode("Changelog") is { } nullNodeChangelog && nullNodeChangelog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Changelog = null;
+            if (parseNode.GetChildNode("CliVersion") is null) { _explicitNullValueCliVersion = default!; _explicitNullProperties?.Remove("CliVersion"); }
+            else if (parseNode.GetChildNode("CliVersion") is { } nullNodeCliVersion && nullNodeCliVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CliVersion = null;
+            if (parseNode.GetChildNode("PluginUrl") is null) { _explicitNullValuePluginUrl = default!; _explicitNullProperties?.Remove("PluginUrl"); }
+            else if (parseNode.GetChildNode("PluginUrl") is { } nullNodePluginUrl && nullNodePluginUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PluginUrl = null;
+            if (parseNode.GetChildNode("Private") is null) { _explicitNullValuePrivate = default!; _explicitNullProperties?.Remove("Private"); }
+            else if (parseNode.GetChildNode("Private") is { } nullNodePrivate && nullNodePrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Private = null;
+            if (parseNode.GetChildNode("ValidateStatus") is null) { _explicitNullValueValidateStatus = default!; _explicitNullProperties?.Remove("ValidateStatus"); }
+            else if (parseNode.GetChildNode("ValidateStatus") is { } nullNodeValidateStatus && nullNodeValidateStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidateStatus = null;
+            if (parseNode.GetChildNode("Version") is null) { _explicitNullValueVersion = default!; _explicitNullProperties?.Remove("Version"); }
+            else if (parseNode.GetChildNode("Version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,54 +36,54 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The changelog of the Flex Plugin Version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Changelog { get => _explicitNullValueChangelog; set { _explicitNullValueChangelog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Changelog"); else _explicitNullProperties?.Remove("Changelog"); } }
+        public string? Changelog { get => _explicitNullValueChangelog; set { _explicitNullValueChangelog = value; AdditionalData?.Remove("Changelog"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Changelog"); else _explicitNullProperties?.Remove("Changelog"); } }
         private string? _explicitNullValueChangelog = default!;
 #nullable restore
 #else
-        public string Changelog { get => _explicitNullValueChangelog; set { _explicitNullValueChangelog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Changelog"); else _explicitNullProperties?.Remove("Changelog"); } }
+        public string Changelog { get => _explicitNullValueChangelog; set { _explicitNullValueChangelog = value; AdditionalData?.Remove("Changelog"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Changelog"); else _explicitNullProperties?.Remove("Changelog"); } }
         private string _explicitNullValueChangelog = default!;
 #endif
         /// <summary>The version of Flex Plugins CLI used to create this plugin</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CliVersion { get => _explicitNullValueCliVersion; set { _explicitNullValueCliVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CliVersion"); else _explicitNullProperties?.Remove("CliVersion"); } }
+        public string? CliVersion { get => _explicitNullValueCliVersion; set { _explicitNullValueCliVersion = value; AdditionalData?.Remove("CliVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CliVersion"); else _explicitNullProperties?.Remove("CliVersion"); } }
         private string? _explicitNullValueCliVersion = default!;
 #nullable restore
 #else
-        public string CliVersion { get => _explicitNullValueCliVersion; set { _explicitNullValueCliVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CliVersion"); else _explicitNullProperties?.Remove("CliVersion"); } }
+        public string CliVersion { get => _explicitNullValueCliVersion; set { _explicitNullValueCliVersion = value; AdditionalData?.Remove("CliVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CliVersion"); else _explicitNullProperties?.Remove("CliVersion"); } }
         private string _explicitNullValueCliVersion = default!;
 #endif
         /// <summary>The URL of the Flex Plugin Version bundle</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PluginUrl { get => _explicitNullValuePluginUrl; set { _explicitNullValuePluginUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PluginUrl"); else _explicitNullProperties?.Remove("PluginUrl"); } }
+        public string? PluginUrl { get => _explicitNullValuePluginUrl; set { _explicitNullValuePluginUrl = value; AdditionalData?.Remove("PluginUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PluginUrl"); else _explicitNullProperties?.Remove("PluginUrl"); } }
         private string? _explicitNullValuePluginUrl = default!;
 #nullable restore
 #else
-        public string PluginUrl { get => _explicitNullValuePluginUrl; set { _explicitNullValuePluginUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PluginUrl"); else _explicitNullProperties?.Remove("PluginUrl"); } }
+        public string PluginUrl { get => _explicitNullValuePluginUrl; set { _explicitNullValuePluginUrl = value; AdditionalData?.Remove("PluginUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PluginUrl"); else _explicitNullProperties?.Remove("PluginUrl"); } }
         private string _explicitNullValuePluginUrl = default!;
 #endif
         /// <summary>Whether this Flex Plugin Version requires authorization.</summary>
-        public bool? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Private"); else _explicitNullProperties?.Remove("Private"); } }
+        public bool? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; AdditionalData?.Remove("Private"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Private"); else _explicitNullProperties?.Remove("Private"); } }
         private bool? _explicitNullValuePrivate = default!;
         /// <summary>The validation status of the plugin, indicating whether it has been validated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValidateStatus { get => _explicitNullValueValidateStatus; set { _explicitNullValueValidateStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ValidateStatus"); else _explicitNullProperties?.Remove("ValidateStatus"); } }
+        public string? ValidateStatus { get => _explicitNullValueValidateStatus; set { _explicitNullValueValidateStatus = value; AdditionalData?.Remove("ValidateStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ValidateStatus"); else _explicitNullProperties?.Remove("ValidateStatus"); } }
         private string? _explicitNullValueValidateStatus = default!;
 #nullable restore
 #else
-        public string ValidateStatus { get => _explicitNullValueValidateStatus; set { _explicitNullValueValidateStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ValidateStatus"); else _explicitNullProperties?.Remove("ValidateStatus"); } }
+        public string ValidateStatus { get => _explicitNullValueValidateStatus; set { _explicitNullValueValidateStatus = value; AdditionalData?.Remove("ValidateStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ValidateStatus"); else _explicitNullProperties?.Remove("ValidateStatus"); } }
         private string _explicitNullValueValidateStatus = default!;
 #endif
         /// <summary>The Flex Plugin Version&apos;s version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Version"); else _explicitNullProperties?.Remove("Version"); } }
+        public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("Version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Version"); else _explicitNullProperties?.Remove("Version"); } }
         private string? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public string Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Version"); else _explicitNullProperties?.Remove("Version"); } }
+        public string Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("Version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Version"); else _explicitNullProperties?.Remove("Version"); } }
         private string _explicitNullValueVersion = default!;
 #endif
         /// <summary>

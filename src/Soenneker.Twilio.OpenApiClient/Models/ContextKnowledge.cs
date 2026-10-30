@@ -18,7 +18,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bases") is { } nullNodeBases && nullNodeBases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bases = null;
+            if (parseNode.GetChildNode("bases") is null) { _explicitNullValueBases = default!; _explicitNullProperties?.Remove("bases"); }
+            else if (parseNode.GetChildNode("bases") is { } nullNodeBases && nullNodeBases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bases = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Specifies the Knowledge Base(s) and corresponding Source(s) to pass to LanguageOperators in this Rule as context. Only applied to Language Operators that haveKnowledge as a context source enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Bases { get => _explicitNullValueBases; set { _explicitNullValueBases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bases"); else _explicitNullProperties?.Remove("bases"); } }
+        public List<string>? Bases { get => _explicitNullValueBases; set { _explicitNullValueBases = value; AdditionalData?.Remove("bases"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bases"); else _explicitNullProperties?.Remove("bases"); } }
         private List<string>? _explicitNullValueBases = default!;
 #nullable restore
 #else
-        public List<string> Bases { get => _explicitNullValueBases; set { _explicitNullValueBases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bases"); else _explicitNullProperties?.Remove("bases"); } }
+        public List<string> Bases { get => _explicitNullValueBases; set { _explicitNullValueBases = value; AdditionalData?.Remove("bases"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bases"); else _explicitNullProperties?.Remove("bases"); } }
         private List<string> _explicitNullValueBases = default!;
 #endif
         /// <summary>

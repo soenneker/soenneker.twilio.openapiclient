@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("last_verified_date") is { } nullNodeLastVerifiedDate && nullNodeLastVerifiedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastVerifiedDate = null;
+            if (parseNode.GetChildNode("last_verified_date") is null) { _explicitNullValueLastVerifiedDate = default!; _explicitNullProperties?.Remove("last_verified_date"); }
+            else if (parseNode.GetChildNode("last_verified_date") is { } nullNodeLastVerifiedDate && nullNodeLastVerifiedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastVerifiedDate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The last_verified_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastVerifiedDate { get => _explicitNullValueLastVerifiedDate; set { _explicitNullValueLastVerifiedDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verified_date"); else _explicitNullProperties?.Remove("last_verified_date"); } }
+        public string? LastVerifiedDate { get => _explicitNullValueLastVerifiedDate; set { _explicitNullValueLastVerifiedDate = value; AdditionalData?.Remove("last_verified_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verified_date"); else _explicitNullProperties?.Remove("last_verified_date"); } }
         private string? _explicitNullValueLastVerifiedDate = default!;
 #nullable restore
 #else
-        public string LastVerifiedDate { get => _explicitNullValueLastVerifiedDate; set { _explicitNullValueLastVerifiedDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verified_date"); else _explicitNullProperties?.Remove("last_verified_date"); } }
+        public string LastVerifiedDate { get => _explicitNullValueLastVerifiedDate; set { _explicitNullValueLastVerifiedDate = value; AdditionalData?.Remove("last_verified_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verified_date"); else _explicitNullProperties?.Remove("last_verified_date"); } }
         private string _explicitNullValueLastVerifiedDate = default!;
 #endif
         /// <summary>

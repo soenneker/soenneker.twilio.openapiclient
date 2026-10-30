@@ -17,18 +17,30 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("external_porting_vendor_phone_number_id") is { } nullNodeExternalPortingVendorPhoneNumberId && nullNodeExternalPortingVendorPhoneNumberId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalPortingVendorPhoneNumberId = null;
-            if (parseNode.GetChildNode("not_portability_reason") is { } nullNodeNotPortabilityReason && nullNodeNotPortabilityReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotPortabilityReason = null;
-            if (parseNode.GetChildNode("not_portability_reason_code") is { } nullNodeNotPortabilityReasonCode && nullNodeNotPortabilityReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotPortabilityReasonCode = null;
-            if (parseNode.GetChildNode("number_type") is { } nullNodeNumberType && nullNodeNumberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberType = null;
-            if (parseNode.GetChildNode("phone_number") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
-            if (parseNode.GetChildNode("portable") is { } nullNodePortable && nullNodePortable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Portable = null;
-            if (parseNode.GetChildNode("port_date") is { } nullNodePortDate && nullNodePortDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortDate = null;
-            if (parseNode.GetChildNode("port_in_phone_number_sid") is { } nullNodePortInPhoneNumberSid && nullNodePortInPhoneNumberSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortInPhoneNumberSid = null;
-            if (parseNode.GetChildNode("port_in_phone_number_status") is { } nullNodePortInPhoneNumberStatus && nullNodePortInPhoneNumberStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortInPhoneNumberStatus = null;
-            if (parseNode.GetChildNode("rejection_reason") is { } nullNodeRejectionReason && nullNodeRejectionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectionReason = null;
-            if (parseNode.GetChildNode("rejection_reason_code") is { } nullNodeRejectionReasonCode && nullNodeRejectionReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectionReasonCode = null;
-            if (parseNode.GetChildNode("status_last_time_updated_timestamp") is { } nullNodeStatusLastTimeUpdatedTimestamp && nullNodeStatusLastTimeUpdatedTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusLastTimeUpdatedTimestamp = null;
+            if (parseNode.GetChildNode("external_porting_vendor_phone_number_id") is null) { _explicitNullValueExternalPortingVendorPhoneNumberId = default!; _explicitNullProperties?.Remove("external_porting_vendor_phone_number_id"); }
+            else if (parseNode.GetChildNode("external_porting_vendor_phone_number_id") is { } nullNodeExternalPortingVendorPhoneNumberId && nullNodeExternalPortingVendorPhoneNumberId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalPortingVendorPhoneNumberId = null;
+            if (parseNode.GetChildNode("not_portability_reason") is null) { _explicitNullValueNotPortabilityReason = default!; _explicitNullProperties?.Remove("not_portability_reason"); }
+            else if (parseNode.GetChildNode("not_portability_reason") is { } nullNodeNotPortabilityReason && nullNodeNotPortabilityReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotPortabilityReason = null;
+            if (parseNode.GetChildNode("not_portability_reason_code") is null) { _explicitNullValueNotPortabilityReasonCode = default!; _explicitNullProperties?.Remove("not_portability_reason_code"); }
+            else if (parseNode.GetChildNode("not_portability_reason_code") is { } nullNodeNotPortabilityReasonCode && nullNodeNotPortabilityReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotPortabilityReasonCode = null;
+            if (parseNode.GetChildNode("number_type") is null) { _explicitNullValueNumberType = default!; _explicitNullProperties?.Remove("number_type"); }
+            else if (parseNode.GetChildNode("number_type") is { } nullNodeNumberType && nullNodeNumberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberType = null;
+            if (parseNode.GetChildNode("phone_number") is null) { _explicitNullValuePhoneNumber = default!; _explicitNullProperties?.Remove("phone_number"); }
+            else if (parseNode.GetChildNode("phone_number") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+            if (parseNode.GetChildNode("portable") is null) { _explicitNullValuePortable = default!; _explicitNullProperties?.Remove("portable"); }
+            else if (parseNode.GetChildNode("portable") is { } nullNodePortable && nullNodePortable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Portable = null;
+            if (parseNode.GetChildNode("port_date") is null) { _explicitNullValuePortDate = default!; _explicitNullProperties?.Remove("port_date"); }
+            else if (parseNode.GetChildNode("port_date") is { } nullNodePortDate && nullNodePortDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortDate = null;
+            if (parseNode.GetChildNode("port_in_phone_number_sid") is null) { _explicitNullValuePortInPhoneNumberSid = default!; _explicitNullProperties?.Remove("port_in_phone_number_sid"); }
+            else if (parseNode.GetChildNode("port_in_phone_number_sid") is { } nullNodePortInPhoneNumberSid && nullNodePortInPhoneNumberSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortInPhoneNumberSid = null;
+            if (parseNode.GetChildNode("port_in_phone_number_status") is null) { _explicitNullValuePortInPhoneNumberStatus = default!; _explicitNullProperties?.Remove("port_in_phone_number_status"); }
+            else if (parseNode.GetChildNode("port_in_phone_number_status") is { } nullNodePortInPhoneNumberStatus && nullNodePortInPhoneNumberStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortInPhoneNumberStatus = null;
+            if (parseNode.GetChildNode("rejection_reason") is null) { _explicitNullValueRejectionReason = default!; _explicitNullProperties?.Remove("rejection_reason"); }
+            else if (parseNode.GetChildNode("rejection_reason") is { } nullNodeRejectionReason && nullNodeRejectionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectionReason = null;
+            if (parseNode.GetChildNode("rejection_reason_code") is null) { _explicitNullValueRejectionReasonCode = default!; _explicitNullProperties?.Remove("rejection_reason_code"); }
+            else if (parseNode.GetChildNode("rejection_reason_code") is { } nullNodeRejectionReasonCode && nullNodeRejectionReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectionReasonCode = null;
+            if (parseNode.GetChildNode("status_last_time_updated_timestamp") is null) { _explicitNullValueStatusLastTimeUpdatedTimestamp = default!; _explicitNullProperties?.Remove("status_last_time_updated_timestamp"); }
+            else if (parseNode.GetChildNode("status_last_time_updated_timestamp") is { } nullNodeStatusLastTimeUpdatedTimestamp && nullNodeStatusLastTimeUpdatedTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusLastTimeUpdatedTimestamp = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,100 +48,100 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The external_porting_vendor_phone_number_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalPortingVendorPhoneNumberId { get => _explicitNullValueExternalPortingVendorPhoneNumberId; set { _explicitNullValueExternalPortingVendorPhoneNumberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_porting_vendor_phone_number_id"); else _explicitNullProperties?.Remove("external_porting_vendor_phone_number_id"); } }
+        public string? ExternalPortingVendorPhoneNumberId { get => _explicitNullValueExternalPortingVendorPhoneNumberId; set { _explicitNullValueExternalPortingVendorPhoneNumberId = value; AdditionalData?.Remove("external_porting_vendor_phone_number_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_porting_vendor_phone_number_id"); else _explicitNullProperties?.Remove("external_porting_vendor_phone_number_id"); } }
         private string? _explicitNullValueExternalPortingVendorPhoneNumberId = default!;
 #nullable restore
 #else
-        public string ExternalPortingVendorPhoneNumberId { get => _explicitNullValueExternalPortingVendorPhoneNumberId; set { _explicitNullValueExternalPortingVendorPhoneNumberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_porting_vendor_phone_number_id"); else _explicitNullProperties?.Remove("external_porting_vendor_phone_number_id"); } }
+        public string ExternalPortingVendorPhoneNumberId { get => _explicitNullValueExternalPortingVendorPhoneNumberId; set { _explicitNullValueExternalPortingVendorPhoneNumberId = value; AdditionalData?.Remove("external_porting_vendor_phone_number_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_porting_vendor_phone_number_id"); else _explicitNullProperties?.Remove("external_porting_vendor_phone_number_id"); } }
         private string _explicitNullValueExternalPortingVendorPhoneNumberId = default!;
 #endif
         /// <summary>The not portability reason code description. This field may be null if the number is portable or if the portability for a number has not yet been evaluated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotPortabilityReason { get => _explicitNullValueNotPortabilityReason; set { _explicitNullValueNotPortabilityReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_portability_reason"); else _explicitNullProperties?.Remove("not_portability_reason"); } }
+        public string? NotPortabilityReason { get => _explicitNullValueNotPortabilityReason; set { _explicitNullValueNotPortabilityReason = value; AdditionalData?.Remove("not_portability_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_portability_reason"); else _explicitNullProperties?.Remove("not_portability_reason"); } }
         private string? _explicitNullValueNotPortabilityReason = default!;
 #nullable restore
 #else
-        public string NotPortabilityReason { get => _explicitNullValueNotPortabilityReason; set { _explicitNullValueNotPortabilityReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_portability_reason"); else _explicitNullProperties?.Remove("not_portability_reason"); } }
+        public string NotPortabilityReason { get => _explicitNullValueNotPortabilityReason; set { _explicitNullValueNotPortabilityReason = value; AdditionalData?.Remove("not_portability_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_portability_reason"); else _explicitNullProperties?.Remove("not_portability_reason"); } }
         private string _explicitNullValueNotPortabilityReason = default!;
 #endif
         /// <summary>The not portability reason code. This field may be null if the number is portable or if the portability for a number has not yet been evaluated.</summary>
-        public int? NotPortabilityReasonCode { get => _explicitNullValueNotPortabilityReasonCode; set { _explicitNullValueNotPortabilityReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_portability_reason_code"); else _explicitNullProperties?.Remove("not_portability_reason_code"); } }
+        public int? NotPortabilityReasonCode { get => _explicitNullValueNotPortabilityReasonCode; set { _explicitNullValueNotPortabilityReasonCode = value; AdditionalData?.Remove("not_portability_reason_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_portability_reason_code"); else _explicitNullProperties?.Remove("not_portability_reason_code"); } }
         private int? _explicitNullValueNotPortabilityReasonCode = default!;
         /// <summary>The number type of the phone number. This can be: toll-free, local, mobile or unknown. This field may be null if the number is not portable or if the portability for a number has not yet been evaluated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_type"); else _explicitNullProperties?.Remove("number_type"); } }
+        public string? NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; AdditionalData?.Remove("number_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_type"); else _explicitNullProperties?.Remove("number_type"); } }
         private string? _explicitNullValueNumberType = default!;
 #nullable restore
 #else
-        public string NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_type"); else _explicitNullProperties?.Remove("number_type"); } }
+        public string NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; AdditionalData?.Remove("number_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_type"); else _explicitNullProperties?.Remove("number_type"); } }
         private string _explicitNullValueNumberType = default!;
 #endif
         /// <summary>Phone number to be ported. This will be in the E164 Format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; AdditionalData?.Remove("phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
         private string? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; AdditionalData?.Remove("phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
         private string _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>Whether the number is portable by Twilio or not. This field may be null if the number portability has not yet been evaluated. If a number is not portable reference the `not_portability_reason_code` and `not_portability_reason` fields for more details</summary>
-        public bool? Portable { get => _explicitNullValuePortable; set { _explicitNullValuePortable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portable"); else _explicitNullProperties?.Remove("portable"); } }
+        public bool? Portable { get => _explicitNullValuePortable; set { _explicitNullValuePortable = value; AdditionalData?.Remove("portable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portable"); else _explicitNullProperties?.Remove("portable"); } }
         private bool? _explicitNullValuePortable = default!;
         /// <summary>The timestamp the phone number will be ported. This will only be set once a port date has been confirmed. Not all carriers can guarantee a specific time on the port date. Twilio will try its best to get the port completed by this time on the port date. Please subscribe to webhooks for confirmation on when a port has actually been completed.</summary>
-        public DateTimeOffset? PortDate { get => _explicitNullValuePortDate; set { _explicitNullValuePortDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_date"); else _explicitNullProperties?.Remove("port_date"); } }
+        public DateTimeOffset? PortDate { get => _explicitNullValuePortDate; set { _explicitNullValuePortDate = value; AdditionalData?.Remove("port_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_date"); else _explicitNullProperties?.Remove("port_date"); } }
         private DateTimeOffset? _explicitNullValuePortDate = default!;
         /// <summary>The SID of the Phone number. This is a unique identifier of the phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortInPhoneNumberSid { get => _explicitNullValuePortInPhoneNumberSid; set { _explicitNullValuePortInPhoneNumberSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_phone_number_sid"); else _explicitNullProperties?.Remove("port_in_phone_number_sid"); } }
+        public string? PortInPhoneNumberSid { get => _explicitNullValuePortInPhoneNumberSid; set { _explicitNullValuePortInPhoneNumberSid = value; AdditionalData?.Remove("port_in_phone_number_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_phone_number_sid"); else _explicitNullProperties?.Remove("port_in_phone_number_sid"); } }
         private string? _explicitNullValuePortInPhoneNumberSid = default!;
 #nullable restore
 #else
-        public string PortInPhoneNumberSid { get => _explicitNullValuePortInPhoneNumberSid; set { _explicitNullValuePortInPhoneNumberSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_phone_number_sid"); else _explicitNullProperties?.Remove("port_in_phone_number_sid"); } }
+        public string PortInPhoneNumberSid { get => _explicitNullValuePortInPhoneNumberSid; set { _explicitNullValuePortInPhoneNumberSid = value; AdditionalData?.Remove("port_in_phone_number_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_phone_number_sid"); else _explicitNullProperties?.Remove("port_in_phone_number_sid"); } }
         private string _explicitNullValuePortInPhoneNumberSid = default!;
 #endif
         /// <summary>The status of the port in phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortInPhoneNumberStatus { get => _explicitNullValuePortInPhoneNumberStatus; set { _explicitNullValuePortInPhoneNumberStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_phone_number_status"); else _explicitNullProperties?.Remove("port_in_phone_number_status"); } }
+        public string? PortInPhoneNumberStatus { get => _explicitNullValuePortInPhoneNumberStatus; set { _explicitNullValuePortInPhoneNumberStatus = value; AdditionalData?.Remove("port_in_phone_number_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_phone_number_status"); else _explicitNullProperties?.Remove("port_in_phone_number_status"); } }
         private string? _explicitNullValuePortInPhoneNumberStatus = default!;
 #nullable restore
 #else
-        public string PortInPhoneNumberStatus { get => _explicitNullValuePortInPhoneNumberStatus; set { _explicitNullValuePortInPhoneNumberStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_phone_number_status"); else _explicitNullProperties?.Remove("port_in_phone_number_status"); } }
+        public string PortInPhoneNumberStatus { get => _explicitNullValuePortInPhoneNumberStatus; set { _explicitNullValuePortInPhoneNumberStatus = value; AdditionalData?.Remove("port_in_phone_number_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_phone_number_status"); else _explicitNullProperties?.Remove("port_in_phone_number_status"); } }
         private string _explicitNullValuePortInPhoneNumberStatus = default!;
 #endif
         /// <summary>The description of the rejection reason provided by the losing carrier. This field may be null if the number has not been rejected by the losing carrier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
+        public string? RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; AdditionalData?.Remove("rejection_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
         private string? _explicitNullValueRejectionReason = default!;
 #nullable restore
 #else
-        public string RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
+        public string RejectionReason { get => _explicitNullValueRejectionReason; set { _explicitNullValueRejectionReason = value; AdditionalData?.Remove("rejection_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason"); else _explicitNullProperties?.Remove("rejection_reason"); } }
         private string _explicitNullValueRejectionReason = default!;
 #endif
         /// <summary>The code for the rejection reason provided by the losing carrier. This field may be null if the number has not been rejected by the losing carrier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RejectionReasonCode { get => _explicitNullValueRejectionReasonCode; set { _explicitNullValueRejectionReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason_code"); else _explicitNullProperties?.Remove("rejection_reason_code"); } }
+        public string? RejectionReasonCode { get => _explicitNullValueRejectionReasonCode; set { _explicitNullValueRejectionReasonCode = value; AdditionalData?.Remove("rejection_reason_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason_code"); else _explicitNullProperties?.Remove("rejection_reason_code"); } }
         private string? _explicitNullValueRejectionReasonCode = default!;
 #nullable restore
 #else
-        public string RejectionReasonCode { get => _explicitNullValueRejectionReasonCode; set { _explicitNullValueRejectionReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason_code"); else _explicitNullProperties?.Remove("rejection_reason_code"); } }
+        public string RejectionReasonCode { get => _explicitNullValueRejectionReasonCode; set { _explicitNullValueRejectionReasonCode = value; AdditionalData?.Remove("rejection_reason_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reason_code"); else _explicitNullProperties?.Remove("rejection_reason_code"); } }
         private string _explicitNullValueRejectionReasonCode = default!;
 #endif
         /// <summary>Timestamp indicating when the Port In Phone Number resource was last modified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusLastTimeUpdatedTimestamp { get => _explicitNullValueStatusLastTimeUpdatedTimestamp; set { _explicitNullValueStatusLastTimeUpdatedTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_last_time_updated_timestamp"); else _explicitNullProperties?.Remove("status_last_time_updated_timestamp"); } }
+        public string? StatusLastTimeUpdatedTimestamp { get => _explicitNullValueStatusLastTimeUpdatedTimestamp; set { _explicitNullValueStatusLastTimeUpdatedTimestamp = value; AdditionalData?.Remove("status_last_time_updated_timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_last_time_updated_timestamp"); else _explicitNullProperties?.Remove("status_last_time_updated_timestamp"); } }
         private string? _explicitNullValueStatusLastTimeUpdatedTimestamp = default!;
 #nullable restore
 #else
-        public string StatusLastTimeUpdatedTimestamp { get => _explicitNullValueStatusLastTimeUpdatedTimestamp; set { _explicitNullValueStatusLastTimeUpdatedTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_last_time_updated_timestamp"); else _explicitNullProperties?.Remove("status_last_time_updated_timestamp"); } }
+        public string StatusLastTimeUpdatedTimestamp { get => _explicitNullValueStatusLastTimeUpdatedTimestamp; set { _explicitNullValueStatusLastTimeUpdatedTimestamp = value; AdditionalData?.Remove("status_last_time_updated_timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_last_time_updated_timestamp"); else _explicitNullProperties?.Remove("status_last_time_updated_timestamp"); } }
         private string _explicitNullValueStatusLastTimeUpdatedTimestamp = default!;
 #endif
         /// <summary>

@@ -17,10 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AssetVersions") is { } nullNodeAssetVersions && nullNodeAssetVersions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetVersions = null;
-            if (parseNode.GetChildNode("Dependencies") is { } nullNodeDependencies && nullNodeDependencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dependencies = null;
-            if (parseNode.GetChildNode("FunctionVersions") is { } nullNodeFunctionVersions && nullNodeFunctionVersions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunctionVersions = null;
-            if (parseNode.GetChildNode("Runtime") is { } nullNodeRuntime && nullNodeRuntime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Runtime = null;
+            if (parseNode.GetChildNode("AssetVersions") is null) { _explicitNullValueAssetVersions = default!; _explicitNullProperties?.Remove("AssetVersions"); }
+            else if (parseNode.GetChildNode("AssetVersions") is { } nullNodeAssetVersions && nullNodeAssetVersions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetVersions = null;
+            if (parseNode.GetChildNode("Dependencies") is null) { _explicitNullValueDependencies = default!; _explicitNullProperties?.Remove("Dependencies"); }
+            else if (parseNode.GetChildNode("Dependencies") is { } nullNodeDependencies && nullNodeDependencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dependencies = null;
+            if (parseNode.GetChildNode("FunctionVersions") is null) { _explicitNullValueFunctionVersions = default!; _explicitNullProperties?.Remove("FunctionVersions"); }
+            else if (parseNode.GetChildNode("FunctionVersions") is { } nullNodeFunctionVersions && nullNodeFunctionVersions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunctionVersions = null;
+            if (parseNode.GetChildNode("Runtime") is null) { _explicitNullValueRuntime = default!; _explicitNullProperties?.Remove("Runtime"); }
+            else if (parseNode.GetChildNode("Runtime") is { } nullNodeRuntime && nullNodeRuntime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Runtime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The list of Asset Version resource SIDs to include in the Build.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AssetVersions { get => _explicitNullValueAssetVersions; set { _explicitNullValueAssetVersions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssetVersions"); else _explicitNullProperties?.Remove("AssetVersions"); } }
+        public List<string>? AssetVersions { get => _explicitNullValueAssetVersions; set { _explicitNullValueAssetVersions = value; AdditionalData?.Remove("AssetVersions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssetVersions"); else _explicitNullProperties?.Remove("AssetVersions"); } }
         private List<string>? _explicitNullValueAssetVersions = default!;
 #nullable restore
 #else
-        public List<string> AssetVersions { get => _explicitNullValueAssetVersions; set { _explicitNullValueAssetVersions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssetVersions"); else _explicitNullProperties?.Remove("AssetVersions"); } }
+        public List<string> AssetVersions { get => _explicitNullValueAssetVersions; set { _explicitNullValueAssetVersions = value; AdditionalData?.Remove("AssetVersions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssetVersions"); else _explicitNullProperties?.Remove("AssetVersions"); } }
         private List<string> _explicitNullValueAssetVersions = default!;
 #endif
         /// <summary>A list of objects that describe the Dependencies included in the Build. Each object contains the `name` and `version` of the dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dependencies"); else _explicitNullProperties?.Remove("Dependencies"); } }
+        public string? Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; AdditionalData?.Remove("Dependencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dependencies"); else _explicitNullProperties?.Remove("Dependencies"); } }
         private string? _explicitNullValueDependencies = default!;
 #nullable restore
 #else
-        public string Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dependencies"); else _explicitNullProperties?.Remove("Dependencies"); } }
+        public string Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; AdditionalData?.Remove("Dependencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dependencies"); else _explicitNullProperties?.Remove("Dependencies"); } }
         private string _explicitNullValueDependencies = default!;
 #endif
         /// <summary>The list of the Function Version resource SIDs to include in the Build.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FunctionVersions { get => _explicitNullValueFunctionVersions; set { _explicitNullValueFunctionVersions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FunctionVersions"); else _explicitNullProperties?.Remove("FunctionVersions"); } }
+        public List<string>? FunctionVersions { get => _explicitNullValueFunctionVersions; set { _explicitNullValueFunctionVersions = value; AdditionalData?.Remove("FunctionVersions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FunctionVersions"); else _explicitNullProperties?.Remove("FunctionVersions"); } }
         private List<string>? _explicitNullValueFunctionVersions = default!;
 #nullable restore
 #else
-        public List<string> FunctionVersions { get => _explicitNullValueFunctionVersions; set { _explicitNullValueFunctionVersions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FunctionVersions"); else _explicitNullProperties?.Remove("FunctionVersions"); } }
+        public List<string> FunctionVersions { get => _explicitNullValueFunctionVersions; set { _explicitNullValueFunctionVersions = value; AdditionalData?.Remove("FunctionVersions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FunctionVersions"); else _explicitNullProperties?.Remove("FunctionVersions"); } }
         private List<string> _explicitNullValueFunctionVersions = default!;
 #endif
         /// <summary>The Runtime version that will be used to run the Build resource when it is deployed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Runtime { get => _explicitNullValueRuntime; set { _explicitNullValueRuntime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Runtime"); else _explicitNullProperties?.Remove("Runtime"); } }
+        public string? Runtime { get => _explicitNullValueRuntime; set { _explicitNullValueRuntime = value; AdditionalData?.Remove("Runtime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Runtime"); else _explicitNullProperties?.Remove("Runtime"); } }
         private string? _explicitNullValueRuntime = default!;
 #nullable restore
 #else
-        public string Runtime { get => _explicitNullValueRuntime; set { _explicitNullValueRuntime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Runtime"); else _explicitNullProperties?.Remove("Runtime"); } }
+        public string Runtime { get => _explicitNullValueRuntime; set { _explicitNullValueRuntime = value; AdditionalData?.Remove("Runtime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Runtime"); else _explicitNullProperties?.Remove("Runtime"); } }
         private string _explicitNullValueRuntime = default!;
 #endif
         /// <summary>

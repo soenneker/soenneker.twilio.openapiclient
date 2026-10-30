@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("TestUsers") is { } nullNodeTestUsers && nullNodeTestUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestUsers = null;
+            if (parseNode.GetChildNode("TestUsers") is null) { _explicitNullValueTestUsers = default!; _explicitNullProperties?.Remove("TestUsers"); }
+            else if (parseNode.GetChildNode("TestUsers") is { } nullNodeTestUsers && nullNodeTestUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestUsers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of test user identities that can test draft versions of the flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TestUsers { get => _explicitNullValueTestUsers; set { _explicitNullValueTestUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TestUsers"); else _explicitNullProperties?.Remove("TestUsers"); } }
+        public List<string>? TestUsers { get => _explicitNullValueTestUsers; set { _explicitNullValueTestUsers = value; AdditionalData?.Remove("TestUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TestUsers"); else _explicitNullProperties?.Remove("TestUsers"); } }
         private List<string>? _explicitNullValueTestUsers = default!;
 #nullable restore
 #else
-        public List<string> TestUsers { get => _explicitNullValueTestUsers; set { _explicitNullValueTestUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TestUsers"); else _explicitNullProperties?.Remove("TestUsers"); } }
+        public List<string> TestUsers { get => _explicitNullValueTestUsers; set { _explicitNullValueTestUsers = value; AdditionalData?.Remove("TestUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TestUsers"); else _explicitNullProperties?.Remove("TestUsers"); } }
         private List<string> _explicitNullValueTestUsers = default!;
 #endif
         /// <summary>

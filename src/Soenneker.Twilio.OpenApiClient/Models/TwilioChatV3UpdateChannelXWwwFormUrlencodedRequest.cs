@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("MessagingServiceSid") is { } nullNodeMessagingServiceSid && nullNodeMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingServiceSid = null;
-            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("MessagingServiceSid") is null) { _explicitNullValueMessagingServiceSid = default!; _explicitNullProperties?.Remove("MessagingServiceSid"); }
+            else if (parseNode.GetChildNode("MessagingServiceSid") is { } nullNodeMessagingServiceSid && nullNodeMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingServiceSid = null;
+            if (parseNode.GetChildNode("Type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("Type"); }
+            else if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The unique ID of the [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource) this channel belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
+        public string? MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; AdditionalData?.Remove("MessagingServiceSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
         private string? _explicitNullValueMessagingServiceSid = default!;
 #nullable restore
 #else
-        public string MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
+        public string MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; AdditionalData?.Remove("MessagingServiceSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
         private string _explicitNullValueMessagingServiceSid = default!;
 #endif
         /// <summary>The visibility of the channel. Can be: `public` or `private`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV3ChannelEnumChannelType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV3ChannelEnumChannelType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV3ChannelEnumChannelType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV3UpdateChannelXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "MessagingServiceSid", n => { MessagingServiceSid = n.GetStringValue(); } },
-                { "Type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV3ChannelEnumChannelType>(); } },
+                { "Type", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV3ChannelEnumChannelType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("Type"); AdditionalData["Type"] = unknown; } else { Type = parsed; AdditionalData.Remove("Type"); } } },
             };
         }
         /// <summary>

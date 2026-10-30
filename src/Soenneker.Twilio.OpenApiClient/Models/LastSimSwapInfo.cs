@@ -17,27 +17,30 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("last_sim_swap_date") is { } nullNodeLastSimSwapDate && nullNodeLastSimSwapDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSimSwapDate = null;
-            if (parseNode.GetChildNode("swapped_in_period") is { } nullNodeSwappedInPeriod && nullNodeSwappedInPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SwappedInPeriod = null;
-            if (parseNode.GetChildNode("swapped_period") is { } nullNodeSwappedPeriod && nullNodeSwappedPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SwappedPeriod = null;
+            if (parseNode.GetChildNode("last_sim_swap_date") is null) { _explicitNullValueLastSimSwapDate = default!; _explicitNullProperties?.Remove("last_sim_swap_date"); }
+            else if (parseNode.GetChildNode("last_sim_swap_date") is { } nullNodeLastSimSwapDate && nullNodeLastSimSwapDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSimSwapDate = null;
+            if (parseNode.GetChildNode("swapped_in_period") is null) { _explicitNullValueSwappedInPeriod = default!; _explicitNullProperties?.Remove("swapped_in_period"); }
+            else if (parseNode.GetChildNode("swapped_in_period") is { } nullNodeSwappedInPeriod && nullNodeSwappedInPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SwappedInPeriod = null;
+            if (parseNode.GetChildNode("swapped_period") is null) { _explicitNullValueSwappedPeriod = default!; _explicitNullProperties?.Remove("swapped_period"); }
+            else if (parseNode.GetChildNode("swapped_period") is { } nullNodeSwappedPeriod && nullNodeSwappedPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SwappedPeriod = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The last_sim_swap_date property</summary>
-        public DateTimeOffset? LastSimSwapDate { get => _explicitNullValueLastSimSwapDate; set { _explicitNullValueLastSimSwapDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sim_swap_date"); else _explicitNullProperties?.Remove("last_sim_swap_date"); } }
+        public DateTimeOffset? LastSimSwapDate { get => _explicitNullValueLastSimSwapDate; set { _explicitNullValueLastSimSwapDate = value; AdditionalData?.Remove("last_sim_swap_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sim_swap_date"); else _explicitNullProperties?.Remove("last_sim_swap_date"); } }
         private DateTimeOffset? _explicitNullValueLastSimSwapDate = default!;
         /// <summary>The swapped_in_period property</summary>
-        public bool? SwappedInPeriod { get => _explicitNullValueSwappedInPeriod; set { _explicitNullValueSwappedInPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swapped_in_period"); else _explicitNullProperties?.Remove("swapped_in_period"); } }
+        public bool? SwappedInPeriod { get => _explicitNullValueSwappedInPeriod; set { _explicitNullValueSwappedInPeriod = value; AdditionalData?.Remove("swapped_in_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swapped_in_period"); else _explicitNullProperties?.Remove("swapped_in_period"); } }
         private bool? _explicitNullValueSwappedInPeriod = default!;
         /// <summary>The swapped_period property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SwappedPeriod { get => _explicitNullValueSwappedPeriod; set { _explicitNullValueSwappedPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swapped_period"); else _explicitNullProperties?.Remove("swapped_period"); } }
+        public string? SwappedPeriod { get => _explicitNullValueSwappedPeriod; set { _explicitNullValueSwappedPeriod = value; AdditionalData?.Remove("swapped_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swapped_period"); else _explicitNullProperties?.Remove("swapped_period"); } }
         private string? _explicitNullValueSwappedPeriod = default!;
 #nullable restore
 #else
-        public string SwappedPeriod { get => _explicitNullValueSwappedPeriod; set { _explicitNullValueSwappedPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swapped_period"); else _explicitNullProperties?.Remove("swapped_period"); } }
+        public string SwappedPeriod { get => _explicitNullValueSwappedPeriod; set { _explicitNullValueSwappedPeriod = value; AdditionalData?.Remove("swapped_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swapped_period"); else _explicitNullProperties?.Remove("swapped_period"); } }
         private string _explicitNullValueSwappedPeriod = default!;
 #endif
         /// <summary>

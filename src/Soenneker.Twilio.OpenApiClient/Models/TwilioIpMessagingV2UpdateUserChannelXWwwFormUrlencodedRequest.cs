@@ -17,21 +17,24 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("LastConsumedMessageIndex") is { } nullNodeLastConsumedMessageIndex && nullNodeLastConsumedMessageIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastConsumedMessageIndex = null;
-            if (parseNode.GetChildNode("LastConsumptionTimestamp") is { } nullNodeLastConsumptionTimestamp && nullNodeLastConsumptionTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastConsumptionTimestamp = null;
-            if (parseNode.GetChildNode("NotificationLevel") is { } nullNodeNotificationLevel && nullNodeNotificationLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationLevel = null;
+            if (parseNode.GetChildNode("LastConsumedMessageIndex") is null) { _explicitNullValueLastConsumedMessageIndex = default!; _explicitNullProperties?.Remove("LastConsumedMessageIndex"); }
+            else if (parseNode.GetChildNode("LastConsumedMessageIndex") is { } nullNodeLastConsumedMessageIndex && nullNodeLastConsumedMessageIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastConsumedMessageIndex = null;
+            if (parseNode.GetChildNode("LastConsumptionTimestamp") is null) { _explicitNullValueLastConsumptionTimestamp = default!; _explicitNullProperties?.Remove("LastConsumptionTimestamp"); }
+            else if (parseNode.GetChildNode("LastConsumptionTimestamp") is { } nullNodeLastConsumptionTimestamp && nullNodeLastConsumptionTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastConsumptionTimestamp = null;
+            if (parseNode.GetChildNode("NotificationLevel") is null) { _explicitNullValueNotificationLevel = default!; _explicitNullProperties?.Remove("NotificationLevel"); }
+            else if (parseNode.GetChildNode("NotificationLevel") is { } nullNodeNotificationLevel && nullNodeNotificationLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationLevel = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The LastConsumedMessageIndex property</summary>
-        public int? LastConsumedMessageIndex { get => _explicitNullValueLastConsumedMessageIndex; set { _explicitNullValueLastConsumedMessageIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastConsumedMessageIndex"); else _explicitNullProperties?.Remove("LastConsumedMessageIndex"); } }
+        public int? LastConsumedMessageIndex { get => _explicitNullValueLastConsumedMessageIndex; set { _explicitNullValueLastConsumedMessageIndex = value; AdditionalData?.Remove("LastConsumedMessageIndex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastConsumedMessageIndex"); else _explicitNullProperties?.Remove("LastConsumedMessageIndex"); } }
         private int? _explicitNullValueLastConsumedMessageIndex = default!;
         /// <summary>The LastConsumptionTimestamp property</summary>
-        public DateTimeOffset? LastConsumptionTimestamp { get => _explicitNullValueLastConsumptionTimestamp; set { _explicitNullValueLastConsumptionTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastConsumptionTimestamp"); else _explicitNullProperties?.Remove("LastConsumptionTimestamp"); } }
+        public DateTimeOffset? LastConsumptionTimestamp { get => _explicitNullValueLastConsumptionTimestamp; set { _explicitNullValueLastConsumptionTimestamp = value; AdditionalData?.Remove("LastConsumptionTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastConsumptionTimestamp"); else _explicitNullProperties?.Remove("LastConsumptionTimestamp"); } }
         private DateTimeOffset? _explicitNullValueLastConsumptionTimestamp = default!;
         /// <summary>The NotificationLevel property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UserChannelEnumNotificationLevel? NotificationLevel { get => _explicitNullValueNotificationLevel; set { _explicitNullValueNotificationLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationLevel"); else _explicitNullProperties?.Remove("NotificationLevel"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UserChannelEnumNotificationLevel? NotificationLevel { get => _explicitNullValueNotificationLevel; set { _explicitNullValueNotificationLevel = value; AdditionalData?.Remove("NotificationLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationLevel"); else _explicitNullProperties?.Remove("NotificationLevel"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UserChannelEnumNotificationLevel? _explicitNullValueNotificationLevel = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UpdateUserChannelXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -60,7 +63,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "LastConsumedMessageIndex", n => { LastConsumedMessageIndex = n.GetIntValue(); } },
                 { "LastConsumptionTimestamp", n => { LastConsumptionTimestamp = n.GetDateTimeOffsetValue(); } },
-                { "NotificationLevel", n => { NotificationLevel = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UserChannelEnumNotificationLevel>(); } },
+                { "NotificationLevel", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UserChannelEnumNotificationLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNotificationLevel = default; _explicitNullProperties?.Remove("NotificationLevel"); AdditionalData["NotificationLevel"] = unknown; } else { NotificationLevel = parsed; AdditionalData.Remove("NotificationLevel"); } } },
             };
         }
         /// <summary>

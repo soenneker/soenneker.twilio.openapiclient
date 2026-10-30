@@ -17,11 +17,16 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("conversion_rate_percentage") is { } nullNodeConversionRatePercentage && nullNodeConversionRatePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversionRatePercentage = null;
-            if (parseNode.GetChildNode("total_attempts") is { } nullNodeTotalAttempts && nullNodeTotalAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalAttempts = null;
-            if (parseNode.GetChildNode("total_converted") is { } nullNodeTotalConverted && nullNodeTotalConverted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalConverted = null;
-            if (parseNode.GetChildNode("total_unconverted") is { } nullNodeTotalUnconverted && nullNodeTotalUnconverted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalUnconverted = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("conversion_rate_percentage") is null) { _explicitNullValueConversionRatePercentage = default!; _explicitNullProperties?.Remove("conversion_rate_percentage"); }
+            else if (parseNode.GetChildNode("conversion_rate_percentage") is { } nullNodeConversionRatePercentage && nullNodeConversionRatePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversionRatePercentage = null;
+            if (parseNode.GetChildNode("total_attempts") is null) { _explicitNullValueTotalAttempts = default!; _explicitNullProperties?.Remove("total_attempts"); }
+            else if (parseNode.GetChildNode("total_attempts") is { } nullNodeTotalAttempts && nullNodeTotalAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalAttempts = null;
+            if (parseNode.GetChildNode("total_converted") is null) { _explicitNullValueTotalConverted = default!; _explicitNullProperties?.Remove("total_converted"); }
+            else if (parseNode.GetChildNode("total_converted") is { } nullNodeTotalConverted && nullNodeTotalConverted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalConverted = null;
+            if (parseNode.GetChildNode("total_unconverted") is null) { _explicitNullValueTotalUnconverted = default!; _explicitNullProperties?.Remove("total_unconverted"); }
+            else if (parseNode.GetChildNode("total_unconverted") is { } nullNodeTotalUnconverted && nullNodeTotalUnconverted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalUnconverted = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,30 +34,30 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Percentage of the confirmed messages over the total, defined by (total_converted/total_attempts)*100. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConversionRatePercentage { get => _explicitNullValueConversionRatePercentage; set { _explicitNullValueConversionRatePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversion_rate_percentage"); else _explicitNullProperties?.Remove("conversion_rate_percentage"); } }
+        public string? ConversionRatePercentage { get => _explicitNullValueConversionRatePercentage; set { _explicitNullValueConversionRatePercentage = value; AdditionalData?.Remove("conversion_rate_percentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversion_rate_percentage"); else _explicitNullProperties?.Remove("conversion_rate_percentage"); } }
         private string? _explicitNullValueConversionRatePercentage = default!;
 #nullable restore
 #else
-        public string ConversionRatePercentage { get => _explicitNullValueConversionRatePercentage; set { _explicitNullValueConversionRatePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversion_rate_percentage"); else _explicitNullProperties?.Remove("conversion_rate_percentage"); } }
+        public string ConversionRatePercentage { get => _explicitNullValueConversionRatePercentage; set { _explicitNullValueConversionRatePercentage = value; AdditionalData?.Remove("conversion_rate_percentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversion_rate_percentage"); else _explicitNullProperties?.Remove("conversion_rate_percentage"); } }
         private string _explicitNullValueConversionRatePercentage = default!;
 #endif
         /// <summary>Total of attempts made according to the provided filters</summary>
-        public int? TotalAttempts { get => _explicitNullValueTotalAttempts; set { _explicitNullValueTotalAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_attempts"); else _explicitNullProperties?.Remove("total_attempts"); } }
+        public int? TotalAttempts { get => _explicitNullValueTotalAttempts; set { _explicitNullValueTotalAttempts = value; AdditionalData?.Remove("total_attempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_attempts"); else _explicitNullProperties?.Remove("total_attempts"); } }
         private int? _explicitNullValueTotalAttempts = default!;
         /// <summary>Total of  attempts made that were confirmed by the end user, according to the provided filters.</summary>
-        public int? TotalConverted { get => _explicitNullValueTotalConverted; set { _explicitNullValueTotalConverted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_converted"); else _explicitNullProperties?.Remove("total_converted"); } }
+        public int? TotalConverted { get => _explicitNullValueTotalConverted; set { _explicitNullValueTotalConverted = value; AdditionalData?.Remove("total_converted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_converted"); else _explicitNullProperties?.Remove("total_converted"); } }
         private int? _explicitNullValueTotalConverted = default!;
         /// <summary>Total of attempts made that were not confirmed by the end user, according to the provided filters.</summary>
-        public int? TotalUnconverted { get => _explicitNullValueTotalUnconverted; set { _explicitNullValueTotalUnconverted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_unconverted"); else _explicitNullProperties?.Remove("total_unconverted"); } }
+        public int? TotalUnconverted { get => _explicitNullValueTotalUnconverted; set { _explicitNullValueTotalUnconverted = value; AdditionalData?.Remove("total_unconverted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_unconverted"); else _explicitNullProperties?.Remove("total_unconverted"); } }
         private int? _explicitNullValueTotalUnconverted = default!;
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

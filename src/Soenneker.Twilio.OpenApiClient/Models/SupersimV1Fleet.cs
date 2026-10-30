@@ -17,117 +17,132 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("data_enabled") is { } nullNodeDataEnabled && nullNodeDataEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataEnabled = null;
-            if (parseNode.GetChildNode("data_limit") is { } nullNodeDataLimit && nullNodeDataLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataLimit = null;
-            if (parseNode.GetChildNode("data_metering") is { } nullNodeDataMetering && nullNodeDataMetering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataMetering = null;
-            if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
-            if (parseNode.GetChildNode("date_updated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
-            if (parseNode.GetChildNode("ip_commands_method") is { } nullNodeIpCommandsMethod && nullNodeIpCommandsMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpCommandsMethod = null;
-            if (parseNode.GetChildNode("ip_commands_url") is { } nullNodeIpCommandsUrl && nullNodeIpCommandsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpCommandsUrl = null;
-            if (parseNode.GetChildNode("network_access_profile_sid") is { } nullNodeNetworkAccessProfileSid && nullNodeNetworkAccessProfileSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkAccessProfileSid = null;
-            if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
-            if (parseNode.GetChildNode("sms_commands_enabled") is { } nullNodeSmsCommandsEnabled && nullNodeSmsCommandsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsCommandsEnabled = null;
-            if (parseNode.GetChildNode("sms_commands_method") is { } nullNodeSmsCommandsMethod && nullNodeSmsCommandsMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsCommandsMethod = null;
-            if (parseNode.GetChildNode("sms_commands_url") is { } nullNodeSmsCommandsUrl && nullNodeSmsCommandsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsCommandsUrl = null;
-            if (parseNode.GetChildNode("unique_name") is { } nullNodeUniqueName && nullNodeUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueName = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("data_enabled") is null) { _explicitNullValueDataEnabled = default!; _explicitNullProperties?.Remove("data_enabled"); }
+            else if (parseNode.GetChildNode("data_enabled") is { } nullNodeDataEnabled && nullNodeDataEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataEnabled = null;
+            if (parseNode.GetChildNode("data_limit") is null) { _explicitNullValueDataLimit = default!; _explicitNullProperties?.Remove("data_limit"); }
+            else if (parseNode.GetChildNode("data_limit") is { } nullNodeDataLimit && nullNodeDataLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataLimit = null;
+            if (parseNode.GetChildNode("data_metering") is null) { _explicitNullValueDataMetering = default!; _explicitNullProperties?.Remove("data_metering"); }
+            else if (parseNode.GetChildNode("data_metering") is { } nullNodeDataMetering && nullNodeDataMetering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataMetering = null;
+            if (parseNode.GetChildNode("date_created") is null) { _explicitNullValueDateCreated = default!; _explicitNullProperties?.Remove("date_created"); }
+            else if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("date_updated") is null) { _explicitNullValueDateUpdated = default!; _explicitNullProperties?.Remove("date_updated"); }
+            else if (parseNode.GetChildNode("date_updated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
+            if (parseNode.GetChildNode("ip_commands_method") is null) { _explicitNullValueIpCommandsMethod = default!; _explicitNullProperties?.Remove("ip_commands_method"); }
+            else if (parseNode.GetChildNode("ip_commands_method") is { } nullNodeIpCommandsMethod && nullNodeIpCommandsMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpCommandsMethod = null;
+            if (parseNode.GetChildNode("ip_commands_url") is null) { _explicitNullValueIpCommandsUrl = default!; _explicitNullProperties?.Remove("ip_commands_url"); }
+            else if (parseNode.GetChildNode("ip_commands_url") is { } nullNodeIpCommandsUrl && nullNodeIpCommandsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpCommandsUrl = null;
+            if (parseNode.GetChildNode("network_access_profile_sid") is null) { _explicitNullValueNetworkAccessProfileSid = default!; _explicitNullProperties?.Remove("network_access_profile_sid"); }
+            else if (parseNode.GetChildNode("network_access_profile_sid") is { } nullNodeNetworkAccessProfileSid && nullNodeNetworkAccessProfileSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkAccessProfileSid = null;
+            if (parseNode.GetChildNode("sid") is null) { _explicitNullValueSid = default!; _explicitNullProperties?.Remove("sid"); }
+            else if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
+            if (parseNode.GetChildNode("sms_commands_enabled") is null) { _explicitNullValueSmsCommandsEnabled = default!; _explicitNullProperties?.Remove("sms_commands_enabled"); }
+            else if (parseNode.GetChildNode("sms_commands_enabled") is { } nullNodeSmsCommandsEnabled && nullNodeSmsCommandsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsCommandsEnabled = null;
+            if (parseNode.GetChildNode("sms_commands_method") is null) { _explicitNullValueSmsCommandsMethod = default!; _explicitNullProperties?.Remove("sms_commands_method"); }
+            else if (parseNode.GetChildNode("sms_commands_method") is { } nullNodeSmsCommandsMethod && nullNodeSmsCommandsMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsCommandsMethod = null;
+            if (parseNode.GetChildNode("sms_commands_url") is null) { _explicitNullValueSmsCommandsUrl = default!; _explicitNullProperties?.Remove("sms_commands_url"); }
+            else if (parseNode.GetChildNode("sms_commands_url") is { } nullNodeSmsCommandsUrl && nullNodeSmsCommandsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsCommandsUrl = null;
+            if (parseNode.GetChildNode("unique_name") is null) { _explicitNullValueUniqueName = default!; _explicitNullProperties?.Remove("unique_name"); }
+            else if (parseNode.GetChildNode("unique_name") is { } nullNodeUniqueName && nullNodeUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueName = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Fleet resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines whether SIMs in the Fleet are capable of using 2G/3G/4G/LTE/CAT-M data connectivity. Defaults to `true`.</summary>
-        public bool? DataEnabled { get => _explicitNullValueDataEnabled; set { _explicitNullValueDataEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_enabled"); else _explicitNullProperties?.Remove("data_enabled"); } }
+        public bool? DataEnabled { get => _explicitNullValueDataEnabled; set { _explicitNullValueDataEnabled = value; AdditionalData?.Remove("data_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_enabled"); else _explicitNullProperties?.Remove("data_enabled"); } }
         private bool? _explicitNullValueDataEnabled = default!;
         /// <summary>The total data usage (download and upload combined) in Megabytes that each Super SIM assigned to the Fleet can consume during a billing period (normally one month). Value must be between 1MB (1) and 2TB (2,000,000). Defaults to 250MB.</summary>
-        public int? DataLimit { get => _explicitNullValueDataLimit; set { _explicitNullValueDataLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_limit"); else _explicitNullProperties?.Remove("data_limit"); } }
+        public int? DataLimit { get => _explicitNullValueDataLimit; set { _explicitNullValueDataLimit = value; AdditionalData?.Remove("data_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_limit"); else _explicitNullProperties?.Remove("data_limit"); } }
         private int? _explicitNullValueDataLimit = default!;
         /// <summary>The model by which a SIMs usage is metered and billed. Defaults to `payg`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.FleetEnumDataMetering? DataMetering { get => _explicitNullValueDataMetering; set { _explicitNullValueDataMetering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_metering"); else _explicitNullProperties?.Remove("data_metering"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FleetEnumDataMetering? DataMetering { get => _explicitNullValueDataMetering; set { _explicitNullValueDataMetering = value; AdditionalData?.Remove("data_metering"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_metering"); else _explicitNullProperties?.Remove("data_metering"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.FleetEnumDataMetering? _explicitNullValueDataMetering = default!;
         /// <summary>The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
-        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
+        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; AdditionalData?.Remove("date_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
         private DateTimeOffset? _explicitNullValueDateCreated = default!;
         /// <summary>The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
-        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
+        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; AdditionalData?.Remove("date_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
         private DateTimeOffset? _explicitNullValueDateUpdated = default!;
         /// <summary>A string representing the HTTP method to use when making a request to `ip_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetIpCommandsMethod? IpCommandsMethod { get => _explicitNullValueIpCommandsMethod; set { _explicitNullValueIpCommandsMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_commands_method"); else _explicitNullProperties?.Remove("ip_commands_method"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetIpCommandsMethod? IpCommandsMethod { get => _explicitNullValueIpCommandsMethod; set { _explicitNullValueIpCommandsMethod = value; AdditionalData?.Remove("ip_commands_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_commands_method"); else _explicitNullProperties?.Remove("ip_commands_method"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetIpCommandsMethod? _explicitNullValueIpCommandsMethod = default!;
         /// <summary>The URL that will receive a webhook when a Super SIM in the Fleet is used to send an IP Command from your device to a special IP address. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpCommandsUrl { get => _explicitNullValueIpCommandsUrl; set { _explicitNullValueIpCommandsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_commands_url"); else _explicitNullProperties?.Remove("ip_commands_url"); } }
+        public string? IpCommandsUrl { get => _explicitNullValueIpCommandsUrl; set { _explicitNullValueIpCommandsUrl = value; AdditionalData?.Remove("ip_commands_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_commands_url"); else _explicitNullProperties?.Remove("ip_commands_url"); } }
         private string? _explicitNullValueIpCommandsUrl = default!;
 #nullable restore
 #else
-        public string IpCommandsUrl { get => _explicitNullValueIpCommandsUrl; set { _explicitNullValueIpCommandsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_commands_url"); else _explicitNullProperties?.Remove("ip_commands_url"); } }
+        public string IpCommandsUrl { get => _explicitNullValueIpCommandsUrl; set { _explicitNullValueIpCommandsUrl = value; AdditionalData?.Remove("ip_commands_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_commands_url"); else _explicitNullProperties?.Remove("ip_commands_url"); } }
         private string _explicitNullValueIpCommandsUrl = default!;
 #endif
         /// <summary>The SID of the Network Access Profile that controls which cellular networks the Fleet&apos;s SIMs can connect to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NetworkAccessProfileSid { get => _explicitNullValueNetworkAccessProfileSid; set { _explicitNullValueNetworkAccessProfileSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_access_profile_sid"); else _explicitNullProperties?.Remove("network_access_profile_sid"); } }
+        public string? NetworkAccessProfileSid { get => _explicitNullValueNetworkAccessProfileSid; set { _explicitNullValueNetworkAccessProfileSid = value; AdditionalData?.Remove("network_access_profile_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_access_profile_sid"); else _explicitNullProperties?.Remove("network_access_profile_sid"); } }
         private string? _explicitNullValueNetworkAccessProfileSid = default!;
 #nullable restore
 #else
-        public string NetworkAccessProfileSid { get => _explicitNullValueNetworkAccessProfileSid; set { _explicitNullValueNetworkAccessProfileSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_access_profile_sid"); else _explicitNullProperties?.Remove("network_access_profile_sid"); } }
+        public string NetworkAccessProfileSid { get => _explicitNullValueNetworkAccessProfileSid; set { _explicitNullValueNetworkAccessProfileSid = value; AdditionalData?.Remove("network_access_profile_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_access_profile_sid"); else _explicitNullProperties?.Remove("network_access_profile_sid"); } }
         private string _explicitNullValueNetworkAccessProfileSid = default!;
 #endif
         /// <summary>The unique string that we created to identify the Fleet resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string? _explicitNullValueSid = default!;
 #nullable restore
 #else
-        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string _explicitNullValueSid = default!;
 #endif
         /// <summary>Defines whether SIMs in the Fleet are capable of sending and receiving machine-to-machine SMS via Commands. Defaults to `false`.</summary>
-        public bool? SmsCommandsEnabled { get => _explicitNullValueSmsCommandsEnabled; set { _explicitNullValueSmsCommandsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_commands_enabled"); else _explicitNullProperties?.Remove("sms_commands_enabled"); } }
+        public bool? SmsCommandsEnabled { get => _explicitNullValueSmsCommandsEnabled; set { _explicitNullValueSmsCommandsEnabled = value; AdditionalData?.Remove("sms_commands_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_commands_enabled"); else _explicitNullProperties?.Remove("sms_commands_enabled"); } }
         private bool? _explicitNullValueSmsCommandsEnabled = default!;
         /// <summary>A string representing the HTTP method to use when making a request to `sms_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetSmsCommandsMethod? SmsCommandsMethod { get => _explicitNullValueSmsCommandsMethod; set { _explicitNullValueSmsCommandsMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_commands_method"); else _explicitNullProperties?.Remove("sms_commands_method"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetSmsCommandsMethod? SmsCommandsMethod { get => _explicitNullValueSmsCommandsMethod; set { _explicitNullValueSmsCommandsMethod = value; AdditionalData?.Remove("sms_commands_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_commands_method"); else _explicitNullProperties?.Remove("sms_commands_method"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetSmsCommandsMethod? _explicitNullValueSmsCommandsMethod = default!;
         /// <summary>The URL that will receive a webhook when a Super SIM in the Fleet is used to send an SMS from your device to the SMS Commands number. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmsCommandsUrl { get => _explicitNullValueSmsCommandsUrl; set { _explicitNullValueSmsCommandsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_commands_url"); else _explicitNullProperties?.Remove("sms_commands_url"); } }
+        public string? SmsCommandsUrl { get => _explicitNullValueSmsCommandsUrl; set { _explicitNullValueSmsCommandsUrl = value; AdditionalData?.Remove("sms_commands_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_commands_url"); else _explicitNullProperties?.Remove("sms_commands_url"); } }
         private string? _explicitNullValueSmsCommandsUrl = default!;
 #nullable restore
 #else
-        public string SmsCommandsUrl { get => _explicitNullValueSmsCommandsUrl; set { _explicitNullValueSmsCommandsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_commands_url"); else _explicitNullProperties?.Remove("sms_commands_url"); } }
+        public string SmsCommandsUrl { get => _explicitNullValueSmsCommandsUrl; set { _explicitNullValueSmsCommandsUrl = value; AdditionalData?.Remove("sms_commands_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_commands_url"); else _explicitNullProperties?.Remove("sms_commands_url"); } }
         private string _explicitNullValueSmsCommandsUrl = default!;
 #endif
         /// <summary>An application-defined string that uniquely identifies the resource. It can be used in place of the resource&apos;s `sid` in the URL to address the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_name"); else _explicitNullProperties?.Remove("unique_name"); } }
+        public string? UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; AdditionalData?.Remove("unique_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_name"); else _explicitNullProperties?.Remove("unique_name"); } }
         private string? _explicitNullValueUniqueName = default!;
 #nullable restore
 #else
-        public string UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_name"); else _explicitNullProperties?.Remove("unique_name"); } }
+        public string UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; AdditionalData?.Remove("unique_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_name"); else _explicitNullProperties?.Remove("unique_name"); } }
         private string _explicitNullValueUniqueName = default!;
 #endif
         /// <summary>The absolute URL of the Fleet resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
@@ -159,15 +174,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
                 { "data_enabled", n => { DataEnabled = n.GetBoolValue(); } },
                 { "data_limit", n => { DataLimit = n.GetIntValue(); } },
-                { "data_metering", n => { DataMetering = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FleetEnumDataMetering>(); } },
+                { "data_metering", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FleetEnumDataMetering>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDataMetering = default; _explicitNullProperties?.Remove("data_metering"); AdditionalData["data_metering"] = unknown; } else { DataMetering = parsed; AdditionalData.Remove("data_metering"); } } },
                 { "date_created", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
-                { "ip_commands_method", n => { IpCommandsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetIpCommandsMethod>(); } },
+                { "ip_commands_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetIpCommandsMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIpCommandsMethod = default; _explicitNullProperties?.Remove("ip_commands_method"); AdditionalData["ip_commands_method"] = unknown; } else { IpCommandsMethod = parsed; AdditionalData.Remove("ip_commands_method"); } } },
                 { "ip_commands_url", n => { IpCommandsUrl = n.GetStringValue(); } },
                 { "network_access_profile_sid", n => { NetworkAccessProfileSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "sms_commands_enabled", n => { SmsCommandsEnabled = n.GetBoolValue(); } },
-                { "sms_commands_method", n => { SmsCommandsMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetSmsCommandsMethod>(); } },
+                { "sms_commands_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1FleetSmsCommandsMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSmsCommandsMethod = default; _explicitNullProperties?.Remove("sms_commands_method"); AdditionalData["sms_commands_method"] = unknown; } else { SmsCommandsMethod = parsed; AdditionalData.Remove("sms_commands_method"); } } },
                 { "sms_commands_url", n => { SmsCommandsUrl = n.GetStringValue(); } },
                 { "unique_name", n => { UniqueName = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },

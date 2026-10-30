@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AuthPayload") is { } nullNodeAuthPayload && nullNodeAuthPayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthPayload = null;
-            if (parseNode.GetChildNode("Metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("AuthPayload") is null) { _explicitNullValueAuthPayload = default!; _explicitNullProperties?.Remove("AuthPayload"); }
+            else if (parseNode.GetChildNode("AuthPayload") is { } nullNodeAuthPayload && nullNodeAuthPayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthPayload = null;
+            if (parseNode.GetChildNode("Metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("Metadata"); }
+            else if (parseNode.GetChildNode("Metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The optional payload needed to verify the Challenge. E.g., a TOTP would use the numeric code. For `TOTP` this value must be between 3 and 8 characters long. For `Push` this value can be up to 5456 characters in length</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthPayload { get => _explicitNullValueAuthPayload; set { _explicitNullValueAuthPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthPayload"); else _explicitNullProperties?.Remove("AuthPayload"); } }
+        public string? AuthPayload { get => _explicitNullValueAuthPayload; set { _explicitNullValueAuthPayload = value; AdditionalData?.Remove("AuthPayload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthPayload"); else _explicitNullProperties?.Remove("AuthPayload"); } }
         private string? _explicitNullValueAuthPayload = default!;
 #nullable restore
 #else
-        public string AuthPayload { get => _explicitNullValueAuthPayload; set { _explicitNullValueAuthPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthPayload"); else _explicitNullProperties?.Remove("AuthPayload"); } }
+        public string AuthPayload { get => _explicitNullValueAuthPayload; set { _explicitNullValueAuthPayload = value; AdditionalData?.Remove("AuthPayload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthPayload"); else _explicitNullProperties?.Remove("AuthPayload"); } }
         private string _explicitNullValueAuthPayload = default!;
 #endif
         /// <summary>Custom metadata associated with the challenge. This is added by the Device/SDK directly to allow for the inclusion of device information. It must be a stringified JSON with only strings values eg. `{&quot;os&quot;: &quot;Android&quot;}`. Can be up to 1024 characters in length.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Metadata"); else _explicitNullProperties?.Remove("Metadata"); } }
+        public UntypedNode? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("Metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Metadata"); else _explicitNullProperties?.Remove("Metadata"); } }
         private UntypedNode? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public UntypedNode Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Metadata"); else _explicitNullProperties?.Remove("Metadata"); } }
+        public UntypedNode Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("Metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Metadata"); else _explicitNullProperties?.Remove("Metadata"); } }
         private UntypedNode _explicitNullValueMetadata = default!;
 #endif
         /// <summary>

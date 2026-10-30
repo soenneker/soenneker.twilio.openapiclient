@@ -17,13 +17,20 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("RecordingChannels") is { } nullNodeRecordingChannels && nullNodeRecordingChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingChannels = null;
-            if (parseNode.GetChildNode("RecordingConfigurationId") is { } nullNodeRecordingConfigurationId && nullNodeRecordingConfigurationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingConfigurationId = null;
-            if (parseNode.GetChildNode("RecordingStatusCallback") is { } nullNodeRecordingStatusCallback && nullNodeRecordingStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingStatusCallback = null;
-            if (parseNode.GetChildNode("RecordingStatusCallbackEvent") is { } nullNodeRecordingStatusCallbackEvent && nullNodeRecordingStatusCallbackEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingStatusCallbackEvent = null;
-            if (parseNode.GetChildNode("RecordingStatusCallbackMethod") is { } nullNodeRecordingStatusCallbackMethod && nullNodeRecordingStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingStatusCallbackMethod = null;
-            if (parseNode.GetChildNode("RecordingTrack") is { } nullNodeRecordingTrack && nullNodeRecordingTrack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingTrack = null;
-            if (parseNode.GetChildNode("Trim") is { } nullNodeTrim && nullNodeTrim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trim = null;
+            if (parseNode.GetChildNode("RecordingChannels") is null) { _explicitNullValueRecordingChannels = default!; _explicitNullProperties?.Remove("RecordingChannels"); }
+            else if (parseNode.GetChildNode("RecordingChannels") is { } nullNodeRecordingChannels && nullNodeRecordingChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingChannels = null;
+            if (parseNode.GetChildNode("RecordingConfigurationId") is null) { _explicitNullValueRecordingConfigurationId = default!; _explicitNullProperties?.Remove("RecordingConfigurationId"); }
+            else if (parseNode.GetChildNode("RecordingConfigurationId") is { } nullNodeRecordingConfigurationId && nullNodeRecordingConfigurationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingConfigurationId = null;
+            if (parseNode.GetChildNode("RecordingStatusCallback") is null) { _explicitNullValueRecordingStatusCallback = default!; _explicitNullProperties?.Remove("RecordingStatusCallback"); }
+            else if (parseNode.GetChildNode("RecordingStatusCallback") is { } nullNodeRecordingStatusCallback && nullNodeRecordingStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingStatusCallback = null;
+            if (parseNode.GetChildNode("RecordingStatusCallbackEvent") is null) { _explicitNullValueRecordingStatusCallbackEvent = default!; _explicitNullProperties?.Remove("RecordingStatusCallbackEvent"); }
+            else if (parseNode.GetChildNode("RecordingStatusCallbackEvent") is { } nullNodeRecordingStatusCallbackEvent && nullNodeRecordingStatusCallbackEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingStatusCallbackEvent = null;
+            if (parseNode.GetChildNode("RecordingStatusCallbackMethod") is null) { _explicitNullValueRecordingStatusCallbackMethod = default!; _explicitNullProperties?.Remove("RecordingStatusCallbackMethod"); }
+            else if (parseNode.GetChildNode("RecordingStatusCallbackMethod") is { } nullNodeRecordingStatusCallbackMethod && nullNodeRecordingStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingStatusCallbackMethod = null;
+            if (parseNode.GetChildNode("RecordingTrack") is null) { _explicitNullValueRecordingTrack = default!; _explicitNullProperties?.Remove("RecordingTrack"); }
+            else if (parseNode.GetChildNode("RecordingTrack") is { } nullNodeRecordingTrack && nullNodeRecordingTrack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingTrack = null;
+            if (parseNode.GetChildNode("Trim") is null) { _explicitNullValueTrim = default!; _explicitNullProperties?.Remove("Trim"); }
+            else if (parseNode.GetChildNode("Trim") is { } nullNodeTrim && nullNodeTrim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trim = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,64 +38,64 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The number of channels used in the recording. Can be: `mono` or `dual` and the default is `mono`. `mono` records all parties of the call into one channel. `dual` records each party of a 2-party call into separate channels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordingChannels { get => _explicitNullValueRecordingChannels; set { _explicitNullValueRecordingChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingChannels"); else _explicitNullProperties?.Remove("RecordingChannels"); } }
+        public string? RecordingChannels { get => _explicitNullValueRecordingChannels; set { _explicitNullValueRecordingChannels = value; AdditionalData?.Remove("RecordingChannels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingChannels"); else _explicitNullProperties?.Remove("RecordingChannels"); } }
         private string? _explicitNullValueRecordingChannels = default!;
 #nullable restore
 #else
-        public string RecordingChannels { get => _explicitNullValueRecordingChannels; set { _explicitNullValueRecordingChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingChannels"); else _explicitNullProperties?.Remove("RecordingChannels"); } }
+        public string RecordingChannels { get => _explicitNullValueRecordingChannels; set { _explicitNullValueRecordingChannels = value; AdditionalData?.Remove("RecordingChannels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingChannels"); else _explicitNullProperties?.Remove("RecordingChannels"); } }
         private string _explicitNullValueRecordingChannels = default!;
 #endif
         /// <summary>The identifier of the configuration to be used when creating and processing the recording</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordingConfigurationId { get => _explicitNullValueRecordingConfigurationId; set { _explicitNullValueRecordingConfigurationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingConfigurationId"); else _explicitNullProperties?.Remove("RecordingConfigurationId"); } }
+        public string? RecordingConfigurationId { get => _explicitNullValueRecordingConfigurationId; set { _explicitNullValueRecordingConfigurationId = value; AdditionalData?.Remove("RecordingConfigurationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingConfigurationId"); else _explicitNullProperties?.Remove("RecordingConfigurationId"); } }
         private string? _explicitNullValueRecordingConfigurationId = default!;
 #nullable restore
 #else
-        public string RecordingConfigurationId { get => _explicitNullValueRecordingConfigurationId; set { _explicitNullValueRecordingConfigurationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingConfigurationId"); else _explicitNullProperties?.Remove("RecordingConfigurationId"); } }
+        public string RecordingConfigurationId { get => _explicitNullValueRecordingConfigurationId; set { _explicitNullValueRecordingConfigurationId = value; AdditionalData?.Remove("RecordingConfigurationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingConfigurationId"); else _explicitNullProperties?.Remove("RecordingConfigurationId"); } }
         private string _explicitNullValueRecordingConfigurationId = default!;
 #endif
         /// <summary>The URL we should call using the `recording_status_callback_method` on each recording event specified in  `recording_status_callback_event`. For more information, see [RecordingStatusCallback parameters](https://www.twilio.com/docs/voice/api/recording#recordingstatuscallback).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordingStatusCallback { get => _explicitNullValueRecordingStatusCallback; set { _explicitNullValueRecordingStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallback"); else _explicitNullProperties?.Remove("RecordingStatusCallback"); } }
+        public string? RecordingStatusCallback { get => _explicitNullValueRecordingStatusCallback; set { _explicitNullValueRecordingStatusCallback = value; AdditionalData?.Remove("RecordingStatusCallback"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallback"); else _explicitNullProperties?.Remove("RecordingStatusCallback"); } }
         private string? _explicitNullValueRecordingStatusCallback = default!;
 #nullable restore
 #else
-        public string RecordingStatusCallback { get => _explicitNullValueRecordingStatusCallback; set { _explicitNullValueRecordingStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallback"); else _explicitNullProperties?.Remove("RecordingStatusCallback"); } }
+        public string RecordingStatusCallback { get => _explicitNullValueRecordingStatusCallback; set { _explicitNullValueRecordingStatusCallback = value; AdditionalData?.Remove("RecordingStatusCallback"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallback"); else _explicitNullProperties?.Remove("RecordingStatusCallback"); } }
         private string _explicitNullValueRecordingStatusCallback = default!;
 #endif
         /// <summary>The recording status events on which we should call the `recording_status_callback` URL. Can be: `in-progress`, `completed` and `absent` and the default is `completed`. Separate multiple event values with a space.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RecordingStatusCallbackEvent { get => _explicitNullValueRecordingStatusCallbackEvent; set { _explicitNullValueRecordingStatusCallbackEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallbackEvent"); else _explicitNullProperties?.Remove("RecordingStatusCallbackEvent"); } }
+        public List<string>? RecordingStatusCallbackEvent { get => _explicitNullValueRecordingStatusCallbackEvent; set { _explicitNullValueRecordingStatusCallbackEvent = value; AdditionalData?.Remove("RecordingStatusCallbackEvent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallbackEvent"); else _explicitNullProperties?.Remove("RecordingStatusCallbackEvent"); } }
         private List<string>? _explicitNullValueRecordingStatusCallbackEvent = default!;
 #nullable restore
 #else
-        public List<string> RecordingStatusCallbackEvent { get => _explicitNullValueRecordingStatusCallbackEvent; set { _explicitNullValueRecordingStatusCallbackEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallbackEvent"); else _explicitNullProperties?.Remove("RecordingStatusCallbackEvent"); } }
+        public List<string> RecordingStatusCallbackEvent { get => _explicitNullValueRecordingStatusCallbackEvent; set { _explicitNullValueRecordingStatusCallbackEvent = value; AdditionalData?.Remove("RecordingStatusCallbackEvent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallbackEvent"); else _explicitNullProperties?.Remove("RecordingStatusCallbackEvent"); } }
         private List<string> _explicitNullValueRecordingStatusCallbackEvent = default!;
 #endif
         /// <summary>The HTTP method we should use to call `recording_status_callback`. Can be: `GET` or `POST` and the default is `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallRecordingXWwwFormUrlencodedRequestRecordingStatusCallbackMethod? RecordingStatusCallbackMethod { get => _explicitNullValueRecordingStatusCallbackMethod; set { _explicitNullValueRecordingStatusCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallbackMethod"); else _explicitNullProperties?.Remove("RecordingStatusCallbackMethod"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallRecordingXWwwFormUrlencodedRequestRecordingStatusCallbackMethod? RecordingStatusCallbackMethod { get => _explicitNullValueRecordingStatusCallbackMethod; set { _explicitNullValueRecordingStatusCallbackMethod = value; AdditionalData?.Remove("RecordingStatusCallbackMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallbackMethod"); else _explicitNullProperties?.Remove("RecordingStatusCallbackMethod"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallRecordingXWwwFormUrlencodedRequestRecordingStatusCallbackMethod? _explicitNullValueRecordingStatusCallbackMethod = default!;
         /// <summary>The audio track to record for the call. Can be: `inbound`, `outbound` or `both`. The default is `both`. `inbound` records the audio that is received by Twilio. `outbound` records the audio that is generated from Twilio. `both` records the audio that is received and generated by Twilio.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordingTrack { get => _explicitNullValueRecordingTrack; set { _explicitNullValueRecordingTrack = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingTrack"); else _explicitNullProperties?.Remove("RecordingTrack"); } }
+        public string? RecordingTrack { get => _explicitNullValueRecordingTrack; set { _explicitNullValueRecordingTrack = value; AdditionalData?.Remove("RecordingTrack"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingTrack"); else _explicitNullProperties?.Remove("RecordingTrack"); } }
         private string? _explicitNullValueRecordingTrack = default!;
 #nullable restore
 #else
-        public string RecordingTrack { get => _explicitNullValueRecordingTrack; set { _explicitNullValueRecordingTrack = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingTrack"); else _explicitNullProperties?.Remove("RecordingTrack"); } }
+        public string RecordingTrack { get => _explicitNullValueRecordingTrack; set { _explicitNullValueRecordingTrack = value; AdditionalData?.Remove("RecordingTrack"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingTrack"); else _explicitNullProperties?.Remove("RecordingTrack"); } }
         private string _explicitNullValueRecordingTrack = default!;
 #endif
         /// <summary>Whether to trim any leading and trailing silence in the recording. Can be: `trim-silence` or `do-not-trim` and the default is `do-not-trim`. `trim-silence` trims the silence from the beginning and end of the recording and `do-not-trim` does not.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Trim { get => _explicitNullValueTrim; set { _explicitNullValueTrim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Trim"); else _explicitNullProperties?.Remove("Trim"); } }
+        public string? Trim { get => _explicitNullValueTrim; set { _explicitNullValueTrim = value; AdditionalData?.Remove("Trim"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Trim"); else _explicitNullProperties?.Remove("Trim"); } }
         private string? _explicitNullValueTrim = default!;
 #nullable restore
 #else
-        public string Trim { get => _explicitNullValueTrim; set { _explicitNullValueTrim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Trim"); else _explicitNullProperties?.Remove("Trim"); } }
+        public string Trim { get => _explicitNullValueTrim; set { _explicitNullValueTrim = value; AdditionalData?.Remove("Trim"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Trim"); else _explicitNullProperties?.Remove("Trim"); } }
         private string _explicitNullValueTrim = default!;
 #endif
         /// <summary>
@@ -120,7 +127,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "RecordingConfigurationId", n => { RecordingConfigurationId = n.GetStringValue(); } },
                 { "RecordingStatusCallback", n => { RecordingStatusCallback = n.GetStringValue(); } },
                 { "RecordingStatusCallbackEvent", n => { RecordingStatusCallbackEvent = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "RecordingStatusCallbackMethod", n => { RecordingStatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallRecordingXWwwFormUrlencodedRequestRecordingStatusCallbackMethod>(); } },
+                { "RecordingStatusCallbackMethod", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateCallRecordingXWwwFormUrlencodedRequestRecordingStatusCallbackMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRecordingStatusCallbackMethod = default; _explicitNullProperties?.Remove("RecordingStatusCallbackMethod"); AdditionalData["RecordingStatusCallbackMethod"] = unknown; } else { RecordingStatusCallbackMethod = parsed; AdditionalData.Remove("RecordingStatusCallbackMethod"); } } },
                 { "RecordingTrack", n => { RecordingTrack = n.GetStringValue(); } },
                 { "Trim", n => { Trim = n.GetStringValue(); } },
             };

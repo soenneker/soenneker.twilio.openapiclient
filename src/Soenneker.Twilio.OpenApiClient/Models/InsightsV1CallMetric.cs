@@ -17,25 +17,34 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("call_sid") is { } nullNodeCallSid && nullNodeCallSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallSid = null;
-            if (parseNode.GetChildNode("carrier_edge") is { } nullNodeCarrierEdge && nullNodeCarrierEdge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierEdge = null;
-            if (parseNode.GetChildNode("client_edge") is { } nullNodeClientEdge && nullNodeClientEdge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientEdge = null;
-            if (parseNode.GetChildNode("direction") is { } nullNodeDirection && nullNodeDirection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Direction = null;
-            if (parseNode.GetChildNode("edge") is { } nullNodeEdge && nullNodeEdge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Edge = null;
-            if (parseNode.GetChildNode("sdk_edge") is { } nullNodeSdkEdge && nullNodeSdkEdge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkEdge = null;
-            if (parseNode.GetChildNode("sip_edge") is { } nullNodeSipEdge && nullNodeSipEdge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SipEdge = null;
-            if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("call_sid") is null) { _explicitNullValueCallSid = default!; _explicitNullProperties?.Remove("call_sid"); }
+            else if (parseNode.GetChildNode("call_sid") is { } nullNodeCallSid && nullNodeCallSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallSid = null;
+            if (parseNode.GetChildNode("carrier_edge") is null) { _explicitNullValueCarrierEdge = default!; _explicitNullProperties?.Remove("carrier_edge"); }
+            else if (parseNode.GetChildNode("carrier_edge") is { } nullNodeCarrierEdge && nullNodeCarrierEdge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierEdge = null;
+            if (parseNode.GetChildNode("client_edge") is null) { _explicitNullValueClientEdge = default!; _explicitNullProperties?.Remove("client_edge"); }
+            else if (parseNode.GetChildNode("client_edge") is { } nullNodeClientEdge && nullNodeClientEdge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientEdge = null;
+            if (parseNode.GetChildNode("direction") is null) { _explicitNullValueDirection = default!; _explicitNullProperties?.Remove("direction"); }
+            else if (parseNode.GetChildNode("direction") is { } nullNodeDirection && nullNodeDirection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Direction = null;
+            if (parseNode.GetChildNode("edge") is null) { _explicitNullValueEdge = default!; _explicitNullProperties?.Remove("edge"); }
+            else if (parseNode.GetChildNode("edge") is { } nullNodeEdge && nullNodeEdge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Edge = null;
+            if (parseNode.GetChildNode("sdk_edge") is null) { _explicitNullValueSdkEdge = default!; _explicitNullProperties?.Remove("sdk_edge"); }
+            else if (parseNode.GetChildNode("sdk_edge") is { } nullNodeSdkEdge && nullNodeSdkEdge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkEdge = null;
+            if (parseNode.GetChildNode("sip_edge") is null) { _explicitNullValueSipEdge = default!; _explicitNullProperties?.Remove("sip_edge"); }
+            else if (parseNode.GetChildNode("sip_edge") is { } nullNodeSipEdge && nullNodeSipEdge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SipEdge = null;
+            if (parseNode.GetChildNode("timestamp") is null) { _explicitNullValueTimestamp = default!; _explicitNullProperties?.Remove("timestamp"); }
+            else if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
         }
 
         /// <summary>The unique SID identifier of the Account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -43,67 +52,67 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The unique SID identifier of the Call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
+        public string? CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; AdditionalData?.Remove("call_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
         private string? _explicitNullValueCallSid = default!;
 #nullable restore
 #else
-        public string CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
+        public string CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; AdditionalData?.Remove("call_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
         private string _explicitNullValueCallSid = default!;
 #endif
         /// <summary>Contains metrics and properties for the Twilio media gateway of a PSTN call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CarrierEdge { get => _explicitNullValueCarrierEdge; set { _explicitNullValueCarrierEdge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_edge"); else _explicitNullProperties?.Remove("carrier_edge"); } }
+        public UntypedNode? CarrierEdge { get => _explicitNullValueCarrierEdge; set { _explicitNullValueCarrierEdge = value; AdditionalData?.Remove("carrier_edge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_edge"); else _explicitNullProperties?.Remove("carrier_edge"); } }
         private UntypedNode? _explicitNullValueCarrierEdge = default!;
 #nullable restore
 #else
-        public UntypedNode CarrierEdge { get => _explicitNullValueCarrierEdge; set { _explicitNullValueCarrierEdge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_edge"); else _explicitNullProperties?.Remove("carrier_edge"); } }
+        public UntypedNode CarrierEdge { get => _explicitNullValueCarrierEdge; set { _explicitNullValueCarrierEdge = value; AdditionalData?.Remove("carrier_edge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_edge"); else _explicitNullProperties?.Remove("carrier_edge"); } }
         private UntypedNode _explicitNullValueCarrierEdge = default!;
 #endif
         /// <summary>Contains metrics and properties for the Twilio media gateway of a Client call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ClientEdge { get => _explicitNullValueClientEdge; set { _explicitNullValueClientEdge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_edge"); else _explicitNullProperties?.Remove("client_edge"); } }
+        public UntypedNode? ClientEdge { get => _explicitNullValueClientEdge; set { _explicitNullValueClientEdge = value; AdditionalData?.Remove("client_edge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_edge"); else _explicitNullProperties?.Remove("client_edge"); } }
         private UntypedNode? _explicitNullValueClientEdge = default!;
 #nullable restore
 #else
-        public UntypedNode ClientEdge { get => _explicitNullValueClientEdge; set { _explicitNullValueClientEdge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_edge"); else _explicitNullProperties?.Remove("client_edge"); } }
+        public UntypedNode ClientEdge { get => _explicitNullValueClientEdge; set { _explicitNullValueClientEdge = value; AdditionalData?.Remove("client_edge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_edge"); else _explicitNullProperties?.Remove("client_edge"); } }
         private UntypedNode _explicitNullValueClientEdge = default!;
 #endif
         /// <summary>The direction property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumStreamDirection? Direction { get => _explicitNullValueDirection; set { _explicitNullValueDirection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direction"); else _explicitNullProperties?.Remove("direction"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumStreamDirection? Direction { get => _explicitNullValueDirection; set { _explicitNullValueDirection = value; AdditionalData?.Remove("direction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direction"); else _explicitNullProperties?.Remove("direction"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumStreamDirection? _explicitNullValueDirection = default!;
         /// <summary>The edge property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumTwilioEdge? Edge { get => _explicitNullValueEdge; set { _explicitNullValueEdge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edge"); else _explicitNullProperties?.Remove("edge"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumTwilioEdge? Edge { get => _explicitNullValueEdge; set { _explicitNullValueEdge = value; AdditionalData?.Remove("edge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edge"); else _explicitNullProperties?.Remove("edge"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumTwilioEdge? _explicitNullValueEdge = default!;
         /// <summary>Contains metrics and properties for the SDK sensor library for Client calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SdkEdge { get => _explicitNullValueSdkEdge; set { _explicitNullValueSdkEdge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdk_edge"); else _explicitNullProperties?.Remove("sdk_edge"); } }
+        public UntypedNode? SdkEdge { get => _explicitNullValueSdkEdge; set { _explicitNullValueSdkEdge = value; AdditionalData?.Remove("sdk_edge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdk_edge"); else _explicitNullProperties?.Remove("sdk_edge"); } }
         private UntypedNode? _explicitNullValueSdkEdge = default!;
 #nullable restore
 #else
-        public UntypedNode SdkEdge { get => _explicitNullValueSdkEdge; set { _explicitNullValueSdkEdge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdk_edge"); else _explicitNullProperties?.Remove("sdk_edge"); } }
+        public UntypedNode SdkEdge { get => _explicitNullValueSdkEdge; set { _explicitNullValueSdkEdge = value; AdditionalData?.Remove("sdk_edge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdk_edge"); else _explicitNullProperties?.Remove("sdk_edge"); } }
         private UntypedNode _explicitNullValueSdkEdge = default!;
 #endif
         /// <summary>Contains metrics and properties for the Twilio media gateway of a SIP Interface or Trunking call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SipEdge { get => _explicitNullValueSipEdge; set { _explicitNullValueSipEdge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sip_edge"); else _explicitNullProperties?.Remove("sip_edge"); } }
+        public UntypedNode? SipEdge { get => _explicitNullValueSipEdge; set { _explicitNullValueSipEdge = value; AdditionalData?.Remove("sip_edge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sip_edge"); else _explicitNullProperties?.Remove("sip_edge"); } }
         private UntypedNode? _explicitNullValueSipEdge = default!;
 #nullable restore
 #else
-        public UntypedNode SipEdge { get => _explicitNullValueSipEdge; set { _explicitNullValueSipEdge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sip_edge"); else _explicitNullProperties?.Remove("sip_edge"); } }
+        public UntypedNode SipEdge { get => _explicitNullValueSipEdge; set { _explicitNullValueSipEdge = value; AdditionalData?.Remove("sip_edge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sip_edge"); else _explicitNullProperties?.Remove("sip_edge"); } }
         private UntypedNode _explicitNullValueSipEdge = default!;
 #endif
         /// <summary>Timestamp of metric sample. Samples are taken every 10 seconds and contain the metrics for the previous 10 seconds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        public string? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
         private string? _explicitNullValueTimestamp = default!;
 #nullable restore
 #else
-        public string Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        public string Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
         private string _explicitNullValueTimestamp = default!;
 #endif
         /// <summary>
@@ -135,8 +144,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "call_sid", n => { CallSid = n.GetStringValue(); } },
                 { "carrier_edge", n => { CarrierEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "client_edge", n => { ClientEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumStreamDirection>(); } },
-                { "edge", n => { Edge = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumTwilioEdge>(); } },
+                { "direction", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumStreamDirection>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDirection = default; _explicitNullProperties?.Remove("direction"); AdditionalData["direction"] = unknown; } else { Direction = parsed; AdditionalData.Remove("direction"); } } },
+                { "edge", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MetricEnumTwilioEdge>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEdge = default; _explicitNullProperties?.Remove("edge"); AdditionalData["edge"] = unknown; } else { Edge = parsed; AdditionalData.Remove("edge"); } } },
                 { "sdk_edge", n => { SdkEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "sip_edge", n => { SipEdge = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetStringValue(); } },

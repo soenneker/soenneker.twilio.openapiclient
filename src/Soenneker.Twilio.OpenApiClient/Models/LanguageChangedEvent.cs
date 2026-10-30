@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("transcription_language_code") is { } nullNodeTranscriptionLanguageCode && nullNodeTranscriptionLanguageCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionLanguageCode = null;
-            if (parseNode.GetChildNode("tts_language_code") is { } nullNodeTtsLanguageCode && nullNodeTtsLanguageCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TtsLanguageCode = null;
+            if (parseNode.GetChildNode("transcription_language_code") is null) { _explicitNullValueTranscriptionLanguageCode = default!; _explicitNullProperties?.Remove("transcription_language_code"); }
+            else if (parseNode.GetChildNode("transcription_language_code") is { } nullNodeTranscriptionLanguageCode && nullNodeTranscriptionLanguageCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionLanguageCode = null;
+            if (parseNode.GetChildNode("tts_language_code") is null) { _explicitNullValueTtsLanguageCode = default!; _explicitNullProperties?.Remove("tts_language_code"); }
+            else if (parseNode.GetChildNode("tts_language_code") is { } nullNodeTtsLanguageCode && nullNodeTtsLanguageCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TtsLanguageCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The transcription_language_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TranscriptionLanguageCode { get => _explicitNullValueTranscriptionLanguageCode; set { _explicitNullValueTranscriptionLanguageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcription_language_code"); else _explicitNullProperties?.Remove("transcription_language_code"); } }
+        public string? TranscriptionLanguageCode { get => _explicitNullValueTranscriptionLanguageCode; set { _explicitNullValueTranscriptionLanguageCode = value; AdditionalData?.Remove("transcription_language_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcription_language_code"); else _explicitNullProperties?.Remove("transcription_language_code"); } }
         private string? _explicitNullValueTranscriptionLanguageCode = default!;
 #nullable restore
 #else
-        public string TranscriptionLanguageCode { get => _explicitNullValueTranscriptionLanguageCode; set { _explicitNullValueTranscriptionLanguageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcription_language_code"); else _explicitNullProperties?.Remove("transcription_language_code"); } }
+        public string TranscriptionLanguageCode { get => _explicitNullValueTranscriptionLanguageCode; set { _explicitNullValueTranscriptionLanguageCode = value; AdditionalData?.Remove("transcription_language_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcription_language_code"); else _explicitNullProperties?.Remove("transcription_language_code"); } }
         private string _explicitNullValueTranscriptionLanguageCode = default!;
 #endif
         /// <summary>The tts_language_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TtsLanguageCode { get => _explicitNullValueTtsLanguageCode; set { _explicitNullValueTtsLanguageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tts_language_code"); else _explicitNullProperties?.Remove("tts_language_code"); } }
+        public string? TtsLanguageCode { get => _explicitNullValueTtsLanguageCode; set { _explicitNullValueTtsLanguageCode = value; AdditionalData?.Remove("tts_language_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tts_language_code"); else _explicitNullProperties?.Remove("tts_language_code"); } }
         private string? _explicitNullValueTtsLanguageCode = default!;
 #nullable restore
 #else
-        public string TtsLanguageCode { get => _explicitNullValueTtsLanguageCode; set { _explicitNullValueTtsLanguageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tts_language_code"); else _explicitNullProperties?.Remove("tts_language_code"); } }
+        public string TtsLanguageCode { get => _explicitNullValueTtsLanguageCode; set { _explicitNullValueTtsLanguageCode = value; AdditionalData?.Remove("tts_language_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tts_language_code"); else _explicitNullProperties?.Remove("tts_language_code"); } }
         private string _explicitNullValueTtsLanguageCode = default!;
 #endif
         /// <summary>

@@ -17,90 +17,100 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("answered_by") is { } nullNodeAnsweredBy && nullNodeAnsweredBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnsweredBy = null;
-            if (parseNode.GetChildNode("call_score") is { } nullNodeCallScore && nullNodeCallScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallScore = null;
-            if (parseNode.GetChildNode("call_sid") is { } nullNodeCallSid && nullNodeCallSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallSid = null;
-            if (parseNode.GetChildNode("comment") is { } nullNodeComment && nullNodeComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comment = null;
-            if (parseNode.GetChildNode("connectivity_issue") is { } nullNodeConnectivityIssue && nullNodeConnectivityIssue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectivityIssue = null;
-            if (parseNode.GetChildNode("incident") is { } nullNodeIncident && nullNodeIncident.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Incident = null;
-            if (parseNode.GetChildNode("quality_issues") is { } nullNodeQualityIssues && nullNodeQualityIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QualityIssues = null;
-            if (parseNode.GetChildNode("spam") is { } nullNodeSpam && nullNodeSpam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Spam = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("answered_by") is null) { _explicitNullValueAnsweredBy = default!; _explicitNullProperties?.Remove("answered_by"); }
+            else if (parseNode.GetChildNode("answered_by") is { } nullNodeAnsweredBy && nullNodeAnsweredBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnsweredBy = null;
+            if (parseNode.GetChildNode("call_score") is null) { _explicitNullValueCallScore = default!; _explicitNullProperties?.Remove("call_score"); }
+            else if (parseNode.GetChildNode("call_score") is { } nullNodeCallScore && nullNodeCallScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallScore = null;
+            if (parseNode.GetChildNode("call_sid") is null) { _explicitNullValueCallSid = default!; _explicitNullProperties?.Remove("call_sid"); }
+            else if (parseNode.GetChildNode("call_sid") is { } nullNodeCallSid && nullNodeCallSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallSid = null;
+            if (parseNode.GetChildNode("comment") is null) { _explicitNullValueComment = default!; _explicitNullProperties?.Remove("comment"); }
+            else if (parseNode.GetChildNode("comment") is { } nullNodeComment && nullNodeComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comment = null;
+            if (parseNode.GetChildNode("connectivity_issue") is null) { _explicitNullValueConnectivityIssue = default!; _explicitNullProperties?.Remove("connectivity_issue"); }
+            else if (parseNode.GetChildNode("connectivity_issue") is { } nullNodeConnectivityIssue && nullNodeConnectivityIssue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectivityIssue = null;
+            if (parseNode.GetChildNode("incident") is null) { _explicitNullValueIncident = default!; _explicitNullProperties?.Remove("incident"); }
+            else if (parseNode.GetChildNode("incident") is { } nullNodeIncident && nullNodeIncident.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Incident = null;
+            if (parseNode.GetChildNode("quality_issues") is null) { _explicitNullValueQualityIssues = default!; _explicitNullProperties?.Remove("quality_issues"); }
+            else if (parseNode.GetChildNode("quality_issues") is { } nullNodeQualityIssues && nullNodeQualityIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QualityIssues = null;
+            if (parseNode.GetChildNode("spam") is null) { _explicitNullValueSpam = default!; _explicitNullProperties?.Remove("spam"); }
+            else if (parseNode.GetChildNode("spam") is { } nullNodeSpam && nullNodeSpam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Spam = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>The unique SID identifier of the Account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The answered_by property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumAnsweredBy? AnsweredBy { get => _explicitNullValueAnsweredBy; set { _explicitNullValueAnsweredBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answered_by"); else _explicitNullProperties?.Remove("answered_by"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumAnsweredBy? AnsweredBy { get => _explicitNullValueAnsweredBy; set { _explicitNullValueAnsweredBy = value; AdditionalData?.Remove("answered_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answered_by"); else _explicitNullProperties?.Remove("answered_by"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumAnsweredBy? _explicitNullValueAnsweredBy = default!;
         /// <summary>Specifies the Call Score, if available. This is of type integer. Use a range of 1-5 to indicate the call experience score, with the following mapping as a reference for rating the call [5: Excellent, 4: Good, 3 : Fair, 2 : Poor, 1: Bad].</summary>
-        public int? CallScore { get => _explicitNullValueCallScore; set { _explicitNullValueCallScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_score"); else _explicitNullProperties?.Remove("call_score"); } }
+        public int? CallScore { get => _explicitNullValueCallScore; set { _explicitNullValueCallScore = value; AdditionalData?.Remove("call_score"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_score"); else _explicitNullProperties?.Remove("call_score"); } }
         private int? _explicitNullValueCallScore = default!;
         /// <summary>The unique SID identifier of the Call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
+        public string? CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; AdditionalData?.Remove("call_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
         private string? _explicitNullValueCallSid = default!;
 #nullable restore
 #else
-        public string CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
+        public string CallSid { get => _explicitNullValueCallSid; set { _explicitNullValueCallSid = value; AdditionalData?.Remove("call_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_sid"); else _explicitNullProperties?.Remove("call_sid"); } }
         private string _explicitNullValueCallSid = default!;
 #endif
         /// <summary>Specifies any comments pertaining to the call. Twilio does not treat this field as PII, so no PII should be included in comments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        public string? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; AdditionalData?.Remove("comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
         private string? _explicitNullValueComment = default!;
 #nullable restore
 #else
-        public string Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        public string Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; AdditionalData?.Remove("comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
         private string _explicitNullValueComment = default!;
 #endif
         /// <summary>The connectivity_issue property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumConnectivityIssue? ConnectivityIssue { get => _explicitNullValueConnectivityIssue; set { _explicitNullValueConnectivityIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connectivity_issue"); else _explicitNullProperties?.Remove("connectivity_issue"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumConnectivityIssue? ConnectivityIssue { get => _explicitNullValueConnectivityIssue; set { _explicitNullValueConnectivityIssue = value; AdditionalData?.Remove("connectivity_issue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connectivity_issue"); else _explicitNullProperties?.Remove("connectivity_issue"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumConnectivityIssue? _explicitNullValueConnectivityIssue = default!;
         /// <summary>Incident or support ticket associated with this call. The `incident` property is of type string with a maximum character limit of 100. Twilio does not treat this field as PII, so no PII should be included in `incident`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Incident { get => _explicitNullValueIncident; set { _explicitNullValueIncident = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incident"); else _explicitNullProperties?.Remove("incident"); } }
+        public string? Incident { get => _explicitNullValueIncident; set { _explicitNullValueIncident = value; AdditionalData?.Remove("incident"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incident"); else _explicitNullProperties?.Remove("incident"); } }
         private string? _explicitNullValueIncident = default!;
 #nullable restore
 #else
-        public string Incident { get => _explicitNullValueIncident; set { _explicitNullValueIncident = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incident"); else _explicitNullProperties?.Remove("incident"); } }
+        public string Incident { get => _explicitNullValueIncident; set { _explicitNullValueIncident = value; AdditionalData?.Remove("incident"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incident"); else _explicitNullProperties?.Remove("incident"); } }
         private string _explicitNullValueIncident = default!;
 #endif
         /// <summary>Specifies if the call had any subjective quality issues. Possible values are one or more of `no_quality_issue`, `low_volume`, `choppy_robotic`, `echo`, `dtmf`, `latency`, `owa`, or `static_noise`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? QualityIssues { get => _explicitNullValueQualityIssues; set { _explicitNullValueQualityIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality_issues"); else _explicitNullProperties?.Remove("quality_issues"); } }
+        public List<string>? QualityIssues { get => _explicitNullValueQualityIssues; set { _explicitNullValueQualityIssues = value; AdditionalData?.Remove("quality_issues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality_issues"); else _explicitNullProperties?.Remove("quality_issues"); } }
         private List<string>? _explicitNullValueQualityIssues = default!;
 #nullable restore
 #else
-        public List<string> QualityIssues { get => _explicitNullValueQualityIssues; set { _explicitNullValueQualityIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality_issues"); else _explicitNullProperties?.Remove("quality_issues"); } }
+        public List<string> QualityIssues { get => _explicitNullValueQualityIssues; set { _explicitNullValueQualityIssues = value; AdditionalData?.Remove("quality_issues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality_issues"); else _explicitNullProperties?.Remove("quality_issues"); } }
         private List<string> _explicitNullValueQualityIssues = default!;
 #endif
         /// <summary>Specifies if the call was a spam call. Use this to provide feedback on whether calls placed from your account were marked as spam, or if inbound calls received by your account were unwanted spam. Is of type Boolean: true, false. Use true if the call was a spam call.</summary>
-        public bool? Spam { get => _explicitNullValueSpam; set { _explicitNullValueSpam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam"); else _explicitNullProperties?.Remove("spam"); } }
+        public bool? Spam { get => _explicitNullValueSpam; set { _explicitNullValueSpam = value; AdditionalData?.Remove("spam"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam"); else _explicitNullProperties?.Remove("spam"); } }
         private bool? _explicitNullValueSpam = default!;
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
@@ -129,11 +139,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "answered_by", n => { AnsweredBy = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumAnsweredBy>(); } },
+                { "answered_by", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumAnsweredBy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAnsweredBy = default; _explicitNullProperties?.Remove("answered_by"); AdditionalData["answered_by"] = unknown; } else { AnsweredBy = parsed; AdditionalData.Remove("answered_by"); } } },
                 { "call_score", n => { CallScore = n.GetIntValue(); } },
                 { "call_sid", n => { CallSid = n.GetStringValue(); } },
                 { "comment", n => { Comment = n.GetStringValue(); } },
-                { "connectivity_issue", n => { ConnectivityIssue = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumConnectivityIssue>(); } },
+                { "connectivity_issue", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumConnectivityIssue>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueConnectivityIssue = default; _explicitNullProperties?.Remove("connectivity_issue"); AdditionalData["connectivity_issue"] = unknown; } else { ConnectivityIssue = parsed; AdditionalData.Remove("connectivity_issue"); } } },
                 { "incident", n => { Incident = n.GetStringValue(); } },
                 { "quality_issues", n => { QualityIssues = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "spam", n => { Spam = n.GetBoolValue(); } },

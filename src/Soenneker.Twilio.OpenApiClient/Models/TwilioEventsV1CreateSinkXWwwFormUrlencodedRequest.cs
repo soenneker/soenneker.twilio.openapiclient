@@ -17,9 +17,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("SinkConfiguration") is { } nullNodeSinkConfiguration && nullNodeSinkConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SinkConfiguration = null;
-            if (parseNode.GetChildNode("SinkType") is { } nullNodeSinkType && nullNodeSinkType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SinkType = null;
+            if (parseNode.GetChildNode("Description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("Description"); }
+            else if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("SinkConfiguration") is null) { _explicitNullValueSinkConfiguration = default!; _explicitNullProperties?.Remove("SinkConfiguration"); }
+            else if (parseNode.GetChildNode("SinkConfiguration") is { } nullNodeSinkConfiguration && nullNodeSinkConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SinkConfiguration = null;
+            if (parseNode.GetChildNode("SinkType") is null) { _explicitNullValueSinkType = default!; _explicitNullProperties?.Remove("SinkType"); }
+            else if (parseNode.GetChildNode("SinkType") is { } nullNodeSinkType && nullNodeSinkType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SinkType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,25 +30,25 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A human readable description for the Sink **This value should not contain PII.**</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("Description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("Description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The information required for Twilio to connect to the provided Sink encoded as JSON.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SinkConfiguration { get => _explicitNullValueSinkConfiguration; set { _explicitNullValueSinkConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SinkConfiguration"); else _explicitNullProperties?.Remove("SinkConfiguration"); } }
+        public UntypedNode? SinkConfiguration { get => _explicitNullValueSinkConfiguration; set { _explicitNullValueSinkConfiguration = value; AdditionalData?.Remove("SinkConfiguration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SinkConfiguration"); else _explicitNullProperties?.Remove("SinkConfiguration"); } }
         private UntypedNode? _explicitNullValueSinkConfiguration = default!;
 #nullable restore
 #else
-        public UntypedNode SinkConfiguration { get => _explicitNullValueSinkConfiguration; set { _explicitNullValueSinkConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SinkConfiguration"); else _explicitNullProperties?.Remove("SinkConfiguration"); } }
+        public UntypedNode SinkConfiguration { get => _explicitNullValueSinkConfiguration; set { _explicitNullValueSinkConfiguration = value; AdditionalData?.Remove("SinkConfiguration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SinkConfiguration"); else _explicitNullProperties?.Remove("SinkConfiguration"); } }
         private UntypedNode _explicitNullValueSinkConfiguration = default!;
 #endif
         /// <summary>The Sink type. Can only be &quot;kinesis&quot; or &quot;webhook&quot; currently.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType? SinkType { get => _explicitNullValueSinkType; set { _explicitNullValueSinkType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SinkType"); else _explicitNullProperties?.Remove("SinkType"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType? SinkType { get => _explicitNullValueSinkType; set { _explicitNullValueSinkType = value; AdditionalData?.Remove("SinkType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SinkType"); else _explicitNullProperties?.Remove("SinkType"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType? _explicitNullValueSinkType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSinkXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -74,7 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "Description", n => { Description = n.GetStringValue(); } },
                 { "SinkConfiguration", n => { SinkConfiguration = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "SinkType", n => { SinkType = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType>(); } },
+                { "SinkType", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSinkType = default; _explicitNullProperties?.Remove("SinkType"); AdditionalData["SinkType"] = unknown; } else { SinkType = parsed; AdditionalData.Remove("SinkType"); } } },
             };
         }
         /// <summary>

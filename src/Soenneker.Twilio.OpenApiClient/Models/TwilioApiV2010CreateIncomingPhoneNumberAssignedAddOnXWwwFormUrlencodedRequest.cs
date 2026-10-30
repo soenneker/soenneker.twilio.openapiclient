@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("InstalledAddOnSid") is { } nullNodeInstalledAddOnSid && nullNodeInstalledAddOnSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstalledAddOnSid = null;
+            if (parseNode.GetChildNode("InstalledAddOnSid") is null) { _explicitNullValueInstalledAddOnSid = default!; _explicitNullProperties?.Remove("InstalledAddOnSid"); }
+            else if (parseNode.GetChildNode("InstalledAddOnSid") is { } nullNodeInstalledAddOnSid && nullNodeInstalledAddOnSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstalledAddOnSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID that identifies the Add-on installation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InstalledAddOnSid { get => _explicitNullValueInstalledAddOnSid; set { _explicitNullValueInstalledAddOnSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InstalledAddOnSid"); else _explicitNullProperties?.Remove("InstalledAddOnSid"); } }
+        public string? InstalledAddOnSid { get => _explicitNullValueInstalledAddOnSid; set { _explicitNullValueInstalledAddOnSid = value; AdditionalData?.Remove("InstalledAddOnSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InstalledAddOnSid"); else _explicitNullProperties?.Remove("InstalledAddOnSid"); } }
         private string? _explicitNullValueInstalledAddOnSid = default!;
 #nullable restore
 #else
-        public string InstalledAddOnSid { get => _explicitNullValueInstalledAddOnSid; set { _explicitNullValueInstalledAddOnSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InstalledAddOnSid"); else _explicitNullProperties?.Remove("InstalledAddOnSid"); } }
+        public string InstalledAddOnSid { get => _explicitNullValueInstalledAddOnSid; set { _explicitNullValueInstalledAddOnSid = value; AdditionalData?.Remove("InstalledAddOnSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InstalledAddOnSid"); else _explicitNullProperties?.Remove("InstalledAddOnSid"); } }
         private string _explicitNullValueInstalledAddOnSid = default!;
 #endif
         /// <summary>

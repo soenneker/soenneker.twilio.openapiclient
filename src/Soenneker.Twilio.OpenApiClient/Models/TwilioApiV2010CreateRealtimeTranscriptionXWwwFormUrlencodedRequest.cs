@@ -17,24 +17,42 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ConversationConfiguration") is { } nullNodeConversationConfiguration && nullNodeConversationConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationConfiguration = null;
-            if (parseNode.GetChildNode("ConversationId") is { } nullNodeConversationId && nullNodeConversationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationId = null;
-            if (parseNode.GetChildNode("EnableAutomaticPunctuation") is { } nullNodeEnableAutomaticPunctuation && nullNodeEnableAutomaticPunctuation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableAutomaticPunctuation = null;
-            if (parseNode.GetChildNode("EnableProviderData") is { } nullNodeEnableProviderData && nullNodeEnableProviderData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableProviderData = null;
-            if (parseNode.GetChildNode("Hints") is { } nullNodeHints && nullNodeHints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hints = null;
-            if (parseNode.GetChildNode("InboundTrackLabel") is { } nullNodeInboundTrackLabel && nullNodeInboundTrackLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundTrackLabel = null;
-            if (parseNode.GetChildNode("IntelligenceService") is { } nullNodeIntelligenceService && nullNodeIntelligenceService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntelligenceService = null;
-            if (parseNode.GetChildNode("LanguageCode") is { } nullNodeLanguageCode && nullNodeLanguageCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LanguageCode = null;
-            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("OutboundTrackLabel") is { } nullNodeOutboundTrackLabel && nullNodeOutboundTrackLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundTrackLabel = null;
-            if (parseNode.GetChildNode("PartialResults") is { } nullNodePartialResults && nullNodePartialResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartialResults = null;
-            if (parseNode.GetChildNode("ProfanityFilter") is { } nullNodeProfanityFilter && nullNodeProfanityFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfanityFilter = null;
-            if (parseNode.GetChildNode("SpeechModel") is { } nullNodeSpeechModel && nullNodeSpeechModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpeechModel = null;
-            if (parseNode.GetChildNode("StatusCallbackMethod") is { } nullNodeStatusCallbackMethod && nullNodeStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbackMethod = null;
-            if (parseNode.GetChildNode("StatusCallbackUrl") is { } nullNodeStatusCallbackUrl && nullNodeStatusCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbackUrl = null;
-            if (parseNode.GetChildNode("Track") is { } nullNodeTrack && nullNodeTrack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Track = null;
-            if (parseNode.GetChildNode("TranscriptionConfigurationId") is { } nullNodeTranscriptionConfigurationId && nullNodeTranscriptionConfigurationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionConfigurationId = null;
-            if (parseNode.GetChildNode("TranscriptionEngine") is { } nullNodeTranscriptionEngine && nullNodeTranscriptionEngine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionEngine = null;
+            if (parseNode.GetChildNode("ConversationConfiguration") is null) { _explicitNullValueConversationConfiguration = default!; _explicitNullProperties?.Remove("ConversationConfiguration"); }
+            else if (parseNode.GetChildNode("ConversationConfiguration") is { } nullNodeConversationConfiguration && nullNodeConversationConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationConfiguration = null;
+            if (parseNode.GetChildNode("ConversationId") is null) { _explicitNullValueConversationId = default!; _explicitNullProperties?.Remove("ConversationId"); }
+            else if (parseNode.GetChildNode("ConversationId") is { } nullNodeConversationId && nullNodeConversationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationId = null;
+            if (parseNode.GetChildNode("EnableAutomaticPunctuation") is null) { _explicitNullValueEnableAutomaticPunctuation = default!; _explicitNullProperties?.Remove("EnableAutomaticPunctuation"); }
+            else if (parseNode.GetChildNode("EnableAutomaticPunctuation") is { } nullNodeEnableAutomaticPunctuation && nullNodeEnableAutomaticPunctuation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableAutomaticPunctuation = null;
+            if (parseNode.GetChildNode("EnableProviderData") is null) { _explicitNullValueEnableProviderData = default!; _explicitNullProperties?.Remove("EnableProviderData"); }
+            else if (parseNode.GetChildNode("EnableProviderData") is { } nullNodeEnableProviderData && nullNodeEnableProviderData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableProviderData = null;
+            if (parseNode.GetChildNode("Hints") is null) { _explicitNullValueHints = default!; _explicitNullProperties?.Remove("Hints"); }
+            else if (parseNode.GetChildNode("Hints") is { } nullNodeHints && nullNodeHints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hints = null;
+            if (parseNode.GetChildNode("InboundTrackLabel") is null) { _explicitNullValueInboundTrackLabel = default!; _explicitNullProperties?.Remove("InboundTrackLabel"); }
+            else if (parseNode.GetChildNode("InboundTrackLabel") is { } nullNodeInboundTrackLabel && nullNodeInboundTrackLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundTrackLabel = null;
+            if (parseNode.GetChildNode("IntelligenceService") is null) { _explicitNullValueIntelligenceService = default!; _explicitNullProperties?.Remove("IntelligenceService"); }
+            else if (parseNode.GetChildNode("IntelligenceService") is { } nullNodeIntelligenceService && nullNodeIntelligenceService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntelligenceService = null;
+            if (parseNode.GetChildNode("LanguageCode") is null) { _explicitNullValueLanguageCode = default!; _explicitNullProperties?.Remove("LanguageCode"); }
+            else if (parseNode.GetChildNode("LanguageCode") is { } nullNodeLanguageCode && nullNodeLanguageCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LanguageCode = null;
+            if (parseNode.GetChildNode("Name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("Name"); }
+            else if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("OutboundTrackLabel") is null) { _explicitNullValueOutboundTrackLabel = default!; _explicitNullProperties?.Remove("OutboundTrackLabel"); }
+            else if (parseNode.GetChildNode("OutboundTrackLabel") is { } nullNodeOutboundTrackLabel && nullNodeOutboundTrackLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundTrackLabel = null;
+            if (parseNode.GetChildNode("PartialResults") is null) { _explicitNullValuePartialResults = default!; _explicitNullProperties?.Remove("PartialResults"); }
+            else if (parseNode.GetChildNode("PartialResults") is { } nullNodePartialResults && nullNodePartialResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartialResults = null;
+            if (parseNode.GetChildNode("ProfanityFilter") is null) { _explicitNullValueProfanityFilter = default!; _explicitNullProperties?.Remove("ProfanityFilter"); }
+            else if (parseNode.GetChildNode("ProfanityFilter") is { } nullNodeProfanityFilter && nullNodeProfanityFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfanityFilter = null;
+            if (parseNode.GetChildNode("SpeechModel") is null) { _explicitNullValueSpeechModel = default!; _explicitNullProperties?.Remove("SpeechModel"); }
+            else if (parseNode.GetChildNode("SpeechModel") is { } nullNodeSpeechModel && nullNodeSpeechModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpeechModel = null;
+            if (parseNode.GetChildNode("StatusCallbackMethod") is null) { _explicitNullValueStatusCallbackMethod = default!; _explicitNullProperties?.Remove("StatusCallbackMethod"); }
+            else if (parseNode.GetChildNode("StatusCallbackMethod") is { } nullNodeStatusCallbackMethod && nullNodeStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbackMethod = null;
+            if (parseNode.GetChildNode("StatusCallbackUrl") is null) { _explicitNullValueStatusCallbackUrl = default!; _explicitNullProperties?.Remove("StatusCallbackUrl"); }
+            else if (parseNode.GetChildNode("StatusCallbackUrl") is { } nullNodeStatusCallbackUrl && nullNodeStatusCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbackUrl = null;
+            if (parseNode.GetChildNode("Track") is null) { _explicitNullValueTrack = default!; _explicitNullProperties?.Remove("Track"); }
+            else if (parseNode.GetChildNode("Track") is { } nullNodeTrack && nullNodeTrack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Track = null;
+            if (parseNode.GetChildNode("TranscriptionConfigurationId") is null) { _explicitNullValueTranscriptionConfigurationId = default!; _explicitNullProperties?.Remove("TranscriptionConfigurationId"); }
+            else if (parseNode.GetChildNode("TranscriptionConfigurationId") is { } nullNodeTranscriptionConfigurationId && nullNodeTranscriptionConfigurationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionConfigurationId = null;
+            if (parseNode.GetChildNode("TranscriptionEngine") is null) { _explicitNullValueTranscriptionEngine = default!; _explicitNullProperties?.Remove("TranscriptionEngine"); }
+            else if (parseNode.GetChildNode("TranscriptionEngine") is { } nullNodeTranscriptionEngine && nullNodeTranscriptionEngine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionEngine = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -42,139 +60,139 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The ID of the Conversations Configuration for customizing conversation behavior in Intelligence Service</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConversationConfiguration { get => _explicitNullValueConversationConfiguration; set { _explicitNullValueConversationConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConversationConfiguration"); else _explicitNullProperties?.Remove("ConversationConfiguration"); } }
+        public string? ConversationConfiguration { get => _explicitNullValueConversationConfiguration; set { _explicitNullValueConversationConfiguration = value; AdditionalData?.Remove("ConversationConfiguration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConversationConfiguration"); else _explicitNullProperties?.Remove("ConversationConfiguration"); } }
         private string? _explicitNullValueConversationConfiguration = default!;
 #nullable restore
 #else
-        public string ConversationConfiguration { get => _explicitNullValueConversationConfiguration; set { _explicitNullValueConversationConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConversationConfiguration"); else _explicitNullProperties?.Remove("ConversationConfiguration"); } }
+        public string ConversationConfiguration { get => _explicitNullValueConversationConfiguration; set { _explicitNullValueConversationConfiguration = value; AdditionalData?.Remove("ConversationConfiguration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConversationConfiguration"); else _explicitNullProperties?.Remove("ConversationConfiguration"); } }
         private string _explicitNullValueConversationConfiguration = default!;
 #endif
         /// <summary>The ID of the Conversation for associating this Transcription with an existing Conversation in Intelligence Service</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConversationId { get => _explicitNullValueConversationId; set { _explicitNullValueConversationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConversationId"); else _explicitNullProperties?.Remove("ConversationId"); } }
+        public string? ConversationId { get => _explicitNullValueConversationId; set { _explicitNullValueConversationId = value; AdditionalData?.Remove("ConversationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConversationId"); else _explicitNullProperties?.Remove("ConversationId"); } }
         private string? _explicitNullValueConversationId = default!;
 #nullable restore
 #else
-        public string ConversationId { get => _explicitNullValueConversationId; set { _explicitNullValueConversationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConversationId"); else _explicitNullProperties?.Remove("ConversationId"); } }
+        public string ConversationId { get => _explicitNullValueConversationId; set { _explicitNullValueConversationId = value; AdditionalData?.Remove("ConversationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConversationId"); else _explicitNullProperties?.Remove("ConversationId"); } }
         private string _explicitNullValueConversationId = default!;
 #endif
         /// <summary>The provider will add punctuation to recognition result</summary>
-        public bool? EnableAutomaticPunctuation { get => _explicitNullValueEnableAutomaticPunctuation; set { _explicitNullValueEnableAutomaticPunctuation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableAutomaticPunctuation"); else _explicitNullProperties?.Remove("EnableAutomaticPunctuation"); } }
+        public bool? EnableAutomaticPunctuation { get => _explicitNullValueEnableAutomaticPunctuation; set { _explicitNullValueEnableAutomaticPunctuation = value; AdditionalData?.Remove("EnableAutomaticPunctuation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableAutomaticPunctuation"); else _explicitNullProperties?.Remove("EnableAutomaticPunctuation"); } }
         private bool? _explicitNullValueEnableAutomaticPunctuation = default!;
         /// <summary>Whether the callback includes raw provider data.</summary>
-        public bool? EnableProviderData { get => _explicitNullValueEnableProviderData; set { _explicitNullValueEnableProviderData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableProviderData"); else _explicitNullProperties?.Remove("EnableProviderData"); } }
+        public bool? EnableProviderData { get => _explicitNullValueEnableProviderData; set { _explicitNullValueEnableProviderData = value; AdditionalData?.Remove("EnableProviderData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableProviderData"); else _explicitNullProperties?.Remove("EnableProviderData"); } }
         private bool? _explicitNullValueEnableProviderData = default!;
         /// <summary>A Phrase contains words and phrase &quot;hints&quot; so that the speech recognition engine is more likely to recognize them.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hints { get => _explicitNullValueHints; set { _explicitNullValueHints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hints"); else _explicitNullProperties?.Remove("Hints"); } }
+        public string? Hints { get => _explicitNullValueHints; set { _explicitNullValueHints = value; AdditionalData?.Remove("Hints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hints"); else _explicitNullProperties?.Remove("Hints"); } }
         private string? _explicitNullValueHints = default!;
 #nullable restore
 #else
-        public string Hints { get => _explicitNullValueHints; set { _explicitNullValueHints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hints"); else _explicitNullProperties?.Remove("Hints"); } }
+        public string Hints { get => _explicitNullValueHints; set { _explicitNullValueHints = value; AdditionalData?.Remove("Hints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hints"); else _explicitNullProperties?.Remove("Hints"); } }
         private string _explicitNullValueHints = default!;
 #endif
         /// <summary>Friendly name given to the Inbound Track</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboundTrackLabel { get => _explicitNullValueInboundTrackLabel; set { _explicitNullValueInboundTrackLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InboundTrackLabel"); else _explicitNullProperties?.Remove("InboundTrackLabel"); } }
+        public string? InboundTrackLabel { get => _explicitNullValueInboundTrackLabel; set { _explicitNullValueInboundTrackLabel = value; AdditionalData?.Remove("InboundTrackLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InboundTrackLabel"); else _explicitNullProperties?.Remove("InboundTrackLabel"); } }
         private string? _explicitNullValueInboundTrackLabel = default!;
 #nullable restore
 #else
-        public string InboundTrackLabel { get => _explicitNullValueInboundTrackLabel; set { _explicitNullValueInboundTrackLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InboundTrackLabel"); else _explicitNullProperties?.Remove("InboundTrackLabel"); } }
+        public string InboundTrackLabel { get => _explicitNullValueInboundTrackLabel; set { _explicitNullValueInboundTrackLabel = value; AdditionalData?.Remove("InboundTrackLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InboundTrackLabel"); else _explicitNullProperties?.Remove("InboundTrackLabel"); } }
         private string _explicitNullValueInboundTrackLabel = default!;
 #endif
         /// <summary>The SID or unique name of the [Intelligence Service](https://www.twilio.com/docs/conversational-intelligence/api/service-resource) for persisting transcripts and running post-call Language Operators</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntelligenceService { get => _explicitNullValueIntelligenceService; set { _explicitNullValueIntelligenceService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IntelligenceService"); else _explicitNullProperties?.Remove("IntelligenceService"); } }
+        public string? IntelligenceService { get => _explicitNullValueIntelligenceService; set { _explicitNullValueIntelligenceService = value; AdditionalData?.Remove("IntelligenceService"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IntelligenceService"); else _explicitNullProperties?.Remove("IntelligenceService"); } }
         private string? _explicitNullValueIntelligenceService = default!;
 #nullable restore
 #else
-        public string IntelligenceService { get => _explicitNullValueIntelligenceService; set { _explicitNullValueIntelligenceService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IntelligenceService"); else _explicitNullProperties?.Remove("IntelligenceService"); } }
+        public string IntelligenceService { get => _explicitNullValueIntelligenceService; set { _explicitNullValueIntelligenceService = value; AdditionalData?.Remove("IntelligenceService"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IntelligenceService"); else _explicitNullProperties?.Remove("IntelligenceService"); } }
         private string _explicitNullValueIntelligenceService = default!;
 #endif
         /// <summary>Language code used by the transcription engine, specified in [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LanguageCode { get => _explicitNullValueLanguageCode; set { _explicitNullValueLanguageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LanguageCode"); else _explicitNullProperties?.Remove("LanguageCode"); } }
+        public string? LanguageCode { get => _explicitNullValueLanguageCode; set { _explicitNullValueLanguageCode = value; AdditionalData?.Remove("LanguageCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LanguageCode"); else _explicitNullProperties?.Remove("LanguageCode"); } }
         private string? _explicitNullValueLanguageCode = default!;
 #nullable restore
 #else
-        public string LanguageCode { get => _explicitNullValueLanguageCode; set { _explicitNullValueLanguageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LanguageCode"); else _explicitNullProperties?.Remove("LanguageCode"); } }
+        public string LanguageCode { get => _explicitNullValueLanguageCode; set { _explicitNullValueLanguageCode = value; AdditionalData?.Remove("LanguageCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LanguageCode"); else _explicitNullProperties?.Remove("LanguageCode"); } }
         private string _explicitNullValueLanguageCode = default!;
 #endif
         /// <summary>The user-specified name of this Transcription, if one was given when the Transcription was created. This may be used to stop the Transcription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Friendly name given to the Outbound Track</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OutboundTrackLabel { get => _explicitNullValueOutboundTrackLabel; set { _explicitNullValueOutboundTrackLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OutboundTrackLabel"); else _explicitNullProperties?.Remove("OutboundTrackLabel"); } }
+        public string? OutboundTrackLabel { get => _explicitNullValueOutboundTrackLabel; set { _explicitNullValueOutboundTrackLabel = value; AdditionalData?.Remove("OutboundTrackLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OutboundTrackLabel"); else _explicitNullProperties?.Remove("OutboundTrackLabel"); } }
         private string? _explicitNullValueOutboundTrackLabel = default!;
 #nullable restore
 #else
-        public string OutboundTrackLabel { get => _explicitNullValueOutboundTrackLabel; set { _explicitNullValueOutboundTrackLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OutboundTrackLabel"); else _explicitNullProperties?.Remove("OutboundTrackLabel"); } }
+        public string OutboundTrackLabel { get => _explicitNullValueOutboundTrackLabel; set { _explicitNullValueOutboundTrackLabel = value; AdditionalData?.Remove("OutboundTrackLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OutboundTrackLabel"); else _explicitNullProperties?.Remove("OutboundTrackLabel"); } }
         private string _explicitNullValueOutboundTrackLabel = default!;
 #endif
         /// <summary>Indicates if partial results are going to be sent to the customer</summary>
-        public bool? PartialResults { get => _explicitNullValuePartialResults; set { _explicitNullValuePartialResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PartialResults"); else _explicitNullProperties?.Remove("PartialResults"); } }
+        public bool? PartialResults { get => _explicitNullValuePartialResults; set { _explicitNullValuePartialResults = value; AdditionalData?.Remove("PartialResults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PartialResults"); else _explicitNullProperties?.Remove("PartialResults"); } }
         private bool? _explicitNullValuePartialResults = default!;
         /// <summary>indicates if the server will attempt to filter out profanities, replacing all but the initial character in each filtered word with asterisks</summary>
-        public bool? ProfanityFilter { get => _explicitNullValueProfanityFilter; set { _explicitNullValueProfanityFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProfanityFilter"); else _explicitNullProperties?.Remove("ProfanityFilter"); } }
+        public bool? ProfanityFilter { get => _explicitNullValueProfanityFilter; set { _explicitNullValueProfanityFilter = value; AdditionalData?.Remove("ProfanityFilter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProfanityFilter"); else _explicitNullProperties?.Remove("ProfanityFilter"); } }
         private bool? _explicitNullValueProfanityFilter = default!;
         /// <summary>Recognition model used by the transcription engine, among those supported by the provider</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpeechModel { get => _explicitNullValueSpeechModel; set { _explicitNullValueSpeechModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SpeechModel"); else _explicitNullProperties?.Remove("SpeechModel"); } }
+        public string? SpeechModel { get => _explicitNullValueSpeechModel; set { _explicitNullValueSpeechModel = value; AdditionalData?.Remove("SpeechModel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SpeechModel"); else _explicitNullProperties?.Remove("SpeechModel"); } }
         private string? _explicitNullValueSpeechModel = default!;
 #nullable restore
 #else
-        public string SpeechModel { get => _explicitNullValueSpeechModel; set { _explicitNullValueSpeechModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SpeechModel"); else _explicitNullProperties?.Remove("SpeechModel"); } }
+        public string SpeechModel { get => _explicitNullValueSpeechModel; set { _explicitNullValueSpeechModel = value; AdditionalData?.Remove("SpeechModel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SpeechModel"); else _explicitNullProperties?.Remove("SpeechModel"); } }
         private string _explicitNullValueSpeechModel = default!;
 #endif
         /// <summary>The http method for the status_callback (one of GET, POST).</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateRealtimeTranscriptionXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get => _explicitNullValueStatusCallbackMethod; set { _explicitNullValueStatusCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallbackMethod"); else _explicitNullProperties?.Remove("StatusCallbackMethod"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateRealtimeTranscriptionXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get => _explicitNullValueStatusCallbackMethod; set { _explicitNullValueStatusCallbackMethod = value; AdditionalData?.Remove("StatusCallbackMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallbackMethod"); else _explicitNullProperties?.Remove("StatusCallbackMethod"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateRealtimeTranscriptionXWwwFormUrlencodedRequestStatusCallbackMethod? _explicitNullValueStatusCallbackMethod = default!;
         /// <summary>Absolute URL of the status callback.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCallbackUrl { get => _explicitNullValueStatusCallbackUrl; set { _explicitNullValueStatusCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallbackUrl"); else _explicitNullProperties?.Remove("StatusCallbackUrl"); } }
+        public string? StatusCallbackUrl { get => _explicitNullValueStatusCallbackUrl; set { _explicitNullValueStatusCallbackUrl = value; AdditionalData?.Remove("StatusCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallbackUrl"); else _explicitNullProperties?.Remove("StatusCallbackUrl"); } }
         private string? _explicitNullValueStatusCallbackUrl = default!;
 #nullable restore
 #else
-        public string StatusCallbackUrl { get => _explicitNullValueStatusCallbackUrl; set { _explicitNullValueStatusCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallbackUrl"); else _explicitNullProperties?.Remove("StatusCallbackUrl"); } }
+        public string StatusCallbackUrl { get => _explicitNullValueStatusCallbackUrl; set { _explicitNullValueStatusCallbackUrl = value; AdditionalData?.Remove("StatusCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallbackUrl"); else _explicitNullProperties?.Remove("StatusCallbackUrl"); } }
         private string _explicitNullValueStatusCallbackUrl = default!;
 #endif
         /// <summary>One of `inbound_track`, `outbound_track`, `both_tracks`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.RealtimeTranscriptionEnumTrack? Track { get => _explicitNullValueTrack; set { _explicitNullValueTrack = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Track"); else _explicitNullProperties?.Remove("Track"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.RealtimeTranscriptionEnumTrack? Track { get => _explicitNullValueTrack; set { _explicitNullValueTrack = value; AdditionalData?.Remove("Track"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Track"); else _explicitNullProperties?.Remove("Track"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.RealtimeTranscriptionEnumTrack? _explicitNullValueTrack = default!;
         /// <summary>The ID of the RealTimeTranscription Configuration for configuring all the non-default behaviors in one go.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TranscriptionConfigurationId { get => _explicitNullValueTranscriptionConfigurationId; set { _explicitNullValueTranscriptionConfigurationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionConfigurationId"); else _explicitNullProperties?.Remove("TranscriptionConfigurationId"); } }
+        public string? TranscriptionConfigurationId { get => _explicitNullValueTranscriptionConfigurationId; set { _explicitNullValueTranscriptionConfigurationId = value; AdditionalData?.Remove("TranscriptionConfigurationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionConfigurationId"); else _explicitNullProperties?.Remove("TranscriptionConfigurationId"); } }
         private string? _explicitNullValueTranscriptionConfigurationId = default!;
 #nullable restore
 #else
-        public string TranscriptionConfigurationId { get => _explicitNullValueTranscriptionConfigurationId; set { _explicitNullValueTranscriptionConfigurationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionConfigurationId"); else _explicitNullProperties?.Remove("TranscriptionConfigurationId"); } }
+        public string TranscriptionConfigurationId { get => _explicitNullValueTranscriptionConfigurationId; set { _explicitNullValueTranscriptionConfigurationId = value; AdditionalData?.Remove("TranscriptionConfigurationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionConfigurationId"); else _explicitNullProperties?.Remove("TranscriptionConfigurationId"); } }
         private string _explicitNullValueTranscriptionConfigurationId = default!;
 #endif
         /// <summary>Definition of the transcription engine to be used, among those supported by Twilio</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TranscriptionEngine { get => _explicitNullValueTranscriptionEngine; set { _explicitNullValueTranscriptionEngine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionEngine"); else _explicitNullProperties?.Remove("TranscriptionEngine"); } }
+        public string? TranscriptionEngine { get => _explicitNullValueTranscriptionEngine; set { _explicitNullValueTranscriptionEngine = value; AdditionalData?.Remove("TranscriptionEngine"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionEngine"); else _explicitNullProperties?.Remove("TranscriptionEngine"); } }
         private string? _explicitNullValueTranscriptionEngine = default!;
 #nullable restore
 #else
-        public string TranscriptionEngine { get => _explicitNullValueTranscriptionEngine; set { _explicitNullValueTranscriptionEngine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionEngine"); else _explicitNullProperties?.Remove("TranscriptionEngine"); } }
+        public string TranscriptionEngine { get => _explicitNullValueTranscriptionEngine; set { _explicitNullValueTranscriptionEngine = value; AdditionalData?.Remove("TranscriptionEngine"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionEngine"); else _explicitNullProperties?.Remove("TranscriptionEngine"); } }
         private string _explicitNullValueTranscriptionEngine = default!;
 #endif
         /// <summary>
@@ -215,9 +233,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "PartialResults", n => { PartialResults = n.GetBoolValue(); } },
                 { "ProfanityFilter", n => { ProfanityFilter = n.GetBoolValue(); } },
                 { "SpeechModel", n => { SpeechModel = n.GetStringValue(); } },
-                { "StatusCallbackMethod", n => { StatusCallbackMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateRealtimeTranscriptionXWwwFormUrlencodedRequestStatusCallbackMethod>(); } },
+                { "StatusCallbackMethod", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateRealtimeTranscriptionXWwwFormUrlencodedRequestStatusCallbackMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatusCallbackMethod = default; _explicitNullProperties?.Remove("StatusCallbackMethod"); AdditionalData["StatusCallbackMethod"] = unknown; } else { StatusCallbackMethod = parsed; AdditionalData.Remove("StatusCallbackMethod"); } } },
                 { "StatusCallbackUrl", n => { StatusCallbackUrl = n.GetStringValue(); } },
-                { "Track", n => { Track = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RealtimeTranscriptionEnumTrack>(); } },
+                { "Track", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RealtimeTranscriptionEnumTrack>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTrack = default; _explicitNullProperties?.Remove("Track"); AdditionalData["Track"] = unknown; } else { Track = parsed; AdditionalData.Remove("Track"); } } },
                 { "TranscriptionConfigurationId", n => { TranscriptionConfigurationId = n.GetStringValue(); } },
                 { "TranscriptionEngine", n => { TranscriptionEngine = n.GetStringValue(); } },
             };

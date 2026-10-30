@@ -17,13 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("IsReserved") is { } nullNodeIsReserved && nullNodeIsReserved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsReserved = null;
+            if (parseNode.GetChildNode("IsReserved") is null) { _explicitNullValueIsReserved = default!; _explicitNullProperties?.Remove("IsReserved"); }
+            else if (parseNode.GetChildNode("IsReserved") is { } nullNodeIsReserved && nullNodeIsReserved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsReserved = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the phone number should be reserved and not be assigned to a participant using proxy pool logic. See [Reserved Phone Numbers](https://www.twilio.com/docs/proxy/reserved-phone-numbers) for more information.</summary>
-        public bool? IsReserved { get => _explicitNullValueIsReserved; set { _explicitNullValueIsReserved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsReserved"); else _explicitNullProperties?.Remove("IsReserved"); } }
+        public bool? IsReserved { get => _explicitNullValueIsReserved; set { _explicitNullValueIsReserved = value; AdditionalData?.Remove("IsReserved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsReserved"); else _explicitNullProperties?.Remove("IsReserved"); } }
         private bool? _explicitNullValueIsReserved = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1UpdatePhoneNumberXWwwFormUrlencodedRequest"/> and sets the default values.

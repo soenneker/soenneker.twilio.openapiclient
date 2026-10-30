@@ -18,29 +18,34 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("busy") is { } nullNodeBusy && nullNodeBusy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Busy = null;
-            if (parseNode.GetChildNode("canceled") is { } nullNodeCanceled && nullNodeCanceled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Canceled = null;
-            if (parseNode.GetChildNode("completed") is { } nullNodeCompleted && nullNodeCompleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Completed = null;
-            if (parseNode.GetChildNode("fail") is { } nullNodeFail && nullNodeFail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fail = null;
-            if (parseNode.GetChildNode("noanswer") is { } nullNodeNoanswer && nullNodeNoanswer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Noanswer = null;
+            if (parseNode.GetChildNode("busy") is null) { _explicitNullValueBusy = default!; _explicitNullProperties?.Remove("busy"); }
+            else if (parseNode.GetChildNode("busy") is { } nullNodeBusy && nullNodeBusy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Busy = null;
+            if (parseNode.GetChildNode("canceled") is null) { _explicitNullValueCanceled = default!; _explicitNullProperties?.Remove("canceled"); }
+            else if (parseNode.GetChildNode("canceled") is { } nullNodeCanceled && nullNodeCanceled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Canceled = null;
+            if (parseNode.GetChildNode("completed") is null) { _explicitNullValueCompleted = default!; _explicitNullProperties?.Remove("completed"); }
+            else if (parseNode.GetChildNode("completed") is { } nullNodeCompleted && nullNodeCompleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Completed = null;
+            if (parseNode.GetChildNode("fail") is null) { _explicitNullValueFail = default!; _explicitNullProperties?.Remove("fail"); }
+            else if (parseNode.GetChildNode("fail") is { } nullNodeFail && nullNodeFail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fail = null;
+            if (parseNode.GetChildNode("noanswer") is null) { _explicitNullValueNoanswer = default!; _explicitNullProperties?.Remove("noanswer"); }
+            else if (parseNode.GetChildNode("noanswer") is { } nullNodeNoanswer && nullNodeNoanswer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Noanswer = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of busy calls</summary>
-        public int? Busy { get => _explicitNullValueBusy; set { _explicitNullValueBusy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("busy"); else _explicitNullProperties?.Remove("busy"); } }
+        public int? Busy { get => _explicitNullValueBusy; set { _explicitNullValueBusy = value; AdditionalData?.Remove("busy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("busy"); else _explicitNullProperties?.Remove("busy"); } }
         private int? _explicitNullValueBusy = default!;
         /// <summary>Number of canceled calls</summary>
-        public int? Canceled { get => _explicitNullValueCanceled; set { _explicitNullValueCanceled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled"); else _explicitNullProperties?.Remove("canceled"); } }
+        public int? Canceled { get => _explicitNullValueCanceled; set { _explicitNullValueCanceled = value; AdditionalData?.Remove("canceled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceled"); else _explicitNullProperties?.Remove("canceled"); } }
         private int? _explicitNullValueCanceled = default!;
         /// <summary>Number of completed calls</summary>
-        public int? Completed { get => _explicitNullValueCompleted; set { _explicitNullValueCompleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed"); else _explicitNullProperties?.Remove("completed"); } }
+        public int? Completed { get => _explicitNullValueCompleted; set { _explicitNullValueCompleted = value; AdditionalData?.Remove("completed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed"); else _explicitNullProperties?.Remove("completed"); } }
         private int? _explicitNullValueCompleted = default!;
         /// <summary>Number of failed calls</summary>
-        public int? Fail { get => _explicitNullValueFail; set { _explicitNullValueFail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fail"); else _explicitNullProperties?.Remove("fail"); } }
+        public int? Fail { get => _explicitNullValueFail; set { _explicitNullValueFail = value; AdditionalData?.Remove("fail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fail"); else _explicitNullProperties?.Remove("fail"); } }
         private int? _explicitNullValueFail = default!;
         /// <summary>Number of no-answer calls</summary>
-        public int? Noanswer { get => _explicitNullValueNoanswer; set { _explicitNullValueNoanswer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noanswer"); else _explicitNullProperties?.Remove("noanswer"); } }
+        public int? Noanswer { get => _explicitNullValueNoanswer; set { _explicitNullValueNoanswer = value; AdditionalData?.Remove("noanswer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noanswer"); else _explicitNullProperties?.Remove("noanswer"); } }
         private int? _explicitNullValueNoanswer = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallState"/> and sets the default values.

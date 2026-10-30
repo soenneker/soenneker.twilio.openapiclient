@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PhoneNumberSid") is { } nullNodePhoneNumberSid && nullNodePhoneNumberSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumberSid = null;
+            if (parseNode.GetChildNode("PhoneNumberSid") is null) { _explicitNullValuePhoneNumberSid = default!; _explicitNullProperties?.Remove("PhoneNumberSid"); }
+            else if (parseNode.GetChildNode("PhoneNumberSid") is { } nullNodePhoneNumberSid && nullNodePhoneNumberSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumberSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID of the [Incoming Phone Number](https://www.twilio.com/docs/phone-numbers/api/incomingphonenumber-resource) that you want to associate with the trunk.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumberSid { get => _explicitNullValuePhoneNumberSid; set { _explicitNullValuePhoneNumberSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhoneNumberSid"); else _explicitNullProperties?.Remove("PhoneNumberSid"); } }
+        public string? PhoneNumberSid { get => _explicitNullValuePhoneNumberSid; set { _explicitNullValuePhoneNumberSid = value; AdditionalData?.Remove("PhoneNumberSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhoneNumberSid"); else _explicitNullProperties?.Remove("PhoneNumberSid"); } }
         private string? _explicitNullValuePhoneNumberSid = default!;
 #nullable restore
 #else
-        public string PhoneNumberSid { get => _explicitNullValuePhoneNumberSid; set { _explicitNullValuePhoneNumberSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhoneNumberSid"); else _explicitNullProperties?.Remove("PhoneNumberSid"); } }
+        public string PhoneNumberSid { get => _explicitNullValuePhoneNumberSid; set { _explicitNullValuePhoneNumberSid = value; AdditionalData?.Remove("PhoneNumberSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhoneNumberSid"); else _explicitNullProperties?.Remove("PhoneNumberSid"); } }
         private string _explicitNullValuePhoneNumberSid = default!;
 #endif
         /// <summary>

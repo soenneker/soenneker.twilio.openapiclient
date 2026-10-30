@@ -59,7 +59,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.Services.Item.Co
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_messaging_v1.V1.Services.Item.Compliance.Usa2p.Usecases.UsecasesRequestBuilder.UsecasesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://messaging.twilio.com", "/twilio_messaging_v1/v1/Services/{serviceSid}/Compliance/Usa2p/Usecases", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

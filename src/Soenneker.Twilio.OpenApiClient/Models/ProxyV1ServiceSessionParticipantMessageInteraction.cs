@@ -17,36 +17,56 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
-            if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
-            if (parseNode.GetChildNode("date_updated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
-            if (parseNode.GetChildNode("inbound_participant_sid") is { } nullNodeInboundParticipantSid && nullNodeInboundParticipantSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundParticipantSid = null;
-            if (parseNode.GetChildNode("inbound_resource_sid") is { } nullNodeInboundResourceSid && nullNodeInboundResourceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundResourceSid = null;
-            if (parseNode.GetChildNode("inbound_resource_status") is { } nullNodeInboundResourceStatus && nullNodeInboundResourceStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundResourceStatus = null;
-            if (parseNode.GetChildNode("inbound_resource_type") is { } nullNodeInboundResourceType && nullNodeInboundResourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundResourceType = null;
-            if (parseNode.GetChildNode("inbound_resource_url") is { } nullNodeInboundResourceUrl && nullNodeInboundResourceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundResourceUrl = null;
-            if (parseNode.GetChildNode("outbound_participant_sid") is { } nullNodeOutboundParticipantSid && nullNodeOutboundParticipantSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundParticipantSid = null;
-            if (parseNode.GetChildNode("outbound_resource_sid") is { } nullNodeOutboundResourceSid && nullNodeOutboundResourceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundResourceSid = null;
-            if (parseNode.GetChildNode("outbound_resource_status") is { } nullNodeOutboundResourceStatus && nullNodeOutboundResourceStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundResourceStatus = null;
-            if (parseNode.GetChildNode("outbound_resource_type") is { } nullNodeOutboundResourceType && nullNodeOutboundResourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundResourceType = null;
-            if (parseNode.GetChildNode("outbound_resource_url") is { } nullNodeOutboundResourceUrl && nullNodeOutboundResourceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundResourceUrl = null;
-            if (parseNode.GetChildNode("participant_sid") is { } nullNodeParticipantSid && nullNodeParticipantSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantSid = null;
-            if (parseNode.GetChildNode("service_sid") is { } nullNodeServiceSid && nullNodeServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceSid = null;
-            if (parseNode.GetChildNode("session_sid") is { } nullNodeSessionSid && nullNodeSessionSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionSid = null;
-            if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("data") is null) { _explicitNullValueData = default!; _explicitNullProperties?.Remove("data"); }
+            else if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("date_created") is null) { _explicitNullValueDateCreated = default!; _explicitNullProperties?.Remove("date_created"); }
+            else if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("date_updated") is null) { _explicitNullValueDateUpdated = default!; _explicitNullProperties?.Remove("date_updated"); }
+            else if (parseNode.GetChildNode("date_updated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
+            if (parseNode.GetChildNode("inbound_participant_sid") is null) { _explicitNullValueInboundParticipantSid = default!; _explicitNullProperties?.Remove("inbound_participant_sid"); }
+            else if (parseNode.GetChildNode("inbound_participant_sid") is { } nullNodeInboundParticipantSid && nullNodeInboundParticipantSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundParticipantSid = null;
+            if (parseNode.GetChildNode("inbound_resource_sid") is null) { _explicitNullValueInboundResourceSid = default!; _explicitNullProperties?.Remove("inbound_resource_sid"); }
+            else if (parseNode.GetChildNode("inbound_resource_sid") is { } nullNodeInboundResourceSid && nullNodeInboundResourceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundResourceSid = null;
+            if (parseNode.GetChildNode("inbound_resource_status") is null) { _explicitNullValueInboundResourceStatus = default!; _explicitNullProperties?.Remove("inbound_resource_status"); }
+            else if (parseNode.GetChildNode("inbound_resource_status") is { } nullNodeInboundResourceStatus && nullNodeInboundResourceStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundResourceStatus = null;
+            if (parseNode.GetChildNode("inbound_resource_type") is null) { _explicitNullValueInboundResourceType = default!; _explicitNullProperties?.Remove("inbound_resource_type"); }
+            else if (parseNode.GetChildNode("inbound_resource_type") is { } nullNodeInboundResourceType && nullNodeInboundResourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundResourceType = null;
+            if (parseNode.GetChildNode("inbound_resource_url") is null) { _explicitNullValueInboundResourceUrl = default!; _explicitNullProperties?.Remove("inbound_resource_url"); }
+            else if (parseNode.GetChildNode("inbound_resource_url") is { } nullNodeInboundResourceUrl && nullNodeInboundResourceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundResourceUrl = null;
+            if (parseNode.GetChildNode("outbound_participant_sid") is null) { _explicitNullValueOutboundParticipantSid = default!; _explicitNullProperties?.Remove("outbound_participant_sid"); }
+            else if (parseNode.GetChildNode("outbound_participant_sid") is { } nullNodeOutboundParticipantSid && nullNodeOutboundParticipantSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundParticipantSid = null;
+            if (parseNode.GetChildNode("outbound_resource_sid") is null) { _explicitNullValueOutboundResourceSid = default!; _explicitNullProperties?.Remove("outbound_resource_sid"); }
+            else if (parseNode.GetChildNode("outbound_resource_sid") is { } nullNodeOutboundResourceSid && nullNodeOutboundResourceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundResourceSid = null;
+            if (parseNode.GetChildNode("outbound_resource_status") is null) { _explicitNullValueOutboundResourceStatus = default!; _explicitNullProperties?.Remove("outbound_resource_status"); }
+            else if (parseNode.GetChildNode("outbound_resource_status") is { } nullNodeOutboundResourceStatus && nullNodeOutboundResourceStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundResourceStatus = null;
+            if (parseNode.GetChildNode("outbound_resource_type") is null) { _explicitNullValueOutboundResourceType = default!; _explicitNullProperties?.Remove("outbound_resource_type"); }
+            else if (parseNode.GetChildNode("outbound_resource_type") is { } nullNodeOutboundResourceType && nullNodeOutboundResourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundResourceType = null;
+            if (parseNode.GetChildNode("outbound_resource_url") is null) { _explicitNullValueOutboundResourceUrl = default!; _explicitNullProperties?.Remove("outbound_resource_url"); }
+            else if (parseNode.GetChildNode("outbound_resource_url") is { } nullNodeOutboundResourceUrl && nullNodeOutboundResourceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundResourceUrl = null;
+            if (parseNode.GetChildNode("participant_sid") is null) { _explicitNullValueParticipantSid = default!; _explicitNullProperties?.Remove("participant_sid"); }
+            else if (parseNode.GetChildNode("participant_sid") is { } nullNodeParticipantSid && nullNodeParticipantSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantSid = null;
+            if (parseNode.GetChildNode("service_sid") is null) { _explicitNullValueServiceSid = default!; _explicitNullProperties?.Remove("service_sid"); }
+            else if (parseNode.GetChildNode("service_sid") is { } nullNodeServiceSid && nullNodeServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceSid = null;
+            if (parseNode.GetChildNode("session_sid") is null) { _explicitNullValueSessionSid = default!; _explicitNullProperties?.Remove("session_sid"); }
+            else if (parseNode.GetChildNode("session_sid") is { } nullNodeSessionSid && nullNodeSessionSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionSid = null;
+            if (parseNode.GetChildNode("sid") is null) { _explicitNullValueSid = default!; _explicitNullProperties?.Remove("sid"); }
+            else if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the MessageInteraction resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -54,156 +74,156 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A JSON string that includes the message body sent to the participant. (e.g. `{&quot;body&quot;: &quot;hello&quot;}`)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public string? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private string? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public string Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public string Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private string _explicitNullValueData = default!;
 #endif
         /// <summary>The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.</summary>
-        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
+        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; AdditionalData?.Remove("date_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
         private DateTimeOffset? _explicitNullValueDateCreated = default!;
         /// <summary>The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.</summary>
-        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
+        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; AdditionalData?.Remove("date_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
         private DateTimeOffset? _explicitNullValueDateUpdated = default!;
         /// <summary>Always empty for created Message Interactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboundParticipantSid { get => _explicitNullValueInboundParticipantSid; set { _explicitNullValueInboundParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_participant_sid"); else _explicitNullProperties?.Remove("inbound_participant_sid"); } }
+        public string? InboundParticipantSid { get => _explicitNullValueInboundParticipantSid; set { _explicitNullValueInboundParticipantSid = value; AdditionalData?.Remove("inbound_participant_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_participant_sid"); else _explicitNullProperties?.Remove("inbound_participant_sid"); } }
         private string? _explicitNullValueInboundParticipantSid = default!;
 #nullable restore
 #else
-        public string InboundParticipantSid { get => _explicitNullValueInboundParticipantSid; set { _explicitNullValueInboundParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_participant_sid"); else _explicitNullProperties?.Remove("inbound_participant_sid"); } }
+        public string InboundParticipantSid { get => _explicitNullValueInboundParticipantSid; set { _explicitNullValueInboundParticipantSid = value; AdditionalData?.Remove("inbound_participant_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_participant_sid"); else _explicitNullProperties?.Remove("inbound_participant_sid"); } }
         private string _explicitNullValueInboundParticipantSid = default!;
 #endif
         /// <summary>Always empty for created Message Interactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboundResourceSid { get => _explicitNullValueInboundResourceSid; set { _explicitNullValueInboundResourceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_sid"); else _explicitNullProperties?.Remove("inbound_resource_sid"); } }
+        public string? InboundResourceSid { get => _explicitNullValueInboundResourceSid; set { _explicitNullValueInboundResourceSid = value; AdditionalData?.Remove("inbound_resource_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_sid"); else _explicitNullProperties?.Remove("inbound_resource_sid"); } }
         private string? _explicitNullValueInboundResourceSid = default!;
 #nullable restore
 #else
-        public string InboundResourceSid { get => _explicitNullValueInboundResourceSid; set { _explicitNullValueInboundResourceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_sid"); else _explicitNullProperties?.Remove("inbound_resource_sid"); } }
+        public string InboundResourceSid { get => _explicitNullValueInboundResourceSid; set { _explicitNullValueInboundResourceSid = value; AdditionalData?.Remove("inbound_resource_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_sid"); else _explicitNullProperties?.Remove("inbound_resource_sid"); } }
         private string _explicitNullValueInboundResourceSid = default!;
 #endif
         /// <summary>Always empty for created Message Interactions.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumResourceStatus? InboundResourceStatus { get => _explicitNullValueInboundResourceStatus; set { _explicitNullValueInboundResourceStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_status"); else _explicitNullProperties?.Remove("inbound_resource_status"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumResourceStatus? InboundResourceStatus { get => _explicitNullValueInboundResourceStatus; set { _explicitNullValueInboundResourceStatus = value; AdditionalData?.Remove("inbound_resource_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_status"); else _explicitNullProperties?.Remove("inbound_resource_status"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumResourceStatus? _explicitNullValueInboundResourceStatus = default!;
         /// <summary>Always empty for created Message Interactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboundResourceType { get => _explicitNullValueInboundResourceType; set { _explicitNullValueInboundResourceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_type"); else _explicitNullProperties?.Remove("inbound_resource_type"); } }
+        public string? InboundResourceType { get => _explicitNullValueInboundResourceType; set { _explicitNullValueInboundResourceType = value; AdditionalData?.Remove("inbound_resource_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_type"); else _explicitNullProperties?.Remove("inbound_resource_type"); } }
         private string? _explicitNullValueInboundResourceType = default!;
 #nullable restore
 #else
-        public string InboundResourceType { get => _explicitNullValueInboundResourceType; set { _explicitNullValueInboundResourceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_type"); else _explicitNullProperties?.Remove("inbound_resource_type"); } }
+        public string InboundResourceType { get => _explicitNullValueInboundResourceType; set { _explicitNullValueInboundResourceType = value; AdditionalData?.Remove("inbound_resource_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_type"); else _explicitNullProperties?.Remove("inbound_resource_type"); } }
         private string _explicitNullValueInboundResourceType = default!;
 #endif
         /// <summary>Always empty for created Message Interactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboundResourceUrl { get => _explicitNullValueInboundResourceUrl; set { _explicitNullValueInboundResourceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_url"); else _explicitNullProperties?.Remove("inbound_resource_url"); } }
+        public string? InboundResourceUrl { get => _explicitNullValueInboundResourceUrl; set { _explicitNullValueInboundResourceUrl = value; AdditionalData?.Remove("inbound_resource_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_url"); else _explicitNullProperties?.Remove("inbound_resource_url"); } }
         private string? _explicitNullValueInboundResourceUrl = default!;
 #nullable restore
 #else
-        public string InboundResourceUrl { get => _explicitNullValueInboundResourceUrl; set { _explicitNullValueInboundResourceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_url"); else _explicitNullProperties?.Remove("inbound_resource_url"); } }
+        public string InboundResourceUrl { get => _explicitNullValueInboundResourceUrl; set { _explicitNullValueInboundResourceUrl = value; AdditionalData?.Remove("inbound_resource_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_resource_url"); else _explicitNullProperties?.Remove("inbound_resource_url"); } }
         private string _explicitNullValueInboundResourceUrl = default!;
 #endif
         /// <summary>The SID of the outbound [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OutboundParticipantSid { get => _explicitNullValueOutboundParticipantSid; set { _explicitNullValueOutboundParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_participant_sid"); else _explicitNullProperties?.Remove("outbound_participant_sid"); } }
+        public string? OutboundParticipantSid { get => _explicitNullValueOutboundParticipantSid; set { _explicitNullValueOutboundParticipantSid = value; AdditionalData?.Remove("outbound_participant_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_participant_sid"); else _explicitNullProperties?.Remove("outbound_participant_sid"); } }
         private string? _explicitNullValueOutboundParticipantSid = default!;
 #nullable restore
 #else
-        public string OutboundParticipantSid { get => _explicitNullValueOutboundParticipantSid; set { _explicitNullValueOutboundParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_participant_sid"); else _explicitNullProperties?.Remove("outbound_participant_sid"); } }
+        public string OutboundParticipantSid { get => _explicitNullValueOutboundParticipantSid; set { _explicitNullValueOutboundParticipantSid = value; AdditionalData?.Remove("outbound_participant_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_participant_sid"); else _explicitNullProperties?.Remove("outbound_participant_sid"); } }
         private string _explicitNullValueOutboundParticipantSid = default!;
 #endif
         /// <summary>The SID of the outbound [Message](https://www.twilio.com/docs/sms/api/message-resource) resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OutboundResourceSid { get => _explicitNullValueOutboundResourceSid; set { _explicitNullValueOutboundResourceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_sid"); else _explicitNullProperties?.Remove("outbound_resource_sid"); } }
+        public string? OutboundResourceSid { get => _explicitNullValueOutboundResourceSid; set { _explicitNullValueOutboundResourceSid = value; AdditionalData?.Remove("outbound_resource_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_sid"); else _explicitNullProperties?.Remove("outbound_resource_sid"); } }
         private string? _explicitNullValueOutboundResourceSid = default!;
 #nullable restore
 #else
-        public string OutboundResourceSid { get => _explicitNullValueOutboundResourceSid; set { _explicitNullValueOutboundResourceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_sid"); else _explicitNullProperties?.Remove("outbound_resource_sid"); } }
+        public string OutboundResourceSid { get => _explicitNullValueOutboundResourceSid; set { _explicitNullValueOutboundResourceSid = value; AdditionalData?.Remove("outbound_resource_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_sid"); else _explicitNullProperties?.Remove("outbound_resource_sid"); } }
         private string _explicitNullValueOutboundResourceSid = default!;
 #endif
         /// <summary>Always empty for created Message Interactions.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumResourceStatus? OutboundResourceStatus { get => _explicitNullValueOutboundResourceStatus; set { _explicitNullValueOutboundResourceStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_status"); else _explicitNullProperties?.Remove("outbound_resource_status"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumResourceStatus? OutboundResourceStatus { get => _explicitNullValueOutboundResourceStatus; set { _explicitNullValueOutboundResourceStatus = value; AdditionalData?.Remove("outbound_resource_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_status"); else _explicitNullProperties?.Remove("outbound_resource_status"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumResourceStatus? _explicitNullValueOutboundResourceStatus = default!;
         /// <summary>The outbound resource type. This value is always `Message`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OutboundResourceType { get => _explicitNullValueOutboundResourceType; set { _explicitNullValueOutboundResourceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_type"); else _explicitNullProperties?.Remove("outbound_resource_type"); } }
+        public string? OutboundResourceType { get => _explicitNullValueOutboundResourceType; set { _explicitNullValueOutboundResourceType = value; AdditionalData?.Remove("outbound_resource_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_type"); else _explicitNullProperties?.Remove("outbound_resource_type"); } }
         private string? _explicitNullValueOutboundResourceType = default!;
 #nullable restore
 #else
-        public string OutboundResourceType { get => _explicitNullValueOutboundResourceType; set { _explicitNullValueOutboundResourceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_type"); else _explicitNullProperties?.Remove("outbound_resource_type"); } }
+        public string OutboundResourceType { get => _explicitNullValueOutboundResourceType; set { _explicitNullValueOutboundResourceType = value; AdditionalData?.Remove("outbound_resource_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_type"); else _explicitNullProperties?.Remove("outbound_resource_type"); } }
         private string _explicitNullValueOutboundResourceType = default!;
 #endif
         /// <summary>The URL of the Twilio message resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OutboundResourceUrl { get => _explicitNullValueOutboundResourceUrl; set { _explicitNullValueOutboundResourceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_url"); else _explicitNullProperties?.Remove("outbound_resource_url"); } }
+        public string? OutboundResourceUrl { get => _explicitNullValueOutboundResourceUrl; set { _explicitNullValueOutboundResourceUrl = value; AdditionalData?.Remove("outbound_resource_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_url"); else _explicitNullProperties?.Remove("outbound_resource_url"); } }
         private string? _explicitNullValueOutboundResourceUrl = default!;
 #nullable restore
 #else
-        public string OutboundResourceUrl { get => _explicitNullValueOutboundResourceUrl; set { _explicitNullValueOutboundResourceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_url"); else _explicitNullProperties?.Remove("outbound_resource_url"); } }
+        public string OutboundResourceUrl { get => _explicitNullValueOutboundResourceUrl; set { _explicitNullValueOutboundResourceUrl = value; AdditionalData?.Remove("outbound_resource_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_resource_url"); else _explicitNullProperties?.Remove("outbound_resource_url"); } }
         private string _explicitNullValueOutboundResourceUrl = default!;
 #endif
         /// <summary>The SID of the [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
+        public string? ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; AdditionalData?.Remove("participant_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
         private string? _explicitNullValueParticipantSid = default!;
 #nullable restore
 #else
-        public string ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
+        public string ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; AdditionalData?.Remove("participant_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
         private string _explicitNullValueParticipantSid = default!;
 #endif
         /// <summary>The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceSid { get => _explicitNullValueServiceSid; set { _explicitNullValueServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_sid"); else _explicitNullProperties?.Remove("service_sid"); } }
+        public string? ServiceSid { get => _explicitNullValueServiceSid; set { _explicitNullValueServiceSid = value; AdditionalData?.Remove("service_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_sid"); else _explicitNullProperties?.Remove("service_sid"); } }
         private string? _explicitNullValueServiceSid = default!;
 #nullable restore
 #else
-        public string ServiceSid { get => _explicitNullValueServiceSid; set { _explicitNullValueServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_sid"); else _explicitNullProperties?.Remove("service_sid"); } }
+        public string ServiceSid { get => _explicitNullValueServiceSid; set { _explicitNullValueServiceSid = value; AdditionalData?.Remove("service_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_sid"); else _explicitNullProperties?.Remove("service_sid"); } }
         private string _explicitNullValueServiceSid = default!;
 #endif
         /// <summary>The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionSid { get => _explicitNullValueSessionSid; set { _explicitNullValueSessionSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_sid"); else _explicitNullProperties?.Remove("session_sid"); } }
+        public string? SessionSid { get => _explicitNullValueSessionSid; set { _explicitNullValueSessionSid = value; AdditionalData?.Remove("session_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_sid"); else _explicitNullProperties?.Remove("session_sid"); } }
         private string? _explicitNullValueSessionSid = default!;
 #nullable restore
 #else
-        public string SessionSid { get => _explicitNullValueSessionSid; set { _explicitNullValueSessionSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_sid"); else _explicitNullProperties?.Remove("session_sid"); } }
+        public string SessionSid { get => _explicitNullValueSessionSid; set { _explicitNullValueSessionSid = value; AdditionalData?.Remove("session_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_sid"); else _explicitNullProperties?.Remove("session_sid"); } }
         private string _explicitNullValueSessionSid = default!;
 #endif
         /// <summary>The unique string that we created to identify the MessageInteraction resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string? _explicitNullValueSid = default!;
 #nullable restore
 #else
-        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string _explicitNullValueSid = default!;
 #endif
         /// <summary>The Type of Message Interaction. This value is always `message`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumType? _explicitNullValueType = default!;
         /// <summary>The absolute URL of the MessageInteraction resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
@@ -237,19 +257,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "date_updated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "inbound_participant_sid", n => { InboundParticipantSid = n.GetStringValue(); } },
                 { "inbound_resource_sid", n => { InboundResourceSid = n.GetStringValue(); } },
-                { "inbound_resource_status", n => { InboundResourceStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumResourceStatus>(); } },
+                { "inbound_resource_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumResourceStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInboundResourceStatus = default; _explicitNullProperties?.Remove("inbound_resource_status"); AdditionalData["inbound_resource_status"] = unknown; } else { InboundResourceStatus = parsed; AdditionalData.Remove("inbound_resource_status"); } } },
                 { "inbound_resource_type", n => { InboundResourceType = n.GetStringValue(); } },
                 { "inbound_resource_url", n => { InboundResourceUrl = n.GetStringValue(); } },
                 { "outbound_participant_sid", n => { OutboundParticipantSid = n.GetStringValue(); } },
                 { "outbound_resource_sid", n => { OutboundResourceSid = n.GetStringValue(); } },
-                { "outbound_resource_status", n => { OutboundResourceStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumResourceStatus>(); } },
+                { "outbound_resource_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumResourceStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOutboundResourceStatus = default; _explicitNullProperties?.Remove("outbound_resource_status"); AdditionalData["outbound_resource_status"] = unknown; } else { OutboundResourceStatus = parsed; AdditionalData.Remove("outbound_resource_status"); } } },
                 { "outbound_resource_type", n => { OutboundResourceType = n.GetStringValue(); } },
                 { "outbound_resource_url", n => { OutboundResourceUrl = n.GetStringValue(); } },
                 { "participant_sid", n => { ParticipantSid = n.GetStringValue(); } },
                 { "service_sid", n => { ServiceSid = n.GetStringValue(); } },
                 { "session_sid", n => { SessionSid = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessageInteractionEnumType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }

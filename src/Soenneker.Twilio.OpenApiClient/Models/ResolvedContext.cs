@@ -18,8 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("knowledge") is { } nullNodeKnowledge && nullNodeKnowledge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Knowledge = null;
-            if (parseNode.GetChildNode("memory") is { } nullNodeMemory && nullNodeMemory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Memory = null;
+            if (parseNode.GetChildNode("knowledge") is null) { _explicitNullValueKnowledge = default!; _explicitNullProperties?.Remove("knowledge"); }
+            else if (parseNode.GetChildNode("knowledge") is { } nullNodeKnowledge && nullNodeKnowledge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Knowledge = null;
+            if (parseNode.GetChildNode("memory") is null) { _explicitNullValueMemory = default!; _explicitNullProperties?.Remove("memory"); }
+            else if (parseNode.GetChildNode("memory") is { } nullNodeMemory && nullNodeMemory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Memory = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Knowledge source IDs with their respective knowledge base ID that was accessed and used by the LLM to generate the result.null if no knowledge was accessed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge? Knowledge { get => _explicitNullValueKnowledge; set { _explicitNullValueKnowledge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("knowledge"); else _explicitNullProperties?.Remove("knowledge"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge? Knowledge { get => _explicitNullValueKnowledge; set { _explicitNullValueKnowledge = value; AdditionalData?.Remove("knowledge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("knowledge"); else _explicitNullProperties?.Remove("knowledge"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge? _explicitNullValueKnowledge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge Knowledge { get => _explicitNullValueKnowledge; set { _explicitNullValueKnowledge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("knowledge"); else _explicitNullProperties?.Remove("knowledge"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge Knowledge { get => _explicitNullValueKnowledge; set { _explicitNullValueKnowledge = value; AdditionalData?.Remove("knowledge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("knowledge"); else _explicitNullProperties?.Remove("knowledge"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge _explicitNullValueKnowledge = default!;
 #endif
         /// <summary>The customer profile that was accessed. null if no memory was accessed.Either observations and/or traits from the profile were used by the LLM to generate the result.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory? Memory { get => _explicitNullValueMemory; set { _explicitNullValueMemory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memory"); else _explicitNullProperties?.Remove("memory"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory? Memory { get => _explicitNullValueMemory; set { _explicitNullValueMemory = value; AdditionalData?.Remove("memory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memory"); else _explicitNullProperties?.Remove("memory"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory? _explicitNullValueMemory = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory Memory { get => _explicitNullValueMemory; set { _explicitNullValueMemory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memory"); else _explicitNullProperties?.Remove("memory"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory Memory { get => _explicitNullValueMemory; set { _explicitNullValueMemory = value; AdditionalData?.Remove("memory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memory"); else _explicitNullProperties?.Remove("memory"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory _explicitNullValueMemory = default!;
 #endif
         /// <summary>

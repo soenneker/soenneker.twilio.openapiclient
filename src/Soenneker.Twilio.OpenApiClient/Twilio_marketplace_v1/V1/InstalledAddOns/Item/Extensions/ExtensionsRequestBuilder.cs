@@ -78,7 +78,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOn
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOns.Item.Extensions.ExtensionsRequestBuilder.ExtensionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://marketplace.twilio.com", "/twilio_marketplace_v1/v1/InstalledAddOns/{sid}/Extensions", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

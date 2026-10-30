@@ -17,24 +17,32 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("connect_app_company_name") is { } nullNodeConnectAppCompanyName && nullNodeConnectAppCompanyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectAppCompanyName = null;
-            if (parseNode.GetChildNode("connect_app_description") is { } nullNodeConnectAppDescription && nullNodeConnectAppDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectAppDescription = null;
-            if (parseNode.GetChildNode("connect_app_friendly_name") is { } nullNodeConnectAppFriendlyName && nullNodeConnectAppFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectAppFriendlyName = null;
-            if (parseNode.GetChildNode("connect_app_homepage_url") is { } nullNodeConnectAppHomepageUrl && nullNodeConnectAppHomepageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectAppHomepageUrl = null;
-            if (parseNode.GetChildNode("connect_app_sid") is { } nullNodeConnectAppSid && nullNodeConnectAppSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectAppSid = null;
-            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
-            if (parseNode.GetChildNode("uri") is { } nullNodeUri && nullNodeUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uri = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("connect_app_company_name") is null) { _explicitNullValueConnectAppCompanyName = default!; _explicitNullProperties?.Remove("connect_app_company_name"); }
+            else if (parseNode.GetChildNode("connect_app_company_name") is { } nullNodeConnectAppCompanyName && nullNodeConnectAppCompanyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectAppCompanyName = null;
+            if (parseNode.GetChildNode("connect_app_description") is null) { _explicitNullValueConnectAppDescription = default!; _explicitNullProperties?.Remove("connect_app_description"); }
+            else if (parseNode.GetChildNode("connect_app_description") is { } nullNodeConnectAppDescription && nullNodeConnectAppDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectAppDescription = null;
+            if (parseNode.GetChildNode("connect_app_friendly_name") is null) { _explicitNullValueConnectAppFriendlyName = default!; _explicitNullProperties?.Remove("connect_app_friendly_name"); }
+            else if (parseNode.GetChildNode("connect_app_friendly_name") is { } nullNodeConnectAppFriendlyName && nullNodeConnectAppFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectAppFriendlyName = null;
+            if (parseNode.GetChildNode("connect_app_homepage_url") is null) { _explicitNullValueConnectAppHomepageUrl = default!; _explicitNullProperties?.Remove("connect_app_homepage_url"); }
+            else if (parseNode.GetChildNode("connect_app_homepage_url") is { } nullNodeConnectAppHomepageUrl && nullNodeConnectAppHomepageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectAppHomepageUrl = null;
+            if (parseNode.GetChildNode("connect_app_sid") is null) { _explicitNullValueConnectAppSid = default!; _explicitNullProperties?.Remove("connect_app_sid"); }
+            else if (parseNode.GetChildNode("connect_app_sid") is { } nullNodeConnectAppSid && nullNodeConnectAppSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectAppSid = null;
+            if (parseNode.GetChildNode("permissions") is null) { _explicitNullValuePermissions = default!; _explicitNullProperties?.Remove("permissions"); }
+            else if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("uri") is null) { _explicitNullValueUri = default!; _explicitNullProperties?.Remove("uri"); }
+            else if (parseNode.GetChildNode("uri") is { } nullNodeUri && nullNodeUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uri = null;
         }
 
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the AuthorizedConnectApp resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -42,71 +50,71 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The company name set for the Connect App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConnectAppCompanyName { get => _explicitNullValueConnectAppCompanyName; set { _explicitNullValueConnectAppCompanyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_company_name"); else _explicitNullProperties?.Remove("connect_app_company_name"); } }
+        public string? ConnectAppCompanyName { get => _explicitNullValueConnectAppCompanyName; set { _explicitNullValueConnectAppCompanyName = value; AdditionalData?.Remove("connect_app_company_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_company_name"); else _explicitNullProperties?.Remove("connect_app_company_name"); } }
         private string? _explicitNullValueConnectAppCompanyName = default!;
 #nullable restore
 #else
-        public string ConnectAppCompanyName { get => _explicitNullValueConnectAppCompanyName; set { _explicitNullValueConnectAppCompanyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_company_name"); else _explicitNullProperties?.Remove("connect_app_company_name"); } }
+        public string ConnectAppCompanyName { get => _explicitNullValueConnectAppCompanyName; set { _explicitNullValueConnectAppCompanyName = value; AdditionalData?.Remove("connect_app_company_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_company_name"); else _explicitNullProperties?.Remove("connect_app_company_name"); } }
         private string _explicitNullValueConnectAppCompanyName = default!;
 #endif
         /// <summary>A detailed description of the Connect App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConnectAppDescription { get => _explicitNullValueConnectAppDescription; set { _explicitNullValueConnectAppDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_description"); else _explicitNullProperties?.Remove("connect_app_description"); } }
+        public string? ConnectAppDescription { get => _explicitNullValueConnectAppDescription; set { _explicitNullValueConnectAppDescription = value; AdditionalData?.Remove("connect_app_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_description"); else _explicitNullProperties?.Remove("connect_app_description"); } }
         private string? _explicitNullValueConnectAppDescription = default!;
 #nullable restore
 #else
-        public string ConnectAppDescription { get => _explicitNullValueConnectAppDescription; set { _explicitNullValueConnectAppDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_description"); else _explicitNullProperties?.Remove("connect_app_description"); } }
+        public string ConnectAppDescription { get => _explicitNullValueConnectAppDescription; set { _explicitNullValueConnectAppDescription = value; AdditionalData?.Remove("connect_app_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_description"); else _explicitNullProperties?.Remove("connect_app_description"); } }
         private string _explicitNullValueConnectAppDescription = default!;
 #endif
         /// <summary>The name of the Connect App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConnectAppFriendlyName { get => _explicitNullValueConnectAppFriendlyName; set { _explicitNullValueConnectAppFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_friendly_name"); else _explicitNullProperties?.Remove("connect_app_friendly_name"); } }
+        public string? ConnectAppFriendlyName { get => _explicitNullValueConnectAppFriendlyName; set { _explicitNullValueConnectAppFriendlyName = value; AdditionalData?.Remove("connect_app_friendly_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_friendly_name"); else _explicitNullProperties?.Remove("connect_app_friendly_name"); } }
         private string? _explicitNullValueConnectAppFriendlyName = default!;
 #nullable restore
 #else
-        public string ConnectAppFriendlyName { get => _explicitNullValueConnectAppFriendlyName; set { _explicitNullValueConnectAppFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_friendly_name"); else _explicitNullProperties?.Remove("connect_app_friendly_name"); } }
+        public string ConnectAppFriendlyName { get => _explicitNullValueConnectAppFriendlyName; set { _explicitNullValueConnectAppFriendlyName = value; AdditionalData?.Remove("connect_app_friendly_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_friendly_name"); else _explicitNullProperties?.Remove("connect_app_friendly_name"); } }
         private string _explicitNullValueConnectAppFriendlyName = default!;
 #endif
         /// <summary>The public URL for the Connect App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConnectAppHomepageUrl { get => _explicitNullValueConnectAppHomepageUrl; set { _explicitNullValueConnectAppHomepageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_homepage_url"); else _explicitNullProperties?.Remove("connect_app_homepage_url"); } }
+        public string? ConnectAppHomepageUrl { get => _explicitNullValueConnectAppHomepageUrl; set { _explicitNullValueConnectAppHomepageUrl = value; AdditionalData?.Remove("connect_app_homepage_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_homepage_url"); else _explicitNullProperties?.Remove("connect_app_homepage_url"); } }
         private string? _explicitNullValueConnectAppHomepageUrl = default!;
 #nullable restore
 #else
-        public string ConnectAppHomepageUrl { get => _explicitNullValueConnectAppHomepageUrl; set { _explicitNullValueConnectAppHomepageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_homepage_url"); else _explicitNullProperties?.Remove("connect_app_homepage_url"); } }
+        public string ConnectAppHomepageUrl { get => _explicitNullValueConnectAppHomepageUrl; set { _explicitNullValueConnectAppHomepageUrl = value; AdditionalData?.Remove("connect_app_homepage_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_homepage_url"); else _explicitNullProperties?.Remove("connect_app_homepage_url"); } }
         private string _explicitNullValueConnectAppHomepageUrl = default!;
 #endif
         /// <summary>The SID that we assigned to the Connect App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConnectAppSid { get => _explicitNullValueConnectAppSid; set { _explicitNullValueConnectAppSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_sid"); else _explicitNullProperties?.Remove("connect_app_sid"); } }
+        public string? ConnectAppSid { get => _explicitNullValueConnectAppSid; set { _explicitNullValueConnectAppSid = value; AdditionalData?.Remove("connect_app_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_sid"); else _explicitNullProperties?.Remove("connect_app_sid"); } }
         private string? _explicitNullValueConnectAppSid = default!;
 #nullable restore
 #else
-        public string ConnectAppSid { get => _explicitNullValueConnectAppSid; set { _explicitNullValueConnectAppSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_sid"); else _explicitNullProperties?.Remove("connect_app_sid"); } }
+        public string ConnectAppSid { get => _explicitNullValueConnectAppSid; set { _explicitNullValueConnectAppSid = value; AdditionalData?.Remove("connect_app_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_app_sid"); else _explicitNullProperties?.Remove("connect_app_sid"); } }
         private string _explicitNullValueConnectAppSid = default!;
 #endif
         /// <summary>The set of permissions that you authorized for the Connect App.  Can be: `get-all` or `post-all`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.AuthorizedConnectAppEnumPermission?>? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.AuthorizedConnectAppEnumPermission?>? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; AdditionalData?.Remove("permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.AuthorizedConnectAppEnumPermission?>? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.AuthorizedConnectAppEnumPermission?> Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.AuthorizedConnectAppEnumPermission?> Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; AdditionalData?.Remove("permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.AuthorizedConnectAppEnumPermission?> _explicitNullValuePermissions = default!;
 #endif
         /// <summary>The URI of the resource, relative to `https://api.twilio.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Uri { get => _explicitNullValueUri; set { _explicitNullValueUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uri"); else _explicitNullProperties?.Remove("uri"); } }
+        public string? Uri { get => _explicitNullValueUri; set { _explicitNullValueUri = value; AdditionalData?.Remove("uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uri"); else _explicitNullProperties?.Remove("uri"); } }
         private string? _explicitNullValueUri = default!;
 #nullable restore
 #else
-        public string Uri { get => _explicitNullValueUri; set { _explicitNullValueUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uri"); else _explicitNullProperties?.Remove("uri"); } }
+        public string Uri { get => _explicitNullValueUri; set { _explicitNullValueUri = value; AdditionalData?.Remove("uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uri"); else _explicitNullProperties?.Remove("uri"); } }
         private string _explicitNullValueUri = default!;
 #endif
         /// <summary>

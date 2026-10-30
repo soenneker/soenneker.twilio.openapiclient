@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("billable_items") is { } nullNodeBillableItems && nullNodeBillableItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillableItems = null;
+            if (parseNode.GetChildNode("billable_items") is null) { _explicitNullValueBillableItems = default!; _explicitNullProperties?.Remove("billable_items"); }
+            else if (parseNode.GetChildNode("billable_items") is { } nullNodeBillableItems && nullNodeBillableItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillableItems = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The billable_items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsageBillableItemsItem>? BillableItems { get => _explicitNullValueBillableItems; set { _explicitNullValueBillableItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billable_items"); else _explicitNullProperties?.Remove("billable_items"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsageBillableItemsItem>? BillableItems { get => _explicitNullValueBillableItems; set { _explicitNullValueBillableItems = value; AdditionalData?.Remove("billable_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billable_items"); else _explicitNullProperties?.Remove("billable_items"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsageBillableItemsItem>? _explicitNullValueBillableItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsageBillableItemsItem> BillableItems { get => _explicitNullValueBillableItems; set { _explicitNullValueBillableItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billable_items"); else _explicitNullProperties?.Remove("billable_items"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsageBillableItemsItem> BillableItems { get => _explicitNullValueBillableItems; set { _explicitNullValueBillableItems = value; AdditionalData?.Remove("billable_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billable_items"); else _explicitNullProperties?.Remove("billable_items"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOnInstalledAddOnUsageBillableItemsItem> _explicitNullValueBillableItems = default!;
 #endif
         /// <summary>Total amount in local currency that was billed in this request. Aggregates all billable_items that were successfully submitted.</summary>

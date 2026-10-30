@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("BuildSid") is { } nullNodeBuildSid && nullNodeBuildSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildSid = null;
-            if (parseNode.GetChildNode("IsPlugin") is { } nullNodeIsPlugin && nullNodeIsPlugin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPlugin = null;
+            if (parseNode.GetChildNode("BuildSid") is null) { _explicitNullValueBuildSid = default!; _explicitNullProperties?.Remove("BuildSid"); }
+            else if (parseNode.GetChildNode("BuildSid") is { } nullNodeBuildSid && nullNodeBuildSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildSid = null;
+            if (parseNode.GetChildNode("IsPlugin") is null) { _explicitNullValueIsPlugin = default!; _explicitNullProperties?.Remove("IsPlugin"); }
+            else if (parseNode.GetChildNode("IsPlugin") is { } nullNodeIsPlugin && nullNodeIsPlugin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPlugin = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID of the Build for the Deployment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuildSid { get => _explicitNullValueBuildSid; set { _explicitNullValueBuildSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BuildSid"); else _explicitNullProperties?.Remove("BuildSid"); } }
+        public string? BuildSid { get => _explicitNullValueBuildSid; set { _explicitNullValueBuildSid = value; AdditionalData?.Remove("BuildSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BuildSid"); else _explicitNullProperties?.Remove("BuildSid"); } }
         private string? _explicitNullValueBuildSid = default!;
 #nullable restore
 #else
-        public string BuildSid { get => _explicitNullValueBuildSid; set { _explicitNullValueBuildSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BuildSid"); else _explicitNullProperties?.Remove("BuildSid"); } }
+        public string BuildSid { get => _explicitNullValueBuildSid; set { _explicitNullValueBuildSid = value; AdditionalData?.Remove("BuildSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BuildSid"); else _explicitNullProperties?.Remove("BuildSid"); } }
         private string _explicitNullValueBuildSid = default!;
 #endif
         /// <summary>Whether the Deployment is a plugin.</summary>
-        public bool? IsPlugin { get => _explicitNullValueIsPlugin; set { _explicitNullValueIsPlugin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsPlugin"); else _explicitNullProperties?.Remove("IsPlugin"); } }
+        public bool? IsPlugin { get => _explicitNullValueIsPlugin; set { _explicitNullValueIsPlugin = value; AdditionalData?.Remove("IsPlugin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsPlugin"); else _explicitNullProperties?.Remove("IsPlugin"); } }
         private bool? _explicitNullValueIsPlugin = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioServerlessV1CreateDeploymentXWwwFormUrlencodedRequest"/> and sets the default values.

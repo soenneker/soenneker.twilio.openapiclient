@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tokens_per_second") is { } nullNodeTokensPerSecond && nullNodeTokensPerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokensPerSecond = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("tokens_per_second") is null) { _explicitNullValueTokensPerSecond = default!; _explicitNullProperties?.Remove("tokens_per_second"); }
+            else if (parseNode.GetChildNode("tokens_per_second") is { } nullNodeTokensPerSecond && nullNodeTokensPerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokensPerSecond = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The tokens_per_second property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? TokensPerSecond { get => _explicitNullValueTokensPerSecond; set { _explicitNullValueTokensPerSecond = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokens_per_second"); else _explicitNullProperties?.Remove("tokens_per_second"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? TokensPerSecond { get => _explicitNullValueTokensPerSecond; set { _explicitNullValueTokensPerSecond = value; AdditionalData?.Remove("tokens_per_second"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokens_per_second"); else _explicitNullProperties?.Remove("tokens_per_second"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? _explicitNullValueTokensPerSecond = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats TokensPerSecond { get => _explicitNullValueTokensPerSecond; set { _explicitNullValueTokensPerSecond = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokens_per_second"); else _explicitNullProperties?.Remove("tokens_per_second"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats TokensPerSecond { get => _explicitNullValueTokensPerSecond; set { _explicitNullValueTokensPerSecond = value; AdditionalData?.Remove("tokens_per_second"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokens_per_second"); else _explicitNullProperties?.Remove("tokens_per_second"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats _explicitNullValueTokensPerSecond = default!;
 #endif
         /// <summary>The total property</summary>
-        public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private int? _explicitNullValueTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayTokenStats"/> and sets the default values.

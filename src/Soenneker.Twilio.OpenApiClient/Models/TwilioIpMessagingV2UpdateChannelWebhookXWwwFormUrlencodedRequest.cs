@@ -17,12 +17,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Configuration.Filters") is { } nullNodeConfigurationFilters && nullNodeConfigurationFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationFilters = null;
-            if (parseNode.GetChildNode("Configuration.FlowSid") is { } nullNodeConfigurationFlowSid && nullNodeConfigurationFlowSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationFlowSid = null;
-            if (parseNode.GetChildNode("Configuration.Method") is { } nullNodeConfigurationMethod && nullNodeConfigurationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationMethod = null;
-            if (parseNode.GetChildNode("Configuration.RetryCount") is { } nullNodeConfigurationRetryCount && nullNodeConfigurationRetryCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationRetryCount = null;
-            if (parseNode.GetChildNode("Configuration.Triggers") is { } nullNodeConfigurationTriggers && nullNodeConfigurationTriggers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationTriggers = null;
-            if (parseNode.GetChildNode("Configuration.Url") is { } nullNodeConfigurationUrl && nullNodeConfigurationUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationUrl = null;
+            if (parseNode.GetChildNode("Configuration.Filters") is null) { _explicitNullValueConfigurationFilters = default!; _explicitNullProperties?.Remove("Configuration.Filters"); }
+            else if (parseNode.GetChildNode("Configuration.Filters") is { } nullNodeConfigurationFilters && nullNodeConfigurationFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationFilters = null;
+            if (parseNode.GetChildNode("Configuration.FlowSid") is null) { _explicitNullValueConfigurationFlowSid = default!; _explicitNullProperties?.Remove("Configuration.FlowSid"); }
+            else if (parseNode.GetChildNode("Configuration.FlowSid") is { } nullNodeConfigurationFlowSid && nullNodeConfigurationFlowSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationFlowSid = null;
+            if (parseNode.GetChildNode("Configuration.Method") is null) { _explicitNullValueConfigurationMethod = default!; _explicitNullProperties?.Remove("Configuration.Method"); }
+            else if (parseNode.GetChildNode("Configuration.Method") is { } nullNodeConfigurationMethod && nullNodeConfigurationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationMethod = null;
+            if (parseNode.GetChildNode("Configuration.RetryCount") is null) { _explicitNullValueConfigurationRetryCount = default!; _explicitNullProperties?.Remove("Configuration.RetryCount"); }
+            else if (parseNode.GetChildNode("Configuration.RetryCount") is { } nullNodeConfigurationRetryCount && nullNodeConfigurationRetryCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationRetryCount = null;
+            if (parseNode.GetChildNode("Configuration.Triggers") is null) { _explicitNullValueConfigurationTriggers = default!; _explicitNullProperties?.Remove("Configuration.Triggers"); }
+            else if (parseNode.GetChildNode("Configuration.Triggers") is { } nullNodeConfigurationTriggers && nullNodeConfigurationTriggers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationTriggers = null;
+            if (parseNode.GetChildNode("Configuration.Url") is null) { _explicitNullValueConfigurationUrl = default!; _explicitNullProperties?.Remove("Configuration.Url"); }
+            else if (parseNode.GetChildNode("Configuration.Url") is { } nullNodeConfigurationUrl && nullNodeConfigurationUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,47 +36,47 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The ConfigurationFilters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ConfigurationFilters { get => _explicitNullValueConfigurationFilters; set { _explicitNullValueConfigurationFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Filters"); else _explicitNullProperties?.Remove("Configuration.Filters"); } }
+        public List<string>? ConfigurationFilters { get => _explicitNullValueConfigurationFilters; set { _explicitNullValueConfigurationFilters = value; AdditionalData?.Remove("Configuration.Filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Filters"); else _explicitNullProperties?.Remove("Configuration.Filters"); } }
         private List<string>? _explicitNullValueConfigurationFilters = default!;
 #nullable restore
 #else
-        public List<string> ConfigurationFilters { get => _explicitNullValueConfigurationFilters; set { _explicitNullValueConfigurationFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Filters"); else _explicitNullProperties?.Remove("Configuration.Filters"); } }
+        public List<string> ConfigurationFilters { get => _explicitNullValueConfigurationFilters; set { _explicitNullValueConfigurationFilters = value; AdditionalData?.Remove("Configuration.Filters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Filters"); else _explicitNullProperties?.Remove("Configuration.Filters"); } }
         private List<string> _explicitNullValueConfigurationFilters = default!;
 #endif
         /// <summary>The ConfigurationFlowSid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigurationFlowSid { get => _explicitNullValueConfigurationFlowSid; set { _explicitNullValueConfigurationFlowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.FlowSid"); else _explicitNullProperties?.Remove("Configuration.FlowSid"); } }
+        public string? ConfigurationFlowSid { get => _explicitNullValueConfigurationFlowSid; set { _explicitNullValueConfigurationFlowSid = value; AdditionalData?.Remove("Configuration.FlowSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.FlowSid"); else _explicitNullProperties?.Remove("Configuration.FlowSid"); } }
         private string? _explicitNullValueConfigurationFlowSid = default!;
 #nullable restore
 #else
-        public string ConfigurationFlowSid { get => _explicitNullValueConfigurationFlowSid; set { _explicitNullValueConfigurationFlowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.FlowSid"); else _explicitNullProperties?.Remove("Configuration.FlowSid"); } }
+        public string ConfigurationFlowSid { get => _explicitNullValueConfigurationFlowSid; set { _explicitNullValueConfigurationFlowSid = value; AdditionalData?.Remove("Configuration.FlowSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.FlowSid"); else _explicitNullProperties?.Remove("Configuration.FlowSid"); } }
         private string _explicitNullValueConfigurationFlowSid = default!;
 #endif
         /// <summary>The ConfigurationMethod property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2ChannelWebhookEnumMethod? ConfigurationMethod { get => _explicitNullValueConfigurationMethod; set { _explicitNullValueConfigurationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Method"); else _explicitNullProperties?.Remove("Configuration.Method"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2ChannelWebhookEnumMethod? ConfigurationMethod { get => _explicitNullValueConfigurationMethod; set { _explicitNullValueConfigurationMethod = value; AdditionalData?.Remove("Configuration.Method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Method"); else _explicitNullProperties?.Remove("Configuration.Method"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2ChannelWebhookEnumMethod? _explicitNullValueConfigurationMethod = default!;
         /// <summary>The ConfigurationRetryCount property</summary>
-        public int? ConfigurationRetryCount { get => _explicitNullValueConfigurationRetryCount; set { _explicitNullValueConfigurationRetryCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.RetryCount"); else _explicitNullProperties?.Remove("Configuration.RetryCount"); } }
+        public int? ConfigurationRetryCount { get => _explicitNullValueConfigurationRetryCount; set { _explicitNullValueConfigurationRetryCount = value; AdditionalData?.Remove("Configuration.RetryCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.RetryCount"); else _explicitNullProperties?.Remove("Configuration.RetryCount"); } }
         private int? _explicitNullValueConfigurationRetryCount = default!;
         /// <summary>The ConfigurationTriggers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ConfigurationTriggers { get => _explicitNullValueConfigurationTriggers; set { _explicitNullValueConfigurationTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Triggers"); else _explicitNullProperties?.Remove("Configuration.Triggers"); } }
+        public List<string>? ConfigurationTriggers { get => _explicitNullValueConfigurationTriggers; set { _explicitNullValueConfigurationTriggers = value; AdditionalData?.Remove("Configuration.Triggers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Triggers"); else _explicitNullProperties?.Remove("Configuration.Triggers"); } }
         private List<string>? _explicitNullValueConfigurationTriggers = default!;
 #nullable restore
 #else
-        public List<string> ConfigurationTriggers { get => _explicitNullValueConfigurationTriggers; set { _explicitNullValueConfigurationTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Triggers"); else _explicitNullProperties?.Remove("Configuration.Triggers"); } }
+        public List<string> ConfigurationTriggers { get => _explicitNullValueConfigurationTriggers; set { _explicitNullValueConfigurationTriggers = value; AdditionalData?.Remove("Configuration.Triggers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Triggers"); else _explicitNullProperties?.Remove("Configuration.Triggers"); } }
         private List<string> _explicitNullValueConfigurationTriggers = default!;
 #endif
         /// <summary>The ConfigurationUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigurationUrl { get => _explicitNullValueConfigurationUrl; set { _explicitNullValueConfigurationUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Url"); else _explicitNullProperties?.Remove("Configuration.Url"); } }
+        public string? ConfigurationUrl { get => _explicitNullValueConfigurationUrl; set { _explicitNullValueConfigurationUrl = value; AdditionalData?.Remove("Configuration.Url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Url"); else _explicitNullProperties?.Remove("Configuration.Url"); } }
         private string? _explicitNullValueConfigurationUrl = default!;
 #nullable restore
 #else
-        public string ConfigurationUrl { get => _explicitNullValueConfigurationUrl; set { _explicitNullValueConfigurationUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Url"); else _explicitNullProperties?.Remove("Configuration.Url"); } }
+        public string ConfigurationUrl { get => _explicitNullValueConfigurationUrl; set { _explicitNullValueConfigurationUrl = value; AdditionalData?.Remove("Configuration.Url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Url"); else _explicitNullProperties?.Remove("Configuration.Url"); } }
         private string _explicitNullValueConfigurationUrl = default!;
 #endif
         /// <summary>
@@ -100,7 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "Configuration.Filters", n => { ConfigurationFilters = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "Configuration.FlowSid", n => { ConfigurationFlowSid = n.GetStringValue(); } },
-                { "Configuration.Method", n => { ConfigurationMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2ChannelWebhookEnumMethod>(); } },
+                { "Configuration.Method", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2ChannelWebhookEnumMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueConfigurationMethod = default; _explicitNullProperties?.Remove("Configuration.Method"); AdditionalData["Configuration.Method"] = unknown; } else { ConfigurationMethod = parsed; AdditionalData.Remove("Configuration.Method"); } } },
                 { "Configuration.RetryCount", n => { ConfigurationRetryCount = n.GetIntValue(); } },
                 { "Configuration.Triggers", n => { ConfigurationTriggers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "Configuration.Url", n => { ConfigurationUrl = n.GetStringValue(); } },

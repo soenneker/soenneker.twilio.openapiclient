@@ -17,13 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DialingPermissionsInheritance") is { } nullNodeDialingPermissionsInheritance && nullNodeDialingPermissionsInheritance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DialingPermissionsInheritance = null;
+            if (parseNode.GetChildNode("DialingPermissionsInheritance") is null) { _explicitNullValueDialingPermissionsInheritance = default!; _explicitNullProperties?.Remove("DialingPermissionsInheritance"); }
+            else if (parseNode.GetChildNode("DialingPermissionsInheritance") is { } nullNodeDialingPermissionsInheritance && nullNodeDialingPermissionsInheritance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DialingPermissionsInheritance = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>`true` for the sub-account to inherit voice dialing permissions from the Master Project; otherwise `false`.</summary>
-        public bool? DialingPermissionsInheritance { get => _explicitNullValueDialingPermissionsInheritance; set { _explicitNullValueDialingPermissionsInheritance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DialingPermissionsInheritance"); else _explicitNullProperties?.Remove("DialingPermissionsInheritance"); } }
+        public bool? DialingPermissionsInheritance { get => _explicitNullValueDialingPermissionsInheritance; set { _explicitNullValueDialingPermissionsInheritance = value; AdditionalData?.Remove("DialingPermissionsInheritance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DialingPermissionsInheritance"); else _explicitNullProperties?.Remove("DialingPermissionsInheritance"); } }
         private bool? _explicitNullValueDialingPermissionsInheritance = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1UpdateDialingPermissionsSettingsXWwwFormUrlencodedRequest"/> and sets the default values.

@@ -18,9 +18,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("calls_per_bundle") is { } nullNodeCallsPerBundle && nullNodeCallsPerBundle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallsPerBundle = null;
-            if (parseNode.GetChildNode("enabled_calls") is { } nullNodeEnabledCalls && nullNodeEnabledCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledCalls = null;
-            if (parseNode.GetChildNode("enabled_percentage") is { } nullNodeEnabledPercentage && nullNodeEnabledPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledPercentage = null;
+            if (parseNode.GetChildNode("calls_per_bundle") is null) { _explicitNullValueCallsPerBundle = default!; _explicitNullProperties?.Remove("calls_per_bundle"); }
+            else if (parseNode.GetChildNode("calls_per_bundle") is { } nullNodeCallsPerBundle && nullNodeCallsPerBundle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallsPerBundle = null;
+            if (parseNode.GetChildNode("enabled_calls") is null) { _explicitNullValueEnabledCalls = default!; _explicitNullProperties?.Remove("enabled_calls"); }
+            else if (parseNode.GetChildNode("enabled_calls") is { } nullNodeEnabledCalls && nullNodeEnabledCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledCalls = null;
+            if (parseNode.GetChildNode("enabled_percentage") is null) { _explicitNullValueEnabledPercentage = default!; _explicitNullProperties?.Remove("enabled_percentage"); }
+            else if (parseNode.GetChildNode("enabled_percentage") is { } nullNodeEnabledPercentage && nullNodeEnabledPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledPercentage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,18 +31,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Number of calls per Voice Integrity enabled Bundle Sid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrityCallsPerBundle>? CallsPerBundle { get => _explicitNullValueCallsPerBundle; set { _explicitNullValueCallsPerBundle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calls_per_bundle"); else _explicitNullProperties?.Remove("calls_per_bundle"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrityCallsPerBundle>? CallsPerBundle { get => _explicitNullValueCallsPerBundle; set { _explicitNullValueCallsPerBundle = value; AdditionalData?.Remove("calls_per_bundle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calls_per_bundle"); else _explicitNullProperties?.Remove("calls_per_bundle"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrityCallsPerBundle>? _explicitNullValueCallsPerBundle = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrityCallsPerBundle> CallsPerBundle { get => _explicitNullValueCallsPerBundle; set { _explicitNullValueCallsPerBundle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calls_per_bundle"); else _explicitNullProperties?.Remove("calls_per_bundle"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrityCallsPerBundle> CallsPerBundle { get => _explicitNullValueCallsPerBundle; set { _explicitNullValueCallsPerBundle = value; AdditionalData?.Remove("calls_per_bundle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calls_per_bundle"); else _explicitNullProperties?.Remove("calls_per_bundle"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrityCallsPerBundle> _explicitNullValueCallsPerBundle = default!;
 #endif
         /// <summary>Total number of calls with Voice Integrity enabled.</summary>
-        public int? EnabledCalls { get => _explicitNullValueEnabledCalls; set { _explicitNullValueEnabledCalls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_calls"); else _explicitNullProperties?.Remove("enabled_calls"); } }
+        public int? EnabledCalls { get => _explicitNullValueEnabledCalls; set { _explicitNullValueEnabledCalls = value; AdditionalData?.Remove("enabled_calls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_calls"); else _explicitNullProperties?.Remove("enabled_calls"); } }
         private int? _explicitNullValueEnabledCalls = default!;
         /// <summary>Percentage of calls with Voice Integrity enabled.</summary>
-        public float? EnabledPercentage { get => _explicitNullValueEnabledPercentage; set { _explicitNullValueEnabledPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_percentage"); else _explicitNullProperties?.Remove("enabled_percentage"); } }
+        public float? EnabledPercentage { get => _explicitNullValueEnabledPercentage; set { _explicitNullValueEnabledPercentage = value; AdditionalData?.Remove("enabled_percentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_percentage"); else _explicitNullProperties?.Remove("enabled_percentage"); } }
         private float? _explicitNullValueEnabledPercentage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrity"/> and sets the default values.

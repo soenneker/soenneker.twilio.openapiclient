@@ -17,13 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("SuppressEmailNotification") is { } nullNodeSuppressEmailNotification && nullNodeSuppressEmailNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuppressEmailNotification = null;
+            if (parseNode.GetChildNode("SuppressEmailNotification") is null) { _explicitNullValueSuppressEmailNotification = default!; _explicitNullProperties?.Remove("SuppressEmailNotification"); }
+            else if (parseNode.GetChildNode("SuppressEmailNotification") is { } nullNodeSuppressEmailNotification && nullNodeSuppressEmailNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuppressEmailNotification = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to suppress the email notification that Twilio sends to the owners and administrators of the account about this Auth Token change. Defaults to `false`, so Twilio sends the email. Set to `true` when rotating Auth Tokens across many subaccounts.</summary>
-        public bool? SuppressEmailNotification { get => _explicitNullValueSuppressEmailNotification; set { _explicitNullValueSuppressEmailNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SuppressEmailNotification"); else _explicitNullProperties?.Remove("SuppressEmailNotification"); } }
+        public bool? SuppressEmailNotification { get => _explicitNullValueSuppressEmailNotification; set { _explicitNullValueSuppressEmailNotification = value; AdditionalData?.Remove("SuppressEmailNotification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SuppressEmailNotification"); else _explicitNullProperties?.Remove("SuppressEmailNotification"); } }
         private bool? _explicitNullValueSuppressEmailNotification = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioAccountsV1UpdateAuthTokenPromotionXWwwFormUrlencodedRequest"/> and sets the default values.

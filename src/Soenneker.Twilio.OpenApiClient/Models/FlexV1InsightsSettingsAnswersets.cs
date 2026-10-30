@@ -17,21 +17,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("answer_set_categories") is { } nullNodeAnswerSetCategories && nullNodeAnswerSetCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerSetCategories = null;
-            if (parseNode.GetChildNode("answer_sets") is { } nullNodeAnswerSets && nullNodeAnswerSets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerSets = null;
-            if (parseNode.GetChildNode("not_applicable") is { } nullNodeNotApplicable && nullNodeNotApplicable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotApplicable = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("answer_set_categories") is null) { _explicitNullValueAnswerSetCategories = default!; _explicitNullProperties?.Remove("answer_set_categories"); }
+            else if (parseNode.GetChildNode("answer_set_categories") is { } nullNodeAnswerSetCategories && nullNodeAnswerSetCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerSetCategories = null;
+            if (parseNode.GetChildNode("answer_sets") is null) { _explicitNullValueAnswerSets = default!; _explicitNullProperties?.Remove("answer_sets"); }
+            else if (parseNode.GetChildNode("answer_sets") is { } nullNodeAnswerSets && nullNodeAnswerSets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerSets = null;
+            if (parseNode.GetChildNode("not_applicable") is null) { _explicitNullValueNotApplicable = default!; _explicitNullProperties?.Remove("not_applicable"); }
+            else if (parseNode.GetChildNode("not_applicable") is { } nullNodeNotApplicable && nullNodeNotApplicable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotApplicable = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Flex Insights resource and owns this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,41 +44,41 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The list of answer set categories</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AnswerSetCategories { get => _explicitNullValueAnswerSetCategories; set { _explicitNullValueAnswerSetCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_set_categories"); else _explicitNullProperties?.Remove("answer_set_categories"); } }
+        public UntypedNode? AnswerSetCategories { get => _explicitNullValueAnswerSetCategories; set { _explicitNullValueAnswerSetCategories = value; AdditionalData?.Remove("answer_set_categories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_set_categories"); else _explicitNullProperties?.Remove("answer_set_categories"); } }
         private UntypedNode? _explicitNullValueAnswerSetCategories = default!;
 #nullable restore
 #else
-        public UntypedNode AnswerSetCategories { get => _explicitNullValueAnswerSetCategories; set { _explicitNullValueAnswerSetCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_set_categories"); else _explicitNullProperties?.Remove("answer_set_categories"); } }
+        public UntypedNode AnswerSetCategories { get => _explicitNullValueAnswerSetCategories; set { _explicitNullValueAnswerSetCategories = value; AdditionalData?.Remove("answer_set_categories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_set_categories"); else _explicitNullProperties?.Remove("answer_set_categories"); } }
         private UntypedNode _explicitNullValueAnswerSetCategories = default!;
 #endif
         /// <summary>The lis of answer sets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AnswerSets { get => _explicitNullValueAnswerSets; set { _explicitNullValueAnswerSets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_sets"); else _explicitNullProperties?.Remove("answer_sets"); } }
+        public UntypedNode? AnswerSets { get => _explicitNullValueAnswerSets; set { _explicitNullValueAnswerSets = value; AdditionalData?.Remove("answer_sets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_sets"); else _explicitNullProperties?.Remove("answer_sets"); } }
         private UntypedNode? _explicitNullValueAnswerSets = default!;
 #nullable restore
 #else
-        public UntypedNode AnswerSets { get => _explicitNullValueAnswerSets; set { _explicitNullValueAnswerSets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_sets"); else _explicitNullProperties?.Remove("answer_sets"); } }
+        public UntypedNode AnswerSets { get => _explicitNullValueAnswerSets; set { _explicitNullValueAnswerSets = value; AdditionalData?.Remove("answer_sets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_sets"); else _explicitNullProperties?.Remove("answer_sets"); } }
         private UntypedNode _explicitNullValueAnswerSets = default!;
 #endif
         /// <summary>The details for not applicable answer set</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NotApplicable { get => _explicitNullValueNotApplicable; set { _explicitNullValueNotApplicable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_applicable"); else _explicitNullProperties?.Remove("not_applicable"); } }
+        public UntypedNode? NotApplicable { get => _explicitNullValueNotApplicable; set { _explicitNullValueNotApplicable = value; AdditionalData?.Remove("not_applicable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_applicable"); else _explicitNullProperties?.Remove("not_applicable"); } }
         private UntypedNode? _explicitNullValueNotApplicable = default!;
 #nullable restore
 #else
-        public UntypedNode NotApplicable { get => _explicitNullValueNotApplicable; set { _explicitNullValueNotApplicable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_applicable"); else _explicitNullProperties?.Remove("not_applicable"); } }
+        public UntypedNode NotApplicable { get => _explicitNullValueNotApplicable; set { _explicitNullValueNotApplicable = value; AdditionalData?.Remove("not_applicable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("not_applicable"); else _explicitNullProperties?.Remove("not_applicable"); } }
         private UntypedNode _explicitNullValueNotApplicable = default!;
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ChannelEndpointSid") is { } nullNodeChannelEndpointSid && nullNodeChannelEndpointSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelEndpointSid = null;
-            if (parseNode.GetChildNode("ChannelEndpointType") is { } nullNodeChannelEndpointType && nullNodeChannelEndpointType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelEndpointType = null;
+            if (parseNode.GetChildNode("ChannelEndpointSid") is null) { _explicitNullValueChannelEndpointSid = default!; _explicitNullProperties?.Remove("ChannelEndpointSid"); }
+            else if (parseNode.GetChildNode("ChannelEndpointSid") is { } nullNodeChannelEndpointSid && nullNodeChannelEndpointSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelEndpointSid = null;
+            if (parseNode.GetChildNode("ChannelEndpointType") is null) { _explicitNullValueChannelEndpointType = default!; _explicitNullProperties?.Remove("ChannelEndpointType"); }
+            else if (parseNode.GetChildNode("ChannelEndpointType") is { } nullNodeChannelEndpointType && nullNodeChannelEndpointType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelEndpointType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID of an channel endpoint</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelEndpointSid { get => _explicitNullValueChannelEndpointSid; set { _explicitNullValueChannelEndpointSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointSid"); else _explicitNullProperties?.Remove("ChannelEndpointSid"); } }
+        public string? ChannelEndpointSid { get => _explicitNullValueChannelEndpointSid; set { _explicitNullValueChannelEndpointSid = value; AdditionalData?.Remove("ChannelEndpointSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointSid"); else _explicitNullProperties?.Remove("ChannelEndpointSid"); } }
         private string? _explicitNullValueChannelEndpointSid = default!;
 #nullable restore
 #else
-        public string ChannelEndpointSid { get => _explicitNullValueChannelEndpointSid; set { _explicitNullValueChannelEndpointSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointSid"); else _explicitNullProperties?.Remove("ChannelEndpointSid"); } }
+        public string ChannelEndpointSid { get => _explicitNullValueChannelEndpointSid; set { _explicitNullValueChannelEndpointSid = value; AdditionalData?.Remove("ChannelEndpointSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointSid"); else _explicitNullProperties?.Remove("ChannelEndpointSid"); } }
         private string _explicitNullValueChannelEndpointSid = default!;
 #endif
         /// <summary>The type of channel endpoint. eg: phone-number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelEndpointType { get => _explicitNullValueChannelEndpointType; set { _explicitNullValueChannelEndpointType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointType"); else _explicitNullProperties?.Remove("ChannelEndpointType"); } }
+        public string? ChannelEndpointType { get => _explicitNullValueChannelEndpointType; set { _explicitNullValueChannelEndpointType = value; AdditionalData?.Remove("ChannelEndpointType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointType"); else _explicitNullProperties?.Remove("ChannelEndpointType"); } }
         private string? _explicitNullValueChannelEndpointType = default!;
 #nullable restore
 #else
-        public string ChannelEndpointType { get => _explicitNullValueChannelEndpointType; set { _explicitNullValueChannelEndpointType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointType"); else _explicitNullProperties?.Remove("ChannelEndpointType"); } }
+        public string ChannelEndpointType { get => _explicitNullValueChannelEndpointType; set { _explicitNullValueChannelEndpointType = value; AdditionalData?.Remove("ChannelEndpointType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointType"); else _explicitNullProperties?.Remove("ChannelEndpointType"); } }
         private string _explicitNullValueChannelEndpointType = default!;
 #endif
         /// <summary>

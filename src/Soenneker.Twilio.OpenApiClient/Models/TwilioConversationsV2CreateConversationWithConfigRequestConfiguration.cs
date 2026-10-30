@@ -18,10 +18,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("intelligenceConfigurationIds") is { } nullNodeIntelligenceConfigurationIds && nullNodeIntelligenceConfigurationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntelligenceConfigurationIds = null;
-            if (parseNode.GetChildNode("observationExtractionStrategyIds") is { } nullNodeObservationExtractionStrategyIds && nullNodeObservationExtractionStrategyIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObservationExtractionStrategyIds = null;
-            if (parseNode.GetChildNode("traitExtractionStrategyIds") is { } nullNodeTraitExtractionStrategyIds && nullNodeTraitExtractionStrategyIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraitExtractionStrategyIds = null;
-            if (parseNode.GetChildNode("workflows") is { } nullNodeWorkflows && nullNodeWorkflows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Workflows = null;
+            if (parseNode.GetChildNode("intelligenceConfigurationIds") is null) { _explicitNullValueIntelligenceConfigurationIds = default!; _explicitNullProperties?.Remove("intelligenceConfigurationIds"); }
+            else if (parseNode.GetChildNode("intelligenceConfigurationIds") is { } nullNodeIntelligenceConfigurationIds && nullNodeIntelligenceConfigurationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntelligenceConfigurationIds = null;
+            if (parseNode.GetChildNode("observationExtractionStrategyIds") is null) { _explicitNullValueObservationExtractionStrategyIds = default!; _explicitNullProperties?.Remove("observationExtractionStrategyIds"); }
+            else if (parseNode.GetChildNode("observationExtractionStrategyIds") is { } nullNodeObservationExtractionStrategyIds && nullNodeObservationExtractionStrategyIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObservationExtractionStrategyIds = null;
+            if (parseNode.GetChildNode("traitExtractionStrategyIds") is null) { _explicitNullValueTraitExtractionStrategyIds = default!; _explicitNullProperties?.Remove("traitExtractionStrategyIds"); }
+            else if (parseNode.GetChildNode("traitExtractionStrategyIds") is { } nullNodeTraitExtractionStrategyIds && nullNodeTraitExtractionStrategyIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraitExtractionStrategyIds = null;
+            if (parseNode.GetChildNode("workflows") is null) { _explicitNullValueWorkflows = default!; _explicitNullProperties?.Remove("workflows"); }
+            else if (parseNode.GetChildNode("workflows") is { } nullNodeWorkflows && nullNodeWorkflows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Workflows = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>A list of Conversational Intelligence configuration IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? IntelligenceConfigurationIds { get => _explicitNullValueIntelligenceConfigurationIds; set { _explicitNullValueIntelligenceConfigurationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intelligenceConfigurationIds"); else _explicitNullProperties?.Remove("intelligenceConfigurationIds"); } }
+        public List<string>? IntelligenceConfigurationIds { get => _explicitNullValueIntelligenceConfigurationIds; set { _explicitNullValueIntelligenceConfigurationIds = value; AdditionalData?.Remove("intelligenceConfigurationIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intelligenceConfigurationIds"); else _explicitNullProperties?.Remove("intelligenceConfigurationIds"); } }
         private List<string>? _explicitNullValueIntelligenceConfigurationIds = default!;
 #nullable restore
 #else
-        public List<string> IntelligenceConfigurationIds { get => _explicitNullValueIntelligenceConfigurationIds; set { _explicitNullValueIntelligenceConfigurationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intelligenceConfigurationIds"); else _explicitNullProperties?.Remove("intelligenceConfigurationIds"); } }
+        public List<string> IntelligenceConfigurationIds { get => _explicitNullValueIntelligenceConfigurationIds; set { _explicitNullValueIntelligenceConfigurationIds = value; AdditionalData?.Remove("intelligenceConfigurationIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intelligenceConfigurationIds"); else _explicitNullProperties?.Remove("intelligenceConfigurationIds"); } }
         private List<string> _explicitNullValueIntelligenceConfigurationIds = default!;
 #endif
         /// <summary>A list of Observation Extraction Strategy IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ObservationExtractionStrategyIds { get => _explicitNullValueObservationExtractionStrategyIds; set { _explicitNullValueObservationExtractionStrategyIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("observationExtractionStrategyIds"); else _explicitNullProperties?.Remove("observationExtractionStrategyIds"); } }
+        public List<string>? ObservationExtractionStrategyIds { get => _explicitNullValueObservationExtractionStrategyIds; set { _explicitNullValueObservationExtractionStrategyIds = value; AdditionalData?.Remove("observationExtractionStrategyIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("observationExtractionStrategyIds"); else _explicitNullProperties?.Remove("observationExtractionStrategyIds"); } }
         private List<string>? _explicitNullValueObservationExtractionStrategyIds = default!;
 #nullable restore
 #else
-        public List<string> ObservationExtractionStrategyIds { get => _explicitNullValueObservationExtractionStrategyIds; set { _explicitNullValueObservationExtractionStrategyIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("observationExtractionStrategyIds"); else _explicitNullProperties?.Remove("observationExtractionStrategyIds"); } }
+        public List<string> ObservationExtractionStrategyIds { get => _explicitNullValueObservationExtractionStrategyIds; set { _explicitNullValueObservationExtractionStrategyIds = value; AdditionalData?.Remove("observationExtractionStrategyIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("observationExtractionStrategyIds"); else _explicitNullProperties?.Remove("observationExtractionStrategyIds"); } }
         private List<string> _explicitNullValueObservationExtractionStrategyIds = default!;
 #endif
         /// <summary>A list of Trait Extraction Strategy IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TraitExtractionStrategyIds { get => _explicitNullValueTraitExtractionStrategyIds; set { _explicitNullValueTraitExtractionStrategyIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitExtractionStrategyIds"); else _explicitNullProperties?.Remove("traitExtractionStrategyIds"); } }
+        public List<string>? TraitExtractionStrategyIds { get => _explicitNullValueTraitExtractionStrategyIds; set { _explicitNullValueTraitExtractionStrategyIds = value; AdditionalData?.Remove("traitExtractionStrategyIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitExtractionStrategyIds"); else _explicitNullProperties?.Remove("traitExtractionStrategyIds"); } }
         private List<string>? _explicitNullValueTraitExtractionStrategyIds = default!;
 #nullable restore
 #else
-        public List<string> TraitExtractionStrategyIds { get => _explicitNullValueTraitExtractionStrategyIds; set { _explicitNullValueTraitExtractionStrategyIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitExtractionStrategyIds"); else _explicitNullProperties?.Remove("traitExtractionStrategyIds"); } }
+        public List<string> TraitExtractionStrategyIds { get => _explicitNullValueTraitExtractionStrategyIds; set { _explicitNullValueTraitExtractionStrategyIds = value; AdditionalData?.Remove("traitExtractionStrategyIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitExtractionStrategyIds"); else _explicitNullProperties?.Remove("traitExtractionStrategyIds"); } }
         private List<string> _explicitNullValueTraitExtractionStrategyIds = default!;
 #endif
         /// <summary>The Workflows to associate with this Conversation. Overrides the Configuration&apos;s own.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationWithConfigRequestConfigurationWorkflowsItem>? Workflows { get => _explicitNullValueWorkflows; set { _explicitNullValueWorkflows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflows"); else _explicitNullProperties?.Remove("workflows"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationWithConfigRequestConfigurationWorkflowsItem>? Workflows { get => _explicitNullValueWorkflows; set { _explicitNullValueWorkflows = value; AdditionalData?.Remove("workflows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflows"); else _explicitNullProperties?.Remove("workflows"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationWithConfigRequestConfigurationWorkflowsItem>? _explicitNullValueWorkflows = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationWithConfigRequestConfigurationWorkflowsItem> Workflows { get => _explicitNullValueWorkflows; set { _explicitNullValueWorkflows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflows"); else _explicitNullProperties?.Remove("workflows"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationWithConfigRequestConfigurationWorkflowsItem> Workflows { get => _explicitNullValueWorkflows; set { _explicitNullValueWorkflows = value; AdditionalData?.Remove("workflows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflows"); else _explicitNullProperties?.Remove("workflows"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateConversationWithConfigRequestConfigurationWorkflowsItem> _explicitNullValueWorkflows = default!;
 #endif
         /// <summary>

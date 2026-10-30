@@ -65,7 +65,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.Autho
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.HostedNumber.AuthorizationDocuments.Item.DependentHostedNumberOrders.DependentHostedNumberOrdersRequestBuilder.DependentHostedNumberOrdersRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://numbers.twilio.com", "/twilio_numbers_v2/v2/HostedNumber/AuthorizationDocuments/{sid}/DependentHostedNumberOrders", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

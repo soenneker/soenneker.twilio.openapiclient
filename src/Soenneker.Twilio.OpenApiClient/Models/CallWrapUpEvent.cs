@@ -17,17 +17,19 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("duration_in_seconds") is { } nullNodeDurationInSeconds && nullNodeDurationInSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationInSeconds = null;
-            if (parseNode.GetChildNode("end_status") is { } nullNodeEndStatus && nullNodeEndStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndStatus = null;
+            if (parseNode.GetChildNode("duration_in_seconds") is null) { _explicitNullValueDurationInSeconds = default!; _explicitNullProperties?.Remove("duration_in_seconds"); }
+            else if (parseNode.GetChildNode("duration_in_seconds") is { } nullNodeDurationInSeconds && nullNodeDurationInSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationInSeconds = null;
+            if (parseNode.GetChildNode("end_status") is null) { _explicitNullValueEndStatus = default!; _explicitNullProperties?.Remove("end_status"); }
+            else if (parseNode.GetChildNode("end_status") is { } nullNodeEndStatus && nullNodeEndStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Duration in seconds.</summary>
-        public int? DurationInSeconds { get => _explicitNullValueDurationInSeconds; set { _explicitNullValueDurationInSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_in_seconds"); else _explicitNullProperties?.Remove("duration_in_seconds"); } }
+        public int? DurationInSeconds { get => _explicitNullValueDurationInSeconds; set { _explicitNullValueDurationInSeconds = value; AdditionalData?.Remove("duration_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_in_seconds"); else _explicitNullProperties?.Remove("duration_in_seconds"); } }
         private int? _explicitNullValueDurationInSeconds = default!;
         /// <summary>End status of the call wrap up event.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEventEndStatus? EndStatus { get => _explicitNullValueEndStatus; set { _explicitNullValueEndStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_status"); else _explicitNullProperties?.Remove("end_status"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEventEndStatus? EndStatus { get => _explicitNullValueEndStatus; set { _explicitNullValueEndStatus = value; AdditionalData?.Remove("end_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_status"); else _explicitNullProperties?.Remove("end_status"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEventEndStatus? _explicitNullValueEndStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEvent"/> and sets the default values.
@@ -55,7 +57,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "duration_in_seconds", n => { DurationInSeconds = n.GetIntValue(); } },
-                { "end_status", n => { EndStatus = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEventEndStatus>(); } },
+                { "end_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEventEndStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEndStatus = default; _explicitNullProperties?.Remove("end_status"); AdditionalData["end_status"] = unknown; } else { EndStatus = parsed; AdditionalData.Remove("end_status"); } } },
             };
         }
         /// <summary>

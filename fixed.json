@@ -302890,7 +302890,7 @@
             "$ref": "#/components/schemas/ConversationsV2ParticipantAddress"
           },
           "content": {
-            "$ref": "#/components/schemas/TwilioConversationsV2CreateCommunicationInConversation201ResponseContent"
+            "$ref": "#/components/schemas/ConversationsV2CommunicationContent"
           },
           "channelId": {
             "type": "string",
@@ -302985,7 +302985,7 @@
             "$ref": "#/components/schemas/ConversationsV2ParticipantAddress"
           },
           "content": {
-            "$ref": "#/components/schemas/TwilioConversationsV2FetchCommunication200ResponseContent"
+            "$ref": "#/components/schemas/ConversationsV2CommunicationContent"
           },
           "channelId": {
             "type": "string",
@@ -331525,7 +331525,7 @@
             "$ref": "#/components/schemas/ConversationsV2ParticipantAddress"
           },
           "content": {
-            "$ref": "#/components/schemas/TwilioConversationsV2ListCommunicationByConversation200ResponseCommunicationsItemContent"
+            "$ref": "#/components/schemas/ConversationsV2CommunicationContent"
           },
           "channelId": {
             "type": "string",
@@ -343690,6 +343690,10 @@
             {
               "value": "ARRAY",
               "name": "Array"
+            },
+            {
+              "value": "",
+              "name": "EnumValue"
             }
           ]
         }
@@ -347096,6 +347100,10 @@
             {
               "value": "ARRAY",
               "name": "Array"
+            },
+            {
+              "value": "",
+              "name": "EnumValue"
             }
           ]
         }
@@ -347130,6 +347138,10 @@
             {
               "value": "ARRAY",
               "name": "Array"
+            },
+            {
+              "value": "",
+              "name": "EnumValue"
             }
           ]
         }
@@ -347164,6 +347176,10 @@
             {
               "value": "ARRAY",
               "name": "Array"
+            },
+            {
+              "value": "",
+              "name": "EnumValue"
             }
           ]
         }

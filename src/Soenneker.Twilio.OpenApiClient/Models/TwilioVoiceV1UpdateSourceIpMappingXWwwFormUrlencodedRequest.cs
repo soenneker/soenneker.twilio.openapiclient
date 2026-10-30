@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("SipDomainSid") is { } nullNodeSipDomainSid && nullNodeSipDomainSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SipDomainSid = null;
+            if (parseNode.GetChildNode("SipDomainSid") is null) { _explicitNullValueSipDomainSid = default!; _explicitNullProperties?.Remove("SipDomainSid"); }
+            else if (parseNode.GetChildNode("SipDomainSid") is { } nullNodeSipDomainSid && nullNodeSipDomainSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SipDomainSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID of the SIP Domain that the IP Record should be mapped to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SipDomainSid { get => _explicitNullValueSipDomainSid; set { _explicitNullValueSipDomainSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SipDomainSid"); else _explicitNullProperties?.Remove("SipDomainSid"); } }
+        public string? SipDomainSid { get => _explicitNullValueSipDomainSid; set { _explicitNullValueSipDomainSid = value; AdditionalData?.Remove("SipDomainSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SipDomainSid"); else _explicitNullProperties?.Remove("SipDomainSid"); } }
         private string? _explicitNullValueSipDomainSid = default!;
 #nullable restore
 #else
-        public string SipDomainSid { get => _explicitNullValueSipDomainSid; set { _explicitNullValueSipDomainSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SipDomainSid"); else _explicitNullProperties?.Remove("SipDomainSid"); } }
+        public string SipDomainSid { get => _explicitNullValueSipDomainSid; set { _explicitNullValueSipDomainSid = value; AdditionalData?.Remove("SipDomainSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SipDomainSid"); else _explicitNullProperties?.Remove("SipDomainSid"); } }
         private string _explicitNullValueSipDomainSid = default!;
 #endif
         /// <summary>

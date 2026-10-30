@@ -18,8 +18,10 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("identifierConfigs") is { } nullNodeIdentifierConfigs && nullNodeIdentifierConfigs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentifierConfigs = null;
-            if (parseNode.GetChildNode("matchingRules") is { } nullNodeMatchingRules && nullNodeMatchingRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchingRules = null;
+            if (parseNode.GetChildNode("identifierConfigs") is null) { _explicitNullValueIdentifierConfigs = default!; _explicitNullProperties?.Remove("identifierConfigs"); }
+            else if (parseNode.GetChildNode("identifierConfigs") is { } nullNodeIdentifierConfigs && nullNodeIdentifierConfigs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentifierConfigs = null;
+            if (parseNode.GetChildNode("matchingRules") is null) { _explicitNullValueMatchingRules = default!; _explicitNullProperties?.Remove("matchingRules"); }
+            else if (parseNode.GetChildNode("matchingRules") is { } nullNodeMatchingRules && nullNodeMatchingRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchingRules = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>List of identifier types and their resolution settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig>? IdentifierConfigs { get => _explicitNullValueIdentifierConfigs; set { _explicitNullValueIdentifierConfigs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifierConfigs"); else _explicitNullProperties?.Remove("identifierConfigs"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig>? IdentifierConfigs { get => _explicitNullValueIdentifierConfigs; set { _explicitNullValueIdentifierConfigs = value; AdditionalData?.Remove("identifierConfigs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifierConfigs"); else _explicitNullProperties?.Remove("identifierConfigs"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig>? _explicitNullValueIdentifierConfigs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig> IdentifierConfigs { get => _explicitNullValueIdentifierConfigs; set { _explicitNullValueIdentifierConfigs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifierConfigs"); else _explicitNullProperties?.Remove("identifierConfigs"); } }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig> IdentifierConfigs { get => _explicitNullValueIdentifierConfigs; set { _explicitNullValueIdentifierConfigs = value; AdditionalData?.Remove("identifierConfigs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifierConfigs"); else _explicitNullProperties?.Remove("identifierConfigs"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig> _explicitNullValueIdentifierConfigs = default!;
 #endif
         /// <summary>Priority list of identifiers to locate profiles to apply new data to, or for determining if two existing profiles should merge. Individual rules are evaluated with `OR` logic between them, meaning that satisfying any single rule will trigger a match. Each rule is a single identifier type; compound rules are not supported.Rules are evaluated in order.- If no rule matches against existing profiles, a new profile will be created. - If a rule matches to a single existing profile, the profile will be updated. - If a rule matches to multiple existing profiles, those existing profiles will be merged.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MatchingRules { get => _explicitNullValueMatchingRules; set { _explicitNullValueMatchingRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchingRules"); else _explicitNullProperties?.Remove("matchingRules"); } }
+        public List<string>? MatchingRules { get => _explicitNullValueMatchingRules; set { _explicitNullValueMatchingRules = value; AdditionalData?.Remove("matchingRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchingRules"); else _explicitNullProperties?.Remove("matchingRules"); } }
         private List<string>? _explicitNullValueMatchingRules = default!;
 #nullable restore
 #else
-        public List<string> MatchingRules { get => _explicitNullValueMatchingRules; set { _explicitNullValueMatchingRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchingRules"); else _explicitNullProperties?.Remove("matchingRules"); } }
+        public List<string> MatchingRules { get => _explicitNullValueMatchingRules; set { _explicitNullValueMatchingRules = value; AdditionalData?.Remove("matchingRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchingRules"); else _explicitNullProperties?.Remove("matchingRules"); } }
         private List<string> _explicitNullValueMatchingRules = default!;
 #endif
         /// <summary>

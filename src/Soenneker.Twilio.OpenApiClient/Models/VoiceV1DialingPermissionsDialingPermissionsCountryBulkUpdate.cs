@@ -17,23 +17,25 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("update_count") is { } nullNodeUpdateCount && nullNodeUpdateCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateCount = null;
-            if (parseNode.GetChildNode("update_request") is { } nullNodeUpdateRequest && nullNodeUpdateRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateRequest = null;
+            if (parseNode.GetChildNode("update_count") is null) { _explicitNullValueUpdateCount = default!; _explicitNullProperties?.Remove("update_count"); }
+            else if (parseNode.GetChildNode("update_count") is { } nullNodeUpdateCount && nullNodeUpdateCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateCount = null;
+            if (parseNode.GetChildNode("update_request") is null) { _explicitNullValueUpdateRequest = default!; _explicitNullProperties?.Remove("update_request"); }
+            else if (parseNode.GetChildNode("update_request") is { } nullNodeUpdateRequest && nullNodeUpdateRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of countries updated</summary>
-        public int? UpdateCount { get => _explicitNullValueUpdateCount; set { _explicitNullValueUpdateCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_count"); else _explicitNullProperties?.Remove("update_count"); } }
+        public int? UpdateCount { get => _explicitNullValueUpdateCount; set { _explicitNullValueUpdateCount = value; AdditionalData?.Remove("update_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_count"); else _explicitNullProperties?.Remove("update_count"); } }
         private int? _explicitNullValueUpdateCount = default!;
         /// <summary>A bulk update request to change voice dialing country permissions stored as a URL-encoded, JSON array of update objects. For example : `[ { &quot;iso_code&quot;: &quot;GB&quot;, &quot;low_risk_numbers_enabled&quot;: &quot;true&quot;, &quot;high_risk_special_numbers_enabled&quot;:&quot;true&quot;, &quot;high_risk_tollfraud_numbers_enabled&quot;: &quot;false&quot; } ]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdateRequest { get => _explicitNullValueUpdateRequest; set { _explicitNullValueUpdateRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_request"); else _explicitNullProperties?.Remove("update_request"); } }
+        public string? UpdateRequest { get => _explicitNullValueUpdateRequest; set { _explicitNullValueUpdateRequest = value; AdditionalData?.Remove("update_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_request"); else _explicitNullProperties?.Remove("update_request"); } }
         private string? _explicitNullValueUpdateRequest = default!;
 #nullable restore
 #else
-        public string UpdateRequest { get => _explicitNullValueUpdateRequest; set { _explicitNullValueUpdateRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_request"); else _explicitNullProperties?.Remove("update_request"); } }
+        public string UpdateRequest { get => _explicitNullValueUpdateRequest; set { _explicitNullValueUpdateRequest = value; AdditionalData?.Remove("update_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_request"); else _explicitNullProperties?.Remove("update_request"); } }
         private string _explicitNullValueUpdateRequest = default!;
 #endif
         /// <summary>

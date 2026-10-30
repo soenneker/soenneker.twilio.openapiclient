@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("usecases") is { } nullNodeUsecases && nullNodeUsecases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usecases = null;
+            if (parseNode.GetChildNode("usecases") is null) { _explicitNullValueUsecases = default!; _explicitNullProperties?.Remove("usecases"); }
+            else if (parseNode.GetChildNode("usecases") is { } nullNodeUsecases && nullNodeUsecases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usecases = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Human readable use case details (usecase, description and purpose) of Messaging Service Use Cases.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Usecases { get => _explicitNullValueUsecases; set { _explicitNullValueUsecases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usecases"); else _explicitNullProperties?.Remove("usecases"); } }
+        public UntypedNode? Usecases { get => _explicitNullValueUsecases; set { _explicitNullValueUsecases = value; AdditionalData?.Remove("usecases"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usecases"); else _explicitNullProperties?.Remove("usecases"); } }
         private UntypedNode? _explicitNullValueUsecases = default!;
 #nullable restore
 #else
-        public UntypedNode Usecases { get => _explicitNullValueUsecases; set { _explicitNullValueUsecases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usecases"); else _explicitNullProperties?.Remove("usecases"); } }
+        public UntypedNode Usecases { get => _explicitNullValueUsecases; set { _explicitNullValueUsecases = value; AdditionalData?.Remove("usecases"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usecases"); else _explicitNullProperties?.Remove("usecases"); } }
         private UntypedNode _explicitNullValueUsecases = default!;
 #endif
         /// <summary>

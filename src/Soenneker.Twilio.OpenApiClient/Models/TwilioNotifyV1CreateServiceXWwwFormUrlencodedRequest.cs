@@ -17,20 +17,34 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AlexaSkillId") is { } nullNodeAlexaSkillId && nullNodeAlexaSkillId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlexaSkillId = null;
-            if (parseNode.GetChildNode("ApnCredentialSid") is { } nullNodeApnCredentialSid && nullNodeApnCredentialSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApnCredentialSid = null;
-            if (parseNode.GetChildNode("DefaultAlexaNotificationProtocolVersion") is { } nullNodeDefaultAlexaNotificationProtocolVersion && nullNodeDefaultAlexaNotificationProtocolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAlexaNotificationProtocolVersion = null;
-            if (parseNode.GetChildNode("DefaultApnNotificationProtocolVersion") is { } nullNodeDefaultApnNotificationProtocolVersion && nullNodeDefaultApnNotificationProtocolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultApnNotificationProtocolVersion = null;
-            if (parseNode.GetChildNode("DefaultFcmNotificationProtocolVersion") is { } nullNodeDefaultFcmNotificationProtocolVersion && nullNodeDefaultFcmNotificationProtocolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultFcmNotificationProtocolVersion = null;
-            if (parseNode.GetChildNode("DefaultGcmNotificationProtocolVersion") is { } nullNodeDefaultGcmNotificationProtocolVersion && nullNodeDefaultGcmNotificationProtocolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultGcmNotificationProtocolVersion = null;
-            if (parseNode.GetChildNode("DeliveryCallbackEnabled") is { } nullNodeDeliveryCallbackEnabled && nullNodeDeliveryCallbackEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryCallbackEnabled = null;
-            if (parseNode.GetChildNode("DeliveryCallbackUrl") is { } nullNodeDeliveryCallbackUrl && nullNodeDeliveryCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryCallbackUrl = null;
-            if (parseNode.GetChildNode("FacebookMessengerPageId") is { } nullNodeFacebookMessengerPageId && nullNodeFacebookMessengerPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookMessengerPageId = null;
-            if (parseNode.GetChildNode("FcmCredentialSid") is { } nullNodeFcmCredentialSid && nullNodeFcmCredentialSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FcmCredentialSid = null;
-            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("GcmCredentialSid") is { } nullNodeGcmCredentialSid && nullNodeGcmCredentialSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcmCredentialSid = null;
-            if (parseNode.GetChildNode("LogEnabled") is { } nullNodeLogEnabled && nullNodeLogEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogEnabled = null;
-            if (parseNode.GetChildNode("MessagingServiceSid") is { } nullNodeMessagingServiceSid && nullNodeMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingServiceSid = null;
+            if (parseNode.GetChildNode("AlexaSkillId") is null) { _explicitNullValueAlexaSkillId = default!; _explicitNullProperties?.Remove("AlexaSkillId"); }
+            else if (parseNode.GetChildNode("AlexaSkillId") is { } nullNodeAlexaSkillId && nullNodeAlexaSkillId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlexaSkillId = null;
+            if (parseNode.GetChildNode("ApnCredentialSid") is null) { _explicitNullValueApnCredentialSid = default!; _explicitNullProperties?.Remove("ApnCredentialSid"); }
+            else if (parseNode.GetChildNode("ApnCredentialSid") is { } nullNodeApnCredentialSid && nullNodeApnCredentialSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApnCredentialSid = null;
+            if (parseNode.GetChildNode("DefaultAlexaNotificationProtocolVersion") is null) { _explicitNullValueDefaultAlexaNotificationProtocolVersion = default!; _explicitNullProperties?.Remove("DefaultAlexaNotificationProtocolVersion"); }
+            else if (parseNode.GetChildNode("DefaultAlexaNotificationProtocolVersion") is { } nullNodeDefaultAlexaNotificationProtocolVersion && nullNodeDefaultAlexaNotificationProtocolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAlexaNotificationProtocolVersion = null;
+            if (parseNode.GetChildNode("DefaultApnNotificationProtocolVersion") is null) { _explicitNullValueDefaultApnNotificationProtocolVersion = default!; _explicitNullProperties?.Remove("DefaultApnNotificationProtocolVersion"); }
+            else if (parseNode.GetChildNode("DefaultApnNotificationProtocolVersion") is { } nullNodeDefaultApnNotificationProtocolVersion && nullNodeDefaultApnNotificationProtocolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultApnNotificationProtocolVersion = null;
+            if (parseNode.GetChildNode("DefaultFcmNotificationProtocolVersion") is null) { _explicitNullValueDefaultFcmNotificationProtocolVersion = default!; _explicitNullProperties?.Remove("DefaultFcmNotificationProtocolVersion"); }
+            else if (parseNode.GetChildNode("DefaultFcmNotificationProtocolVersion") is { } nullNodeDefaultFcmNotificationProtocolVersion && nullNodeDefaultFcmNotificationProtocolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultFcmNotificationProtocolVersion = null;
+            if (parseNode.GetChildNode("DefaultGcmNotificationProtocolVersion") is null) { _explicitNullValueDefaultGcmNotificationProtocolVersion = default!; _explicitNullProperties?.Remove("DefaultGcmNotificationProtocolVersion"); }
+            else if (parseNode.GetChildNode("DefaultGcmNotificationProtocolVersion") is { } nullNodeDefaultGcmNotificationProtocolVersion && nullNodeDefaultGcmNotificationProtocolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultGcmNotificationProtocolVersion = null;
+            if (parseNode.GetChildNode("DeliveryCallbackEnabled") is null) { _explicitNullValueDeliveryCallbackEnabled = default!; _explicitNullProperties?.Remove("DeliveryCallbackEnabled"); }
+            else if (parseNode.GetChildNode("DeliveryCallbackEnabled") is { } nullNodeDeliveryCallbackEnabled && nullNodeDeliveryCallbackEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryCallbackEnabled = null;
+            if (parseNode.GetChildNode("DeliveryCallbackUrl") is null) { _explicitNullValueDeliveryCallbackUrl = default!; _explicitNullProperties?.Remove("DeliveryCallbackUrl"); }
+            else if (parseNode.GetChildNode("DeliveryCallbackUrl") is { } nullNodeDeliveryCallbackUrl && nullNodeDeliveryCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryCallbackUrl = null;
+            if (parseNode.GetChildNode("FacebookMessengerPageId") is null) { _explicitNullValueFacebookMessengerPageId = default!; _explicitNullProperties?.Remove("FacebookMessengerPageId"); }
+            else if (parseNode.GetChildNode("FacebookMessengerPageId") is { } nullNodeFacebookMessengerPageId && nullNodeFacebookMessengerPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookMessengerPageId = null;
+            if (parseNode.GetChildNode("FcmCredentialSid") is null) { _explicitNullValueFcmCredentialSid = default!; _explicitNullProperties?.Remove("FcmCredentialSid"); }
+            else if (parseNode.GetChildNode("FcmCredentialSid") is { } nullNodeFcmCredentialSid && nullNodeFcmCredentialSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FcmCredentialSid = null;
+            if (parseNode.GetChildNode("FriendlyName") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("FriendlyName"); }
+            else if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("GcmCredentialSid") is null) { _explicitNullValueGcmCredentialSid = default!; _explicitNullProperties?.Remove("GcmCredentialSid"); }
+            else if (parseNode.GetChildNode("GcmCredentialSid") is { } nullNodeGcmCredentialSid && nullNodeGcmCredentialSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcmCredentialSid = null;
+            if (parseNode.GetChildNode("LogEnabled") is null) { _explicitNullValueLogEnabled = default!; _explicitNullProperties?.Remove("LogEnabled"); }
+            else if (parseNode.GetChildNode("LogEnabled") is { } nullNodeLogEnabled && nullNodeLogEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogEnabled = null;
+            if (parseNode.GetChildNode("MessagingServiceSid") is null) { _explicitNullValueMessagingServiceSid = default!; _explicitNullProperties?.Remove("MessagingServiceSid"); }
+            else if (parseNode.GetChildNode("MessagingServiceSid") is { } nullNodeMessagingServiceSid && nullNodeMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingServiceSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,127 +52,127 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AlexaSkillId { get => _explicitNullValueAlexaSkillId; set { _explicitNullValueAlexaSkillId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlexaSkillId"); else _explicitNullProperties?.Remove("AlexaSkillId"); } }
+        public string? AlexaSkillId { get => _explicitNullValueAlexaSkillId; set { _explicitNullValueAlexaSkillId = value; AdditionalData?.Remove("AlexaSkillId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlexaSkillId"); else _explicitNullProperties?.Remove("AlexaSkillId"); } }
         private string? _explicitNullValueAlexaSkillId = default!;
 #nullable restore
 #else
-        public string AlexaSkillId { get => _explicitNullValueAlexaSkillId; set { _explicitNullValueAlexaSkillId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlexaSkillId"); else _explicitNullProperties?.Remove("AlexaSkillId"); } }
+        public string AlexaSkillId { get => _explicitNullValueAlexaSkillId; set { _explicitNullValueAlexaSkillId = value; AdditionalData?.Remove("AlexaSkillId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlexaSkillId"); else _explicitNullProperties?.Remove("AlexaSkillId"); } }
         private string _explicitNullValueAlexaSkillId = default!;
 #endif
         /// <summary>The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for APN Bindings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApnCredentialSid { get => _explicitNullValueApnCredentialSid; set { _explicitNullValueApnCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ApnCredentialSid"); else _explicitNullProperties?.Remove("ApnCredentialSid"); } }
+        public string? ApnCredentialSid { get => _explicitNullValueApnCredentialSid; set { _explicitNullValueApnCredentialSid = value; AdditionalData?.Remove("ApnCredentialSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ApnCredentialSid"); else _explicitNullProperties?.Remove("ApnCredentialSid"); } }
         private string? _explicitNullValueApnCredentialSid = default!;
 #nullable restore
 #else
-        public string ApnCredentialSid { get => _explicitNullValueApnCredentialSid; set { _explicitNullValueApnCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ApnCredentialSid"); else _explicitNullProperties?.Remove("ApnCredentialSid"); } }
+        public string ApnCredentialSid { get => _explicitNullValueApnCredentialSid; set { _explicitNullValueApnCredentialSid = value; AdditionalData?.Remove("ApnCredentialSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ApnCredentialSid"); else _explicitNullProperties?.Remove("ApnCredentialSid"); } }
         private string _explicitNullValueApnCredentialSid = default!;
 #endif
         /// <summary>Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultAlexaNotificationProtocolVersion { get => _explicitNullValueDefaultAlexaNotificationProtocolVersion; set { _explicitNullValueDefaultAlexaNotificationProtocolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultAlexaNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultAlexaNotificationProtocolVersion"); } }
+        public string? DefaultAlexaNotificationProtocolVersion { get => _explicitNullValueDefaultAlexaNotificationProtocolVersion; set { _explicitNullValueDefaultAlexaNotificationProtocolVersion = value; AdditionalData?.Remove("DefaultAlexaNotificationProtocolVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultAlexaNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultAlexaNotificationProtocolVersion"); } }
         private string? _explicitNullValueDefaultAlexaNotificationProtocolVersion = default!;
 #nullable restore
 #else
-        public string DefaultAlexaNotificationProtocolVersion { get => _explicitNullValueDefaultAlexaNotificationProtocolVersion; set { _explicitNullValueDefaultAlexaNotificationProtocolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultAlexaNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultAlexaNotificationProtocolVersion"); } }
+        public string DefaultAlexaNotificationProtocolVersion { get => _explicitNullValueDefaultAlexaNotificationProtocolVersion; set { _explicitNullValueDefaultAlexaNotificationProtocolVersion = value; AdditionalData?.Remove("DefaultAlexaNotificationProtocolVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultAlexaNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultAlexaNotificationProtocolVersion"); } }
         private string _explicitNullValueDefaultAlexaNotificationProtocolVersion = default!;
 #endif
         /// <summary>The protocol version to use for sending APNS notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultApnNotificationProtocolVersion { get => _explicitNullValueDefaultApnNotificationProtocolVersion; set { _explicitNullValueDefaultApnNotificationProtocolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultApnNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultApnNotificationProtocolVersion"); } }
+        public string? DefaultApnNotificationProtocolVersion { get => _explicitNullValueDefaultApnNotificationProtocolVersion; set { _explicitNullValueDefaultApnNotificationProtocolVersion = value; AdditionalData?.Remove("DefaultApnNotificationProtocolVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultApnNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultApnNotificationProtocolVersion"); } }
         private string? _explicitNullValueDefaultApnNotificationProtocolVersion = default!;
 #nullable restore
 #else
-        public string DefaultApnNotificationProtocolVersion { get => _explicitNullValueDefaultApnNotificationProtocolVersion; set { _explicitNullValueDefaultApnNotificationProtocolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultApnNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultApnNotificationProtocolVersion"); } }
+        public string DefaultApnNotificationProtocolVersion { get => _explicitNullValueDefaultApnNotificationProtocolVersion; set { _explicitNullValueDefaultApnNotificationProtocolVersion = value; AdditionalData?.Remove("DefaultApnNotificationProtocolVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultApnNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultApnNotificationProtocolVersion"); } }
         private string _explicitNullValueDefaultApnNotificationProtocolVersion = default!;
 #endif
         /// <summary>The protocol version to use for sending FCM notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultFcmNotificationProtocolVersion { get => _explicitNullValueDefaultFcmNotificationProtocolVersion; set { _explicitNullValueDefaultFcmNotificationProtocolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultFcmNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultFcmNotificationProtocolVersion"); } }
+        public string? DefaultFcmNotificationProtocolVersion { get => _explicitNullValueDefaultFcmNotificationProtocolVersion; set { _explicitNullValueDefaultFcmNotificationProtocolVersion = value; AdditionalData?.Remove("DefaultFcmNotificationProtocolVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultFcmNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultFcmNotificationProtocolVersion"); } }
         private string? _explicitNullValueDefaultFcmNotificationProtocolVersion = default!;
 #nullable restore
 #else
-        public string DefaultFcmNotificationProtocolVersion { get => _explicitNullValueDefaultFcmNotificationProtocolVersion; set { _explicitNullValueDefaultFcmNotificationProtocolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultFcmNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultFcmNotificationProtocolVersion"); } }
+        public string DefaultFcmNotificationProtocolVersion { get => _explicitNullValueDefaultFcmNotificationProtocolVersion; set { _explicitNullValueDefaultFcmNotificationProtocolVersion = value; AdditionalData?.Remove("DefaultFcmNotificationProtocolVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultFcmNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultFcmNotificationProtocolVersion"); } }
         private string _explicitNullValueDefaultFcmNotificationProtocolVersion = default!;
 #endif
         /// <summary>The protocol version to use for sending GCM notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultGcmNotificationProtocolVersion { get => _explicitNullValueDefaultGcmNotificationProtocolVersion; set { _explicitNullValueDefaultGcmNotificationProtocolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultGcmNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultGcmNotificationProtocolVersion"); } }
+        public string? DefaultGcmNotificationProtocolVersion { get => _explicitNullValueDefaultGcmNotificationProtocolVersion; set { _explicitNullValueDefaultGcmNotificationProtocolVersion = value; AdditionalData?.Remove("DefaultGcmNotificationProtocolVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultGcmNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultGcmNotificationProtocolVersion"); } }
         private string? _explicitNullValueDefaultGcmNotificationProtocolVersion = default!;
 #nullable restore
 #else
-        public string DefaultGcmNotificationProtocolVersion { get => _explicitNullValueDefaultGcmNotificationProtocolVersion; set { _explicitNullValueDefaultGcmNotificationProtocolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultGcmNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultGcmNotificationProtocolVersion"); } }
+        public string DefaultGcmNotificationProtocolVersion { get => _explicitNullValueDefaultGcmNotificationProtocolVersion; set { _explicitNullValueDefaultGcmNotificationProtocolVersion = value; AdditionalData?.Remove("DefaultGcmNotificationProtocolVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultGcmNotificationProtocolVersion"); else _explicitNullProperties?.Remove("DefaultGcmNotificationProtocolVersion"); } }
         private string _explicitNullValueDefaultGcmNotificationProtocolVersion = default!;
 #endif
         /// <summary>Callback configuration that enables delivery callbacks, default false</summary>
-        public bool? DeliveryCallbackEnabled { get => _explicitNullValueDeliveryCallbackEnabled; set { _explicitNullValueDeliveryCallbackEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryCallbackEnabled"); else _explicitNullProperties?.Remove("DeliveryCallbackEnabled"); } }
+        public bool? DeliveryCallbackEnabled { get => _explicitNullValueDeliveryCallbackEnabled; set { _explicitNullValueDeliveryCallbackEnabled = value; AdditionalData?.Remove("DeliveryCallbackEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryCallbackEnabled"); else _explicitNullProperties?.Remove("DeliveryCallbackEnabled"); } }
         private bool? _explicitNullValueDeliveryCallbackEnabled = default!;
         /// <summary>URL to send delivery status callback.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeliveryCallbackUrl { get => _explicitNullValueDeliveryCallbackUrl; set { _explicitNullValueDeliveryCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryCallbackUrl"); else _explicitNullProperties?.Remove("DeliveryCallbackUrl"); } }
+        public string? DeliveryCallbackUrl { get => _explicitNullValueDeliveryCallbackUrl; set { _explicitNullValueDeliveryCallbackUrl = value; AdditionalData?.Remove("DeliveryCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryCallbackUrl"); else _explicitNullProperties?.Remove("DeliveryCallbackUrl"); } }
         private string? _explicitNullValueDeliveryCallbackUrl = default!;
 #nullable restore
 #else
-        public string DeliveryCallbackUrl { get => _explicitNullValueDeliveryCallbackUrl; set { _explicitNullValueDeliveryCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryCallbackUrl"); else _explicitNullProperties?.Remove("DeliveryCallbackUrl"); } }
+        public string DeliveryCallbackUrl { get => _explicitNullValueDeliveryCallbackUrl; set { _explicitNullValueDeliveryCallbackUrl = value; AdditionalData?.Remove("DeliveryCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryCallbackUrl"); else _explicitNullProperties?.Remove("DeliveryCallbackUrl"); } }
         private string _explicitNullValueDeliveryCallbackUrl = default!;
 #endif
         /// <summary>Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FacebookMessengerPageId { get => _explicitNullValueFacebookMessengerPageId; set { _explicitNullValueFacebookMessengerPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacebookMessengerPageId"); else _explicitNullProperties?.Remove("FacebookMessengerPageId"); } }
+        public string? FacebookMessengerPageId { get => _explicitNullValueFacebookMessengerPageId; set { _explicitNullValueFacebookMessengerPageId = value; AdditionalData?.Remove("FacebookMessengerPageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacebookMessengerPageId"); else _explicitNullProperties?.Remove("FacebookMessengerPageId"); } }
         private string? _explicitNullValueFacebookMessengerPageId = default!;
 #nullable restore
 #else
-        public string FacebookMessengerPageId { get => _explicitNullValueFacebookMessengerPageId; set { _explicitNullValueFacebookMessengerPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacebookMessengerPageId"); else _explicitNullProperties?.Remove("FacebookMessengerPageId"); } }
+        public string FacebookMessengerPageId { get => _explicitNullValueFacebookMessengerPageId; set { _explicitNullValueFacebookMessengerPageId = value; AdditionalData?.Remove("FacebookMessengerPageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacebookMessengerPageId"); else _explicitNullProperties?.Remove("FacebookMessengerPageId"); } }
         private string _explicitNullValueFacebookMessengerPageId = default!;
 #endif
         /// <summary>The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for FCM Bindings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FcmCredentialSid { get => _explicitNullValueFcmCredentialSid; set { _explicitNullValueFcmCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FcmCredentialSid"); else _explicitNullProperties?.Remove("FcmCredentialSid"); } }
+        public string? FcmCredentialSid { get => _explicitNullValueFcmCredentialSid; set { _explicitNullValueFcmCredentialSid = value; AdditionalData?.Remove("FcmCredentialSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FcmCredentialSid"); else _explicitNullProperties?.Remove("FcmCredentialSid"); } }
         private string? _explicitNullValueFcmCredentialSid = default!;
 #nullable restore
 #else
-        public string FcmCredentialSid { get => _explicitNullValueFcmCredentialSid; set { _explicitNullValueFcmCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FcmCredentialSid"); else _explicitNullProperties?.Remove("FcmCredentialSid"); } }
+        public string FcmCredentialSid { get => _explicitNullValueFcmCredentialSid; set { _explicitNullValueFcmCredentialSid = value; AdditionalData?.Remove("FcmCredentialSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FcmCredentialSid"); else _explicitNullProperties?.Remove("FcmCredentialSid"); } }
         private string _explicitNullValueFcmCredentialSid = default!;
 #endif
         /// <summary>A descriptive string that you create to describe the resource. It can be up to 64 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for GCM Bindings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GcmCredentialSid { get => _explicitNullValueGcmCredentialSid; set { _explicitNullValueGcmCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GcmCredentialSid"); else _explicitNullProperties?.Remove("GcmCredentialSid"); } }
+        public string? GcmCredentialSid { get => _explicitNullValueGcmCredentialSid; set { _explicitNullValueGcmCredentialSid = value; AdditionalData?.Remove("GcmCredentialSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GcmCredentialSid"); else _explicitNullProperties?.Remove("GcmCredentialSid"); } }
         private string? _explicitNullValueGcmCredentialSid = default!;
 #nullable restore
 #else
-        public string GcmCredentialSid { get => _explicitNullValueGcmCredentialSid; set { _explicitNullValueGcmCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GcmCredentialSid"); else _explicitNullProperties?.Remove("GcmCredentialSid"); } }
+        public string GcmCredentialSid { get => _explicitNullValueGcmCredentialSid; set { _explicitNullValueGcmCredentialSid = value; AdditionalData?.Remove("GcmCredentialSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GcmCredentialSid"); else _explicitNullProperties?.Remove("GcmCredentialSid"); } }
         private string _explicitNullValueGcmCredentialSid = default!;
 #endif
         /// <summary>Whether to log notifications. Can be: `true` or `false` and the default is `true`.</summary>
-        public bool? LogEnabled { get => _explicitNullValueLogEnabled; set { _explicitNullValueLogEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogEnabled"); else _explicitNullProperties?.Remove("LogEnabled"); } }
+        public bool? LogEnabled { get => _explicitNullValueLogEnabled; set { _explicitNullValueLogEnabled = value; AdditionalData?.Remove("LogEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogEnabled"); else _explicitNullProperties?.Remove("LogEnabled"); } }
         private bool? _explicitNullValueLogEnabled = default!;
         /// <summary>The SID of the [Messaging Service](https://www.twilio.com/docs/sms/quickstart#messaging-services) to use for SMS Bindings. This parameter must be set in order to send SMS notifications.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
+        public string? MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; AdditionalData?.Remove("MessagingServiceSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
         private string? _explicitNullValueMessagingServiceSid = default!;
 #nullable restore
 #else
-        public string MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
+        public string MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; AdditionalData?.Remove("MessagingServiceSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
         private string _explicitNullValueMessagingServiceSid = default!;
 #endif
         /// <summary>

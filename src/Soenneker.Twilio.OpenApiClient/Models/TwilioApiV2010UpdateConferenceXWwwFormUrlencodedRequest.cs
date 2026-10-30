@@ -17,28 +17,31 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AnnounceMethod") is { } nullNodeAnnounceMethod && nullNodeAnnounceMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnnounceMethod = null;
-            if (parseNode.GetChildNode("AnnounceUrl") is { } nullNodeAnnounceUrl && nullNodeAnnounceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnnounceUrl = null;
-            if (parseNode.GetChildNode("Status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("AnnounceMethod") is null) { _explicitNullValueAnnounceMethod = default!; _explicitNullProperties?.Remove("AnnounceMethod"); }
+            else if (parseNode.GetChildNode("AnnounceMethod") is { } nullNodeAnnounceMethod && nullNodeAnnounceMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnnounceMethod = null;
+            if (parseNode.GetChildNode("AnnounceUrl") is null) { _explicitNullValueAnnounceUrl = default!; _explicitNullProperties?.Remove("AnnounceUrl"); }
+            else if (parseNode.GetChildNode("AnnounceUrl") is { } nullNodeAnnounceUrl && nullNodeAnnounceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnnounceUrl = null;
+            if (parseNode.GetChildNode("Status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("Status"); }
+            else if (parseNode.GetChildNode("Status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The HTTP method used to call `announce_url`. Can be: `GET` or `POST` and the default is `POST`</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConferenceXWwwFormUrlencodedRequestAnnounceMethod? AnnounceMethod { get => _explicitNullValueAnnounceMethod; set { _explicitNullValueAnnounceMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnnounceMethod"); else _explicitNullProperties?.Remove("AnnounceMethod"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConferenceXWwwFormUrlencodedRequestAnnounceMethod? AnnounceMethod { get => _explicitNullValueAnnounceMethod; set { _explicitNullValueAnnounceMethod = value; AdditionalData?.Remove("AnnounceMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnnounceMethod"); else _explicitNullProperties?.Remove("AnnounceMethod"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConferenceXWwwFormUrlencodedRequestAnnounceMethod? _explicitNullValueAnnounceMethod = default!;
         /// <summary>The URL we should call to announce something into the conference. The URL may return an MP3 file, a WAV file, or a TwiML document that contains `&lt;Play&gt;`, `&lt;Say&gt;`, `&lt;Pause&gt;`, or `&lt;Redirect&gt;` verbs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AnnounceUrl { get => _explicitNullValueAnnounceUrl; set { _explicitNullValueAnnounceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnnounceUrl"); else _explicitNullProperties?.Remove("AnnounceUrl"); } }
+        public string? AnnounceUrl { get => _explicitNullValueAnnounceUrl; set { _explicitNullValueAnnounceUrl = value; AdditionalData?.Remove("AnnounceUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnnounceUrl"); else _explicitNullProperties?.Remove("AnnounceUrl"); } }
         private string? _explicitNullValueAnnounceUrl = default!;
 #nullable restore
 #else
-        public string AnnounceUrl { get => _explicitNullValueAnnounceUrl; set { _explicitNullValueAnnounceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnnounceUrl"); else _explicitNullProperties?.Remove("AnnounceUrl"); } }
+        public string AnnounceUrl { get => _explicitNullValueAnnounceUrl; set { _explicitNullValueAnnounceUrl = value; AdditionalData?.Remove("AnnounceUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnnounceUrl"); else _explicitNullProperties?.Remove("AnnounceUrl"); } }
         private string _explicitNullValueAnnounceUrl = default!;
 #endif
         /// <summary>The Status property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumUpdateStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Status"); else _explicitNullProperties?.Remove("Status"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumUpdateStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("Status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Status"); else _explicitNullProperties?.Remove("Status"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumUpdateStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConferenceXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -65,9 +68,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "AnnounceMethod", n => { AnnounceMethod = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConferenceXWwwFormUrlencodedRequestAnnounceMethod>(); } },
+                { "AnnounceMethod", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateConferenceXWwwFormUrlencodedRequestAnnounceMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAnnounceMethod = default; _explicitNullProperties?.Remove("AnnounceMethod"); AdditionalData["AnnounceMethod"] = unknown; } else { AnnounceMethod = parsed; AdditionalData.Remove("AnnounceMethod"); } } },
                 { "AnnounceUrl", n => { AnnounceUrl = n.GetStringValue(); } },
-                { "Status", n => { Status = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumUpdateStatus>(); } },
+                { "Status", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConferenceEnumUpdateStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("Status"); AdditionalData["Status"] = unknown; } else { Status = parsed; AdditionalData.Remove("Status"); } } },
             };
         }
         /// <summary>

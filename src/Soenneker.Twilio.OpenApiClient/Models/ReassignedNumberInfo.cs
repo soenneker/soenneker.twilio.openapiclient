@@ -17,9 +17,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
-            if (parseNode.GetChildNode("is_number_reassigned") is { } nullNodeIsNumberReassigned && nullNodeIsNumberReassigned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsNumberReassigned = null;
-            if (parseNode.GetChildNode("last_verified_date") is { } nullNodeLastVerifiedDate && nullNodeLastVerifiedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastVerifiedDate = null;
+            if (parseNode.GetChildNode("error_code") is null) { _explicitNullValueErrorCode = default!; _explicitNullProperties?.Remove("error_code"); }
+            else if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
+            if (parseNode.GetChildNode("is_number_reassigned") is null) { _explicitNullValueIsNumberReassigned = default!; _explicitNullProperties?.Remove("is_number_reassigned"); }
+            else if (parseNode.GetChildNode("is_number_reassigned") is { } nullNodeIsNumberReassigned && nullNodeIsNumberReassigned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsNumberReassigned = null;
+            if (parseNode.GetChildNode("last_verified_date") is null) { _explicitNullValueLastVerifiedDate = default!; _explicitNullProperties?.Remove("last_verified_date"); }
+            else if (parseNode.GetChildNode("last_verified_date") is { } nullNodeLastVerifiedDate && nullNodeLastVerifiedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastVerifiedDate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The error_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
+        public string? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; AdditionalData?.Remove("error_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
         private string? _explicitNullValueErrorCode = default!;
 #nullable restore
 #else
-        public string ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
+        public string ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; AdditionalData?.Remove("error_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
         private string _explicitNullValueErrorCode = default!;
 #endif
         /// <summary>The is_number_reassigned property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsNumberReassigned { get => _explicitNullValueIsNumberReassigned; set { _explicitNullValueIsNumberReassigned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_number_reassigned"); else _explicitNullProperties?.Remove("is_number_reassigned"); } }
+        public string? IsNumberReassigned { get => _explicitNullValueIsNumberReassigned; set { _explicitNullValueIsNumberReassigned = value; AdditionalData?.Remove("is_number_reassigned"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_number_reassigned"); else _explicitNullProperties?.Remove("is_number_reassigned"); } }
         private string? _explicitNullValueIsNumberReassigned = default!;
 #nullable restore
 #else
-        public string IsNumberReassigned { get => _explicitNullValueIsNumberReassigned; set { _explicitNullValueIsNumberReassigned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_number_reassigned"); else _explicitNullProperties?.Remove("is_number_reassigned"); } }
+        public string IsNumberReassigned { get => _explicitNullValueIsNumberReassigned; set { _explicitNullValueIsNumberReassigned = value; AdditionalData?.Remove("is_number_reassigned"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_number_reassigned"); else _explicitNullProperties?.Remove("is_number_reassigned"); } }
         private string _explicitNullValueIsNumberReassigned = default!;
 #endif
         /// <summary>The last_verified_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastVerifiedDate { get => _explicitNullValueLastVerifiedDate; set { _explicitNullValueLastVerifiedDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verified_date"); else _explicitNullProperties?.Remove("last_verified_date"); } }
+        public string? LastVerifiedDate { get => _explicitNullValueLastVerifiedDate; set { _explicitNullValueLastVerifiedDate = value; AdditionalData?.Remove("last_verified_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verified_date"); else _explicitNullProperties?.Remove("last_verified_date"); } }
         private string? _explicitNullValueLastVerifiedDate = default!;
 #nullable restore
 #else
-        public string LastVerifiedDate { get => _explicitNullValueLastVerifiedDate; set { _explicitNullValueLastVerifiedDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verified_date"); else _explicitNullProperties?.Remove("last_verified_date"); } }
+        public string LastVerifiedDate { get => _explicitNullValueLastVerifiedDate; set { _explicitNullValueLastVerifiedDate = value; AdditionalData?.Remove("last_verified_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_verified_date"); else _explicitNullProperties?.Remove("last_verified_date"); } }
         private string _explicitNullValueLastVerifiedDate = default!;
 #endif
         /// <summary>

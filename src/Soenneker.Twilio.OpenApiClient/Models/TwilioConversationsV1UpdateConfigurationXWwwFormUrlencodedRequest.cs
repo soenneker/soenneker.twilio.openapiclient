@@ -17,10 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DefaultChatServiceSid") is { } nullNodeDefaultChatServiceSid && nullNodeDefaultChatServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultChatServiceSid = null;
-            if (parseNode.GetChildNode("DefaultClosedTimer") is { } nullNodeDefaultClosedTimer && nullNodeDefaultClosedTimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultClosedTimer = null;
-            if (parseNode.GetChildNode("DefaultInactiveTimer") is { } nullNodeDefaultInactiveTimer && nullNodeDefaultInactiveTimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultInactiveTimer = null;
-            if (parseNode.GetChildNode("DefaultMessagingServiceSid") is { } nullNodeDefaultMessagingServiceSid && nullNodeDefaultMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultMessagingServiceSid = null;
+            if (parseNode.GetChildNode("DefaultChatServiceSid") is null) { _explicitNullValueDefaultChatServiceSid = default!; _explicitNullProperties?.Remove("DefaultChatServiceSid"); }
+            else if (parseNode.GetChildNode("DefaultChatServiceSid") is { } nullNodeDefaultChatServiceSid && nullNodeDefaultChatServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultChatServiceSid = null;
+            if (parseNode.GetChildNode("DefaultClosedTimer") is null) { _explicitNullValueDefaultClosedTimer = default!; _explicitNullProperties?.Remove("DefaultClosedTimer"); }
+            else if (parseNode.GetChildNode("DefaultClosedTimer") is { } nullNodeDefaultClosedTimer && nullNodeDefaultClosedTimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultClosedTimer = null;
+            if (parseNode.GetChildNode("DefaultInactiveTimer") is null) { _explicitNullValueDefaultInactiveTimer = default!; _explicitNullProperties?.Remove("DefaultInactiveTimer"); }
+            else if (parseNode.GetChildNode("DefaultInactiveTimer") is { } nullNodeDefaultInactiveTimer && nullNodeDefaultInactiveTimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultInactiveTimer = null;
+            if (parseNode.GetChildNode("DefaultMessagingServiceSid") is null) { _explicitNullValueDefaultMessagingServiceSid = default!; _explicitNullProperties?.Remove("DefaultMessagingServiceSid"); }
+            else if (parseNode.GetChildNode("DefaultMessagingServiceSid") is { } nullNodeDefaultMessagingServiceSid && nullNodeDefaultMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultMessagingServiceSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The SID of the default [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to use when creating a conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultChatServiceSid { get => _explicitNullValueDefaultChatServiceSid; set { _explicitNullValueDefaultChatServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChatServiceSid"); else _explicitNullProperties?.Remove("DefaultChatServiceSid"); } }
+        public string? DefaultChatServiceSid { get => _explicitNullValueDefaultChatServiceSid; set { _explicitNullValueDefaultChatServiceSid = value; AdditionalData?.Remove("DefaultChatServiceSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChatServiceSid"); else _explicitNullProperties?.Remove("DefaultChatServiceSid"); } }
         private string? _explicitNullValueDefaultChatServiceSid = default!;
 #nullable restore
 #else
-        public string DefaultChatServiceSid { get => _explicitNullValueDefaultChatServiceSid; set { _explicitNullValueDefaultChatServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChatServiceSid"); else _explicitNullProperties?.Remove("DefaultChatServiceSid"); } }
+        public string DefaultChatServiceSid { get => _explicitNullValueDefaultChatServiceSid; set { _explicitNullValueDefaultChatServiceSid = value; AdditionalData?.Remove("DefaultChatServiceSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChatServiceSid"); else _explicitNullProperties?.Remove("DefaultChatServiceSid"); } }
         private string _explicitNullValueDefaultChatServiceSid = default!;
 #endif
         /// <summary>Default ISO8601 duration when conversation will be switched to `closed` state. Minimum value for this timer is 10 minutes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultClosedTimer { get => _explicitNullValueDefaultClosedTimer; set { _explicitNullValueDefaultClosedTimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultClosedTimer"); else _explicitNullProperties?.Remove("DefaultClosedTimer"); } }
+        public string? DefaultClosedTimer { get => _explicitNullValueDefaultClosedTimer; set { _explicitNullValueDefaultClosedTimer = value; AdditionalData?.Remove("DefaultClosedTimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultClosedTimer"); else _explicitNullProperties?.Remove("DefaultClosedTimer"); } }
         private string? _explicitNullValueDefaultClosedTimer = default!;
 #nullable restore
 #else
-        public string DefaultClosedTimer { get => _explicitNullValueDefaultClosedTimer; set { _explicitNullValueDefaultClosedTimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultClosedTimer"); else _explicitNullProperties?.Remove("DefaultClosedTimer"); } }
+        public string DefaultClosedTimer { get => _explicitNullValueDefaultClosedTimer; set { _explicitNullValueDefaultClosedTimer = value; AdditionalData?.Remove("DefaultClosedTimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultClosedTimer"); else _explicitNullProperties?.Remove("DefaultClosedTimer"); } }
         private string _explicitNullValueDefaultClosedTimer = default!;
 #endif
         /// <summary>Default ISO8601 duration when conversation will be switched to `inactive` state. Minimum value for this timer is 1 minute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultInactiveTimer { get => _explicitNullValueDefaultInactiveTimer; set { _explicitNullValueDefaultInactiveTimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultInactiveTimer"); else _explicitNullProperties?.Remove("DefaultInactiveTimer"); } }
+        public string? DefaultInactiveTimer { get => _explicitNullValueDefaultInactiveTimer; set { _explicitNullValueDefaultInactiveTimer = value; AdditionalData?.Remove("DefaultInactiveTimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultInactiveTimer"); else _explicitNullProperties?.Remove("DefaultInactiveTimer"); } }
         private string? _explicitNullValueDefaultInactiveTimer = default!;
 #nullable restore
 #else
-        public string DefaultInactiveTimer { get => _explicitNullValueDefaultInactiveTimer; set { _explicitNullValueDefaultInactiveTimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultInactiveTimer"); else _explicitNullProperties?.Remove("DefaultInactiveTimer"); } }
+        public string DefaultInactiveTimer { get => _explicitNullValueDefaultInactiveTimer; set { _explicitNullValueDefaultInactiveTimer = value; AdditionalData?.Remove("DefaultInactiveTimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultInactiveTimer"); else _explicitNullProperties?.Remove("DefaultInactiveTimer"); } }
         private string _explicitNullValueDefaultInactiveTimer = default!;
 #endif
         /// <summary>The SID of the default [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource) to use when creating a conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultMessagingServiceSid { get => _explicitNullValueDefaultMessagingServiceSid; set { _explicitNullValueDefaultMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultMessagingServiceSid"); else _explicitNullProperties?.Remove("DefaultMessagingServiceSid"); } }
+        public string? DefaultMessagingServiceSid { get => _explicitNullValueDefaultMessagingServiceSid; set { _explicitNullValueDefaultMessagingServiceSid = value; AdditionalData?.Remove("DefaultMessagingServiceSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultMessagingServiceSid"); else _explicitNullProperties?.Remove("DefaultMessagingServiceSid"); } }
         private string? _explicitNullValueDefaultMessagingServiceSid = default!;
 #nullable restore
 #else
-        public string DefaultMessagingServiceSid { get => _explicitNullValueDefaultMessagingServiceSid; set { _explicitNullValueDefaultMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultMessagingServiceSid"); else _explicitNullProperties?.Remove("DefaultMessagingServiceSid"); } }
+        public string DefaultMessagingServiceSid { get => _explicitNullValueDefaultMessagingServiceSid; set { _explicitNullValueDefaultMessagingServiceSid = value; AdditionalData?.Remove("DefaultMessagingServiceSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultMessagingServiceSid"); else _explicitNullProperties?.Remove("DefaultMessagingServiceSid"); } }
         private string _explicitNullValueDefaultMessagingServiceSid = default!;
 #endif
         /// <summary>

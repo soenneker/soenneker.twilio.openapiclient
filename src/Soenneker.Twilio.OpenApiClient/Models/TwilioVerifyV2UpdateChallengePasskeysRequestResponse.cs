@@ -18,10 +18,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("authenticatorData") is { } nullNodeAuthenticatorData && nullNodeAuthenticatorData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticatorData = null;
-            if (parseNode.GetChildNode("clientDataJSON") is { } nullNodeClientDataJSON && nullNodeClientDataJSON.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientDataJSON = null;
-            if (parseNode.GetChildNode("signature") is { } nullNodeSignature && nullNodeSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signature = null;
-            if (parseNode.GetChildNode("userHandle") is { } nullNodeUserHandle && nullNodeUserHandle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserHandle = null;
+            if (parseNode.GetChildNode("authenticatorData") is null) { _explicitNullValueAuthenticatorData = default!; _explicitNullProperties?.Remove("authenticatorData"); }
+            else if (parseNode.GetChildNode("authenticatorData") is { } nullNodeAuthenticatorData && nullNodeAuthenticatorData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticatorData = null;
+            if (parseNode.GetChildNode("clientDataJSON") is null) { _explicitNullValueClientDataJSON = default!; _explicitNullProperties?.Remove("clientDataJSON"); }
+            else if (parseNode.GetChildNode("clientDataJSON") is { } nullNodeClientDataJSON && nullNodeClientDataJSON.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientDataJSON = null;
+            if (parseNode.GetChildNode("signature") is null) { _explicitNullValueSignature = default!; _explicitNullProperties?.Remove("signature"); }
+            else if (parseNode.GetChildNode("signature") is { } nullNodeSignature && nullNodeSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signature = null;
+            if (parseNode.GetChildNode("userHandle") is null) { _explicitNullValueUserHandle = default!; _explicitNullProperties?.Remove("userHandle"); }
+            else if (parseNode.GetChildNode("userHandle") is { } nullNodeUserHandle && nullNodeUserHandle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserHandle = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The [authenticator data](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data) structure contains information from the authenticator about the processing of a credential creation or authentication request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthenticatorData { get => _explicitNullValueAuthenticatorData; set { _explicitNullValueAuthenticatorData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticatorData"); else _explicitNullProperties?.Remove("authenticatorData"); } }
+        public string? AuthenticatorData { get => _explicitNullValueAuthenticatorData; set { _explicitNullValueAuthenticatorData = value; AdditionalData?.Remove("authenticatorData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticatorData"); else _explicitNullProperties?.Remove("authenticatorData"); } }
         private string? _explicitNullValueAuthenticatorData = default!;
 #nullable restore
 #else
-        public string AuthenticatorData { get => _explicitNullValueAuthenticatorData; set { _explicitNullValueAuthenticatorData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticatorData"); else _explicitNullProperties?.Remove("authenticatorData"); } }
+        public string AuthenticatorData { get => _explicitNullValueAuthenticatorData; set { _explicitNullValueAuthenticatorData = value; AdditionalData?.Remove("authenticatorData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticatorData"); else _explicitNullProperties?.Remove("authenticatorData"); } }
         private string _explicitNullValueAuthenticatorData = default!;
 #endif
         /// <summary>This property contains the JSON-compatible serialization of the data passed from the browser to the authenticator in order to generate this credential.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientDataJSON { get => _explicitNullValueClientDataJSON; set { _explicitNullValueClientDataJSON = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientDataJSON"); else _explicitNullProperties?.Remove("clientDataJSON"); } }
+        public string? ClientDataJSON { get => _explicitNullValueClientDataJSON; set { _explicitNullValueClientDataJSON = value; AdditionalData?.Remove("clientDataJSON"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientDataJSON"); else _explicitNullProperties?.Remove("clientDataJSON"); } }
         private string? _explicitNullValueClientDataJSON = default!;
 #nullable restore
 #else
-        public string ClientDataJSON { get => _explicitNullValueClientDataJSON; set { _explicitNullValueClientDataJSON = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientDataJSON"); else _explicitNullProperties?.Remove("clientDataJSON"); } }
+        public string ClientDataJSON { get => _explicitNullValueClientDataJSON; set { _explicitNullValueClientDataJSON = value; AdditionalData?.Remove("clientDataJSON"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientDataJSON"); else _explicitNullProperties?.Remove("clientDataJSON"); } }
         private string _explicitNullValueClientDataJSON = default!;
 #endif
         /// <summary>An assertion signature over `authenticatorData` and `clientDataJSON`. The assertion signature is created with the private key of the key pair that was created during the originating `navigator.credentials.create()` call and verified using the public key of that same key pair.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
+        public string? Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; AdditionalData?.Remove("signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
         private string? _explicitNullValueSignature = default!;
 #nullable restore
 #else
-        public string Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
+        public string Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; AdditionalData?.Remove("signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
         private string _explicitNullValueSignature = default!;
 #endif
         /// <summary>The user handle stored in the authenticator, specified as `user.id` in the options passed to the originating `navigator.credentials.create()` call. This property should contain a base64url-encoded entity SID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserHandle { get => _explicitNullValueUserHandle; set { _explicitNullValueUserHandle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userHandle"); else _explicitNullProperties?.Remove("userHandle"); } }
+        public string? UserHandle { get => _explicitNullValueUserHandle; set { _explicitNullValueUserHandle = value; AdditionalData?.Remove("userHandle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userHandle"); else _explicitNullProperties?.Remove("userHandle"); } }
         private string? _explicitNullValueUserHandle = default!;
 #nullable restore
 #else
-        public string UserHandle { get => _explicitNullValueUserHandle; set { _explicitNullValueUserHandle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userHandle"); else _explicitNullProperties?.Remove("userHandle"); } }
+        public string UserHandle { get => _explicitNullValueUserHandle; set { _explicitNullValueUserHandle = value; AdditionalData?.Remove("userHandle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userHandle"); else _explicitNullProperties?.Remove("userHandle"); } }
         private string _explicitNullValueUserHandle = default!;
 #endif
         /// <summary>

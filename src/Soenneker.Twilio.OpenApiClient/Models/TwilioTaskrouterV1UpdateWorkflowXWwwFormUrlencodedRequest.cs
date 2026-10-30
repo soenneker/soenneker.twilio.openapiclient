@@ -17,12 +17,18 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AssignmentCallbackUrl") is { } nullNodeAssignmentCallbackUrl && nullNodeAssignmentCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignmentCallbackUrl = null;
-            if (parseNode.GetChildNode("Configuration") is { } nullNodeConfiguration && nullNodeConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configuration = null;
-            if (parseNode.GetChildNode("FallbackAssignmentCallbackUrl") is { } nullNodeFallbackAssignmentCallbackUrl && nullNodeFallbackAssignmentCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FallbackAssignmentCallbackUrl = null;
-            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("ReEvaluateTasks") is { } nullNodeReEvaluateTasks && nullNodeReEvaluateTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReEvaluateTasks = null;
-            if (parseNode.GetChildNode("TaskReservationTimeout") is { } nullNodeTaskReservationTimeout && nullNodeTaskReservationTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskReservationTimeout = null;
+            if (parseNode.GetChildNode("AssignmentCallbackUrl") is null) { _explicitNullValueAssignmentCallbackUrl = default!; _explicitNullProperties?.Remove("AssignmentCallbackUrl"); }
+            else if (parseNode.GetChildNode("AssignmentCallbackUrl") is { } nullNodeAssignmentCallbackUrl && nullNodeAssignmentCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignmentCallbackUrl = null;
+            if (parseNode.GetChildNode("Configuration") is null) { _explicitNullValueConfiguration = default!; _explicitNullProperties?.Remove("Configuration"); }
+            else if (parseNode.GetChildNode("Configuration") is { } nullNodeConfiguration && nullNodeConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configuration = null;
+            if (parseNode.GetChildNode("FallbackAssignmentCallbackUrl") is null) { _explicitNullValueFallbackAssignmentCallbackUrl = default!; _explicitNullProperties?.Remove("FallbackAssignmentCallbackUrl"); }
+            else if (parseNode.GetChildNode("FallbackAssignmentCallbackUrl") is { } nullNodeFallbackAssignmentCallbackUrl && nullNodeFallbackAssignmentCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FallbackAssignmentCallbackUrl = null;
+            if (parseNode.GetChildNode("FriendlyName") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("FriendlyName"); }
+            else if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("ReEvaluateTasks") is null) { _explicitNullValueReEvaluateTasks = default!; _explicitNullProperties?.Remove("ReEvaluateTasks"); }
+            else if (parseNode.GetChildNode("ReEvaluateTasks") is { } nullNodeReEvaluateTasks && nullNodeReEvaluateTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReEvaluateTasks = null;
+            if (parseNode.GetChildNode("TaskReservationTimeout") is null) { _explicitNullValueTaskReservationTimeout = default!; _explicitNullProperties?.Remove("TaskReservationTimeout"); }
+            else if (parseNode.GetChildNode("TaskReservationTimeout") is { } nullNodeTaskReservationTimeout && nullNodeTaskReservationTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskReservationTimeout = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,55 +36,55 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URL from your application that will process task assignment events. See [Handling Task Assignment Callback](https://www.twilio.com/docs/taskrouter/handle-assignment-callbacks) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssignmentCallbackUrl { get => _explicitNullValueAssignmentCallbackUrl; set { _explicitNullValueAssignmentCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssignmentCallbackUrl"); else _explicitNullProperties?.Remove("AssignmentCallbackUrl"); } }
+        public string? AssignmentCallbackUrl { get => _explicitNullValueAssignmentCallbackUrl; set { _explicitNullValueAssignmentCallbackUrl = value; AdditionalData?.Remove("AssignmentCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssignmentCallbackUrl"); else _explicitNullProperties?.Remove("AssignmentCallbackUrl"); } }
         private string? _explicitNullValueAssignmentCallbackUrl = default!;
 #nullable restore
 #else
-        public string AssignmentCallbackUrl { get => _explicitNullValueAssignmentCallbackUrl; set { _explicitNullValueAssignmentCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssignmentCallbackUrl"); else _explicitNullProperties?.Remove("AssignmentCallbackUrl"); } }
+        public string AssignmentCallbackUrl { get => _explicitNullValueAssignmentCallbackUrl; set { _explicitNullValueAssignmentCallbackUrl = value; AdditionalData?.Remove("AssignmentCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssignmentCallbackUrl"); else _explicitNullProperties?.Remove("AssignmentCallbackUrl"); } }
         private string _explicitNullValueAssignmentCallbackUrl = default!;
 #endif
         /// <summary>A JSON string that contains the rules to apply to the Workflow. See [Configuring Workflows](https://www.twilio.com/docs/taskrouter/workflow-configuration) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
+        public string? Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; AdditionalData?.Remove("Configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
         private string? _explicitNullValueConfiguration = default!;
 #nullable restore
 #else
-        public string Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
+        public string Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; AdditionalData?.Remove("Configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration"); else _explicitNullProperties?.Remove("Configuration"); } }
         private string _explicitNullValueConfiguration = default!;
 #endif
         /// <summary>The URL that we should call when a call to the `assignment_callback_url` fails.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FallbackAssignmentCallbackUrl { get => _explicitNullValueFallbackAssignmentCallbackUrl; set { _explicitNullValueFallbackAssignmentCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FallbackAssignmentCallbackUrl"); else _explicitNullProperties?.Remove("FallbackAssignmentCallbackUrl"); } }
+        public string? FallbackAssignmentCallbackUrl { get => _explicitNullValueFallbackAssignmentCallbackUrl; set { _explicitNullValueFallbackAssignmentCallbackUrl = value; AdditionalData?.Remove("FallbackAssignmentCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FallbackAssignmentCallbackUrl"); else _explicitNullProperties?.Remove("FallbackAssignmentCallbackUrl"); } }
         private string? _explicitNullValueFallbackAssignmentCallbackUrl = default!;
 #nullable restore
 #else
-        public string FallbackAssignmentCallbackUrl { get => _explicitNullValueFallbackAssignmentCallbackUrl; set { _explicitNullValueFallbackAssignmentCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FallbackAssignmentCallbackUrl"); else _explicitNullProperties?.Remove("FallbackAssignmentCallbackUrl"); } }
+        public string FallbackAssignmentCallbackUrl { get => _explicitNullValueFallbackAssignmentCallbackUrl; set { _explicitNullValueFallbackAssignmentCallbackUrl = value; AdditionalData?.Remove("FallbackAssignmentCallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FallbackAssignmentCallbackUrl"); else _explicitNullProperties?.Remove("FallbackAssignmentCallbackUrl"); } }
         private string _explicitNullValueFallbackAssignmentCallbackUrl = default!;
 #endif
         /// <summary>A descriptive string that you create to describe the Workflow resource. For example, `Inbound Call Workflow` or `2014 Outbound Campaign`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>Whether or not to re-evaluate Tasks. The default is `false`, which means Tasks in the Workflow will not be processed through the assignment loop again.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReEvaluateTasks { get => _explicitNullValueReEvaluateTasks; set { _explicitNullValueReEvaluateTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReEvaluateTasks"); else _explicitNullProperties?.Remove("ReEvaluateTasks"); } }
+        public string? ReEvaluateTasks { get => _explicitNullValueReEvaluateTasks; set { _explicitNullValueReEvaluateTasks = value; AdditionalData?.Remove("ReEvaluateTasks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReEvaluateTasks"); else _explicitNullProperties?.Remove("ReEvaluateTasks"); } }
         private string? _explicitNullValueReEvaluateTasks = default!;
 #nullable restore
 #else
-        public string ReEvaluateTasks { get => _explicitNullValueReEvaluateTasks; set { _explicitNullValueReEvaluateTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReEvaluateTasks"); else _explicitNullProperties?.Remove("ReEvaluateTasks"); } }
+        public string ReEvaluateTasks { get => _explicitNullValueReEvaluateTasks; set { _explicitNullValueReEvaluateTasks = value; AdditionalData?.Remove("ReEvaluateTasks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReEvaluateTasks"); else _explicitNullProperties?.Remove("ReEvaluateTasks"); } }
         private string _explicitNullValueReEvaluateTasks = default!;
 #endif
         /// <summary>How long TaskRouter will wait for a confirmation response from your application after it assigns a Task to a Worker. Can be up to `86,400` (24 hours) and the default is `120`.</summary>
-        public int? TaskReservationTimeout { get => _explicitNullValueTaskReservationTimeout; set { _explicitNullValueTaskReservationTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaskReservationTimeout"); else _explicitNullProperties?.Remove("TaskReservationTimeout"); } }
+        public int? TaskReservationTimeout { get => _explicitNullValueTaskReservationTimeout; set { _explicitNullValueTaskReservationTimeout = value; AdditionalData?.Remove("TaskReservationTimeout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaskReservationTimeout"); else _explicitNullProperties?.Remove("TaskReservationTimeout"); } }
         private int? _explicitNullValueTaskReservationTimeout = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateWorkflowXWwwFormUrlencodedRequest"/> and sets the default values.

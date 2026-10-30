@@ -17,10 +17,14 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("Identifier") is { } nullNodeIdentifier && nullNodeIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identifier = null;
-            if (parseNode.GetChildNode("ProxyIdentifier") is { } nullNodeProxyIdentifier && nullNodeProxyIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProxyIdentifier = null;
-            if (parseNode.GetChildNode("ProxyIdentifierSid") is { } nullNodeProxyIdentifierSid && nullNodeProxyIdentifierSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProxyIdentifierSid = null;
+            if (parseNode.GetChildNode("FriendlyName") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("FriendlyName"); }
+            else if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("Identifier") is null) { _explicitNullValueIdentifier = default!; _explicitNullProperties?.Remove("Identifier"); }
+            else if (parseNode.GetChildNode("Identifier") is { } nullNodeIdentifier && nullNodeIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identifier = null;
+            if (parseNode.GetChildNode("ProxyIdentifier") is null) { _explicitNullValueProxyIdentifier = default!; _explicitNullProperties?.Remove("ProxyIdentifier"); }
+            else if (parseNode.GetChildNode("ProxyIdentifier") is { } nullNodeProxyIdentifier && nullNodeProxyIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProxyIdentifier = null;
+            if (parseNode.GetChildNode("ProxyIdentifierSid") is null) { _explicitNullValueProxyIdentifierSid = default!; _explicitNullProperties?.Remove("ProxyIdentifierSid"); }
+            else if (parseNode.GetChildNode("ProxyIdentifierSid") is { } nullNodeProxyIdentifierSid && nullNodeProxyIdentifierSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProxyIdentifierSid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The string that you assigned to describe the participant. This value must be 255 characters or fewer. **This value should not have PII.**</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("FriendlyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The phone number of the Participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identifier { get => _explicitNullValueIdentifier; set { _explicitNullValueIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identifier"); else _explicitNullProperties?.Remove("Identifier"); } }
+        public string? Identifier { get => _explicitNullValueIdentifier; set { _explicitNullValueIdentifier = value; AdditionalData?.Remove("Identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identifier"); else _explicitNullProperties?.Remove("Identifier"); } }
         private string? _explicitNullValueIdentifier = default!;
 #nullable restore
 #else
-        public string Identifier { get => _explicitNullValueIdentifier; set { _explicitNullValueIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identifier"); else _explicitNullProperties?.Remove("Identifier"); } }
+        public string Identifier { get => _explicitNullValueIdentifier; set { _explicitNullValueIdentifier = value; AdditionalData?.Remove("Identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Identifier"); else _explicitNullProperties?.Remove("Identifier"); } }
         private string _explicitNullValueIdentifier = default!;
 #endif
         /// <summary>The proxy phone number to use for the Participant. If not specified, Proxy will select a number from the pool.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProxyIdentifier { get => _explicitNullValueProxyIdentifier; set { _explicitNullValueProxyIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProxyIdentifier"); else _explicitNullProperties?.Remove("ProxyIdentifier"); } }
+        public string? ProxyIdentifier { get => _explicitNullValueProxyIdentifier; set { _explicitNullValueProxyIdentifier = value; AdditionalData?.Remove("ProxyIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProxyIdentifier"); else _explicitNullProperties?.Remove("ProxyIdentifier"); } }
         private string? _explicitNullValueProxyIdentifier = default!;
 #nullable restore
 #else
-        public string ProxyIdentifier { get => _explicitNullValueProxyIdentifier; set { _explicitNullValueProxyIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProxyIdentifier"); else _explicitNullProperties?.Remove("ProxyIdentifier"); } }
+        public string ProxyIdentifier { get => _explicitNullValueProxyIdentifier; set { _explicitNullValueProxyIdentifier = value; AdditionalData?.Remove("ProxyIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProxyIdentifier"); else _explicitNullProperties?.Remove("ProxyIdentifier"); } }
         private string _explicitNullValueProxyIdentifier = default!;
 #endif
         /// <summary>The SID of the Proxy Identifier to assign to the Participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProxyIdentifierSid { get => _explicitNullValueProxyIdentifierSid; set { _explicitNullValueProxyIdentifierSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProxyIdentifierSid"); else _explicitNullProperties?.Remove("ProxyIdentifierSid"); } }
+        public string? ProxyIdentifierSid { get => _explicitNullValueProxyIdentifierSid; set { _explicitNullValueProxyIdentifierSid = value; AdditionalData?.Remove("ProxyIdentifierSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProxyIdentifierSid"); else _explicitNullProperties?.Remove("ProxyIdentifierSid"); } }
         private string? _explicitNullValueProxyIdentifierSid = default!;
 #nullable restore
 #else
-        public string ProxyIdentifierSid { get => _explicitNullValueProxyIdentifierSid; set { _explicitNullValueProxyIdentifierSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProxyIdentifierSid"); else _explicitNullProperties?.Remove("ProxyIdentifierSid"); } }
+        public string ProxyIdentifierSid { get => _explicitNullValueProxyIdentifierSid; set { _explicitNullValueProxyIdentifierSid = value; AdditionalData?.Remove("ProxyIdentifierSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProxyIdentifierSid"); else _explicitNullProperties?.Remove("ProxyIdentifierSid"); } }
         private string _explicitNullValueProxyIdentifierSid = default!;
 #endif
         /// <summary>

@@ -17,9 +17,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Callback") is { } nullNodeCallback && nullNodeCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Callback = null;
-            if (parseNode.GetChildNode("IdempotencyKey") is { } nullNodeIdempotencyKey && nullNodeIdempotencyKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdempotencyKey = null;
-            if (parseNode.GetChildNode("Method") is { } nullNodeMethod && nullNodeMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Method = null;
+            if (parseNode.GetChildNode("Callback") is null) { _explicitNullValueCallback = default!; _explicitNullProperties?.Remove("Callback"); }
+            else if (parseNode.GetChildNode("Callback") is { } nullNodeCallback && nullNodeCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Callback = null;
+            if (parseNode.GetChildNode("IdempotencyKey") is null) { _explicitNullValueIdempotencyKey = default!; _explicitNullProperties?.Remove("IdempotencyKey"); }
+            else if (parseNode.GetChildNode("IdempotencyKey") is { } nullNodeIdempotencyKey && nullNodeIdempotencyKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdempotencyKey = null;
+            if (parseNode.GetChildNode("Method") is null) { _explicitNullValueMethod = default!; _explicitNullProperties?.Remove("Method"); }
+            else if (parseNode.GetChildNode("Method") is { } nullNodeMethod && nullNodeMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Method = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,25 +30,25 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The URL we should call using the `method` to send user defined events to your application. URLs must contain a valid hostname (underscores are not permitted).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Callback { get => _explicitNullValueCallback; set { _explicitNullValueCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Callback"); else _explicitNullProperties?.Remove("Callback"); } }
+        public string? Callback { get => _explicitNullValueCallback; set { _explicitNullValueCallback = value; AdditionalData?.Remove("Callback"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Callback"); else _explicitNullProperties?.Remove("Callback"); } }
         private string? _explicitNullValueCallback = default!;
 #nullable restore
 #else
-        public string Callback { get => _explicitNullValueCallback; set { _explicitNullValueCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Callback"); else _explicitNullProperties?.Remove("Callback"); } }
+        public string Callback { get => _explicitNullValueCallback; set { _explicitNullValueCallback = value; AdditionalData?.Remove("Callback"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Callback"); else _explicitNullProperties?.Remove("Callback"); } }
         private string _explicitNullValueCallback = default!;
 #endif
         /// <summary>A unique string value to identify API call. This should be a unique string value per API call and can be a randomly generated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdempotencyKey { get => _explicitNullValueIdempotencyKey; set { _explicitNullValueIdempotencyKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IdempotencyKey"); else _explicitNullProperties?.Remove("IdempotencyKey"); } }
+        public string? IdempotencyKey { get => _explicitNullValueIdempotencyKey; set { _explicitNullValueIdempotencyKey = value; AdditionalData?.Remove("IdempotencyKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IdempotencyKey"); else _explicitNullProperties?.Remove("IdempotencyKey"); } }
         private string? _explicitNullValueIdempotencyKey = default!;
 #nullable restore
 #else
-        public string IdempotencyKey { get => _explicitNullValueIdempotencyKey; set { _explicitNullValueIdempotencyKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IdempotencyKey"); else _explicitNullProperties?.Remove("IdempotencyKey"); } }
+        public string IdempotencyKey { get => _explicitNullValueIdempotencyKey; set { _explicitNullValueIdempotencyKey = value; AdditionalData?.Remove("IdempotencyKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IdempotencyKey"); else _explicitNullProperties?.Remove("IdempotencyKey"); } }
         private string _explicitNullValueIdempotencyKey = default!;
 #endif
         /// <summary>The HTTP method Twilio will use when requesting the above `Url`. Either `GET` or `POST`. Default is `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateUserDefinedMessageSubscriptionXWwwFormUrlencodedRequestMethod? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Method"); else _explicitNullProperties?.Remove("Method"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateUserDefinedMessageSubscriptionXWwwFormUrlencodedRequestMethod? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; AdditionalData?.Remove("Method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Method"); else _explicitNullProperties?.Remove("Method"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateUserDefinedMessageSubscriptionXWwwFormUrlencodedRequestMethod? _explicitNullValueMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateUserDefinedMessageSubscriptionXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -74,7 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             {
                 { "Callback", n => { Callback = n.GetStringValue(); } },
                 { "IdempotencyKey", n => { IdempotencyKey = n.GetStringValue(); } },
-                { "Method", n => { Method = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateUserDefinedMessageSubscriptionXWwwFormUrlencodedRequestMethod>(); } },
+                { "Method", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateUserDefinedMessageSubscriptionXWwwFormUrlencodedRequestMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMethod = default; _explicitNullProperties?.Remove("Method"); AdditionalData["Method"] = unknown; } else { Method = parsed; AdditionalData.Remove("Method"); } } },
             };
         }
         /// <summary>

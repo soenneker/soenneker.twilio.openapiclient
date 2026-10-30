@@ -17,145 +17,160 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
-            if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
-            if (parseNode.GetChildNode("date_updated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
-            if (parseNode.GetChildNode("default_activity_name") is { } nullNodeDefaultActivityName && nullNodeDefaultActivityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultActivityName = null;
-            if (parseNode.GetChildNode("default_activity_sid") is { } nullNodeDefaultActivitySid && nullNodeDefaultActivitySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultActivitySid = null;
-            if (parseNode.GetChildNode("event_callback_url") is { } nullNodeEventCallbackUrl && nullNodeEventCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventCallbackUrl = null;
-            if (parseNode.GetChildNode("events_filter") is { } nullNodeEventsFilter && nullNodeEventsFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventsFilter = null;
-            if (parseNode.GetChildNode("friendly_name") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
-            if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
-            if (parseNode.GetChildNode("multi_task_enabled") is { } nullNodeMultiTaskEnabled && nullNodeMultiTaskEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiTaskEnabled = null;
-            if (parseNode.GetChildNode("prioritize_queue_order") is { } nullNodePrioritizeQueueOrder && nullNodePrioritizeQueueOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrioritizeQueueOrder = null;
-            if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
-            if (parseNode.GetChildNode("timeout_activity_name") is { } nullNodeTimeoutActivityName && nullNodeTimeoutActivityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutActivityName = null;
-            if (parseNode.GetChildNode("timeout_activity_sid") is { } nullNodeTimeoutActivitySid && nullNodeTimeoutActivitySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutActivitySid = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("account_sid") is null) { _explicitNullValueAccountSid = default!; _explicitNullProperties?.Remove("account_sid"); }
+            else if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("date_created") is null) { _explicitNullValueDateCreated = default!; _explicitNullProperties?.Remove("date_created"); }
+            else if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("date_updated") is null) { _explicitNullValueDateUpdated = default!; _explicitNullProperties?.Remove("date_updated"); }
+            else if (parseNode.GetChildNode("date_updated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
+            if (parseNode.GetChildNode("default_activity_name") is null) { _explicitNullValueDefaultActivityName = default!; _explicitNullProperties?.Remove("default_activity_name"); }
+            else if (parseNode.GetChildNode("default_activity_name") is { } nullNodeDefaultActivityName && nullNodeDefaultActivityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultActivityName = null;
+            if (parseNode.GetChildNode("default_activity_sid") is null) { _explicitNullValueDefaultActivitySid = default!; _explicitNullProperties?.Remove("default_activity_sid"); }
+            else if (parseNode.GetChildNode("default_activity_sid") is { } nullNodeDefaultActivitySid && nullNodeDefaultActivitySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultActivitySid = null;
+            if (parseNode.GetChildNode("event_callback_url") is null) { _explicitNullValueEventCallbackUrl = default!; _explicitNullProperties?.Remove("event_callback_url"); }
+            else if (parseNode.GetChildNode("event_callback_url") is { } nullNodeEventCallbackUrl && nullNodeEventCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventCallbackUrl = null;
+            if (parseNode.GetChildNode("events_filter") is null) { _explicitNullValueEventsFilter = default!; _explicitNullProperties?.Remove("events_filter"); }
+            else if (parseNode.GetChildNode("events_filter") is { } nullNodeEventsFilter && nullNodeEventsFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventsFilter = null;
+            if (parseNode.GetChildNode("friendly_name") is null) { _explicitNullValueFriendlyName = default!; _explicitNullProperties?.Remove("friendly_name"); }
+            else if (parseNode.GetChildNode("friendly_name") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("links") is null) { _explicitNullValueLinks = default!; _explicitNullProperties?.Remove("links"); }
+            else if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("multi_task_enabled") is null) { _explicitNullValueMultiTaskEnabled = default!; _explicitNullProperties?.Remove("multi_task_enabled"); }
+            else if (parseNode.GetChildNode("multi_task_enabled") is { } nullNodeMultiTaskEnabled && nullNodeMultiTaskEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiTaskEnabled = null;
+            if (parseNode.GetChildNode("prioritize_queue_order") is null) { _explicitNullValuePrioritizeQueueOrder = default!; _explicitNullProperties?.Remove("prioritize_queue_order"); }
+            else if (parseNode.GetChildNode("prioritize_queue_order") is { } nullNodePrioritizeQueueOrder && nullNodePrioritizeQueueOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrioritizeQueueOrder = null;
+            if (parseNode.GetChildNode("sid") is null) { _explicitNullValueSid = default!; _explicitNullProperties?.Remove("sid"); }
+            else if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
+            if (parseNode.GetChildNode("timeout_activity_name") is null) { _explicitNullValueTimeoutActivityName = default!; _explicitNullProperties?.Remove("timeout_activity_name"); }
+            else if (parseNode.GetChildNode("timeout_activity_name") is { } nullNodeTimeoutActivityName && nullNodeTimeoutActivityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutActivityName = null;
+            if (parseNode.GetChildNode("timeout_activity_sid") is null) { _explicitNullValueTimeoutActivitySid = default!; _explicitNullProperties?.Remove("timeout_activity_sid"); }
+            else if (parseNode.GetChildNode("timeout_activity_sid") is { } nullNodeTimeoutActivitySid && nullNodeTimeoutActivitySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutActivitySid = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Workspace resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; AdditionalData?.Remove("account_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
         private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
-        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
+        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; AdditionalData?.Remove("date_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
         private DateTimeOffset? _explicitNullValueDateCreated = default!;
         /// <summary>The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
-        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
+        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; AdditionalData?.Remove("date_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
         private DateTimeOffset? _explicitNullValueDateUpdated = default!;
         /// <summary>The name of the default activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultActivityName { get => _explicitNullValueDefaultActivityName; set { _explicitNullValueDefaultActivityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_activity_name"); else _explicitNullProperties?.Remove("default_activity_name"); } }
+        public string? DefaultActivityName { get => _explicitNullValueDefaultActivityName; set { _explicitNullValueDefaultActivityName = value; AdditionalData?.Remove("default_activity_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_activity_name"); else _explicitNullProperties?.Remove("default_activity_name"); } }
         private string? _explicitNullValueDefaultActivityName = default!;
 #nullable restore
 #else
-        public string DefaultActivityName { get => _explicitNullValueDefaultActivityName; set { _explicitNullValueDefaultActivityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_activity_name"); else _explicitNullProperties?.Remove("default_activity_name"); } }
+        public string DefaultActivityName { get => _explicitNullValueDefaultActivityName; set { _explicitNullValueDefaultActivityName = value; AdditionalData?.Remove("default_activity_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_activity_name"); else _explicitNullProperties?.Remove("default_activity_name"); } }
         private string _explicitNullValueDefaultActivityName = default!;
 #endif
         /// <summary>The SID of the Activity that will be used when new Workers are created in the Workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultActivitySid { get => _explicitNullValueDefaultActivitySid; set { _explicitNullValueDefaultActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_activity_sid"); else _explicitNullProperties?.Remove("default_activity_sid"); } }
+        public string? DefaultActivitySid { get => _explicitNullValueDefaultActivitySid; set { _explicitNullValueDefaultActivitySid = value; AdditionalData?.Remove("default_activity_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_activity_sid"); else _explicitNullProperties?.Remove("default_activity_sid"); } }
         private string? _explicitNullValueDefaultActivitySid = default!;
 #nullable restore
 #else
-        public string DefaultActivitySid { get => _explicitNullValueDefaultActivitySid; set { _explicitNullValueDefaultActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_activity_sid"); else _explicitNullProperties?.Remove("default_activity_sid"); } }
+        public string DefaultActivitySid { get => _explicitNullValueDefaultActivitySid; set { _explicitNullValueDefaultActivitySid = value; AdditionalData?.Remove("default_activity_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_activity_sid"); else _explicitNullProperties?.Remove("default_activity_sid"); } }
         private string _explicitNullValueDefaultActivitySid = default!;
 #endif
         /// <summary>The URL we call when an event occurs. If provided, the Workspace will publish events to this URL, for example, to collect data for reporting. See [Workspace Events](https://www.twilio.com/docs/taskrouter/api/event) for more information. This parameter supports Twilio&apos;s [Webhooks (HTTP callbacks) Connection Overrides](https://www.twilio.com/docs/usage/webhooks/webhooks-connection-overrides).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventCallbackUrl { get => _explicitNullValueEventCallbackUrl; set { _explicitNullValueEventCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_callback_url"); else _explicitNullProperties?.Remove("event_callback_url"); } }
+        public string? EventCallbackUrl { get => _explicitNullValueEventCallbackUrl; set { _explicitNullValueEventCallbackUrl = value; AdditionalData?.Remove("event_callback_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_callback_url"); else _explicitNullProperties?.Remove("event_callback_url"); } }
         private string? _explicitNullValueEventCallbackUrl = default!;
 #nullable restore
 #else
-        public string EventCallbackUrl { get => _explicitNullValueEventCallbackUrl; set { _explicitNullValueEventCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_callback_url"); else _explicitNullProperties?.Remove("event_callback_url"); } }
+        public string EventCallbackUrl { get => _explicitNullValueEventCallbackUrl; set { _explicitNullValueEventCallbackUrl = value; AdditionalData?.Remove("event_callback_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_callback_url"); else _explicitNullProperties?.Remove("event_callback_url"); } }
         private string _explicitNullValueEventCallbackUrl = default!;
 #endif
         /// <summary>The list of Workspace events for which to call `event_callback_url`. For example, if `EventsFilter=task.created, task.canceled, worker.activity.update`, then TaskRouter will call event_callback_url only when a task is created, canceled, or a Worker activity is updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventsFilter { get => _explicitNullValueEventsFilter; set { _explicitNullValueEventsFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events_filter"); else _explicitNullProperties?.Remove("events_filter"); } }
+        public string? EventsFilter { get => _explicitNullValueEventsFilter; set { _explicitNullValueEventsFilter = value; AdditionalData?.Remove("events_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events_filter"); else _explicitNullProperties?.Remove("events_filter"); } }
         private string? _explicitNullValueEventsFilter = default!;
 #nullable restore
 #else
-        public string EventsFilter { get => _explicitNullValueEventsFilter; set { _explicitNullValueEventsFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events_filter"); else _explicitNullProperties?.Remove("events_filter"); } }
+        public string EventsFilter { get => _explicitNullValueEventsFilter; set { _explicitNullValueEventsFilter = value; AdditionalData?.Remove("events_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events_filter"); else _explicitNullProperties?.Remove("events_filter"); } }
         private string _explicitNullValueEventsFilter = default!;
 #endif
         /// <summary>The string that you assigned to describe the Workspace resource. For example `Customer Support` or `2014 Election Campaign`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("friendly_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
         private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; AdditionalData?.Remove("friendly_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendly_name"); else _explicitNullProperties?.Remove("friendly_name"); } }
         private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The URLs of related resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty _explicitNullValueLinks = default!;
 #endif
         /// <summary>Whether multi-tasking is enabled. The default is `true`, which enables multi-tasking. Multi-tasking allows Workers to handle multiple Tasks simultaneously. When enabled (`true`), each Worker can receive parallel reservations up to the per-channel maximums defined in the Workers section. In single-tasking each Worker would only receive a new reservation when the previous task is completed. Learn more at [Multitasking](https://www.twilio.com/docs/taskrouter/multitasking).</summary>
-        public bool? MultiTaskEnabled { get => _explicitNullValueMultiTaskEnabled; set { _explicitNullValueMultiTaskEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_task_enabled"); else _explicitNullProperties?.Remove("multi_task_enabled"); } }
+        public bool? MultiTaskEnabled { get => _explicitNullValueMultiTaskEnabled; set { _explicitNullValueMultiTaskEnabled = value; AdditionalData?.Remove("multi_task_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_task_enabled"); else _explicitNullProperties?.Remove("multi_task_enabled"); } }
         private bool? _explicitNullValueMultiTaskEnabled = default!;
         /// <summary>The type of TaskQueue to prioritize when Workers are receiving Tasks from both types of TaskQueues. Can be: `LIFO` or `FIFO` and the default is `FIFO`. For more information, see [Queue Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder? PrioritizeQueueOrder { get => _explicitNullValuePrioritizeQueueOrder; set { _explicitNullValuePrioritizeQueueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prioritize_queue_order"); else _explicitNullProperties?.Remove("prioritize_queue_order"); } }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder? PrioritizeQueueOrder { get => _explicitNullValuePrioritizeQueueOrder; set { _explicitNullValuePrioritizeQueueOrder = value; AdditionalData?.Remove("prioritize_queue_order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prioritize_queue_order"); else _explicitNullProperties?.Remove("prioritize_queue_order"); } }
         private global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder? _explicitNullValuePrioritizeQueueOrder = default!;
         /// <summary>The unique string that we created to identify the Workspace resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string? _explicitNullValueSid = default!;
 #nullable restore
 #else
-        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string _explicitNullValueSid = default!;
 #endif
         /// <summary>The name of the timeout activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeoutActivityName { get => _explicitNullValueTimeoutActivityName; set { _explicitNullValueTimeoutActivityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout_activity_name"); else _explicitNullProperties?.Remove("timeout_activity_name"); } }
+        public string? TimeoutActivityName { get => _explicitNullValueTimeoutActivityName; set { _explicitNullValueTimeoutActivityName = value; AdditionalData?.Remove("timeout_activity_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout_activity_name"); else _explicitNullProperties?.Remove("timeout_activity_name"); } }
         private string? _explicitNullValueTimeoutActivityName = default!;
 #nullable restore
 #else
-        public string TimeoutActivityName { get => _explicitNullValueTimeoutActivityName; set { _explicitNullValueTimeoutActivityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout_activity_name"); else _explicitNullProperties?.Remove("timeout_activity_name"); } }
+        public string TimeoutActivityName { get => _explicitNullValueTimeoutActivityName; set { _explicitNullValueTimeoutActivityName = value; AdditionalData?.Remove("timeout_activity_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout_activity_name"); else _explicitNullProperties?.Remove("timeout_activity_name"); } }
         private string _explicitNullValueTimeoutActivityName = default!;
 #endif
         /// <summary>The SID of the Activity that will be assigned to a Worker when a Task reservation times out without a response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeoutActivitySid { get => _explicitNullValueTimeoutActivitySid; set { _explicitNullValueTimeoutActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout_activity_sid"); else _explicitNullProperties?.Remove("timeout_activity_sid"); } }
+        public string? TimeoutActivitySid { get => _explicitNullValueTimeoutActivitySid; set { _explicitNullValueTimeoutActivitySid = value; AdditionalData?.Remove("timeout_activity_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout_activity_sid"); else _explicitNullProperties?.Remove("timeout_activity_sid"); } }
         private string? _explicitNullValueTimeoutActivitySid = default!;
 #nullable restore
 #else
-        public string TimeoutActivitySid { get => _explicitNullValueTimeoutActivitySid; set { _explicitNullValueTimeoutActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout_activity_sid"); else _explicitNullProperties?.Remove("timeout_activity_sid"); } }
+        public string TimeoutActivitySid { get => _explicitNullValueTimeoutActivitySid; set { _explicitNullValueTimeoutActivitySid = value; AdditionalData?.Remove("timeout_activity_sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout_activity_sid"); else _explicitNullProperties?.Remove("timeout_activity_sid"); } }
         private string _explicitNullValueTimeoutActivitySid = default!;
 #endif
         /// <summary>The absolute URL of the Workspace resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
@@ -193,7 +208,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
                 { "friendly_name", n => { FriendlyName = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty>(global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceLinksProperty.CreateFromDiscriminatorValue); } },
                 { "multi_task_enabled", n => { MultiTaskEnabled = n.GetBoolValue(); } },
-                { "prioritize_queue_order", n => { PrioritizeQueueOrder = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder>(); } },
+                { "prioritize_queue_order", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePrioritizeQueueOrder = default; _explicitNullProperties?.Remove("prioritize_queue_order"); AdditionalData["prioritize_queue_order"] = unknown; } else { PrioritizeQueueOrder = parsed; AdditionalData.Remove("prioritize_queue_order"); } } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
                 { "timeout_activity_name", n => { TimeoutActivityName = n.GetStringValue(); } },
                 { "timeout_activity_sid", n => { TimeoutActivitySid = n.GetStringValue(); } },

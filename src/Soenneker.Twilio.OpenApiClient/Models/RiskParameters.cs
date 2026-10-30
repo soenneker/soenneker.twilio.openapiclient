@@ -17,7 +17,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("partner_sub_id") is { } nullNodePartnerSubId && nullNodePartnerSubId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerSubId = null;
+            if (parseNode.GetChildNode("partner_sub_id") is null) { _explicitNullValuePartnerSubId = default!; _explicitNullProperties?.Remove("partner_sub_id"); }
+            else if (parseNode.GetChildNode("partner_sub_id") is { } nullNodePartnerSubId && nullNodePartnerSubId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerSubId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <summary>The partner_sub_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerSubId { get => _explicitNullValuePartnerSubId; set { _explicitNullValuePartnerSubId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_sub_id"); else _explicitNullProperties?.Remove("partner_sub_id"); } }
+        public string? PartnerSubId { get => _explicitNullValuePartnerSubId; set { _explicitNullValuePartnerSubId = value; AdditionalData?.Remove("partner_sub_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_sub_id"); else _explicitNullProperties?.Remove("partner_sub_id"); } }
         private string? _explicitNullValuePartnerSubId = default!;
 #nullable restore
 #else
-        public string PartnerSubId { get => _explicitNullValuePartnerSubId; set { _explicitNullValuePartnerSubId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_sub_id"); else _explicitNullProperties?.Remove("partner_sub_id"); } }
+        public string PartnerSubId { get => _explicitNullValuePartnerSubId; set { _explicitNullValuePartnerSubId = value; AdditionalData?.Remove("partner_sub_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_sub_id"); else _explicitNullProperties?.Remove("partner_sub_id"); } }
         private string _explicitNullValuePartnerSubId = default!;
 #endif
         /// <summary>
