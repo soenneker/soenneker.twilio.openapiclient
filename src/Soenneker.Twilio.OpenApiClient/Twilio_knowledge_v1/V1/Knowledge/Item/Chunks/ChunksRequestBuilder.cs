@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v1.V1.Knowledge.Item.C
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListKnowledgeChunksResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List knowledge chunks

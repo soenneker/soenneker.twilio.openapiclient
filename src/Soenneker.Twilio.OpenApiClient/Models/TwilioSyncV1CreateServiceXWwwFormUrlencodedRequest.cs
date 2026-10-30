@@ -11,34 +11,57 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioSyncV1CreateServiceXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AclEnabled") is { } nullNodeAclEnabled && nullNodeAclEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AclEnabled = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("ReachabilityDebouncingEnabled") is { } nullNodeReachabilityDebouncingEnabled && nullNodeReachabilityDebouncingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReachabilityDebouncingEnabled = null;
+            if (parseNode.GetChildNode("ReachabilityDebouncingWindow") is { } nullNodeReachabilityDebouncingWindow && nullNodeReachabilityDebouncingWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReachabilityDebouncingWindow = null;
+            if (parseNode.GetChildNode("ReachabilityWebhooksEnabled") is { } nullNodeReachabilityWebhooksEnabled && nullNodeReachabilityWebhooksEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReachabilityWebhooksEnabled = null;
+            if (parseNode.GetChildNode("WebhooksFromRestEnabled") is { } nullNodeWebhooksFromRestEnabled && nullNodeWebhooksFromRestEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksFromRestEnabled = null;
+            if (parseNode.GetChildNode("WebhookUrl") is { } nullNodeWebhookUrl && nullNodeWebhookUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookUrl = null;
+        }
+
         /// <summary>Whether token identities in the Service must be granted access to Sync objects by using the [Permissions](https://www.twilio.com/docs/sync/api/sync-permissions) resource.</summary>
-        public bool? AclEnabled { get; set; }
+        public bool? AclEnabled { get => _explicitNullValueAclEnabled; set { _explicitNullValueAclEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AclEnabled"); else _explicitNullProperties?.Remove("AclEnabled"); } }
+        private bool? _explicitNullValueAclEnabled = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string that you assign to describe the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>Whether every `endpoint_disconnected` event should occur after a configurable delay. The default is `false`, where the `endpoint_disconnected` event occurs immediately after disconnection. When `true`, intervening reconnections can prevent the `endpoint_disconnected` event.</summary>
-        public bool? ReachabilityDebouncingEnabled { get; set; }
+        public bool? ReachabilityDebouncingEnabled { get => _explicitNullValueReachabilityDebouncingEnabled; set { _explicitNullValueReachabilityDebouncingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReachabilityDebouncingEnabled"); else _explicitNullProperties?.Remove("ReachabilityDebouncingEnabled"); } }
+        private bool? _explicitNullValueReachabilityDebouncingEnabled = default!;
         /// <summary>The reachability event delay in milliseconds if `reachability_debouncing_enabled` = `true`.  Must be between 1,000 and 30,000 and defaults to 5,000. This is the number of milliseconds after the last running client disconnects, and a Sync identity is declared offline, before the `webhook_url` is called if all endpoints remain offline. A reconnection from the same identity by any endpoint during this interval prevents the call to `webhook_url`.</summary>
-        public int? ReachabilityDebouncingWindow { get; set; }
+        public int? ReachabilityDebouncingWindow { get => _explicitNullValueReachabilityDebouncingWindow; set { _explicitNullValueReachabilityDebouncingWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReachabilityDebouncingWindow"); else _explicitNullProperties?.Remove("ReachabilityDebouncingWindow"); } }
+        private int? _explicitNullValueReachabilityDebouncingWindow = default!;
         /// <summary>Whether the service instance should call `webhook_url` when client endpoints connect to Sync. The default is `false`.</summary>
-        public bool? ReachabilityWebhooksEnabled { get; set; }
+        public bool? ReachabilityWebhooksEnabled { get => _explicitNullValueReachabilityWebhooksEnabled; set { _explicitNullValueReachabilityWebhooksEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReachabilityWebhooksEnabled"); else _explicitNullProperties?.Remove("ReachabilityWebhooksEnabled"); } }
+        private bool? _explicitNullValueReachabilityWebhooksEnabled = default!;
         /// <summary>Whether the Service instance should call `webhook_url` when the REST API is used to update Sync objects. The default is `false`.</summary>
-        public bool? WebhooksFromRestEnabled { get; set; }
+        public bool? WebhooksFromRestEnabled { get => _explicitNullValueWebhooksFromRestEnabled; set { _explicitNullValueWebhooksFromRestEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhooksFromRestEnabled"); else _explicitNullProperties?.Remove("WebhooksFromRestEnabled"); } }
+        private bool? _explicitNullValueWebhooksFromRestEnabled = default!;
         /// <summary>The URL we should call when Sync objects are manipulated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhookUrl { get; set; }
+        public string? WebhookUrl { get => _explicitNullValueWebhookUrl; set { _explicitNullValueWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookUrl"); else _explicitNullProperties?.Remove("WebhookUrl"); } }
+        private string? _explicitNullValueWebhookUrl = default!;
 #nullable restore
 #else
-        public string WebhookUrl { get; set; }
+        public string WebhookUrl { get => _explicitNullValueWebhookUrl; set { _explicitNullValueWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookUrl"); else _explicitNullProperties?.Remove("WebhookUrl"); } }
+        private string _explicitNullValueWebhookUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateServiceXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -55,7 +78,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateServiceXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateServiceXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioSyncV1CreateServiceXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("ReachabilityWebhooksEnabled", ReachabilityWebhooksEnabled);
             writer.WriteBoolValue("WebhooksFromRestEnabled", WebhooksFromRestEnabled);
             writer.WriteStringValue("WebhookUrl", WebhookUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

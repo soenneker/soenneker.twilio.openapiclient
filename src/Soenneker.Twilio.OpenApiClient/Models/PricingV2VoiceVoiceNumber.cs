@@ -11,72 +11,103 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PricingV2VoiceVoiceNumber : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("country") is { } nullNodeCountry && nullNodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Country = null;
+            if (parseNode.GetChildNode("destination_number") is { } nullNodeDestinationNumber && nullNodeDestinationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationNumber = null;
+            if (parseNode.GetChildNode("inbound_call_price") is { } nullNodeInboundCallPrice && nullNodeInboundCallPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundCallPrice = null;
+            if (parseNode.GetChildNode("iso_country") is { } nullNodeIsoCountry && nullNodeIsoCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsoCountry = null;
+            if (parseNode.GetChildNode("origination_number") is { } nullNodeOriginationNumber && nullNodeOriginationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginationNumber = null;
+            if (parseNode.GetChildNode("outbound_call_prices") is { } nullNodeOutboundCallPrices && nullNodeOutboundCallPrices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundCallPrices = null;
+            if (parseNode.GetChildNode("price_unit") is { } nullNodePriceUnit && nullNodePriceUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceUnit = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name of the country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Country { get; set; }
+        public string? Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        private string? _explicitNullValueCountry = default!;
 #nullable restore
 #else
-        public string Country { get; set; }
+        public string Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        private string _explicitNullValueCountry = default!;
 #endif
         /// <summary>The destination phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationNumber { get; set; }
+        public string? DestinationNumber { get => _explicitNullValueDestinationNumber; set { _explicitNullValueDestinationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_number"); else _explicitNullProperties?.Remove("destination_number"); } }
+        private string? _explicitNullValueDestinationNumber = default!;
 #nullable restore
 #else
-        public string DestinationNumber { get; set; }
+        public string DestinationNumber { get => _explicitNullValueDestinationNumber; set { _explicitNullValueDestinationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_number"); else _explicitNullProperties?.Remove("destination_number"); } }
+        private string _explicitNullValueDestinationNumber = default!;
 #endif
         /// <summary>The [InboundCallPrice](https://www.twilio.com/docs/voice/pricing#inbound-call-price) record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberInboundCallPrice? InboundCallPrice { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberInboundCallPrice? InboundCallPrice { get => _explicitNullValueInboundCallPrice; set { _explicitNullValueInboundCallPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_call_price"); else _explicitNullProperties?.Remove("inbound_call_price"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberInboundCallPrice? _explicitNullValueInboundCallPrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberInboundCallPrice InboundCallPrice { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberInboundCallPrice InboundCallPrice { get => _explicitNullValueInboundCallPrice; set { _explicitNullValueInboundCallPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_call_price"); else _explicitNullProperties?.Remove("inbound_call_price"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberInboundCallPrice _explicitNullValueInboundCallPrice = default!;
 #endif
         /// <summary>The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsoCountry { get; set; }
+        public string? IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iso_country"); else _explicitNullProperties?.Remove("iso_country"); } }
+        private string? _explicitNullValueIsoCountry = default!;
 #nullable restore
 #else
-        public string IsoCountry { get; set; }
+        public string IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iso_country"); else _explicitNullProperties?.Remove("iso_country"); } }
+        private string _explicitNullValueIsoCountry = default!;
 #endif
         /// <summary>The origination phone number in [[E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginationNumber { get; set; }
+        public string? OriginationNumber { get => _explicitNullValueOriginationNumber; set { _explicitNullValueOriginationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origination_number"); else _explicitNullProperties?.Remove("origination_number"); } }
+        private string? _explicitNullValueOriginationNumber = default!;
 #nullable restore
 #else
-        public string OriginationNumber { get; set; }
+        public string OriginationNumber { get => _explicitNullValueOriginationNumber; set { _explicitNullValueOriginationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origination_number"); else _explicitNullProperties?.Remove("origination_number"); } }
+        private string _explicitNullValueOriginationNumber = default!;
 #endif
         /// <summary>The list of [OutboundCallPriceWithOrigin](https://www.twilio.com/docs/voice/pricing#outbound-call-price-with-origin) records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberOutboundCallPricesItem>? OutboundCallPrices { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberOutboundCallPricesItem>? OutboundCallPrices { get => _explicitNullValueOutboundCallPrices; set { _explicitNullValueOutboundCallPrices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_call_prices"); else _explicitNullProperties?.Remove("outbound_call_prices"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberOutboundCallPricesItem>? _explicitNullValueOutboundCallPrices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberOutboundCallPricesItem> OutboundCallPrices { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberOutboundCallPricesItem> OutboundCallPrices { get => _explicitNullValueOutboundCallPrices; set { _explicitNullValueOutboundCallPrices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_call_prices"); else _explicitNullProperties?.Remove("outbound_call_prices"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberOutboundCallPricesItem> _explicitNullValueOutboundCallPrices = default!;
 #endif
         /// <summary>The currency in which prices are measured, specified in [ISO 4127](https://www.iso.org/iso/home/standards/currency_codes.htm) format (e.g. `usd`, `eur`, `jpy`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PriceUnit { get; set; }
+        public string? PriceUnit { get => _explicitNullValuePriceUnit; set { _explicitNullValuePriceUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_unit"); else _explicitNullProperties?.Remove("price_unit"); } }
+        private string? _explicitNullValuePriceUnit = default!;
 #nullable restore
 #else
-        public string PriceUnit { get; set; }
+        public string PriceUnit { get => _explicitNullValuePriceUnit; set { _explicitNullValuePriceUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_unit"); else _explicitNullProperties?.Remove("price_unit"); } }
+        private string _explicitNullValuePriceUnit = default!;
 #endif
         /// <summary>The absolute URL of the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumber"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumber CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumber();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumber(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.PricingV2VoiceVoiceNumberOutboundCallPricesItem>("outbound_call_prices", OutboundCallPrices);
             writer.WriteStringValue("price_unit", PriceUnit);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

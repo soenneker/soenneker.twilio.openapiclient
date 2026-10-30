@@ -11,80 +11,114 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PreviewWirelessSimUsage : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("commands_costs") is { } nullNodeCommandsCosts && nullNodeCommandsCosts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommandsCosts = null;
+            if (parseNode.GetChildNode("commands_usage") is { } nullNodeCommandsUsage && nullNodeCommandsUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommandsUsage = null;
+            if (parseNode.GetChildNode("data_costs") is { } nullNodeDataCosts && nullNodeDataCosts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataCosts = null;
+            if (parseNode.GetChildNode("data_usage") is { } nullNodeDataUsage && nullNodeDataUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataUsage = null;
+            if (parseNode.GetChildNode("period") is { } nullNodePeriod && nullNodePeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Period = null;
+            if (parseNode.GetChildNode("sim_sid") is { } nullNodeSimSid && nullNodeSimSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimSid = null;
+            if (parseNode.GetChildNode("sim_unique_name") is { } nullNodeSimUniqueName && nullNodeSimUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimUniqueName = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>The account_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get; set; }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get; set; }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The commands_costs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CommandsCosts { get; set; }
+        public UntypedNode? CommandsCosts { get => _explicitNullValueCommandsCosts; set { _explicitNullValueCommandsCosts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commands_costs"); else _explicitNullProperties?.Remove("commands_costs"); } }
+        private UntypedNode? _explicitNullValueCommandsCosts = default!;
 #nullable restore
 #else
-        public UntypedNode CommandsCosts { get; set; }
+        public UntypedNode CommandsCosts { get => _explicitNullValueCommandsCosts; set { _explicitNullValueCommandsCosts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commands_costs"); else _explicitNullProperties?.Remove("commands_costs"); } }
+        private UntypedNode _explicitNullValueCommandsCosts = default!;
 #endif
         /// <summary>The commands_usage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CommandsUsage { get; set; }
+        public UntypedNode? CommandsUsage { get => _explicitNullValueCommandsUsage; set { _explicitNullValueCommandsUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commands_usage"); else _explicitNullProperties?.Remove("commands_usage"); } }
+        private UntypedNode? _explicitNullValueCommandsUsage = default!;
 #nullable restore
 #else
-        public UntypedNode CommandsUsage { get; set; }
+        public UntypedNode CommandsUsage { get => _explicitNullValueCommandsUsage; set { _explicitNullValueCommandsUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commands_usage"); else _explicitNullProperties?.Remove("commands_usage"); } }
+        private UntypedNode _explicitNullValueCommandsUsage = default!;
 #endif
         /// <summary>The data_costs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? DataCosts { get; set; }
+        public UntypedNode? DataCosts { get => _explicitNullValueDataCosts; set { _explicitNullValueDataCosts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_costs"); else _explicitNullProperties?.Remove("data_costs"); } }
+        private UntypedNode? _explicitNullValueDataCosts = default!;
 #nullable restore
 #else
-        public UntypedNode DataCosts { get; set; }
+        public UntypedNode DataCosts { get => _explicitNullValueDataCosts; set { _explicitNullValueDataCosts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_costs"); else _explicitNullProperties?.Remove("data_costs"); } }
+        private UntypedNode _explicitNullValueDataCosts = default!;
 #endif
         /// <summary>The data_usage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? DataUsage { get; set; }
+        public UntypedNode? DataUsage { get => _explicitNullValueDataUsage; set { _explicitNullValueDataUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_usage"); else _explicitNullProperties?.Remove("data_usage"); } }
+        private UntypedNode? _explicitNullValueDataUsage = default!;
 #nullable restore
 #else
-        public UntypedNode DataUsage { get; set; }
+        public UntypedNode DataUsage { get => _explicitNullValueDataUsage; set { _explicitNullValueDataUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_usage"); else _explicitNullProperties?.Remove("data_usage"); } }
+        private UntypedNode _explicitNullValueDataUsage = default!;
 #endif
         /// <summary>The period property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Period { get; set; }
+        public UntypedNode? Period { get => _explicitNullValuePeriod; set { _explicitNullValuePeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period"); else _explicitNullProperties?.Remove("period"); } }
+        private UntypedNode? _explicitNullValuePeriod = default!;
 #nullable restore
 #else
-        public UntypedNode Period { get; set; }
+        public UntypedNode Period { get => _explicitNullValuePeriod; set { _explicitNullValuePeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("period"); else _explicitNullProperties?.Remove("period"); } }
+        private UntypedNode _explicitNullValuePeriod = default!;
 #endif
         /// <summary>The sim_sid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SimSid { get; set; }
+        public string? SimSid { get => _explicitNullValueSimSid; set { _explicitNullValueSimSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_sid"); else _explicitNullProperties?.Remove("sim_sid"); } }
+        private string? _explicitNullValueSimSid = default!;
 #nullable restore
 #else
-        public string SimSid { get; set; }
+        public string SimSid { get => _explicitNullValueSimSid; set { _explicitNullValueSimSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_sid"); else _explicitNullProperties?.Remove("sim_sid"); } }
+        private string _explicitNullValueSimSid = default!;
 #endif
         /// <summary>The sim_unique_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SimUniqueName { get; set; }
+        public string? SimUniqueName { get => _explicitNullValueSimUniqueName; set { _explicitNullValueSimUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_unique_name"); else _explicitNullProperties?.Remove("sim_unique_name"); } }
+        private string? _explicitNullValueSimUniqueName = default!;
 #nullable restore
 #else
-        public string SimUniqueName { get; set; }
+        public string SimUniqueName { get => _explicitNullValueSimUniqueName; set { _explicitNullValueSimUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_unique_name"); else _explicitNullProperties?.Remove("sim_unique_name"); } }
+        private string _explicitNullValueSimUniqueName = default!;
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsage"/> and sets the default values.
@@ -101,7 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.PreviewWirelessSimUsage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -138,6 +172,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("sim_sid", SimSid);
             writer.WriteStringValue("sim_unique_name", SimUniqueName);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,27 +12,47 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BrandedCalling : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("answer_rate") is { } nullNodeAnswerRate && nullNodeAnswerRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerRate = null;
+            if (parseNode.GetChildNode("by_use_case") is { } nullNodeByUseCase && nullNodeByUseCase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByUseCase = null;
+            if (parseNode.GetChildNode("engagement_rate") is { } nullNodeEngagementRate && nullNodeEngagementRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EngagementRate = null;
+            if (parseNode.GetChildNode("human_answer_rate") is { } nullNodeHumanAnswerRate && nullNodeHumanAnswerRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanAnswerRate = null;
+            if (parseNode.GetChildNode("percent_branded_calls") is { } nullNodePercentBrandedCalls && nullNodePercentBrandedCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PercentBrandedCalls = null;
+            if (parseNode.GetChildNode("total_branded_calls") is { } nullNodeTotalBrandedCalls && nullNodeTotalBrandedCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalBrandedCalls = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Answer rate for Branded bundled calls.</summary>
-        public float? AnswerRate { get; set; }
+        public float? AnswerRate { get => _explicitNullValueAnswerRate; set { _explicitNullValueAnswerRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_rate"); else _explicitNullProperties?.Remove("answer_rate"); } }
+        private float? _explicitNullValueAnswerRate = default!;
         /// <summary>Details of branded calls by use case.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.BrandedUseCaseDetail>? ByUseCase { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.BrandedUseCaseDetail>? ByUseCase { get => _explicitNullValueByUseCase; set { _explicitNullValueByUseCase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_use_case"); else _explicitNullProperties?.Remove("by_use_case"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.BrandedUseCaseDetail>? _explicitNullValueByUseCase = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.BrandedUseCaseDetail> ByUseCase { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.BrandedUseCaseDetail> ByUseCase { get => _explicitNullValueByUseCase; set { _explicitNullValueByUseCase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("by_use_case"); else _explicitNullProperties?.Remove("by_use_case"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.BrandedUseCaseDetail> _explicitNullValueByUseCase = default!;
 #endif
         /// <summary>Engagement Rate for Branded bundled calls where its call length is longer than 60 seconds.</summary>
-        public float? EngagementRate { get; set; }
+        public float? EngagementRate { get => _explicitNullValueEngagementRate; set { _explicitNullValueEngagementRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagement_rate"); else _explicitNullProperties?.Remove("engagement_rate"); } }
+        private float? _explicitNullValueEngagementRate = default!;
         /// <summary>Rate of Branded bundled calls that were answered by Human.</summary>
-        public float? HumanAnswerRate { get; set; }
+        public float? HumanAnswerRate { get => _explicitNullValueHumanAnswerRate; set { _explicitNullValueHumanAnswerRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_answer_rate"); else _explicitNullProperties?.Remove("human_answer_rate"); } }
+        private float? _explicitNullValueHumanAnswerRate = default!;
         /// <summary>Percentage of Branded bundled calls over total outbound calls.</summary>
-        public float? PercentBrandedCalls { get; set; }
+        public float? PercentBrandedCalls { get => _explicitNullValuePercentBrandedCalls; set { _explicitNullValuePercentBrandedCalls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percent_branded_calls"); else _explicitNullProperties?.Remove("percent_branded_calls"); } }
+        private float? _explicitNullValuePercentBrandedCalls = default!;
         /// <summary>Total number of Branded bundled calls.</summary>
-        public int? TotalBrandedCalls { get; set; }
+        public int? TotalBrandedCalls { get => _explicitNullValueTotalBrandedCalls; set { _explicitNullValueTotalBrandedCalls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_branded_calls"); else _explicitNullProperties?.Remove("total_branded_calls"); } }
+        private int? _explicitNullValueTotalBrandedCalls = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.BrandedCalling"/> and sets the default values.
         /// </summary>
@@ -48,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.BrandedCalling CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.BrandedCalling();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.BrandedCalling(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +99,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteFloatValue("human_answer_rate", HumanAnswerRate);
             writer.WriteFloatValue("percent_branded_calls", PercentBrandedCalls);
             writer.WriteIntValue("total_branded_calls", TotalBrandedCalls);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

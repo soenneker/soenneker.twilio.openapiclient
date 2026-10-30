@@ -58,6 +58,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v2.V2.AccountDefaultConfig
                 { "401", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -87,6 +89,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v2.V2.AccountDefaultConfig
                 { "401", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -120,6 +124,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v2.V2.AccountDefaultConfig
                 { "409", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -153,6 +159,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v2.V2.AccountDefaultConfig
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "412", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2AccountDefaultConfigurationResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

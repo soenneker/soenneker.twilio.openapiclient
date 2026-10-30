@@ -11,78 +11,125 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioVideoV1CreateRoomXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AudioOnly") is { } nullNodeAudioOnly && nullNodeAudioOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioOnly = null;
+            if (parseNode.GetChildNode("EmptyRoomTimeout") is { } nullNodeEmptyRoomTimeout && nullNodeEmptyRoomTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmptyRoomTimeout = null;
+            if (parseNode.GetChildNode("EnableTurn") is { } nullNodeEnableTurn && nullNodeEnableTurn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTurn = null;
+            if (parseNode.GetChildNode("LargeRoom") is { } nullNodeLargeRoom && nullNodeLargeRoom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LargeRoom = null;
+            if (parseNode.GetChildNode("MaxParticipantDuration") is { } nullNodeMaxParticipantDuration && nullNodeMaxParticipantDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxParticipantDuration = null;
+            if (parseNode.GetChildNode("MaxParticipants") is { } nullNodeMaxParticipants && nullNodeMaxParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxParticipants = null;
+            if (parseNode.GetChildNode("MediaRegion") is { } nullNodeMediaRegion && nullNodeMediaRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaRegion = null;
+            if (parseNode.GetChildNode("RecordingRules") is { } nullNodeRecordingRules && nullNodeRecordingRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingRules = null;
+            if (parseNode.GetChildNode("RecordParticipantsOnConnect") is { } nullNodeRecordParticipantsOnConnect && nullNodeRecordParticipantsOnConnect.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordParticipantsOnConnect = null;
+            if (parseNode.GetChildNode("StatusCallback") is { } nullNodeStatusCallback && nullNodeStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallback = null;
+            if (parseNode.GetChildNode("StatusCallbackMethod") is { } nullNodeStatusCallbackMethod && nullNodeStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbackMethod = null;
+            if (parseNode.GetChildNode("TranscribeParticipantsOnConnect") is { } nullNodeTranscribeParticipantsOnConnect && nullNodeTranscribeParticipantsOnConnect.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscribeParticipantsOnConnect = null;
+            if (parseNode.GetChildNode("TranscriptionsConfiguration") is { } nullNodeTranscriptionsConfiguration && nullNodeTranscriptionsConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionsConfiguration = null;
+            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("UniqueName") is { } nullNodeUniqueName && nullNodeUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueName = null;
+            if (parseNode.GetChildNode("UnusedRoomTimeout") is { } nullNodeUnusedRoomTimeout && nullNodeUnusedRoomTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnusedRoomTimeout = null;
+            if (parseNode.GetChildNode("VideoCodecs") is { } nullNodeVideoCodecs && nullNodeVideoCodecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoCodecs = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When set to true, indicates that the participants in the room will only publish audio. No video tracks will be allowed.</summary>
-        public bool? AudioOnly { get; set; }
+        public bool? AudioOnly { get => _explicitNullValueAudioOnly; set { _explicitNullValueAudioOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AudioOnly"); else _explicitNullProperties?.Remove("AudioOnly"); } }
+        private bool? _explicitNullValueAudioOnly = default!;
         /// <summary>Configures how long (in minutes) a room will remain active after last participant leaves. Valid values range from 1 to 60 minutes (no fractions).</summary>
-        public int? EmptyRoomTimeout { get; set; }
+        public int? EmptyRoomTimeout { get => _explicitNullValueEmptyRoomTimeout; set { _explicitNullValueEmptyRoomTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EmptyRoomTimeout"); else _explicitNullProperties?.Remove("EmptyRoomTimeout"); } }
+        private int? _explicitNullValueEmptyRoomTimeout = default!;
         /// <summary>Deprecated, now always considered to be true.</summary>
-        public bool? EnableTurn { get; set; }
+        public bool? EnableTurn { get => _explicitNullValueEnableTurn; set { _explicitNullValueEnableTurn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableTurn"); else _explicitNullProperties?.Remove("EnableTurn"); } }
+        private bool? _explicitNullValueEnableTurn = default!;
         /// <summary>When set to true, indicated that this is the large room.</summary>
-        public bool? LargeRoom { get; set; }
+        public bool? LargeRoom { get => _explicitNullValueLargeRoom; set { _explicitNullValueLargeRoom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LargeRoom"); else _explicitNullProperties?.Remove("LargeRoom"); } }
+        private bool? _explicitNullValueLargeRoom = default!;
         /// <summary>The maximum number of seconds a Participant can be connected to the room. The maximum possible value is 86400 seconds (24 hours). The default is 14400 seconds (4 hours).</summary>
-        public int? MaxParticipantDuration { get; set; }
+        public int? MaxParticipantDuration { get => _explicitNullValueMaxParticipantDuration; set { _explicitNullValueMaxParticipantDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaxParticipantDuration"); else _explicitNullProperties?.Remove("MaxParticipantDuration"); } }
+        private int? _explicitNullValueMaxParticipantDuration = default!;
         /// <summary>The maximum number of concurrent Participants allowed in the room. The maximum allowed value is 50.</summary>
-        public int? MaxParticipants { get; set; }
+        public int? MaxParticipants { get => _explicitNullValueMaxParticipants; set { _explicitNullValueMaxParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaxParticipants"); else _explicitNullProperties?.Remove("MaxParticipants"); } }
+        private int? _explicitNullValueMaxParticipants = default!;
         /// <summary>The region for the Room&apos;s media server.  Can be one of the [available Media Regions](https://www.twilio.com/docs/video/ip-addresses#group-rooms-media-servers).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaRegion { get; set; }
+        public string? MediaRegion { get => _explicitNullValueMediaRegion; set { _explicitNullValueMediaRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MediaRegion"); else _explicitNullProperties?.Remove("MediaRegion"); } }
+        private string? _explicitNullValueMediaRegion = default!;
 #nullable restore
 #else
-        public string MediaRegion { get; set; }
+        public string MediaRegion { get => _explicitNullValueMediaRegion; set { _explicitNullValueMediaRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MediaRegion"); else _explicitNullProperties?.Remove("MediaRegion"); } }
+        private string _explicitNullValueMediaRegion = default!;
 #endif
         /// <summary>A collection of Recording Rules that describe how to include or exclude matching tracks for recording</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RecordingRules { get; set; }
+        public UntypedNode? RecordingRules { get => _explicitNullValueRecordingRules; set { _explicitNullValueRecordingRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingRules"); else _explicitNullProperties?.Remove("RecordingRules"); } }
+        private UntypedNode? _explicitNullValueRecordingRules = default!;
 #nullable restore
 #else
-        public UntypedNode RecordingRules { get; set; }
+        public UntypedNode RecordingRules { get => _explicitNullValueRecordingRules; set { _explicitNullValueRecordingRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingRules"); else _explicitNullProperties?.Remove("RecordingRules"); } }
+        private UntypedNode _explicitNullValueRecordingRules = default!;
 #endif
         /// <summary>Whether to start recording when Participants connect.</summary>
-        public bool? RecordParticipantsOnConnect { get; set; }
+        public bool? RecordParticipantsOnConnect { get => _explicitNullValueRecordParticipantsOnConnect; set { _explicitNullValueRecordParticipantsOnConnect = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordParticipantsOnConnect"); else _explicitNullProperties?.Remove("RecordParticipantsOnConnect"); } }
+        private bool? _explicitNullValueRecordParticipantsOnConnect = default!;
         /// <summary>The URL Twilio should call using the `status_callback_method` to send status information to your application on every room event. See [Status Callbacks](https://www.twilio.com/docs/video/api/status-callbacks) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCallback { get; set; }
+        public string? StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallback"); else _explicitNullProperties?.Remove("StatusCallback"); } }
+        private string? _explicitNullValueStatusCallback = default!;
 #nullable restore
 #else
-        public string StatusCallback { get; set; }
+        public string StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallback"); else _explicitNullProperties?.Remove("StatusCallback"); } }
+        private string _explicitNullValueStatusCallback = default!;
 #endif
         /// <summary>The HTTP method Twilio should use to call `status_callback`. Can be `POST` or `GET`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get => _explicitNullValueStatusCallbackMethod; set { _explicitNullValueStatusCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallbackMethod"); else _explicitNullProperties?.Remove("StatusCallbackMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestStatusCallbackMethod? _explicitNullValueStatusCallbackMethod = default!;
         /// <summary>Whether to start transcriptions when Participants connect. If TranscriptionsConfiguration is not provided, default settings will be used.</summary>
-        public bool? TranscribeParticipantsOnConnect { get; set; }
+        public bool? TranscribeParticipantsOnConnect { get => _explicitNullValueTranscribeParticipantsOnConnect; set { _explicitNullValueTranscribeParticipantsOnConnect = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscribeParticipantsOnConnect"); else _explicitNullProperties?.Remove("TranscribeParticipantsOnConnect"); } }
+        private bool? _explicitNullValueTranscribeParticipantsOnConnect = default!;
         /// <summary>A collection of properties that describe transcription behaviour. If TranscribeParticipantsOnConnect is set to true and TranscriptionsConfiguration is not provided, default settings will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestTranscriptionsConfiguration? TranscriptionsConfiguration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestTranscriptionsConfiguration? TranscriptionsConfiguration { get => _explicitNullValueTranscriptionsConfiguration; set { _explicitNullValueTranscriptionsConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionsConfiguration"); else _explicitNullProperties?.Remove("TranscriptionsConfiguration"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestTranscriptionsConfiguration? _explicitNullValueTranscriptionsConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestTranscriptionsConfiguration TranscriptionsConfiguration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestTranscriptionsConfiguration TranscriptionsConfiguration { get => _explicitNullValueTranscriptionsConfiguration; set { _explicitNullValueTranscriptionsConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionsConfiguration"); else _explicitNullProperties?.Remove("TranscriptionsConfiguration"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequestTranscriptionsConfiguration _explicitNullValueTranscriptionsConfiguration = default!;
 #endif
         /// <summary>Type of room. Use `group` for new implementations. `go`, `peer-to-peer`, and `group-small` are deprecated.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumRoomType? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumRoomType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumRoomType? _explicitNullValueType = default!;
         /// <summary>An application-defined string that uniquely identifies the resource. It can be used as a `room_sid` in place of the resource&apos;s `sid` in the URL to address the resource, assuming it does not contain any [reserved characters](https://tools.ietf.org/html/rfc3986#section-2.2) that would need to be URL encoded. This value is unique for `in-progress` rooms. SDK clients can use this name to connect to the room. REST API clients can use this name in place of the Room SID to interact with the room as long as the room is `in-progress`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniqueName { get; set; }
+        public string? UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string? _explicitNullValueUniqueName = default!;
 #nullable restore
 #else
-        public string UniqueName { get; set; }
+        public string UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string _explicitNullValueUniqueName = default!;
 #endif
         /// <summary>Configures how long (in minutes) a room will remain active if no one joins. Valid values range from 1 to 60 minutes (no fractions).</summary>
-        public int? UnusedRoomTimeout { get; set; }
+        public int? UnusedRoomTimeout { get => _explicitNullValueUnusedRoomTimeout; set { _explicitNullValueUnusedRoomTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnusedRoomTimeout"); else _explicitNullProperties?.Remove("UnusedRoomTimeout"); } }
+        private int? _explicitNullValueUnusedRoomTimeout = default!;
         /// <summary>An array of the video codecs that are supported when publishing a track in the room.  Can be: `VP8` and `H264`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumVideoCodec?>? VideoCodecs { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumVideoCodec?>? VideoCodecs { get => _explicitNullValueVideoCodecs; set { _explicitNullValueVideoCodecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VideoCodecs"); else _explicitNullProperties?.Remove("VideoCodecs"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumVideoCodec?>? _explicitNullValueVideoCodecs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumVideoCodec?> VideoCodecs { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumVideoCodec?> VideoCodecs { get => _explicitNullValueVideoCodecs; set { _explicitNullValueVideoCodecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VideoCodecs"); else _explicitNullProperties?.Remove("VideoCodecs"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumVideoCodec?> _explicitNullValueVideoCodecs = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -99,7 +146,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVideoV1CreateRoomXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -152,6 +199,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("UniqueName", UniqueName);
             writer.WriteIntValue("UnusedRoomTimeout", UnusedRoomTimeout);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.RoomEnumVideoCodec>("VideoCodecs", VideoCodecs);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

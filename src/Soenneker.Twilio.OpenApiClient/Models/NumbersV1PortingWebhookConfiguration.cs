@@ -11,40 +11,59 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NumbersV1PortingWebhookConfiguration : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("notifications_of") is { } nullNodeNotificationsOf && nullNodeNotificationsOf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsOf = null;
+            if (parseNode.GetChildNode("port_in_target_url") is { } nullNodePortInTargetUrl && nullNodePortInTargetUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortInTargetUrl = null;
+            if (parseNode.GetChildNode("port_out_target_url") is { } nullNodePortOutTargetUrl && nullNodePortOutTargetUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortOutTargetUrl = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A list to filter what notification events to receive for this account and its sub accounts. If it is an empty list, then it means that there are no filters for the notifications events to send in each webhook and all events will get sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? NotificationsOf { get; set; }
+        public List<string>? NotificationsOf { get => _explicitNullValueNotificationsOf; set { _explicitNullValueNotificationsOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notifications_of"); else _explicitNullProperties?.Remove("notifications_of"); } }
+        private List<string>? _explicitNullValueNotificationsOf = default!;
 #nullable restore
 #else
-        public List<string> NotificationsOf { get; set; }
+        public List<string> NotificationsOf { get => _explicitNullValueNotificationsOf; set { _explicitNullValueNotificationsOf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notifications_of"); else _explicitNullProperties?.Remove("notifications_of"); } }
+        private List<string> _explicitNullValueNotificationsOf = default!;
 #endif
         /// <summary>The complete webhook url that will be called when a notification event for port in request or port in phone number happens</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortInTargetUrl { get; set; }
+        public string? PortInTargetUrl { get => _explicitNullValuePortInTargetUrl; set { _explicitNullValuePortInTargetUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_target_url"); else _explicitNullProperties?.Remove("port_in_target_url"); } }
+        private string? _explicitNullValuePortInTargetUrl = default!;
 #nullable restore
 #else
-        public string PortInTargetUrl { get; set; }
+        public string PortInTargetUrl { get => _explicitNullValuePortInTargetUrl; set { _explicitNullValuePortInTargetUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_target_url"); else _explicitNullProperties?.Remove("port_in_target_url"); } }
+        private string _explicitNullValuePortInTargetUrl = default!;
 #endif
         /// <summary>The complete webhook url that will be called when a notification event for a port out phone number happens.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortOutTargetUrl { get; set; }
+        public string? PortOutTargetUrl { get => _explicitNullValuePortOutTargetUrl; set { _explicitNullValuePortOutTargetUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_out_target_url"); else _explicitNullProperties?.Remove("port_out_target_url"); } }
+        private string? _explicitNullValuePortOutTargetUrl = default!;
 #nullable restore
 #else
-        public string PortOutTargetUrl { get; set; }
+        public string PortOutTargetUrl { get => _explicitNullValuePortOutTargetUrl; set { _explicitNullValuePortOutTargetUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_out_target_url"); else _explicitNullProperties?.Remove("port_out_target_url"); } }
+        private string _explicitNullValuePortOutTargetUrl = default!;
 #endif
         /// <summary>The URL of the webhook configuration request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingWebhookConfiguration"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingWebhookConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingWebhookConfiguration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingWebhookConfiguration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("port_in_target_url", PortInTargetUrl);
             writer.WriteStringValue("port_out_target_url", PortOutTargetUrl);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

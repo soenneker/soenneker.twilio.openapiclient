@@ -12,24 +12,37 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccountReportNetworkIssues : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("sdk") is { } nullNodeSdk && nullNodeSdk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sdk = null;
+            if (parseNode.GetChildNode("twilio_gateway") is { } nullNodeTwilioGateway && nullNodeTwilioGateway.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioGateway = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Network issues of calls for client type. This is indicative of local network issues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk? Sdk { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk? Sdk { get => _explicitNullValueSdk; set { _explicitNullValueSdk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdk"); else _explicitNullProperties?.Remove("sdk"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk? _explicitNullValueSdk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk Sdk { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk Sdk { get => _explicitNullValueSdk; set { _explicitNullValueSdk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdk"); else _explicitNullProperties?.Remove("sdk"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk _explicitNullValueSdk = default!;
 #endif
         /// <summary>Network related metrics for Twilio Gateway calls only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway? TwilioGateway { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway? TwilioGateway { get => _explicitNullValueTwilioGateway; set { _explicitNullValueTwilioGateway = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_gateway"); else _explicitNullProperties?.Remove("twilio_gateway"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway? _explicitNullValueTwilioGateway = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway TwilioGateway { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway TwilioGateway { get => _explicitNullValueTwilioGateway; set { _explicitNullValueTwilioGateway = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_gateway"); else _explicitNullProperties?.Remove("twilio_gateway"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway _explicitNullValueTwilioGateway = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk>("sdk", Sdk);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesTwilioGateway>("twilio_gateway", TwilioGateway);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

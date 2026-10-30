@@ -12,43 +12,74 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateShortCodeApplicationResponseSetup : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("charges_apply") is { } nullNodeChargesApply && nullNodeChargesApply.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargesApply = null;
+            if (parseNode.GetChildNode("current_provider") is { } nullNodeCurrentProvider && nullNodeCurrentProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentProvider = null;
+            if (parseNode.GetChildNode("free_to_end_user") is { } nullNodeFreeToEndUser && nullNodeFreeToEndUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreeToEndUser = null;
+            if (parseNode.GetChildNode("lease_type") is { } nullNodeLeaseType && nullNodeLeaseType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeaseType = null;
+            if (parseNode.GetChildNode("migrated_live_traffic") is { } nullNodeMigratedLiveTraffic && nullNodeMigratedLiveTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MigratedLiveTraffic = null;
+            if (parseNode.GetChildNode("migrated_mms_enabled") is { } nullNodeMigratedMmsEnabled && nullNodeMigratedMmsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MigratedMmsEnabled = null;
+            if (parseNode.GetChildNode("mms_enabled") is { } nullNodeMmsEnabled && nullNodeMmsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MmsEnabled = null;
+            if (parseNode.GetChildNode("payment_frequency") is { } nullNodePaymentFrequency && nullNodePaymentFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentFrequency = null;
+            if (parseNode.GetChildNode("request_type") is { } nullNodeRequestType && nullNodeRequestType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestType = null;
+            if (parseNode.GetChildNode("short_code_preference") is { } nullNodeShortCodePreference && nullNodeShortCodePreference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortCodePreference = null;
+            if (parseNode.GetChildNode("traffic_type") is { } nullNodeTrafficType && nullNodeTrafficType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrafficType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The charges_apply property</summary>
-        public bool? ChargesApply { get; set; }
+        public bool? ChargesApply { get => _explicitNullValueChargesApply; set { _explicitNullValueChargesApply = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charges_apply"); else _explicitNullProperties?.Remove("charges_apply"); } }
+        private bool? _explicitNullValueChargesApply = default!;
         /// <summary>The current_provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrentProvider { get; set; }
+        public string? CurrentProvider { get => _explicitNullValueCurrentProvider; set { _explicitNullValueCurrentProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_provider"); else _explicitNullProperties?.Remove("current_provider"); } }
+        private string? _explicitNullValueCurrentProvider = default!;
 #nullable restore
 #else
-        public string CurrentProvider { get; set; }
+        public string CurrentProvider { get => _explicitNullValueCurrentProvider; set { _explicitNullValueCurrentProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_provider"); else _explicitNullProperties?.Remove("current_provider"); } }
+        private string _explicitNullValueCurrentProvider = default!;
 #endif
         /// <summary>The free_to_end_user property</summary>
-        public bool? FreeToEndUser { get; set; }
+        public bool? FreeToEndUser { get => _explicitNullValueFreeToEndUser; set { _explicitNullValueFreeToEndUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_to_end_user"); else _explicitNullProperties?.Remove("free_to_end_user"); } }
+        private bool? _explicitNullValueFreeToEndUser = default!;
         /// <summary>The lease_type property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupLeaseType? LeaseType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupLeaseType? LeaseType { get => _explicitNullValueLeaseType; set { _explicitNullValueLeaseType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lease_type"); else _explicitNullProperties?.Remove("lease_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupLeaseType? _explicitNullValueLeaseType = default!;
         /// <summary>The migrated_live_traffic property</summary>
-        public bool? MigratedLiveTraffic { get; set; }
+        public bool? MigratedLiveTraffic { get => _explicitNullValueMigratedLiveTraffic; set { _explicitNullValueMigratedLiveTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migrated_live_traffic"); else _explicitNullProperties?.Remove("migrated_live_traffic"); } }
+        private bool? _explicitNullValueMigratedLiveTraffic = default!;
         /// <summary>The migrated_mms_enabled property</summary>
-        public bool? MigratedMmsEnabled { get; set; }
+        public bool? MigratedMmsEnabled { get => _explicitNullValueMigratedMmsEnabled; set { _explicitNullValueMigratedMmsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migrated_mms_enabled"); else _explicitNullProperties?.Remove("migrated_mms_enabled"); } }
+        private bool? _explicitNullValueMigratedMmsEnabled = default!;
         /// <summary>The mms_enabled property</summary>
-        public bool? MmsEnabled { get; set; }
+        public bool? MmsEnabled { get => _explicitNullValueMmsEnabled; set { _explicitNullValueMmsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mms_enabled"); else _explicitNullProperties?.Remove("mms_enabled"); } }
+        private bool? _explicitNullValueMmsEnabled = default!;
         /// <summary>The payment_frequency property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupPaymentFrequency? PaymentFrequency { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupPaymentFrequency? PaymentFrequency { get => _explicitNullValuePaymentFrequency; set { _explicitNullValuePaymentFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_frequency"); else _explicitNullProperties?.Remove("payment_frequency"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupPaymentFrequency? _explicitNullValuePaymentFrequency = default!;
         /// <summary>The request_type property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupRequestType? RequestType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupRequestType? RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_type"); else _explicitNullProperties?.Remove("request_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupRequestType? _explicitNullValueRequestType = default!;
         /// <summary>The short_code_preference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShortCodePreference { get; set; }
+        public string? ShortCodePreference { get => _explicitNullValueShortCodePreference; set { _explicitNullValueShortCodePreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_code_preference"); else _explicitNullProperties?.Remove("short_code_preference"); } }
+        private string? _explicitNullValueShortCodePreference = default!;
 #nullable restore
 #else
-        public string ShortCodePreference { get; set; }
+        public string ShortCodePreference { get => _explicitNullValueShortCodePreference; set { _explicitNullValueShortCodePreference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_code_preference"); else _explicitNullProperties?.Remove("short_code_preference"); } }
+        private string _explicitNullValueShortCodePreference = default!;
 #endif
         /// <summary>The traffic_type property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupTrafficType? TrafficType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupTrafficType? TrafficType { get => _explicitNullValueTrafficType; set { _explicitNullValueTrafficType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traffic_type"); else _explicitNullProperties?.Remove("traffic_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupTrafficType? _explicitNullValueTrafficType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup"/> and sets the default values.
         /// </summary>
@@ -64,7 +95,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetup(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -105,6 +136,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupRequestType>("request_type", RequestType);
             writer.WriteStringValue("short_code_preference", ShortCodePreference);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponseSetupTrafficType>("traffic_type", TrafficType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

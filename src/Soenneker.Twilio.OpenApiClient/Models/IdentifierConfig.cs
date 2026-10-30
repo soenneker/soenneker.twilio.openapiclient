@@ -11,29 +11,51 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IdentifierConfig : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enforceUnique") is { } nullNodeEnforceUnique && nullNodeEnforceUnique.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnforceUnique = null;
+            if (parseNode.GetChildNode("idType") is { } nullNodeIdType && nullNodeIdType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdType = null;
+            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("limitPolicy") is { } nullNodeLimitPolicy && nullNodeLimitPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LimitPolicy = null;
+            if (parseNode.GetChildNode("matchingAlgo") is { } nullNodeMatchingAlgo && nullNodeMatchingAlgo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchingAlgo = null;
+            if (parseNode.GetChildNode("matchingThreshold") is { } nullNodeMatchingThreshold && nullNodeMatchingThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchingThreshold = null;
+            if (parseNode.GetChildNode("normalization") is { } nullNodeNormalization && nullNodeNormalization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Normalization = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When enabled, more than one profile may not share the same identifier value.Adding a shared identifier to a second profile may trigger a merge.Disabling creates a compound identifier where merges are only triggered iftwo or more identifiers satisfy a matching rule.</summary>
-        public bool? EnforceUnique { get; set; }
+        public bool? EnforceUnique { get => _explicitNullValueEnforceUnique; set { _explicitNullValueEnforceUnique = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enforceUnique"); else _explicitNullProperties?.Remove("enforceUnique"); } }
+        private bool? _explicitNullValueEnforceUnique = default!;
         /// <summary>Name of the identifier type. Usual values are email, phone, external_id etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdType { get; set; }
+        public string? IdType { get => _explicitNullValueIdType; set { _explicitNullValueIdType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idType"); else _explicitNullProperties?.Remove("idType"); } }
+        private string? _explicitNullValueIdType = default!;
 #nullable restore
 #else
-        public string IdType { get; set; }
+        public string IdType { get => _explicitNullValueIdType; set { _explicitNullValueIdType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idType"); else _explicitNullProperties?.Remove("idType"); } }
+        private string _explicitNullValueIdType = default!;
 #endif
         /// <summary>Maximum number of historical values to retain.</summary>
-        public int? Limit { get; set; }
+        public int? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private int? _explicitNullValueLimit = default!;
         /// <summary>Removal policy to apply when the number of values exceeds the limit andis based on the timestamp of the request when the identifier was added.- `fifo`: First In First Out, removes the oldest values first.- `lifo`: Last In First Out, removes the most recent values first.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigLimitPolicy? LimitPolicy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigLimitPolicy? LimitPolicy { get => _explicitNullValueLimitPolicy; set { _explicitNullValueLimitPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limitPolicy"); else _explicitNullProperties?.Remove("limitPolicy"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigLimitPolicy? _explicitNullValueLimitPolicy = default!;
         /// <summary>The algorithm to use for matching identifier values.   - `exact`, exact string match.  - `fuzzy`, low precision match allowing for some variations.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigMatchingAlgo? MatchingAlgo { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigMatchingAlgo? MatchingAlgo { get => _explicitNullValueMatchingAlgo; set { _explicitNullValueMatchingAlgo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchingAlgo"); else _explicitNullProperties?.Remove("matchingAlgo"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigMatchingAlgo? _explicitNullValueMatchingAlgo = default!;
         /// <summary>The `fuzzy` matching threshold percentage.</summary>
-        public int? MatchingThreshold { get; set; }
+        public int? MatchingThreshold { get => _explicitNullValueMatchingThreshold; set { _explicitNullValueMatchingThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchingThreshold"); else _explicitNullProperties?.Remove("matchingThreshold"); } }
+        private int? _explicitNullValueMatchingThreshold = default!;
         /// <summary>Normalization to apply to the identifier value before storing and matching.- `phone`: Normalize phone numbers to E.164 format.- `email`: Normalize email addresses by coverting to lowercase and removing spaces.- `trim`: Removes spaces from both ends of the string.- `none`: No normalization.**Important Note for Phone Number Normalization:**When using the `phone` normalization option, please adhere to the following guidelines to ensure proper formatting:- All US numbers must be at least valid 10 digit phone numbers with area code. They may also include or omit the &quot;+1&quot; prefix.- Non-US numbers must include a 1-3 digit country code (a &quot;+&quot; prefix is optional). Non-US national formats are not supported and will be interpreted as US numbers.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigNormalization? Normalization { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigNormalization? Normalization { get => _explicitNullValueNormalization; set { _explicitNullValueNormalization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalization"); else _explicitNullProperties?.Remove("normalization"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigNormalization? _explicitNullValueNormalization = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig"/> and sets the default values.
         /// </summary>
@@ -52,7 +74,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -85,6 +107,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigMatchingAlgo>("matchingAlgo", MatchingAlgo);
             writer.WriteIntValue("matchingThreshold", MatchingThreshold);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfigNormalization>("normalization", Normalization);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

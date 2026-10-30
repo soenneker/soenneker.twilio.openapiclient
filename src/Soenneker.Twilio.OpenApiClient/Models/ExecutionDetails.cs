@@ -12,48 +12,70 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExecutionDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("channels") is { } nullNodeChannels && nullNodeChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channels = null;
+            if (parseNode.GetChildNode("communications") is { } nullNodeCommunications && nullNodeCommunications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Communications = null;
+            if (parseNode.GetChildNode("participants") is { } nullNodeParticipants && nullNodeParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Participants = null;
+            if (parseNode.GetChildNode("resolvedContext") is { } nullNodeResolvedContext && nullNodeResolvedContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolvedContext = null;
+            if (parseNode.GetChildNode("trigger") is { } nullNodeTrigger && nullNodeTrigger.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trigger = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Communication channels included in the Conversation when this Operator was executed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Channels { get; set; }
+        public List<string>? Channels { get => _explicitNullValueChannels; set { _explicitNullValueChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channels"); else _explicitNullProperties?.Remove("channels"); } }
+        private List<string>? _explicitNullValueChannels = default!;
 #nullable restore
 #else
-        public List<string> Channels { get; set; }
+        public List<string> Channels { get => _explicitNullValueChannels; set { _explicitNullValueChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channels"); else _explicitNullProperties?.Remove("channels"); } }
+        private List<string> _explicitNullValueChannels = default!;
 #endif
         /// <summary>Range of first and last communications in the Conversation that were processed during this Operator execution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications? Communications { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications? Communications { get => _explicitNullValueCommunications; set { _explicitNullValueCommunications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communications"); else _explicitNullProperties?.Remove("communications"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications? _explicitNullValueCommunications = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications Communications { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications Communications { get => _explicitNullValueCommunications; set { _explicitNullValueCommunications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communications"); else _explicitNullProperties?.Remove("communications"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsCommunications _explicitNullValueCommunications = default!;
 #endif
         /// <summary>Metadata for the participants included in the Conversation when this Operator executed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem>? Participants { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem>? Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem>? _explicitNullValueParticipants = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem> Participants { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem> Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem> _explicitNullValueParticipants = default!;
 #endif
         /// <summary>The context that was actually used by the operator during execution</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext? ResolvedContext { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext? ResolvedContext { get => _explicitNullValueResolvedContext; set { _explicitNullValueResolvedContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolvedContext"); else _explicitNullProperties?.Remove("resolvedContext"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext? _explicitNullValueResolvedContext = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext ResolvedContext { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext ResolvedContext { get => _explicitNullValueResolvedContext; set { _explicitNullValueResolvedContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolvedContext"); else _explicitNullProperties?.Remove("resolvedContext"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext _explicitNullValueResolvedContext = default!;
 #endif
         /// <summary>Metadata for the trigger that generated this Operator Result.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsTrigger? Trigger { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsTrigger? Trigger { get => _explicitNullValueTrigger; set { _explicitNullValueTrigger = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger"); else _explicitNullProperties?.Remove("trigger"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsTrigger? _explicitNullValueTrigger = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsTrigger Trigger { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsTrigger Trigger { get => _explicitNullValueTrigger; set { _explicitNullValueTrigger = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger"); else _explicitNullProperties?.Remove("trigger"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsTrigger _explicitNullValueTrigger = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetails"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsParticipantsItem>("participants", Participants);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext>("resolvedContext", ResolvedContext);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ExecutionDetailsTrigger>("trigger", Trigger);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

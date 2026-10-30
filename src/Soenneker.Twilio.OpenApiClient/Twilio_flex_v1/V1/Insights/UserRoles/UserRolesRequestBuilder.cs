@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Insights.UserRoles
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsUserRoles>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsUserRoles.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsUserRoles>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsUserRoles.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This is used by Flex UI and Quality Management to fetch the Flex Insights roles for the user

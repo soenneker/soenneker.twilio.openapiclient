@@ -11,27 +11,42 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioEventsV1CreateSinkXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("SinkConfiguration") is { } nullNodeSinkConfiguration && nullNodeSinkConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SinkConfiguration = null;
+            if (parseNode.GetChildNode("SinkType") is { } nullNodeSinkType && nullNodeSinkType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SinkType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A human readable description for the Sink **This value should not contain PII.**</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The information required for Twilio to connect to the provided Sink encoded as JSON.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SinkConfiguration { get; set; }
+        public UntypedNode? SinkConfiguration { get => _explicitNullValueSinkConfiguration; set { _explicitNullValueSinkConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SinkConfiguration"); else _explicitNullProperties?.Remove("SinkConfiguration"); } }
+        private UntypedNode? _explicitNullValueSinkConfiguration = default!;
 #nullable restore
 #else
-        public UntypedNode SinkConfiguration { get; set; }
+        public UntypedNode SinkConfiguration { get => _explicitNullValueSinkConfiguration; set { _explicitNullValueSinkConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SinkConfiguration"); else _explicitNullProperties?.Remove("SinkConfiguration"); } }
+        private UntypedNode _explicitNullValueSinkConfiguration = default!;
 #endif
         /// <summary>The Sink type. Can only be &quot;kinesis&quot; or &quot;webhook&quot; currently.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType? SinkType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType? SinkType { get => _explicitNullValueSinkType; set { _explicitNullValueSinkType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SinkType"); else _explicitNullProperties?.Remove("SinkType"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType? _explicitNullValueSinkType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSinkXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -47,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSinkXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSinkXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioEventsV1CreateSinkXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("Description", Description);
             writer.WriteObjectValue<UntypedNode>("SinkConfiguration", SinkConfiguration);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.SinkEnumSinkType>("SinkType", SinkType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

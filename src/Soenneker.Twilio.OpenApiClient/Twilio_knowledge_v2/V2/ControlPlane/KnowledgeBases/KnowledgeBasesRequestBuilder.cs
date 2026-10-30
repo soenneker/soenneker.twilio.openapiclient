@@ -74,6 +74,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.ControlPlane.Kno
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBaseList>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeBaseList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -107,6 +109,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.ControlPlane.Kno
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2CreateKnowledgeBase202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

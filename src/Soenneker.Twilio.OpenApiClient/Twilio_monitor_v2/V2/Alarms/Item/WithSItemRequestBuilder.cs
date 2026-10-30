@@ -66,6 +66,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.Item
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -97,6 +99,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.Item
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV2AlarmBody>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.MonitorV2AlarmBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -130,6 +134,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_monitor_v2.V2.Alarms.Item
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMonitorV2TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.MonitorV2AlarmSidRepsonse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.MonitorV2AlarmSidRepsonse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

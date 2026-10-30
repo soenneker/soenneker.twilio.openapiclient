@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.HostedNumbers.Authorizat
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListHostedNumbersAuthorizationDocumentResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListHostedNumbersAuthorizationDocumentResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListHostedNumbersAuthorizationDocumentResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListHostedNumbersAuthorizationDocumentResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create an AuthorizationDocument for authorizing the hosting of phone number capabilities on Twilio&apos;s platform.
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.HostedNumbers.Authorizat
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersAuthorizationDocument>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersAuthorizationDocument.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersAuthorizationDocument>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.PreviewHostedNumbersAuthorizationDocument.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of AuthorizationDocuments belonging to the account initiating the request.

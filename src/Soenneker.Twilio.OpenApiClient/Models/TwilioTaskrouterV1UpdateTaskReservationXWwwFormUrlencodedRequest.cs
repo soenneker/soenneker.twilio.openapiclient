@@ -11,320 +11,469 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Beep") is { } nullNodeBeep && nullNodeBeep.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Beep = null;
+            if (parseNode.GetChildNode("BeepOnCustomerEntrance") is { } nullNodeBeepOnCustomerEntrance && nullNodeBeepOnCustomerEntrance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BeepOnCustomerEntrance = null;
+            if (parseNode.GetChildNode("CallAccept") is { } nullNodeCallAccept && nullNodeCallAccept.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallAccept = null;
+            if (parseNode.GetChildNode("CallFrom") is { } nullNodeCallFrom && nullNodeCallFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallFrom = null;
+            if (parseNode.GetChildNode("CallRecord") is { } nullNodeCallRecord && nullNodeCallRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallRecord = null;
+            if (parseNode.GetChildNode("CallStatusCallbackUrl") is { } nullNodeCallStatusCallbackUrl && nullNodeCallStatusCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallStatusCallbackUrl = null;
+            if (parseNode.GetChildNode("CallTimeout") is { } nullNodeCallTimeout && nullNodeCallTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallTimeout = null;
+            if (parseNode.GetChildNode("CallTo") is { } nullNodeCallTo && nullNodeCallTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallTo = null;
+            if (parseNode.GetChildNode("CallUrl") is { } nullNodeCallUrl && nullNodeCallUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallUrl = null;
+            if (parseNode.GetChildNode("ConferenceRecord") is { } nullNodeConferenceRecord && nullNodeConferenceRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceRecord = null;
+            if (parseNode.GetChildNode("ConferenceRecordingStatusCallback") is { } nullNodeConferenceRecordingStatusCallback && nullNodeConferenceRecordingStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceRecordingStatusCallback = null;
+            if (parseNode.GetChildNode("ConferenceRecordingStatusCallbackMethod") is { } nullNodeConferenceRecordingStatusCallbackMethod && nullNodeConferenceRecordingStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceRecordingStatusCallbackMethod = null;
+            if (parseNode.GetChildNode("ConferenceStatusCallback") is { } nullNodeConferenceStatusCallback && nullNodeConferenceStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceStatusCallback = null;
+            if (parseNode.GetChildNode("ConferenceStatusCallbackEvent") is { } nullNodeConferenceStatusCallbackEvent && nullNodeConferenceStatusCallbackEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceStatusCallbackEvent = null;
+            if (parseNode.GetChildNode("ConferenceStatusCallbackMethod") is { } nullNodeConferenceStatusCallbackMethod && nullNodeConferenceStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceStatusCallbackMethod = null;
+            if (parseNode.GetChildNode("ConferenceTrim") is { } nullNodeConferenceTrim && nullNodeConferenceTrim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceTrim = null;
+            if (parseNode.GetChildNode("DequeueFrom") is { } nullNodeDequeueFrom && nullNodeDequeueFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DequeueFrom = null;
+            if (parseNode.GetChildNode("DequeuePostWorkActivitySid") is { } nullNodeDequeuePostWorkActivitySid && nullNodeDequeuePostWorkActivitySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DequeuePostWorkActivitySid = null;
+            if (parseNode.GetChildNode("DequeueRecord") is { } nullNodeDequeueRecord && nullNodeDequeueRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DequeueRecord = null;
+            if (parseNode.GetChildNode("DequeueStatusCallbackEvent") is { } nullNodeDequeueStatusCallbackEvent && nullNodeDequeueStatusCallbackEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DequeueStatusCallbackEvent = null;
+            if (parseNode.GetChildNode("DequeueStatusCallbackUrl") is { } nullNodeDequeueStatusCallbackUrl && nullNodeDequeueStatusCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DequeueStatusCallbackUrl = null;
+            if (parseNode.GetChildNode("DequeueTimeout") is { } nullNodeDequeueTimeout && nullNodeDequeueTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DequeueTimeout = null;
+            if (parseNode.GetChildNode("DequeueTo") is { } nullNodeDequeueTo && nullNodeDequeueTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DequeueTo = null;
+            if (parseNode.GetChildNode("EarlyMedia") is { } nullNodeEarlyMedia && nullNodeEarlyMedia.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EarlyMedia = null;
+            if (parseNode.GetChildNode("EndConferenceOnCustomerExit") is { } nullNodeEndConferenceOnCustomerExit && nullNodeEndConferenceOnCustomerExit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndConferenceOnCustomerExit = null;
+            if (parseNode.GetChildNode("EndConferenceOnExit") is { } nullNodeEndConferenceOnExit && nullNodeEndConferenceOnExit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndConferenceOnExit = null;
+            if (parseNode.GetChildNode("From") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
+            if (parseNode.GetChildNode("Instruction") is { } nullNodeInstruction && nullNodeInstruction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instruction = null;
+            if (parseNode.GetChildNode("JitterBufferSize") is { } nullNodeJitterBufferSize && nullNodeJitterBufferSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JitterBufferSize = null;
+            if (parseNode.GetChildNode("MaxParticipants") is { } nullNodeMaxParticipants && nullNodeMaxParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxParticipants = null;
+            if (parseNode.GetChildNode("Muted") is { } nullNodeMuted && nullNodeMuted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Muted = null;
+            if (parseNode.GetChildNode("PostWorkActivitySid") is { } nullNodePostWorkActivitySid && nullNodePostWorkActivitySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostWorkActivitySid = null;
+            if (parseNode.GetChildNode("Record") is { } nullNodeRecord && nullNodeRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Record = null;
+            if (parseNode.GetChildNode("RecordingChannels") is { } nullNodeRecordingChannels && nullNodeRecordingChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingChannels = null;
+            if (parseNode.GetChildNode("RecordingStatusCallback") is { } nullNodeRecordingStatusCallback && nullNodeRecordingStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingStatusCallback = null;
+            if (parseNode.GetChildNode("RecordingStatusCallbackMethod") is { } nullNodeRecordingStatusCallbackMethod && nullNodeRecordingStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingStatusCallbackMethod = null;
+            if (parseNode.GetChildNode("RedirectAccept") is { } nullNodeRedirectAccept && nullNodeRedirectAccept.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectAccept = null;
+            if (parseNode.GetChildNode("RedirectCallSid") is { } nullNodeRedirectCallSid && nullNodeRedirectCallSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectCallSid = null;
+            if (parseNode.GetChildNode("RedirectUrl") is { } nullNodeRedirectUrl && nullNodeRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUrl = null;
+            if (parseNode.GetChildNode("Region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
+            if (parseNode.GetChildNode("ReservationStatus") is { } nullNodeReservationStatus && nullNodeReservationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReservationStatus = null;
+            if (parseNode.GetChildNode("SipAuthPassword") is { } nullNodeSipAuthPassword && nullNodeSipAuthPassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SipAuthPassword = null;
+            if (parseNode.GetChildNode("SipAuthUsername") is { } nullNodeSipAuthUsername && nullNodeSipAuthUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SipAuthUsername = null;
+            if (parseNode.GetChildNode("StartConferenceOnEnter") is { } nullNodeStartConferenceOnEnter && nullNodeStartConferenceOnEnter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartConferenceOnEnter = null;
+            if (parseNode.GetChildNode("StatusCallback") is { } nullNodeStatusCallback && nullNodeStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallback = null;
+            if (parseNode.GetChildNode("StatusCallbackEvent") is { } nullNodeStatusCallbackEvent && nullNodeStatusCallbackEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbackEvent = null;
+            if (parseNode.GetChildNode("StatusCallbackMethod") is { } nullNodeStatusCallbackMethod && nullNodeStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbackMethod = null;
+            if (parseNode.GetChildNode("Supervisor") is { } nullNodeSupervisor && nullNodeSupervisor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Supervisor = null;
+            if (parseNode.GetChildNode("SupervisorMode") is { } nullNodeSupervisorMode && nullNodeSupervisorMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupervisorMode = null;
+            if (parseNode.GetChildNode("Timeout") is { } nullNodeTimeout && nullNodeTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timeout = null;
+            if (parseNode.GetChildNode("To") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
+            if (parseNode.GetChildNode("WaitMethod") is { } nullNodeWaitMethod && nullNodeWaitMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WaitMethod = null;
+            if (parseNode.GetChildNode("WaitUrl") is { } nullNodeWaitUrl && nullNodeWaitUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WaitUrl = null;
+            if (parseNode.GetChildNode("WorkerActivitySid") is { } nullNodeWorkerActivitySid && nullNodeWorkerActivitySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerActivitySid = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to play a notification beep when the participant joins or when to play a beep. Can be: `true`, `false`, `onEnter`, or `onExit`. The default value is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Beep { get; set; }
+        public string? Beep { get => _explicitNullValueBeep; set { _explicitNullValueBeep = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Beep"); else _explicitNullProperties?.Remove("Beep"); } }
+        private string? _explicitNullValueBeep = default!;
 #nullable restore
 #else
-        public string Beep { get; set; }
+        public string Beep { get => _explicitNullValueBeep; set { _explicitNullValueBeep = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Beep"); else _explicitNullProperties?.Remove("Beep"); } }
+        private string _explicitNullValueBeep = default!;
 #endif
         /// <summary>Whether to play a notification beep when the customer joins.</summary>
-        public bool? BeepOnCustomerEntrance { get; set; }
+        public bool? BeepOnCustomerEntrance { get => _explicitNullValueBeepOnCustomerEntrance; set { _explicitNullValueBeepOnCustomerEntrance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BeepOnCustomerEntrance"); else _explicitNullProperties?.Remove("BeepOnCustomerEntrance"); } }
+        private bool? _explicitNullValueBeepOnCustomerEntrance = default!;
         /// <summary>Whether to accept a reservation when executing a Call instruction.</summary>
-        public bool? CallAccept { get; set; }
+        public bool? CallAccept { get => _explicitNullValueCallAccept; set { _explicitNullValueCallAccept = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallAccept"); else _explicitNullProperties?.Remove("CallAccept"); } }
+        private bool? _explicitNullValueCallAccept = default!;
         /// <summary>The Caller ID of the outbound call when executing a Call instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallFrom { get; set; }
+        public string? CallFrom { get => _explicitNullValueCallFrom; set { _explicitNullValueCallFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallFrom"); else _explicitNullProperties?.Remove("CallFrom"); } }
+        private string? _explicitNullValueCallFrom = default!;
 #nullable restore
 #else
-        public string CallFrom { get; set; }
+        public string CallFrom { get => _explicitNullValueCallFrom; set { _explicitNullValueCallFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallFrom"); else _explicitNullProperties?.Remove("CallFrom"); } }
+        private string _explicitNullValueCallFrom = default!;
 #endif
         /// <summary>Whether to record both legs of a call when executing a Call instruction or which leg to record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallRecord { get; set; }
+        public string? CallRecord { get => _explicitNullValueCallRecord; set { _explicitNullValueCallRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallRecord"); else _explicitNullProperties?.Remove("CallRecord"); } }
+        private string? _explicitNullValueCallRecord = default!;
 #nullable restore
 #else
-        public string CallRecord { get; set; }
+        public string CallRecord { get => _explicitNullValueCallRecord; set { _explicitNullValueCallRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallRecord"); else _explicitNullProperties?.Remove("CallRecord"); } }
+        private string _explicitNullValueCallRecord = default!;
 #endif
         /// <summary>The URL to call  for the completed call event when executing a Call instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallStatusCallbackUrl { get; set; }
+        public string? CallStatusCallbackUrl { get => _explicitNullValueCallStatusCallbackUrl; set { _explicitNullValueCallStatusCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallStatusCallbackUrl"); else _explicitNullProperties?.Remove("CallStatusCallbackUrl"); } }
+        private string? _explicitNullValueCallStatusCallbackUrl = default!;
 #nullable restore
 #else
-        public string CallStatusCallbackUrl { get; set; }
+        public string CallStatusCallbackUrl { get => _explicitNullValueCallStatusCallbackUrl; set { _explicitNullValueCallStatusCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallStatusCallbackUrl"); else _explicitNullProperties?.Remove("CallStatusCallbackUrl"); } }
+        private string _explicitNullValueCallStatusCallbackUrl = default!;
 #endif
         /// <summary>Timeout for call when executing a Call instruction.</summary>
-        public int? CallTimeout { get; set; }
+        public int? CallTimeout { get => _explicitNullValueCallTimeout; set { _explicitNullValueCallTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallTimeout"); else _explicitNullProperties?.Remove("CallTimeout"); } }
+        private int? _explicitNullValueCallTimeout = default!;
         /// <summary>The Contact URI of the worker when executing a Call instruction.  Can be the URI of the Twilio Client, the SIP URI for Programmable SIP, or the [E.164](https://www.twilio.com/docs/glossary/what-e164) formatted phone number, depending on the destination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallTo { get; set; }
+        public string? CallTo { get => _explicitNullValueCallTo; set { _explicitNullValueCallTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallTo"); else _explicitNullProperties?.Remove("CallTo"); } }
+        private string? _explicitNullValueCallTo = default!;
 #nullable restore
 #else
-        public string CallTo { get; set; }
+        public string CallTo { get => _explicitNullValueCallTo; set { _explicitNullValueCallTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallTo"); else _explicitNullProperties?.Remove("CallTo"); } }
+        private string _explicitNullValueCallTo = default!;
 #endif
         /// <summary>TwiML URI executed on answering the worker&apos;s leg as a result of the Call instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallUrl { get; set; }
+        public string? CallUrl { get => _explicitNullValueCallUrl; set { _explicitNullValueCallUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallUrl"); else _explicitNullProperties?.Remove("CallUrl"); } }
+        private string? _explicitNullValueCallUrl = default!;
 #nullable restore
 #else
-        public string CallUrl { get; set; }
+        public string CallUrl { get => _explicitNullValueCallUrl; set { _explicitNullValueCallUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallUrl"); else _explicitNullProperties?.Remove("CallUrl"); } }
+        private string _explicitNullValueCallUrl = default!;
 #endif
         /// <summary>Whether to record the conference the participant is joining or when to record the conference. Can be: `true`, `false`, `record-from-start`, and `do-not-record`. The default value is `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConferenceRecord { get; set; }
+        public string? ConferenceRecord { get => _explicitNullValueConferenceRecord; set { _explicitNullValueConferenceRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceRecord"); else _explicitNullProperties?.Remove("ConferenceRecord"); } }
+        private string? _explicitNullValueConferenceRecord = default!;
 #nullable restore
 #else
-        public string ConferenceRecord { get; set; }
+        public string ConferenceRecord { get => _explicitNullValueConferenceRecord; set { _explicitNullValueConferenceRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceRecord"); else _explicitNullProperties?.Remove("ConferenceRecord"); } }
+        private string _explicitNullValueConferenceRecord = default!;
 #endif
         /// <summary>The URL we should call using the `conference_recording_status_callback_method` when the conference recording is available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConferenceRecordingStatusCallback { get; set; }
+        public string? ConferenceRecordingStatusCallback { get => _explicitNullValueConferenceRecordingStatusCallback; set { _explicitNullValueConferenceRecordingStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceRecordingStatusCallback"); else _explicitNullProperties?.Remove("ConferenceRecordingStatusCallback"); } }
+        private string? _explicitNullValueConferenceRecordingStatusCallback = default!;
 #nullable restore
 #else
-        public string ConferenceRecordingStatusCallback { get; set; }
+        public string ConferenceRecordingStatusCallback { get => _explicitNullValueConferenceRecordingStatusCallback; set { _explicitNullValueConferenceRecordingStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceRecordingStatusCallback"); else _explicitNullProperties?.Remove("ConferenceRecordingStatusCallback"); } }
+        private string _explicitNullValueConferenceRecordingStatusCallback = default!;
 #endif
         /// <summary>The HTTP method we should use to call `conference_recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestConferenceRecordingStatusCallbackMethod? ConferenceRecordingStatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestConferenceRecordingStatusCallbackMethod? ConferenceRecordingStatusCallbackMethod { get => _explicitNullValueConferenceRecordingStatusCallbackMethod; set { _explicitNullValueConferenceRecordingStatusCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceRecordingStatusCallbackMethod"); else _explicitNullProperties?.Remove("ConferenceRecordingStatusCallbackMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestConferenceRecordingStatusCallbackMethod? _explicitNullValueConferenceRecordingStatusCallbackMethod = default!;
         /// <summary>The URL we should call using the `conference_status_callback_method` when the conference events in `conference_status_callback_event` occur. Only the value set by the first participant to join the conference is used. Subsequent `conference_status_callback` values are ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConferenceStatusCallback { get; set; }
+        public string? ConferenceStatusCallback { get => _explicitNullValueConferenceStatusCallback; set { _explicitNullValueConferenceStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceStatusCallback"); else _explicitNullProperties?.Remove("ConferenceStatusCallback"); } }
+        private string? _explicitNullValueConferenceStatusCallback = default!;
 #nullable restore
 #else
-        public string ConferenceStatusCallback { get; set; }
+        public string ConferenceStatusCallback { get => _explicitNullValueConferenceStatusCallback; set { _explicitNullValueConferenceStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceStatusCallback"); else _explicitNullProperties?.Remove("ConferenceStatusCallback"); } }
+        private string _explicitNullValueConferenceStatusCallback = default!;
 #endif
         /// <summary>The conference status events that we will send to `conference_status_callback`. Can be: `start`, `end`, `join`, `leave`, `mute`, `hold`, `speaker`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumConferenceEvent?>? ConferenceStatusCallbackEvent { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumConferenceEvent?>? ConferenceStatusCallbackEvent { get => _explicitNullValueConferenceStatusCallbackEvent; set { _explicitNullValueConferenceStatusCallbackEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceStatusCallbackEvent"); else _explicitNullProperties?.Remove("ConferenceStatusCallbackEvent"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumConferenceEvent?>? _explicitNullValueConferenceStatusCallbackEvent = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumConferenceEvent?> ConferenceStatusCallbackEvent { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumConferenceEvent?> ConferenceStatusCallbackEvent { get => _explicitNullValueConferenceStatusCallbackEvent; set { _explicitNullValueConferenceStatusCallbackEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceStatusCallbackEvent"); else _explicitNullProperties?.Remove("ConferenceStatusCallbackEvent"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumConferenceEvent?> _explicitNullValueConferenceStatusCallbackEvent = default!;
 #endif
         /// <summary>The HTTP method we should use to call `conference_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestConferenceStatusCallbackMethod? ConferenceStatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestConferenceStatusCallbackMethod? ConferenceStatusCallbackMethod { get => _explicitNullValueConferenceStatusCallbackMethod; set { _explicitNullValueConferenceStatusCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceStatusCallbackMethod"); else _explicitNullProperties?.Remove("ConferenceStatusCallbackMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestConferenceStatusCallbackMethod? _explicitNullValueConferenceStatusCallbackMethod = default!;
         /// <summary>How to trim the leading and trailing silence from your recorded conference audio files. Can be: `trim-silence` or `do-not-trim` and defaults to `trim-silence`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConferenceTrim { get; set; }
+        public string? ConferenceTrim { get => _explicitNullValueConferenceTrim; set { _explicitNullValueConferenceTrim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceTrim"); else _explicitNullProperties?.Remove("ConferenceTrim"); } }
+        private string? _explicitNullValueConferenceTrim = default!;
 #nullable restore
 #else
-        public string ConferenceTrim { get; set; }
+        public string ConferenceTrim { get => _explicitNullValueConferenceTrim; set { _explicitNullValueConferenceTrim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConferenceTrim"); else _explicitNullProperties?.Remove("ConferenceTrim"); } }
+        private string _explicitNullValueConferenceTrim = default!;
 #endif
         /// <summary>The Caller ID of the call to the worker when executing a Dequeue instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DequeueFrom { get; set; }
+        public string? DequeueFrom { get => _explicitNullValueDequeueFrom; set { _explicitNullValueDequeueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeueFrom"); else _explicitNullProperties?.Remove("DequeueFrom"); } }
+        private string? _explicitNullValueDequeueFrom = default!;
 #nullable restore
 #else
-        public string DequeueFrom { get; set; }
+        public string DequeueFrom { get => _explicitNullValueDequeueFrom; set { _explicitNullValueDequeueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeueFrom"); else _explicitNullProperties?.Remove("DequeueFrom"); } }
+        private string _explicitNullValueDequeueFrom = default!;
 #endif
         /// <summary>The SID of the Activity resource to start after executing a Dequeue instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DequeuePostWorkActivitySid { get; set; }
+        public string? DequeuePostWorkActivitySid { get => _explicitNullValueDequeuePostWorkActivitySid; set { _explicitNullValueDequeuePostWorkActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeuePostWorkActivitySid"); else _explicitNullProperties?.Remove("DequeuePostWorkActivitySid"); } }
+        private string? _explicitNullValueDequeuePostWorkActivitySid = default!;
 #nullable restore
 #else
-        public string DequeuePostWorkActivitySid { get; set; }
+        public string DequeuePostWorkActivitySid { get => _explicitNullValueDequeuePostWorkActivitySid; set { _explicitNullValueDequeuePostWorkActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeuePostWorkActivitySid"); else _explicitNullProperties?.Remove("DequeuePostWorkActivitySid"); } }
+        private string _explicitNullValueDequeuePostWorkActivitySid = default!;
 #endif
         /// <summary>Whether to record both legs of a call when executing a Dequeue instruction or which leg to record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DequeueRecord { get; set; }
+        public string? DequeueRecord { get => _explicitNullValueDequeueRecord; set { _explicitNullValueDequeueRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeueRecord"); else _explicitNullProperties?.Remove("DequeueRecord"); } }
+        private string? _explicitNullValueDequeueRecord = default!;
 #nullable restore
 #else
-        public string DequeueRecord { get; set; }
+        public string DequeueRecord { get => _explicitNullValueDequeueRecord; set { _explicitNullValueDequeueRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeueRecord"); else _explicitNullProperties?.Remove("DequeueRecord"); } }
+        private string _explicitNullValueDequeueRecord = default!;
 #endif
         /// <summary>The Call progress events sent via webhooks as a result of a Dequeue instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? DequeueStatusCallbackEvent { get; set; }
+        public List<string>? DequeueStatusCallbackEvent { get => _explicitNullValueDequeueStatusCallbackEvent; set { _explicitNullValueDequeueStatusCallbackEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeueStatusCallbackEvent"); else _explicitNullProperties?.Remove("DequeueStatusCallbackEvent"); } }
+        private List<string>? _explicitNullValueDequeueStatusCallbackEvent = default!;
 #nullable restore
 #else
-        public List<string> DequeueStatusCallbackEvent { get; set; }
+        public List<string> DequeueStatusCallbackEvent { get => _explicitNullValueDequeueStatusCallbackEvent; set { _explicitNullValueDequeueStatusCallbackEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeueStatusCallbackEvent"); else _explicitNullProperties?.Remove("DequeueStatusCallbackEvent"); } }
+        private List<string> _explicitNullValueDequeueStatusCallbackEvent = default!;
 #endif
         /// <summary>The Callback URL for completed call event when executing a Dequeue instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DequeueStatusCallbackUrl { get; set; }
+        public string? DequeueStatusCallbackUrl { get => _explicitNullValueDequeueStatusCallbackUrl; set { _explicitNullValueDequeueStatusCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeueStatusCallbackUrl"); else _explicitNullProperties?.Remove("DequeueStatusCallbackUrl"); } }
+        private string? _explicitNullValueDequeueStatusCallbackUrl = default!;
 #nullable restore
 #else
-        public string DequeueStatusCallbackUrl { get; set; }
+        public string DequeueStatusCallbackUrl { get => _explicitNullValueDequeueStatusCallbackUrl; set { _explicitNullValueDequeueStatusCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeueStatusCallbackUrl"); else _explicitNullProperties?.Remove("DequeueStatusCallbackUrl"); } }
+        private string _explicitNullValueDequeueStatusCallbackUrl = default!;
 #endif
         /// <summary>Timeout for call when executing a Dequeue instruction.</summary>
-        public int? DequeueTimeout { get; set; }
+        public int? DequeueTimeout { get => _explicitNullValueDequeueTimeout; set { _explicitNullValueDequeueTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeueTimeout"); else _explicitNullProperties?.Remove("DequeueTimeout"); } }
+        private int? _explicitNullValueDequeueTimeout = default!;
         /// <summary>The Contact URI of the worker when executing a Dequeue instruction. Can be the URI of the Twilio Client, the SIP URI for Programmable SIP, or the [E.164](https://www.twilio.com/docs/glossary/what-e164) formatted phone number, depending on the destination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DequeueTo { get; set; }
+        public string? DequeueTo { get => _explicitNullValueDequeueTo; set { _explicitNullValueDequeueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeueTo"); else _explicitNullProperties?.Remove("DequeueTo"); } }
+        private string? _explicitNullValueDequeueTo = default!;
 #nullable restore
 #else
-        public string DequeueTo { get; set; }
+        public string DequeueTo { get => _explicitNullValueDequeueTo; set { _explicitNullValueDequeueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DequeueTo"); else _explicitNullProperties?.Remove("DequeueTo"); } }
+        private string _explicitNullValueDequeueTo = default!;
 #endif
         /// <summary>Whether to allow an agent to hear the state of the outbound call, including ringing or disconnect messages. The default is `true`.</summary>
-        public bool? EarlyMedia { get; set; }
+        public bool? EarlyMedia { get => _explicitNullValueEarlyMedia; set { _explicitNullValueEarlyMedia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EarlyMedia"); else _explicitNullProperties?.Remove("EarlyMedia"); } }
+        private bool? _explicitNullValueEarlyMedia = default!;
         /// <summary>Whether to end the conference when the customer leaves.</summary>
-        public bool? EndConferenceOnCustomerExit { get; set; }
+        public bool? EndConferenceOnCustomerExit { get => _explicitNullValueEndConferenceOnCustomerExit; set { _explicitNullValueEndConferenceOnCustomerExit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EndConferenceOnCustomerExit"); else _explicitNullProperties?.Remove("EndConferenceOnCustomerExit"); } }
+        private bool? _explicitNullValueEndConferenceOnCustomerExit = default!;
         /// <summary>Whether to end the conference when the agent leaves.</summary>
-        public bool? EndConferenceOnExit { get; set; }
+        public bool? EndConferenceOnExit { get => _explicitNullValueEndConferenceOnExit; set { _explicitNullValueEndConferenceOnExit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EndConferenceOnExit"); else _explicitNullProperties?.Remove("EndConferenceOnExit"); } }
+        private bool? _explicitNullValueEndConferenceOnExit = default!;
         /// <summary>The Caller ID of the call to the worker when executing a Conference instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? From { get; set; }
+        public string? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("From"); else _explicitNullProperties?.Remove("From"); } }
+        private string? _explicitNullValueFrom = default!;
 #nullable restore
 #else
-        public string From { get; set; }
+        public string From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("From"); else _explicitNullProperties?.Remove("From"); } }
+        private string _explicitNullValueFrom = default!;
 #endif
         /// <summary>The assignment instruction for reservation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Instruction { get; set; }
+        public string? Instruction { get => _explicitNullValueInstruction; set { _explicitNullValueInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Instruction"); else _explicitNullProperties?.Remove("Instruction"); } }
+        private string? _explicitNullValueInstruction = default!;
 #nullable restore
 #else
-        public string Instruction { get; set; }
+        public string Instruction { get => _explicitNullValueInstruction; set { _explicitNullValueInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Instruction"); else _explicitNullProperties?.Remove("Instruction"); } }
+        private string _explicitNullValueInstruction = default!;
 #endif
         /// <summary>The jitter buffer size for conference. Can be: `small`, `medium`, `large`, `off`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JitterBufferSize { get; set; }
+        public string? JitterBufferSize { get => _explicitNullValueJitterBufferSize; set { _explicitNullValueJitterBufferSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("JitterBufferSize"); else _explicitNullProperties?.Remove("JitterBufferSize"); } }
+        private string? _explicitNullValueJitterBufferSize = default!;
 #nullable restore
 #else
-        public string JitterBufferSize { get; set; }
+        public string JitterBufferSize { get => _explicitNullValueJitterBufferSize; set { _explicitNullValueJitterBufferSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("JitterBufferSize"); else _explicitNullProperties?.Remove("JitterBufferSize"); } }
+        private string _explicitNullValueJitterBufferSize = default!;
 #endif
         /// <summary>The maximum number of participants in the conference. Can be a positive integer from `2` to `250`. The default value is `250`.</summary>
-        public int? MaxParticipants { get; set; }
+        public int? MaxParticipants { get => _explicitNullValueMaxParticipants; set { _explicitNullValueMaxParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaxParticipants"); else _explicitNullProperties?.Remove("MaxParticipants"); } }
+        private int? _explicitNullValueMaxParticipants = default!;
         /// <summary>Whether the agent is muted in the conference. The default is `false`.</summary>
-        public bool? Muted { get; set; }
+        public bool? Muted { get => _explicitNullValueMuted; set { _explicitNullValueMuted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Muted"); else _explicitNullProperties?.Remove("Muted"); } }
+        private bool? _explicitNullValueMuted = default!;
         /// <summary>The new worker activity SID after executing a Conference instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PostWorkActivitySid { get; set; }
+        public string? PostWorkActivitySid { get => _explicitNullValuePostWorkActivitySid; set { _explicitNullValuePostWorkActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostWorkActivitySid"); else _explicitNullProperties?.Remove("PostWorkActivitySid"); } }
+        private string? _explicitNullValuePostWorkActivitySid = default!;
 #nullable restore
 #else
-        public string PostWorkActivitySid { get; set; }
+        public string PostWorkActivitySid { get => _explicitNullValuePostWorkActivitySid; set { _explicitNullValuePostWorkActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostWorkActivitySid"); else _explicitNullProperties?.Remove("PostWorkActivitySid"); } }
+        private string _explicitNullValuePostWorkActivitySid = default!;
 #endif
         /// <summary>Whether to record the participant and their conferences, including the time between conferences. The default is `false`.</summary>
-        public bool? Record { get; set; }
+        public bool? Record { get => _explicitNullValueRecord; set { _explicitNullValueRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Record"); else _explicitNullProperties?.Remove("Record"); } }
+        private bool? _explicitNullValueRecord = default!;
         /// <summary>The recording channels for the final recording. Can be: `mono` or `dual` and the default is `mono`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordingChannels { get; set; }
+        public string? RecordingChannels { get => _explicitNullValueRecordingChannels; set { _explicitNullValueRecordingChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingChannels"); else _explicitNullProperties?.Remove("RecordingChannels"); } }
+        private string? _explicitNullValueRecordingChannels = default!;
 #nullable restore
 #else
-        public string RecordingChannels { get; set; }
+        public string RecordingChannels { get => _explicitNullValueRecordingChannels; set { _explicitNullValueRecordingChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingChannels"); else _explicitNullProperties?.Remove("RecordingChannels"); } }
+        private string _explicitNullValueRecordingChannels = default!;
 #endif
         /// <summary>The URL that we should call using the `recording_status_callback_method` when the recording status changes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordingStatusCallback { get; set; }
+        public string? RecordingStatusCallback { get => _explicitNullValueRecordingStatusCallback; set { _explicitNullValueRecordingStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallback"); else _explicitNullProperties?.Remove("RecordingStatusCallback"); } }
+        private string? _explicitNullValueRecordingStatusCallback = default!;
 #nullable restore
 #else
-        public string RecordingStatusCallback { get; set; }
+        public string RecordingStatusCallback { get => _explicitNullValueRecordingStatusCallback; set { _explicitNullValueRecordingStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallback"); else _explicitNullProperties?.Remove("RecordingStatusCallback"); } }
+        private string _explicitNullValueRecordingStatusCallback = default!;
 #endif
         /// <summary>The HTTP method we should use when we call `recording_status_callback`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestRecordingStatusCallbackMethod? RecordingStatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestRecordingStatusCallbackMethod? RecordingStatusCallbackMethod { get => _explicitNullValueRecordingStatusCallbackMethod; set { _explicitNullValueRecordingStatusCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordingStatusCallbackMethod"); else _explicitNullProperties?.Remove("RecordingStatusCallbackMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestRecordingStatusCallbackMethod? _explicitNullValueRecordingStatusCallbackMethod = default!;
         /// <summary>Whether the reservation should be accepted when executing a Redirect instruction.</summary>
-        public bool? RedirectAccept { get; set; }
+        public bool? RedirectAccept { get => _explicitNullValueRedirectAccept; set { _explicitNullValueRedirectAccept = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RedirectAccept"); else _explicitNullProperties?.Remove("RedirectAccept"); } }
+        private bool? _explicitNullValueRedirectAccept = default!;
         /// <summary>The Call SID of the call parked in the queue when executing a Redirect instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectCallSid { get; set; }
+        public string? RedirectCallSid { get => _explicitNullValueRedirectCallSid; set { _explicitNullValueRedirectCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RedirectCallSid"); else _explicitNullProperties?.Remove("RedirectCallSid"); } }
+        private string? _explicitNullValueRedirectCallSid = default!;
 #nullable restore
 #else
-        public string RedirectCallSid { get; set; }
+        public string RedirectCallSid { get => _explicitNullValueRedirectCallSid; set { _explicitNullValueRedirectCallSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RedirectCallSid"); else _explicitNullProperties?.Remove("RedirectCallSid"); } }
+        private string _explicitNullValueRedirectCallSid = default!;
 #endif
         /// <summary>TwiML URI to redirect the call to when executing the Redirect instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectUrl { get; set; }
+        public string? RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RedirectUrl"); else _explicitNullProperties?.Remove("RedirectUrl"); } }
+        private string? _explicitNullValueRedirectUrl = default!;
 #nullable restore
 #else
-        public string RedirectUrl { get; set; }
+        public string RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RedirectUrl"); else _explicitNullProperties?.Remove("RedirectUrl"); } }
+        private string _explicitNullValueRedirectUrl = default!;
 #endif
         /// <summary>The [region](https://support.twilio.com/hc/en-us/articles/223132167-How-global-low-latency-routing-and-region-selection-work-for-conferences-and-Client-calls) where we should mix the recorded audio. Can be:`us1`, `us2`, `ie1`, `de1`, `sg1`, `br1`, `au1`, or `jp1`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Region { get; set; }
+        public string? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Region"); else _explicitNullProperties?.Remove("Region"); } }
+        private string? _explicitNullValueRegion = default!;
 #nullable restore
 #else
-        public string Region { get; set; }
+        public string Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Region"); else _explicitNullProperties?.Remove("Region"); } }
+        private string _explicitNullValueRegion = default!;
 #endif
         /// <summary>The current status of the reservation. Can be: `pending`, `accepted`, `rejected`, or `timeout`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumStatus? ReservationStatus { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumStatus? ReservationStatus { get => _explicitNullValueReservationStatus; set { _explicitNullValueReservationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReservationStatus"); else _explicitNullProperties?.Remove("ReservationStatus"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumStatus? _explicitNullValueReservationStatus = default!;
         /// <summary>The SIP password for authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SipAuthPassword { get; set; }
+        public string? SipAuthPassword { get => _explicitNullValueSipAuthPassword; set { _explicitNullValueSipAuthPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SipAuthPassword"); else _explicitNullProperties?.Remove("SipAuthPassword"); } }
+        private string? _explicitNullValueSipAuthPassword = default!;
 #nullable restore
 #else
-        public string SipAuthPassword { get; set; }
+        public string SipAuthPassword { get => _explicitNullValueSipAuthPassword; set { _explicitNullValueSipAuthPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SipAuthPassword"); else _explicitNullProperties?.Remove("SipAuthPassword"); } }
+        private string _explicitNullValueSipAuthPassword = default!;
 #endif
         /// <summary>The SIP username used for authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SipAuthUsername { get; set; }
+        public string? SipAuthUsername { get => _explicitNullValueSipAuthUsername; set { _explicitNullValueSipAuthUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SipAuthUsername"); else _explicitNullProperties?.Remove("SipAuthUsername"); } }
+        private string? _explicitNullValueSipAuthUsername = default!;
 #nullable restore
 #else
-        public string SipAuthUsername { get; set; }
+        public string SipAuthUsername { get => _explicitNullValueSipAuthUsername; set { _explicitNullValueSipAuthUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SipAuthUsername"); else _explicitNullProperties?.Remove("SipAuthUsername"); } }
+        private string _explicitNullValueSipAuthUsername = default!;
 #endif
         /// <summary>Whether to start the conference when the participant joins, if it has not already started. The default is `true`. If `false` and the conference has not started, the participant is muted and hears background music until another participant starts the conference.</summary>
-        public bool? StartConferenceOnEnter { get; set; }
+        public bool? StartConferenceOnEnter { get => _explicitNullValueStartConferenceOnEnter; set { _explicitNullValueStartConferenceOnEnter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StartConferenceOnEnter"); else _explicitNullProperties?.Remove("StartConferenceOnEnter"); } }
+        private bool? _explicitNullValueStartConferenceOnEnter = default!;
         /// <summary>The URL we should call using the `status_callback_method` to send status information to your application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCallback { get; set; }
+        public string? StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallback"); else _explicitNullProperties?.Remove("StatusCallback"); } }
+        private string? _explicitNullValueStatusCallback = default!;
 #nullable restore
 #else
-        public string StatusCallback { get; set; }
+        public string StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallback"); else _explicitNullProperties?.Remove("StatusCallback"); } }
+        private string _explicitNullValueStatusCallback = default!;
 #endif
         /// <summary>The call progress events that we will send to `status_callback`. Can be: `initiated`, `ringing`, `answered`, or `completed`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumCallStatus?>? StatusCallbackEvent { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumCallStatus?>? StatusCallbackEvent { get => _explicitNullValueStatusCallbackEvent; set { _explicitNullValueStatusCallbackEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallbackEvent"); else _explicitNullProperties?.Remove("StatusCallbackEvent"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumCallStatus?>? _explicitNullValueStatusCallbackEvent = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumCallStatus?> StatusCallbackEvent { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumCallStatus?> StatusCallbackEvent { get => _explicitNullValueStatusCallbackEvent; set { _explicitNullValueStatusCallbackEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallbackEvent"); else _explicitNullProperties?.Remove("StatusCallbackEvent"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumCallStatus?> _explicitNullValueStatusCallbackEvent = default!;
 #endif
         /// <summary>The HTTP method we should use to call `status_callback`. Can be: `POST` or `GET` and the default is `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get => _explicitNullValueStatusCallbackMethod; set { _explicitNullValueStatusCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallbackMethod"); else _explicitNullProperties?.Remove("StatusCallbackMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestStatusCallbackMethod? _explicitNullValueStatusCallbackMethod = default!;
         /// <summary>The Supervisor SID/URI when executing the Supervise instruction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Supervisor { get; set; }
+        public string? Supervisor { get => _explicitNullValueSupervisor; set { _explicitNullValueSupervisor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Supervisor"); else _explicitNullProperties?.Remove("Supervisor"); } }
+        private string? _explicitNullValueSupervisor = default!;
 #nullable restore
 #else
-        public string Supervisor { get; set; }
+        public string Supervisor { get => _explicitNullValueSupervisor; set { _explicitNullValueSupervisor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Supervisor"); else _explicitNullProperties?.Remove("Supervisor"); } }
+        private string _explicitNullValueSupervisor = default!;
 #endif
         /// <summary>The SupervisorMode property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumSupervisorMode? SupervisorMode { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumSupervisorMode? SupervisorMode { get => _explicitNullValueSupervisorMode; set { _explicitNullValueSupervisorMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SupervisorMode"); else _explicitNullProperties?.Remove("SupervisorMode"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TaskReservationEnumSupervisorMode? _explicitNullValueSupervisorMode = default!;
         /// <summary>Timeout for call when executing a Conference instruction.</summary>
-        public int? Timeout { get; set; }
+        public int? Timeout { get => _explicitNullValueTimeout; set { _explicitNullValueTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timeout"); else _explicitNullProperties?.Remove("Timeout"); } }
+        private int? _explicitNullValueTimeout = default!;
         /// <summary>The Contact URI of the worker when executing a Conference instruction. Can be the URI of the Twilio Client, the SIP URI for Programmable SIP, or the [E.164](https://www.twilio.com/docs/glossary/what-e164) formatted phone number, depending on the destination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? To { get; set; }
+        public string? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("To"); else _explicitNullProperties?.Remove("To"); } }
+        private string? _explicitNullValueTo = default!;
 #nullable restore
 #else
-        public string To { get; set; }
+        public string To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("To"); else _explicitNullProperties?.Remove("To"); } }
+        private string _explicitNullValueTo = default!;
 #endif
         /// <summary>The HTTP method we should use to call `wait_url`. Can be `GET` or `POST` and the default is `POST`. When using a static audio file, this should be `GET` so that we can cache the file.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestWaitMethod? WaitMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestWaitMethod? WaitMethod { get => _explicitNullValueWaitMethod; set { _explicitNullValueWaitMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WaitMethod"); else _explicitNullProperties?.Remove("WaitMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestWaitMethod? _explicitNullValueWaitMethod = default!;
         /// <summary>The URL we should call using the `wait_method` for the music to play while participants are waiting for the conference to start. The default value is the URL of our standard hold music. [Learn more about hold music](https://www.twilio.com/labs/twimlets/holdmusic).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WaitUrl { get; set; }
+        public string? WaitUrl { get => _explicitNullValueWaitUrl; set { _explicitNullValueWaitUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WaitUrl"); else _explicitNullProperties?.Remove("WaitUrl"); } }
+        private string? _explicitNullValueWaitUrl = default!;
 #nullable restore
 #else
-        public string WaitUrl { get; set; }
+        public string WaitUrl { get => _explicitNullValueWaitUrl; set { _explicitNullValueWaitUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WaitUrl"); else _explicitNullProperties?.Remove("WaitUrl"); } }
+        private string _explicitNullValueWaitUrl = default!;
 #endif
         /// <summary>The new worker activity SID if rejecting a reservation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerActivitySid { get; set; }
+        public string? WorkerActivitySid { get => _explicitNullValueWorkerActivitySid; set { _explicitNullValueWorkerActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WorkerActivitySid"); else _explicitNullProperties?.Remove("WorkerActivitySid"); } }
+        private string? _explicitNullValueWorkerActivitySid = default!;
 #nullable restore
 #else
-        public string WorkerActivitySid { get; set; }
+        public string WorkerActivitySid { get => _explicitNullValueWorkerActivitySid; set { _explicitNullValueWorkerActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WorkerActivitySid"); else _explicitNullProperties?.Remove("WorkerActivitySid"); } }
+        private string _explicitNullValueWorkerActivitySid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -341,7 +490,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -468,6 +617,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateTaskReservationXWwwFormUrlencodedRequestWaitMethod>("WaitMethod", WaitMethod);
             writer.WriteStringValue("WaitUrl", WaitUrl);
             writer.WriteStringValue("WorkerActivitySid", WorkerActivitySid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

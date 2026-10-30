@@ -11,64 +11,92 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConversationsV1Configuration : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("default_chat_service_sid") is { } nullNodeDefaultChatServiceSid && nullNodeDefaultChatServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultChatServiceSid = null;
+            if (parseNode.GetChildNode("default_closed_timer") is { } nullNodeDefaultClosedTimer && nullNodeDefaultClosedTimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultClosedTimer = null;
+            if (parseNode.GetChildNode("default_inactive_timer") is { } nullNodeDefaultInactiveTimer && nullNodeDefaultInactiveTimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultInactiveTimer = null;
+            if (parseNode.GetChildNode("default_messaging_service_sid") is { } nullNodeDefaultMessagingServiceSid && nullNodeDefaultMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultMessagingServiceSid = null;
+            if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get; set; }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get; set; }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The SID of the default [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) used when creating a conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultChatServiceSid { get; set; }
+        public string? DefaultChatServiceSid { get => _explicitNullValueDefaultChatServiceSid; set { _explicitNullValueDefaultChatServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_chat_service_sid"); else _explicitNullProperties?.Remove("default_chat_service_sid"); } }
+        private string? _explicitNullValueDefaultChatServiceSid = default!;
 #nullable restore
 #else
-        public string DefaultChatServiceSid { get; set; }
+        public string DefaultChatServiceSid { get => _explicitNullValueDefaultChatServiceSid; set { _explicitNullValueDefaultChatServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_chat_service_sid"); else _explicitNullProperties?.Remove("default_chat_service_sid"); } }
+        private string _explicitNullValueDefaultChatServiceSid = default!;
 #endif
         /// <summary>Default ISO8601 duration when conversation will be switched to `closed` state. Minimum value for this timer is 10 minutes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultClosedTimer { get; set; }
+        public string? DefaultClosedTimer { get => _explicitNullValueDefaultClosedTimer; set { _explicitNullValueDefaultClosedTimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_closed_timer"); else _explicitNullProperties?.Remove("default_closed_timer"); } }
+        private string? _explicitNullValueDefaultClosedTimer = default!;
 #nullable restore
 #else
-        public string DefaultClosedTimer { get; set; }
+        public string DefaultClosedTimer { get => _explicitNullValueDefaultClosedTimer; set { _explicitNullValueDefaultClosedTimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_closed_timer"); else _explicitNullProperties?.Remove("default_closed_timer"); } }
+        private string _explicitNullValueDefaultClosedTimer = default!;
 #endif
         /// <summary>Default ISO8601 duration when conversation will be switched to `inactive` state. Minimum value for this timer is 1 minute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultInactiveTimer { get; set; }
+        public string? DefaultInactiveTimer { get => _explicitNullValueDefaultInactiveTimer; set { _explicitNullValueDefaultInactiveTimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_inactive_timer"); else _explicitNullProperties?.Remove("default_inactive_timer"); } }
+        private string? _explicitNullValueDefaultInactiveTimer = default!;
 #nullable restore
 #else
-        public string DefaultInactiveTimer { get; set; }
+        public string DefaultInactiveTimer { get => _explicitNullValueDefaultInactiveTimer; set { _explicitNullValueDefaultInactiveTimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_inactive_timer"); else _explicitNullProperties?.Remove("default_inactive_timer"); } }
+        private string _explicitNullValueDefaultInactiveTimer = default!;
 #endif
         /// <summary>The SID of the default [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource) used when creating a conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultMessagingServiceSid { get; set; }
+        public string? DefaultMessagingServiceSid { get => _explicitNullValueDefaultMessagingServiceSid; set { _explicitNullValueDefaultMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_messaging_service_sid"); else _explicitNullProperties?.Remove("default_messaging_service_sid"); } }
+        private string? _explicitNullValueDefaultMessagingServiceSid = default!;
 #nullable restore
 #else
-        public string DefaultMessagingServiceSid { get; set; }
+        public string DefaultMessagingServiceSid { get => _explicitNullValueDefaultMessagingServiceSid; set { _explicitNullValueDefaultMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_messaging_service_sid"); else _explicitNullProperties?.Remove("default_messaging_service_sid"); } }
+        private string _explicitNullValueDefaultMessagingServiceSid = default!;
 #endif
         /// <summary>Contains absolute API resource URLs to access the webhook and default service configurations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinksProperty? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinksProperty? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinksProperty? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinksProperty Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinksProperty Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinksProperty _explicitNullValueLinks = default!;
 #endif
         /// <summary>An absolute API resource URL for this global configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Configuration"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Configuration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Configuration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1Configuration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("default_messaging_service_sid", DefaultMessagingServiceSid);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConfigurationLinksProperty>("links", Links);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

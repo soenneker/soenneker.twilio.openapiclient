@@ -11,38 +11,60 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class OverridesResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("original_line_type") is { } nullNodeOriginalLineType && nullNodeOriginalLineType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalLineType = null;
+            if (parseNode.GetChildNode("overridden_by_account_sid") is { } nullNodeOverriddenByAccountSid && nullNodeOverriddenByAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverriddenByAccountSid = null;
+            if (parseNode.GetChildNode("overridden_line_type") is { } nullNodeOverriddenLineType && nullNodeOverriddenLineType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverriddenLineType = null;
+            if (parseNode.GetChildNode("override_reason") is { } nullNodeOverrideReason && nullNodeOverrideReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideReason = null;
+            if (parseNode.GetChildNode("override_timestamp") is { } nullNodeOverrideTimestamp && nullNodeOverrideTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideTimestamp = null;
+            if (parseNode.GetChildNode("phone_number") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The original line type</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOriginalLineType? OriginalLineType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOriginalLineType? OriginalLineType { get => _explicitNullValueOriginalLineType; set { _explicitNullValueOriginalLineType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_line_type"); else _explicitNullProperties?.Remove("original_line_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOriginalLineType? _explicitNullValueOriginalLineType = default!;
         /// <summary>The Account SID for the user who made the override</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverriddenByAccountSid { get; set; }
+        public string? OverriddenByAccountSid { get => _explicitNullValueOverriddenByAccountSid; set { _explicitNullValueOverriddenByAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overridden_by_account_sid"); else _explicitNullProperties?.Remove("overridden_by_account_sid"); } }
+        private string? _explicitNullValueOverriddenByAccountSid = default!;
 #nullable restore
 #else
-        public string OverriddenByAccountSid { get; set; }
+        public string OverriddenByAccountSid { get => _explicitNullValueOverriddenByAccountSid; set { _explicitNullValueOverriddenByAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overridden_by_account_sid"); else _explicitNullProperties?.Remove("overridden_by_account_sid"); } }
+        private string _explicitNullValueOverriddenByAccountSid = default!;
 #endif
         /// <summary>The new line type after the override</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOverriddenLineType? OverriddenLineType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOverriddenLineType? OverriddenLineType { get => _explicitNullValueOverriddenLineType; set { _explicitNullValueOverriddenLineType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overridden_line_type"); else _explicitNullProperties?.Remove("overridden_line_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponseOverriddenLineType? _explicitNullValueOverriddenLineType = default!;
         /// <summary>The reason for the override</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverrideReason { get; set; }
+        public string? OverrideReason { get => _explicitNullValueOverrideReason; set { _explicitNullValueOverrideReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_reason"); else _explicitNullProperties?.Remove("override_reason"); } }
+        private string? _explicitNullValueOverrideReason = default!;
 #nullable restore
 #else
-        public string OverrideReason { get; set; }
+        public string OverrideReason { get => _explicitNullValueOverrideReason; set { _explicitNullValueOverrideReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_reason"); else _explicitNullProperties?.Remove("override_reason"); } }
+        private string _explicitNullValueOverrideReason = default!;
 #endif
         /// <summary>The override_timestamp property</summary>
-        public DateTimeOffset? OverrideTimestamp { get; set; }
+        public DateTimeOffset? OverrideTimestamp { get => _explicitNullValueOverrideTimestamp; set { _explicitNullValueOverrideTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_timestamp"); else _explicitNullProperties?.Remove("override_timestamp"); } }
+        private DateTimeOffset? _explicitNullValueOverrideTimestamp = default!;
         /// <summary>The phone number for which the override was created</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumber { get; set; }
+        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        private string? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        private string _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse"/> and sets the default values.
@@ -59,7 +81,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +112,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("override_reason", OverrideReason);
             writer.WriteDateTimeOffsetValue("override_timestamp", OverrideTimestamp);
             writer.WriteStringValue("phone_number", PhoneNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -74,6 +74,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v2.V2.Configurations.Trans
                 { "401", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTwilioServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationTranscriptionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

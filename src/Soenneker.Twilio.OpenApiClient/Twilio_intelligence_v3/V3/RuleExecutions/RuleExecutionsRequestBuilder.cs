@@ -62,6 +62,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_intelligence_v3.V3.RuleExecution
                 { "422", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateRuleExecution422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateRuleExecution429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV3CreateRuleExecution500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

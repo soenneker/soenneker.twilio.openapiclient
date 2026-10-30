@@ -11,23 +11,39 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioVerifyV2CreateNewFactorPasskeyRequestConfig : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("authenticator_attachment") is { } nullNodeAuthenticatorAttachment && nullNodeAuthenticatorAttachment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticatorAttachment = null;
+            if (parseNode.GetChildNode("discoverable_credentials") is { } nullNodeDiscoverableCredentials && nullNodeDiscoverableCredentials.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscoverableCredentials = null;
+            if (parseNode.GetChildNode("relying_party") is { } nullNodeRelyingParty && nullNodeRelyingParty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelyingParty = null;
+            if (parseNode.GetChildNode("user_verification") is { } nullNodeUserVerification && nullNodeUserVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserVerification = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The authenticator_attachment property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigAuthenticatorAttachment? AuthenticatorAttachment { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigAuthenticatorAttachment? AuthenticatorAttachment { get => _explicitNullValueAuthenticatorAttachment; set { _explicitNullValueAuthenticatorAttachment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticator_attachment"); else _explicitNullProperties?.Remove("authenticator_attachment"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigAuthenticatorAttachment? _explicitNullValueAuthenticatorAttachment = default!;
         /// <summary>The discoverable_credentials property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigDiscoverableCredentials? DiscoverableCredentials { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigDiscoverableCredentials? DiscoverableCredentials { get => _explicitNullValueDiscoverableCredentials; set { _explicitNullValueDiscoverableCredentials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discoverable_credentials"); else _explicitNullProperties?.Remove("discoverable_credentials"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigDiscoverableCredentials? _explicitNullValueDiscoverableCredentials = default!;
         /// <summary>Contains the information of the party requesting the user for authentication</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigRelyingParty? RelyingParty { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigRelyingParty? RelyingParty { get => _explicitNullValueRelyingParty; set { _explicitNullValueRelyingParty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relying_party"); else _explicitNullProperties?.Remove("relying_party"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigRelyingParty? _explicitNullValueRelyingParty = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigRelyingParty RelyingParty { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigRelyingParty RelyingParty { get => _explicitNullValueRelyingParty; set { _explicitNullValueRelyingParty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relying_party"); else _explicitNullProperties?.Remove("relying_party"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigRelyingParty _explicitNullValueRelyingParty = default!;
 #endif
         /// <summary>The user_verification property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigUserVerification? UserVerification { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigUserVerification? UserVerification { get => _explicitNullValueUserVerification; set { _explicitNullValueUserVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_verification"); else _explicitNullProperties?.Remove("user_verification"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigUserVerification? _explicitNullValueUserVerification = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfig"/> and sets the default values.
         /// </summary>
@@ -43,7 +59,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigDiscoverableCredentials>("discoverable_credentials", DiscoverableCredentials);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigRelyingParty>("relying_party", RelyingParty);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateNewFactorPasskeyRequestConfigUserVerification>("user_verification", UserVerification);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

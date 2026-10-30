@@ -11,44 +11,67 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NumbersV1PortInRequestList : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("phone_numbers_ported") is { } nullNodePhoneNumbersPorted && nullNodePhoneNumbersPorted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumbersPorted = null;
+            if (parseNode.GetChildNode("phone_numbers_requested") is { } nullNodePhoneNumbersRequested && nullNodePhoneNumbersRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumbersRequested = null;
+            if (parseNode.GetChildNode("port_in_request_sid") is { } nullNodePortInRequestSid && nullNodePortInRequestSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortInRequestSid = null;
+            if (parseNode.GetChildNode("port_in_request_status") is { } nullNodePortInRequestStatus && nullNodePortInRequestStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortInRequestStatus = null;
+            if (parseNode.GetChildNode("status_last_updated_timestamp") is { } nullNodeStatusLastUpdatedTimestamp && nullNodeStatusLastUpdatedTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusLastUpdatedTimestamp = null;
+            if (parseNode.GetChildNode("suggested_action") is { } nullNodeSuggestedAction && nullNodeSuggestedAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedAction = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Amount of phone numbers ported</summary>
-        public int? PhoneNumbersPorted { get; set; }
+        public int? PhoneNumbersPorted { get => _explicitNullValuePhoneNumbersPorted; set { _explicitNullValuePhoneNumbersPorted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_numbers_ported"); else _explicitNullProperties?.Remove("phone_numbers_ported"); } }
+        private int? _explicitNullValuePhoneNumbersPorted = default!;
         /// <summary>Amount of phone numbers requested</summary>
-        public int? PhoneNumbersRequested { get; set; }
+        public int? PhoneNumbersRequested { get => _explicitNullValuePhoneNumbersRequested; set { _explicitNullValuePhoneNumbersRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_numbers_requested"); else _explicitNullProperties?.Remove("phone_numbers_requested"); } }
+        private int? _explicitNullValuePhoneNumbersRequested = default!;
         /// <summary>The SID of the Port-in request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortInRequestSid { get; set; }
+        public string? PortInRequestSid { get => _explicitNullValuePortInRequestSid; set { _explicitNullValuePortInRequestSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_request_sid"); else _explicitNullProperties?.Remove("port_in_request_sid"); } }
+        private string? _explicitNullValuePortInRequestSid = default!;
 #nullable restore
 #else
-        public string PortInRequestSid { get; set; }
+        public string PortInRequestSid { get => _explicitNullValuePortInRequestSid; set { _explicitNullValuePortInRequestSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_request_sid"); else _explicitNullProperties?.Remove("port_in_request_sid"); } }
+        private string _explicitNullValuePortInRequestSid = default!;
 #endif
         /// <summary>Status of the Port In Request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortInRequestStatus { get; set; }
+        public string? PortInRequestStatus { get => _explicitNullValuePortInRequestStatus; set { _explicitNullValuePortInRequestStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_request_status"); else _explicitNullProperties?.Remove("port_in_request_status"); } }
+        private string? _explicitNullValuePortInRequestStatus = default!;
 #nullable restore
 #else
-        public string PortInRequestStatus { get; set; }
+        public string PortInRequestStatus { get => _explicitNullValuePortInRequestStatus; set { _explicitNullValuePortInRequestStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_request_status"); else _explicitNullProperties?.Remove("port_in_request_status"); } }
+        private string _explicitNullValuePortInRequestStatus = default!;
 #endif
         /// <summary>The last updated timestamp of the request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusLastUpdatedTimestamp { get; set; }
+        public string? StatusLastUpdatedTimestamp { get => _explicitNullValueStatusLastUpdatedTimestamp; set { _explicitNullValueStatusLastUpdatedTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_last_updated_timestamp"); else _explicitNullProperties?.Remove("status_last_updated_timestamp"); } }
+        private string? _explicitNullValueStatusLastUpdatedTimestamp = default!;
 #nullable restore
 #else
-        public string StatusLastUpdatedTimestamp { get; set; }
+        public string StatusLastUpdatedTimestamp { get => _explicitNullValueStatusLastUpdatedTimestamp; set { _explicitNullValueStatusLastUpdatedTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_last_updated_timestamp"); else _explicitNullProperties?.Remove("status_last_updated_timestamp"); } }
+        private string _explicitNullValueStatusLastUpdatedTimestamp = default!;
 #endif
         /// <summary>Suggested action on this ticket</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SuggestedAction { get; set; }
+        public string? SuggestedAction { get => _explicitNullValueSuggestedAction; set { _explicitNullValueSuggestedAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_action"); else _explicitNullProperties?.Remove("suggested_action"); } }
+        private string? _explicitNullValueSuggestedAction = default!;
 #nullable restore
 #else
-        public string SuggestedAction { get; set; }
+        public string SuggestedAction { get => _explicitNullValueSuggestedAction; set { _explicitNullValueSuggestedAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_action"); else _explicitNullProperties?.Remove("suggested_action"); } }
+        private string _explicitNullValueSuggestedAction = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortInRequestList"/> and sets the default values.
@@ -65,7 +88,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortInRequestList CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortInRequestList();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortInRequestList(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("port_in_request_status", PortInRequestStatus);
             writer.WriteStringValue("status_last_updated_timestamp", StatusLastUpdatedTimestamp);
             writer.WriteStringValue("suggested_action", SuggestedAction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

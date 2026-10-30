@@ -12,24 +12,37 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ResolvedContext : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("knowledge") is { } nullNodeKnowledge && nullNodeKnowledge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Knowledge = null;
+            if (parseNode.GetChildNode("memory") is { } nullNodeMemory && nullNodeMemory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Memory = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Knowledge source IDs with their respective knowledge base ID that was accessed and used by the LLM to generate the result.null if no knowledge was accessed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge? Knowledge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge? Knowledge { get => _explicitNullValueKnowledge; set { _explicitNullValueKnowledge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("knowledge"); else _explicitNullProperties?.Remove("knowledge"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge? _explicitNullValueKnowledge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge Knowledge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge Knowledge { get => _explicitNullValueKnowledge; set { _explicitNullValueKnowledge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("knowledge"); else _explicitNullProperties?.Remove("knowledge"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge _explicitNullValueKnowledge = default!;
 #endif
         /// <summary>The customer profile that was accessed. null if no memory was accessed.Either observations and/or traits from the profile were used by the LLM to generate the result.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory? Memory { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory? Memory { get => _explicitNullValueMemory; set { _explicitNullValueMemory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memory"); else _explicitNullProperties?.Remove("memory"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory? _explicitNullValueMemory = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory Memory { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory Memory { get => _explicitNullValueMemory; set { _explicitNullValueMemory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memory"); else _explicitNullProperties?.Remove("memory"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory _explicitNullValueMemory = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContext(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextKnowledge>("knowledge", Knowledge);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ResolvedContextMemory>("memory", Memory);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

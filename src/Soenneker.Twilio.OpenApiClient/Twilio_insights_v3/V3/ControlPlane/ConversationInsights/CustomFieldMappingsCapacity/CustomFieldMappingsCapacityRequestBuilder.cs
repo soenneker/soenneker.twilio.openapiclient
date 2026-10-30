@@ -59,6 +59,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.Conv
                 { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappingCapacity403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappingCapacity429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMappingCapacity500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldCapacity>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldCapacity.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

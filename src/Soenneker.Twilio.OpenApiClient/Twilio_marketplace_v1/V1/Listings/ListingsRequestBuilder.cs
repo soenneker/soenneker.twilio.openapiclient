@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.Listings
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMarketplaceV1FetchModuleDataForListingOwner200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMarketplaceV1FetchModuleDataForListingOwner200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMarketplaceV1FetchModuleDataForListingOwner200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMarketplaceV1FetchModuleDataForListingOwner200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This endpoint creates a Listing based on the given data.
@@ -69,7 +69,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.Listings
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This endpoint returns the Listings owned by the authenticated Account.

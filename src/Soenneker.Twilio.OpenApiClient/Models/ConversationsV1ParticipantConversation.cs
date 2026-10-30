@@ -11,118 +11,170 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConversationsV1ParticipantConversation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("chat_service_sid") is { } nullNodeChatServiceSid && nullNodeChatServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChatServiceSid = null;
+            if (parseNode.GetChildNode("conversation_attributes") is { } nullNodeConversationAttributes && nullNodeConversationAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationAttributes = null;
+            if (parseNode.GetChildNode("conversation_created_by") is { } nullNodeConversationCreatedBy && nullNodeConversationCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationCreatedBy = null;
+            if (parseNode.GetChildNode("conversation_date_created") is { } nullNodeConversationDateCreated && nullNodeConversationDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationDateCreated = null;
+            if (parseNode.GetChildNode("conversation_date_updated") is { } nullNodeConversationDateUpdated && nullNodeConversationDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationDateUpdated = null;
+            if (parseNode.GetChildNode("conversation_friendly_name") is { } nullNodeConversationFriendlyName && nullNodeConversationFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationFriendlyName = null;
+            if (parseNode.GetChildNode("conversation_sid") is { } nullNodeConversationSid && nullNodeConversationSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationSid = null;
+            if (parseNode.GetChildNode("conversation_state") is { } nullNodeConversationState && nullNodeConversationState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationState = null;
+            if (parseNode.GetChildNode("conversation_timers") is { } nullNodeConversationTimers && nullNodeConversationTimers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationTimers = null;
+            if (parseNode.GetChildNode("conversation_unique_name") is { } nullNodeConversationUniqueName && nullNodeConversationUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationUniqueName = null;
+            if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("participant_identity") is { } nullNodeParticipantIdentity && nullNodeParticipantIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantIdentity = null;
+            if (parseNode.GetChildNode("participant_messaging_binding") is { } nullNodeParticipantMessagingBinding && nullNodeParticipantMessagingBinding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantMessagingBinding = null;
+            if (parseNode.GetChildNode("participant_sid") is { } nullNodeParticipantSid && nullNodeParticipantSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantSid = null;
+            if (parseNode.GetChildNode("participant_user_sid") is { } nullNodeParticipantUserSid && nullNodeParticipantUserSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantUserSid = null;
+        }
+
         /// <summary>The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get; set; }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get; set; }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) this conversation belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChatServiceSid { get; set; }
+        public string? ChatServiceSid { get => _explicitNullValueChatServiceSid; set { _explicitNullValueChatServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chat_service_sid"); else _explicitNullProperties?.Remove("chat_service_sid"); } }
+        private string? _explicitNullValueChatServiceSid = default!;
 #nullable restore
 #else
-        public string ChatServiceSid { get; set; }
+        public string ChatServiceSid { get => _explicitNullValueChatServiceSid; set { _explicitNullValueChatServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chat_service_sid"); else _explicitNullProperties?.Remove("chat_service_sid"); } }
+        private string _explicitNullValueChatServiceSid = default!;
 #endif
         /// <summary>An optional string metadata field you can use to store any data you wish. The string value must contain structurally valid JSON if specified.  **Note** that if the attributes are not set &quot;{}&quot; will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConversationAttributes { get; set; }
+        public string? ConversationAttributes { get => _explicitNullValueConversationAttributes; set { _explicitNullValueConversationAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_attributes"); else _explicitNullProperties?.Remove("conversation_attributes"); } }
+        private string? _explicitNullValueConversationAttributes = default!;
 #nullable restore
 #else
-        public string ConversationAttributes { get; set; }
+        public string ConversationAttributes { get => _explicitNullValueConversationAttributes; set { _explicitNullValueConversationAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_attributes"); else _explicitNullProperties?.Remove("conversation_attributes"); } }
+        private string _explicitNullValueConversationAttributes = default!;
 #endif
         /// <summary>Identity of the creator of this Conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConversationCreatedBy { get; set; }
+        public string? ConversationCreatedBy { get => _explicitNullValueConversationCreatedBy; set { _explicitNullValueConversationCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_created_by"); else _explicitNullProperties?.Remove("conversation_created_by"); } }
+        private string? _explicitNullValueConversationCreatedBy = default!;
 #nullable restore
 #else
-        public string ConversationCreatedBy { get; set; }
+        public string ConversationCreatedBy { get => _explicitNullValueConversationCreatedBy; set { _explicitNullValueConversationCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_created_by"); else _explicitNullProperties?.Remove("conversation_created_by"); } }
+        private string _explicitNullValueConversationCreatedBy = default!;
 #endif
         /// <summary>The date that this conversation was created, given in ISO 8601 format.</summary>
-        public DateTimeOffset? ConversationDateCreated { get; set; }
+        public DateTimeOffset? ConversationDateCreated { get => _explicitNullValueConversationDateCreated; set { _explicitNullValueConversationDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_date_created"); else _explicitNullProperties?.Remove("conversation_date_created"); } }
+        private DateTimeOffset? _explicitNullValueConversationDateCreated = default!;
         /// <summary>The date that this conversation was last updated, given in ISO 8601 format.</summary>
-        public DateTimeOffset? ConversationDateUpdated { get; set; }
+        public DateTimeOffset? ConversationDateUpdated { get => _explicitNullValueConversationDateUpdated; set { _explicitNullValueConversationDateUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_date_updated"); else _explicitNullProperties?.Remove("conversation_date_updated"); } }
+        private DateTimeOffset? _explicitNullValueConversationDateUpdated = default!;
         /// <summary>The human-readable name of this conversation, limited to 256 characters. Optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConversationFriendlyName { get; set; }
+        public string? ConversationFriendlyName { get => _explicitNullValueConversationFriendlyName; set { _explicitNullValueConversationFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_friendly_name"); else _explicitNullProperties?.Remove("conversation_friendly_name"); } }
+        private string? _explicitNullValueConversationFriendlyName = default!;
 #nullable restore
 #else
-        public string ConversationFriendlyName { get; set; }
+        public string ConversationFriendlyName { get => _explicitNullValueConversationFriendlyName; set { _explicitNullValueConversationFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_friendly_name"); else _explicitNullProperties?.Remove("conversation_friendly_name"); } }
+        private string _explicitNullValueConversationFriendlyName = default!;
 #endif
         /// <summary>The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) this Participant belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConversationSid { get; set; }
+        public string? ConversationSid { get => _explicitNullValueConversationSid; set { _explicitNullValueConversationSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_sid"); else _explicitNullProperties?.Remove("conversation_sid"); } }
+        private string? _explicitNullValueConversationSid = default!;
 #nullable restore
 #else
-        public string ConversationSid { get; set; }
+        public string ConversationSid { get => _explicitNullValueConversationSid; set { _explicitNullValueConversationSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_sid"); else _explicitNullProperties?.Remove("conversation_sid"); } }
+        private string _explicitNullValueConversationSid = default!;
 #endif
         /// <summary>The current state of this User Conversation. One of `inactive`, `active` or `closed`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ParticipantConversationEnumState? ConversationState { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ParticipantConversationEnumState? ConversationState { get => _explicitNullValueConversationState; set { _explicitNullValueConversationState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_state"); else _explicitNullProperties?.Remove("conversation_state"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ParticipantConversationEnumState? _explicitNullValueConversationState = default!;
         /// <summary>Timer date values representing state update for this conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ConversationTimers { get; set; }
+        public UntypedNode? ConversationTimers { get => _explicitNullValueConversationTimers; set { _explicitNullValueConversationTimers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_timers"); else _explicitNullProperties?.Remove("conversation_timers"); } }
+        private UntypedNode? _explicitNullValueConversationTimers = default!;
 #nullable restore
 #else
-        public UntypedNode ConversationTimers { get; set; }
+        public UntypedNode ConversationTimers { get => _explicitNullValueConversationTimers; set { _explicitNullValueConversationTimers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_timers"); else _explicitNullProperties?.Remove("conversation_timers"); } }
+        private UntypedNode _explicitNullValueConversationTimers = default!;
 #endif
         /// <summary>An application-defined string that uniquely identifies the Conversation resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConversationUniqueName { get; set; }
+        public string? ConversationUniqueName { get => _explicitNullValueConversationUniqueName; set { _explicitNullValueConversationUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_unique_name"); else _explicitNullProperties?.Remove("conversation_unique_name"); } }
+        private string? _explicitNullValueConversationUniqueName = default!;
 #nullable restore
 #else
-        public string ConversationUniqueName { get; set; }
+        public string ConversationUniqueName { get => _explicitNullValueConversationUniqueName; set { _explicitNullValueConversationUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversation_unique_name"); else _explicitNullProperties?.Remove("conversation_unique_name"); } }
+        private string _explicitNullValueConversationUniqueName = default!;
 #endif
         /// <summary>Contains absolute URLs to access the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource) and [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) of this conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ParticipantConversationLinksProperty? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ParticipantConversationLinksProperty? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ParticipantConversationLinksProperty? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ParticipantConversationLinksProperty Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ParticipantConversationLinksProperty Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ParticipantConversationLinksProperty _explicitNullValueLinks = default!;
 #endif
         /// <summary>A unique string identifier for the conversation participant as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource). This parameter is non-null if (and only if) the participant is using the Conversations SDK to communicate. Limited to 256 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParticipantIdentity { get; set; }
+        public string? ParticipantIdentity { get => _explicitNullValueParticipantIdentity; set { _explicitNullValueParticipantIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_identity"); else _explicitNullProperties?.Remove("participant_identity"); } }
+        private string? _explicitNullValueParticipantIdentity = default!;
 #nullable restore
 #else
-        public string ParticipantIdentity { get; set; }
+        public string ParticipantIdentity { get => _explicitNullValueParticipantIdentity; set { _explicitNullValueParticipantIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_identity"); else _explicitNullProperties?.Remove("participant_identity"); } }
+        private string _explicitNullValueParticipantIdentity = default!;
 #endif
         /// <summary>Information about how this participant exchanges messages with the conversation. A JSON parameter consisting of type and address fields of the participant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ParticipantMessagingBinding { get; set; }
+        public UntypedNode? ParticipantMessagingBinding { get => _explicitNullValueParticipantMessagingBinding; set { _explicitNullValueParticipantMessagingBinding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_messaging_binding"); else _explicitNullProperties?.Remove("participant_messaging_binding"); } }
+        private UntypedNode? _explicitNullValueParticipantMessagingBinding = default!;
 #nullable restore
 #else
-        public UntypedNode ParticipantMessagingBinding { get; set; }
+        public UntypedNode ParticipantMessagingBinding { get => _explicitNullValueParticipantMessagingBinding; set { _explicitNullValueParticipantMessagingBinding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_messaging_binding"); else _explicitNullProperties?.Remove("participant_messaging_binding"); } }
+        private UntypedNode _explicitNullValueParticipantMessagingBinding = default!;
 #endif
         /// <summary>The unique ID of the [Participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParticipantSid { get; set; }
+        public string? ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
+        private string? _explicitNullValueParticipantSid = default!;
 #nullable restore
 #else
-        public string ParticipantSid { get; set; }
+        public string ParticipantSid { get => _explicitNullValueParticipantSid; set { _explicitNullValueParticipantSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_sid"); else _explicitNullProperties?.Remove("participant_sid"); } }
+        private string _explicitNullValueParticipantSid = default!;
 #endif
         /// <summary>The unique string that identifies the conversation participant as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParticipantUserSid { get; set; }
+        public string? ParticipantUserSid { get => _explicitNullValueParticipantUserSid; set { _explicitNullValueParticipantUserSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_user_sid"); else _explicitNullProperties?.Remove("participant_user_sid"); } }
+        private string? _explicitNullValueParticipantUserSid = default!;
 #nullable restore
 #else
-        public string ParticipantUserSid { get; set; }
+        public string ParticipantUserSid { get => _explicitNullValueParticipantUserSid; set { _explicitNullValueParticipantUserSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_user_sid"); else _explicitNullProperties?.Remove("participant_user_sid"); } }
+        private string _explicitNullValueParticipantUserSid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ParticipantConversation"/> and sets the default values.
@@ -139,7 +191,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ParticipantConversation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ParticipantConversation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ParticipantConversation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -190,6 +242,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("participant_messaging_binding", ParticipantMessagingBinding);
             writer.WriteStringValue("participant_sid", ParticipantSid);
             writer.WriteStringValue("participant_user_sid", ParticipantUserSid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

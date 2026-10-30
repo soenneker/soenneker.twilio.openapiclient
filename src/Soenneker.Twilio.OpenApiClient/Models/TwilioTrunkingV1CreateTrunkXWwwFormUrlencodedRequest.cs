@@ -11,43 +11,69 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioTrunkingV1CreateTrunkXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CnamLookupEnabled") is { } nullNodeCnamLookupEnabled && nullNodeCnamLookupEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CnamLookupEnabled = null;
+            if (parseNode.GetChildNode("DisasterRecoveryMethod") is { } nullNodeDisasterRecoveryMethod && nullNodeDisasterRecoveryMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisasterRecoveryMethod = null;
+            if (parseNode.GetChildNode("DisasterRecoveryUrl") is { } nullNodeDisasterRecoveryUrl && nullNodeDisasterRecoveryUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisasterRecoveryUrl = null;
+            if (parseNode.GetChildNode("DomainName") is { } nullNodeDomainName && nullNodeDomainName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainName = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("Secure") is { } nullNodeSecure && nullNodeSecure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secure = null;
+            if (parseNode.GetChildNode("TransferCallerId") is { } nullNodeTransferCallerId && nullNodeTransferCallerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferCallerId = null;
+            if (parseNode.GetChildNode("TransferMode") is { } nullNodeTransferMode && nullNodeTransferMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferMode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether Caller ID Name (CNAM) lookup should be enabled for the trunk. If enabled, all inbound calls to the SIP Trunk from the United States and Canada automatically perform a CNAM Lookup and display Caller ID data on your phone. See [CNAM Lookups](https://www.twilio.com/docs/sip-trunking#CNAM) for more information.</summary>
-        public bool? CnamLookupEnabled { get; set; }
+        public bool? CnamLookupEnabled { get => _explicitNullValueCnamLookupEnabled; set { _explicitNullValueCnamLookupEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CnamLookupEnabled"); else _explicitNullProperties?.Remove("CnamLookupEnabled"); } }
+        private bool? _explicitNullValueCnamLookupEnabled = default!;
         /// <summary>The HTTP method we should use to call the `disaster_recovery_url`. Can be: `GET` or `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreateTrunkXWwwFormUrlencodedRequestDisasterRecoveryMethod? DisasterRecoveryMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreateTrunkXWwwFormUrlencodedRequestDisasterRecoveryMethod? DisasterRecoveryMethod { get => _explicitNullValueDisasterRecoveryMethod; set { _explicitNullValueDisasterRecoveryMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DisasterRecoveryMethod"); else _explicitNullProperties?.Remove("DisasterRecoveryMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreateTrunkXWwwFormUrlencodedRequestDisasterRecoveryMethod? _explicitNullValueDisasterRecoveryMethod = default!;
         /// <summary>The URL we should call using the `disaster_recovery_method` if an error occurs while sending SIP traffic towards the configured Origination URL. We retrieve TwiML from the URL and execute the instructions like any other normal TwiML call. See [Disaster Recovery](https://www.twilio.com/docs/sip-trunking#disaster-recovery) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisasterRecoveryUrl { get; set; }
+        public string? DisasterRecoveryUrl { get => _explicitNullValueDisasterRecoveryUrl; set { _explicitNullValueDisasterRecoveryUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DisasterRecoveryUrl"); else _explicitNullProperties?.Remove("DisasterRecoveryUrl"); } }
+        private string? _explicitNullValueDisasterRecoveryUrl = default!;
 #nullable restore
 #else
-        public string DisasterRecoveryUrl { get; set; }
+        public string DisasterRecoveryUrl { get => _explicitNullValueDisasterRecoveryUrl; set { _explicitNullValueDisasterRecoveryUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DisasterRecoveryUrl"); else _explicitNullProperties?.Remove("DisasterRecoveryUrl"); } }
+        private string _explicitNullValueDisasterRecoveryUrl = default!;
 #endif
         /// <summary>The unique address you reserve on Twilio to which you route your SIP traffic. Domain names can contain letters, digits, and `-` and must end with `pstn.twilio.com`. See [Termination Settings](https://www.twilio.com/docs/sip-trunking#termination) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DomainName { get; set; }
+        public string? DomainName { get => _explicitNullValueDomainName; set { _explicitNullValueDomainName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DomainName"); else _explicitNullProperties?.Remove("DomainName"); } }
+        private string? _explicitNullValueDomainName = default!;
 #nullable restore
 #else
-        public string DomainName { get; set; }
+        public string DomainName { get => _explicitNullValueDomainName; set { _explicitNullValueDomainName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DomainName"); else _explicitNullProperties?.Remove("DomainName"); } }
+        private string _explicitNullValueDomainName = default!;
 #endif
         /// <summary>A descriptive string that you create to describe the resource. It can be up to 64 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>Whether Secure Trunking is enabled for the trunk. If enabled, all calls going through the trunk will be secure using SRTP for media and TLS for signaling. If disabled, then RTP will be used for media. See [Secure Trunking](https://www.twilio.com/docs/sip-trunking#securetrunking) for more information.</summary>
-        public bool? Secure { get; set; }
+        public bool? Secure { get => _explicitNullValueSecure; set { _explicitNullValueSecure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Secure"); else _explicitNullProperties?.Remove("Secure"); } }
+        private bool? _explicitNullValueSecure = default!;
         /// <summary>Caller Id for transfer target. Can be: `from-transferee` (default) or `from-transferor`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferCallerId? TransferCallerId { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferCallerId? TransferCallerId { get => _explicitNullValueTransferCallerId; set { _explicitNullValueTransferCallerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransferCallerId"); else _explicitNullProperties?.Remove("TransferCallerId"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferCallerId? _explicitNullValueTransferCallerId = default!;
         /// <summary>The call transfer settings for the trunk. Can be: `enable-all`, `sip-only` and `disable-all`. See [Transfer](https://www.twilio.com/docs/sip-trunking/call-transfer) for more information.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferSetting? TransferMode { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferSetting? TransferMode { get => _explicitNullValueTransferMode; set { _explicitNullValueTransferMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransferMode"); else _explicitNullProperties?.Remove("TransferMode"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferSetting? _explicitNullValueTransferMode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreateTrunkXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -63,7 +89,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreateTrunkXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreateTrunkXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrunkingV1CreateTrunkXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +124,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("Secure", Secure);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferCallerId>("TransferCallerId", TransferCallerId);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TrunkEnumTransferSetting>("TransferMode", TransferMode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

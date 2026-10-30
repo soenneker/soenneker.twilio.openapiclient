@@ -63,6 +63,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_messaging_v3.V3.Indicators.Typin
                 { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV3CreateV3TypingIndicator200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

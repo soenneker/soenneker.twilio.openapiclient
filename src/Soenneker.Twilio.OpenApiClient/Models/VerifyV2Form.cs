@@ -11,34 +11,52 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class VerifyV2Form : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("form_meta") is { } nullNodeFormMeta && nullNodeFormMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormMeta = null;
+            if (parseNode.GetChildNode("forms") is { } nullNodeForms && nullNodeForms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Forms = null;
+            if (parseNode.GetChildNode("form_type") is { } nullNodeFormType && nullNodeFormType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormType = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Additional information for the available forms for this type. E.g. The separator string used for `binding` in a Factor push.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? FormMeta { get; set; }
+        public UntypedNode? FormMeta { get => _explicitNullValueFormMeta; set { _explicitNullValueFormMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_meta"); else _explicitNullProperties?.Remove("form_meta"); } }
+        private UntypedNode? _explicitNullValueFormMeta = default!;
 #nullable restore
 #else
-        public UntypedNode FormMeta { get; set; }
+        public UntypedNode FormMeta { get => _explicitNullValueFormMeta; set { _explicitNullValueFormMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_meta"); else _explicitNullProperties?.Remove("form_meta"); } }
+        private UntypedNode _explicitNullValueFormMeta = default!;
 #endif
         /// <summary>Object that contains the available forms for this type. This available forms are given in the standard [JSON Schema](https://json-schema.org/) format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Forms { get; set; }
+        public UntypedNode? Forms { get => _explicitNullValueForms; set { _explicitNullValueForms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forms"); else _explicitNullProperties?.Remove("forms"); } }
+        private UntypedNode? _explicitNullValueForms = default!;
 #nullable restore
 #else
-        public UntypedNode Forms { get; set; }
+        public UntypedNode Forms { get => _explicitNullValueForms; set { _explicitNullValueForms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forms"); else _explicitNullProperties?.Remove("forms"); } }
+        private UntypedNode _explicitNullValueForms = default!;
 #endif
         /// <summary>The Type of this Form. Currently only `form-push` is supported.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.FormEnumFormTypes? FormType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FormEnumFormTypes? FormType { get => _explicitNullValueFormType; set { _explicitNullValueFormType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_type"); else _explicitNullProperties?.Remove("form_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.FormEnumFormTypes? _explicitNullValueFormType = default!;
         /// <summary>The URL to access the forms for this type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Form"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Form CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Form();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.VerifyV2Form(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("forms", Forms);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.FormEnumFormTypes>("form_type", FormType);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

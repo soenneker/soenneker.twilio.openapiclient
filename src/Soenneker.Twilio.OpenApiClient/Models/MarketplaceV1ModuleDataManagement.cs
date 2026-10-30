@@ -11,80 +11,114 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MarketplaceV1ModuleDataManagement : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("configuration") is { } nullNodeConfiguration && nullNodeConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configuration = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("documentation") is { } nullNodeDocumentation && nullNodeDocumentation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documentation = null;
+            if (parseNode.GetChildNode("module_info") is { } nullNodeModuleInfo && nullNodeModuleInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModuleInfo = null;
+            if (parseNode.GetChildNode("policies") is { } nullNodePolicies && nullNodePolicies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Policies = null;
+            if (parseNode.GetChildNode("pricing") is { } nullNodePricing && nullNodePricing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pricing = null;
+            if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
+            if (parseNode.GetChildNode("support") is { } nullNodeSupport && nullNodeSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Support = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON object for providing listing specific configuration. Contains button setup, notification url, among others.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementConfigurationProperty? Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementConfigurationProperty? Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration"); else _explicitNullProperties?.Remove("configuration"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementConfigurationProperty? _explicitNullValueConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementConfigurationProperty Configuration { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementConfigurationProperty Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration"); else _explicitNullProperties?.Remove("configuration"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementConfigurationProperty _explicitNullValueConfiguration = default!;
 #endif
         /// <summary>A JSON object describing the module and is displayed under the Description tab of the Module detail page. You can define the main body of the description, highlight key features or aspects of the module and if applicable, provide code samples for developers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDescriptionProperty? Description { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDescriptionProperty? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDescriptionProperty? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDescriptionProperty Description { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDescriptionProperty Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDescriptionProperty _explicitNullValueDescription = default!;
 #endif
         /// <summary>A JSON object for providing comprehensive information, instructions, and resources related to the module</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDocumentationProperty? Documentation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDocumentationProperty? Documentation { get => _explicitNullValueDocumentation; set { _explicitNullValueDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentation"); else _explicitNullProperties?.Remove("documentation"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDocumentationProperty? _explicitNullValueDocumentation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDocumentationProperty Documentation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDocumentationProperty Documentation { get => _explicitNullValueDocumentation; set { _explicitNullValueDocumentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentation"); else _explicitNullProperties?.Remove("documentation"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementDocumentationProperty _explicitNullValueDocumentation = default!;
 #endif
         /// <summary>A JSON object containing essential attributes that define a module. This information is presented on the Module detail page in the Twilio Marketplace Catalog. You can pass the following attributes in the JSON object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementModuleInfoProperty? ModuleInfo { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementModuleInfoProperty? ModuleInfo { get => _explicitNullValueModuleInfo; set { _explicitNullValueModuleInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("module_info"); else _explicitNullProperties?.Remove("module_info"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementModuleInfoProperty? _explicitNullValueModuleInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementModuleInfoProperty ModuleInfo { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementModuleInfoProperty ModuleInfo { get => _explicitNullValueModuleInfo; set { _explicitNullValueModuleInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("module_info"); else _explicitNullProperties?.Remove("module_info"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementModuleInfoProperty _explicitNullValueModuleInfo = default!;
 #endif
         /// <summary>A JSON object describing the module&apos;s privacy and legal policies and is displayed under the Policies tab of the Module detail page. The maximum file size for Policies is 5MB</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPoliciesProperty? Policies { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPoliciesProperty? Policies { get => _explicitNullValuePolicies; set { _explicitNullValuePolicies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policies"); else _explicitNullProperties?.Remove("policies"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPoliciesProperty? _explicitNullValuePolicies = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPoliciesProperty Policies { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPoliciesProperty Policies { get => _explicitNullValuePolicies; set { _explicitNullValuePolicies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policies"); else _explicitNullProperties?.Remove("policies"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPoliciesProperty _explicitNullValuePolicies = default!;
 #endif
         /// <summary>A JSON object for providing Listing specific pricing information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPricingProperty? Pricing { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPricingProperty? Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPricingProperty? _explicitNullValuePricing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPricingProperty Pricing { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPricingProperty Pricing { get => _explicitNullValuePricing; set { _explicitNullValuePricing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricing"); else _explicitNullProperties?.Remove("pricing"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementPricingProperty _explicitNullValuePricing = default!;
 #endif
         /// <summary>ModuleSid that identifies this Listing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sid { get; set; }
+        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        private string? _explicitNullValueSid = default!;
 #nullable restore
 #else
-        public string Sid { get; set; }
+        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        private string _explicitNullValueSid = default!;
 #endif
         /// <summary>A JSON object containing information on how customers can obtain support for the module. Use this parameter to provide details such as contact information and support description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupportProperty? Support { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupportProperty? Support { get => _explicitNullValueSupport; set { _explicitNullValueSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support"); else _explicitNullProperties?.Remove("support"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupportProperty? _explicitNullValueSupport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupportProperty Support { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupportProperty Support { get => _explicitNullValueSupport; set { _explicitNullValueSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support"); else _explicitNullProperties?.Remove("support"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupportProperty _explicitNullValueSupport = default!;
 #endif
         /// <summary>URL to query the subresource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement"/> and sets the default values.
@@ -101,7 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagement(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -138,6 +172,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("sid", Sid);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ModuleDataManagementSupportProperty>("support", Support);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,24 +11,37 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioTrusthubV1CreateCustomerProfileChannelEndpointAssignmentXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ChannelEndpointSid") is { } nullNodeChannelEndpointSid && nullNodeChannelEndpointSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelEndpointSid = null;
+            if (parseNode.GetChildNode("ChannelEndpointType") is { } nullNodeChannelEndpointType && nullNodeChannelEndpointType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelEndpointType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The SID of an channel endpoint</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelEndpointSid { get; set; }
+        public string? ChannelEndpointSid { get => _explicitNullValueChannelEndpointSid; set { _explicitNullValueChannelEndpointSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointSid"); else _explicitNullProperties?.Remove("ChannelEndpointSid"); } }
+        private string? _explicitNullValueChannelEndpointSid = default!;
 #nullable restore
 #else
-        public string ChannelEndpointSid { get; set; }
+        public string ChannelEndpointSid { get => _explicitNullValueChannelEndpointSid; set { _explicitNullValueChannelEndpointSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointSid"); else _explicitNullProperties?.Remove("ChannelEndpointSid"); } }
+        private string _explicitNullValueChannelEndpointSid = default!;
 #endif
         /// <summary>The type of channel endpoint. eg: phone-number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelEndpointType { get; set; }
+        public string? ChannelEndpointType { get => _explicitNullValueChannelEndpointType; set { _explicitNullValueChannelEndpointType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointType"); else _explicitNullProperties?.Remove("ChannelEndpointType"); } }
+        private string? _explicitNullValueChannelEndpointType = default!;
 #nullable restore
 #else
-        public string ChannelEndpointType { get; set; }
+        public string ChannelEndpointType { get => _explicitNullValueChannelEndpointType; set { _explicitNullValueChannelEndpointType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelEndpointType"); else _explicitNullProperties?.Remove("ChannelEndpointType"); } }
+        private string _explicitNullValueChannelEndpointType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1CreateCustomerProfileChannelEndpointAssignmentXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1CreateCustomerProfileChannelEndpointAssignmentXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1CreateCustomerProfileChannelEndpointAssignmentXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1CreateCustomerProfileChannelEndpointAssignmentXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("ChannelEndpointSid", ChannelEndpointSid);
             writer.WriteStringValue("ChannelEndpointType", ChannelEndpointType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

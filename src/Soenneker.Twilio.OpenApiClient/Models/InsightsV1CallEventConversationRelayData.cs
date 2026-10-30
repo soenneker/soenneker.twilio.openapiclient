@@ -12,7 +12,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InsightsV1CallEventConversationRelayData : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.BaseRelayData"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,41 +102,62 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             var result = new global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1CallEventConversationRelayData();
             if("BaseRelayData".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.BaseRelayData = new global::Soenneker.Twilio.OpenApiClient.Models.BaseRelayData();
+                
             }
             else if("CallWrapUpRelayData".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.CallWrapUpRelayData = new global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpRelayData();
+                
             }
             else if("ConfigurationsRelayData".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ConfigurationsRelayData = new global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationsRelayData();
+                
             }
             else if("ErrorRelayData".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ErrorRelayData = new global::Soenneker.Twilio.OpenApiClient.Models.ErrorRelayData();
+                
             }
             else if("InterruptRelayData".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.InterruptRelayData = new global::Soenneker.Twilio.OpenApiClient.Models.InterruptRelayData();
+                
             }
             else if("LanguageChangedRelayData".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.LanguageChangedRelayData = new global::Soenneker.Twilio.OpenApiClient.Models.LanguageChangedRelayData();
+                
             }
             else if("LastTokenReceivedRelayData".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.LastTokenReceivedRelayData = new global::Soenneker.Twilio.OpenApiClient.Models.LastTokenReceivedRelayData();
+                
             }
             else if("SttLatencyRelayData".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SttLatencyRelayData = new global::Soenneker.Twilio.OpenApiClient.Models.SttLatencyRelayData();
+                
             }
             else if("TtsLatencyRelayData".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TtsLatencyRelayData = new global::Soenneker.Twilio.OpenApiClient.Models.TtsLatencyRelayData();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("session_id") != null && parseNode.GetChildNode("sequence_number") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("session_id") != null && parseNode.GetChildNode("sequence_number") != null && parseNode.GetChildNode("tts_latency") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("session_id") != null && parseNode.GetChildNode("sequence_number") != null && parseNode.GetChildNode("stt_latency") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("session_id") != null && parseNode.GetChildNode("sequence_number") != null && parseNode.GetChildNode("interrupt") != null))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("session_id") != null && parseNode.GetChildNode("sequence_number") != null && parseNode.GetChildNode("last_token_received") != null))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("session_id") != null && parseNode.GetChildNode("sequence_number") != null && parseNode.GetChildNode("configurations") != null))();
+            bool matchesUnionBranch6 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("session_id") != null && parseNode.GetChildNode("sequence_number") != null && parseNode.GetChildNode("language_changed") != null))();
+            bool matchesUnionBranch7 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("session_id") != null && parseNode.GetChildNode("sequence_number") != null && parseNode.GetChildNode("call_wrap_up") != null))();
+            bool matchesUnionBranch8 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("session_id") != null && parseNode.GetChildNode("sequence_number") != null && parseNode.GetChildNode("error") != null))();
+            if (result.BaseRelayData == null && result.CallWrapUpRelayData == null && result.ConfigurationsRelayData == null && result.ErrorRelayData == null && result.InterruptRelayData == null && result.LanguageChangedRelayData == null && result.LastTokenReceivedRelayData == null && result.SttLatencyRelayData == null && result.TtsLatencyRelayData == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.BaseRelayData = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.BaseRelayData(), parseNode);
+            if (result.BaseRelayData == null && result.CallWrapUpRelayData == null && result.ConfigurationsRelayData == null && result.ErrorRelayData == null && result.InterruptRelayData == null && result.LanguageChangedRelayData == null && result.LastTokenReceivedRelayData == null && result.SttLatencyRelayData == null && result.TtsLatencyRelayData == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.TtsLatencyRelayData = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TtsLatencyRelayData(), parseNode);
+            if (result.BaseRelayData == null && result.CallWrapUpRelayData == null && result.ConfigurationsRelayData == null && result.ErrorRelayData == null && result.InterruptRelayData == null && result.LanguageChangedRelayData == null && result.LastTokenReceivedRelayData == null && result.SttLatencyRelayData == null && result.TtsLatencyRelayData == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.SttLatencyRelayData = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.SttLatencyRelayData(), parseNode);
+            if (result.BaseRelayData == null && result.CallWrapUpRelayData == null && result.ConfigurationsRelayData == null && result.ErrorRelayData == null && result.InterruptRelayData == null && result.LanguageChangedRelayData == null && result.LastTokenReceivedRelayData == null && result.SttLatencyRelayData == null && result.TtsLatencyRelayData == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.InterruptRelayData = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.InterruptRelayData(), parseNode);
+            if (result.BaseRelayData == null && result.CallWrapUpRelayData == null && result.ConfigurationsRelayData == null && result.ErrorRelayData == null && result.InterruptRelayData == null && result.LanguageChangedRelayData == null && result.LastTokenReceivedRelayData == null && result.SttLatencyRelayData == null && result.TtsLatencyRelayData == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.LastTokenReceivedRelayData = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.LastTokenReceivedRelayData(), parseNode);
+            if (result.BaseRelayData == null && result.CallWrapUpRelayData == null && result.ConfigurationsRelayData == null && result.ErrorRelayData == null && result.InterruptRelayData == null && result.LanguageChangedRelayData == null && result.LastTokenReceivedRelayData == null && result.SttLatencyRelayData == null && result.TtsLatencyRelayData == null && matchesUnionBranch5 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ConfigurationsRelayData = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationsRelayData(), parseNode);
+            if (result.BaseRelayData == null && result.CallWrapUpRelayData == null && result.ConfigurationsRelayData == null && result.ErrorRelayData == null && result.InterruptRelayData == null && result.LanguageChangedRelayData == null && result.LastTokenReceivedRelayData == null && result.SttLatencyRelayData == null && result.TtsLatencyRelayData == null && matchesUnionBranch6 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch7 && !matchesUnionBranch8) result.LanguageChangedRelayData = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.LanguageChangedRelayData(), parseNode);
+            if (result.BaseRelayData == null && result.CallWrapUpRelayData == null && result.ConfigurationsRelayData == null && result.ErrorRelayData == null && result.InterruptRelayData == null && result.LanguageChangedRelayData == null && result.LastTokenReceivedRelayData == null && result.SttLatencyRelayData == null && result.TtsLatencyRelayData == null && matchesUnionBranch7 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch8) result.CallWrapUpRelayData = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpRelayData(), parseNode);
+            if (result.BaseRelayData == null && result.CallWrapUpRelayData == null && result.ConfigurationsRelayData == null && result.ErrorRelayData == null && result.InterruptRelayData == null && result.LanguageChangedRelayData == null && result.LastTokenReceivedRelayData == null && result.SttLatencyRelayData == null && result.TtsLatencyRelayData == null && matchesUnionBranch8 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7) result.ErrorRelayData = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.ErrorRelayData(), parseNode);
+            if (result.BaseRelayData == null && result.CallWrapUpRelayData == null && result.ConfigurationsRelayData == null && result.ErrorRelayData == null && result.InterruptRelayData == null && result.LanguageChangedRelayData == null && result.LastTokenReceivedRelayData == null && result.SttLatencyRelayData == null && result.TtsLatencyRelayData == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -183,41 +209,62 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (BaseRelayData == null && CallWrapUpRelayData == null && ConfigurationsRelayData == null && ErrorRelayData == null && InterruptRelayData == null && LanguageChangedRelayData == null && LastTokenReceivedRelayData == null && SttLatencyRelayData == null && TtsLatencyRelayData == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (BaseRelayData != null && CallWrapUpRelayData == null && ConfigurationsRelayData == null && ErrorRelayData == null && InterruptRelayData == null && LanguageChangedRelayData == null && LastTokenReceivedRelayData == null && SttLatencyRelayData == null && TtsLatencyRelayData == null) { if (BaseRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, BaseRelayData); return; }
+            if (CallWrapUpRelayData != null && BaseRelayData == null && ConfigurationsRelayData == null && ErrorRelayData == null && InterruptRelayData == null && LanguageChangedRelayData == null && LastTokenReceivedRelayData == null && SttLatencyRelayData == null && TtsLatencyRelayData == null) { if (CallWrapUpRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CallWrapUpRelayData); return; }
+            if (ConfigurationsRelayData != null && BaseRelayData == null && CallWrapUpRelayData == null && ErrorRelayData == null && InterruptRelayData == null && LanguageChangedRelayData == null && LastTokenReceivedRelayData == null && SttLatencyRelayData == null && TtsLatencyRelayData == null) { if (ConfigurationsRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ConfigurationsRelayData); return; }
+            if (ErrorRelayData != null && BaseRelayData == null && CallWrapUpRelayData == null && ConfigurationsRelayData == null && InterruptRelayData == null && LanguageChangedRelayData == null && LastTokenReceivedRelayData == null && SttLatencyRelayData == null && TtsLatencyRelayData == null) { if (ErrorRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ErrorRelayData); return; }
+            if (InterruptRelayData != null && BaseRelayData == null && CallWrapUpRelayData == null && ConfigurationsRelayData == null && ErrorRelayData == null && LanguageChangedRelayData == null && LastTokenReceivedRelayData == null && SttLatencyRelayData == null && TtsLatencyRelayData == null) { if (InterruptRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, InterruptRelayData); return; }
+            if (LanguageChangedRelayData != null && BaseRelayData == null && CallWrapUpRelayData == null && ConfigurationsRelayData == null && ErrorRelayData == null && InterruptRelayData == null && LastTokenReceivedRelayData == null && SttLatencyRelayData == null && TtsLatencyRelayData == null) { if (LanguageChangedRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, LanguageChangedRelayData); return; }
+            if (LastTokenReceivedRelayData != null && BaseRelayData == null && CallWrapUpRelayData == null && ConfigurationsRelayData == null && ErrorRelayData == null && InterruptRelayData == null && LanguageChangedRelayData == null && SttLatencyRelayData == null && TtsLatencyRelayData == null) { if (LastTokenReceivedRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, LastTokenReceivedRelayData); return; }
+            if (SttLatencyRelayData != null && BaseRelayData == null && CallWrapUpRelayData == null && ConfigurationsRelayData == null && ErrorRelayData == null && InterruptRelayData == null && LanguageChangedRelayData == null && LastTokenReceivedRelayData == null && TtsLatencyRelayData == null) { if (SttLatencyRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SttLatencyRelayData); return; }
+            if (TtsLatencyRelayData != null && BaseRelayData == null && CallWrapUpRelayData == null && ConfigurationsRelayData == null && ErrorRelayData == null && InterruptRelayData == null && LanguageChangedRelayData == null && LastTokenReceivedRelayData == null && SttLatencyRelayData == null) { if (TtsLatencyRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TtsLatencyRelayData); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(BaseRelayData != null)
             {
+                if (BaseRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.BaseRelayData>(null, BaseRelayData);
             }
             else if(CallWrapUpRelayData != null)
             {
+                if (CallWrapUpRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpRelayData>(null, CallWrapUpRelayData);
             }
             else if(ConfigurationsRelayData != null)
             {
+                if (ConfigurationsRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationsRelayData>(null, ConfigurationsRelayData);
             }
             else if(ErrorRelayData != null)
             {
+                if (ErrorRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ErrorRelayData>(null, ErrorRelayData);
             }
             else if(InterruptRelayData != null)
             {
+                if (InterruptRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.InterruptRelayData>(null, InterruptRelayData);
             }
             else if(LanguageChangedRelayData != null)
             {
+                if (LanguageChangedRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LanguageChangedRelayData>(null, LanguageChangedRelayData);
             }
             else if(LastTokenReceivedRelayData != null)
             {
+                if (LastTokenReceivedRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.LastTokenReceivedRelayData>(null, LastTokenReceivedRelayData);
             }
             else if(SttLatencyRelayData != null)
             {
+                if (SttLatencyRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.SttLatencyRelayData>(null, SttLatencyRelayData);
             }
             else if(TtsLatencyRelayData != null)
             {
+                if (TtsLatencyRelayData is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TtsLatencyRelayData>(null, TtsLatencyRelayData);
             }
         }

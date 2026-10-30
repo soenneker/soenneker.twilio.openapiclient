@@ -12,42 +12,63 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VoiceV2ConfigurationRecordingConfiguration : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callRecordingStatusCallback") is { } nullNodeCallRecordingStatusCallback && nullNodeCallRecordingStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallRecordingStatusCallback = null;
+            if (parseNode.GetChildNode("compositionPolicy") is { } nullNodeCompositionPolicy && nullNodeCompositionPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompositionPolicy = null;
+            if (parseNode.GetChildNode("conferenceRecordingStatusCallback") is { } nullNodeConferenceRecordingStatusCallback && nullNodeConferenceRecordingStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceRecordingStatusCallback = null;
+            if (parseNode.GetChildNode("configurationType") is { } nullNodeConfigurationType && nullNodeConfigurationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationType = null;
+            if (parseNode.GetChildNode("features") is { } nullNodeFeatures && nullNodeFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Features = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Callback configuration for a recording status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback? CallRecordingStatusCallback { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback? CallRecordingStatusCallback { get => _explicitNullValueCallRecordingStatusCallback; set { _explicitNullValueCallRecordingStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callRecordingStatusCallback"); else _explicitNullProperties?.Remove("callRecordingStatusCallback"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback? _explicitNullValueCallRecordingStatusCallback = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback CallRecordingStatusCallback { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback CallRecordingStatusCallback { get => _explicitNullValueCallRecordingStatusCallback; set { _explicitNullValueCallRecordingStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callRecordingStatusCallback"); else _explicitNullProperties?.Remove("callRecordingStatusCallback"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback _explicitNullValueCallRecordingStatusCallback = default!;
 #endif
         /// <summary>The composition configuration for recordings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicy? CompositionPolicy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicy? CompositionPolicy { get => _explicitNullValueCompositionPolicy; set { _explicitNullValueCompositionPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compositionPolicy"); else _explicitNullProperties?.Remove("compositionPolicy"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicy? _explicitNullValueCompositionPolicy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicy CompositionPolicy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicy CompositionPolicy { get => _explicitNullValueCompositionPolicy; set { _explicitNullValueCompositionPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compositionPolicy"); else _explicitNullProperties?.Remove("compositionPolicy"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingCompositionPolicy _explicitNullValueCompositionPolicy = default!;
 #endif
         /// <summary>Callback configuration for a recording status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback? ConferenceRecordingStatusCallback { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback? ConferenceRecordingStatusCallback { get => _explicitNullValueConferenceRecordingStatusCallback; set { _explicitNullValueConferenceRecordingStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conferenceRecordingStatusCallback"); else _explicitNullProperties?.Remove("conferenceRecordingStatusCallback"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback? _explicitNullValueConferenceRecordingStatusCallback = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback ConferenceRecordingStatusCallback { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback ConferenceRecordingStatusCallback { get => _explicitNullValueConferenceRecordingStatusCallback; set { _explicitNullValueConferenceRecordingStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conferenceRecordingStatusCallback"); else _explicitNullProperties?.Remove("conferenceRecordingStatusCallback"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback _explicitNullValueConferenceRecordingStatusCallback = default!;
 #endif
         /// <summary>The configuration type discriminator. Always &quot;Recording&quot; for this resource.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.RecordingConfigurationType? ConfigurationType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.RecordingConfigurationType? ConfigurationType { get => _explicitNullValueConfigurationType; set { _explicitNullValueConfigurationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configurationType"); else _explicitNullProperties?.Remove("configurationType"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.RecordingConfigurationType? _explicitNullValueConfigurationType = default!;
         /// <summary>The features to apply to this recording.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingFeature>? Features { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingFeature>? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingFeature>? _explicitNullValueFeatures = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingFeature> Features { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingFeature> Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingFeature> _explicitNullValueFeatures = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingConfiguration"/> and sets the default values.
@@ -64,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingConfiguration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingConfiguration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingStatusCallback>("conferenceRecordingStatusCallback", ConferenceRecordingStatusCallback);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.RecordingConfigurationType>("configurationType", ConfigurationType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV2ConfigurationRecordingFeature>("features", Features);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

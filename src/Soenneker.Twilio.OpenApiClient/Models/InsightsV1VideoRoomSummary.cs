@@ -11,102 +11,168 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class InsightsV1VideoRoomSummary : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("codecs") is { } nullNodeCodecs && nullNodeCodecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Codecs = null;
+            if (parseNode.GetChildNode("concurrent_participants") is { } nullNodeConcurrentParticipants && nullNodeConcurrentParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConcurrentParticipants = null;
+            if (parseNode.GetChildNode("created_method") is { } nullNodeCreatedMethod && nullNodeCreatedMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedMethod = null;
+            if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("duration_sec") is { } nullNodeDurationSec && nullNodeDurationSec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationSec = null;
+            if (parseNode.GetChildNode("edge_location") is { } nullNodeEdgeLocation && nullNodeEdgeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EdgeLocation = null;
+            if (parseNode.GetChildNode("end_reason") is { } nullNodeEndReason && nullNodeEndReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndReason = null;
+            if (parseNode.GetChildNode("end_time") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
+            if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("max_concurrent_participants") is { } nullNodeMaxConcurrentParticipants && nullNodeMaxConcurrentParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxConcurrentParticipants = null;
+            if (parseNode.GetChildNode("max_participants") is { } nullNodeMaxParticipants && nullNodeMaxParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxParticipants = null;
+            if (parseNode.GetChildNode("media_region") is { } nullNodeMediaRegion && nullNodeMediaRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaRegion = null;
+            if (parseNode.GetChildNode("processing_state") is { } nullNodeProcessingState && nullNodeProcessingState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessingState = null;
+            if (parseNode.GetChildNode("recording_enabled") is { } nullNodeRecordingEnabled && nullNodeRecordingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordingEnabled = null;
+            if (parseNode.GetChildNode("room_name") is { } nullNodeRoomName && nullNodeRoomName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoomName = null;
+            if (parseNode.GetChildNode("room_sid") is { } nullNodeRoomSid && nullNodeRoomSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoomSid = null;
+            if (parseNode.GetChildNode("room_status") is { } nullNodeRoomStatus && nullNodeRoomStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoomStatus = null;
+            if (parseNode.GetChildNode("room_type") is { } nullNodeRoomType && nullNodeRoomType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoomType = null;
+            if (parseNode.GetChildNode("status_callback") is { } nullNodeStatusCallback && nullNodeStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallback = null;
+            if (parseNode.GetChildNode("status_callback_method") is { } nullNodeStatusCallbackMethod && nullNodeStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbackMethod = null;
+            if (parseNode.GetChildNode("total_participant_duration_sec") is { } nullNodeTotalParticipantDurationSec && nullNodeTotalParticipantDurationSec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalParticipantDurationSec = null;
+            if (parseNode.GetChildNode("total_recording_duration_sec") is { } nullNodeTotalRecordingDurationSec && nullNodeTotalRecordingDurationSec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRecordingDurationSec = null;
+            if (parseNode.GetChildNode("unique_participant_identities") is { } nullNodeUniqueParticipantIdentities && nullNodeUniqueParticipantIdentities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueParticipantIdentities = null;
+            if (parseNode.GetChildNode("unique_participants") is { } nullNodeUniqueParticipants && nullNodeUniqueParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueParticipants = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Account SID associated with this room.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get; set; }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get; set; }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Codecs used by participants in the room. Can be `VP8`, `H264`, or `VP9`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumCodec?>? Codecs { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumCodec?>? Codecs { get => _explicitNullValueCodecs; set { _explicitNullValueCodecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("codecs"); else _explicitNullProperties?.Remove("codecs"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumCodec?>? _explicitNullValueCodecs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumCodec?> Codecs { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumCodec?> Codecs { get => _explicitNullValueCodecs; set { _explicitNullValueCodecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("codecs"); else _explicitNullProperties?.Remove("codecs"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumCodec?> _explicitNullValueCodecs = default!;
 #endif
         /// <summary>Actual number of concurrent participants.</summary>
-        public int? ConcurrentParticipants { get; set; }
+        public int? ConcurrentParticipants { get => _explicitNullValueConcurrentParticipants; set { _explicitNullValueConcurrentParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("concurrent_participants"); else _explicitNullProperties?.Remove("concurrent_participants"); } }
+        private int? _explicitNullValueConcurrentParticipants = default!;
         /// <summary>The created_method property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumCreatedMethod? CreatedMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumCreatedMethod? CreatedMethod { get => _explicitNullValueCreatedMethod; set { _explicitNullValueCreatedMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_method"); else _explicitNullProperties?.Remove("created_method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumCreatedMethod? _explicitNullValueCreatedMethod = default!;
         /// <summary>Creation time of the room.</summary>
-        public DateTimeOffset? CreateTime { get; set; }
+        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        private DateTimeOffset? _explicitNullValueCreateTime = default!;
         /// <summary>Total room duration from create time to end time.</summary>
-        public long? DurationSec { get; set; }
+        public long? DurationSec { get => _explicitNullValueDurationSec; set { _explicitNullValueDurationSec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_sec"); else _explicitNullProperties?.Remove("duration_sec"); } }
+        private long? _explicitNullValueDurationSec = default!;
         /// <summary>The edge_location property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEdgeLocation? EdgeLocation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEdgeLocation? EdgeLocation { get => _explicitNullValueEdgeLocation; set { _explicitNullValueEdgeLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edge_location"); else _explicitNullProperties?.Remove("edge_location"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEdgeLocation? _explicitNullValueEdgeLocation = default!;
         /// <summary>The end_reason property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEndReason? EndReason { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEndReason? EndReason { get => _explicitNullValueEndReason; set { _explicitNullValueEndReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_reason"); else _explicitNullProperties?.Remove("end_reason"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumEndReason? _explicitNullValueEndReason = default!;
         /// <summary>End time for the room.</summary>
-        public DateTimeOffset? EndTime { get; set; }
+        public DateTimeOffset? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_time"); else _explicitNullProperties?.Remove("end_time"); } }
+        private DateTimeOffset? _explicitNullValueEndTime = default!;
         /// <summary>Room subresources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinksProperty? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinksProperty? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinksProperty? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinksProperty Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinksProperty Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryLinksProperty _explicitNullValueLinks = default!;
 #endif
         /// <summary>Maximum number of participants allowed in the room at the same time allowed by the application settings.</summary>
-        public int? MaxConcurrentParticipants { get; set; }
+        public int? MaxConcurrentParticipants { get => _explicitNullValueMaxConcurrentParticipants; set { _explicitNullValueMaxConcurrentParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_concurrent_participants"); else _explicitNullProperties?.Remove("max_concurrent_participants"); } }
+        private int? _explicitNullValueMaxConcurrentParticipants = default!;
         /// <summary>Max number of total participants allowed by the application settings.</summary>
-        public int? MaxParticipants { get; set; }
+        public int? MaxParticipants { get => _explicitNullValueMaxParticipants; set { _explicitNullValueMaxParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_participants"); else _explicitNullProperties?.Remove("max_participants"); } }
+        private int? _explicitNullValueMaxParticipants = default!;
         /// <summary>The media_region property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumTwilioRealm? MediaRegion { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumTwilioRealm? MediaRegion { get => _explicitNullValueMediaRegion; set { _explicitNullValueMediaRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_region"); else _explicitNullProperties?.Remove("media_region"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumTwilioRealm? _explicitNullValueMediaRegion = default!;
         /// <summary>The processing_state property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumProcessingState? ProcessingState { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumProcessingState? ProcessingState { get => _explicitNullValueProcessingState; set { _explicitNullValueProcessingState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processing_state"); else _explicitNullProperties?.Remove("processing_state"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumProcessingState? _explicitNullValueProcessingState = default!;
         /// <summary>Boolean indicating if recording is enabled for the room.</summary>
-        public bool? RecordingEnabled { get; set; }
+        public bool? RecordingEnabled { get => _explicitNullValueRecordingEnabled; set { _explicitNullValueRecordingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recording_enabled"); else _explicitNullProperties?.Remove("recording_enabled"); } }
+        private bool? _explicitNullValueRecordingEnabled = default!;
         /// <summary>Room friendly name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoomName { get; set; }
+        public string? RoomName { get => _explicitNullValueRoomName; set { _explicitNullValueRoomName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room_name"); else _explicitNullProperties?.Remove("room_name"); } }
+        private string? _explicitNullValueRoomName = default!;
 #nullable restore
 #else
-        public string RoomName { get; set; }
+        public string RoomName { get => _explicitNullValueRoomName; set { _explicitNullValueRoomName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room_name"); else _explicitNullProperties?.Remove("room_name"); } }
+        private string _explicitNullValueRoomName = default!;
 #endif
         /// <summary>Unique identifier for the room.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoomSid { get; set; }
+        public string? RoomSid { get => _explicitNullValueRoomSid; set { _explicitNullValueRoomSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room_sid"); else _explicitNullProperties?.Remove("room_sid"); } }
+        private string? _explicitNullValueRoomSid = default!;
 #nullable restore
 #else
-        public string RoomSid { get; set; }
+        public string RoomSid { get => _explicitNullValueRoomSid; set { _explicitNullValueRoomSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room_sid"); else _explicitNullProperties?.Remove("room_sid"); } }
+        private string _explicitNullValueRoomSid = default!;
 #endif
         /// <summary>The room_status property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomStatus? RoomStatus { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomStatus? RoomStatus { get => _explicitNullValueRoomStatus; set { _explicitNullValueRoomStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room_status"); else _explicitNullProperties?.Remove("room_status"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomStatus? _explicitNullValueRoomStatus = default!;
         /// <summary>The room_type property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomType? RoomType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomType? RoomType { get => _explicitNullValueRoomType; set { _explicitNullValueRoomType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room_type"); else _explicitNullProperties?.Remove("room_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VideoRoomSummaryEnumRoomType? _explicitNullValueRoomType = default!;
         /// <summary>Webhook provided for status callbacks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCallback { get; set; }
+        public string? StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_callback"); else _explicitNullProperties?.Remove("status_callback"); } }
+        private string? _explicitNullValueStatusCallback = default!;
 #nullable restore
 #else
-        public string StatusCallback { get; set; }
+        public string StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_callback"); else _explicitNullProperties?.Remove("status_callback"); } }
+        private string _explicitNullValueStatusCallback = default!;
 #endif
         /// <summary>HTTP method provided for status callback URL.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryStatusCallbackMethod? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryStatusCallbackMethod? StatusCallbackMethod { get => _explicitNullValueStatusCallbackMethod; set { _explicitNullValueStatusCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_callback_method"); else _explicitNullProperties?.Remove("status_callback_method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummaryStatusCallbackMethod? _explicitNullValueStatusCallbackMethod = default!;
         /// <summary>Combined amount of participant time in the room.</summary>
-        public long? TotalParticipantDurationSec { get; set; }
+        public long? TotalParticipantDurationSec { get => _explicitNullValueTotalParticipantDurationSec; set { _explicitNullValueTotalParticipantDurationSec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_participant_duration_sec"); else _explicitNullProperties?.Remove("total_participant_duration_sec"); } }
+        private long? _explicitNullValueTotalParticipantDurationSec = default!;
         /// <summary>Combined amount of recorded seconds for participants in the room.</summary>
-        public long? TotalRecordingDurationSec { get; set; }
+        public long? TotalRecordingDurationSec { get => _explicitNullValueTotalRecordingDurationSec; set { _explicitNullValueTotalRecordingDurationSec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_recording_duration_sec"); else _explicitNullProperties?.Remove("total_recording_duration_sec"); } }
+        private long? _explicitNullValueTotalRecordingDurationSec = default!;
         /// <summary>Unique number of participant identities.</summary>
-        public int? UniqueParticipantIdentities { get; set; }
+        public int? UniqueParticipantIdentities { get => _explicitNullValueUniqueParticipantIdentities; set { _explicitNullValueUniqueParticipantIdentities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_participant_identities"); else _explicitNullProperties?.Remove("unique_participant_identities"); } }
+        private int? _explicitNullValueUniqueParticipantIdentities = default!;
         /// <summary>Number of participants. May include duplicate identities for participants who left and rejoined.</summary>
-        public int? UniqueParticipants { get; set; }
+        public int? UniqueParticipants { get => _explicitNullValueUniqueParticipants; set { _explicitNullValueUniqueParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_participants"); else _explicitNullProperties?.Remove("unique_participants"); } }
+        private int? _explicitNullValueUniqueParticipants = default!;
         /// <summary>URL for the room resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary"/> and sets the default values.
@@ -123,7 +189,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1VideoRoomSummary(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -194,6 +260,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("unique_participant_identities", UniqueParticipantIdentities);
             writer.WriteIntValue("unique_participants", UniqueParticipants);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

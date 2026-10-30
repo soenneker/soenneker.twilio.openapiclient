@@ -11,122 +11,178 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioMessagingV1CreateUsAppToPersonXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AgeGated") is { } nullNodeAgeGated && nullNodeAgeGated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeGated = null;
+            if (parseNode.GetChildNode("BrandRegistrationSid") is { } nullNodeBrandRegistrationSid && nullNodeBrandRegistrationSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandRegistrationSid = null;
+            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("DirectLending") is { } nullNodeDirectLending && nullNodeDirectLending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DirectLending = null;
+            if (parseNode.GetChildNode("HasEmbeddedLinks") is { } nullNodeHasEmbeddedLinks && nullNodeHasEmbeddedLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasEmbeddedLinks = null;
+            if (parseNode.GetChildNode("HasEmbeddedPhone") is { } nullNodeHasEmbeddedPhone && nullNodeHasEmbeddedPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasEmbeddedPhone = null;
+            if (parseNode.GetChildNode("HelpKeywords") is { } nullNodeHelpKeywords && nullNodeHelpKeywords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HelpKeywords = null;
+            if (parseNode.GetChildNode("HelpMessage") is { } nullNodeHelpMessage && nullNodeHelpMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HelpMessage = null;
+            if (parseNode.GetChildNode("MessageFlow") is { } nullNodeMessageFlow && nullNodeMessageFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageFlow = null;
+            if (parseNode.GetChildNode("MessageSamples") is { } nullNodeMessageSamples && nullNodeMessageSamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageSamples = null;
+            if (parseNode.GetChildNode("OptInKeywords") is { } nullNodeOptInKeywords && nullNodeOptInKeywords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptInKeywords = null;
+            if (parseNode.GetChildNode("OptInMessage") is { } nullNodeOptInMessage && nullNodeOptInMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptInMessage = null;
+            if (parseNode.GetChildNode("OptOutKeywords") is { } nullNodeOptOutKeywords && nullNodeOptOutKeywords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptOutKeywords = null;
+            if (parseNode.GetChildNode("OptOutMessage") is { } nullNodeOptOutMessage && nullNodeOptOutMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptOutMessage = null;
+            if (parseNode.GetChildNode("PrivacyPolicyUrl") is { } nullNodePrivacyPolicyUrl && nullNodePrivacyPolicyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyPolicyUrl = null;
+            if (parseNode.GetChildNode("SubscriberOptIn") is { } nullNodeSubscriberOptIn && nullNodeSubscriberOptIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriberOptIn = null;
+            if (parseNode.GetChildNode("TermsAndConditionsUrl") is { } nullNodeTermsAndConditionsUrl && nullNodeTermsAndConditionsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsAndConditionsUrl = null;
+            if (parseNode.GetChildNode("UsAppToPersonUsecase") is { } nullNodeUsAppToPersonUsecase && nullNodeUsAppToPersonUsecase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsAppToPersonUsecase = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean that specifies whether campaign is age gated or not.</summary>
-        public bool? AgeGated { get; set; }
+        public bool? AgeGated { get => _explicitNullValueAgeGated; set { _explicitNullValueAgeGated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AgeGated"); else _explicitNullProperties?.Remove("AgeGated"); } }
+        private bool? _explicitNullValueAgeGated = default!;
         /// <summary>A2P Brand Registration SID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrandRegistrationSid { get; set; }
+        public string? BrandRegistrationSid { get => _explicitNullValueBrandRegistrationSid; set { _explicitNullValueBrandRegistrationSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BrandRegistrationSid"); else _explicitNullProperties?.Remove("BrandRegistrationSid"); } }
+        private string? _explicitNullValueBrandRegistrationSid = default!;
 #nullable restore
 #else
-        public string BrandRegistrationSid { get; set; }
+        public string BrandRegistrationSid { get => _explicitNullValueBrandRegistrationSid; set { _explicitNullValueBrandRegistrationSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BrandRegistrationSid"); else _explicitNullProperties?.Remove("BrandRegistrationSid"); } }
+        private string _explicitNullValueBrandRegistrationSid = default!;
 #endif
         /// <summary>A short description of what this SMS campaign does. Min length: 40 characters. Max length: 4096 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>A boolean that specifies whether campaign allows direct lending or not.</summary>
-        public bool? DirectLending { get; set; }
+        public bool? DirectLending { get => _explicitNullValueDirectLending; set { _explicitNullValueDirectLending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DirectLending"); else _explicitNullProperties?.Remove("DirectLending"); } }
+        private bool? _explicitNullValueDirectLending = default!;
         /// <summary>Indicates that this SMS campaign will send messages that contain links.</summary>
-        public bool? HasEmbeddedLinks { get; set; }
+        public bool? HasEmbeddedLinks { get => _explicitNullValueHasEmbeddedLinks; set { _explicitNullValueHasEmbeddedLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HasEmbeddedLinks"); else _explicitNullProperties?.Remove("HasEmbeddedLinks"); } }
+        private bool? _explicitNullValueHasEmbeddedLinks = default!;
         /// <summary>Indicates that this SMS campaign will send messages that contain phone numbers.</summary>
-        public bool? HasEmbeddedPhone { get; set; }
+        public bool? HasEmbeddedPhone { get => _explicitNullValueHasEmbeddedPhone; set { _explicitNullValueHasEmbeddedPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HasEmbeddedPhone"); else _explicitNullProperties?.Remove("HasEmbeddedPhone"); } }
+        private bool? _explicitNullValueHasEmbeddedPhone = default!;
         /// <summary>End users should be able to text in a keyword to receive help. Those keywords must be provided as part of the campaign registration request. This field is required if managing help keywords yourself (i.e. not using Twilio&apos;s Default or Advanced Opt Out features). Values must be alphanumeric. 255 character maximum.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? HelpKeywords { get; set; }
+        public List<string>? HelpKeywords { get => _explicitNullValueHelpKeywords; set { _explicitNullValueHelpKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HelpKeywords"); else _explicitNullProperties?.Remove("HelpKeywords"); } }
+        private List<string>? _explicitNullValueHelpKeywords = default!;
 #nullable restore
 #else
-        public List<string> HelpKeywords { get; set; }
+        public List<string> HelpKeywords { get => _explicitNullValueHelpKeywords; set { _explicitNullValueHelpKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HelpKeywords"); else _explicitNullProperties?.Remove("HelpKeywords"); } }
+        private List<string> _explicitNullValueHelpKeywords = default!;
 #endif
         /// <summary>When customers receive the help keywords from their end users, Twilio customers are expected to send back an auto-generated response; this may include the brand name and additional support contact information. This field is required if managing help keywords yourself (i.e. not using Twilio&apos;s Default or Advanced Opt Out features). 20 character minimum. 320 character maximum.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HelpMessage { get; set; }
+        public string? HelpMessage { get => _explicitNullValueHelpMessage; set { _explicitNullValueHelpMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HelpMessage"); else _explicitNullProperties?.Remove("HelpMessage"); } }
+        private string? _explicitNullValueHelpMessage = default!;
 #nullable restore
 #else
-        public string HelpMessage { get; set; }
+        public string HelpMessage { get => _explicitNullValueHelpMessage; set { _explicitNullValueHelpMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HelpMessage"); else _explicitNullProperties?.Remove("HelpMessage"); } }
+        private string _explicitNullValueHelpMessage = default!;
 #endif
         /// <summary>Required for all Campaigns. Details around how a consumer opts-in to their campaign, therefore giving consent to receive their messages. If multiple opt-in methods can be used for the same campaign, they must all be listed. 40 character minimum. 2048 character maximum.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageFlow { get; set; }
+        public string? MessageFlow { get => _explicitNullValueMessageFlow; set { _explicitNullValueMessageFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessageFlow"); else _explicitNullProperties?.Remove("MessageFlow"); } }
+        private string? _explicitNullValueMessageFlow = default!;
 #nullable restore
 #else
-        public string MessageFlow { get; set; }
+        public string MessageFlow { get => _explicitNullValueMessageFlow; set { _explicitNullValueMessageFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessageFlow"); else _explicitNullProperties?.Remove("MessageFlow"); } }
+        private string _explicitNullValueMessageFlow = default!;
 #endif
         /// <summary>An array of sample message strings, min two and max five. Min length for each sample: 20 chars. Max length for each sample: 1024 chars.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MessageSamples { get; set; }
+        public List<string>? MessageSamples { get => _explicitNullValueMessageSamples; set { _explicitNullValueMessageSamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessageSamples"); else _explicitNullProperties?.Remove("MessageSamples"); } }
+        private List<string>? _explicitNullValueMessageSamples = default!;
 #nullable restore
 #else
-        public List<string> MessageSamples { get; set; }
+        public List<string> MessageSamples { get => _explicitNullValueMessageSamples; set { _explicitNullValueMessageSamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessageSamples"); else _explicitNullProperties?.Remove("MessageSamples"); } }
+        private List<string> _explicitNullValueMessageSamples = default!;
 #endif
         /// <summary>If end users can text in a keyword to start receiving messages from this campaign, those keywords must be provided. This field is required if end users can text in a keyword to start receiving messages from this campaign. Values must be alphanumeric. 255 character maximum.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? OptInKeywords { get; set; }
+        public List<string>? OptInKeywords { get => _explicitNullValueOptInKeywords; set { _explicitNullValueOptInKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptInKeywords"); else _explicitNullProperties?.Remove("OptInKeywords"); } }
+        private List<string>? _explicitNullValueOptInKeywords = default!;
 #nullable restore
 #else
-        public List<string> OptInKeywords { get; set; }
+        public List<string> OptInKeywords { get => _explicitNullValueOptInKeywords; set { _explicitNullValueOptInKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptInKeywords"); else _explicitNullProperties?.Remove("OptInKeywords"); } }
+        private List<string> _explicitNullValueOptInKeywords = default!;
 #endif
         /// <summary>If end users can text in a keyword to start receiving messages from this campaign, the auto-reply messages sent to the end users must be provided. The opt-in response should include the Brand name, confirmation of opt-in enrollment to a recurring message campaign, how to get help, and clear description of how to opt-out. This field is required if end users can text in a keyword to start receiving messages from this campaign. 20 character minimum. 320 character maximum.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OptInMessage { get; set; }
+        public string? OptInMessage { get => _explicitNullValueOptInMessage; set { _explicitNullValueOptInMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptInMessage"); else _explicitNullProperties?.Remove("OptInMessage"); } }
+        private string? _explicitNullValueOptInMessage = default!;
 #nullable restore
 #else
-        public string OptInMessage { get; set; }
+        public string OptInMessage { get => _explicitNullValueOptInMessage; set { _explicitNullValueOptInMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptInMessage"); else _explicitNullProperties?.Remove("OptInMessage"); } }
+        private string _explicitNullValueOptInMessage = default!;
 #endif
         /// <summary>End users should be able to text in a keyword to stop receiving messages from this campaign. Those keywords must be provided. This field is required if managing opt out keywords yourself (i.e. not using Twilio&apos;s Default or Advanced Opt Out features). Values must be alphanumeric. 255 character maximum.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? OptOutKeywords { get; set; }
+        public List<string>? OptOutKeywords { get => _explicitNullValueOptOutKeywords; set { _explicitNullValueOptOutKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptOutKeywords"); else _explicitNullProperties?.Remove("OptOutKeywords"); } }
+        private List<string>? _explicitNullValueOptOutKeywords = default!;
 #nullable restore
 #else
-        public List<string> OptOutKeywords { get; set; }
+        public List<string> OptOutKeywords { get => _explicitNullValueOptOutKeywords; set { _explicitNullValueOptOutKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptOutKeywords"); else _explicitNullProperties?.Remove("OptOutKeywords"); } }
+        private List<string> _explicitNullValueOptOutKeywords = default!;
 #endif
         /// <summary>Upon receiving the opt-out keywords from the end users, Twilio customers are expected to send back an auto-generated response, which must provide acknowledgment of the opt-out request and confirmation that no further messages will be sent. It is also recommended that these opt-out messages include the brand name. This field is required if managing opt out keywords yourself (i.e. not using Twilio&apos;s Default or Advanced Opt Out features). 20 character minimum. 320 character maximum.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OptOutMessage { get; set; }
+        public string? OptOutMessage { get => _explicitNullValueOptOutMessage; set { _explicitNullValueOptOutMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptOutMessage"); else _explicitNullProperties?.Remove("OptOutMessage"); } }
+        private string? _explicitNullValueOptOutMessage = default!;
 #nullable restore
 #else
-        public string OptOutMessage { get; set; }
+        public string OptOutMessage { get => _explicitNullValueOptOutMessage; set { _explicitNullValueOptOutMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptOutMessage"); else _explicitNullProperties?.Remove("OptOutMessage"); } }
+        private string _explicitNullValueOptOutMessage = default!;
 #endif
         /// <summary>The URL of the privacy policy for the campaign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivacyPolicyUrl { get; set; }
+        public string? PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrivacyPolicyUrl"); else _explicitNullProperties?.Remove("PrivacyPolicyUrl"); } }
+        private string? _explicitNullValuePrivacyPolicyUrl = default!;
 #nullable restore
 #else
-        public string PrivacyPolicyUrl { get; set; }
+        public string PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrivacyPolicyUrl"); else _explicitNullProperties?.Remove("PrivacyPolicyUrl"); } }
+        private string _explicitNullValuePrivacyPolicyUrl = default!;
 #endif
         /// <summary>A boolean that specifies whether campaign has Subscriber Optin or not.</summary>
-        public bool? SubscriberOptIn { get; set; }
+        public bool? SubscriberOptIn { get => _explicitNullValueSubscriberOptIn; set { _explicitNullValueSubscriberOptIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubscriberOptIn"); else _explicitNullProperties?.Remove("SubscriberOptIn"); } }
+        private bool? _explicitNullValueSubscriberOptIn = default!;
         /// <summary>The URL of the terms and conditions for the campaign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TermsAndConditionsUrl { get; set; }
+        public string? TermsAndConditionsUrl { get => _explicitNullValueTermsAndConditionsUrl; set { _explicitNullValueTermsAndConditionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TermsAndConditionsUrl"); else _explicitNullProperties?.Remove("TermsAndConditionsUrl"); } }
+        private string? _explicitNullValueTermsAndConditionsUrl = default!;
 #nullable restore
 #else
-        public string TermsAndConditionsUrl { get; set; }
+        public string TermsAndConditionsUrl { get => _explicitNullValueTermsAndConditionsUrl; set { _explicitNullValueTermsAndConditionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TermsAndConditionsUrl"); else _explicitNullProperties?.Remove("TermsAndConditionsUrl"); } }
+        private string _explicitNullValueTermsAndConditionsUrl = default!;
 #endif
         /// <summary>A2P Campaign Use Case. Examples: [ 2FA, EMERGENCY, MARKETING..]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UsAppToPersonUsecase { get; set; }
+        public string? UsAppToPersonUsecase { get => _explicitNullValueUsAppToPersonUsecase; set { _explicitNullValueUsAppToPersonUsecase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UsAppToPersonUsecase"); else _explicitNullProperties?.Remove("UsAppToPersonUsecase"); } }
+        private string? _explicitNullValueUsAppToPersonUsecase = default!;
 #nullable restore
 #else
-        public string UsAppToPersonUsecase { get; set; }
+        public string UsAppToPersonUsecase { get => _explicitNullValueUsAppToPersonUsecase; set { _explicitNullValueUsAppToPersonUsecase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UsAppToPersonUsecase"); else _explicitNullProperties?.Remove("UsAppToPersonUsecase"); } }
+        private string _explicitNullValueUsAppToPersonUsecase = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateUsAppToPersonXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -143,7 +199,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateUsAppToPersonXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateUsAppToPersonXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateUsAppToPersonXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -198,6 +254,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("SubscriberOptIn", SubscriberOptIn);
             writer.WriteStringValue("TermsAndConditionsUrl", TermsAndConditionsUrl);
             writer.WriteStringValue("UsAppToPersonUsecase", UsAppToPersonUsecase);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOn
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListInstalledAddOnResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListInstalledAddOnResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListInstalledAddOnResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListInstalledAddOnResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Install an Add-on for the Account specified.
@@ -86,6 +86,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.InstalledAddOn
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "409", global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOn>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1InstalledAddOn.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

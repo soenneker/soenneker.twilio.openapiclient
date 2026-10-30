@@ -11,13 +11,24 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CallWrapUpEvent : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("duration_in_seconds") is { } nullNodeDurationInSeconds && nullNodeDurationInSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationInSeconds = null;
+            if (parseNode.GetChildNode("end_status") is { } nullNodeEndStatus && nullNodeEndStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndStatus = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Duration in seconds.</summary>
-        public int? DurationInSeconds { get; set; }
+        public int? DurationInSeconds { get => _explicitNullValueDurationInSeconds; set { _explicitNullValueDurationInSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_in_seconds"); else _explicitNullProperties?.Remove("duration_in_seconds"); } }
+        private int? _explicitNullValueDurationInSeconds = default!;
         /// <summary>End status of the call wrap up event.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEventEndStatus? EndStatus { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEventEndStatus? EndStatus { get => _explicitNullValueEndStatus; set { _explicitNullValueEndStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_status"); else _explicitNullProperties?.Remove("end_status"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEventEndStatus? _explicitNullValueEndStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEvent"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEvent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEvent();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEvent(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("duration_in_seconds", DurationInSeconds);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.CallWrapUpEventEndStatus>("end_status", EndStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

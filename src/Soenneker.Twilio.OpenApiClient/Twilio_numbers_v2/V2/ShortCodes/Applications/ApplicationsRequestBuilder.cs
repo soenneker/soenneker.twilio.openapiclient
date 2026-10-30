@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.ShortCodes.Applica
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationResponsePage>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationResponsePage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationResponsePage>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationResponsePage.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new short code application for an account
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v2.V2.ShortCodes.Applica
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.CreateShortCodeApplicationResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// list of all short code applications for an account

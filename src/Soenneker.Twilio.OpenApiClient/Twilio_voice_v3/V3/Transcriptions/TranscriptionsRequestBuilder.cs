@@ -76,6 +76,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions
                 { "422", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3ListV3Transcriptions500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionList>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -113,6 +115,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_voice_v3.V3.Transcriptions
                 { "422", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions422Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3Transcriptions500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperation202Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionLongRunningOperation202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

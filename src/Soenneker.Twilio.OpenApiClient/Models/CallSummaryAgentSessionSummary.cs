@@ -11,84 +11,122 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CallSummaryAgentSessionSummary : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("application_latency_ms") is { } nullNodeApplicationLatencyMs && nullNodeApplicationLatencyMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationLatencyMs = null;
+            if (parseNode.GetChildNode("interruptions") is { } nullNodeInterruptions && nullNodeInterruptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interruptions = null;
+            if (parseNode.GetChildNode("network_latency_ms") is { } nullNodeNetworkLatencyMs && nullNodeNetworkLatencyMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkLatencyMs = null;
+            if (parseNode.GetChildNode("session_id") is { } nullNodeSessionId && nullNodeSessionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionId = null;
+            if (parseNode.GetChildNode("session_state") is { } nullNodeSessionState && nullNodeSessionState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionState = null;
+            if (parseNode.GetChildNode("stt_latency_ms") is { } nullNodeSttLatencyMs && nullNodeSttLatencyMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SttLatencyMs = null;
+            if (parseNode.GetChildNode("time_to_first_audio_ms") is { } nullNodeTimeToFirstAudioMs && nullNodeTimeToFirstAudioMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeToFirstAudioMs = null;
+            if (parseNode.GetChildNode("tokens") is { } nullNodeTokens && nullNodeTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tokens = null;
+            if (parseNode.GetChildNode("tts_latency_ms") is { } nullNodeTtsLatencyMs && nullNodeTtsLatencyMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TtsLatencyMs = null;
+            if (parseNode.GetChildNode("turns") is { } nullNodeTurns && nullNodeTurns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Turns = null;
+            if (parseNode.GetChildNode("words") is { } nullNodeWords && nullNodeWords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Words = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The application_latency_ms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? ApplicationLatencyMs { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? ApplicationLatencyMs { get => _explicitNullValueApplicationLatencyMs; set { _explicitNullValueApplicationLatencyMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_latency_ms"); else _explicitNullProperties?.Remove("application_latency_ms"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? _explicitNullValueApplicationLatencyMs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats ApplicationLatencyMs { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats ApplicationLatencyMs { get => _explicitNullValueApplicationLatencyMs; set { _explicitNullValueApplicationLatencyMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application_latency_ms"); else _explicitNullProperties?.Remove("application_latency_ms"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats _explicitNullValueApplicationLatencyMs = default!;
 #endif
         /// <summary>The interruptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayInterruptions? Interruptions { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayInterruptions? Interruptions { get => _explicitNullValueInterruptions; set { _explicitNullValueInterruptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interruptions"); else _explicitNullProperties?.Remove("interruptions"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayInterruptions? _explicitNullValueInterruptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayInterruptions Interruptions { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayInterruptions Interruptions { get => _explicitNullValueInterruptions; set { _explicitNullValueInterruptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interruptions"); else _explicitNullProperties?.Remove("interruptions"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayInterruptions _explicitNullValueInterruptions = default!;
 #endif
         /// <summary>The network_latency_ms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? NetworkLatencyMs { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? NetworkLatencyMs { get => _explicitNullValueNetworkLatencyMs; set { _explicitNullValueNetworkLatencyMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_latency_ms"); else _explicitNullProperties?.Remove("network_latency_ms"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? _explicitNullValueNetworkLatencyMs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats NetworkLatencyMs { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats NetworkLatencyMs { get => _explicitNullValueNetworkLatencyMs; set { _explicitNullValueNetworkLatencyMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_latency_ms"); else _explicitNullProperties?.Remove("network_latency_ms"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats _explicitNullValueNetworkLatencyMs = default!;
 #endif
         /// <summary>The session_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionId { get; set; }
+        public string? SessionId { get => _explicitNullValueSessionId; set { _explicitNullValueSessionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_id"); else _explicitNullProperties?.Remove("session_id"); } }
+        private string? _explicitNullValueSessionId = default!;
 #nullable restore
 #else
-        public string SessionId { get; set; }
+        public string SessionId { get => _explicitNullValueSessionId; set { _explicitNullValueSessionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_id"); else _explicitNullProperties?.Remove("session_id"); } }
+        private string _explicitNullValueSessionId = default!;
 #endif
         /// <summary>The session_state property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelaySessionState? SessionState { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelaySessionState? SessionState { get => _explicitNullValueSessionState; set { _explicitNullValueSessionState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_state"); else _explicitNullProperties?.Remove("session_state"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelaySessionState? _explicitNullValueSessionState = default!;
         /// <summary>The stt_latency_ms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? SttLatencyMs { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? SttLatencyMs { get => _explicitNullValueSttLatencyMs; set { _explicitNullValueSttLatencyMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stt_latency_ms"); else _explicitNullProperties?.Remove("stt_latency_ms"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? _explicitNullValueSttLatencyMs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats SttLatencyMs { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats SttLatencyMs { get => _explicitNullValueSttLatencyMs; set { _explicitNullValueSttLatencyMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stt_latency_ms"); else _explicitNullProperties?.Remove("stt_latency_ms"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats _explicitNullValueSttLatencyMs = default!;
 #endif
         /// <summary>The time_to_first_audio_ms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? TimeToFirstAudioMs { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? TimeToFirstAudioMs { get => _explicitNullValueTimeToFirstAudioMs; set { _explicitNullValueTimeToFirstAudioMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_to_first_audio_ms"); else _explicitNullProperties?.Remove("time_to_first_audio_ms"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? _explicitNullValueTimeToFirstAudioMs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats TimeToFirstAudioMs { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats TimeToFirstAudioMs { get => _explicitNullValueTimeToFirstAudioMs; set { _explicitNullValueTimeToFirstAudioMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_to_first_audio_ms"); else _explicitNullProperties?.Remove("time_to_first_audio_ms"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats _explicitNullValueTimeToFirstAudioMs = default!;
 #endif
         /// <summary>The tokens property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayTokenStats? Tokens { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayTokenStats? Tokens { get => _explicitNullValueTokens; set { _explicitNullValueTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokens"); else _explicitNullProperties?.Remove("tokens"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayTokenStats? _explicitNullValueTokens = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayTokenStats Tokens { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayTokenStats Tokens { get => _explicitNullValueTokens; set { _explicitNullValueTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokens"); else _explicitNullProperties?.Remove("tokens"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayTokenStats _explicitNullValueTokens = default!;
 #endif
         /// <summary>The tts_latency_ms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? TtsLatencyMs { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? TtsLatencyMs { get => _explicitNullValueTtsLatencyMs; set { _explicitNullValueTtsLatencyMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tts_latency_ms"); else _explicitNullProperties?.Remove("tts_latency_ms"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats? _explicitNullValueTtsLatencyMs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats TtsLatencyMs { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats TtsLatencyMs { get => _explicitNullValueTtsLatencyMs; set { _explicitNullValueTtsLatencyMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tts_latency_ms"); else _explicitNullProperties?.Remove("tts_latency_ms"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats _explicitNullValueTtsLatencyMs = default!;
 #endif
         /// <summary>The turns property</summary>
-        public int? Turns { get; set; }
+        public int? Turns { get => _explicitNullValueTurns; set { _explicitNullValueTurns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("turns"); else _explicitNullProperties?.Remove("turns"); } }
+        private int? _explicitNullValueTurns = default!;
         /// <summary>The words property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayWordStats? Words { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayWordStats? Words { get => _explicitNullValueWords; set { _explicitNullValueWords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("words"); else _explicitNullProperties?.Remove("words"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayWordStats? _explicitNullValueWords = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayWordStats Words { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayWordStats Words { get => _explicitNullValueWords; set { _explicitNullValueWords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("words"); else _explicitNullProperties?.Remove("words"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayWordStats _explicitNullValueWords = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryAgentSessionSummary"/> and sets the default values.
@@ -105,7 +143,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryAgentSessionSummary CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryAgentSessionSummary();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryAgentSessionSummary(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -146,6 +184,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayRateStats>("tts_latency_ms", TtsLatencyMs);
             writer.WriteIntValue("turns", Turns);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.CallSummaryCrelayWordStats>("words", Words);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

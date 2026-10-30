@@ -11,20 +11,34 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioNumbersV2UpdateHostedNumberOrderXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("VerificationCallDelay") is { } nullNodeVerificationCallDelay && nullNodeVerificationCallDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationCallDelay = null;
+            if (parseNode.GetChildNode("VerificationCallExtension") is { } nullNodeVerificationCallExtension && nullNodeVerificationCallExtension.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationCallExtension = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Status of this resource. It can hold one of the values: 1. Twilio Processing 2. Received, 3. Pending LOA, 4. Carrier Processing, 5. Completed, 6. Action Required, 7. Failed. See the [HostedNumberOrders Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/hosted-number-order-resource#status-values) section for more information on each of these statuses.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumStatus? Status { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Status"); else _explicitNullProperties?.Remove("Status"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumStatus? _explicitNullValueStatus = default!;
         /// <summary>The number of seconds to wait before initiating the ownership verification call. Can be a value between 0 and 60, inclusive.</summary>
-        public int? VerificationCallDelay { get; set; }
+        public int? VerificationCallDelay { get => _explicitNullValueVerificationCallDelay; set { _explicitNullValueVerificationCallDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerificationCallDelay"); else _explicitNullProperties?.Remove("VerificationCallDelay"); } }
+        private int? _explicitNullValueVerificationCallDelay = default!;
         /// <summary>The numerical extension to dial when making the ownership verification call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerificationCallExtension { get; set; }
+        public string? VerificationCallExtension { get => _explicitNullValueVerificationCallExtension; set { _explicitNullValueVerificationCallExtension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerificationCallExtension"); else _explicitNullProperties?.Remove("VerificationCallExtension"); } }
+        private string? _explicitNullValueVerificationCallExtension = default!;
 #nullable restore
 #else
-        public string VerificationCallExtension { get; set; }
+        public string VerificationCallExtension { get => _explicitNullValueVerificationCallExtension; set { _explicitNullValueVerificationCallExtension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerificationCallExtension"); else _explicitNullProperties?.Remove("VerificationCallExtension"); } }
+        private string _explicitNullValueVerificationCallExtension = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2UpdateHostedNumberOrderXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -41,7 +55,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2UpdateHostedNumberOrderXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2UpdateHostedNumberOrderXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2UpdateHostedNumberOrderXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV2HostedNumberOrderEnumStatus>("Status", Status);
             writer.WriteIntValue("VerificationCallDelay", VerificationCallDelay);
             writer.WriteStringValue("VerificationCallExtension", VerificationCallExtension);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

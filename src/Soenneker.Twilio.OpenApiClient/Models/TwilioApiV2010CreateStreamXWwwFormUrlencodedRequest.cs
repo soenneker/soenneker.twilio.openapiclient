@@ -11,1620 +11,2234 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioApiV2010CreateStreamXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("Parameter10.Name") is { } nullNodeParameter10Name && nullNodeParameter10Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter10Name = null;
+            if (parseNode.GetChildNode("Parameter10.Value") is { } nullNodeParameter10Value && nullNodeParameter10Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter10Value = null;
+            if (parseNode.GetChildNode("Parameter11.Name") is { } nullNodeParameter11Name && nullNodeParameter11Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter11Name = null;
+            if (parseNode.GetChildNode("Parameter11.Value") is { } nullNodeParameter11Value && nullNodeParameter11Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter11Value = null;
+            if (parseNode.GetChildNode("Parameter12.Name") is { } nullNodeParameter12Name && nullNodeParameter12Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter12Name = null;
+            if (parseNode.GetChildNode("Parameter12.Value") is { } nullNodeParameter12Value && nullNodeParameter12Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter12Value = null;
+            if (parseNode.GetChildNode("Parameter13.Name") is { } nullNodeParameter13Name && nullNodeParameter13Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter13Name = null;
+            if (parseNode.GetChildNode("Parameter13.Value") is { } nullNodeParameter13Value && nullNodeParameter13Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter13Value = null;
+            if (parseNode.GetChildNode("Parameter14.Name") is { } nullNodeParameter14Name && nullNodeParameter14Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter14Name = null;
+            if (parseNode.GetChildNode("Parameter14.Value") is { } nullNodeParameter14Value && nullNodeParameter14Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter14Value = null;
+            if (parseNode.GetChildNode("Parameter15.Name") is { } nullNodeParameter15Name && nullNodeParameter15Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter15Name = null;
+            if (parseNode.GetChildNode("Parameter15.Value") is { } nullNodeParameter15Value && nullNodeParameter15Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter15Value = null;
+            if (parseNode.GetChildNode("Parameter16.Name") is { } nullNodeParameter16Name && nullNodeParameter16Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter16Name = null;
+            if (parseNode.GetChildNode("Parameter16.Value") is { } nullNodeParameter16Value && nullNodeParameter16Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter16Value = null;
+            if (parseNode.GetChildNode("Parameter17.Name") is { } nullNodeParameter17Name && nullNodeParameter17Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter17Name = null;
+            if (parseNode.GetChildNode("Parameter17.Value") is { } nullNodeParameter17Value && nullNodeParameter17Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter17Value = null;
+            if (parseNode.GetChildNode("Parameter18.Name") is { } nullNodeParameter18Name && nullNodeParameter18Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter18Name = null;
+            if (parseNode.GetChildNode("Parameter18.Value") is { } nullNodeParameter18Value && nullNodeParameter18Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter18Value = null;
+            if (parseNode.GetChildNode("Parameter19.Name") is { } nullNodeParameter19Name && nullNodeParameter19Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter19Name = null;
+            if (parseNode.GetChildNode("Parameter19.Value") is { } nullNodeParameter19Value && nullNodeParameter19Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter19Value = null;
+            if (parseNode.GetChildNode("Parameter1.Name") is { } nullNodeParameter1Name && nullNodeParameter1Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter1Name = null;
+            if (parseNode.GetChildNode("Parameter1.Value") is { } nullNodeParameter1Value && nullNodeParameter1Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter1Value = null;
+            if (parseNode.GetChildNode("Parameter20.Name") is { } nullNodeParameter20Name && nullNodeParameter20Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter20Name = null;
+            if (parseNode.GetChildNode("Parameter20.Value") is { } nullNodeParameter20Value && nullNodeParameter20Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter20Value = null;
+            if (parseNode.GetChildNode("Parameter21.Name") is { } nullNodeParameter21Name && nullNodeParameter21Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter21Name = null;
+            if (parseNode.GetChildNode("Parameter21.Value") is { } nullNodeParameter21Value && nullNodeParameter21Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter21Value = null;
+            if (parseNode.GetChildNode("Parameter22.Name") is { } nullNodeParameter22Name && nullNodeParameter22Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter22Name = null;
+            if (parseNode.GetChildNode("Parameter22.Value") is { } nullNodeParameter22Value && nullNodeParameter22Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter22Value = null;
+            if (parseNode.GetChildNode("Parameter23.Name") is { } nullNodeParameter23Name && nullNodeParameter23Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter23Name = null;
+            if (parseNode.GetChildNode("Parameter23.Value") is { } nullNodeParameter23Value && nullNodeParameter23Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter23Value = null;
+            if (parseNode.GetChildNode("Parameter24.Name") is { } nullNodeParameter24Name && nullNodeParameter24Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter24Name = null;
+            if (parseNode.GetChildNode("Parameter24.Value") is { } nullNodeParameter24Value && nullNodeParameter24Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter24Value = null;
+            if (parseNode.GetChildNode("Parameter25.Name") is { } nullNodeParameter25Name && nullNodeParameter25Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter25Name = null;
+            if (parseNode.GetChildNode("Parameter25.Value") is { } nullNodeParameter25Value && nullNodeParameter25Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter25Value = null;
+            if (parseNode.GetChildNode("Parameter26.Name") is { } nullNodeParameter26Name && nullNodeParameter26Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter26Name = null;
+            if (parseNode.GetChildNode("Parameter26.Value") is { } nullNodeParameter26Value && nullNodeParameter26Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter26Value = null;
+            if (parseNode.GetChildNode("Parameter27.Name") is { } nullNodeParameter27Name && nullNodeParameter27Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter27Name = null;
+            if (parseNode.GetChildNode("Parameter27.Value") is { } nullNodeParameter27Value && nullNodeParameter27Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter27Value = null;
+            if (parseNode.GetChildNode("Parameter28.Name") is { } nullNodeParameter28Name && nullNodeParameter28Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter28Name = null;
+            if (parseNode.GetChildNode("Parameter28.Value") is { } nullNodeParameter28Value && nullNodeParameter28Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter28Value = null;
+            if (parseNode.GetChildNode("Parameter29.Name") is { } nullNodeParameter29Name && nullNodeParameter29Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter29Name = null;
+            if (parseNode.GetChildNode("Parameter29.Value") is { } nullNodeParameter29Value && nullNodeParameter29Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter29Value = null;
+            if (parseNode.GetChildNode("Parameter2.Name") is { } nullNodeParameter2Name && nullNodeParameter2Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter2Name = null;
+            if (parseNode.GetChildNode("Parameter2.Value") is { } nullNodeParameter2Value && nullNodeParameter2Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter2Value = null;
+            if (parseNode.GetChildNode("Parameter30.Name") is { } nullNodeParameter30Name && nullNodeParameter30Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter30Name = null;
+            if (parseNode.GetChildNode("Parameter30.Value") is { } nullNodeParameter30Value && nullNodeParameter30Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter30Value = null;
+            if (parseNode.GetChildNode("Parameter31.Name") is { } nullNodeParameter31Name && nullNodeParameter31Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter31Name = null;
+            if (parseNode.GetChildNode("Parameter31.Value") is { } nullNodeParameter31Value && nullNodeParameter31Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter31Value = null;
+            if (parseNode.GetChildNode("Parameter32.Name") is { } nullNodeParameter32Name && nullNodeParameter32Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter32Name = null;
+            if (parseNode.GetChildNode("Parameter32.Value") is { } nullNodeParameter32Value && nullNodeParameter32Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter32Value = null;
+            if (parseNode.GetChildNode("Parameter33.Name") is { } nullNodeParameter33Name && nullNodeParameter33Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter33Name = null;
+            if (parseNode.GetChildNode("Parameter33.Value") is { } nullNodeParameter33Value && nullNodeParameter33Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter33Value = null;
+            if (parseNode.GetChildNode("Parameter34.Name") is { } nullNodeParameter34Name && nullNodeParameter34Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter34Name = null;
+            if (parseNode.GetChildNode("Parameter34.Value") is { } nullNodeParameter34Value && nullNodeParameter34Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter34Value = null;
+            if (parseNode.GetChildNode("Parameter35.Name") is { } nullNodeParameter35Name && nullNodeParameter35Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter35Name = null;
+            if (parseNode.GetChildNode("Parameter35.Value") is { } nullNodeParameter35Value && nullNodeParameter35Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter35Value = null;
+            if (parseNode.GetChildNode("Parameter36.Name") is { } nullNodeParameter36Name && nullNodeParameter36Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter36Name = null;
+            if (parseNode.GetChildNode("Parameter36.Value") is { } nullNodeParameter36Value && nullNodeParameter36Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter36Value = null;
+            if (parseNode.GetChildNode("Parameter37.Name") is { } nullNodeParameter37Name && nullNodeParameter37Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter37Name = null;
+            if (parseNode.GetChildNode("Parameter37.Value") is { } nullNodeParameter37Value && nullNodeParameter37Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter37Value = null;
+            if (parseNode.GetChildNode("Parameter38.Name") is { } nullNodeParameter38Name && nullNodeParameter38Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter38Name = null;
+            if (parseNode.GetChildNode("Parameter38.Value") is { } nullNodeParameter38Value && nullNodeParameter38Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter38Value = null;
+            if (parseNode.GetChildNode("Parameter39.Name") is { } nullNodeParameter39Name && nullNodeParameter39Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter39Name = null;
+            if (parseNode.GetChildNode("Parameter39.Value") is { } nullNodeParameter39Value && nullNodeParameter39Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter39Value = null;
+            if (parseNode.GetChildNode("Parameter3.Name") is { } nullNodeParameter3Name && nullNodeParameter3Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter3Name = null;
+            if (parseNode.GetChildNode("Parameter3.Value") is { } nullNodeParameter3Value && nullNodeParameter3Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter3Value = null;
+            if (parseNode.GetChildNode("Parameter40.Name") is { } nullNodeParameter40Name && nullNodeParameter40Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter40Name = null;
+            if (parseNode.GetChildNode("Parameter40.Value") is { } nullNodeParameter40Value && nullNodeParameter40Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter40Value = null;
+            if (parseNode.GetChildNode("Parameter41.Name") is { } nullNodeParameter41Name && nullNodeParameter41Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter41Name = null;
+            if (parseNode.GetChildNode("Parameter41.Value") is { } nullNodeParameter41Value && nullNodeParameter41Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter41Value = null;
+            if (parseNode.GetChildNode("Parameter42.Name") is { } nullNodeParameter42Name && nullNodeParameter42Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter42Name = null;
+            if (parseNode.GetChildNode("Parameter42.Value") is { } nullNodeParameter42Value && nullNodeParameter42Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter42Value = null;
+            if (parseNode.GetChildNode("Parameter43.Name") is { } nullNodeParameter43Name && nullNodeParameter43Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter43Name = null;
+            if (parseNode.GetChildNode("Parameter43.Value") is { } nullNodeParameter43Value && nullNodeParameter43Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter43Value = null;
+            if (parseNode.GetChildNode("Parameter44.Name") is { } nullNodeParameter44Name && nullNodeParameter44Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter44Name = null;
+            if (parseNode.GetChildNode("Parameter44.Value") is { } nullNodeParameter44Value && nullNodeParameter44Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter44Value = null;
+            if (parseNode.GetChildNode("Parameter45.Name") is { } nullNodeParameter45Name && nullNodeParameter45Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter45Name = null;
+            if (parseNode.GetChildNode("Parameter45.Value") is { } nullNodeParameter45Value && nullNodeParameter45Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter45Value = null;
+            if (parseNode.GetChildNode("Parameter46.Name") is { } nullNodeParameter46Name && nullNodeParameter46Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter46Name = null;
+            if (parseNode.GetChildNode("Parameter46.Value") is { } nullNodeParameter46Value && nullNodeParameter46Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter46Value = null;
+            if (parseNode.GetChildNode("Parameter47.Name") is { } nullNodeParameter47Name && nullNodeParameter47Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter47Name = null;
+            if (parseNode.GetChildNode("Parameter47.Value") is { } nullNodeParameter47Value && nullNodeParameter47Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter47Value = null;
+            if (parseNode.GetChildNode("Parameter48.Name") is { } nullNodeParameter48Name && nullNodeParameter48Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter48Name = null;
+            if (parseNode.GetChildNode("Parameter48.Value") is { } nullNodeParameter48Value && nullNodeParameter48Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter48Value = null;
+            if (parseNode.GetChildNode("Parameter49.Name") is { } nullNodeParameter49Name && nullNodeParameter49Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter49Name = null;
+            if (parseNode.GetChildNode("Parameter49.Value") is { } nullNodeParameter49Value && nullNodeParameter49Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter49Value = null;
+            if (parseNode.GetChildNode("Parameter4.Name") is { } nullNodeParameter4Name && nullNodeParameter4Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter4Name = null;
+            if (parseNode.GetChildNode("Parameter4.Value") is { } nullNodeParameter4Value && nullNodeParameter4Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter4Value = null;
+            if (parseNode.GetChildNode("Parameter50.Name") is { } nullNodeParameter50Name && nullNodeParameter50Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter50Name = null;
+            if (parseNode.GetChildNode("Parameter50.Value") is { } nullNodeParameter50Value && nullNodeParameter50Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter50Value = null;
+            if (parseNode.GetChildNode("Parameter51.Name") is { } nullNodeParameter51Name && nullNodeParameter51Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter51Name = null;
+            if (parseNode.GetChildNode("Parameter51.Value") is { } nullNodeParameter51Value && nullNodeParameter51Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter51Value = null;
+            if (parseNode.GetChildNode("Parameter52.Name") is { } nullNodeParameter52Name && nullNodeParameter52Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter52Name = null;
+            if (parseNode.GetChildNode("Parameter52.Value") is { } nullNodeParameter52Value && nullNodeParameter52Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter52Value = null;
+            if (parseNode.GetChildNode("Parameter53.Name") is { } nullNodeParameter53Name && nullNodeParameter53Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter53Name = null;
+            if (parseNode.GetChildNode("Parameter53.Value") is { } nullNodeParameter53Value && nullNodeParameter53Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter53Value = null;
+            if (parseNode.GetChildNode("Parameter54.Name") is { } nullNodeParameter54Name && nullNodeParameter54Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter54Name = null;
+            if (parseNode.GetChildNode("Parameter54.Value") is { } nullNodeParameter54Value && nullNodeParameter54Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter54Value = null;
+            if (parseNode.GetChildNode("Parameter55.Name") is { } nullNodeParameter55Name && nullNodeParameter55Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter55Name = null;
+            if (parseNode.GetChildNode("Parameter55.Value") is { } nullNodeParameter55Value && nullNodeParameter55Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter55Value = null;
+            if (parseNode.GetChildNode("Parameter56.Name") is { } nullNodeParameter56Name && nullNodeParameter56Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter56Name = null;
+            if (parseNode.GetChildNode("Parameter56.Value") is { } nullNodeParameter56Value && nullNodeParameter56Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter56Value = null;
+            if (parseNode.GetChildNode("Parameter57.Name") is { } nullNodeParameter57Name && nullNodeParameter57Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter57Name = null;
+            if (parseNode.GetChildNode("Parameter57.Value") is { } nullNodeParameter57Value && nullNodeParameter57Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter57Value = null;
+            if (parseNode.GetChildNode("Parameter58.Name") is { } nullNodeParameter58Name && nullNodeParameter58Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter58Name = null;
+            if (parseNode.GetChildNode("Parameter58.Value") is { } nullNodeParameter58Value && nullNodeParameter58Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter58Value = null;
+            if (parseNode.GetChildNode("Parameter59.Name") is { } nullNodeParameter59Name && nullNodeParameter59Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter59Name = null;
+            if (parseNode.GetChildNode("Parameter59.Value") is { } nullNodeParameter59Value && nullNodeParameter59Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter59Value = null;
+            if (parseNode.GetChildNode("Parameter5.Name") is { } nullNodeParameter5Name && nullNodeParameter5Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter5Name = null;
+            if (parseNode.GetChildNode("Parameter5.Value") is { } nullNodeParameter5Value && nullNodeParameter5Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter5Value = null;
+            if (parseNode.GetChildNode("Parameter60.Name") is { } nullNodeParameter60Name && nullNodeParameter60Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter60Name = null;
+            if (parseNode.GetChildNode("Parameter60.Value") is { } nullNodeParameter60Value && nullNodeParameter60Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter60Value = null;
+            if (parseNode.GetChildNode("Parameter61.Name") is { } nullNodeParameter61Name && nullNodeParameter61Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter61Name = null;
+            if (parseNode.GetChildNode("Parameter61.Value") is { } nullNodeParameter61Value && nullNodeParameter61Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter61Value = null;
+            if (parseNode.GetChildNode("Parameter62.Name") is { } nullNodeParameter62Name && nullNodeParameter62Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter62Name = null;
+            if (parseNode.GetChildNode("Parameter62.Value") is { } nullNodeParameter62Value && nullNodeParameter62Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter62Value = null;
+            if (parseNode.GetChildNode("Parameter63.Name") is { } nullNodeParameter63Name && nullNodeParameter63Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter63Name = null;
+            if (parseNode.GetChildNode("Parameter63.Value") is { } nullNodeParameter63Value && nullNodeParameter63Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter63Value = null;
+            if (parseNode.GetChildNode("Parameter64.Name") is { } nullNodeParameter64Name && nullNodeParameter64Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter64Name = null;
+            if (parseNode.GetChildNode("Parameter64.Value") is { } nullNodeParameter64Value && nullNodeParameter64Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter64Value = null;
+            if (parseNode.GetChildNode("Parameter65.Name") is { } nullNodeParameter65Name && nullNodeParameter65Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter65Name = null;
+            if (parseNode.GetChildNode("Parameter65.Value") is { } nullNodeParameter65Value && nullNodeParameter65Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter65Value = null;
+            if (parseNode.GetChildNode("Parameter66.Name") is { } nullNodeParameter66Name && nullNodeParameter66Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter66Name = null;
+            if (parseNode.GetChildNode("Parameter66.Value") is { } nullNodeParameter66Value && nullNodeParameter66Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter66Value = null;
+            if (parseNode.GetChildNode("Parameter67.Name") is { } nullNodeParameter67Name && nullNodeParameter67Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter67Name = null;
+            if (parseNode.GetChildNode("Parameter67.Value") is { } nullNodeParameter67Value && nullNodeParameter67Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter67Value = null;
+            if (parseNode.GetChildNode("Parameter68.Name") is { } nullNodeParameter68Name && nullNodeParameter68Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter68Name = null;
+            if (parseNode.GetChildNode("Parameter68.Value") is { } nullNodeParameter68Value && nullNodeParameter68Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter68Value = null;
+            if (parseNode.GetChildNode("Parameter69.Name") is { } nullNodeParameter69Name && nullNodeParameter69Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter69Name = null;
+            if (parseNode.GetChildNode("Parameter69.Value") is { } nullNodeParameter69Value && nullNodeParameter69Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter69Value = null;
+            if (parseNode.GetChildNode("Parameter6.Name") is { } nullNodeParameter6Name && nullNodeParameter6Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter6Name = null;
+            if (parseNode.GetChildNode("Parameter6.Value") is { } nullNodeParameter6Value && nullNodeParameter6Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter6Value = null;
+            if (parseNode.GetChildNode("Parameter70.Name") is { } nullNodeParameter70Name && nullNodeParameter70Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter70Name = null;
+            if (parseNode.GetChildNode("Parameter70.Value") is { } nullNodeParameter70Value && nullNodeParameter70Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter70Value = null;
+            if (parseNode.GetChildNode("Parameter71.Name") is { } nullNodeParameter71Name && nullNodeParameter71Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter71Name = null;
+            if (parseNode.GetChildNode("Parameter71.Value") is { } nullNodeParameter71Value && nullNodeParameter71Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter71Value = null;
+            if (parseNode.GetChildNode("Parameter72.Name") is { } nullNodeParameter72Name && nullNodeParameter72Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter72Name = null;
+            if (parseNode.GetChildNode("Parameter72.Value") is { } nullNodeParameter72Value && nullNodeParameter72Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter72Value = null;
+            if (parseNode.GetChildNode("Parameter73.Name") is { } nullNodeParameter73Name && nullNodeParameter73Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter73Name = null;
+            if (parseNode.GetChildNode("Parameter73.Value") is { } nullNodeParameter73Value && nullNodeParameter73Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter73Value = null;
+            if (parseNode.GetChildNode("Parameter74.Name") is { } nullNodeParameter74Name && nullNodeParameter74Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter74Name = null;
+            if (parseNode.GetChildNode("Parameter74.Value") is { } nullNodeParameter74Value && nullNodeParameter74Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter74Value = null;
+            if (parseNode.GetChildNode("Parameter75.Name") is { } nullNodeParameter75Name && nullNodeParameter75Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter75Name = null;
+            if (parseNode.GetChildNode("Parameter75.Value") is { } nullNodeParameter75Value && nullNodeParameter75Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter75Value = null;
+            if (parseNode.GetChildNode("Parameter76.Name") is { } nullNodeParameter76Name && nullNodeParameter76Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter76Name = null;
+            if (parseNode.GetChildNode("Parameter76.Value") is { } nullNodeParameter76Value && nullNodeParameter76Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter76Value = null;
+            if (parseNode.GetChildNode("Parameter77.Name") is { } nullNodeParameter77Name && nullNodeParameter77Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter77Name = null;
+            if (parseNode.GetChildNode("Parameter77.Value") is { } nullNodeParameter77Value && nullNodeParameter77Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter77Value = null;
+            if (parseNode.GetChildNode("Parameter78.Name") is { } nullNodeParameter78Name && nullNodeParameter78Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter78Name = null;
+            if (parseNode.GetChildNode("Parameter78.Value") is { } nullNodeParameter78Value && nullNodeParameter78Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter78Value = null;
+            if (parseNode.GetChildNode("Parameter79.Name") is { } nullNodeParameter79Name && nullNodeParameter79Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter79Name = null;
+            if (parseNode.GetChildNode("Parameter79.Value") is { } nullNodeParameter79Value && nullNodeParameter79Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter79Value = null;
+            if (parseNode.GetChildNode("Parameter7.Name") is { } nullNodeParameter7Name && nullNodeParameter7Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter7Name = null;
+            if (parseNode.GetChildNode("Parameter7.Value") is { } nullNodeParameter7Value && nullNodeParameter7Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter7Value = null;
+            if (parseNode.GetChildNode("Parameter80.Name") is { } nullNodeParameter80Name && nullNodeParameter80Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter80Name = null;
+            if (parseNode.GetChildNode("Parameter80.Value") is { } nullNodeParameter80Value && nullNodeParameter80Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter80Value = null;
+            if (parseNode.GetChildNode("Parameter81.Name") is { } nullNodeParameter81Name && nullNodeParameter81Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter81Name = null;
+            if (parseNode.GetChildNode("Parameter81.Value") is { } nullNodeParameter81Value && nullNodeParameter81Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter81Value = null;
+            if (parseNode.GetChildNode("Parameter82.Name") is { } nullNodeParameter82Name && nullNodeParameter82Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter82Name = null;
+            if (parseNode.GetChildNode("Parameter82.Value") is { } nullNodeParameter82Value && nullNodeParameter82Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter82Value = null;
+            if (parseNode.GetChildNode("Parameter83.Name") is { } nullNodeParameter83Name && nullNodeParameter83Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter83Name = null;
+            if (parseNode.GetChildNode("Parameter83.Value") is { } nullNodeParameter83Value && nullNodeParameter83Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter83Value = null;
+            if (parseNode.GetChildNode("Parameter84.Name") is { } nullNodeParameter84Name && nullNodeParameter84Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter84Name = null;
+            if (parseNode.GetChildNode("Parameter84.Value") is { } nullNodeParameter84Value && nullNodeParameter84Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter84Value = null;
+            if (parseNode.GetChildNode("Parameter85.Name") is { } nullNodeParameter85Name && nullNodeParameter85Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter85Name = null;
+            if (parseNode.GetChildNode("Parameter85.Value") is { } nullNodeParameter85Value && nullNodeParameter85Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter85Value = null;
+            if (parseNode.GetChildNode("Parameter86.Name") is { } nullNodeParameter86Name && nullNodeParameter86Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter86Name = null;
+            if (parseNode.GetChildNode("Parameter86.Value") is { } nullNodeParameter86Value && nullNodeParameter86Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter86Value = null;
+            if (parseNode.GetChildNode("Parameter87.Name") is { } nullNodeParameter87Name && nullNodeParameter87Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter87Name = null;
+            if (parseNode.GetChildNode("Parameter87.Value") is { } nullNodeParameter87Value && nullNodeParameter87Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter87Value = null;
+            if (parseNode.GetChildNode("Parameter88.Name") is { } nullNodeParameter88Name && nullNodeParameter88Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter88Name = null;
+            if (parseNode.GetChildNode("Parameter88.Value") is { } nullNodeParameter88Value && nullNodeParameter88Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter88Value = null;
+            if (parseNode.GetChildNode("Parameter89.Name") is { } nullNodeParameter89Name && nullNodeParameter89Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter89Name = null;
+            if (parseNode.GetChildNode("Parameter89.Value") is { } nullNodeParameter89Value && nullNodeParameter89Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter89Value = null;
+            if (parseNode.GetChildNode("Parameter8.Name") is { } nullNodeParameter8Name && nullNodeParameter8Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter8Name = null;
+            if (parseNode.GetChildNode("Parameter8.Value") is { } nullNodeParameter8Value && nullNodeParameter8Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter8Value = null;
+            if (parseNode.GetChildNode("Parameter90.Name") is { } nullNodeParameter90Name && nullNodeParameter90Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter90Name = null;
+            if (parseNode.GetChildNode("Parameter90.Value") is { } nullNodeParameter90Value && nullNodeParameter90Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter90Value = null;
+            if (parseNode.GetChildNode("Parameter91.Name") is { } nullNodeParameter91Name && nullNodeParameter91Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter91Name = null;
+            if (parseNode.GetChildNode("Parameter91.Value") is { } nullNodeParameter91Value && nullNodeParameter91Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter91Value = null;
+            if (parseNode.GetChildNode("Parameter92.Name") is { } nullNodeParameter92Name && nullNodeParameter92Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter92Name = null;
+            if (parseNode.GetChildNode("Parameter92.Value") is { } nullNodeParameter92Value && nullNodeParameter92Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter92Value = null;
+            if (parseNode.GetChildNode("Parameter93.Name") is { } nullNodeParameter93Name && nullNodeParameter93Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter93Name = null;
+            if (parseNode.GetChildNode("Parameter93.Value") is { } nullNodeParameter93Value && nullNodeParameter93Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter93Value = null;
+            if (parseNode.GetChildNode("Parameter94.Name") is { } nullNodeParameter94Name && nullNodeParameter94Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter94Name = null;
+            if (parseNode.GetChildNode("Parameter94.Value") is { } nullNodeParameter94Value && nullNodeParameter94Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter94Value = null;
+            if (parseNode.GetChildNode("Parameter95.Name") is { } nullNodeParameter95Name && nullNodeParameter95Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter95Name = null;
+            if (parseNode.GetChildNode("Parameter95.Value") is { } nullNodeParameter95Value && nullNodeParameter95Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter95Value = null;
+            if (parseNode.GetChildNode("Parameter96.Name") is { } nullNodeParameter96Name && nullNodeParameter96Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter96Name = null;
+            if (parseNode.GetChildNode("Parameter96.Value") is { } nullNodeParameter96Value && nullNodeParameter96Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter96Value = null;
+            if (parseNode.GetChildNode("Parameter97.Name") is { } nullNodeParameter97Name && nullNodeParameter97Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter97Name = null;
+            if (parseNode.GetChildNode("Parameter97.Value") is { } nullNodeParameter97Value && nullNodeParameter97Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter97Value = null;
+            if (parseNode.GetChildNode("Parameter98.Name") is { } nullNodeParameter98Name && nullNodeParameter98Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter98Name = null;
+            if (parseNode.GetChildNode("Parameter98.Value") is { } nullNodeParameter98Value && nullNodeParameter98Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter98Value = null;
+            if (parseNode.GetChildNode("Parameter99.Name") is { } nullNodeParameter99Name && nullNodeParameter99Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter99Name = null;
+            if (parseNode.GetChildNode("Parameter99.Value") is { } nullNodeParameter99Value && nullNodeParameter99Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter99Value = null;
+            if (parseNode.GetChildNode("Parameter9.Name") is { } nullNodeParameter9Name && nullNodeParameter9Name.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter9Name = null;
+            if (parseNode.GetChildNode("Parameter9.Value") is { } nullNodeParameter9Value && nullNodeParameter9Value.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter9Value = null;
+            if (parseNode.GetChildNode("StatusCallback") is { } nullNodeStatusCallback && nullNodeStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallback = null;
+            if (parseNode.GetChildNode("StatusCallbackMethod") is { } nullNodeStatusCallbackMethod && nullNodeStatusCallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbackMethod = null;
+            if (parseNode.GetChildNode("Track") is { } nullNodeTrack && nullNodeTrack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Track = null;
+            if (parseNode.GetChildNode("Url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The user-specified name of this Stream, if one was given when the Stream was created. This can be used to stop the Stream.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter10Name { get; set; }
+        public string? Parameter10Name { get => _explicitNullValueParameter10Name; set { _explicitNullValueParameter10Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter10.Name"); else _explicitNullProperties?.Remove("Parameter10.Name"); } }
+        private string? _explicitNullValueParameter10Name = default!;
 #nullable restore
 #else
-        public string Parameter10Name { get; set; }
+        public string Parameter10Name { get => _explicitNullValueParameter10Name; set { _explicitNullValueParameter10Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter10.Name"); else _explicitNullProperties?.Remove("Parameter10.Name"); } }
+        private string _explicitNullValueParameter10Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter10Value { get; set; }
+        public string? Parameter10Value { get => _explicitNullValueParameter10Value; set { _explicitNullValueParameter10Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter10.Value"); else _explicitNullProperties?.Remove("Parameter10.Value"); } }
+        private string? _explicitNullValueParameter10Value = default!;
 #nullable restore
 #else
-        public string Parameter10Value { get; set; }
+        public string Parameter10Value { get => _explicitNullValueParameter10Value; set { _explicitNullValueParameter10Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter10.Value"); else _explicitNullProperties?.Remove("Parameter10.Value"); } }
+        private string _explicitNullValueParameter10Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter11Name { get; set; }
+        public string? Parameter11Name { get => _explicitNullValueParameter11Name; set { _explicitNullValueParameter11Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter11.Name"); else _explicitNullProperties?.Remove("Parameter11.Name"); } }
+        private string? _explicitNullValueParameter11Name = default!;
 #nullable restore
 #else
-        public string Parameter11Name { get; set; }
+        public string Parameter11Name { get => _explicitNullValueParameter11Name; set { _explicitNullValueParameter11Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter11.Name"); else _explicitNullProperties?.Remove("Parameter11.Name"); } }
+        private string _explicitNullValueParameter11Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter11Value { get; set; }
+        public string? Parameter11Value { get => _explicitNullValueParameter11Value; set { _explicitNullValueParameter11Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter11.Value"); else _explicitNullProperties?.Remove("Parameter11.Value"); } }
+        private string? _explicitNullValueParameter11Value = default!;
 #nullable restore
 #else
-        public string Parameter11Value { get; set; }
+        public string Parameter11Value { get => _explicitNullValueParameter11Value; set { _explicitNullValueParameter11Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter11.Value"); else _explicitNullProperties?.Remove("Parameter11.Value"); } }
+        private string _explicitNullValueParameter11Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter12Name { get; set; }
+        public string? Parameter12Name { get => _explicitNullValueParameter12Name; set { _explicitNullValueParameter12Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter12.Name"); else _explicitNullProperties?.Remove("Parameter12.Name"); } }
+        private string? _explicitNullValueParameter12Name = default!;
 #nullable restore
 #else
-        public string Parameter12Name { get; set; }
+        public string Parameter12Name { get => _explicitNullValueParameter12Name; set { _explicitNullValueParameter12Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter12.Name"); else _explicitNullProperties?.Remove("Parameter12.Name"); } }
+        private string _explicitNullValueParameter12Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter12Value { get; set; }
+        public string? Parameter12Value { get => _explicitNullValueParameter12Value; set { _explicitNullValueParameter12Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter12.Value"); else _explicitNullProperties?.Remove("Parameter12.Value"); } }
+        private string? _explicitNullValueParameter12Value = default!;
 #nullable restore
 #else
-        public string Parameter12Value { get; set; }
+        public string Parameter12Value { get => _explicitNullValueParameter12Value; set { _explicitNullValueParameter12Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter12.Value"); else _explicitNullProperties?.Remove("Parameter12.Value"); } }
+        private string _explicitNullValueParameter12Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter13Name { get; set; }
+        public string? Parameter13Name { get => _explicitNullValueParameter13Name; set { _explicitNullValueParameter13Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter13.Name"); else _explicitNullProperties?.Remove("Parameter13.Name"); } }
+        private string? _explicitNullValueParameter13Name = default!;
 #nullable restore
 #else
-        public string Parameter13Name { get; set; }
+        public string Parameter13Name { get => _explicitNullValueParameter13Name; set { _explicitNullValueParameter13Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter13.Name"); else _explicitNullProperties?.Remove("Parameter13.Name"); } }
+        private string _explicitNullValueParameter13Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter13Value { get; set; }
+        public string? Parameter13Value { get => _explicitNullValueParameter13Value; set { _explicitNullValueParameter13Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter13.Value"); else _explicitNullProperties?.Remove("Parameter13.Value"); } }
+        private string? _explicitNullValueParameter13Value = default!;
 #nullable restore
 #else
-        public string Parameter13Value { get; set; }
+        public string Parameter13Value { get => _explicitNullValueParameter13Value; set { _explicitNullValueParameter13Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter13.Value"); else _explicitNullProperties?.Remove("Parameter13.Value"); } }
+        private string _explicitNullValueParameter13Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter14Name { get; set; }
+        public string? Parameter14Name { get => _explicitNullValueParameter14Name; set { _explicitNullValueParameter14Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter14.Name"); else _explicitNullProperties?.Remove("Parameter14.Name"); } }
+        private string? _explicitNullValueParameter14Name = default!;
 #nullable restore
 #else
-        public string Parameter14Name { get; set; }
+        public string Parameter14Name { get => _explicitNullValueParameter14Name; set { _explicitNullValueParameter14Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter14.Name"); else _explicitNullProperties?.Remove("Parameter14.Name"); } }
+        private string _explicitNullValueParameter14Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter14Value { get; set; }
+        public string? Parameter14Value { get => _explicitNullValueParameter14Value; set { _explicitNullValueParameter14Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter14.Value"); else _explicitNullProperties?.Remove("Parameter14.Value"); } }
+        private string? _explicitNullValueParameter14Value = default!;
 #nullable restore
 #else
-        public string Parameter14Value { get; set; }
+        public string Parameter14Value { get => _explicitNullValueParameter14Value; set { _explicitNullValueParameter14Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter14.Value"); else _explicitNullProperties?.Remove("Parameter14.Value"); } }
+        private string _explicitNullValueParameter14Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter15Name { get; set; }
+        public string? Parameter15Name { get => _explicitNullValueParameter15Name; set { _explicitNullValueParameter15Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter15.Name"); else _explicitNullProperties?.Remove("Parameter15.Name"); } }
+        private string? _explicitNullValueParameter15Name = default!;
 #nullable restore
 #else
-        public string Parameter15Name { get; set; }
+        public string Parameter15Name { get => _explicitNullValueParameter15Name; set { _explicitNullValueParameter15Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter15.Name"); else _explicitNullProperties?.Remove("Parameter15.Name"); } }
+        private string _explicitNullValueParameter15Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter15Value { get; set; }
+        public string? Parameter15Value { get => _explicitNullValueParameter15Value; set { _explicitNullValueParameter15Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter15.Value"); else _explicitNullProperties?.Remove("Parameter15.Value"); } }
+        private string? _explicitNullValueParameter15Value = default!;
 #nullable restore
 #else
-        public string Parameter15Value { get; set; }
+        public string Parameter15Value { get => _explicitNullValueParameter15Value; set { _explicitNullValueParameter15Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter15.Value"); else _explicitNullProperties?.Remove("Parameter15.Value"); } }
+        private string _explicitNullValueParameter15Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter16Name { get; set; }
+        public string? Parameter16Name { get => _explicitNullValueParameter16Name; set { _explicitNullValueParameter16Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter16.Name"); else _explicitNullProperties?.Remove("Parameter16.Name"); } }
+        private string? _explicitNullValueParameter16Name = default!;
 #nullable restore
 #else
-        public string Parameter16Name { get; set; }
+        public string Parameter16Name { get => _explicitNullValueParameter16Name; set { _explicitNullValueParameter16Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter16.Name"); else _explicitNullProperties?.Remove("Parameter16.Name"); } }
+        private string _explicitNullValueParameter16Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter16Value { get; set; }
+        public string? Parameter16Value { get => _explicitNullValueParameter16Value; set { _explicitNullValueParameter16Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter16.Value"); else _explicitNullProperties?.Remove("Parameter16.Value"); } }
+        private string? _explicitNullValueParameter16Value = default!;
 #nullable restore
 #else
-        public string Parameter16Value { get; set; }
+        public string Parameter16Value { get => _explicitNullValueParameter16Value; set { _explicitNullValueParameter16Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter16.Value"); else _explicitNullProperties?.Remove("Parameter16.Value"); } }
+        private string _explicitNullValueParameter16Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter17Name { get; set; }
+        public string? Parameter17Name { get => _explicitNullValueParameter17Name; set { _explicitNullValueParameter17Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter17.Name"); else _explicitNullProperties?.Remove("Parameter17.Name"); } }
+        private string? _explicitNullValueParameter17Name = default!;
 #nullable restore
 #else
-        public string Parameter17Name { get; set; }
+        public string Parameter17Name { get => _explicitNullValueParameter17Name; set { _explicitNullValueParameter17Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter17.Name"); else _explicitNullProperties?.Remove("Parameter17.Name"); } }
+        private string _explicitNullValueParameter17Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter17Value { get; set; }
+        public string? Parameter17Value { get => _explicitNullValueParameter17Value; set { _explicitNullValueParameter17Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter17.Value"); else _explicitNullProperties?.Remove("Parameter17.Value"); } }
+        private string? _explicitNullValueParameter17Value = default!;
 #nullable restore
 #else
-        public string Parameter17Value { get; set; }
+        public string Parameter17Value { get => _explicitNullValueParameter17Value; set { _explicitNullValueParameter17Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter17.Value"); else _explicitNullProperties?.Remove("Parameter17.Value"); } }
+        private string _explicitNullValueParameter17Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter18Name { get; set; }
+        public string? Parameter18Name { get => _explicitNullValueParameter18Name; set { _explicitNullValueParameter18Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter18.Name"); else _explicitNullProperties?.Remove("Parameter18.Name"); } }
+        private string? _explicitNullValueParameter18Name = default!;
 #nullable restore
 #else
-        public string Parameter18Name { get; set; }
+        public string Parameter18Name { get => _explicitNullValueParameter18Name; set { _explicitNullValueParameter18Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter18.Name"); else _explicitNullProperties?.Remove("Parameter18.Name"); } }
+        private string _explicitNullValueParameter18Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter18Value { get; set; }
+        public string? Parameter18Value { get => _explicitNullValueParameter18Value; set { _explicitNullValueParameter18Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter18.Value"); else _explicitNullProperties?.Remove("Parameter18.Value"); } }
+        private string? _explicitNullValueParameter18Value = default!;
 #nullable restore
 #else
-        public string Parameter18Value { get; set; }
+        public string Parameter18Value { get => _explicitNullValueParameter18Value; set { _explicitNullValueParameter18Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter18.Value"); else _explicitNullProperties?.Remove("Parameter18.Value"); } }
+        private string _explicitNullValueParameter18Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter19Name { get; set; }
+        public string? Parameter19Name { get => _explicitNullValueParameter19Name; set { _explicitNullValueParameter19Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter19.Name"); else _explicitNullProperties?.Remove("Parameter19.Name"); } }
+        private string? _explicitNullValueParameter19Name = default!;
 #nullable restore
 #else
-        public string Parameter19Name { get; set; }
+        public string Parameter19Name { get => _explicitNullValueParameter19Name; set { _explicitNullValueParameter19Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter19.Name"); else _explicitNullProperties?.Remove("Parameter19.Name"); } }
+        private string _explicitNullValueParameter19Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter19Value { get; set; }
+        public string? Parameter19Value { get => _explicitNullValueParameter19Value; set { _explicitNullValueParameter19Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter19.Value"); else _explicitNullProperties?.Remove("Parameter19.Value"); } }
+        private string? _explicitNullValueParameter19Value = default!;
 #nullable restore
 #else
-        public string Parameter19Value { get; set; }
+        public string Parameter19Value { get => _explicitNullValueParameter19Value; set { _explicitNullValueParameter19Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter19.Value"); else _explicitNullProperties?.Remove("Parameter19.Value"); } }
+        private string _explicitNullValueParameter19Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter1Name { get; set; }
+        public string? Parameter1Name { get => _explicitNullValueParameter1Name; set { _explicitNullValueParameter1Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter1.Name"); else _explicitNullProperties?.Remove("Parameter1.Name"); } }
+        private string? _explicitNullValueParameter1Name = default!;
 #nullable restore
 #else
-        public string Parameter1Name { get; set; }
+        public string Parameter1Name { get => _explicitNullValueParameter1Name; set { _explicitNullValueParameter1Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter1.Name"); else _explicitNullProperties?.Remove("Parameter1.Name"); } }
+        private string _explicitNullValueParameter1Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter1Value { get; set; }
+        public string? Parameter1Value { get => _explicitNullValueParameter1Value; set { _explicitNullValueParameter1Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter1.Value"); else _explicitNullProperties?.Remove("Parameter1.Value"); } }
+        private string? _explicitNullValueParameter1Value = default!;
 #nullable restore
 #else
-        public string Parameter1Value { get; set; }
+        public string Parameter1Value { get => _explicitNullValueParameter1Value; set { _explicitNullValueParameter1Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter1.Value"); else _explicitNullProperties?.Remove("Parameter1.Value"); } }
+        private string _explicitNullValueParameter1Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter20Name { get; set; }
+        public string? Parameter20Name { get => _explicitNullValueParameter20Name; set { _explicitNullValueParameter20Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter20.Name"); else _explicitNullProperties?.Remove("Parameter20.Name"); } }
+        private string? _explicitNullValueParameter20Name = default!;
 #nullable restore
 #else
-        public string Parameter20Name { get; set; }
+        public string Parameter20Name { get => _explicitNullValueParameter20Name; set { _explicitNullValueParameter20Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter20.Name"); else _explicitNullProperties?.Remove("Parameter20.Name"); } }
+        private string _explicitNullValueParameter20Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter20Value { get; set; }
+        public string? Parameter20Value { get => _explicitNullValueParameter20Value; set { _explicitNullValueParameter20Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter20.Value"); else _explicitNullProperties?.Remove("Parameter20.Value"); } }
+        private string? _explicitNullValueParameter20Value = default!;
 #nullable restore
 #else
-        public string Parameter20Value { get; set; }
+        public string Parameter20Value { get => _explicitNullValueParameter20Value; set { _explicitNullValueParameter20Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter20.Value"); else _explicitNullProperties?.Remove("Parameter20.Value"); } }
+        private string _explicitNullValueParameter20Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter21Name { get; set; }
+        public string? Parameter21Name { get => _explicitNullValueParameter21Name; set { _explicitNullValueParameter21Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter21.Name"); else _explicitNullProperties?.Remove("Parameter21.Name"); } }
+        private string? _explicitNullValueParameter21Name = default!;
 #nullable restore
 #else
-        public string Parameter21Name { get; set; }
+        public string Parameter21Name { get => _explicitNullValueParameter21Name; set { _explicitNullValueParameter21Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter21.Name"); else _explicitNullProperties?.Remove("Parameter21.Name"); } }
+        private string _explicitNullValueParameter21Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter21Value { get; set; }
+        public string? Parameter21Value { get => _explicitNullValueParameter21Value; set { _explicitNullValueParameter21Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter21.Value"); else _explicitNullProperties?.Remove("Parameter21.Value"); } }
+        private string? _explicitNullValueParameter21Value = default!;
 #nullable restore
 #else
-        public string Parameter21Value { get; set; }
+        public string Parameter21Value { get => _explicitNullValueParameter21Value; set { _explicitNullValueParameter21Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter21.Value"); else _explicitNullProperties?.Remove("Parameter21.Value"); } }
+        private string _explicitNullValueParameter21Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter22Name { get; set; }
+        public string? Parameter22Name { get => _explicitNullValueParameter22Name; set { _explicitNullValueParameter22Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter22.Name"); else _explicitNullProperties?.Remove("Parameter22.Name"); } }
+        private string? _explicitNullValueParameter22Name = default!;
 #nullable restore
 #else
-        public string Parameter22Name { get; set; }
+        public string Parameter22Name { get => _explicitNullValueParameter22Name; set { _explicitNullValueParameter22Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter22.Name"); else _explicitNullProperties?.Remove("Parameter22.Name"); } }
+        private string _explicitNullValueParameter22Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter22Value { get; set; }
+        public string? Parameter22Value { get => _explicitNullValueParameter22Value; set { _explicitNullValueParameter22Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter22.Value"); else _explicitNullProperties?.Remove("Parameter22.Value"); } }
+        private string? _explicitNullValueParameter22Value = default!;
 #nullable restore
 #else
-        public string Parameter22Value { get; set; }
+        public string Parameter22Value { get => _explicitNullValueParameter22Value; set { _explicitNullValueParameter22Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter22.Value"); else _explicitNullProperties?.Remove("Parameter22.Value"); } }
+        private string _explicitNullValueParameter22Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter23Name { get; set; }
+        public string? Parameter23Name { get => _explicitNullValueParameter23Name; set { _explicitNullValueParameter23Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter23.Name"); else _explicitNullProperties?.Remove("Parameter23.Name"); } }
+        private string? _explicitNullValueParameter23Name = default!;
 #nullable restore
 #else
-        public string Parameter23Name { get; set; }
+        public string Parameter23Name { get => _explicitNullValueParameter23Name; set { _explicitNullValueParameter23Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter23.Name"); else _explicitNullProperties?.Remove("Parameter23.Name"); } }
+        private string _explicitNullValueParameter23Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter23Value { get; set; }
+        public string? Parameter23Value { get => _explicitNullValueParameter23Value; set { _explicitNullValueParameter23Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter23.Value"); else _explicitNullProperties?.Remove("Parameter23.Value"); } }
+        private string? _explicitNullValueParameter23Value = default!;
 #nullable restore
 #else
-        public string Parameter23Value { get; set; }
+        public string Parameter23Value { get => _explicitNullValueParameter23Value; set { _explicitNullValueParameter23Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter23.Value"); else _explicitNullProperties?.Remove("Parameter23.Value"); } }
+        private string _explicitNullValueParameter23Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter24Name { get; set; }
+        public string? Parameter24Name { get => _explicitNullValueParameter24Name; set { _explicitNullValueParameter24Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter24.Name"); else _explicitNullProperties?.Remove("Parameter24.Name"); } }
+        private string? _explicitNullValueParameter24Name = default!;
 #nullable restore
 #else
-        public string Parameter24Name { get; set; }
+        public string Parameter24Name { get => _explicitNullValueParameter24Name; set { _explicitNullValueParameter24Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter24.Name"); else _explicitNullProperties?.Remove("Parameter24.Name"); } }
+        private string _explicitNullValueParameter24Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter24Value { get; set; }
+        public string? Parameter24Value { get => _explicitNullValueParameter24Value; set { _explicitNullValueParameter24Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter24.Value"); else _explicitNullProperties?.Remove("Parameter24.Value"); } }
+        private string? _explicitNullValueParameter24Value = default!;
 #nullable restore
 #else
-        public string Parameter24Value { get; set; }
+        public string Parameter24Value { get => _explicitNullValueParameter24Value; set { _explicitNullValueParameter24Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter24.Value"); else _explicitNullProperties?.Remove("Parameter24.Value"); } }
+        private string _explicitNullValueParameter24Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter25Name { get; set; }
+        public string? Parameter25Name { get => _explicitNullValueParameter25Name; set { _explicitNullValueParameter25Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter25.Name"); else _explicitNullProperties?.Remove("Parameter25.Name"); } }
+        private string? _explicitNullValueParameter25Name = default!;
 #nullable restore
 #else
-        public string Parameter25Name { get; set; }
+        public string Parameter25Name { get => _explicitNullValueParameter25Name; set { _explicitNullValueParameter25Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter25.Name"); else _explicitNullProperties?.Remove("Parameter25.Name"); } }
+        private string _explicitNullValueParameter25Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter25Value { get; set; }
+        public string? Parameter25Value { get => _explicitNullValueParameter25Value; set { _explicitNullValueParameter25Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter25.Value"); else _explicitNullProperties?.Remove("Parameter25.Value"); } }
+        private string? _explicitNullValueParameter25Value = default!;
 #nullable restore
 #else
-        public string Parameter25Value { get; set; }
+        public string Parameter25Value { get => _explicitNullValueParameter25Value; set { _explicitNullValueParameter25Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter25.Value"); else _explicitNullProperties?.Remove("Parameter25.Value"); } }
+        private string _explicitNullValueParameter25Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter26Name { get; set; }
+        public string? Parameter26Name { get => _explicitNullValueParameter26Name; set { _explicitNullValueParameter26Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter26.Name"); else _explicitNullProperties?.Remove("Parameter26.Name"); } }
+        private string? _explicitNullValueParameter26Name = default!;
 #nullable restore
 #else
-        public string Parameter26Name { get; set; }
+        public string Parameter26Name { get => _explicitNullValueParameter26Name; set { _explicitNullValueParameter26Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter26.Name"); else _explicitNullProperties?.Remove("Parameter26.Name"); } }
+        private string _explicitNullValueParameter26Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter26Value { get; set; }
+        public string? Parameter26Value { get => _explicitNullValueParameter26Value; set { _explicitNullValueParameter26Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter26.Value"); else _explicitNullProperties?.Remove("Parameter26.Value"); } }
+        private string? _explicitNullValueParameter26Value = default!;
 #nullable restore
 #else
-        public string Parameter26Value { get; set; }
+        public string Parameter26Value { get => _explicitNullValueParameter26Value; set { _explicitNullValueParameter26Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter26.Value"); else _explicitNullProperties?.Remove("Parameter26.Value"); } }
+        private string _explicitNullValueParameter26Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter27Name { get; set; }
+        public string? Parameter27Name { get => _explicitNullValueParameter27Name; set { _explicitNullValueParameter27Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter27.Name"); else _explicitNullProperties?.Remove("Parameter27.Name"); } }
+        private string? _explicitNullValueParameter27Name = default!;
 #nullable restore
 #else
-        public string Parameter27Name { get; set; }
+        public string Parameter27Name { get => _explicitNullValueParameter27Name; set { _explicitNullValueParameter27Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter27.Name"); else _explicitNullProperties?.Remove("Parameter27.Name"); } }
+        private string _explicitNullValueParameter27Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter27Value { get; set; }
+        public string? Parameter27Value { get => _explicitNullValueParameter27Value; set { _explicitNullValueParameter27Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter27.Value"); else _explicitNullProperties?.Remove("Parameter27.Value"); } }
+        private string? _explicitNullValueParameter27Value = default!;
 #nullable restore
 #else
-        public string Parameter27Value { get; set; }
+        public string Parameter27Value { get => _explicitNullValueParameter27Value; set { _explicitNullValueParameter27Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter27.Value"); else _explicitNullProperties?.Remove("Parameter27.Value"); } }
+        private string _explicitNullValueParameter27Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter28Name { get; set; }
+        public string? Parameter28Name { get => _explicitNullValueParameter28Name; set { _explicitNullValueParameter28Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter28.Name"); else _explicitNullProperties?.Remove("Parameter28.Name"); } }
+        private string? _explicitNullValueParameter28Name = default!;
 #nullable restore
 #else
-        public string Parameter28Name { get; set; }
+        public string Parameter28Name { get => _explicitNullValueParameter28Name; set { _explicitNullValueParameter28Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter28.Name"); else _explicitNullProperties?.Remove("Parameter28.Name"); } }
+        private string _explicitNullValueParameter28Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter28Value { get; set; }
+        public string? Parameter28Value { get => _explicitNullValueParameter28Value; set { _explicitNullValueParameter28Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter28.Value"); else _explicitNullProperties?.Remove("Parameter28.Value"); } }
+        private string? _explicitNullValueParameter28Value = default!;
 #nullable restore
 #else
-        public string Parameter28Value { get; set; }
+        public string Parameter28Value { get => _explicitNullValueParameter28Value; set { _explicitNullValueParameter28Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter28.Value"); else _explicitNullProperties?.Remove("Parameter28.Value"); } }
+        private string _explicitNullValueParameter28Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter29Name { get; set; }
+        public string? Parameter29Name { get => _explicitNullValueParameter29Name; set { _explicitNullValueParameter29Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter29.Name"); else _explicitNullProperties?.Remove("Parameter29.Name"); } }
+        private string? _explicitNullValueParameter29Name = default!;
 #nullable restore
 #else
-        public string Parameter29Name { get; set; }
+        public string Parameter29Name { get => _explicitNullValueParameter29Name; set { _explicitNullValueParameter29Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter29.Name"); else _explicitNullProperties?.Remove("Parameter29.Name"); } }
+        private string _explicitNullValueParameter29Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter29Value { get; set; }
+        public string? Parameter29Value { get => _explicitNullValueParameter29Value; set { _explicitNullValueParameter29Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter29.Value"); else _explicitNullProperties?.Remove("Parameter29.Value"); } }
+        private string? _explicitNullValueParameter29Value = default!;
 #nullable restore
 #else
-        public string Parameter29Value { get; set; }
+        public string Parameter29Value { get => _explicitNullValueParameter29Value; set { _explicitNullValueParameter29Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter29.Value"); else _explicitNullProperties?.Remove("Parameter29.Value"); } }
+        private string _explicitNullValueParameter29Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter2Name { get; set; }
+        public string? Parameter2Name { get => _explicitNullValueParameter2Name; set { _explicitNullValueParameter2Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter2.Name"); else _explicitNullProperties?.Remove("Parameter2.Name"); } }
+        private string? _explicitNullValueParameter2Name = default!;
 #nullable restore
 #else
-        public string Parameter2Name { get; set; }
+        public string Parameter2Name { get => _explicitNullValueParameter2Name; set { _explicitNullValueParameter2Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter2.Name"); else _explicitNullProperties?.Remove("Parameter2.Name"); } }
+        private string _explicitNullValueParameter2Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter2Value { get; set; }
+        public string? Parameter2Value { get => _explicitNullValueParameter2Value; set { _explicitNullValueParameter2Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter2.Value"); else _explicitNullProperties?.Remove("Parameter2.Value"); } }
+        private string? _explicitNullValueParameter2Value = default!;
 #nullable restore
 #else
-        public string Parameter2Value { get; set; }
+        public string Parameter2Value { get => _explicitNullValueParameter2Value; set { _explicitNullValueParameter2Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter2.Value"); else _explicitNullProperties?.Remove("Parameter2.Value"); } }
+        private string _explicitNullValueParameter2Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter30Name { get; set; }
+        public string? Parameter30Name { get => _explicitNullValueParameter30Name; set { _explicitNullValueParameter30Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter30.Name"); else _explicitNullProperties?.Remove("Parameter30.Name"); } }
+        private string? _explicitNullValueParameter30Name = default!;
 #nullable restore
 #else
-        public string Parameter30Name { get; set; }
+        public string Parameter30Name { get => _explicitNullValueParameter30Name; set { _explicitNullValueParameter30Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter30.Name"); else _explicitNullProperties?.Remove("Parameter30.Name"); } }
+        private string _explicitNullValueParameter30Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter30Value { get; set; }
+        public string? Parameter30Value { get => _explicitNullValueParameter30Value; set { _explicitNullValueParameter30Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter30.Value"); else _explicitNullProperties?.Remove("Parameter30.Value"); } }
+        private string? _explicitNullValueParameter30Value = default!;
 #nullable restore
 #else
-        public string Parameter30Value { get; set; }
+        public string Parameter30Value { get => _explicitNullValueParameter30Value; set { _explicitNullValueParameter30Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter30.Value"); else _explicitNullProperties?.Remove("Parameter30.Value"); } }
+        private string _explicitNullValueParameter30Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter31Name { get; set; }
+        public string? Parameter31Name { get => _explicitNullValueParameter31Name; set { _explicitNullValueParameter31Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter31.Name"); else _explicitNullProperties?.Remove("Parameter31.Name"); } }
+        private string? _explicitNullValueParameter31Name = default!;
 #nullable restore
 #else
-        public string Parameter31Name { get; set; }
+        public string Parameter31Name { get => _explicitNullValueParameter31Name; set { _explicitNullValueParameter31Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter31.Name"); else _explicitNullProperties?.Remove("Parameter31.Name"); } }
+        private string _explicitNullValueParameter31Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter31Value { get; set; }
+        public string? Parameter31Value { get => _explicitNullValueParameter31Value; set { _explicitNullValueParameter31Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter31.Value"); else _explicitNullProperties?.Remove("Parameter31.Value"); } }
+        private string? _explicitNullValueParameter31Value = default!;
 #nullable restore
 #else
-        public string Parameter31Value { get; set; }
+        public string Parameter31Value { get => _explicitNullValueParameter31Value; set { _explicitNullValueParameter31Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter31.Value"); else _explicitNullProperties?.Remove("Parameter31.Value"); } }
+        private string _explicitNullValueParameter31Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter32Name { get; set; }
+        public string? Parameter32Name { get => _explicitNullValueParameter32Name; set { _explicitNullValueParameter32Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter32.Name"); else _explicitNullProperties?.Remove("Parameter32.Name"); } }
+        private string? _explicitNullValueParameter32Name = default!;
 #nullable restore
 #else
-        public string Parameter32Name { get; set; }
+        public string Parameter32Name { get => _explicitNullValueParameter32Name; set { _explicitNullValueParameter32Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter32.Name"); else _explicitNullProperties?.Remove("Parameter32.Name"); } }
+        private string _explicitNullValueParameter32Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter32Value { get; set; }
+        public string? Parameter32Value { get => _explicitNullValueParameter32Value; set { _explicitNullValueParameter32Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter32.Value"); else _explicitNullProperties?.Remove("Parameter32.Value"); } }
+        private string? _explicitNullValueParameter32Value = default!;
 #nullable restore
 #else
-        public string Parameter32Value { get; set; }
+        public string Parameter32Value { get => _explicitNullValueParameter32Value; set { _explicitNullValueParameter32Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter32.Value"); else _explicitNullProperties?.Remove("Parameter32.Value"); } }
+        private string _explicitNullValueParameter32Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter33Name { get; set; }
+        public string? Parameter33Name { get => _explicitNullValueParameter33Name; set { _explicitNullValueParameter33Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter33.Name"); else _explicitNullProperties?.Remove("Parameter33.Name"); } }
+        private string? _explicitNullValueParameter33Name = default!;
 #nullable restore
 #else
-        public string Parameter33Name { get; set; }
+        public string Parameter33Name { get => _explicitNullValueParameter33Name; set { _explicitNullValueParameter33Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter33.Name"); else _explicitNullProperties?.Remove("Parameter33.Name"); } }
+        private string _explicitNullValueParameter33Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter33Value { get; set; }
+        public string? Parameter33Value { get => _explicitNullValueParameter33Value; set { _explicitNullValueParameter33Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter33.Value"); else _explicitNullProperties?.Remove("Parameter33.Value"); } }
+        private string? _explicitNullValueParameter33Value = default!;
 #nullable restore
 #else
-        public string Parameter33Value { get; set; }
+        public string Parameter33Value { get => _explicitNullValueParameter33Value; set { _explicitNullValueParameter33Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter33.Value"); else _explicitNullProperties?.Remove("Parameter33.Value"); } }
+        private string _explicitNullValueParameter33Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter34Name { get; set; }
+        public string? Parameter34Name { get => _explicitNullValueParameter34Name; set { _explicitNullValueParameter34Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter34.Name"); else _explicitNullProperties?.Remove("Parameter34.Name"); } }
+        private string? _explicitNullValueParameter34Name = default!;
 #nullable restore
 #else
-        public string Parameter34Name { get; set; }
+        public string Parameter34Name { get => _explicitNullValueParameter34Name; set { _explicitNullValueParameter34Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter34.Name"); else _explicitNullProperties?.Remove("Parameter34.Name"); } }
+        private string _explicitNullValueParameter34Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter34Value { get; set; }
+        public string? Parameter34Value { get => _explicitNullValueParameter34Value; set { _explicitNullValueParameter34Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter34.Value"); else _explicitNullProperties?.Remove("Parameter34.Value"); } }
+        private string? _explicitNullValueParameter34Value = default!;
 #nullable restore
 #else
-        public string Parameter34Value { get; set; }
+        public string Parameter34Value { get => _explicitNullValueParameter34Value; set { _explicitNullValueParameter34Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter34.Value"); else _explicitNullProperties?.Remove("Parameter34.Value"); } }
+        private string _explicitNullValueParameter34Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter35Name { get; set; }
+        public string? Parameter35Name { get => _explicitNullValueParameter35Name; set { _explicitNullValueParameter35Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter35.Name"); else _explicitNullProperties?.Remove("Parameter35.Name"); } }
+        private string? _explicitNullValueParameter35Name = default!;
 #nullable restore
 #else
-        public string Parameter35Name { get; set; }
+        public string Parameter35Name { get => _explicitNullValueParameter35Name; set { _explicitNullValueParameter35Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter35.Name"); else _explicitNullProperties?.Remove("Parameter35.Name"); } }
+        private string _explicitNullValueParameter35Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter35Value { get; set; }
+        public string? Parameter35Value { get => _explicitNullValueParameter35Value; set { _explicitNullValueParameter35Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter35.Value"); else _explicitNullProperties?.Remove("Parameter35.Value"); } }
+        private string? _explicitNullValueParameter35Value = default!;
 #nullable restore
 #else
-        public string Parameter35Value { get; set; }
+        public string Parameter35Value { get => _explicitNullValueParameter35Value; set { _explicitNullValueParameter35Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter35.Value"); else _explicitNullProperties?.Remove("Parameter35.Value"); } }
+        private string _explicitNullValueParameter35Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter36Name { get; set; }
+        public string? Parameter36Name { get => _explicitNullValueParameter36Name; set { _explicitNullValueParameter36Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter36.Name"); else _explicitNullProperties?.Remove("Parameter36.Name"); } }
+        private string? _explicitNullValueParameter36Name = default!;
 #nullable restore
 #else
-        public string Parameter36Name { get; set; }
+        public string Parameter36Name { get => _explicitNullValueParameter36Name; set { _explicitNullValueParameter36Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter36.Name"); else _explicitNullProperties?.Remove("Parameter36.Name"); } }
+        private string _explicitNullValueParameter36Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter36Value { get; set; }
+        public string? Parameter36Value { get => _explicitNullValueParameter36Value; set { _explicitNullValueParameter36Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter36.Value"); else _explicitNullProperties?.Remove("Parameter36.Value"); } }
+        private string? _explicitNullValueParameter36Value = default!;
 #nullable restore
 #else
-        public string Parameter36Value { get; set; }
+        public string Parameter36Value { get => _explicitNullValueParameter36Value; set { _explicitNullValueParameter36Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter36.Value"); else _explicitNullProperties?.Remove("Parameter36.Value"); } }
+        private string _explicitNullValueParameter36Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter37Name { get; set; }
+        public string? Parameter37Name { get => _explicitNullValueParameter37Name; set { _explicitNullValueParameter37Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter37.Name"); else _explicitNullProperties?.Remove("Parameter37.Name"); } }
+        private string? _explicitNullValueParameter37Name = default!;
 #nullable restore
 #else
-        public string Parameter37Name { get; set; }
+        public string Parameter37Name { get => _explicitNullValueParameter37Name; set { _explicitNullValueParameter37Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter37.Name"); else _explicitNullProperties?.Remove("Parameter37.Name"); } }
+        private string _explicitNullValueParameter37Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter37Value { get; set; }
+        public string? Parameter37Value { get => _explicitNullValueParameter37Value; set { _explicitNullValueParameter37Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter37.Value"); else _explicitNullProperties?.Remove("Parameter37.Value"); } }
+        private string? _explicitNullValueParameter37Value = default!;
 #nullable restore
 #else
-        public string Parameter37Value { get; set; }
+        public string Parameter37Value { get => _explicitNullValueParameter37Value; set { _explicitNullValueParameter37Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter37.Value"); else _explicitNullProperties?.Remove("Parameter37.Value"); } }
+        private string _explicitNullValueParameter37Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter38Name { get; set; }
+        public string? Parameter38Name { get => _explicitNullValueParameter38Name; set { _explicitNullValueParameter38Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter38.Name"); else _explicitNullProperties?.Remove("Parameter38.Name"); } }
+        private string? _explicitNullValueParameter38Name = default!;
 #nullable restore
 #else
-        public string Parameter38Name { get; set; }
+        public string Parameter38Name { get => _explicitNullValueParameter38Name; set { _explicitNullValueParameter38Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter38.Name"); else _explicitNullProperties?.Remove("Parameter38.Name"); } }
+        private string _explicitNullValueParameter38Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter38Value { get; set; }
+        public string? Parameter38Value { get => _explicitNullValueParameter38Value; set { _explicitNullValueParameter38Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter38.Value"); else _explicitNullProperties?.Remove("Parameter38.Value"); } }
+        private string? _explicitNullValueParameter38Value = default!;
 #nullable restore
 #else
-        public string Parameter38Value { get; set; }
+        public string Parameter38Value { get => _explicitNullValueParameter38Value; set { _explicitNullValueParameter38Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter38.Value"); else _explicitNullProperties?.Remove("Parameter38.Value"); } }
+        private string _explicitNullValueParameter38Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter39Name { get; set; }
+        public string? Parameter39Name { get => _explicitNullValueParameter39Name; set { _explicitNullValueParameter39Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter39.Name"); else _explicitNullProperties?.Remove("Parameter39.Name"); } }
+        private string? _explicitNullValueParameter39Name = default!;
 #nullable restore
 #else
-        public string Parameter39Name { get; set; }
+        public string Parameter39Name { get => _explicitNullValueParameter39Name; set { _explicitNullValueParameter39Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter39.Name"); else _explicitNullProperties?.Remove("Parameter39.Name"); } }
+        private string _explicitNullValueParameter39Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter39Value { get; set; }
+        public string? Parameter39Value { get => _explicitNullValueParameter39Value; set { _explicitNullValueParameter39Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter39.Value"); else _explicitNullProperties?.Remove("Parameter39.Value"); } }
+        private string? _explicitNullValueParameter39Value = default!;
 #nullable restore
 #else
-        public string Parameter39Value { get; set; }
+        public string Parameter39Value { get => _explicitNullValueParameter39Value; set { _explicitNullValueParameter39Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter39.Value"); else _explicitNullProperties?.Remove("Parameter39.Value"); } }
+        private string _explicitNullValueParameter39Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter3Name { get; set; }
+        public string? Parameter3Name { get => _explicitNullValueParameter3Name; set { _explicitNullValueParameter3Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter3.Name"); else _explicitNullProperties?.Remove("Parameter3.Name"); } }
+        private string? _explicitNullValueParameter3Name = default!;
 #nullable restore
 #else
-        public string Parameter3Name { get; set; }
+        public string Parameter3Name { get => _explicitNullValueParameter3Name; set { _explicitNullValueParameter3Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter3.Name"); else _explicitNullProperties?.Remove("Parameter3.Name"); } }
+        private string _explicitNullValueParameter3Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter3Value { get; set; }
+        public string? Parameter3Value { get => _explicitNullValueParameter3Value; set { _explicitNullValueParameter3Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter3.Value"); else _explicitNullProperties?.Remove("Parameter3.Value"); } }
+        private string? _explicitNullValueParameter3Value = default!;
 #nullable restore
 #else
-        public string Parameter3Value { get; set; }
+        public string Parameter3Value { get => _explicitNullValueParameter3Value; set { _explicitNullValueParameter3Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter3.Value"); else _explicitNullProperties?.Remove("Parameter3.Value"); } }
+        private string _explicitNullValueParameter3Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter40Name { get; set; }
+        public string? Parameter40Name { get => _explicitNullValueParameter40Name; set { _explicitNullValueParameter40Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter40.Name"); else _explicitNullProperties?.Remove("Parameter40.Name"); } }
+        private string? _explicitNullValueParameter40Name = default!;
 #nullable restore
 #else
-        public string Parameter40Name { get; set; }
+        public string Parameter40Name { get => _explicitNullValueParameter40Name; set { _explicitNullValueParameter40Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter40.Name"); else _explicitNullProperties?.Remove("Parameter40.Name"); } }
+        private string _explicitNullValueParameter40Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter40Value { get; set; }
+        public string? Parameter40Value { get => _explicitNullValueParameter40Value; set { _explicitNullValueParameter40Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter40.Value"); else _explicitNullProperties?.Remove("Parameter40.Value"); } }
+        private string? _explicitNullValueParameter40Value = default!;
 #nullable restore
 #else
-        public string Parameter40Value { get; set; }
+        public string Parameter40Value { get => _explicitNullValueParameter40Value; set { _explicitNullValueParameter40Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter40.Value"); else _explicitNullProperties?.Remove("Parameter40.Value"); } }
+        private string _explicitNullValueParameter40Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter41Name { get; set; }
+        public string? Parameter41Name { get => _explicitNullValueParameter41Name; set { _explicitNullValueParameter41Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter41.Name"); else _explicitNullProperties?.Remove("Parameter41.Name"); } }
+        private string? _explicitNullValueParameter41Name = default!;
 #nullable restore
 #else
-        public string Parameter41Name { get; set; }
+        public string Parameter41Name { get => _explicitNullValueParameter41Name; set { _explicitNullValueParameter41Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter41.Name"); else _explicitNullProperties?.Remove("Parameter41.Name"); } }
+        private string _explicitNullValueParameter41Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter41Value { get; set; }
+        public string? Parameter41Value { get => _explicitNullValueParameter41Value; set { _explicitNullValueParameter41Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter41.Value"); else _explicitNullProperties?.Remove("Parameter41.Value"); } }
+        private string? _explicitNullValueParameter41Value = default!;
 #nullable restore
 #else
-        public string Parameter41Value { get; set; }
+        public string Parameter41Value { get => _explicitNullValueParameter41Value; set { _explicitNullValueParameter41Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter41.Value"); else _explicitNullProperties?.Remove("Parameter41.Value"); } }
+        private string _explicitNullValueParameter41Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter42Name { get; set; }
+        public string? Parameter42Name { get => _explicitNullValueParameter42Name; set { _explicitNullValueParameter42Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter42.Name"); else _explicitNullProperties?.Remove("Parameter42.Name"); } }
+        private string? _explicitNullValueParameter42Name = default!;
 #nullable restore
 #else
-        public string Parameter42Name { get; set; }
+        public string Parameter42Name { get => _explicitNullValueParameter42Name; set { _explicitNullValueParameter42Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter42.Name"); else _explicitNullProperties?.Remove("Parameter42.Name"); } }
+        private string _explicitNullValueParameter42Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter42Value { get; set; }
+        public string? Parameter42Value { get => _explicitNullValueParameter42Value; set { _explicitNullValueParameter42Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter42.Value"); else _explicitNullProperties?.Remove("Parameter42.Value"); } }
+        private string? _explicitNullValueParameter42Value = default!;
 #nullable restore
 #else
-        public string Parameter42Value { get; set; }
+        public string Parameter42Value { get => _explicitNullValueParameter42Value; set { _explicitNullValueParameter42Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter42.Value"); else _explicitNullProperties?.Remove("Parameter42.Value"); } }
+        private string _explicitNullValueParameter42Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter43Name { get; set; }
+        public string? Parameter43Name { get => _explicitNullValueParameter43Name; set { _explicitNullValueParameter43Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter43.Name"); else _explicitNullProperties?.Remove("Parameter43.Name"); } }
+        private string? _explicitNullValueParameter43Name = default!;
 #nullable restore
 #else
-        public string Parameter43Name { get; set; }
+        public string Parameter43Name { get => _explicitNullValueParameter43Name; set { _explicitNullValueParameter43Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter43.Name"); else _explicitNullProperties?.Remove("Parameter43.Name"); } }
+        private string _explicitNullValueParameter43Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter43Value { get; set; }
+        public string? Parameter43Value { get => _explicitNullValueParameter43Value; set { _explicitNullValueParameter43Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter43.Value"); else _explicitNullProperties?.Remove("Parameter43.Value"); } }
+        private string? _explicitNullValueParameter43Value = default!;
 #nullable restore
 #else
-        public string Parameter43Value { get; set; }
+        public string Parameter43Value { get => _explicitNullValueParameter43Value; set { _explicitNullValueParameter43Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter43.Value"); else _explicitNullProperties?.Remove("Parameter43.Value"); } }
+        private string _explicitNullValueParameter43Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter44Name { get; set; }
+        public string? Parameter44Name { get => _explicitNullValueParameter44Name; set { _explicitNullValueParameter44Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter44.Name"); else _explicitNullProperties?.Remove("Parameter44.Name"); } }
+        private string? _explicitNullValueParameter44Name = default!;
 #nullable restore
 #else
-        public string Parameter44Name { get; set; }
+        public string Parameter44Name { get => _explicitNullValueParameter44Name; set { _explicitNullValueParameter44Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter44.Name"); else _explicitNullProperties?.Remove("Parameter44.Name"); } }
+        private string _explicitNullValueParameter44Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter44Value { get; set; }
+        public string? Parameter44Value { get => _explicitNullValueParameter44Value; set { _explicitNullValueParameter44Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter44.Value"); else _explicitNullProperties?.Remove("Parameter44.Value"); } }
+        private string? _explicitNullValueParameter44Value = default!;
 #nullable restore
 #else
-        public string Parameter44Value { get; set; }
+        public string Parameter44Value { get => _explicitNullValueParameter44Value; set { _explicitNullValueParameter44Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter44.Value"); else _explicitNullProperties?.Remove("Parameter44.Value"); } }
+        private string _explicitNullValueParameter44Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter45Name { get; set; }
+        public string? Parameter45Name { get => _explicitNullValueParameter45Name; set { _explicitNullValueParameter45Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter45.Name"); else _explicitNullProperties?.Remove("Parameter45.Name"); } }
+        private string? _explicitNullValueParameter45Name = default!;
 #nullable restore
 #else
-        public string Parameter45Name { get; set; }
+        public string Parameter45Name { get => _explicitNullValueParameter45Name; set { _explicitNullValueParameter45Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter45.Name"); else _explicitNullProperties?.Remove("Parameter45.Name"); } }
+        private string _explicitNullValueParameter45Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter45Value { get; set; }
+        public string? Parameter45Value { get => _explicitNullValueParameter45Value; set { _explicitNullValueParameter45Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter45.Value"); else _explicitNullProperties?.Remove("Parameter45.Value"); } }
+        private string? _explicitNullValueParameter45Value = default!;
 #nullable restore
 #else
-        public string Parameter45Value { get; set; }
+        public string Parameter45Value { get => _explicitNullValueParameter45Value; set { _explicitNullValueParameter45Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter45.Value"); else _explicitNullProperties?.Remove("Parameter45.Value"); } }
+        private string _explicitNullValueParameter45Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter46Name { get; set; }
+        public string? Parameter46Name { get => _explicitNullValueParameter46Name; set { _explicitNullValueParameter46Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter46.Name"); else _explicitNullProperties?.Remove("Parameter46.Name"); } }
+        private string? _explicitNullValueParameter46Name = default!;
 #nullable restore
 #else
-        public string Parameter46Name { get; set; }
+        public string Parameter46Name { get => _explicitNullValueParameter46Name; set { _explicitNullValueParameter46Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter46.Name"); else _explicitNullProperties?.Remove("Parameter46.Name"); } }
+        private string _explicitNullValueParameter46Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter46Value { get; set; }
+        public string? Parameter46Value { get => _explicitNullValueParameter46Value; set { _explicitNullValueParameter46Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter46.Value"); else _explicitNullProperties?.Remove("Parameter46.Value"); } }
+        private string? _explicitNullValueParameter46Value = default!;
 #nullable restore
 #else
-        public string Parameter46Value { get; set; }
+        public string Parameter46Value { get => _explicitNullValueParameter46Value; set { _explicitNullValueParameter46Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter46.Value"); else _explicitNullProperties?.Remove("Parameter46.Value"); } }
+        private string _explicitNullValueParameter46Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter47Name { get; set; }
+        public string? Parameter47Name { get => _explicitNullValueParameter47Name; set { _explicitNullValueParameter47Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter47.Name"); else _explicitNullProperties?.Remove("Parameter47.Name"); } }
+        private string? _explicitNullValueParameter47Name = default!;
 #nullable restore
 #else
-        public string Parameter47Name { get; set; }
+        public string Parameter47Name { get => _explicitNullValueParameter47Name; set { _explicitNullValueParameter47Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter47.Name"); else _explicitNullProperties?.Remove("Parameter47.Name"); } }
+        private string _explicitNullValueParameter47Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter47Value { get; set; }
+        public string? Parameter47Value { get => _explicitNullValueParameter47Value; set { _explicitNullValueParameter47Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter47.Value"); else _explicitNullProperties?.Remove("Parameter47.Value"); } }
+        private string? _explicitNullValueParameter47Value = default!;
 #nullable restore
 #else
-        public string Parameter47Value { get; set; }
+        public string Parameter47Value { get => _explicitNullValueParameter47Value; set { _explicitNullValueParameter47Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter47.Value"); else _explicitNullProperties?.Remove("Parameter47.Value"); } }
+        private string _explicitNullValueParameter47Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter48Name { get; set; }
+        public string? Parameter48Name { get => _explicitNullValueParameter48Name; set { _explicitNullValueParameter48Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter48.Name"); else _explicitNullProperties?.Remove("Parameter48.Name"); } }
+        private string? _explicitNullValueParameter48Name = default!;
 #nullable restore
 #else
-        public string Parameter48Name { get; set; }
+        public string Parameter48Name { get => _explicitNullValueParameter48Name; set { _explicitNullValueParameter48Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter48.Name"); else _explicitNullProperties?.Remove("Parameter48.Name"); } }
+        private string _explicitNullValueParameter48Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter48Value { get; set; }
+        public string? Parameter48Value { get => _explicitNullValueParameter48Value; set { _explicitNullValueParameter48Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter48.Value"); else _explicitNullProperties?.Remove("Parameter48.Value"); } }
+        private string? _explicitNullValueParameter48Value = default!;
 #nullable restore
 #else
-        public string Parameter48Value { get; set; }
+        public string Parameter48Value { get => _explicitNullValueParameter48Value; set { _explicitNullValueParameter48Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter48.Value"); else _explicitNullProperties?.Remove("Parameter48.Value"); } }
+        private string _explicitNullValueParameter48Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter49Name { get; set; }
+        public string? Parameter49Name { get => _explicitNullValueParameter49Name; set { _explicitNullValueParameter49Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter49.Name"); else _explicitNullProperties?.Remove("Parameter49.Name"); } }
+        private string? _explicitNullValueParameter49Name = default!;
 #nullable restore
 #else
-        public string Parameter49Name { get; set; }
+        public string Parameter49Name { get => _explicitNullValueParameter49Name; set { _explicitNullValueParameter49Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter49.Name"); else _explicitNullProperties?.Remove("Parameter49.Name"); } }
+        private string _explicitNullValueParameter49Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter49Value { get; set; }
+        public string? Parameter49Value { get => _explicitNullValueParameter49Value; set { _explicitNullValueParameter49Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter49.Value"); else _explicitNullProperties?.Remove("Parameter49.Value"); } }
+        private string? _explicitNullValueParameter49Value = default!;
 #nullable restore
 #else
-        public string Parameter49Value { get; set; }
+        public string Parameter49Value { get => _explicitNullValueParameter49Value; set { _explicitNullValueParameter49Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter49.Value"); else _explicitNullProperties?.Remove("Parameter49.Value"); } }
+        private string _explicitNullValueParameter49Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter4Name { get; set; }
+        public string? Parameter4Name { get => _explicitNullValueParameter4Name; set { _explicitNullValueParameter4Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter4.Name"); else _explicitNullProperties?.Remove("Parameter4.Name"); } }
+        private string? _explicitNullValueParameter4Name = default!;
 #nullable restore
 #else
-        public string Parameter4Name { get; set; }
+        public string Parameter4Name { get => _explicitNullValueParameter4Name; set { _explicitNullValueParameter4Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter4.Name"); else _explicitNullProperties?.Remove("Parameter4.Name"); } }
+        private string _explicitNullValueParameter4Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter4Value { get; set; }
+        public string? Parameter4Value { get => _explicitNullValueParameter4Value; set { _explicitNullValueParameter4Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter4.Value"); else _explicitNullProperties?.Remove("Parameter4.Value"); } }
+        private string? _explicitNullValueParameter4Value = default!;
 #nullable restore
 #else
-        public string Parameter4Value { get; set; }
+        public string Parameter4Value { get => _explicitNullValueParameter4Value; set { _explicitNullValueParameter4Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter4.Value"); else _explicitNullProperties?.Remove("Parameter4.Value"); } }
+        private string _explicitNullValueParameter4Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter50Name { get; set; }
+        public string? Parameter50Name { get => _explicitNullValueParameter50Name; set { _explicitNullValueParameter50Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter50.Name"); else _explicitNullProperties?.Remove("Parameter50.Name"); } }
+        private string? _explicitNullValueParameter50Name = default!;
 #nullable restore
 #else
-        public string Parameter50Name { get; set; }
+        public string Parameter50Name { get => _explicitNullValueParameter50Name; set { _explicitNullValueParameter50Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter50.Name"); else _explicitNullProperties?.Remove("Parameter50.Name"); } }
+        private string _explicitNullValueParameter50Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter50Value { get; set; }
+        public string? Parameter50Value { get => _explicitNullValueParameter50Value; set { _explicitNullValueParameter50Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter50.Value"); else _explicitNullProperties?.Remove("Parameter50.Value"); } }
+        private string? _explicitNullValueParameter50Value = default!;
 #nullable restore
 #else
-        public string Parameter50Value { get; set; }
+        public string Parameter50Value { get => _explicitNullValueParameter50Value; set { _explicitNullValueParameter50Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter50.Value"); else _explicitNullProperties?.Remove("Parameter50.Value"); } }
+        private string _explicitNullValueParameter50Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter51Name { get; set; }
+        public string? Parameter51Name { get => _explicitNullValueParameter51Name; set { _explicitNullValueParameter51Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter51.Name"); else _explicitNullProperties?.Remove("Parameter51.Name"); } }
+        private string? _explicitNullValueParameter51Name = default!;
 #nullable restore
 #else
-        public string Parameter51Name { get; set; }
+        public string Parameter51Name { get => _explicitNullValueParameter51Name; set { _explicitNullValueParameter51Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter51.Name"); else _explicitNullProperties?.Remove("Parameter51.Name"); } }
+        private string _explicitNullValueParameter51Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter51Value { get; set; }
+        public string? Parameter51Value { get => _explicitNullValueParameter51Value; set { _explicitNullValueParameter51Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter51.Value"); else _explicitNullProperties?.Remove("Parameter51.Value"); } }
+        private string? _explicitNullValueParameter51Value = default!;
 #nullable restore
 #else
-        public string Parameter51Value { get; set; }
+        public string Parameter51Value { get => _explicitNullValueParameter51Value; set { _explicitNullValueParameter51Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter51.Value"); else _explicitNullProperties?.Remove("Parameter51.Value"); } }
+        private string _explicitNullValueParameter51Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter52Name { get; set; }
+        public string? Parameter52Name { get => _explicitNullValueParameter52Name; set { _explicitNullValueParameter52Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter52.Name"); else _explicitNullProperties?.Remove("Parameter52.Name"); } }
+        private string? _explicitNullValueParameter52Name = default!;
 #nullable restore
 #else
-        public string Parameter52Name { get; set; }
+        public string Parameter52Name { get => _explicitNullValueParameter52Name; set { _explicitNullValueParameter52Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter52.Name"); else _explicitNullProperties?.Remove("Parameter52.Name"); } }
+        private string _explicitNullValueParameter52Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter52Value { get; set; }
+        public string? Parameter52Value { get => _explicitNullValueParameter52Value; set { _explicitNullValueParameter52Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter52.Value"); else _explicitNullProperties?.Remove("Parameter52.Value"); } }
+        private string? _explicitNullValueParameter52Value = default!;
 #nullable restore
 #else
-        public string Parameter52Value { get; set; }
+        public string Parameter52Value { get => _explicitNullValueParameter52Value; set { _explicitNullValueParameter52Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter52.Value"); else _explicitNullProperties?.Remove("Parameter52.Value"); } }
+        private string _explicitNullValueParameter52Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter53Name { get; set; }
+        public string? Parameter53Name { get => _explicitNullValueParameter53Name; set { _explicitNullValueParameter53Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter53.Name"); else _explicitNullProperties?.Remove("Parameter53.Name"); } }
+        private string? _explicitNullValueParameter53Name = default!;
 #nullable restore
 #else
-        public string Parameter53Name { get; set; }
+        public string Parameter53Name { get => _explicitNullValueParameter53Name; set { _explicitNullValueParameter53Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter53.Name"); else _explicitNullProperties?.Remove("Parameter53.Name"); } }
+        private string _explicitNullValueParameter53Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter53Value { get; set; }
+        public string? Parameter53Value { get => _explicitNullValueParameter53Value; set { _explicitNullValueParameter53Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter53.Value"); else _explicitNullProperties?.Remove("Parameter53.Value"); } }
+        private string? _explicitNullValueParameter53Value = default!;
 #nullable restore
 #else
-        public string Parameter53Value { get; set; }
+        public string Parameter53Value { get => _explicitNullValueParameter53Value; set { _explicitNullValueParameter53Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter53.Value"); else _explicitNullProperties?.Remove("Parameter53.Value"); } }
+        private string _explicitNullValueParameter53Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter54Name { get; set; }
+        public string? Parameter54Name { get => _explicitNullValueParameter54Name; set { _explicitNullValueParameter54Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter54.Name"); else _explicitNullProperties?.Remove("Parameter54.Name"); } }
+        private string? _explicitNullValueParameter54Name = default!;
 #nullable restore
 #else
-        public string Parameter54Name { get; set; }
+        public string Parameter54Name { get => _explicitNullValueParameter54Name; set { _explicitNullValueParameter54Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter54.Name"); else _explicitNullProperties?.Remove("Parameter54.Name"); } }
+        private string _explicitNullValueParameter54Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter54Value { get; set; }
+        public string? Parameter54Value { get => _explicitNullValueParameter54Value; set { _explicitNullValueParameter54Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter54.Value"); else _explicitNullProperties?.Remove("Parameter54.Value"); } }
+        private string? _explicitNullValueParameter54Value = default!;
 #nullable restore
 #else
-        public string Parameter54Value { get; set; }
+        public string Parameter54Value { get => _explicitNullValueParameter54Value; set { _explicitNullValueParameter54Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter54.Value"); else _explicitNullProperties?.Remove("Parameter54.Value"); } }
+        private string _explicitNullValueParameter54Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter55Name { get; set; }
+        public string? Parameter55Name { get => _explicitNullValueParameter55Name; set { _explicitNullValueParameter55Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter55.Name"); else _explicitNullProperties?.Remove("Parameter55.Name"); } }
+        private string? _explicitNullValueParameter55Name = default!;
 #nullable restore
 #else
-        public string Parameter55Name { get; set; }
+        public string Parameter55Name { get => _explicitNullValueParameter55Name; set { _explicitNullValueParameter55Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter55.Name"); else _explicitNullProperties?.Remove("Parameter55.Name"); } }
+        private string _explicitNullValueParameter55Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter55Value { get; set; }
+        public string? Parameter55Value { get => _explicitNullValueParameter55Value; set { _explicitNullValueParameter55Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter55.Value"); else _explicitNullProperties?.Remove("Parameter55.Value"); } }
+        private string? _explicitNullValueParameter55Value = default!;
 #nullable restore
 #else
-        public string Parameter55Value { get; set; }
+        public string Parameter55Value { get => _explicitNullValueParameter55Value; set { _explicitNullValueParameter55Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter55.Value"); else _explicitNullProperties?.Remove("Parameter55.Value"); } }
+        private string _explicitNullValueParameter55Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter56Name { get; set; }
+        public string? Parameter56Name { get => _explicitNullValueParameter56Name; set { _explicitNullValueParameter56Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter56.Name"); else _explicitNullProperties?.Remove("Parameter56.Name"); } }
+        private string? _explicitNullValueParameter56Name = default!;
 #nullable restore
 #else
-        public string Parameter56Name { get; set; }
+        public string Parameter56Name { get => _explicitNullValueParameter56Name; set { _explicitNullValueParameter56Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter56.Name"); else _explicitNullProperties?.Remove("Parameter56.Name"); } }
+        private string _explicitNullValueParameter56Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter56Value { get; set; }
+        public string? Parameter56Value { get => _explicitNullValueParameter56Value; set { _explicitNullValueParameter56Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter56.Value"); else _explicitNullProperties?.Remove("Parameter56.Value"); } }
+        private string? _explicitNullValueParameter56Value = default!;
 #nullable restore
 #else
-        public string Parameter56Value { get; set; }
+        public string Parameter56Value { get => _explicitNullValueParameter56Value; set { _explicitNullValueParameter56Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter56.Value"); else _explicitNullProperties?.Remove("Parameter56.Value"); } }
+        private string _explicitNullValueParameter56Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter57Name { get; set; }
+        public string? Parameter57Name { get => _explicitNullValueParameter57Name; set { _explicitNullValueParameter57Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter57.Name"); else _explicitNullProperties?.Remove("Parameter57.Name"); } }
+        private string? _explicitNullValueParameter57Name = default!;
 #nullable restore
 #else
-        public string Parameter57Name { get; set; }
+        public string Parameter57Name { get => _explicitNullValueParameter57Name; set { _explicitNullValueParameter57Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter57.Name"); else _explicitNullProperties?.Remove("Parameter57.Name"); } }
+        private string _explicitNullValueParameter57Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter57Value { get; set; }
+        public string? Parameter57Value { get => _explicitNullValueParameter57Value; set { _explicitNullValueParameter57Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter57.Value"); else _explicitNullProperties?.Remove("Parameter57.Value"); } }
+        private string? _explicitNullValueParameter57Value = default!;
 #nullable restore
 #else
-        public string Parameter57Value { get; set; }
+        public string Parameter57Value { get => _explicitNullValueParameter57Value; set { _explicitNullValueParameter57Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter57.Value"); else _explicitNullProperties?.Remove("Parameter57.Value"); } }
+        private string _explicitNullValueParameter57Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter58Name { get; set; }
+        public string? Parameter58Name { get => _explicitNullValueParameter58Name; set { _explicitNullValueParameter58Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter58.Name"); else _explicitNullProperties?.Remove("Parameter58.Name"); } }
+        private string? _explicitNullValueParameter58Name = default!;
 #nullable restore
 #else
-        public string Parameter58Name { get; set; }
+        public string Parameter58Name { get => _explicitNullValueParameter58Name; set { _explicitNullValueParameter58Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter58.Name"); else _explicitNullProperties?.Remove("Parameter58.Name"); } }
+        private string _explicitNullValueParameter58Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter58Value { get; set; }
+        public string? Parameter58Value { get => _explicitNullValueParameter58Value; set { _explicitNullValueParameter58Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter58.Value"); else _explicitNullProperties?.Remove("Parameter58.Value"); } }
+        private string? _explicitNullValueParameter58Value = default!;
 #nullable restore
 #else
-        public string Parameter58Value { get; set; }
+        public string Parameter58Value { get => _explicitNullValueParameter58Value; set { _explicitNullValueParameter58Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter58.Value"); else _explicitNullProperties?.Remove("Parameter58.Value"); } }
+        private string _explicitNullValueParameter58Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter59Name { get; set; }
+        public string? Parameter59Name { get => _explicitNullValueParameter59Name; set { _explicitNullValueParameter59Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter59.Name"); else _explicitNullProperties?.Remove("Parameter59.Name"); } }
+        private string? _explicitNullValueParameter59Name = default!;
 #nullable restore
 #else
-        public string Parameter59Name { get; set; }
+        public string Parameter59Name { get => _explicitNullValueParameter59Name; set { _explicitNullValueParameter59Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter59.Name"); else _explicitNullProperties?.Remove("Parameter59.Name"); } }
+        private string _explicitNullValueParameter59Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter59Value { get; set; }
+        public string? Parameter59Value { get => _explicitNullValueParameter59Value; set { _explicitNullValueParameter59Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter59.Value"); else _explicitNullProperties?.Remove("Parameter59.Value"); } }
+        private string? _explicitNullValueParameter59Value = default!;
 #nullable restore
 #else
-        public string Parameter59Value { get; set; }
+        public string Parameter59Value { get => _explicitNullValueParameter59Value; set { _explicitNullValueParameter59Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter59.Value"); else _explicitNullProperties?.Remove("Parameter59.Value"); } }
+        private string _explicitNullValueParameter59Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter5Name { get; set; }
+        public string? Parameter5Name { get => _explicitNullValueParameter5Name; set { _explicitNullValueParameter5Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter5.Name"); else _explicitNullProperties?.Remove("Parameter5.Name"); } }
+        private string? _explicitNullValueParameter5Name = default!;
 #nullable restore
 #else
-        public string Parameter5Name { get; set; }
+        public string Parameter5Name { get => _explicitNullValueParameter5Name; set { _explicitNullValueParameter5Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter5.Name"); else _explicitNullProperties?.Remove("Parameter5.Name"); } }
+        private string _explicitNullValueParameter5Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter5Value { get; set; }
+        public string? Parameter5Value { get => _explicitNullValueParameter5Value; set { _explicitNullValueParameter5Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter5.Value"); else _explicitNullProperties?.Remove("Parameter5.Value"); } }
+        private string? _explicitNullValueParameter5Value = default!;
 #nullable restore
 #else
-        public string Parameter5Value { get; set; }
+        public string Parameter5Value { get => _explicitNullValueParameter5Value; set { _explicitNullValueParameter5Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter5.Value"); else _explicitNullProperties?.Remove("Parameter5.Value"); } }
+        private string _explicitNullValueParameter5Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter60Name { get; set; }
+        public string? Parameter60Name { get => _explicitNullValueParameter60Name; set { _explicitNullValueParameter60Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter60.Name"); else _explicitNullProperties?.Remove("Parameter60.Name"); } }
+        private string? _explicitNullValueParameter60Name = default!;
 #nullable restore
 #else
-        public string Parameter60Name { get; set; }
+        public string Parameter60Name { get => _explicitNullValueParameter60Name; set { _explicitNullValueParameter60Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter60.Name"); else _explicitNullProperties?.Remove("Parameter60.Name"); } }
+        private string _explicitNullValueParameter60Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter60Value { get; set; }
+        public string? Parameter60Value { get => _explicitNullValueParameter60Value; set { _explicitNullValueParameter60Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter60.Value"); else _explicitNullProperties?.Remove("Parameter60.Value"); } }
+        private string? _explicitNullValueParameter60Value = default!;
 #nullable restore
 #else
-        public string Parameter60Value { get; set; }
+        public string Parameter60Value { get => _explicitNullValueParameter60Value; set { _explicitNullValueParameter60Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter60.Value"); else _explicitNullProperties?.Remove("Parameter60.Value"); } }
+        private string _explicitNullValueParameter60Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter61Name { get; set; }
+        public string? Parameter61Name { get => _explicitNullValueParameter61Name; set { _explicitNullValueParameter61Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter61.Name"); else _explicitNullProperties?.Remove("Parameter61.Name"); } }
+        private string? _explicitNullValueParameter61Name = default!;
 #nullable restore
 #else
-        public string Parameter61Name { get; set; }
+        public string Parameter61Name { get => _explicitNullValueParameter61Name; set { _explicitNullValueParameter61Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter61.Name"); else _explicitNullProperties?.Remove("Parameter61.Name"); } }
+        private string _explicitNullValueParameter61Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter61Value { get; set; }
+        public string? Parameter61Value { get => _explicitNullValueParameter61Value; set { _explicitNullValueParameter61Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter61.Value"); else _explicitNullProperties?.Remove("Parameter61.Value"); } }
+        private string? _explicitNullValueParameter61Value = default!;
 #nullable restore
 #else
-        public string Parameter61Value { get; set; }
+        public string Parameter61Value { get => _explicitNullValueParameter61Value; set { _explicitNullValueParameter61Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter61.Value"); else _explicitNullProperties?.Remove("Parameter61.Value"); } }
+        private string _explicitNullValueParameter61Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter62Name { get; set; }
+        public string? Parameter62Name { get => _explicitNullValueParameter62Name; set { _explicitNullValueParameter62Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter62.Name"); else _explicitNullProperties?.Remove("Parameter62.Name"); } }
+        private string? _explicitNullValueParameter62Name = default!;
 #nullable restore
 #else
-        public string Parameter62Name { get; set; }
+        public string Parameter62Name { get => _explicitNullValueParameter62Name; set { _explicitNullValueParameter62Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter62.Name"); else _explicitNullProperties?.Remove("Parameter62.Name"); } }
+        private string _explicitNullValueParameter62Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter62Value { get; set; }
+        public string? Parameter62Value { get => _explicitNullValueParameter62Value; set { _explicitNullValueParameter62Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter62.Value"); else _explicitNullProperties?.Remove("Parameter62.Value"); } }
+        private string? _explicitNullValueParameter62Value = default!;
 #nullable restore
 #else
-        public string Parameter62Value { get; set; }
+        public string Parameter62Value { get => _explicitNullValueParameter62Value; set { _explicitNullValueParameter62Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter62.Value"); else _explicitNullProperties?.Remove("Parameter62.Value"); } }
+        private string _explicitNullValueParameter62Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter63Name { get; set; }
+        public string? Parameter63Name { get => _explicitNullValueParameter63Name; set { _explicitNullValueParameter63Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter63.Name"); else _explicitNullProperties?.Remove("Parameter63.Name"); } }
+        private string? _explicitNullValueParameter63Name = default!;
 #nullable restore
 #else
-        public string Parameter63Name { get; set; }
+        public string Parameter63Name { get => _explicitNullValueParameter63Name; set { _explicitNullValueParameter63Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter63.Name"); else _explicitNullProperties?.Remove("Parameter63.Name"); } }
+        private string _explicitNullValueParameter63Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter63Value { get; set; }
+        public string? Parameter63Value { get => _explicitNullValueParameter63Value; set { _explicitNullValueParameter63Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter63.Value"); else _explicitNullProperties?.Remove("Parameter63.Value"); } }
+        private string? _explicitNullValueParameter63Value = default!;
 #nullable restore
 #else
-        public string Parameter63Value { get; set; }
+        public string Parameter63Value { get => _explicitNullValueParameter63Value; set { _explicitNullValueParameter63Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter63.Value"); else _explicitNullProperties?.Remove("Parameter63.Value"); } }
+        private string _explicitNullValueParameter63Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter64Name { get; set; }
+        public string? Parameter64Name { get => _explicitNullValueParameter64Name; set { _explicitNullValueParameter64Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter64.Name"); else _explicitNullProperties?.Remove("Parameter64.Name"); } }
+        private string? _explicitNullValueParameter64Name = default!;
 #nullable restore
 #else
-        public string Parameter64Name { get; set; }
+        public string Parameter64Name { get => _explicitNullValueParameter64Name; set { _explicitNullValueParameter64Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter64.Name"); else _explicitNullProperties?.Remove("Parameter64.Name"); } }
+        private string _explicitNullValueParameter64Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter64Value { get; set; }
+        public string? Parameter64Value { get => _explicitNullValueParameter64Value; set { _explicitNullValueParameter64Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter64.Value"); else _explicitNullProperties?.Remove("Parameter64.Value"); } }
+        private string? _explicitNullValueParameter64Value = default!;
 #nullable restore
 #else
-        public string Parameter64Value { get; set; }
+        public string Parameter64Value { get => _explicitNullValueParameter64Value; set { _explicitNullValueParameter64Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter64.Value"); else _explicitNullProperties?.Remove("Parameter64.Value"); } }
+        private string _explicitNullValueParameter64Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter65Name { get; set; }
+        public string? Parameter65Name { get => _explicitNullValueParameter65Name; set { _explicitNullValueParameter65Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter65.Name"); else _explicitNullProperties?.Remove("Parameter65.Name"); } }
+        private string? _explicitNullValueParameter65Name = default!;
 #nullable restore
 #else
-        public string Parameter65Name { get; set; }
+        public string Parameter65Name { get => _explicitNullValueParameter65Name; set { _explicitNullValueParameter65Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter65.Name"); else _explicitNullProperties?.Remove("Parameter65.Name"); } }
+        private string _explicitNullValueParameter65Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter65Value { get; set; }
+        public string? Parameter65Value { get => _explicitNullValueParameter65Value; set { _explicitNullValueParameter65Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter65.Value"); else _explicitNullProperties?.Remove("Parameter65.Value"); } }
+        private string? _explicitNullValueParameter65Value = default!;
 #nullable restore
 #else
-        public string Parameter65Value { get; set; }
+        public string Parameter65Value { get => _explicitNullValueParameter65Value; set { _explicitNullValueParameter65Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter65.Value"); else _explicitNullProperties?.Remove("Parameter65.Value"); } }
+        private string _explicitNullValueParameter65Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter66Name { get; set; }
+        public string? Parameter66Name { get => _explicitNullValueParameter66Name; set { _explicitNullValueParameter66Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter66.Name"); else _explicitNullProperties?.Remove("Parameter66.Name"); } }
+        private string? _explicitNullValueParameter66Name = default!;
 #nullable restore
 #else
-        public string Parameter66Name { get; set; }
+        public string Parameter66Name { get => _explicitNullValueParameter66Name; set { _explicitNullValueParameter66Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter66.Name"); else _explicitNullProperties?.Remove("Parameter66.Name"); } }
+        private string _explicitNullValueParameter66Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter66Value { get; set; }
+        public string? Parameter66Value { get => _explicitNullValueParameter66Value; set { _explicitNullValueParameter66Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter66.Value"); else _explicitNullProperties?.Remove("Parameter66.Value"); } }
+        private string? _explicitNullValueParameter66Value = default!;
 #nullable restore
 #else
-        public string Parameter66Value { get; set; }
+        public string Parameter66Value { get => _explicitNullValueParameter66Value; set { _explicitNullValueParameter66Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter66.Value"); else _explicitNullProperties?.Remove("Parameter66.Value"); } }
+        private string _explicitNullValueParameter66Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter67Name { get; set; }
+        public string? Parameter67Name { get => _explicitNullValueParameter67Name; set { _explicitNullValueParameter67Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter67.Name"); else _explicitNullProperties?.Remove("Parameter67.Name"); } }
+        private string? _explicitNullValueParameter67Name = default!;
 #nullable restore
 #else
-        public string Parameter67Name { get; set; }
+        public string Parameter67Name { get => _explicitNullValueParameter67Name; set { _explicitNullValueParameter67Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter67.Name"); else _explicitNullProperties?.Remove("Parameter67.Name"); } }
+        private string _explicitNullValueParameter67Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter67Value { get; set; }
+        public string? Parameter67Value { get => _explicitNullValueParameter67Value; set { _explicitNullValueParameter67Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter67.Value"); else _explicitNullProperties?.Remove("Parameter67.Value"); } }
+        private string? _explicitNullValueParameter67Value = default!;
 #nullable restore
 #else
-        public string Parameter67Value { get; set; }
+        public string Parameter67Value { get => _explicitNullValueParameter67Value; set { _explicitNullValueParameter67Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter67.Value"); else _explicitNullProperties?.Remove("Parameter67.Value"); } }
+        private string _explicitNullValueParameter67Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter68Name { get; set; }
+        public string? Parameter68Name { get => _explicitNullValueParameter68Name; set { _explicitNullValueParameter68Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter68.Name"); else _explicitNullProperties?.Remove("Parameter68.Name"); } }
+        private string? _explicitNullValueParameter68Name = default!;
 #nullable restore
 #else
-        public string Parameter68Name { get; set; }
+        public string Parameter68Name { get => _explicitNullValueParameter68Name; set { _explicitNullValueParameter68Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter68.Name"); else _explicitNullProperties?.Remove("Parameter68.Name"); } }
+        private string _explicitNullValueParameter68Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter68Value { get; set; }
+        public string? Parameter68Value { get => _explicitNullValueParameter68Value; set { _explicitNullValueParameter68Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter68.Value"); else _explicitNullProperties?.Remove("Parameter68.Value"); } }
+        private string? _explicitNullValueParameter68Value = default!;
 #nullable restore
 #else
-        public string Parameter68Value { get; set; }
+        public string Parameter68Value { get => _explicitNullValueParameter68Value; set { _explicitNullValueParameter68Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter68.Value"); else _explicitNullProperties?.Remove("Parameter68.Value"); } }
+        private string _explicitNullValueParameter68Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter69Name { get; set; }
+        public string? Parameter69Name { get => _explicitNullValueParameter69Name; set { _explicitNullValueParameter69Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter69.Name"); else _explicitNullProperties?.Remove("Parameter69.Name"); } }
+        private string? _explicitNullValueParameter69Name = default!;
 #nullable restore
 #else
-        public string Parameter69Name { get; set; }
+        public string Parameter69Name { get => _explicitNullValueParameter69Name; set { _explicitNullValueParameter69Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter69.Name"); else _explicitNullProperties?.Remove("Parameter69.Name"); } }
+        private string _explicitNullValueParameter69Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter69Value { get; set; }
+        public string? Parameter69Value { get => _explicitNullValueParameter69Value; set { _explicitNullValueParameter69Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter69.Value"); else _explicitNullProperties?.Remove("Parameter69.Value"); } }
+        private string? _explicitNullValueParameter69Value = default!;
 #nullable restore
 #else
-        public string Parameter69Value { get; set; }
+        public string Parameter69Value { get => _explicitNullValueParameter69Value; set { _explicitNullValueParameter69Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter69.Value"); else _explicitNullProperties?.Remove("Parameter69.Value"); } }
+        private string _explicitNullValueParameter69Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter6Name { get; set; }
+        public string? Parameter6Name { get => _explicitNullValueParameter6Name; set { _explicitNullValueParameter6Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter6.Name"); else _explicitNullProperties?.Remove("Parameter6.Name"); } }
+        private string? _explicitNullValueParameter6Name = default!;
 #nullable restore
 #else
-        public string Parameter6Name { get; set; }
+        public string Parameter6Name { get => _explicitNullValueParameter6Name; set { _explicitNullValueParameter6Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter6.Name"); else _explicitNullProperties?.Remove("Parameter6.Name"); } }
+        private string _explicitNullValueParameter6Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter6Value { get; set; }
+        public string? Parameter6Value { get => _explicitNullValueParameter6Value; set { _explicitNullValueParameter6Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter6.Value"); else _explicitNullProperties?.Remove("Parameter6.Value"); } }
+        private string? _explicitNullValueParameter6Value = default!;
 #nullable restore
 #else
-        public string Parameter6Value { get; set; }
+        public string Parameter6Value { get => _explicitNullValueParameter6Value; set { _explicitNullValueParameter6Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter6.Value"); else _explicitNullProperties?.Remove("Parameter6.Value"); } }
+        private string _explicitNullValueParameter6Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter70Name { get; set; }
+        public string? Parameter70Name { get => _explicitNullValueParameter70Name; set { _explicitNullValueParameter70Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter70.Name"); else _explicitNullProperties?.Remove("Parameter70.Name"); } }
+        private string? _explicitNullValueParameter70Name = default!;
 #nullable restore
 #else
-        public string Parameter70Name { get; set; }
+        public string Parameter70Name { get => _explicitNullValueParameter70Name; set { _explicitNullValueParameter70Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter70.Name"); else _explicitNullProperties?.Remove("Parameter70.Name"); } }
+        private string _explicitNullValueParameter70Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter70Value { get; set; }
+        public string? Parameter70Value { get => _explicitNullValueParameter70Value; set { _explicitNullValueParameter70Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter70.Value"); else _explicitNullProperties?.Remove("Parameter70.Value"); } }
+        private string? _explicitNullValueParameter70Value = default!;
 #nullable restore
 #else
-        public string Parameter70Value { get; set; }
+        public string Parameter70Value { get => _explicitNullValueParameter70Value; set { _explicitNullValueParameter70Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter70.Value"); else _explicitNullProperties?.Remove("Parameter70.Value"); } }
+        private string _explicitNullValueParameter70Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter71Name { get; set; }
+        public string? Parameter71Name { get => _explicitNullValueParameter71Name; set { _explicitNullValueParameter71Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter71.Name"); else _explicitNullProperties?.Remove("Parameter71.Name"); } }
+        private string? _explicitNullValueParameter71Name = default!;
 #nullable restore
 #else
-        public string Parameter71Name { get; set; }
+        public string Parameter71Name { get => _explicitNullValueParameter71Name; set { _explicitNullValueParameter71Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter71.Name"); else _explicitNullProperties?.Remove("Parameter71.Name"); } }
+        private string _explicitNullValueParameter71Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter71Value { get; set; }
+        public string? Parameter71Value { get => _explicitNullValueParameter71Value; set { _explicitNullValueParameter71Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter71.Value"); else _explicitNullProperties?.Remove("Parameter71.Value"); } }
+        private string? _explicitNullValueParameter71Value = default!;
 #nullable restore
 #else
-        public string Parameter71Value { get; set; }
+        public string Parameter71Value { get => _explicitNullValueParameter71Value; set { _explicitNullValueParameter71Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter71.Value"); else _explicitNullProperties?.Remove("Parameter71.Value"); } }
+        private string _explicitNullValueParameter71Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter72Name { get; set; }
+        public string? Parameter72Name { get => _explicitNullValueParameter72Name; set { _explicitNullValueParameter72Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter72.Name"); else _explicitNullProperties?.Remove("Parameter72.Name"); } }
+        private string? _explicitNullValueParameter72Name = default!;
 #nullable restore
 #else
-        public string Parameter72Name { get; set; }
+        public string Parameter72Name { get => _explicitNullValueParameter72Name; set { _explicitNullValueParameter72Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter72.Name"); else _explicitNullProperties?.Remove("Parameter72.Name"); } }
+        private string _explicitNullValueParameter72Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter72Value { get; set; }
+        public string? Parameter72Value { get => _explicitNullValueParameter72Value; set { _explicitNullValueParameter72Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter72.Value"); else _explicitNullProperties?.Remove("Parameter72.Value"); } }
+        private string? _explicitNullValueParameter72Value = default!;
 #nullable restore
 #else
-        public string Parameter72Value { get; set; }
+        public string Parameter72Value { get => _explicitNullValueParameter72Value; set { _explicitNullValueParameter72Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter72.Value"); else _explicitNullProperties?.Remove("Parameter72.Value"); } }
+        private string _explicitNullValueParameter72Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter73Name { get; set; }
+        public string? Parameter73Name { get => _explicitNullValueParameter73Name; set { _explicitNullValueParameter73Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter73.Name"); else _explicitNullProperties?.Remove("Parameter73.Name"); } }
+        private string? _explicitNullValueParameter73Name = default!;
 #nullable restore
 #else
-        public string Parameter73Name { get; set; }
+        public string Parameter73Name { get => _explicitNullValueParameter73Name; set { _explicitNullValueParameter73Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter73.Name"); else _explicitNullProperties?.Remove("Parameter73.Name"); } }
+        private string _explicitNullValueParameter73Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter73Value { get; set; }
+        public string? Parameter73Value { get => _explicitNullValueParameter73Value; set { _explicitNullValueParameter73Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter73.Value"); else _explicitNullProperties?.Remove("Parameter73.Value"); } }
+        private string? _explicitNullValueParameter73Value = default!;
 #nullable restore
 #else
-        public string Parameter73Value { get; set; }
+        public string Parameter73Value { get => _explicitNullValueParameter73Value; set { _explicitNullValueParameter73Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter73.Value"); else _explicitNullProperties?.Remove("Parameter73.Value"); } }
+        private string _explicitNullValueParameter73Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter74Name { get; set; }
+        public string? Parameter74Name { get => _explicitNullValueParameter74Name; set { _explicitNullValueParameter74Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter74.Name"); else _explicitNullProperties?.Remove("Parameter74.Name"); } }
+        private string? _explicitNullValueParameter74Name = default!;
 #nullable restore
 #else
-        public string Parameter74Name { get; set; }
+        public string Parameter74Name { get => _explicitNullValueParameter74Name; set { _explicitNullValueParameter74Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter74.Name"); else _explicitNullProperties?.Remove("Parameter74.Name"); } }
+        private string _explicitNullValueParameter74Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter74Value { get; set; }
+        public string? Parameter74Value { get => _explicitNullValueParameter74Value; set { _explicitNullValueParameter74Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter74.Value"); else _explicitNullProperties?.Remove("Parameter74.Value"); } }
+        private string? _explicitNullValueParameter74Value = default!;
 #nullable restore
 #else
-        public string Parameter74Value { get; set; }
+        public string Parameter74Value { get => _explicitNullValueParameter74Value; set { _explicitNullValueParameter74Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter74.Value"); else _explicitNullProperties?.Remove("Parameter74.Value"); } }
+        private string _explicitNullValueParameter74Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter75Name { get; set; }
+        public string? Parameter75Name { get => _explicitNullValueParameter75Name; set { _explicitNullValueParameter75Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter75.Name"); else _explicitNullProperties?.Remove("Parameter75.Name"); } }
+        private string? _explicitNullValueParameter75Name = default!;
 #nullable restore
 #else
-        public string Parameter75Name { get; set; }
+        public string Parameter75Name { get => _explicitNullValueParameter75Name; set { _explicitNullValueParameter75Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter75.Name"); else _explicitNullProperties?.Remove("Parameter75.Name"); } }
+        private string _explicitNullValueParameter75Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter75Value { get; set; }
+        public string? Parameter75Value { get => _explicitNullValueParameter75Value; set { _explicitNullValueParameter75Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter75.Value"); else _explicitNullProperties?.Remove("Parameter75.Value"); } }
+        private string? _explicitNullValueParameter75Value = default!;
 #nullable restore
 #else
-        public string Parameter75Value { get; set; }
+        public string Parameter75Value { get => _explicitNullValueParameter75Value; set { _explicitNullValueParameter75Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter75.Value"); else _explicitNullProperties?.Remove("Parameter75.Value"); } }
+        private string _explicitNullValueParameter75Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter76Name { get; set; }
+        public string? Parameter76Name { get => _explicitNullValueParameter76Name; set { _explicitNullValueParameter76Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter76.Name"); else _explicitNullProperties?.Remove("Parameter76.Name"); } }
+        private string? _explicitNullValueParameter76Name = default!;
 #nullable restore
 #else
-        public string Parameter76Name { get; set; }
+        public string Parameter76Name { get => _explicitNullValueParameter76Name; set { _explicitNullValueParameter76Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter76.Name"); else _explicitNullProperties?.Remove("Parameter76.Name"); } }
+        private string _explicitNullValueParameter76Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter76Value { get; set; }
+        public string? Parameter76Value { get => _explicitNullValueParameter76Value; set { _explicitNullValueParameter76Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter76.Value"); else _explicitNullProperties?.Remove("Parameter76.Value"); } }
+        private string? _explicitNullValueParameter76Value = default!;
 #nullable restore
 #else
-        public string Parameter76Value { get; set; }
+        public string Parameter76Value { get => _explicitNullValueParameter76Value; set { _explicitNullValueParameter76Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter76.Value"); else _explicitNullProperties?.Remove("Parameter76.Value"); } }
+        private string _explicitNullValueParameter76Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter77Name { get; set; }
+        public string? Parameter77Name { get => _explicitNullValueParameter77Name; set { _explicitNullValueParameter77Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter77.Name"); else _explicitNullProperties?.Remove("Parameter77.Name"); } }
+        private string? _explicitNullValueParameter77Name = default!;
 #nullable restore
 #else
-        public string Parameter77Name { get; set; }
+        public string Parameter77Name { get => _explicitNullValueParameter77Name; set { _explicitNullValueParameter77Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter77.Name"); else _explicitNullProperties?.Remove("Parameter77.Name"); } }
+        private string _explicitNullValueParameter77Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter77Value { get; set; }
+        public string? Parameter77Value { get => _explicitNullValueParameter77Value; set { _explicitNullValueParameter77Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter77.Value"); else _explicitNullProperties?.Remove("Parameter77.Value"); } }
+        private string? _explicitNullValueParameter77Value = default!;
 #nullable restore
 #else
-        public string Parameter77Value { get; set; }
+        public string Parameter77Value { get => _explicitNullValueParameter77Value; set { _explicitNullValueParameter77Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter77.Value"); else _explicitNullProperties?.Remove("Parameter77.Value"); } }
+        private string _explicitNullValueParameter77Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter78Name { get; set; }
+        public string? Parameter78Name { get => _explicitNullValueParameter78Name; set { _explicitNullValueParameter78Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter78.Name"); else _explicitNullProperties?.Remove("Parameter78.Name"); } }
+        private string? _explicitNullValueParameter78Name = default!;
 #nullable restore
 #else
-        public string Parameter78Name { get; set; }
+        public string Parameter78Name { get => _explicitNullValueParameter78Name; set { _explicitNullValueParameter78Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter78.Name"); else _explicitNullProperties?.Remove("Parameter78.Name"); } }
+        private string _explicitNullValueParameter78Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter78Value { get; set; }
+        public string? Parameter78Value { get => _explicitNullValueParameter78Value; set { _explicitNullValueParameter78Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter78.Value"); else _explicitNullProperties?.Remove("Parameter78.Value"); } }
+        private string? _explicitNullValueParameter78Value = default!;
 #nullable restore
 #else
-        public string Parameter78Value { get; set; }
+        public string Parameter78Value { get => _explicitNullValueParameter78Value; set { _explicitNullValueParameter78Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter78.Value"); else _explicitNullProperties?.Remove("Parameter78.Value"); } }
+        private string _explicitNullValueParameter78Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter79Name { get; set; }
+        public string? Parameter79Name { get => _explicitNullValueParameter79Name; set { _explicitNullValueParameter79Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter79.Name"); else _explicitNullProperties?.Remove("Parameter79.Name"); } }
+        private string? _explicitNullValueParameter79Name = default!;
 #nullable restore
 #else
-        public string Parameter79Name { get; set; }
+        public string Parameter79Name { get => _explicitNullValueParameter79Name; set { _explicitNullValueParameter79Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter79.Name"); else _explicitNullProperties?.Remove("Parameter79.Name"); } }
+        private string _explicitNullValueParameter79Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter79Value { get; set; }
+        public string? Parameter79Value { get => _explicitNullValueParameter79Value; set { _explicitNullValueParameter79Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter79.Value"); else _explicitNullProperties?.Remove("Parameter79.Value"); } }
+        private string? _explicitNullValueParameter79Value = default!;
 #nullable restore
 #else
-        public string Parameter79Value { get; set; }
+        public string Parameter79Value { get => _explicitNullValueParameter79Value; set { _explicitNullValueParameter79Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter79.Value"); else _explicitNullProperties?.Remove("Parameter79.Value"); } }
+        private string _explicitNullValueParameter79Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter7Name { get; set; }
+        public string? Parameter7Name { get => _explicitNullValueParameter7Name; set { _explicitNullValueParameter7Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter7.Name"); else _explicitNullProperties?.Remove("Parameter7.Name"); } }
+        private string? _explicitNullValueParameter7Name = default!;
 #nullable restore
 #else
-        public string Parameter7Name { get; set; }
+        public string Parameter7Name { get => _explicitNullValueParameter7Name; set { _explicitNullValueParameter7Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter7.Name"); else _explicitNullProperties?.Remove("Parameter7.Name"); } }
+        private string _explicitNullValueParameter7Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter7Value { get; set; }
+        public string? Parameter7Value { get => _explicitNullValueParameter7Value; set { _explicitNullValueParameter7Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter7.Value"); else _explicitNullProperties?.Remove("Parameter7.Value"); } }
+        private string? _explicitNullValueParameter7Value = default!;
 #nullable restore
 #else
-        public string Parameter7Value { get; set; }
+        public string Parameter7Value { get => _explicitNullValueParameter7Value; set { _explicitNullValueParameter7Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter7.Value"); else _explicitNullProperties?.Remove("Parameter7.Value"); } }
+        private string _explicitNullValueParameter7Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter80Name { get; set; }
+        public string? Parameter80Name { get => _explicitNullValueParameter80Name; set { _explicitNullValueParameter80Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter80.Name"); else _explicitNullProperties?.Remove("Parameter80.Name"); } }
+        private string? _explicitNullValueParameter80Name = default!;
 #nullable restore
 #else
-        public string Parameter80Name { get; set; }
+        public string Parameter80Name { get => _explicitNullValueParameter80Name; set { _explicitNullValueParameter80Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter80.Name"); else _explicitNullProperties?.Remove("Parameter80.Name"); } }
+        private string _explicitNullValueParameter80Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter80Value { get; set; }
+        public string? Parameter80Value { get => _explicitNullValueParameter80Value; set { _explicitNullValueParameter80Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter80.Value"); else _explicitNullProperties?.Remove("Parameter80.Value"); } }
+        private string? _explicitNullValueParameter80Value = default!;
 #nullable restore
 #else
-        public string Parameter80Value { get; set; }
+        public string Parameter80Value { get => _explicitNullValueParameter80Value; set { _explicitNullValueParameter80Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter80.Value"); else _explicitNullProperties?.Remove("Parameter80.Value"); } }
+        private string _explicitNullValueParameter80Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter81Name { get; set; }
+        public string? Parameter81Name { get => _explicitNullValueParameter81Name; set { _explicitNullValueParameter81Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter81.Name"); else _explicitNullProperties?.Remove("Parameter81.Name"); } }
+        private string? _explicitNullValueParameter81Name = default!;
 #nullable restore
 #else
-        public string Parameter81Name { get; set; }
+        public string Parameter81Name { get => _explicitNullValueParameter81Name; set { _explicitNullValueParameter81Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter81.Name"); else _explicitNullProperties?.Remove("Parameter81.Name"); } }
+        private string _explicitNullValueParameter81Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter81Value { get; set; }
+        public string? Parameter81Value { get => _explicitNullValueParameter81Value; set { _explicitNullValueParameter81Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter81.Value"); else _explicitNullProperties?.Remove("Parameter81.Value"); } }
+        private string? _explicitNullValueParameter81Value = default!;
 #nullable restore
 #else
-        public string Parameter81Value { get; set; }
+        public string Parameter81Value { get => _explicitNullValueParameter81Value; set { _explicitNullValueParameter81Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter81.Value"); else _explicitNullProperties?.Remove("Parameter81.Value"); } }
+        private string _explicitNullValueParameter81Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter82Name { get; set; }
+        public string? Parameter82Name { get => _explicitNullValueParameter82Name; set { _explicitNullValueParameter82Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter82.Name"); else _explicitNullProperties?.Remove("Parameter82.Name"); } }
+        private string? _explicitNullValueParameter82Name = default!;
 #nullable restore
 #else
-        public string Parameter82Name { get; set; }
+        public string Parameter82Name { get => _explicitNullValueParameter82Name; set { _explicitNullValueParameter82Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter82.Name"); else _explicitNullProperties?.Remove("Parameter82.Name"); } }
+        private string _explicitNullValueParameter82Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter82Value { get; set; }
+        public string? Parameter82Value { get => _explicitNullValueParameter82Value; set { _explicitNullValueParameter82Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter82.Value"); else _explicitNullProperties?.Remove("Parameter82.Value"); } }
+        private string? _explicitNullValueParameter82Value = default!;
 #nullable restore
 #else
-        public string Parameter82Value { get; set; }
+        public string Parameter82Value { get => _explicitNullValueParameter82Value; set { _explicitNullValueParameter82Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter82.Value"); else _explicitNullProperties?.Remove("Parameter82.Value"); } }
+        private string _explicitNullValueParameter82Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter83Name { get; set; }
+        public string? Parameter83Name { get => _explicitNullValueParameter83Name; set { _explicitNullValueParameter83Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter83.Name"); else _explicitNullProperties?.Remove("Parameter83.Name"); } }
+        private string? _explicitNullValueParameter83Name = default!;
 #nullable restore
 #else
-        public string Parameter83Name { get; set; }
+        public string Parameter83Name { get => _explicitNullValueParameter83Name; set { _explicitNullValueParameter83Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter83.Name"); else _explicitNullProperties?.Remove("Parameter83.Name"); } }
+        private string _explicitNullValueParameter83Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter83Value { get; set; }
+        public string? Parameter83Value { get => _explicitNullValueParameter83Value; set { _explicitNullValueParameter83Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter83.Value"); else _explicitNullProperties?.Remove("Parameter83.Value"); } }
+        private string? _explicitNullValueParameter83Value = default!;
 #nullable restore
 #else
-        public string Parameter83Value { get; set; }
+        public string Parameter83Value { get => _explicitNullValueParameter83Value; set { _explicitNullValueParameter83Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter83.Value"); else _explicitNullProperties?.Remove("Parameter83.Value"); } }
+        private string _explicitNullValueParameter83Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter84Name { get; set; }
+        public string? Parameter84Name { get => _explicitNullValueParameter84Name; set { _explicitNullValueParameter84Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter84.Name"); else _explicitNullProperties?.Remove("Parameter84.Name"); } }
+        private string? _explicitNullValueParameter84Name = default!;
 #nullable restore
 #else
-        public string Parameter84Name { get; set; }
+        public string Parameter84Name { get => _explicitNullValueParameter84Name; set { _explicitNullValueParameter84Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter84.Name"); else _explicitNullProperties?.Remove("Parameter84.Name"); } }
+        private string _explicitNullValueParameter84Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter84Value { get; set; }
+        public string? Parameter84Value { get => _explicitNullValueParameter84Value; set { _explicitNullValueParameter84Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter84.Value"); else _explicitNullProperties?.Remove("Parameter84.Value"); } }
+        private string? _explicitNullValueParameter84Value = default!;
 #nullable restore
 #else
-        public string Parameter84Value { get; set; }
+        public string Parameter84Value { get => _explicitNullValueParameter84Value; set { _explicitNullValueParameter84Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter84.Value"); else _explicitNullProperties?.Remove("Parameter84.Value"); } }
+        private string _explicitNullValueParameter84Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter85Name { get; set; }
+        public string? Parameter85Name { get => _explicitNullValueParameter85Name; set { _explicitNullValueParameter85Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter85.Name"); else _explicitNullProperties?.Remove("Parameter85.Name"); } }
+        private string? _explicitNullValueParameter85Name = default!;
 #nullable restore
 #else
-        public string Parameter85Name { get; set; }
+        public string Parameter85Name { get => _explicitNullValueParameter85Name; set { _explicitNullValueParameter85Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter85.Name"); else _explicitNullProperties?.Remove("Parameter85.Name"); } }
+        private string _explicitNullValueParameter85Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter85Value { get; set; }
+        public string? Parameter85Value { get => _explicitNullValueParameter85Value; set { _explicitNullValueParameter85Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter85.Value"); else _explicitNullProperties?.Remove("Parameter85.Value"); } }
+        private string? _explicitNullValueParameter85Value = default!;
 #nullable restore
 #else
-        public string Parameter85Value { get; set; }
+        public string Parameter85Value { get => _explicitNullValueParameter85Value; set { _explicitNullValueParameter85Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter85.Value"); else _explicitNullProperties?.Remove("Parameter85.Value"); } }
+        private string _explicitNullValueParameter85Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter86Name { get; set; }
+        public string? Parameter86Name { get => _explicitNullValueParameter86Name; set { _explicitNullValueParameter86Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter86.Name"); else _explicitNullProperties?.Remove("Parameter86.Name"); } }
+        private string? _explicitNullValueParameter86Name = default!;
 #nullable restore
 #else
-        public string Parameter86Name { get; set; }
+        public string Parameter86Name { get => _explicitNullValueParameter86Name; set { _explicitNullValueParameter86Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter86.Name"); else _explicitNullProperties?.Remove("Parameter86.Name"); } }
+        private string _explicitNullValueParameter86Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter86Value { get; set; }
+        public string? Parameter86Value { get => _explicitNullValueParameter86Value; set { _explicitNullValueParameter86Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter86.Value"); else _explicitNullProperties?.Remove("Parameter86.Value"); } }
+        private string? _explicitNullValueParameter86Value = default!;
 #nullable restore
 #else
-        public string Parameter86Value { get; set; }
+        public string Parameter86Value { get => _explicitNullValueParameter86Value; set { _explicitNullValueParameter86Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter86.Value"); else _explicitNullProperties?.Remove("Parameter86.Value"); } }
+        private string _explicitNullValueParameter86Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter87Name { get; set; }
+        public string? Parameter87Name { get => _explicitNullValueParameter87Name; set { _explicitNullValueParameter87Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter87.Name"); else _explicitNullProperties?.Remove("Parameter87.Name"); } }
+        private string? _explicitNullValueParameter87Name = default!;
 #nullable restore
 #else
-        public string Parameter87Name { get; set; }
+        public string Parameter87Name { get => _explicitNullValueParameter87Name; set { _explicitNullValueParameter87Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter87.Name"); else _explicitNullProperties?.Remove("Parameter87.Name"); } }
+        private string _explicitNullValueParameter87Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter87Value { get; set; }
+        public string? Parameter87Value { get => _explicitNullValueParameter87Value; set { _explicitNullValueParameter87Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter87.Value"); else _explicitNullProperties?.Remove("Parameter87.Value"); } }
+        private string? _explicitNullValueParameter87Value = default!;
 #nullable restore
 #else
-        public string Parameter87Value { get; set; }
+        public string Parameter87Value { get => _explicitNullValueParameter87Value; set { _explicitNullValueParameter87Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter87.Value"); else _explicitNullProperties?.Remove("Parameter87.Value"); } }
+        private string _explicitNullValueParameter87Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter88Name { get; set; }
+        public string? Parameter88Name { get => _explicitNullValueParameter88Name; set { _explicitNullValueParameter88Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter88.Name"); else _explicitNullProperties?.Remove("Parameter88.Name"); } }
+        private string? _explicitNullValueParameter88Name = default!;
 #nullable restore
 #else
-        public string Parameter88Name { get; set; }
+        public string Parameter88Name { get => _explicitNullValueParameter88Name; set { _explicitNullValueParameter88Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter88.Name"); else _explicitNullProperties?.Remove("Parameter88.Name"); } }
+        private string _explicitNullValueParameter88Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter88Value { get; set; }
+        public string? Parameter88Value { get => _explicitNullValueParameter88Value; set { _explicitNullValueParameter88Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter88.Value"); else _explicitNullProperties?.Remove("Parameter88.Value"); } }
+        private string? _explicitNullValueParameter88Value = default!;
 #nullable restore
 #else
-        public string Parameter88Value { get; set; }
+        public string Parameter88Value { get => _explicitNullValueParameter88Value; set { _explicitNullValueParameter88Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter88.Value"); else _explicitNullProperties?.Remove("Parameter88.Value"); } }
+        private string _explicitNullValueParameter88Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter89Name { get; set; }
+        public string? Parameter89Name { get => _explicitNullValueParameter89Name; set { _explicitNullValueParameter89Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter89.Name"); else _explicitNullProperties?.Remove("Parameter89.Name"); } }
+        private string? _explicitNullValueParameter89Name = default!;
 #nullable restore
 #else
-        public string Parameter89Name { get; set; }
+        public string Parameter89Name { get => _explicitNullValueParameter89Name; set { _explicitNullValueParameter89Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter89.Name"); else _explicitNullProperties?.Remove("Parameter89.Name"); } }
+        private string _explicitNullValueParameter89Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter89Value { get; set; }
+        public string? Parameter89Value { get => _explicitNullValueParameter89Value; set { _explicitNullValueParameter89Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter89.Value"); else _explicitNullProperties?.Remove("Parameter89.Value"); } }
+        private string? _explicitNullValueParameter89Value = default!;
 #nullable restore
 #else
-        public string Parameter89Value { get; set; }
+        public string Parameter89Value { get => _explicitNullValueParameter89Value; set { _explicitNullValueParameter89Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter89.Value"); else _explicitNullProperties?.Remove("Parameter89.Value"); } }
+        private string _explicitNullValueParameter89Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter8Name { get; set; }
+        public string? Parameter8Name { get => _explicitNullValueParameter8Name; set { _explicitNullValueParameter8Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter8.Name"); else _explicitNullProperties?.Remove("Parameter8.Name"); } }
+        private string? _explicitNullValueParameter8Name = default!;
 #nullable restore
 #else
-        public string Parameter8Name { get; set; }
+        public string Parameter8Name { get => _explicitNullValueParameter8Name; set { _explicitNullValueParameter8Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter8.Name"); else _explicitNullProperties?.Remove("Parameter8.Name"); } }
+        private string _explicitNullValueParameter8Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter8Value { get; set; }
+        public string? Parameter8Value { get => _explicitNullValueParameter8Value; set { _explicitNullValueParameter8Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter8.Value"); else _explicitNullProperties?.Remove("Parameter8.Value"); } }
+        private string? _explicitNullValueParameter8Value = default!;
 #nullable restore
 #else
-        public string Parameter8Value { get; set; }
+        public string Parameter8Value { get => _explicitNullValueParameter8Value; set { _explicitNullValueParameter8Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter8.Value"); else _explicitNullProperties?.Remove("Parameter8.Value"); } }
+        private string _explicitNullValueParameter8Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter90Name { get; set; }
+        public string? Parameter90Name { get => _explicitNullValueParameter90Name; set { _explicitNullValueParameter90Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter90.Name"); else _explicitNullProperties?.Remove("Parameter90.Name"); } }
+        private string? _explicitNullValueParameter90Name = default!;
 #nullable restore
 #else
-        public string Parameter90Name { get; set; }
+        public string Parameter90Name { get => _explicitNullValueParameter90Name; set { _explicitNullValueParameter90Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter90.Name"); else _explicitNullProperties?.Remove("Parameter90.Name"); } }
+        private string _explicitNullValueParameter90Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter90Value { get; set; }
+        public string? Parameter90Value { get => _explicitNullValueParameter90Value; set { _explicitNullValueParameter90Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter90.Value"); else _explicitNullProperties?.Remove("Parameter90.Value"); } }
+        private string? _explicitNullValueParameter90Value = default!;
 #nullable restore
 #else
-        public string Parameter90Value { get; set; }
+        public string Parameter90Value { get => _explicitNullValueParameter90Value; set { _explicitNullValueParameter90Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter90.Value"); else _explicitNullProperties?.Remove("Parameter90.Value"); } }
+        private string _explicitNullValueParameter90Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter91Name { get; set; }
+        public string? Parameter91Name { get => _explicitNullValueParameter91Name; set { _explicitNullValueParameter91Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter91.Name"); else _explicitNullProperties?.Remove("Parameter91.Name"); } }
+        private string? _explicitNullValueParameter91Name = default!;
 #nullable restore
 #else
-        public string Parameter91Name { get; set; }
+        public string Parameter91Name { get => _explicitNullValueParameter91Name; set { _explicitNullValueParameter91Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter91.Name"); else _explicitNullProperties?.Remove("Parameter91.Name"); } }
+        private string _explicitNullValueParameter91Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter91Value { get; set; }
+        public string? Parameter91Value { get => _explicitNullValueParameter91Value; set { _explicitNullValueParameter91Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter91.Value"); else _explicitNullProperties?.Remove("Parameter91.Value"); } }
+        private string? _explicitNullValueParameter91Value = default!;
 #nullable restore
 #else
-        public string Parameter91Value { get; set; }
+        public string Parameter91Value { get => _explicitNullValueParameter91Value; set { _explicitNullValueParameter91Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter91.Value"); else _explicitNullProperties?.Remove("Parameter91.Value"); } }
+        private string _explicitNullValueParameter91Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter92Name { get; set; }
+        public string? Parameter92Name { get => _explicitNullValueParameter92Name; set { _explicitNullValueParameter92Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter92.Name"); else _explicitNullProperties?.Remove("Parameter92.Name"); } }
+        private string? _explicitNullValueParameter92Name = default!;
 #nullable restore
 #else
-        public string Parameter92Name { get; set; }
+        public string Parameter92Name { get => _explicitNullValueParameter92Name; set { _explicitNullValueParameter92Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter92.Name"); else _explicitNullProperties?.Remove("Parameter92.Name"); } }
+        private string _explicitNullValueParameter92Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter92Value { get; set; }
+        public string? Parameter92Value { get => _explicitNullValueParameter92Value; set { _explicitNullValueParameter92Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter92.Value"); else _explicitNullProperties?.Remove("Parameter92.Value"); } }
+        private string? _explicitNullValueParameter92Value = default!;
 #nullable restore
 #else
-        public string Parameter92Value { get; set; }
+        public string Parameter92Value { get => _explicitNullValueParameter92Value; set { _explicitNullValueParameter92Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter92.Value"); else _explicitNullProperties?.Remove("Parameter92.Value"); } }
+        private string _explicitNullValueParameter92Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter93Name { get; set; }
+        public string? Parameter93Name { get => _explicitNullValueParameter93Name; set { _explicitNullValueParameter93Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter93.Name"); else _explicitNullProperties?.Remove("Parameter93.Name"); } }
+        private string? _explicitNullValueParameter93Name = default!;
 #nullable restore
 #else
-        public string Parameter93Name { get; set; }
+        public string Parameter93Name { get => _explicitNullValueParameter93Name; set { _explicitNullValueParameter93Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter93.Name"); else _explicitNullProperties?.Remove("Parameter93.Name"); } }
+        private string _explicitNullValueParameter93Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter93Value { get; set; }
+        public string? Parameter93Value { get => _explicitNullValueParameter93Value; set { _explicitNullValueParameter93Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter93.Value"); else _explicitNullProperties?.Remove("Parameter93.Value"); } }
+        private string? _explicitNullValueParameter93Value = default!;
 #nullable restore
 #else
-        public string Parameter93Value { get; set; }
+        public string Parameter93Value { get => _explicitNullValueParameter93Value; set { _explicitNullValueParameter93Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter93.Value"); else _explicitNullProperties?.Remove("Parameter93.Value"); } }
+        private string _explicitNullValueParameter93Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter94Name { get; set; }
+        public string? Parameter94Name { get => _explicitNullValueParameter94Name; set { _explicitNullValueParameter94Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter94.Name"); else _explicitNullProperties?.Remove("Parameter94.Name"); } }
+        private string? _explicitNullValueParameter94Name = default!;
 #nullable restore
 #else
-        public string Parameter94Name { get; set; }
+        public string Parameter94Name { get => _explicitNullValueParameter94Name; set { _explicitNullValueParameter94Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter94.Name"); else _explicitNullProperties?.Remove("Parameter94.Name"); } }
+        private string _explicitNullValueParameter94Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter94Value { get; set; }
+        public string? Parameter94Value { get => _explicitNullValueParameter94Value; set { _explicitNullValueParameter94Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter94.Value"); else _explicitNullProperties?.Remove("Parameter94.Value"); } }
+        private string? _explicitNullValueParameter94Value = default!;
 #nullable restore
 #else
-        public string Parameter94Value { get; set; }
+        public string Parameter94Value { get => _explicitNullValueParameter94Value; set { _explicitNullValueParameter94Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter94.Value"); else _explicitNullProperties?.Remove("Parameter94.Value"); } }
+        private string _explicitNullValueParameter94Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter95Name { get; set; }
+        public string? Parameter95Name { get => _explicitNullValueParameter95Name; set { _explicitNullValueParameter95Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter95.Name"); else _explicitNullProperties?.Remove("Parameter95.Name"); } }
+        private string? _explicitNullValueParameter95Name = default!;
 #nullable restore
 #else
-        public string Parameter95Name { get; set; }
+        public string Parameter95Name { get => _explicitNullValueParameter95Name; set { _explicitNullValueParameter95Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter95.Name"); else _explicitNullProperties?.Remove("Parameter95.Name"); } }
+        private string _explicitNullValueParameter95Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter95Value { get; set; }
+        public string? Parameter95Value { get => _explicitNullValueParameter95Value; set { _explicitNullValueParameter95Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter95.Value"); else _explicitNullProperties?.Remove("Parameter95.Value"); } }
+        private string? _explicitNullValueParameter95Value = default!;
 #nullable restore
 #else
-        public string Parameter95Value { get; set; }
+        public string Parameter95Value { get => _explicitNullValueParameter95Value; set { _explicitNullValueParameter95Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter95.Value"); else _explicitNullProperties?.Remove("Parameter95.Value"); } }
+        private string _explicitNullValueParameter95Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter96Name { get; set; }
+        public string? Parameter96Name { get => _explicitNullValueParameter96Name; set { _explicitNullValueParameter96Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter96.Name"); else _explicitNullProperties?.Remove("Parameter96.Name"); } }
+        private string? _explicitNullValueParameter96Name = default!;
 #nullable restore
 #else
-        public string Parameter96Name { get; set; }
+        public string Parameter96Name { get => _explicitNullValueParameter96Name; set { _explicitNullValueParameter96Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter96.Name"); else _explicitNullProperties?.Remove("Parameter96.Name"); } }
+        private string _explicitNullValueParameter96Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter96Value { get; set; }
+        public string? Parameter96Value { get => _explicitNullValueParameter96Value; set { _explicitNullValueParameter96Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter96.Value"); else _explicitNullProperties?.Remove("Parameter96.Value"); } }
+        private string? _explicitNullValueParameter96Value = default!;
 #nullable restore
 #else
-        public string Parameter96Value { get; set; }
+        public string Parameter96Value { get => _explicitNullValueParameter96Value; set { _explicitNullValueParameter96Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter96.Value"); else _explicitNullProperties?.Remove("Parameter96.Value"); } }
+        private string _explicitNullValueParameter96Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter97Name { get; set; }
+        public string? Parameter97Name { get => _explicitNullValueParameter97Name; set { _explicitNullValueParameter97Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter97.Name"); else _explicitNullProperties?.Remove("Parameter97.Name"); } }
+        private string? _explicitNullValueParameter97Name = default!;
 #nullable restore
 #else
-        public string Parameter97Name { get; set; }
+        public string Parameter97Name { get => _explicitNullValueParameter97Name; set { _explicitNullValueParameter97Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter97.Name"); else _explicitNullProperties?.Remove("Parameter97.Name"); } }
+        private string _explicitNullValueParameter97Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter97Value { get; set; }
+        public string? Parameter97Value { get => _explicitNullValueParameter97Value; set { _explicitNullValueParameter97Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter97.Value"); else _explicitNullProperties?.Remove("Parameter97.Value"); } }
+        private string? _explicitNullValueParameter97Value = default!;
 #nullable restore
 #else
-        public string Parameter97Value { get; set; }
+        public string Parameter97Value { get => _explicitNullValueParameter97Value; set { _explicitNullValueParameter97Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter97.Value"); else _explicitNullProperties?.Remove("Parameter97.Value"); } }
+        private string _explicitNullValueParameter97Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter98Name { get; set; }
+        public string? Parameter98Name { get => _explicitNullValueParameter98Name; set { _explicitNullValueParameter98Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter98.Name"); else _explicitNullProperties?.Remove("Parameter98.Name"); } }
+        private string? _explicitNullValueParameter98Name = default!;
 #nullable restore
 #else
-        public string Parameter98Name { get; set; }
+        public string Parameter98Name { get => _explicitNullValueParameter98Name; set { _explicitNullValueParameter98Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter98.Name"); else _explicitNullProperties?.Remove("Parameter98.Name"); } }
+        private string _explicitNullValueParameter98Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter98Value { get; set; }
+        public string? Parameter98Value { get => _explicitNullValueParameter98Value; set { _explicitNullValueParameter98Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter98.Value"); else _explicitNullProperties?.Remove("Parameter98.Value"); } }
+        private string? _explicitNullValueParameter98Value = default!;
 #nullable restore
 #else
-        public string Parameter98Value { get; set; }
+        public string Parameter98Value { get => _explicitNullValueParameter98Value; set { _explicitNullValueParameter98Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter98.Value"); else _explicitNullProperties?.Remove("Parameter98.Value"); } }
+        private string _explicitNullValueParameter98Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter99Name { get; set; }
+        public string? Parameter99Name { get => _explicitNullValueParameter99Name; set { _explicitNullValueParameter99Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter99.Name"); else _explicitNullProperties?.Remove("Parameter99.Name"); } }
+        private string? _explicitNullValueParameter99Name = default!;
 #nullable restore
 #else
-        public string Parameter99Name { get; set; }
+        public string Parameter99Name { get => _explicitNullValueParameter99Name; set { _explicitNullValueParameter99Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter99.Name"); else _explicitNullProperties?.Remove("Parameter99.Name"); } }
+        private string _explicitNullValueParameter99Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter99Value { get; set; }
+        public string? Parameter99Value { get => _explicitNullValueParameter99Value; set { _explicitNullValueParameter99Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter99.Value"); else _explicitNullProperties?.Remove("Parameter99.Value"); } }
+        private string? _explicitNullValueParameter99Value = default!;
 #nullable restore
 #else
-        public string Parameter99Value { get; set; }
+        public string Parameter99Value { get => _explicitNullValueParameter99Value; set { _explicitNullValueParameter99Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter99.Value"); else _explicitNullProperties?.Remove("Parameter99.Value"); } }
+        private string _explicitNullValueParameter99Value = default!;
 #endif
         /// <summary>Parameter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter9Name { get; set; }
+        public string? Parameter9Name { get => _explicitNullValueParameter9Name; set { _explicitNullValueParameter9Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter9.Name"); else _explicitNullProperties?.Remove("Parameter9.Name"); } }
+        private string? _explicitNullValueParameter9Name = default!;
 #nullable restore
 #else
-        public string Parameter9Name { get; set; }
+        public string Parameter9Name { get => _explicitNullValueParameter9Name; set { _explicitNullValueParameter9Name = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter9.Name"); else _explicitNullProperties?.Remove("Parameter9.Name"); } }
+        private string _explicitNullValueParameter9Name = default!;
 #endif
         /// <summary>Parameter value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter9Value { get; set; }
+        public string? Parameter9Value { get => _explicitNullValueParameter9Value; set { _explicitNullValueParameter9Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter9.Value"); else _explicitNullProperties?.Remove("Parameter9.Value"); } }
+        private string? _explicitNullValueParameter9Value = default!;
 #nullable restore
 #else
-        public string Parameter9Value { get; set; }
+        public string Parameter9Value { get => _explicitNullValueParameter9Value; set { _explicitNullValueParameter9Value = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter9.Value"); else _explicitNullProperties?.Remove("Parameter9.Value"); } }
+        private string _explicitNullValueParameter9Value = default!;
 #endif
         /// <summary>Absolute URL to which Twilio sends status callback HTTP requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCallback { get; set; }
+        public string? StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallback"); else _explicitNullProperties?.Remove("StatusCallback"); } }
+        private string? _explicitNullValueStatusCallback = default!;
 #nullable restore
 #else
-        public string StatusCallback { get; set; }
+        public string StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallback"); else _explicitNullProperties?.Remove("StatusCallback"); } }
+        private string _explicitNullValueStatusCallback = default!;
 #endif
         /// <summary>The HTTP method Twilio uses when sending `status_callback` requests. Possible values are `GET` and `POST`. Default is `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateStreamXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateStreamXWwwFormUrlencodedRequestStatusCallbackMethod? StatusCallbackMethod { get => _explicitNullValueStatusCallbackMethod; set { _explicitNullValueStatusCallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallbackMethod"); else _explicitNullProperties?.Remove("StatusCallbackMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateStreamXWwwFormUrlencodedRequestStatusCallbackMethod? _explicitNullValueStatusCallbackMethod = default!;
         /// <summary>The tracks to be included in the Stream. Possible values are `inbound_track`, `outbound_track`, `both_tracks`. Default value is `inbound_track`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.StreamEnumTrack? Track { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StreamEnumTrack? Track { get => _explicitNullValueTrack; set { _explicitNullValueTrack = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Track"); else _explicitNullProperties?.Remove("Track"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.StreamEnumTrack? _explicitNullValueTrack = default!;
         /// <summary>Relative or absolute URL where WebSocket connection will be established.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Url"); else _explicitNullProperties?.Remove("Url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Url"); else _explicitNullProperties?.Remove("Url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateStreamXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -1641,7 +2255,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateStreamXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateStreamXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateStreamXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -2066,6 +2680,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateStreamXWwwFormUrlencodedRequestStatusCallbackMethod>("StatusCallbackMethod", StatusCallbackMethod);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.StreamEnumTrack>("Track", Track);
             writer.WriteStringValue("Url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -57,6 +57,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.V2.Token
             {
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.V2OAuth2TokenResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.V2OAuth2TokenResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

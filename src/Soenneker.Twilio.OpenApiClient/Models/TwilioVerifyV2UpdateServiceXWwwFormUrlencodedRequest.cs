@@ -11,144 +11,217 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioVerifyV2UpdateServiceXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CodeLength") is { } nullNodeCodeLength && nullNodeCodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeLength = null;
+            if (parseNode.GetChildNode("CustomCodeEnabled") is { } nullNodeCustomCodeEnabled && nullNodeCustomCodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomCodeEnabled = null;
+            if (parseNode.GetChildNode("DefaultTemplateSid") is { } nullNodeDefaultTemplateSid && nullNodeDefaultTemplateSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultTemplateSid = null;
+            if (parseNode.GetChildNode("DoNotShareWarningEnabled") is { } nullNodeDoNotShareWarningEnabled && nullNodeDoNotShareWarningEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DoNotShareWarningEnabled = null;
+            if (parseNode.GetChildNode("DtmfInputRequired") is { } nullNodeDtmfInputRequired && nullNodeDtmfInputRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DtmfInputRequired = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("LookupEnabled") is { } nullNodeLookupEnabled && nullNodeLookupEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LookupEnabled = null;
+            if (parseNode.GetChildNode("Passkeys.AuthenticatorAttachment") is { } nullNodePasskeysAuthenticatorAttachment && nullNodePasskeysAuthenticatorAttachment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PasskeysAuthenticatorAttachment = null;
+            if (parseNode.GetChildNode("Passkeys.DiscoverableCredentials") is { } nullNodePasskeysDiscoverableCredentials && nullNodePasskeysDiscoverableCredentials.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PasskeysDiscoverableCredentials = null;
+            if (parseNode.GetChildNode("Passkeys.RelyingParty.Id") is { } nullNodePasskeysRelyingPartyId && nullNodePasskeysRelyingPartyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PasskeysRelyingPartyId = null;
+            if (parseNode.GetChildNode("Passkeys.RelyingParty.Name") is { } nullNodePasskeysRelyingPartyName && nullNodePasskeysRelyingPartyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PasskeysRelyingPartyName = null;
+            if (parseNode.GetChildNode("Passkeys.RelyingParty.Origins") is { } nullNodePasskeysRelyingPartyOrigins && nullNodePasskeysRelyingPartyOrigins.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PasskeysRelyingPartyOrigins = null;
+            if (parseNode.GetChildNode("Passkeys.UserVerification") is { } nullNodePasskeysUserVerification && nullNodePasskeysUserVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PasskeysUserVerification = null;
+            if (parseNode.GetChildNode("Psd2Enabled") is { } nullNodePsd2Enabled && nullNodePsd2Enabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Psd2Enabled = null;
+            if (parseNode.GetChildNode("Push.ApnCredentialSid") is { } nullNodePushApnCredentialSid && nullNodePushApnCredentialSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushApnCredentialSid = null;
+            if (parseNode.GetChildNode("Push.FcmCredentialSid") is { } nullNodePushFcmCredentialSid && nullNodePushFcmCredentialSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushFcmCredentialSid = null;
+            if (parseNode.GetChildNode("Push.IncludeDate") is { } nullNodePushIncludeDate && nullNodePushIncludeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushIncludeDate = null;
+            if (parseNode.GetChildNode("SkipSmsToLandlines") is { } nullNodeSkipSmsToLandlines && nullNodeSkipSmsToLandlines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipSmsToLandlines = null;
+            if (parseNode.GetChildNode("Totp.CodeLength") is { } nullNodeTotpCodeLength && nullNodeTotpCodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotpCodeLength = null;
+            if (parseNode.GetChildNode("Totp.Issuer") is { } nullNodeTotpIssuer && nullNodeTotpIssuer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotpIssuer = null;
+            if (parseNode.GetChildNode("Totp.Skew") is { } nullNodeTotpSkew && nullNodeTotpSkew.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotpSkew = null;
+            if (parseNode.GetChildNode("Totp.TimeStep") is { } nullNodeTotpTimeStep && nullNodeTotpTimeStep.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotpTimeStep = null;
+            if (parseNode.GetChildNode("TtsName") is { } nullNodeTtsName && nullNodeTtsName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TtsName = null;
+            if (parseNode.GetChildNode("VerifyEventSubscriptionEnabled") is { } nullNodeVerifyEventSubscriptionEnabled && nullNodeVerifyEventSubscriptionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifyEventSubscriptionEnabled = null;
+            if (parseNode.GetChildNode("Whatsapp.From") is { } nullNodeWhatsappFrom && nullNodeWhatsappFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappFrom = null;
+            if (parseNode.GetChildNode("Whatsapp.MsgServiceSid") is { } nullNodeWhatsappMsgServiceSid && nullNodeWhatsappMsgServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappMsgServiceSid = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The length of the verification code to generate. Must be an integer value between 4 and 10, inclusive.</summary>
-        public int? CodeLength { get; set; }
+        public int? CodeLength { get => _explicitNullValueCodeLength; set { _explicitNullValueCodeLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CodeLength"); else _explicitNullProperties?.Remove("CodeLength"); } }
+        private int? _explicitNullValueCodeLength = default!;
         /// <summary>Whether to allow sending verifications with a custom code instead of a randomly generated one.</summary>
-        public bool? CustomCodeEnabled { get; set; }
+        public bool? CustomCodeEnabled { get => _explicitNullValueCustomCodeEnabled; set { _explicitNullValueCustomCodeEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomCodeEnabled"); else _explicitNullProperties?.Remove("CustomCodeEnabled"); } }
+        private bool? _explicitNullValueCustomCodeEnabled = default!;
         /// <summary>The default message [template](https://www.twilio.com/docs/verify/api/templates). Will be used for all SMS verifications unless explicitly overriden. SMS channel only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultTemplateSid { get; set; }
+        public string? DefaultTemplateSid { get => _explicitNullValueDefaultTemplateSid; set { _explicitNullValueDefaultTemplateSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultTemplateSid"); else _explicitNullProperties?.Remove("DefaultTemplateSid"); } }
+        private string? _explicitNullValueDefaultTemplateSid = default!;
 #nullable restore
 #else
-        public string DefaultTemplateSid { get; set; }
+        public string DefaultTemplateSid { get => _explicitNullValueDefaultTemplateSid; set { _explicitNullValueDefaultTemplateSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultTemplateSid"); else _explicitNullProperties?.Remove("DefaultTemplateSid"); } }
+        private string _explicitNullValueDefaultTemplateSid = default!;
 #endif
         /// <summary>Whether to add a privacy warning at the end of an SMS. **Disabled by default and applies only for SMS.**</summary>
-        public bool? DoNotShareWarningEnabled { get; set; }
+        public bool? DoNotShareWarningEnabled { get => _explicitNullValueDoNotShareWarningEnabled; set { _explicitNullValueDoNotShareWarningEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DoNotShareWarningEnabled"); else _explicitNullProperties?.Remove("DoNotShareWarningEnabled"); } }
+        private bool? _explicitNullValueDoNotShareWarningEnabled = default!;
         /// <summary>Whether to ask the user to press a number before delivering the verify code in a phone call.</summary>
-        public bool? DtmfInputRequired { get; set; }
+        public bool? DtmfInputRequired { get => _explicitNullValueDtmfInputRequired; set { _explicitNullValueDtmfInputRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DtmfInputRequired"); else _explicitNullProperties?.Remove("DtmfInputRequired"); } }
+        private bool? _explicitNullValueDtmfInputRequired = default!;
         /// <summary>A descriptive string that you create to describe the verification service. It can be up to 32 characters long. **This value should not contain PII.**</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>Whether to perform a lookup with each verification started and return info about the phone number.</summary>
-        public bool? LookupEnabled { get; set; }
+        public bool? LookupEnabled { get => _explicitNullValueLookupEnabled; set { _explicitNullValueLookupEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LookupEnabled"); else _explicitNullProperties?.Remove("LookupEnabled"); } }
+        private bool? _explicitNullValueLookupEnabled = default!;
         /// <summary>The Authenticator Attachment for Passkeys. This is the type of authenticator that will be used to create Passkeys. It can be empty or it can have the values `platform`, `cross-platform` or `any`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PasskeysAuthenticatorAttachment { get; set; }
+        public string? PasskeysAuthenticatorAttachment { get => _explicitNullValuePasskeysAuthenticatorAttachment; set { _explicitNullValuePasskeysAuthenticatorAttachment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.AuthenticatorAttachment"); else _explicitNullProperties?.Remove("Passkeys.AuthenticatorAttachment"); } }
+        private string? _explicitNullValuePasskeysAuthenticatorAttachment = default!;
 #nullable restore
 #else
-        public string PasskeysAuthenticatorAttachment { get; set; }
+        public string PasskeysAuthenticatorAttachment { get => _explicitNullValuePasskeysAuthenticatorAttachment; set { _explicitNullValuePasskeysAuthenticatorAttachment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.AuthenticatorAttachment"); else _explicitNullProperties?.Remove("Passkeys.AuthenticatorAttachment"); } }
+        private string _explicitNullValuePasskeysAuthenticatorAttachment = default!;
 #endif
         /// <summary>Indicates whether credentials must be discoverable by the authenticator. It can be empty or it can have the values `required`, `preferred` or `discouraged`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PasskeysDiscoverableCredentials { get; set; }
+        public string? PasskeysDiscoverableCredentials { get => _explicitNullValuePasskeysDiscoverableCredentials; set { _explicitNullValuePasskeysDiscoverableCredentials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.DiscoverableCredentials"); else _explicitNullProperties?.Remove("Passkeys.DiscoverableCredentials"); } }
+        private string? _explicitNullValuePasskeysDiscoverableCredentials = default!;
 #nullable restore
 #else
-        public string PasskeysDiscoverableCredentials { get; set; }
+        public string PasskeysDiscoverableCredentials { get => _explicitNullValuePasskeysDiscoverableCredentials; set { _explicitNullValuePasskeysDiscoverableCredentials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.DiscoverableCredentials"); else _explicitNullProperties?.Remove("Passkeys.DiscoverableCredentials"); } }
+        private string _explicitNullValuePasskeysDiscoverableCredentials = default!;
 #endif
         /// <summary>The Relying Party ID for Passkeys. This is the domain of your application, e.g. `example.com`. It is used to identify your application when creating Passkeys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PasskeysRelyingPartyId { get; set; }
+        public string? PasskeysRelyingPartyId { get => _explicitNullValuePasskeysRelyingPartyId; set { _explicitNullValuePasskeysRelyingPartyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.RelyingParty.Id"); else _explicitNullProperties?.Remove("Passkeys.RelyingParty.Id"); } }
+        private string? _explicitNullValuePasskeysRelyingPartyId = default!;
 #nullable restore
 #else
-        public string PasskeysRelyingPartyId { get; set; }
+        public string PasskeysRelyingPartyId { get => _explicitNullValuePasskeysRelyingPartyId; set { _explicitNullValuePasskeysRelyingPartyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.RelyingParty.Id"); else _explicitNullProperties?.Remove("Passkeys.RelyingParty.Id"); } }
+        private string _explicitNullValuePasskeysRelyingPartyId = default!;
 #endif
         /// <summary>The Relying Party Name for Passkeys. This is the name of your application, e.g. `Example App`. It is used to identify your application when creating Passkeys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PasskeysRelyingPartyName { get; set; }
+        public string? PasskeysRelyingPartyName { get => _explicitNullValuePasskeysRelyingPartyName; set { _explicitNullValuePasskeysRelyingPartyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.RelyingParty.Name"); else _explicitNullProperties?.Remove("Passkeys.RelyingParty.Name"); } }
+        private string? _explicitNullValuePasskeysRelyingPartyName = default!;
 #nullable restore
 #else
-        public string PasskeysRelyingPartyName { get; set; }
+        public string PasskeysRelyingPartyName { get => _explicitNullValuePasskeysRelyingPartyName; set { _explicitNullValuePasskeysRelyingPartyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.RelyingParty.Name"); else _explicitNullProperties?.Remove("Passkeys.RelyingParty.Name"); } }
+        private string _explicitNullValuePasskeysRelyingPartyName = default!;
 #endif
         /// <summary>The Relying Party Origins for Passkeys. This is the origin of your application, e.g. `login.example.com,www.example.com`. It is used to identify your application when creating Passkeys, it can have multiple origins split by `,`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PasskeysRelyingPartyOrigins { get; set; }
+        public string? PasskeysRelyingPartyOrigins { get => _explicitNullValuePasskeysRelyingPartyOrigins; set { _explicitNullValuePasskeysRelyingPartyOrigins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.RelyingParty.Origins"); else _explicitNullProperties?.Remove("Passkeys.RelyingParty.Origins"); } }
+        private string? _explicitNullValuePasskeysRelyingPartyOrigins = default!;
 #nullable restore
 #else
-        public string PasskeysRelyingPartyOrigins { get; set; }
+        public string PasskeysRelyingPartyOrigins { get => _explicitNullValuePasskeysRelyingPartyOrigins; set { _explicitNullValuePasskeysRelyingPartyOrigins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.RelyingParty.Origins"); else _explicitNullProperties?.Remove("Passkeys.RelyingParty.Origins"); } }
+        private string _explicitNullValuePasskeysRelyingPartyOrigins = default!;
 #endif
         /// <summary>The User Verification for Passkeys. This is the type of user verification that will be used to create Passkeys. It can be empty or it can have the values `required`, `preferred` or `discouraged`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PasskeysUserVerification { get; set; }
+        public string? PasskeysUserVerification { get => _explicitNullValuePasskeysUserVerification; set { _explicitNullValuePasskeysUserVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.UserVerification"); else _explicitNullProperties?.Remove("Passkeys.UserVerification"); } }
+        private string? _explicitNullValuePasskeysUserVerification = default!;
 #nullable restore
 #else
-        public string PasskeysUserVerification { get; set; }
+        public string PasskeysUserVerification { get => _explicitNullValuePasskeysUserVerification; set { _explicitNullValuePasskeysUserVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Passkeys.UserVerification"); else _explicitNullProperties?.Remove("Passkeys.UserVerification"); } }
+        private string _explicitNullValuePasskeysUserVerification = default!;
 #endif
         /// <summary>Whether to pass PSD2 transaction parameters when starting a verification.</summary>
-        public bool? Psd2Enabled { get; set; }
+        public bool? Psd2Enabled { get => _explicitNullValuePsd2Enabled; set { _explicitNullValuePsd2Enabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Psd2Enabled"); else _explicitNullProperties?.Remove("Psd2Enabled"); } }
+        private bool? _explicitNullValuePsd2Enabled = default!;
         /// <summary>Optional configuration for the Push factors. Set the APN Credential for this service. This will allow to send push notifications to iOS devices. See [Credential Resource](https://www.twilio.com/docs/notify/api/credential-resource)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PushApnCredentialSid { get; set; }
+        public string? PushApnCredentialSid { get => _explicitNullValuePushApnCredentialSid; set { _explicitNullValuePushApnCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Push.ApnCredentialSid"); else _explicitNullProperties?.Remove("Push.ApnCredentialSid"); } }
+        private string? _explicitNullValuePushApnCredentialSid = default!;
 #nullable restore
 #else
-        public string PushApnCredentialSid { get; set; }
+        public string PushApnCredentialSid { get => _explicitNullValuePushApnCredentialSid; set { _explicitNullValuePushApnCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Push.ApnCredentialSid"); else _explicitNullProperties?.Remove("Push.ApnCredentialSid"); } }
+        private string _explicitNullValuePushApnCredentialSid = default!;
 #endif
         /// <summary>Optional configuration for the Push factors. Set the FCM Credential for this service. This will allow to send push notifications to Android devices. See [Credential Resource](https://www.twilio.com/docs/notify/api/credential-resource)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PushFcmCredentialSid { get; set; }
+        public string? PushFcmCredentialSid { get => _explicitNullValuePushFcmCredentialSid; set { _explicitNullValuePushFcmCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Push.FcmCredentialSid"); else _explicitNullProperties?.Remove("Push.FcmCredentialSid"); } }
+        private string? _explicitNullValuePushFcmCredentialSid = default!;
 #nullable restore
 #else
-        public string PushFcmCredentialSid { get; set; }
+        public string PushFcmCredentialSid { get => _explicitNullValuePushFcmCredentialSid; set { _explicitNullValuePushFcmCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Push.FcmCredentialSid"); else _explicitNullProperties?.Remove("Push.FcmCredentialSid"); } }
+        private string _explicitNullValuePushFcmCredentialSid = default!;
 #endif
         /// <summary>Optional configuration for the Push factors. If true, include the date in the Challenge&apos;s response. Otherwise, the date is omitted from the response. See [Challenge](https://www.twilio.com/docs/verify/api/challenge) resource’s details parameter for more info. Default: false. **Deprecated** do not use this parameter.</summary>
-        public bool? PushIncludeDate { get; set; }
+        public bool? PushIncludeDate { get => _explicitNullValuePushIncludeDate; set { _explicitNullValuePushIncludeDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Push.IncludeDate"); else _explicitNullProperties?.Remove("Push.IncludeDate"); } }
+        private bool? _explicitNullValuePushIncludeDate = default!;
         /// <summary>Whether to skip sending SMS verifications to landlines. Requires `lookup_enabled`.</summary>
-        public bool? SkipSmsToLandlines { get; set; }
+        public bool? SkipSmsToLandlines { get => _explicitNullValueSkipSmsToLandlines; set { _explicitNullValueSkipSmsToLandlines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SkipSmsToLandlines"); else _explicitNullProperties?.Remove("SkipSmsToLandlines"); } }
+        private bool? _explicitNullValueSkipSmsToLandlines = default!;
         /// <summary>Optional configuration for the TOTP factors. Number of digits for generated TOTP codes. Must be between 3 and 8, inclusive. Defaults to 6</summary>
-        public int? TotpCodeLength { get; set; }
+        public int? TotpCodeLength { get => _explicitNullValueTotpCodeLength; set { _explicitNullValueTotpCodeLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Totp.CodeLength"); else _explicitNullProperties?.Remove("Totp.CodeLength"); } }
+        private int? _explicitNullValueTotpCodeLength = default!;
         /// <summary>Optional configuration for the TOTP factors. Set TOTP Issuer for this service. This will allow to configure the issuer of the TOTP URI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotpIssuer { get; set; }
+        public string? TotpIssuer { get => _explicitNullValueTotpIssuer; set { _explicitNullValueTotpIssuer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Totp.Issuer"); else _explicitNullProperties?.Remove("Totp.Issuer"); } }
+        private string? _explicitNullValueTotpIssuer = default!;
 #nullable restore
 #else
-        public string TotpIssuer { get; set; }
+        public string TotpIssuer { get => _explicitNullValueTotpIssuer; set { _explicitNullValueTotpIssuer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Totp.Issuer"); else _explicitNullProperties?.Remove("Totp.Issuer"); } }
+        private string _explicitNullValueTotpIssuer = default!;
 #endif
         /// <summary>Optional configuration for the TOTP factors. The number of time-steps, past and future, that are valid for validation of TOTP codes. Must be between 0 and 2, inclusive. Defaults to 1</summary>
-        public int? TotpSkew { get; set; }
+        public int? TotpSkew { get => _explicitNullValueTotpSkew; set { _explicitNullValueTotpSkew = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Totp.Skew"); else _explicitNullProperties?.Remove("Totp.Skew"); } }
+        private int? _explicitNullValueTotpSkew = default!;
         /// <summary>Optional configuration for the TOTP factors. Defines how often, in seconds, are TOTP codes generated. i.e, a new TOTP code is generated every time_step seconds. Must be between 20 and 60 seconds, inclusive. Defaults to 30 seconds</summary>
-        public int? TotpTimeStep { get; set; }
+        public int? TotpTimeStep { get => _explicitNullValueTotpTimeStep; set { _explicitNullValueTotpTimeStep = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Totp.TimeStep"); else _explicitNullProperties?.Remove("Totp.TimeStep"); } }
+        private int? _explicitNullValueTotpTimeStep = default!;
         /// <summary>The name of an alternative text-to-speech service to use in phone calls. Applies only to TTS languages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TtsName { get; set; }
+        public string? TtsName { get => _explicitNullValueTtsName; set { _explicitNullValueTtsName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TtsName"); else _explicitNullProperties?.Remove("TtsName"); } }
+        private string? _explicitNullValueTtsName = default!;
 #nullable restore
 #else
-        public string TtsName { get; set; }
+        public string TtsName { get => _explicitNullValueTtsName; set { _explicitNullValueTtsName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TtsName"); else _explicitNullProperties?.Remove("TtsName"); } }
+        private string _explicitNullValueTtsName = default!;
 #endif
         /// <summary>Whether to allow verifications from the service to reach the stream-events sinks if configured</summary>
-        public bool? VerifyEventSubscriptionEnabled { get; set; }
+        public bool? VerifyEventSubscriptionEnabled { get => _explicitNullValueVerifyEventSubscriptionEnabled; set { _explicitNullValueVerifyEventSubscriptionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerifyEventSubscriptionEnabled"); else _explicitNullProperties?.Remove("VerifyEventSubscriptionEnabled"); } }
+        private bool? _explicitNullValueVerifyEventSubscriptionEnabled = default!;
         /// <summary>The WhatsApp number to use as the sender of the verification messages. This number must be associated with the WhatsApp Message Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WhatsappFrom { get; set; }
+        public string? WhatsappFrom { get => _explicitNullValueWhatsappFrom; set { _explicitNullValueWhatsappFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Whatsapp.From"); else _explicitNullProperties?.Remove("Whatsapp.From"); } }
+        private string? _explicitNullValueWhatsappFrom = default!;
 #nullable restore
 #else
-        public string WhatsappFrom { get; set; }
+        public string WhatsappFrom { get => _explicitNullValueWhatsappFrom; set { _explicitNullValueWhatsappFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Whatsapp.From"); else _explicitNullProperties?.Remove("Whatsapp.From"); } }
+        private string _explicitNullValueWhatsappFrom = default!;
 #endif
         /// <summary>The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services) to associate with the Verification Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WhatsappMsgServiceSid { get; set; }
+        public string? WhatsappMsgServiceSid { get => _explicitNullValueWhatsappMsgServiceSid; set { _explicitNullValueWhatsappMsgServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Whatsapp.MsgServiceSid"); else _explicitNullProperties?.Remove("Whatsapp.MsgServiceSid"); } }
+        private string? _explicitNullValueWhatsappMsgServiceSid = default!;
 #nullable restore
 #else
-        public string WhatsappMsgServiceSid { get; set; }
+        public string WhatsappMsgServiceSid { get => _explicitNullValueWhatsappMsgServiceSid; set { _explicitNullValueWhatsappMsgServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Whatsapp.MsgServiceSid"); else _explicitNullProperties?.Remove("Whatsapp.MsgServiceSid"); } }
+        private string _explicitNullValueWhatsappMsgServiceSid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateServiceXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -165,7 +238,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateServiceXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateServiceXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateServiceXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -236,6 +309,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("VerifyEventSubscriptionEnabled", VerifyEventSubscriptionEnabled);
             writer.WriteStringValue("Whatsapp.From", WhatsappFrom);
             writer.WriteStringValue("Whatsapp.MsgServiceSid", WhatsappMsgServiceSid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

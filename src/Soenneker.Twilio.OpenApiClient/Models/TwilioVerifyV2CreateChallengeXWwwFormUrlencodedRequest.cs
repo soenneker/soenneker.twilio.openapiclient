@@ -11,50 +11,74 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AuthPayload") is { } nullNodeAuthPayload && nullNodeAuthPayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthPayload = null;
+            if (parseNode.GetChildNode("Details.Fields") is { } nullNodeDetailsFields && nullNodeDetailsFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetailsFields = null;
+            if (parseNode.GetChildNode("Details.Message") is { } nullNodeDetailsMessage && nullNodeDetailsMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetailsMessage = null;
+            if (parseNode.GetChildNode("ExpirationDate") is { } nullNodeExpirationDate && nullNodeExpirationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpirationDate = null;
+            if (parseNode.GetChildNode("FactorSid") is { } nullNodeFactorSid && nullNodeFactorSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FactorSid = null;
+            if (parseNode.GetChildNode("HiddenDetails") is { } nullNodeHiddenDetails && nullNodeHiddenDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HiddenDetails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Optional payload used to verify the Challenge upon creation. Only used with a Factor of type `totp` to carry the TOTP code that needs to be verified. For `TOTP` this value must be between 3 and 8 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthPayload { get; set; }
+        public string? AuthPayload { get => _explicitNullValueAuthPayload; set { _explicitNullValueAuthPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthPayload"); else _explicitNullProperties?.Remove("AuthPayload"); } }
+        private string? _explicitNullValueAuthPayload = default!;
 #nullable restore
 #else
-        public string AuthPayload { get; set; }
+        public string AuthPayload { get => _explicitNullValueAuthPayload; set { _explicitNullValueAuthPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthPayload"); else _explicitNullProperties?.Remove("AuthPayload"); } }
+        private string _explicitNullValueAuthPayload = default!;
 #endif
         /// <summary>A list of objects that describe the Fields included in the Challenge. Each object contains the label and value of the field, the label can be up to 36 characters in length and the value can be up to 128 characters in length. Used when `factor_type` is `push`. There can be up to 20 details fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? DetailsFields { get; set; }
+        public UntypedNode? DetailsFields { get => _explicitNullValueDetailsFields; set { _explicitNullValueDetailsFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Details.Fields"); else _explicitNullProperties?.Remove("Details.Fields"); } }
+        private UntypedNode? _explicitNullValueDetailsFields = default!;
 #nullable restore
 #else
-        public UntypedNode DetailsFields { get; set; }
+        public UntypedNode DetailsFields { get => _explicitNullValueDetailsFields; set { _explicitNullValueDetailsFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Details.Fields"); else _explicitNullProperties?.Remove("Details.Fields"); } }
+        private UntypedNode _explicitNullValueDetailsFields = default!;
 #endif
         /// <summary>Shown to the user when the push notification arrives. Required when `factor_type` is `push`. Can be up to 256 characters in length</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DetailsMessage { get; set; }
+        public string? DetailsMessage { get => _explicitNullValueDetailsMessage; set { _explicitNullValueDetailsMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Details.Message"); else _explicitNullProperties?.Remove("Details.Message"); } }
+        private string? _explicitNullValueDetailsMessage = default!;
 #nullable restore
 #else
-        public string DetailsMessage { get; set; }
+        public string DetailsMessage { get => _explicitNullValueDetailsMessage; set { _explicitNullValueDetailsMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Details.Message"); else _explicitNullProperties?.Remove("Details.Message"); } }
+        private string _explicitNullValueDetailsMessage = default!;
 #endif
         /// <summary>The date-time when this Challenge expires, given in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. The default value is five (5) minutes after Challenge creation. The max value is sixty (60) minutes after creation.</summary>
-        public DateTimeOffset? ExpirationDate { get; set; }
+        public DateTimeOffset? ExpirationDate { get => _explicitNullValueExpirationDate; set { _explicitNullValueExpirationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExpirationDate"); else _explicitNullProperties?.Remove("ExpirationDate"); } }
+        private DateTimeOffset? _explicitNullValueExpirationDate = default!;
         /// <summary>The unique SID identifier of the Factor.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FactorSid { get; set; }
+        public string? FactorSid { get => _explicitNullValueFactorSid; set { _explicitNullValueFactorSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FactorSid"); else _explicitNullProperties?.Remove("FactorSid"); } }
+        private string? _explicitNullValueFactorSid = default!;
 #nullable restore
 #else
-        public string FactorSid { get; set; }
+        public string FactorSid { get => _explicitNullValueFactorSid; set { _explicitNullValueFactorSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FactorSid"); else _explicitNullProperties?.Remove("FactorSid"); } }
+        private string _explicitNullValueFactorSid = default!;
 #endif
         /// <summary>Details provided to give context about the Challenge. Not shown to the end user. It must be a stringified JSON with only strings values eg. `{&quot;ip&quot;: &quot;172.168.1.234&quot;}`. Can be up to 1024 characters in length</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? HiddenDetails { get; set; }
+        public UntypedNode? HiddenDetails { get => _explicitNullValueHiddenDetails; set { _explicitNullValueHiddenDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HiddenDetails"); else _explicitNullProperties?.Remove("HiddenDetails"); } }
+        private UntypedNode? _explicitNullValueHiddenDetails = default!;
 #nullable restore
 #else
-        public UntypedNode HiddenDetails { get; set; }
+        public UntypedNode HiddenDetails { get => _explicitNullValueHiddenDetails; set { _explicitNullValueHiddenDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HiddenDetails"); else _explicitNullProperties?.Remove("HiddenDetails"); } }
+        private UntypedNode _explicitNullValueHiddenDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -71,7 +95,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2CreateChallengeXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("ExpirationDate", ExpirationDate);
             writer.WriteStringValue("FactorSid", FactorSid);
             writer.WriteObjectValue<UntypedNode>("HiddenDetails", HiddenDetails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

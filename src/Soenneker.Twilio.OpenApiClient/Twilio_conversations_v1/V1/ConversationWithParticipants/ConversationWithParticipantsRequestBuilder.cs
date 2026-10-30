@@ -51,7 +51,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_conversations_v1.V1.Conversation
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConversationWithParticipants>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConversationWithParticipants.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConversationWithParticipants>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV1ConversationWithParticipants.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new conversation with the list of participants in your account&apos;s default service

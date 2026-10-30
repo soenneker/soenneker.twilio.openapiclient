@@ -11,25 +11,43 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class VoiceIntegrityCallsPerBundle : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("answer_rate") is { } nullNodeAnswerRate && nullNodeAnswerRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerRate = null;
+            if (parseNode.GetChildNode("bundle_sid") is { } nullNodeBundleSid && nullNodeBundleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BundleSid = null;
+            if (parseNode.GetChildNode("enabled_phonenumbers") is { } nullNodeEnabledPhonenumbers && nullNodeEnabledPhonenumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledPhonenumbers = null;
+            if (parseNode.GetChildNode("human_answer_rate") is { } nullNodeHumanAnswerRate && nullNodeHumanAnswerRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanAnswerRate = null;
+            if (parseNode.GetChildNode("total_calls") is { } nullNodeTotalCalls && nullNodeTotalCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCalls = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Answer rate for calls on Voice Integrity enabled and registered number per Bundle Sid.</summary>
-        public float? AnswerRate { get; set; }
+        public float? AnswerRate { get => _explicitNullValueAnswerRate; set { _explicitNullValueAnswerRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_rate"); else _explicitNullProperties?.Remove("answer_rate"); } }
+        private float? _explicitNullValueAnswerRate = default!;
         /// <summary>Voice Integrity Approved Profile Sid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BundleSid { get; set; }
+        public string? BundleSid { get => _explicitNullValueBundleSid; set { _explicitNullValueBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundle_sid"); else _explicitNullProperties?.Remove("bundle_sid"); } }
+        private string? _explicitNullValueBundleSid = default!;
 #nullable restore
 #else
-        public string BundleSid { get; set; }
+        public string BundleSid { get => _explicitNullValueBundleSid; set { _explicitNullValueBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundle_sid"); else _explicitNullProperties?.Remove("bundle_sid"); } }
+        private string _explicitNullValueBundleSid = default!;
 #endif
         /// <summary>The number of Voice Integrity enabled and registered phone numbers per Bundle Sid.</summary>
-        public int? EnabledPhonenumbers { get; set; }
+        public int? EnabledPhonenumbers { get => _explicitNullValueEnabledPhonenumbers; set { _explicitNullValueEnabledPhonenumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_phonenumbers"); else _explicitNullProperties?.Remove("enabled_phonenumbers"); } }
+        private int? _explicitNullValueEnabledPhonenumbers = default!;
         /// <summary>Rate for calls on Voice Integrity enabled and registered number per Bundle Sid that were answered by Human per each use case for Branded bundled calls.</summary>
-        public float? HumanAnswerRate { get; set; }
+        public float? HumanAnswerRate { get => _explicitNullValueHumanAnswerRate; set { _explicitNullValueHumanAnswerRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_answer_rate"); else _explicitNullProperties?.Remove("human_answer_rate"); } }
+        private float? _explicitNullValueHumanAnswerRate = default!;
         /// <summary>The number of outbound calls on Voice Integrity enabled and registered number per Bundle Sid.</summary>
-        public int? TotalCalls { get; set; }
+        public int? TotalCalls { get => _explicitNullValueTotalCalls; set { _explicitNullValueTotalCalls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_calls"); else _explicitNullProperties?.Remove("total_calls"); } }
+        private int? _explicitNullValueTotalCalls = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrityCallsPerBundle"/> and sets the default values.
         /// </summary>
@@ -45,7 +63,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrityCallsPerBundle CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrityCallsPerBundle();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrityCallsPerBundle(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,6 +92,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("enabled_phonenumbers", EnabledPhonenumbers);
             writer.WriteFloatValue("human_answer_rate", HumanAnswerRate);
             writer.WriteIntValue("total_calls", TotalCalls);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

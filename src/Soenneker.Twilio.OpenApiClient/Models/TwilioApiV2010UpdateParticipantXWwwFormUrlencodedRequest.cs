@@ -11,56 +11,91 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AnnounceMethod") is { } nullNodeAnnounceMethod && nullNodeAnnounceMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnnounceMethod = null;
+            if (parseNode.GetChildNode("AnnounceUrl") is { } nullNodeAnnounceUrl && nullNodeAnnounceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnnounceUrl = null;
+            if (parseNode.GetChildNode("BeepOnExit") is { } nullNodeBeepOnExit && nullNodeBeepOnExit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BeepOnExit = null;
+            if (parseNode.GetChildNode("CallSidToCoach") is { } nullNodeCallSidToCoach && nullNodeCallSidToCoach.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallSidToCoach = null;
+            if (parseNode.GetChildNode("Coaching") is { } nullNodeCoaching && nullNodeCoaching.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coaching = null;
+            if (parseNode.GetChildNode("EndConferenceOnExit") is { } nullNodeEndConferenceOnExit && nullNodeEndConferenceOnExit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndConferenceOnExit = null;
+            if (parseNode.GetChildNode("Hold") is { } nullNodeHold && nullNodeHold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hold = null;
+            if (parseNode.GetChildNode("HoldMethod") is { } nullNodeHoldMethod && nullNodeHoldMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldMethod = null;
+            if (parseNode.GetChildNode("HoldUrl") is { } nullNodeHoldUrl && nullNodeHoldUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldUrl = null;
+            if (parseNode.GetChildNode("Muted") is { } nullNodeMuted && nullNodeMuted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Muted = null;
+            if (parseNode.GetChildNode("WaitMethod") is { } nullNodeWaitMethod && nullNodeWaitMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WaitMethod = null;
+            if (parseNode.GetChildNode("WaitUrl") is { } nullNodeWaitUrl && nullNodeWaitUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WaitUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The HTTP method we should use to call `announce_url`. Can be: `GET` or `POST` and defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestAnnounceMethod? AnnounceMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestAnnounceMethod? AnnounceMethod { get => _explicitNullValueAnnounceMethod; set { _explicitNullValueAnnounceMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnnounceMethod"); else _explicitNullProperties?.Remove("AnnounceMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestAnnounceMethod? _explicitNullValueAnnounceMethod = default!;
         /// <summary>The URL we call using the `announce_method` for an announcement to the participant. The URL may return an MP3 file, a WAV file, or a TwiML document that contains `&lt;Play&gt;`, `&lt;Say&gt;`, `&lt;Pause&gt;`, or `&lt;Redirect&gt;` verbs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AnnounceUrl { get; set; }
+        public string? AnnounceUrl { get => _explicitNullValueAnnounceUrl; set { _explicitNullValueAnnounceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnnounceUrl"); else _explicitNullProperties?.Remove("AnnounceUrl"); } }
+        private string? _explicitNullValueAnnounceUrl = default!;
 #nullable restore
 #else
-        public string AnnounceUrl { get; set; }
+        public string AnnounceUrl { get => _explicitNullValueAnnounceUrl; set { _explicitNullValueAnnounceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnnounceUrl"); else _explicitNullProperties?.Remove("AnnounceUrl"); } }
+        private string _explicitNullValueAnnounceUrl = default!;
 #endif
         /// <summary>Whether to play a notification beep to the conference when the participant exits. Can be: `true` or `false`.</summary>
-        public bool? BeepOnExit { get; set; }
+        public bool? BeepOnExit { get => _explicitNullValueBeepOnExit; set { _explicitNullValueBeepOnExit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BeepOnExit"); else _explicitNullProperties?.Remove("BeepOnExit"); } }
+        private bool? _explicitNullValueBeepOnExit = default!;
         /// <summary>The SID of the participant who is being `coached`. The participant being coached is the only participant who can hear the participant who is `coaching`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallSidToCoach { get; set; }
+        public string? CallSidToCoach { get => _explicitNullValueCallSidToCoach; set { _explicitNullValueCallSidToCoach = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallSidToCoach"); else _explicitNullProperties?.Remove("CallSidToCoach"); } }
+        private string? _explicitNullValueCallSidToCoach = default!;
 #nullable restore
 #else
-        public string CallSidToCoach { get; set; }
+        public string CallSidToCoach { get => _explicitNullValueCallSidToCoach; set { _explicitNullValueCallSidToCoach = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallSidToCoach"); else _explicitNullProperties?.Remove("CallSidToCoach"); } }
+        private string _explicitNullValueCallSidToCoach = default!;
 #endif
         /// <summary>Whether the participant is coaching another call. Can be: `true` or `false`. If not present, defaults to `false` unless `call_sid_to_coach` is defined. If `true`, `call_sid_to_coach` must be defined.</summary>
-        public bool? Coaching { get; set; }
+        public bool? Coaching { get => _explicitNullValueCoaching; set { _explicitNullValueCoaching = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Coaching"); else _explicitNullProperties?.Remove("Coaching"); } }
+        private bool? _explicitNullValueCoaching = default!;
         /// <summary>Whether to end the conference when the participant leaves. Can be: `true` or `false` and defaults to `false`.</summary>
-        public bool? EndConferenceOnExit { get; set; }
+        public bool? EndConferenceOnExit { get => _explicitNullValueEndConferenceOnExit; set { _explicitNullValueEndConferenceOnExit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EndConferenceOnExit"); else _explicitNullProperties?.Remove("EndConferenceOnExit"); } }
+        private bool? _explicitNullValueEndConferenceOnExit = default!;
         /// <summary>Whether the participant should be on hold. Can be: `true` or `false`. `true` puts the participant on hold, and `false` lets them rejoin the conference.</summary>
-        public bool? Hold { get; set; }
+        public bool? Hold { get => _explicitNullValueHold; set { _explicitNullValueHold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hold"); else _explicitNullProperties?.Remove("Hold"); } }
+        private bool? _explicitNullValueHold = default!;
         /// <summary>The HTTP method we should use to call `hold_url`. Can be: `GET` or `POST` and the default is `GET`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestHoldMethod? HoldMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestHoldMethod? HoldMethod { get => _explicitNullValueHoldMethod; set { _explicitNullValueHoldMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldMethod"); else _explicitNullProperties?.Remove("HoldMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestHoldMethod? _explicitNullValueHoldMethod = default!;
         /// <summary>The URL we call using the `hold_method` for music that plays when the participant is on hold. The URL may return an MP3 file, a WAV file, or a TwiML document that contains `&lt;Play&gt;`, `&lt;Say&gt;`, `&lt;Pause&gt;`, or `&lt;Redirect&gt;` verbs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HoldUrl { get; set; }
+        public string? HoldUrl { get => _explicitNullValueHoldUrl; set { _explicitNullValueHoldUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldUrl"); else _explicitNullProperties?.Remove("HoldUrl"); } }
+        private string? _explicitNullValueHoldUrl = default!;
 #nullable restore
 #else
-        public string HoldUrl { get; set; }
+        public string HoldUrl { get => _explicitNullValueHoldUrl; set { _explicitNullValueHoldUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldUrl"); else _explicitNullProperties?.Remove("HoldUrl"); } }
+        private string _explicitNullValueHoldUrl = default!;
 #endif
         /// <summary>Whether the participant should be muted. Can be `true` or `false`. `true` will mute the participant, and `false` will un-mute them. Anything value other than `true` or `false` is interpreted as `false`.</summary>
-        public bool? Muted { get; set; }
+        public bool? Muted { get => _explicitNullValueMuted; set { _explicitNullValueMuted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Muted"); else _explicitNullProperties?.Remove("Muted"); } }
+        private bool? _explicitNullValueMuted = default!;
         /// <summary>The HTTP method we should use to call `wait_url`. Can be `GET` or `POST` and the default is `POST`. When using a static audio file, this should be `GET` so that we can cache the file.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestWaitMethod? WaitMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestWaitMethod? WaitMethod { get => _explicitNullValueWaitMethod; set { _explicitNullValueWaitMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WaitMethod"); else _explicitNullProperties?.Remove("WaitMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestWaitMethod? _explicitNullValueWaitMethod = default!;
         /// <summary>The URL that Twilio calls using the `wait_method` before the conference has started. The URL may return an MP3 file, a WAV file, or a TwiML document. The default value is the URL of our standard hold music. If you do not want anything to play while waiting for the conference to start, specify an empty string by setting `wait_url` to `&apos;&apos;`. For more details on the allowable verbs within the `waitUrl`, see the `waitUrl` attribute in the [&lt;Conference&gt; TwiML instruction](https://www.twilio.com/docs/voice/twiml/conference#attributes-waiturl).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WaitUrl { get; set; }
+        public string? WaitUrl { get => _explicitNullValueWaitUrl; set { _explicitNullValueWaitUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WaitUrl"); else _explicitNullProperties?.Remove("WaitUrl"); } }
+        private string? _explicitNullValueWaitUrl = default!;
 #nullable restore
 #else
-        public string WaitUrl { get; set; }
+        public string WaitUrl { get => _explicitNullValueWaitUrl; set { _explicitNullValueWaitUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WaitUrl"); else _explicitNullProperties?.Remove("WaitUrl"); } }
+        private string _explicitNullValueWaitUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -77,7 +112,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -120,6 +155,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("Muted", Muted);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010UpdateParticipantXWwwFormUrlencodedRequestWaitMethod>("WaitMethod", WaitMethod);
             writer.WriteStringValue("WaitUrl", WaitUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,58 +11,90 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioIntelligenceV2CreateServiceXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AutoRedaction") is { } nullNodeAutoRedaction && nullNodeAutoRedaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoRedaction = null;
+            if (parseNode.GetChildNode("AutoTranscribe") is { } nullNodeAutoTranscribe && nullNodeAutoTranscribe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoTranscribe = null;
+            if (parseNode.GetChildNode("DataLogging") is { } nullNodeDataLogging && nullNodeDataLogging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataLogging = null;
+            if (parseNode.GetChildNode("EncryptionCredentialSid") is { } nullNodeEncryptionCredentialSid && nullNodeEncryptionCredentialSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncryptionCredentialSid = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("LanguageCode") is { } nullNodeLanguageCode && nullNodeLanguageCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LanguageCode = null;
+            if (parseNode.GetChildNode("MediaRedaction") is { } nullNodeMediaRedaction && nullNodeMediaRedaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaRedaction = null;
+            if (parseNode.GetChildNode("UniqueName") is { } nullNodeUniqueName && nullNodeUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueName = null;
+            if (parseNode.GetChildNode("WebhookHttpMethod") is { } nullNodeWebhookHttpMethod && nullNodeWebhookHttpMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookHttpMethod = null;
+            if (parseNode.GetChildNode("WebhookUrl") is { } nullNodeWebhookUrl && nullNodeWebhookUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Instructs the Speech Recognition service to automatically redact PII from all transcripts made on this service.</summary>
-        public bool? AutoRedaction { get; set; }
+        public bool? AutoRedaction { get => _explicitNullValueAutoRedaction; set { _explicitNullValueAutoRedaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoRedaction"); else _explicitNullProperties?.Remove("AutoRedaction"); } }
+        private bool? _explicitNullValueAutoRedaction = default!;
         /// <summary>Instructs the Speech Recognition service to automatically transcribe all recordings made on the account.</summary>
-        public bool? AutoTranscribe { get; set; }
+        public bool? AutoTranscribe { get => _explicitNullValueAutoTranscribe; set { _explicitNullValueAutoTranscribe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoTranscribe"); else _explicitNullProperties?.Remove("AutoTranscribe"); } }
+        private bool? _explicitNullValueAutoTranscribe = default!;
         /// <summary>Data logging allows Twilio to improve the quality of the speech recognition &amp; language understanding services through using customer data to refine, fine tune and evaluate machine learning models.Note: Data logging cannot be activated via API, only via www.twilio.com, as it requires additional consent.</summary>
-        public bool? DataLogging { get; set; }
+        public bool? DataLogging { get => _explicitNullValueDataLogging; set { _explicitNullValueDataLogging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataLogging"); else _explicitNullProperties?.Remove("DataLogging"); } }
+        private bool? _explicitNullValueDataLogging = default!;
         /// <summary>The unique SID identifier of the Public Key resource used to encrypt the sentences and operator results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EncryptionCredentialSid { get; set; }
+        public string? EncryptionCredentialSid { get => _explicitNullValueEncryptionCredentialSid; set { _explicitNullValueEncryptionCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EncryptionCredentialSid"); else _explicitNullProperties?.Remove("EncryptionCredentialSid"); } }
+        private string? _explicitNullValueEncryptionCredentialSid = default!;
 #nullable restore
 #else
-        public string EncryptionCredentialSid { get; set; }
+        public string EncryptionCredentialSid { get => _explicitNullValueEncryptionCredentialSid; set { _explicitNullValueEncryptionCredentialSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EncryptionCredentialSid"); else _explicitNullProperties?.Remove("EncryptionCredentialSid"); } }
+        private string _explicitNullValueEncryptionCredentialSid = default!;
 #endif
         /// <summary>A human readable description of this resource, up to 64 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The language code set during Service creation determines the Transcription language for all call recordings processed by that Service. The default is en-US if no language code is set. A Service can only support one language code, and it cannot be updated once it&apos;s set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LanguageCode { get; set; }
+        public string? LanguageCode { get => _explicitNullValueLanguageCode; set { _explicitNullValueLanguageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LanguageCode"); else _explicitNullProperties?.Remove("LanguageCode"); } }
+        private string? _explicitNullValueLanguageCode = default!;
 #nullable restore
 #else
-        public string LanguageCode { get; set; }
+        public string LanguageCode { get => _explicitNullValueLanguageCode; set { _explicitNullValueLanguageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LanguageCode"); else _explicitNullProperties?.Remove("LanguageCode"); } }
+        private string _explicitNullValueLanguageCode = default!;
 #endif
         /// <summary>Instructs the Speech Recognition service to automatically redact PII from all transcripts media made on this service. The auto_redaction flag must be enabled, results in error otherwise.</summary>
-        public bool? MediaRedaction { get; set; }
+        public bool? MediaRedaction { get => _explicitNullValueMediaRedaction; set { _explicitNullValueMediaRedaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MediaRedaction"); else _explicitNullProperties?.Remove("MediaRedaction"); } }
+        private bool? _explicitNullValueMediaRedaction = default!;
         /// <summary>Provides a unique and addressable name to be assigned to this Service, assigned by the developer, to be optionally used in addition to SID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniqueName { get; set; }
+        public string? UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string? _explicitNullValueUniqueName = default!;
 #nullable restore
 #else
-        public string UniqueName { get; set; }
+        public string UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string _explicitNullValueUniqueName = default!;
 #endif
         /// <summary>The HTTP method for the Webhook. One of `GET` or `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumHttpMethod? WebhookHttpMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumHttpMethod? WebhookHttpMethod { get => _explicitNullValueWebhookHttpMethod; set { _explicitNullValueWebhookHttpMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookHttpMethod"); else _explicitNullProperties?.Remove("WebhookHttpMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumHttpMethod? _explicitNullValueWebhookHttpMethod = default!;
         /// <summary>The URL Twilio will request when executing the Webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhookUrl { get; set; }
+        public string? WebhookUrl { get => _explicitNullValueWebhookUrl; set { _explicitNullValueWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookUrl"); else _explicitNullProperties?.Remove("WebhookUrl"); } }
+        private string? _explicitNullValueWebhookUrl = default!;
 #nullable restore
 #else
-        public string WebhookUrl { get; set; }
+        public string WebhookUrl { get => _explicitNullValueWebhookUrl; set { _explicitNullValueWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookUrl"); else _explicitNullProperties?.Remove("WebhookUrl"); } }
+        private string _explicitNullValueWebhookUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2CreateServiceXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -79,7 +111,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2CreateServiceXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2CreateServiceXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioIntelligenceV2CreateServiceXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +150,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("UniqueName", UniqueName);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumHttpMethod>("WebhookHttpMethod", WebhookHttpMethod);
             writer.WriteStringValue("WebhookUrl", WebhookUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,90 +11,134 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TaskrouterV1WorkspaceTaskQueueTaskQueueRealTimeStatistics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("activity_statistics") is { } nullNodeActivityStatistics && nullNodeActivityStatistics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityStatistics = null;
+            if (parseNode.GetChildNode("longest_relative_task_age_in_queue") is { } nullNodeLongestRelativeTaskAgeInQueue && nullNodeLongestRelativeTaskAgeInQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongestRelativeTaskAgeInQueue = null;
+            if (parseNode.GetChildNode("longest_relative_task_sid_in_queue") is { } nullNodeLongestRelativeTaskSidInQueue && nullNodeLongestRelativeTaskSidInQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongestRelativeTaskSidInQueue = null;
+            if (parseNode.GetChildNode("longest_task_waiting_age") is { } nullNodeLongestTaskWaitingAge && nullNodeLongestTaskWaitingAge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongestTaskWaitingAge = null;
+            if (parseNode.GetChildNode("longest_task_waiting_sid") is { } nullNodeLongestTaskWaitingSid && nullNodeLongestTaskWaitingSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongestTaskWaitingSid = null;
+            if (parseNode.GetChildNode("task_queue_sid") is { } nullNodeTaskQueueSid && nullNodeTaskQueueSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskQueueSid = null;
+            if (parseNode.GetChildNode("tasks_by_priority") is { } nullNodeTasksByPriority && nullNodeTasksByPriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TasksByPriority = null;
+            if (parseNode.GetChildNode("tasks_by_status") is { } nullNodeTasksByStatus && nullNodeTasksByStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TasksByStatus = null;
+            if (parseNode.GetChildNode("total_available_workers") is { } nullNodeTotalAvailableWorkers && nullNodeTotalAvailableWorkers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalAvailableWorkers = null;
+            if (parseNode.GetChildNode("total_eligible_workers") is { } nullNodeTotalEligibleWorkers && nullNodeTotalEligibleWorkers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalEligibleWorkers = null;
+            if (parseNode.GetChildNode("total_tasks") is { } nullNodeTotalTasks && nullNodeTotalTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTasks = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("workspace_sid") is { } nullNodeWorkspaceSid && nullNodeWorkspaceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkspaceSid = null;
+        }
+
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the TaskQueue resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get; set; }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get; set; }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>The number of current Workers by Activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ActivityStatistics { get; set; }
+        public UntypedNode? ActivityStatistics { get => _explicitNullValueActivityStatistics; set { _explicitNullValueActivityStatistics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activity_statistics"); else _explicitNullProperties?.Remove("activity_statistics"); } }
+        private UntypedNode? _explicitNullValueActivityStatistics = default!;
 #nullable restore
 #else
-        public UntypedNode ActivityStatistics { get; set; }
+        public UntypedNode ActivityStatistics { get => _explicitNullValueActivityStatistics; set { _explicitNullValueActivityStatistics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activity_statistics"); else _explicitNullProperties?.Remove("activity_statistics"); } }
+        private UntypedNode _explicitNullValueActivityStatistics = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The relative age in the TaskQueue for the longest waiting Task. Calculation is based on the time when the Task entered the TaskQueue.</summary>
-        public int? LongestRelativeTaskAgeInQueue { get; set; }
+        public int? LongestRelativeTaskAgeInQueue { get => _explicitNullValueLongestRelativeTaskAgeInQueue; set { _explicitNullValueLongestRelativeTaskAgeInQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longest_relative_task_age_in_queue"); else _explicitNullProperties?.Remove("longest_relative_task_age_in_queue"); } }
+        private int? _explicitNullValueLongestRelativeTaskAgeInQueue = default!;
         /// <summary>The Task SID of the Task waiting in the TaskQueue the longest. Calculation is based on the time when the Task entered the TaskQueue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LongestRelativeTaskSidInQueue { get; set; }
+        public string? LongestRelativeTaskSidInQueue { get => _explicitNullValueLongestRelativeTaskSidInQueue; set { _explicitNullValueLongestRelativeTaskSidInQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longest_relative_task_sid_in_queue"); else _explicitNullProperties?.Remove("longest_relative_task_sid_in_queue"); } }
+        private string? _explicitNullValueLongestRelativeTaskSidInQueue = default!;
 #nullable restore
 #else
-        public string LongestRelativeTaskSidInQueue { get; set; }
+        public string LongestRelativeTaskSidInQueue { get => _explicitNullValueLongestRelativeTaskSidInQueue; set { _explicitNullValueLongestRelativeTaskSidInQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longest_relative_task_sid_in_queue"); else _explicitNullProperties?.Remove("longest_relative_task_sid_in_queue"); } }
+        private string _explicitNullValueLongestRelativeTaskSidInQueue = default!;
 #endif
         /// <summary>The age of the longest waiting Task.</summary>
-        public int? LongestTaskWaitingAge { get; set; }
+        public int? LongestTaskWaitingAge { get => _explicitNullValueLongestTaskWaitingAge; set { _explicitNullValueLongestTaskWaitingAge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longest_task_waiting_age"); else _explicitNullProperties?.Remove("longest_task_waiting_age"); } }
+        private int? _explicitNullValueLongestTaskWaitingAge = default!;
         /// <summary>The SID of the longest waiting Task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LongestTaskWaitingSid { get; set; }
+        public string? LongestTaskWaitingSid { get => _explicitNullValueLongestTaskWaitingSid; set { _explicitNullValueLongestTaskWaitingSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longest_task_waiting_sid"); else _explicitNullProperties?.Remove("longest_task_waiting_sid"); } }
+        private string? _explicitNullValueLongestTaskWaitingSid = default!;
 #nullable restore
 #else
-        public string LongestTaskWaitingSid { get; set; }
+        public string LongestTaskWaitingSid { get => _explicitNullValueLongestTaskWaitingSid; set { _explicitNullValueLongestTaskWaitingSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longest_task_waiting_sid"); else _explicitNullProperties?.Remove("longest_task_waiting_sid"); } }
+        private string _explicitNullValueLongestTaskWaitingSid = default!;
 #endif
         /// <summary>The SID of the TaskQueue from which these statistics were calculated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskQueueSid { get; set; }
+        public string? TaskQueueSid { get => _explicitNullValueTaskQueueSid; set { _explicitNullValueTaskQueueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_queue_sid"); else _explicitNullProperties?.Remove("task_queue_sid"); } }
+        private string? _explicitNullValueTaskQueueSid = default!;
 #nullable restore
 #else
-        public string TaskQueueSid { get; set; }
+        public string TaskQueueSid { get => _explicitNullValueTaskQueueSid; set { _explicitNullValueTaskQueueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_queue_sid"); else _explicitNullProperties?.Remove("task_queue_sid"); } }
+        private string _explicitNullValueTaskQueueSid = default!;
 #endif
         /// <summary>The number of Tasks by priority. For example: `{&quot;0&quot;: &quot;10&quot;, &quot;99&quot;: &quot;5&quot;}` shows 10 Tasks at priority 0 and 5 at priority 99.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TasksByPriority { get; set; }
+        public UntypedNode? TasksByPriority { get => _explicitNullValueTasksByPriority; set { _explicitNullValueTasksByPriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks_by_priority"); else _explicitNullProperties?.Remove("tasks_by_priority"); } }
+        private UntypedNode? _explicitNullValueTasksByPriority = default!;
 #nullable restore
 #else
-        public UntypedNode TasksByPriority { get; set; }
+        public UntypedNode TasksByPriority { get => _explicitNullValueTasksByPriority; set { _explicitNullValueTasksByPriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks_by_priority"); else _explicitNullProperties?.Remove("tasks_by_priority"); } }
+        private UntypedNode _explicitNullValueTasksByPriority = default!;
 #endif
         /// <summary>The number of Tasks by their current status. For example: `{&quot;pending&quot;: &quot;1&quot;, &quot;reserved&quot;: &quot;3&quot;, &quot;assigned&quot;: &quot;2&quot;, &quot;completed&quot;: &quot;5&quot;}`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TasksByStatus { get; set; }
+        public UntypedNode? TasksByStatus { get => _explicitNullValueTasksByStatus; set { _explicitNullValueTasksByStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks_by_status"); else _explicitNullProperties?.Remove("tasks_by_status"); } }
+        private UntypedNode? _explicitNullValueTasksByStatus = default!;
 #nullable restore
 #else
-        public UntypedNode TasksByStatus { get; set; }
+        public UntypedNode TasksByStatus { get => _explicitNullValueTasksByStatus; set { _explicitNullValueTasksByStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks_by_status"); else _explicitNullProperties?.Remove("tasks_by_status"); } }
+        private UntypedNode _explicitNullValueTasksByStatus = default!;
 #endif
         /// <summary>The total number of Workers in the TaskQueue with an `available` status. Workers with an `available` status may already have active interactions or may have none.</summary>
-        public int? TotalAvailableWorkers { get; set; }
+        public int? TotalAvailableWorkers { get => _explicitNullValueTotalAvailableWorkers; set { _explicitNullValueTotalAvailableWorkers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_available_workers"); else _explicitNullProperties?.Remove("total_available_workers"); } }
+        private int? _explicitNullValueTotalAvailableWorkers = default!;
         /// <summary>The total number of Workers eligible for Tasks in the TaskQueue, independent of their Activity state.</summary>
-        public int? TotalEligibleWorkers { get; set; }
+        public int? TotalEligibleWorkers { get => _explicitNullValueTotalEligibleWorkers; set { _explicitNullValueTotalEligibleWorkers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_eligible_workers"); else _explicitNullProperties?.Remove("total_eligible_workers"); } }
+        private int? _explicitNullValueTotalEligibleWorkers = default!;
         /// <summary>The total number of Tasks.</summary>
-        public int? TotalTasks { get; set; }
+        public int? TotalTasks { get => _explicitNullValueTotalTasks; set { _explicitNullValueTotalTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_tasks"); else _explicitNullProperties?.Remove("total_tasks"); } }
+        private int? _explicitNullValueTotalTasks = default!;
         /// <summary>The absolute URL of the TaskQueue statistics resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>The SID of the Workspace that contains the TaskQueue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkspaceSid { get; set; }
+        public string? WorkspaceSid { get => _explicitNullValueWorkspaceSid; set { _explicitNullValueWorkspaceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace_sid"); else _explicitNullProperties?.Remove("workspace_sid"); } }
+        private string? _explicitNullValueWorkspaceSid = default!;
 #nullable restore
 #else
-        public string WorkspaceSid { get; set; }
+        public string WorkspaceSid { get => _explicitNullValueWorkspaceSid; set { _explicitNullValueWorkspaceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace_sid"); else _explicitNullProperties?.Remove("workspace_sid"); } }
+        private string _explicitNullValueWorkspaceSid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueRealTimeStatistics"/> and sets the default values.
@@ -116,7 +160,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueRealTimeStatistics CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueRealTimeStatistics();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceTaskQueueTaskQueueRealTimeStatistics(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -163,6 +207,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("total_tasks", TotalTasks);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("workspace_sid", WorkspaceSid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

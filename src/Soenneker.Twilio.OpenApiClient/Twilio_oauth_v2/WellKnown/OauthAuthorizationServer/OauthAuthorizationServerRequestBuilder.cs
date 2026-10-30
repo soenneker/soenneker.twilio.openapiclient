@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_oauth_v2.WellKnown.OauthAuthoriz
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200Response>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns RFC 8414 Authorization Server Metadata for oauth.twilio.com

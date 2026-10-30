@@ -11,52 +11,78 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioTaskrouterV1UpdateWorkspaceXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DefaultActivitySid") is { } nullNodeDefaultActivitySid && nullNodeDefaultActivitySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultActivitySid = null;
+            if (parseNode.GetChildNode("EventCallbackUrl") is { } nullNodeEventCallbackUrl && nullNodeEventCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventCallbackUrl = null;
+            if (parseNode.GetChildNode("EventsFilter") is { } nullNodeEventsFilter && nullNodeEventsFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventsFilter = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("MultiTaskEnabled") is { } nullNodeMultiTaskEnabled && nullNodeMultiTaskEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiTaskEnabled = null;
+            if (parseNode.GetChildNode("PrioritizeQueueOrder") is { } nullNodePrioritizeQueueOrder && nullNodePrioritizeQueueOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrioritizeQueueOrder = null;
+            if (parseNode.GetChildNode("TimeoutActivitySid") is { } nullNodeTimeoutActivitySid && nullNodeTimeoutActivitySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutActivitySid = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The SID of the Activity that will be used when new Workers are created in the Workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultActivitySid { get; set; }
+        public string? DefaultActivitySid { get => _explicitNullValueDefaultActivitySid; set { _explicitNullValueDefaultActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultActivitySid"); else _explicitNullProperties?.Remove("DefaultActivitySid"); } }
+        private string? _explicitNullValueDefaultActivitySid = default!;
 #nullable restore
 #else
-        public string DefaultActivitySid { get; set; }
+        public string DefaultActivitySid { get => _explicitNullValueDefaultActivitySid; set { _explicitNullValueDefaultActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultActivitySid"); else _explicitNullProperties?.Remove("DefaultActivitySid"); } }
+        private string _explicitNullValueDefaultActivitySid = default!;
 #endif
         /// <summary>The URL we should call when an event occurs. See [Workspace Events](https://www.twilio.com/docs/taskrouter/api/event) for more information. This parameter supports Twilio&apos;s [Webhooks (HTTP callbacks) Connection Overrides](https://www.twilio.com/docs/usage/webhooks/webhooks-connection-overrides).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventCallbackUrl { get; set; }
+        public string? EventCallbackUrl { get => _explicitNullValueEventCallbackUrl; set { _explicitNullValueEventCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventCallbackUrl"); else _explicitNullProperties?.Remove("EventCallbackUrl"); } }
+        private string? _explicitNullValueEventCallbackUrl = default!;
 #nullable restore
 #else
-        public string EventCallbackUrl { get; set; }
+        public string EventCallbackUrl { get => _explicitNullValueEventCallbackUrl; set { _explicitNullValueEventCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventCallbackUrl"); else _explicitNullProperties?.Remove("EventCallbackUrl"); } }
+        private string _explicitNullValueEventCallbackUrl = default!;
 #endif
         /// <summary>The list of Workspace events for which to call event_callback_url. For example if `EventsFilter=task.created,task.canceled,worker.activity.update`, then TaskRouter will call event_callback_url only when a task is created, canceled, or a Worker activity is updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventsFilter { get; set; }
+        public string? EventsFilter { get => _explicitNullValueEventsFilter; set { _explicitNullValueEventsFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventsFilter"); else _explicitNullProperties?.Remove("EventsFilter"); } }
+        private string? _explicitNullValueEventsFilter = default!;
 #nullable restore
 #else
-        public string EventsFilter { get; set; }
+        public string EventsFilter { get => _explicitNullValueEventsFilter; set { _explicitNullValueEventsFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EventsFilter"); else _explicitNullProperties?.Remove("EventsFilter"); } }
+        private string _explicitNullValueEventsFilter = default!;
 #endif
         /// <summary>A descriptive string that you create to describe the Workspace resource. For example: `Sales Call Center` or `Customer Support Team`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>Whether to enable multi-tasking. Can be: `true` to enable multi-tasking, or `false` to disable it. However, all workspaces should be maintained as multi-tasking. There is no default when omitting this parameter. A multi-tasking Workspace can&apos;t be updated to single-tasking unless it is not a Flex Project and another (legacy) single-tasking Workspace exists. Multi-tasking allows Workers to handle multiple Tasks simultaneously. In multi-tasking mode, each Worker can receive parallel reservations up to the per-channel maximums defined in the Workers section. In single-tasking mode (legacy mode), each Worker will only receive a new reservation when the previous task is completed. Learn more at [Multitasking](https://www.twilio.com/docs/taskrouter/multitasking).</summary>
-        public bool? MultiTaskEnabled { get; set; }
+        public bool? MultiTaskEnabled { get => _explicitNullValueMultiTaskEnabled; set { _explicitNullValueMultiTaskEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MultiTaskEnabled"); else _explicitNullProperties?.Remove("MultiTaskEnabled"); } }
+        private bool? _explicitNullValueMultiTaskEnabled = default!;
         /// <summary>The type of TaskQueue to prioritize when Workers are receiving Tasks from both types of TaskQueues. Can be: `LIFO` or `FIFO` and the default is `FIFO`. For more information, see [Queue Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder? PrioritizeQueueOrder { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder? PrioritizeQueueOrder { get => _explicitNullValuePrioritizeQueueOrder; set { _explicitNullValuePrioritizeQueueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrioritizeQueueOrder"); else _explicitNullProperties?.Remove("PrioritizeQueueOrder"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder? _explicitNullValuePrioritizeQueueOrder = default!;
         /// <summary>The SID of the Activity that will be assigned to a Worker when a Task reservation times out without a response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeoutActivitySid { get; set; }
+        public string? TimeoutActivitySid { get => _explicitNullValueTimeoutActivitySid; set { _explicitNullValueTimeoutActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TimeoutActivitySid"); else _explicitNullProperties?.Remove("TimeoutActivitySid"); } }
+        private string? _explicitNullValueTimeoutActivitySid = default!;
 #nullable restore
 #else
-        public string TimeoutActivitySid { get; set; }
+        public string TimeoutActivitySid { get => _explicitNullValueTimeoutActivitySid; set { _explicitNullValueTimeoutActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TimeoutActivitySid"); else _explicitNullProperties?.Remove("TimeoutActivitySid"); } }
+        private string _explicitNullValueTimeoutActivitySid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateWorkspaceXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -73,7 +99,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateWorkspaceXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateWorkspaceXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1UpdateWorkspaceXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +132,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("MultiTaskEnabled", MultiTaskEnabled);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.WorkspaceEnumQueueOrder>("PrioritizeQueueOrder", PrioritizeQueueOrder);
             writer.WriteStringValue("TimeoutActivitySid", TimeoutActivitySid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

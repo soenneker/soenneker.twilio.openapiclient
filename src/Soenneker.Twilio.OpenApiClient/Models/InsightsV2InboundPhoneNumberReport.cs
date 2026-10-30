@@ -11,31 +11,50 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class InsightsV2InboundPhoneNumberReport : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("call_answer_score") is { } nullNodeCallAnswerScore && nullNodeCallAnswerScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallAnswerScore = null;
+            if (parseNode.GetChildNode("call_state_percentage") is { } nullNodeCallStatePercentage && nullNodeCallStatePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallStatePercentage = null;
+            if (parseNode.GetChildNode("handle") is { } nullNodeHandle && nullNodeHandle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Handle = null;
+            if (parseNode.GetChildNode("silent_calls_percentage") is { } nullNodeSilentCallsPercentage && nullNodeSilentCallsPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SilentCallsPercentage = null;
+            if (parseNode.GetChildNode("total_calls") is { } nullNodeTotalCalls && nullNodeTotalCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCalls = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The call answer score measures customers behavior to the delivered calls.The score is a value between 0 and 100, where 100 indicates that all calls were successfully answered.</summary>
-        public float? CallAnswerScore { get; set; }
+        public float? CallAnswerScore { get => _explicitNullValueCallAnswerScore; set { _explicitNullValueCallAnswerScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_answer_score"); else _explicitNullProperties?.Remove("call_answer_score"); } }
+        private float? _explicitNullValueCallAnswerScore = default!;
         /// <summary>Percentage of calls made in each state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2InboundPhoneNumberReportCallStatePercentage? CallStatePercentage { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2InboundPhoneNumberReportCallStatePercentage? CallStatePercentage { get => _explicitNullValueCallStatePercentage; set { _explicitNullValueCallStatePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_state_percentage"); else _explicitNullProperties?.Remove("call_state_percentage"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2InboundPhoneNumberReportCallStatePercentage? _explicitNullValueCallStatePercentage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2InboundPhoneNumberReportCallStatePercentage CallStatePercentage { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2InboundPhoneNumberReportCallStatePercentage CallStatePercentage { get => _explicitNullValueCallStatePercentage; set { _explicitNullValueCallStatePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_state_percentage"); else _explicitNullProperties?.Remove("call_state_percentage"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2InboundPhoneNumberReportCallStatePercentage _explicitNullValueCallStatePercentage = default!;
 #endif
         /// <summary>Inbound phone number handle represented in the report.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Handle { get; set; }
+        public string? Handle { get => _explicitNullValueHandle; set { _explicitNullValueHandle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handle"); else _explicitNullProperties?.Remove("handle"); } }
+        private string? _explicitNullValueHandle = default!;
 #nullable restore
 #else
-        public string Handle { get; set; }
+        public string Handle { get => _explicitNullValueHandle; set { _explicitNullValueHandle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handle"); else _explicitNullProperties?.Remove("handle"); } }
+        private string _explicitNullValueHandle = default!;
 #endif
         /// <summary>Percentage of inbound calls with silence tags over total outbound calls. A silent tag is indicative of a connectivity issue or muted audio.</summary>
-        public float? SilentCallsPercentage { get; set; }
+        public float? SilentCallsPercentage { get => _explicitNullValueSilentCallsPercentage; set { _explicitNullValueSilentCallsPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("silent_calls_percentage"); else _explicitNullProperties?.Remove("silent_calls_percentage"); } }
+        private float? _explicitNullValueSilentCallsPercentage = default!;
         /// <summary>Total number of calls made with the given handle during the report period.</summary>
-        public int? TotalCalls { get; set; }
+        public int? TotalCalls { get => _explicitNullValueTotalCalls; set { _explicitNullValueTotalCalls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_calls"); else _explicitNullProperties?.Remove("total_calls"); } }
+        private int? _explicitNullValueTotalCalls = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2InboundPhoneNumberReport"/> and sets the default values.
         /// </summary>
@@ -51,7 +70,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2InboundPhoneNumberReport CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2InboundPhoneNumberReport();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2InboundPhoneNumberReport(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +99,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("handle", Handle);
             writer.WriteFloatValue("silent_calls_percentage", SilentCallsPercentage);
             writer.WriteIntValue("total_calls", TotalCalls);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

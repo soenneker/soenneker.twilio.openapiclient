@@ -61,6 +61,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.Conv
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3FetchCustomFieldMapping500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -102,6 +104,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v3.V3.ControlPlane.Conv
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3PatchCustomFieldMapping429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3PatchCustomFieldMapping500Response.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV3PatchCustomFieldMapping503Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.CustomFieldMappingResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

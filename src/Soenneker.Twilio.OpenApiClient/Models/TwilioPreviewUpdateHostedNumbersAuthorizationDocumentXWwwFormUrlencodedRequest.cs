@@ -11,59 +11,86 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioPreviewUpdateHostedNumbersAuthorizationDocumentXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AddressSid") is { } nullNodeAddressSid && nullNodeAddressSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressSid = null;
+            if (parseNode.GetChildNode("CcEmails") is { } nullNodeCcEmails && nullNodeCcEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CcEmails = null;
+            if (parseNode.GetChildNode("ContactPhoneNumber") is { } nullNodeContactPhoneNumber && nullNodeContactPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactPhoneNumber = null;
+            if (parseNode.GetChildNode("ContactTitle") is { } nullNodeContactTitle && nullNodeContactTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactTitle = null;
+            if (parseNode.GetChildNode("Email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("HostedNumberOrderSids") is { } nullNodeHostedNumberOrderSids && nullNodeHostedNumberOrderSids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedNumberOrderSids = null;
+            if (parseNode.GetChildNode("Status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A 34 character string that uniquely identifies the Address resource that is associated with this AuthorizationDocument.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressSid { get; set; }
+        public string? AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressSid"); else _explicitNullProperties?.Remove("AddressSid"); } }
+        private string? _explicitNullValueAddressSid = default!;
 #nullable restore
 #else
-        public string AddressSid { get; set; }
+        public string AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressSid"); else _explicitNullProperties?.Remove("AddressSid"); } }
+        private string _explicitNullValueAddressSid = default!;
 #endif
         /// <summary>Email recipients who will be informed when an Authorization Document has been sent and signed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CcEmails { get; set; }
+        public List<string>? CcEmails { get => _explicitNullValueCcEmails; set { _explicitNullValueCcEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CcEmails"); else _explicitNullProperties?.Remove("CcEmails"); } }
+        private List<string>? _explicitNullValueCcEmails = default!;
 #nullable restore
 #else
-        public List<string> CcEmails { get; set; }
+        public List<string> CcEmails { get => _explicitNullValueCcEmails; set { _explicitNullValueCcEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CcEmails"); else _explicitNullProperties?.Remove("CcEmails"); } }
+        private List<string> _explicitNullValueCcEmails = default!;
 #endif
         /// <summary>The contact phone number of the person authorized to sign the Authorization Document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactPhoneNumber { get; set; }
+        public string? ContactPhoneNumber { get => _explicitNullValueContactPhoneNumber; set { _explicitNullValueContactPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactPhoneNumber"); else _explicitNullProperties?.Remove("ContactPhoneNumber"); } }
+        private string? _explicitNullValueContactPhoneNumber = default!;
 #nullable restore
 #else
-        public string ContactPhoneNumber { get; set; }
+        public string ContactPhoneNumber { get => _explicitNullValueContactPhoneNumber; set { _explicitNullValueContactPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactPhoneNumber"); else _explicitNullProperties?.Remove("ContactPhoneNumber"); } }
+        private string _explicitNullValueContactPhoneNumber = default!;
 #endif
         /// <summary>The title of the person authorized to sign the Authorization Document for this phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactTitle { get; set; }
+        public string? ContactTitle { get => _explicitNullValueContactTitle; set { _explicitNullValueContactTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactTitle"); else _explicitNullProperties?.Remove("ContactTitle"); } }
+        private string? _explicitNullValueContactTitle = default!;
 #nullable restore
 #else
-        public string ContactTitle { get; set; }
+        public string ContactTitle { get => _explicitNullValueContactTitle; set { _explicitNullValueContactTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactTitle"); else _explicitNullProperties?.Remove("ContactTitle"); } }
+        private string _explicitNullValueContactTitle = default!;
 #endif
         /// <summary>Email that this AuthorizationDocument will be sent to for signing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Email"); else _explicitNullProperties?.Remove("Email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Email"); else _explicitNullProperties?.Remove("Email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>A list of HostedNumberOrder sids that this AuthorizationDocument will authorize for hosting phone number capabilities on Twilio&apos;s platform.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? HostedNumberOrderSids { get; set; }
+        public List<string>? HostedNumberOrderSids { get => _explicitNullValueHostedNumberOrderSids; set { _explicitNullValueHostedNumberOrderSids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HostedNumberOrderSids"); else _explicitNullProperties?.Remove("HostedNumberOrderSids"); } }
+        private List<string>? _explicitNullValueHostedNumberOrderSids = default!;
 #nullable restore
 #else
-        public List<string> HostedNumberOrderSids { get; set; }
+        public List<string> HostedNumberOrderSids { get => _explicitNullValueHostedNumberOrderSids; set { _explicitNullValueHostedNumberOrderSids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HostedNumberOrderSids"); else _explicitNullProperties?.Remove("HostedNumberOrderSids"); } }
+        private List<string> _explicitNullValueHostedNumberOrderSids = default!;
 #endif
         /// <summary>Status of an instance resource. It can hold one of the values: 1. opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the section entitled [Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values) for more information on each of these statuses.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewAuthorizationDocumentEnumStatus? Status { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewAuthorizationDocumentEnumStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Status"); else _explicitNullProperties?.Remove("Status"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewAuthorizationDocumentEnumStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewUpdateHostedNumbersAuthorizationDocumentXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -79,7 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewUpdateHostedNumbersAuthorizationDocumentXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewUpdateHostedNumbersAuthorizationDocumentXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewUpdateHostedNumbersAuthorizationDocumentXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +139,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("Email", Email);
             writer.WriteCollectionOfPrimitiveValues<string>("HostedNumberOrderSids", HostedNumberOrderSids);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewAuthorizationDocumentEnumStatus>("Status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

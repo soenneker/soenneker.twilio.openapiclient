@@ -11,57 +11,92 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioWirelessV1CreateRatePlanXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DataEnabled") is { } nullNodeDataEnabled && nullNodeDataEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataEnabled = null;
+            if (parseNode.GetChildNode("DataLimit") is { } nullNodeDataLimit && nullNodeDataLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataLimit = null;
+            if (parseNode.GetChildNode("DataLimitStrategy") is { } nullNodeDataLimitStrategy && nullNodeDataLimitStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataLimitStrategy = null;
+            if (parseNode.GetChildNode("DataMetering") is { } nullNodeDataMetering && nullNodeDataMetering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataMetering = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("InternationalRoaming") is { } nullNodeInternationalRoaming && nullNodeInternationalRoaming.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternationalRoaming = null;
+            if (parseNode.GetChildNode("InternationalRoamingDataLimit") is { } nullNodeInternationalRoamingDataLimit && nullNodeInternationalRoamingDataLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternationalRoamingDataLimit = null;
+            if (parseNode.GetChildNode("MessagingEnabled") is { } nullNodeMessagingEnabled && nullNodeMessagingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingEnabled = null;
+            if (parseNode.GetChildNode("NationalRoamingDataLimit") is { } nullNodeNationalRoamingDataLimit && nullNodeNationalRoamingDataLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NationalRoamingDataLimit = null;
+            if (parseNode.GetChildNode("NationalRoamingEnabled") is { } nullNodeNationalRoamingEnabled && nullNodeNationalRoamingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NationalRoamingEnabled = null;
+            if (parseNode.GetChildNode("UniqueName") is { } nullNodeUniqueName && nullNodeUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueName = null;
+            if (parseNode.GetChildNode("VoiceEnabled") is { } nullNodeVoiceEnabled && nullNodeVoiceEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether SIMs can use GPRS/3G/4G/LTE data connectivity.</summary>
-        public bool? DataEnabled { get; set; }
+        public bool? DataEnabled { get => _explicitNullValueDataEnabled; set { _explicitNullValueDataEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataEnabled"); else _explicitNullProperties?.Remove("DataEnabled"); } }
+        private bool? _explicitNullValueDataEnabled = default!;
         /// <summary>The total data usage (download and upload combined) in Megabytes that the Network allows during one month on the home network (T-Mobile USA). The metering period begins the day of activation and ends on the same day in the following month. Can be up to 2TB and the default value is `1000`.</summary>
-        public int? DataLimit { get; set; }
+        public int? DataLimit { get => _explicitNullValueDataLimit; set { _explicitNullValueDataLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataLimit"); else _explicitNullProperties?.Remove("DataLimit"); } }
+        private int? _explicitNullValueDataLimit = default!;
         /// <summary>The way the home network (T-Mobile USA) will behave after a SIM&apos;s usage exceeds its `data_limit`. Can be either `block` or `throttle`. Default is `block`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.RatePlanEnumDataLimitStrategy? DataLimitStrategy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.RatePlanEnumDataLimitStrategy? DataLimitStrategy { get => _explicitNullValueDataLimitStrategy; set { _explicitNullValueDataLimitStrategy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataLimitStrategy"); else _explicitNullProperties?.Remove("DataLimitStrategy"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.RatePlanEnumDataLimitStrategy? _explicitNullValueDataLimitStrategy = default!;
         /// <summary>The model used to meter data usage. Can be: `payg` and `quota-1`, `quota-10`, and `quota-50`. Learn more about the available [data metering models](https://www.twilio.com/docs/iot/wireless/api/rateplan-resource#payg-vs-quota-data-plans).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DataMetering { get; set; }
+        public string? DataMetering { get => _explicitNullValueDataMetering; set { _explicitNullValueDataMetering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataMetering"); else _explicitNullProperties?.Remove("DataMetering"); } }
+        private string? _explicitNullValueDataMetering = default!;
 #nullable restore
 #else
-        public string DataMetering { get; set; }
+        public string DataMetering { get => _explicitNullValueDataMetering; set { _explicitNullValueDataMetering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataMetering"); else _explicitNullProperties?.Remove("DataMetering"); } }
+        private string _explicitNullValueDataMetering = default!;
 #endif
         /// <summary>A descriptive string that you create to describe the resource. It does not have to be unique.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The list of services that SIMs capable of using GPRS/3G/4G/LTE data connectivity can use outside of the United States. Can contain: `data` and `messaging`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InternationalRoaming { get; set; }
+        public List<string>? InternationalRoaming { get => _explicitNullValueInternationalRoaming; set { _explicitNullValueInternationalRoaming = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InternationalRoaming"); else _explicitNullProperties?.Remove("InternationalRoaming"); } }
+        private List<string>? _explicitNullValueInternationalRoaming = default!;
 #nullable restore
 #else
-        public List<string> InternationalRoaming { get; set; }
+        public List<string> InternationalRoaming { get => _explicitNullValueInternationalRoaming; set { _explicitNullValueInternationalRoaming = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InternationalRoaming"); else _explicitNullProperties?.Remove("InternationalRoaming"); } }
+        private List<string> _explicitNullValueInternationalRoaming = default!;
 #endif
         /// <summary>The total data usage (download and upload combined) in Megabytes that the Network allows during one month when roaming outside the United States. Can be up to 2TB.</summary>
-        public int? InternationalRoamingDataLimit { get; set; }
+        public int? InternationalRoamingDataLimit { get => _explicitNullValueInternationalRoamingDataLimit; set { _explicitNullValueInternationalRoamingDataLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InternationalRoamingDataLimit"); else _explicitNullProperties?.Remove("InternationalRoamingDataLimit"); } }
+        private int? _explicitNullValueInternationalRoamingDataLimit = default!;
         /// <summary>Whether SIMs can make, send, and receive SMS using [Commands](https://www.twilio.com/docs/iot/wireless/api/command-resource).</summary>
-        public bool? MessagingEnabled { get; set; }
+        public bool? MessagingEnabled { get => _explicitNullValueMessagingEnabled; set { _explicitNullValueMessagingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingEnabled"); else _explicitNullProperties?.Remove("MessagingEnabled"); } }
+        private bool? _explicitNullValueMessagingEnabled = default!;
         /// <summary>The total data usage (download and upload combined) in Megabytes that the Network allows during one month on non-home networks in the United States. The metering period begins the day of activation and ends on the same day in the following month. Can be up to 2TB. See [national roaming](https://www.twilio.com/docs/iot/wireless/api/rateplan-resource#national-roaming) for more info.</summary>
-        public int? NationalRoamingDataLimit { get; set; }
+        public int? NationalRoamingDataLimit { get => _explicitNullValueNationalRoamingDataLimit; set { _explicitNullValueNationalRoamingDataLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NationalRoamingDataLimit"); else _explicitNullProperties?.Remove("NationalRoamingDataLimit"); } }
+        private int? _explicitNullValueNationalRoamingDataLimit = default!;
         /// <summary>Whether SIMs can roam on networks other than the home network (T-Mobile USA) in the United States. See [national roaming](https://www.twilio.com/docs/iot/wireless/api/rateplan-resource#national-roaming).</summary>
-        public bool? NationalRoamingEnabled { get; set; }
+        public bool? NationalRoamingEnabled { get => _explicitNullValueNationalRoamingEnabled; set { _explicitNullValueNationalRoamingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NationalRoamingEnabled"); else _explicitNullProperties?.Remove("NationalRoamingEnabled"); } }
+        private bool? _explicitNullValueNationalRoamingEnabled = default!;
         /// <summary>An application-defined string that uniquely identifies the resource. It can be used in place of the resource&apos;s `sid` in the URL to address the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniqueName { get; set; }
+        public string? UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string? _explicitNullValueUniqueName = default!;
 #nullable restore
 #else
-        public string UniqueName { get; set; }
+        public string UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string _explicitNullValueUniqueName = default!;
 #endif
         /// <summary>Deprecated.</summary>
-        public bool? VoiceEnabled { get; set; }
+        public bool? VoiceEnabled { get => _explicitNullValueVoiceEnabled; set { _explicitNullValueVoiceEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoiceEnabled"); else _explicitNullProperties?.Remove("VoiceEnabled"); } }
+        private bool? _explicitNullValueVoiceEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1CreateRatePlanXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -77,7 +112,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1CreateRatePlanXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1CreateRatePlanXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioWirelessV1CreateRatePlanXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -120,6 +155,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("NationalRoamingEnabled", NationalRoamingEnabled);
             writer.WriteStringValue("UniqueName", UniqueName);
             writer.WriteBoolValue("VoiceEnabled", VoiceEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

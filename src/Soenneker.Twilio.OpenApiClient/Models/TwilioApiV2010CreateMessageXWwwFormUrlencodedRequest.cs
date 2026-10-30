@@ -11,133 +11,204 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioApiV2010CreateMessageXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AddressRetention") is { } nullNodeAddressRetention && nullNodeAddressRetention.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressRetention = null;
+            if (parseNode.GetChildNode("ApplicationSid") is { } nullNodeApplicationSid && nullNodeApplicationSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationSid = null;
+            if (parseNode.GetChildNode("Attempt") is { } nullNodeAttempt && nullNodeAttempt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attempt = null;
+            if (parseNode.GetChildNode("Body") is { } nullNodeBody && nullNodeBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Body = null;
+            if (parseNode.GetChildNode("ContentRetention") is { } nullNodeContentRetention && nullNodeContentRetention.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentRetention = null;
+            if (parseNode.GetChildNode("ContentSid") is { } nullNodeContentSid && nullNodeContentSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentSid = null;
+            if (parseNode.GetChildNode("ContentVariables") is { } nullNodeContentVariables && nullNodeContentVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentVariables = null;
+            if (parseNode.GetChildNode("FallbackFrom") is { } nullNodeFallbackFrom && nullNodeFallbackFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FallbackFrom = null;
+            if (parseNode.GetChildNode("ForceDelivery") is { } nullNodeForceDelivery && nullNodeForceDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForceDelivery = null;
+            if (parseNode.GetChildNode("From") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
+            if (parseNode.GetChildNode("MaxPrice") is { } nullNodeMaxPrice && nullNodeMaxPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxPrice = null;
+            if (parseNode.GetChildNode("MediaUrl") is { } nullNodeMediaUrl && nullNodeMediaUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaUrl = null;
+            if (parseNode.GetChildNode("MessageIntent") is { } nullNodeMessageIntent && nullNodeMessageIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageIntent = null;
+            if (parseNode.GetChildNode("MessagingServiceSid") is { } nullNodeMessagingServiceSid && nullNodeMessagingServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingServiceSid = null;
+            if (parseNode.GetChildNode("PersistentAction") is { } nullNodePersistentAction && nullNodePersistentAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersistentAction = null;
+            if (parseNode.GetChildNode("ProvideFeedback") is { } nullNodeProvideFeedback && nullNodeProvideFeedback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProvideFeedback = null;
+            if (parseNode.GetChildNode("RiskCheck") is { } nullNodeRiskCheck && nullNodeRiskCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RiskCheck = null;
+            if (parseNode.GetChildNode("ScheduleType") is { } nullNodeScheduleType && nullNodeScheduleType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleType = null;
+            if (parseNode.GetChildNode("SendAsMms") is { } nullNodeSendAsMms && nullNodeSendAsMms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendAsMms = null;
+            if (parseNode.GetChildNode("SendAt") is { } nullNodeSendAt && nullNodeSendAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendAt = null;
+            if (parseNode.GetChildNode("ShortenUrls") is { } nullNodeShortenUrls && nullNodeShortenUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortenUrls = null;
+            if (parseNode.GetChildNode("SmartEncoded") is { } nullNodeSmartEncoded && nullNodeSmartEncoded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartEncoded = null;
+            if (parseNode.GetChildNode("StatusCallback") is { } nullNodeStatusCallback && nullNodeStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallback = null;
+            if (parseNode.GetChildNode("To") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
+            if (parseNode.GetChildNode("TrafficType") is { } nullNodeTrafficType && nullNodeTrafficType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrafficType = null;
+            if (parseNode.GetChildNode("ValidityPeriod") is { } nullNodeValidityPeriod && nullNodeValidityPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidityPeriod = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines if the address can be stored or obfuscated based on privacy settings</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumAddressRetention? AddressRetention { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumAddressRetention? AddressRetention { get => _explicitNullValueAddressRetention; set { _explicitNullValueAddressRetention = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressRetention"); else _explicitNullProperties?.Remove("AddressRetention"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumAddressRetention? _explicitNullValueAddressRetention = default!;
         /// <summary>The SID of the associated [TwiML Application](https://www.twilio.com/docs/usage/api/applications). [Message status callback requests](https://www.twilio.com/docs/sms/api/message-resource#twilios-request-to-the-statuscallback-url) are sent to the TwiML App&apos;s `message_status_callback` URL. Note that the `status_callback` parameter of a request takes priority over the `application_sid` parameter; if both are included `application_sid` is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApplicationSid { get; set; }
+        public string? ApplicationSid { get => _explicitNullValueApplicationSid; set { _explicitNullValueApplicationSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ApplicationSid"); else _explicitNullProperties?.Remove("ApplicationSid"); } }
+        private string? _explicitNullValueApplicationSid = default!;
 #nullable restore
 #else
-        public string ApplicationSid { get; set; }
+        public string ApplicationSid { get => _explicitNullValueApplicationSid; set { _explicitNullValueApplicationSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ApplicationSid"); else _explicitNullProperties?.Remove("ApplicationSid"); } }
+        private string _explicitNullValueApplicationSid = default!;
 #endif
         /// <summary>Total number of attempts made (including this request) to send the message regardless of the provider used</summary>
-        public int? Attempt { get; set; }
+        public int? Attempt { get => _explicitNullValueAttempt; set { _explicitNullValueAttempt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attempt"); else _explicitNullProperties?.Remove("Attempt"); } }
+        private int? _explicitNullValueAttempt = default!;
         /// <summary>The text content of the outgoing message. Can be up to 1,600 characters in length. SMS only: If the `body` contains more than 160 [GSM-7](https://www.twilio.com/docs/glossary/what-is-gsm-7-character-encoding) characters (or 70 [UCS-2](https://www.twilio.com/docs/glossary/what-is-ucs-2-character-encoding) characters), the message is segmented and charged accordingly. For long `body` text, consider using the [send_as_mms parameter](https://www.twilio.com/blog/mms-for-long-text-messages).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Body { get; set; }
+        public string? Body { get => _explicitNullValueBody; set { _explicitNullValueBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Body"); else _explicitNullProperties?.Remove("Body"); } }
+        private string? _explicitNullValueBody = default!;
 #nullable restore
 #else
-        public string Body { get; set; }
+        public string Body { get => _explicitNullValueBody; set { _explicitNullValueBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Body"); else _explicitNullProperties?.Remove("Body"); } }
+        private string _explicitNullValueBody = default!;
 #endif
         /// <summary>Determines if the message content can be stored or redacted based on privacy settings</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumContentRetention? ContentRetention { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumContentRetention? ContentRetention { get => _explicitNullValueContentRetention; set { _explicitNullValueContentRetention = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContentRetention"); else _explicitNullProperties?.Remove("ContentRetention"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumContentRetention? _explicitNullValueContentRetention = default!;
         /// <summary>For [Content Editor/API](https://www.twilio.com/docs/content) only: The SID of the Content Template to be used with the Message, e.g., `HXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`. If this parameter is not provided, a Content Template is not used. Find the SID in the Console on the Content Editor page. For Content API users, the SID is found in Twilio&apos;s response when [creating the Template](https://www.twilio.com/docs/content/content-api-resources#create-templates) or by [fetching your Templates](https://www.twilio.com/docs/content/content-api-resources#fetch-all-content-resources).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContentSid { get; set; }
+        public string? ContentSid { get => _explicitNullValueContentSid; set { _explicitNullValueContentSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContentSid"); else _explicitNullProperties?.Remove("ContentSid"); } }
+        private string? _explicitNullValueContentSid = default!;
 #nullable restore
 #else
-        public string ContentSid { get; set; }
+        public string ContentSid { get => _explicitNullValueContentSid; set { _explicitNullValueContentSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContentSid"); else _explicitNullProperties?.Remove("ContentSid"); } }
+        private string _explicitNullValueContentSid = default!;
 #endif
         /// <summary>For [Content Editor/API](https://www.twilio.com/docs/content) only: Key-value pairs of [Template variables](https://www.twilio.com/docs/content/using-variables-with-content-api) and their substitution values. `content_sid` parameter must also be provided. If values are not defined in the `content_variables` parameter, the [Template&apos;s default placeholder values](https://www.twilio.com/docs/content/content-api-resources#create-templates) are used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContentVariables { get; set; }
+        public string? ContentVariables { get => _explicitNullValueContentVariables; set { _explicitNullValueContentVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContentVariables"); else _explicitNullProperties?.Remove("ContentVariables"); } }
+        private string? _explicitNullValueContentVariables = default!;
 #nullable restore
 #else
-        public string ContentVariables { get; set; }
+        public string ContentVariables { get => _explicitNullValueContentVariables; set { _explicitNullValueContentVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContentVariables"); else _explicitNullProperties?.Remove("ContentVariables"); } }
+        private string _explicitNullValueContentVariables = default!;
 #endif
         /// <summary>A fallback SMS sender to use when the recipient cannot be reached over RCS. This parameter may only be used when also providing a [Messaging Service](https://twilio.com/docs/messaging/services) containing an RCS sender. The fallback SMS sender must be either a Twilio phone number (in [E.164](https://en.wikipedia.org/wiki/E.164) format), [alphanumeric sender ID](https://www.twilio.com/docs/sms/quickstart), or [short code](https://www.twilio.com/en-us/messaging/channels/sms/short-codes), hosted within Twilio and belong to the Account creating the Message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FallbackFrom { get; set; }
+        public string? FallbackFrom { get => _explicitNullValueFallbackFrom; set { _explicitNullValueFallbackFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FallbackFrom"); else _explicitNullProperties?.Remove("FallbackFrom"); } }
+        private string? _explicitNullValueFallbackFrom = default!;
 #nullable restore
 #else
-        public string FallbackFrom { get; set; }
+        public string FallbackFrom { get => _explicitNullValueFallbackFrom; set { _explicitNullValueFallbackFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FallbackFrom"); else _explicitNullProperties?.Remove("FallbackFrom"); } }
+        private string _explicitNullValueFallbackFrom = default!;
 #endif
         /// <summary>Reserved</summary>
-        public bool? ForceDelivery { get; set; }
+        public bool? ForceDelivery { get => _explicitNullValueForceDelivery; set { _explicitNullValueForceDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ForceDelivery"); else _explicitNullProperties?.Remove("ForceDelivery"); } }
+        private bool? _explicitNullValueForceDelivery = default!;
         /// <summary>The sender&apos;s Twilio phone number (in [E.164](https://en.wikipedia.org/wiki/E.164) format), [alphanumeric sender ID](https://www.twilio.com/docs/sms/quickstart), [Wireless SIM](https://www.twilio.com/docs/iot/wireless/programmable-wireless-send-machine-machine-sms-commands), [short code](https://www.twilio.com/en-us/messaging/channels/sms/short-codes), or [channel address](https://www.twilio.com/docs/messaging/channels) (e.g., `whatsapp:+15554449999`). The value of the `from` parameter must be a sender that is hosted within Twilio and belongs to the Account creating the Message. If you are using `messaging_service_sid`, this parameter can be empty (Twilio assigns a `from` value from the Messaging Service&apos;s Sender Pool) or you can provide a specific sender from your Sender Pool.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? From { get; set; }
+        public string? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("From"); else _explicitNullProperties?.Remove("From"); } }
+        private string? _explicitNullValueFrom = default!;
 #nullable restore
 #else
-        public string From { get; set; }
+        public string From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("From"); else _explicitNullProperties?.Remove("From"); } }
+        private string _explicitNullValueFrom = default!;
 #endif
         /// <summary>[OBSOLETE] This parameter will no longer have any effect as of 2024-06-03.</summary>
-        public double? MaxPrice { get; set; }
+        public double? MaxPrice { get => _explicitNullValueMaxPrice; set { _explicitNullValueMaxPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaxPrice"); else _explicitNullProperties?.Remove("MaxPrice"); } }
+        private double? _explicitNullValueMaxPrice = default!;
         /// <summary>The URL of media to include in the Message content. `jpeg`, `jpg`, `gif`, and `png` file types are fully supported by Twilio and content is formatted for delivery on destination devices. The media size limit is 5 MB for supported file types (`jpeg`, `jpg`, `png`, `gif`) and 500 KB for [other types](https://www.twilio.com/docs/messaging/guides/accepted-mime-types) of accepted media. To send more than one image in the message, provide multiple `media_url` parameters in the POST request. You can include up to ten `media_url` parameters per message. [International](https://support.twilio.com/hc/en-us/articles/223179808-Sending-and-receiving-MMS-messages) and [carrier](https://support.twilio.com/hc/en-us/articles/223133707-Is-MMS-supported-for-all-carriers-in-US-and-Canada-) limits apply.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MediaUrl { get; set; }
+        public List<string>? MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MediaUrl"); else _explicitNullProperties?.Remove("MediaUrl"); } }
+        private List<string>? _explicitNullValueMediaUrl = default!;
 #nullable restore
 #else
-        public List<string> MediaUrl { get; set; }
+        public List<string> MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MediaUrl"); else _explicitNullProperties?.Remove("MediaUrl"); } }
+        private List<string> _explicitNullValueMediaUrl = default!;
 #endif
         /// <summary>Specifies the purpose or use case of the outbound communication. This parameter is used by Twilio&apos;s [Traffic Shaping](https://www.twilio.com/docs/messaging/features/traffic-shaping) and [Compliance Toolkit](https://www.twilio.com/docs/messaging/features/compliance-toolkit) products. Possible values include: `otp`, `notifications`, `marketing`, `fraud`, `security`, `customercare`, `delivery`, `education`, `polling`, `announcements`, and `events`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageIntent { get; set; }
+        public string? MessageIntent { get => _explicitNullValueMessageIntent; set { _explicitNullValueMessageIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessageIntent"); else _explicitNullProperties?.Remove("MessageIntent"); } }
+        private string? _explicitNullValueMessageIntent = default!;
 #nullable restore
 #else
-        public string MessageIntent { get; set; }
+        public string MessageIntent { get => _explicitNullValueMessageIntent; set { _explicitNullValueMessageIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessageIntent"); else _explicitNullProperties?.Remove("MessageIntent"); } }
+        private string _explicitNullValueMessageIntent = default!;
 #endif
         /// <summary>The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services) you want to associate with the Message. When this parameter is provided and the `from` parameter is omitted, Twilio selects the optimal sender from the Messaging Service&apos;s Sender Pool. You may also provide a `from` parameter if you want to use a specific Sender from the Sender Pool.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessagingServiceSid { get; set; }
+        public string? MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
+        private string? _explicitNullValueMessagingServiceSid = default!;
 #nullable restore
 #else
-        public string MessagingServiceSid { get; set; }
+        public string MessagingServiceSid { get => _explicitNullValueMessagingServiceSid; set { _explicitNullValueMessagingServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingServiceSid"); else _explicitNullProperties?.Remove("MessagingServiceSid"); } }
+        private string _explicitNullValueMessagingServiceSid = default!;
 #endif
         /// <summary>Rich actions for non-SMS/MMS channels. Used for [sending location in WhatsApp messages](https://www.twilio.com/docs/whatsapp/message-features#location-messages-with-whatsapp).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PersistentAction { get; set; }
+        public List<string>? PersistentAction { get => _explicitNullValuePersistentAction; set { _explicitNullValuePersistentAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PersistentAction"); else _explicitNullProperties?.Remove("PersistentAction"); } }
+        private List<string>? _explicitNullValuePersistentAction = default!;
 #nullable restore
 #else
-        public List<string> PersistentAction { get; set; }
+        public List<string> PersistentAction { get => _explicitNullValuePersistentAction; set { _explicitNullValuePersistentAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PersistentAction"); else _explicitNullProperties?.Remove("PersistentAction"); } }
+        private List<string> _explicitNullValuePersistentAction = default!;
 #endif
         /// <summary>Boolean indicating whether or not you intend to provide delivery confirmation feedback to Twilio (used in conjunction with the [Message Feedback subresource](https://www.twilio.com/docs/sms/api/message-feedback-resource)). Default value is `false`.</summary>
-        public bool? ProvideFeedback { get; set; }
+        public bool? ProvideFeedback { get => _explicitNullValueProvideFeedback; set { _explicitNullValueProvideFeedback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProvideFeedback"); else _explicitNullProperties?.Remove("ProvideFeedback"); } }
+        private bool? _explicitNullValueProvideFeedback = default!;
         /// <summary>Include this parameter with a value of `disable` to skip any kind of risk check on the respective message request.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumRiskCheck? RiskCheck { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumRiskCheck? RiskCheck { get => _explicitNullValueRiskCheck; set { _explicitNullValueRiskCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RiskCheck"); else _explicitNullProperties?.Remove("RiskCheck"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumRiskCheck? _explicitNullValueRiskCheck = default!;
         /// <summary>For Messaging Services only: Include this parameter with a value of `fixed` in conjuction with the `send_time` parameter in order to [schedule a Message](https://www.twilio.com/docs/messaging/features/message-scheduling).</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumScheduleType? ScheduleType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumScheduleType? ScheduleType { get => _explicitNullValueScheduleType; set { _explicitNullValueScheduleType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScheduleType"); else _explicitNullProperties?.Remove("ScheduleType"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumScheduleType? _explicitNullValueScheduleType = default!;
         /// <summary>If set to `true`, Twilio delivers the message as a single MMS message, regardless of the presence of media.</summary>
-        public bool? SendAsMms { get; set; }
+        public bool? SendAsMms { get => _explicitNullValueSendAsMms; set { _explicitNullValueSendAsMms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SendAsMms"); else _explicitNullProperties?.Remove("SendAsMms"); } }
+        private bool? _explicitNullValueSendAsMms = default!;
         /// <summary>The time that Twilio will send the message. Must be in ISO 8601 format.</summary>
-        public DateTimeOffset? SendAt { get; set; }
+        public DateTimeOffset? SendAt { get => _explicitNullValueSendAt; set { _explicitNullValueSendAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SendAt"); else _explicitNullProperties?.Remove("SendAt"); } }
+        private DateTimeOffset? _explicitNullValueSendAt = default!;
         /// <summary>For Messaging Services with [Link Shortening configured](https://www.twilio.com/docs/messaging/features/link-shortening) only: A Boolean indicating whether or not Twilio should shorten links in the `body` of the Message. Default value is `false`. If `true`, the `messaging_service_sid` parameter must also be provided.</summary>
-        public bool? ShortenUrls { get; set; }
+        public bool? ShortenUrls { get => _explicitNullValueShortenUrls; set { _explicitNullValueShortenUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShortenUrls"); else _explicitNullProperties?.Remove("ShortenUrls"); } }
+        private bool? _explicitNullValueShortenUrls = default!;
         /// <summary>Whether to detect Unicode characters that have a similar GSM-7 character and replace them. Can be: `true` or `false`.</summary>
-        public bool? SmartEncoded { get; set; }
+        public bool? SmartEncoded { get => _explicitNullValueSmartEncoded; set { _explicitNullValueSmartEncoded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SmartEncoded"); else _explicitNullProperties?.Remove("SmartEncoded"); } }
+        private bool? _explicitNullValueSmartEncoded = default!;
         /// <summary>The URL of the endpoint to which Twilio sends [Message status callback requests](https://www.twilio.com/docs/sms/api/message-resource#twilios-request-to-the-statuscallback-url). URL must contain a valid hostname and underscores are not allowed. If you include this parameter with the `messaging_service_sid`, Twilio uses this URL instead of the Status Callback URL of the [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource). </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCallback { get; set; }
+        public string? StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallback"); else _explicitNullProperties?.Remove("StatusCallback"); } }
+        private string? _explicitNullValueStatusCallback = default!;
 #nullable restore
 #else
-        public string StatusCallback { get; set; }
+        public string StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallback"); else _explicitNullProperties?.Remove("StatusCallback"); } }
+        private string _explicitNullValueStatusCallback = default!;
 #endif
         /// <summary>The recipient&apos;s phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format (for SMS/MMS) or [channel address](https://www.twilio.com/docs/messaging/channels), e.g. `whatsapp:+15552229999`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? To { get; set; }
+        public string? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("To"); else _explicitNullProperties?.Remove("To"); } }
+        private string? _explicitNullValueTo = default!;
 #nullable restore
 #else
-        public string To { get; set; }
+        public string To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("To"); else _explicitNullProperties?.Remove("To"); } }
+        private string _explicitNullValueTo = default!;
 #endif
         /// <summary>The TrafficType property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumTrafficType? TrafficType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumTrafficType? TrafficType { get => _explicitNullValueTrafficType; set { _explicitNullValueTrafficType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrafficType"); else _explicitNullProperties?.Remove("TrafficType"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumTrafficType? _explicitNullValueTrafficType = default!;
         /// <summary>The maximum length in seconds that the Message can remain in Twilio&apos;s outgoing message queue. If a queued Message exceeds the `validity_period`, the Message is not sent. Accepted values are integers from `1` to `36000`. Default value is `36000`. A `validity_period` greater than `5` is recommended. [Learn more about the validity period](https://www.twilio.com/blog/take-more-control-of-outbound-messages-using-validity-period-html)</summary>
-        public int? ValidityPeriod { get; set; }
+        public int? ValidityPeriod { get => _explicitNullValueValidityPeriod; set { _explicitNullValueValidityPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ValidityPeriod"); else _explicitNullProperties?.Remove("ValidityPeriod"); } }
+        private int? _explicitNullValueValidityPeriod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateMessageXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -153,7 +224,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateMessageXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateMessageXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioApiV2010CreateMessageXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -224,6 +295,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("To", To);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MessageEnumTrafficType>("TrafficType", TrafficType);
             writer.WriteIntValue("ValidityPeriod", ValidityPeriod);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

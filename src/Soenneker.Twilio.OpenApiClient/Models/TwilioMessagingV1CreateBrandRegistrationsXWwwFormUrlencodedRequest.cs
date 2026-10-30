@@ -11,37 +11,57 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioMessagingV1CreateBrandRegistrationsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("A2PProfileBundleSid") is { } nullNodeA2PProfileBundleSid && nullNodeA2PProfileBundleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) A2PProfileBundleSid = null;
+            if (parseNode.GetChildNode("BrandType") is { } nullNodeBrandType && nullNodeBrandType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandType = null;
+            if (parseNode.GetChildNode("CustomerProfileBundleSid") is { } nullNodeCustomerProfileBundleSid && nullNodeCustomerProfileBundleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerProfileBundleSid = null;
+            if (parseNode.GetChildNode("Mock") is { } nullNodeMock && nullNodeMock.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mock = null;
+            if (parseNode.GetChildNode("SkipAutomaticSecVet") is { } nullNodeSkipAutomaticSecVet && nullNodeSkipAutomaticSecVet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipAutomaticSecVet = null;
+        }
+
         /// <summary>A2P Messaging Profile Bundle Sid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? A2PProfileBundleSid { get; set; }
+        public string? A2PProfileBundleSid { get => _explicitNullValueA2PProfileBundleSid; set { _explicitNullValueA2PProfileBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("A2PProfileBundleSid"); else _explicitNullProperties?.Remove("A2PProfileBundleSid"); } }
+        private string? _explicitNullValueA2PProfileBundleSid = default!;
 #nullable restore
 #else
-        public string A2PProfileBundleSid { get; set; }
+        public string A2PProfileBundleSid { get => _explicitNullValueA2PProfileBundleSid; set { _explicitNullValueA2PProfileBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("A2PProfileBundleSid"); else _explicitNullProperties?.Remove("A2PProfileBundleSid"); } }
+        private string _explicitNullValueA2PProfileBundleSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of brand being created. One of: &quot;STANDARD&quot;, &quot;SOLE_PROPRIETOR&quot;. SOLE_PROPRIETOR is for low volume, SOLE_PROPRIETOR use cases. STANDARD is for all other use cases.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrandType { get; set; }
+        public string? BrandType { get => _explicitNullValueBrandType; set { _explicitNullValueBrandType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BrandType"); else _explicitNullProperties?.Remove("BrandType"); } }
+        private string? _explicitNullValueBrandType = default!;
 #nullable restore
 #else
-        public string BrandType { get; set; }
+        public string BrandType { get => _explicitNullValueBrandType; set { _explicitNullValueBrandType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BrandType"); else _explicitNullProperties?.Remove("BrandType"); } }
+        private string _explicitNullValueBrandType = default!;
 #endif
         /// <summary>Customer Profile Bundle Sid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerProfileBundleSid { get; set; }
+        public string? CustomerProfileBundleSid { get => _explicitNullValueCustomerProfileBundleSid; set { _explicitNullValueCustomerProfileBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerProfileBundleSid"); else _explicitNullProperties?.Remove("CustomerProfileBundleSid"); } }
+        private string? _explicitNullValueCustomerProfileBundleSid = default!;
 #nullable restore
 #else
-        public string CustomerProfileBundleSid { get; set; }
+        public string CustomerProfileBundleSid { get => _explicitNullValueCustomerProfileBundleSid; set { _explicitNullValueCustomerProfileBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerProfileBundleSid"); else _explicitNullProperties?.Remove("CustomerProfileBundleSid"); } }
+        private string _explicitNullValueCustomerProfileBundleSid = default!;
 #endif
         /// <summary>A boolean that specifies whether brand should be a mock or not. If true, brand will be registered as a mock brand. Defaults to false if no value is provided.</summary>
-        public bool? Mock { get; set; }
+        public bool? Mock { get => _explicitNullValueMock; set { _explicitNullValueMock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Mock"); else _explicitNullProperties?.Remove("Mock"); } }
+        private bool? _explicitNullValueMock = default!;
         /// <summary>A flag to disable automatic secondary vetting for brands which it would otherwise be done.</summary>
-        public bool? SkipAutomaticSecVet { get; set; }
+        public bool? SkipAutomaticSecVet { get => _explicitNullValueSkipAutomaticSecVet; set { _explicitNullValueSkipAutomaticSecVet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SkipAutomaticSecVet"); else _explicitNullProperties?.Remove("SkipAutomaticSecVet"); } }
+        private bool? _explicitNullValueSkipAutomaticSecVet = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateBrandRegistrationsXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -57,7 +77,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateBrandRegistrationsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateBrandRegistrationsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1CreateBrandRegistrationsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("CustomerProfileBundleSid", CustomerProfileBundleSid);
             writer.WriteBoolValue("Mock", Mock);
             writer.WriteBoolValue("SkipAutomaticSecVet", SkipAutomaticSecVet);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

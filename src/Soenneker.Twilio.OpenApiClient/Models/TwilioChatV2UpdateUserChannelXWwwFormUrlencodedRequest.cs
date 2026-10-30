@@ -11,15 +11,28 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioChatV2UpdateUserChannelXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("LastConsumedMessageIndex") is { } nullNodeLastConsumedMessageIndex && nullNodeLastConsumedMessageIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastConsumedMessageIndex = null;
+            if (parseNode.GetChildNode("LastConsumptionTimestamp") is { } nullNodeLastConsumptionTimestamp && nullNodeLastConsumptionTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastConsumptionTimestamp = null;
+            if (parseNode.GetChildNode("NotificationLevel") is { } nullNodeNotificationLevel && nullNodeNotificationLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationLevel = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The index of the last [Message](https://www.twilio.com/docs/chat/rest/message-resource) in the [Channel](https://www.twilio.com/docs/chat/channels) that the Member has read.</summary>
-        public int? LastConsumedMessageIndex { get; set; }
+        public int? LastConsumedMessageIndex { get => _explicitNullValueLastConsumedMessageIndex; set { _explicitNullValueLastConsumedMessageIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastConsumedMessageIndex"); else _explicitNullProperties?.Remove("LastConsumedMessageIndex"); } }
+        private int? _explicitNullValueLastConsumedMessageIndex = default!;
         /// <summary>The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) timestamp of the last [Message](https://www.twilio.com/docs/chat/rest/message-resource) read event for the Member within the [Channel](https://www.twilio.com/docs/chat/channels).</summary>
-        public DateTimeOffset? LastConsumptionTimestamp { get; set; }
+        public DateTimeOffset? LastConsumptionTimestamp { get => _explicitNullValueLastConsumptionTimestamp; set { _explicitNullValueLastConsumptionTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastConsumptionTimestamp"); else _explicitNullProperties?.Remove("LastConsumptionTimestamp"); } }
+        private DateTimeOffset? _explicitNullValueLastConsumptionTimestamp = default!;
         /// <summary>The push notification level of the User for the Channel. Can be: `default` or `muted`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.UserChannelEnumNotificationLevel? NotificationLevel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.UserChannelEnumNotificationLevel? NotificationLevel { get => _explicitNullValueNotificationLevel; set { _explicitNullValueNotificationLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationLevel"); else _explicitNullProperties?.Remove("NotificationLevel"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.UserChannelEnumNotificationLevel? _explicitNullValueNotificationLevel = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2UpdateUserChannelXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2UpdateUserChannelXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2UpdateUserChannelXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2UpdateUserChannelXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("LastConsumedMessageIndex", LastConsumedMessageIndex);
             writer.WriteDateTimeOffsetValue("LastConsumptionTimestamp", LastConsumptionTimestamp);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.UserChannelEnumNotificationLevel>("NotificationLevel", NotificationLevel);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

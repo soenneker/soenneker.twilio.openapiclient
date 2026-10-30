@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Insights.Session
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSession>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSession.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSession>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsSession.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// To obtain session details for fetching reports and dashboards

@@ -11,21 +11,35 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioInsightsV1UpdateAccountSettingsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AdvancedFeatures") is { } nullNodeAdvancedFeatures && nullNodeAdvancedFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvancedFeatures = null;
+            if (parseNode.GetChildNode("SubaccountSid") is { } nullNodeSubaccountSid && nullNodeSubaccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubaccountSid = null;
+            if (parseNode.GetChildNode("VoiceTrace") is { } nullNodeVoiceTrace && nullNodeVoiceTrace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceTrace = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean flag to enable Advanced Features for Voice Insights.</summary>
-        public bool? AdvancedFeatures { get; set; }
+        public bool? AdvancedFeatures { get => _explicitNullValueAdvancedFeatures; set { _explicitNullValueAdvancedFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdvancedFeatures"); else _explicitNullProperties?.Remove("AdvancedFeatures"); } }
+        private bool? _explicitNullValueAdvancedFeatures = default!;
         /// <summary>The unique SID identifier of the Subaccount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubaccountSid { get; set; }
+        public string? SubaccountSid { get => _explicitNullValueSubaccountSid; set { _explicitNullValueSubaccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubaccountSid"); else _explicitNullProperties?.Remove("SubaccountSid"); } }
+        private string? _explicitNullValueSubaccountSid = default!;
 #nullable restore
 #else
-        public string SubaccountSid { get; set; }
+        public string SubaccountSid { get => _explicitNullValueSubaccountSid; set { _explicitNullValueSubaccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubaccountSid"); else _explicitNullProperties?.Remove("SubaccountSid"); } }
+        private string _explicitNullValueSubaccountSid = default!;
 #endif
         /// <summary>A boolean flag to enable Voice Trace.</summary>
-        public bool? VoiceTrace { get; set; }
+        public bool? VoiceTrace { get => _explicitNullValueVoiceTrace; set { _explicitNullValueVoiceTrace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoiceTrace"); else _explicitNullProperties?.Remove("VoiceTrace"); } }
+        private bool? _explicitNullValueVoiceTrace = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1UpdateAccountSettingsXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1UpdateAccountSettingsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1UpdateAccountSettingsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1UpdateAccountSettingsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("AdvancedFeatures", AdvancedFeatures);
             writer.WriteStringValue("SubaccountSid", SubaccountSid);
             writer.WriteBoolValue("VoiceTrace", VoiceTrace);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

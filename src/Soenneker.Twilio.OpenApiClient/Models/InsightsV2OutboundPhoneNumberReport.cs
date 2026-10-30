@@ -11,69 +11,106 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class InsightsV2OutboundPhoneNumberReport : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("answering_machine_detection") is { } nullNodeAnsweringMachineDetection && nullNodeAnsweringMachineDetection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnsweringMachineDetection = null;
+            if (parseNode.GetChildNode("answer_rate_device_type") is { } nullNodeAnswerRateDeviceType && nullNodeAnswerRateDeviceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerRateDeviceType = null;
+            if (parseNode.GetChildNode("blocked_calls_by_carrier") is { } nullNodeBlockedCallsByCarrier && nullNodeBlockedCallsByCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedCallsByCarrier = null;
+            if (parseNode.GetChildNode("call_answer_score") is { } nullNodeCallAnswerScore && nullNodeCallAnswerScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallAnswerScore = null;
+            if (parseNode.GetChildNode("calls_by_device_type") is { } nullNodeCallsByDeviceType && nullNodeCallsByDeviceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallsByDeviceType = null;
+            if (parseNode.GetChildNode("call_state_percentage") is { } nullNodeCallStatePercentage && nullNodeCallStatePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallStatePercentage = null;
+            if (parseNode.GetChildNode("handle") is { } nullNodeHandle && nullNodeHandle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Handle = null;
+            if (parseNode.GetChildNode("long_duration_calls_percentage") is { } nullNodeLongDurationCallsPercentage && nullNodeLongDurationCallsPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongDurationCallsPercentage = null;
+            if (parseNode.GetChildNode("potential_robocalls_percentage") is { } nullNodePotentialRobocallsPercentage && nullNodePotentialRobocallsPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PotentialRobocallsPercentage = null;
+            if (parseNode.GetChildNode("short_duration_calls_percentage") is { } nullNodeShortDurationCallsPercentage && nullNodeShortDurationCallsPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortDurationCallsPercentage = null;
+            if (parseNode.GetChildNode("silent_calls_percentage") is { } nullNodeSilentCallsPercentage && nullNodeSilentCallsPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SilentCallsPercentage = null;
+            if (parseNode.GetChildNode("total_calls") is { } nullNodeTotalCalls && nullNodeTotalCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCalls = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of calls made in answering machine detection (AMD) enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection? AnsweringMachineDetection { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection? AnsweringMachineDetection { get => _explicitNullValueAnsweringMachineDetection; set { _explicitNullValueAnsweringMachineDetection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answering_machine_detection"); else _explicitNullProperties?.Remove("answering_machine_detection"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection? _explicitNullValueAnsweringMachineDetection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection AnsweringMachineDetection { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection AnsweringMachineDetection { get => _explicitNullValueAnsweringMachineDetection; set { _explicitNullValueAnsweringMachineDetection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answering_machine_detection"); else _explicitNullProperties?.Remove("answering_machine_detection"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection _explicitNullValueAnsweringMachineDetection = default!;
 #endif
         /// <summary>Answer rate for each device type.`voip`, `mobile`, `landline`, `unknown`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnswerRateDeviceTypeProperty? AnswerRateDeviceType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnswerRateDeviceTypeProperty? AnswerRateDeviceType { get => _explicitNullValueAnswerRateDeviceType; set { _explicitNullValueAnswerRateDeviceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_rate_device_type"); else _explicitNullProperties?.Remove("answer_rate_device_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnswerRateDeviceTypeProperty? _explicitNullValueAnswerRateDeviceType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnswerRateDeviceTypeProperty AnswerRateDeviceType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnswerRateDeviceTypeProperty AnswerRateDeviceType { get => _explicitNullValueAnswerRateDeviceType; set { _explicitNullValueAnswerRateDeviceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_rate_device_type"); else _explicitNullProperties?.Remove("answer_rate_device_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnswerRateDeviceTypeProperty _explicitNullValueAnswerRateDeviceType = default!;
 #endif
         /// <summary>Percentage of blocked calls by carrier per country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue>? BlockedCallsByCarrier { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue>? BlockedCallsByCarrier { get => _explicitNullValueBlockedCallsByCarrier; set { _explicitNullValueBlockedCallsByCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_calls_by_carrier"); else _explicitNullProperties?.Remove("blocked_calls_by_carrier"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue>? _explicitNullValueBlockedCallsByCarrier = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue> BlockedCallsByCarrier { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue> BlockedCallsByCarrier { get => _explicitNullValueBlockedCallsByCarrier; set { _explicitNullValueBlockedCallsByCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_calls_by_carrier"); else _explicitNullProperties?.Remove("blocked_calls_by_carrier"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue> _explicitNullValueBlockedCallsByCarrier = default!;
 #endif
         /// <summary>The call answer score measures customers behavior to the delivered calls.The score is a value between 0 and 100, where 100 indicates that all calls were successfully answered.</summary>
-        public float? CallAnswerScore { get; set; }
+        public float? CallAnswerScore { get => _explicitNullValueCallAnswerScore; set { _explicitNullValueCallAnswerScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_answer_score"); else _explicitNullProperties?.Remove("call_answer_score"); } }
+        private float? _explicitNullValueCallAnswerScore = default!;
         /// <summary>Number of calls made with each device type.`voip`, `mobile`, `landline`, `unknown`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty? CallsByDeviceType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty? CallsByDeviceType { get => _explicitNullValueCallsByDeviceType; set { _explicitNullValueCallsByDeviceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calls_by_device_type"); else _explicitNullProperties?.Remove("calls_by_device_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty? _explicitNullValueCallsByDeviceType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty CallsByDeviceType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty CallsByDeviceType { get => _explicitNullValueCallsByDeviceType; set { _explicitNullValueCallsByDeviceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calls_by_device_type"); else _explicitNullProperties?.Remove("calls_by_device_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallsByDeviceTypeProperty _explicitNullValueCallsByDeviceType = default!;
 #endif
         /// <summary>Percentage of calls made in each state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallStatePercentage? CallStatePercentage { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallStatePercentage? CallStatePercentage { get => _explicitNullValueCallStatePercentage; set { _explicitNullValueCallStatePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_state_percentage"); else _explicitNullProperties?.Remove("call_state_percentage"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallStatePercentage? _explicitNullValueCallStatePercentage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallStatePercentage CallStatePercentage { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallStatePercentage CallStatePercentage { get => _explicitNullValueCallStatePercentage; set { _explicitNullValueCallStatePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_state_percentage"); else _explicitNullProperties?.Remove("call_state_percentage"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportCallStatePercentage _explicitNullValueCallStatePercentage = default!;
 #endif
         /// <summary>The outbound phone number handle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Handle { get; set; }
+        public string? Handle { get => _explicitNullValueHandle; set { _explicitNullValueHandle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handle"); else _explicitNullProperties?.Remove("handle"); } }
+        private string? _explicitNullValueHandle = default!;
 #nullable restore
 #else
-        public string Handle { get; set; }
+        public string Handle { get => _explicitNullValueHandle; set { _explicitNullValueHandle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handle"); else _explicitNullProperties?.Remove("handle"); } }
+        private string _explicitNullValueHandle = default!;
 #endif
         /// <summary>Percentage of long duration calls ( &gt;= 60 seconds)</summary>
-        public float? LongDurationCallsPercentage { get; set; }
+        public float? LongDurationCallsPercentage { get => _explicitNullValueLongDurationCallsPercentage; set { _explicitNullValueLongDurationCallsPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_duration_calls_percentage"); else _explicitNullProperties?.Remove("long_duration_calls_percentage"); } }
+        private float? _explicitNullValueLongDurationCallsPercentage = default!;
         /// <summary>Percentage of completed outbound calls to unassigned or unallocated phone numbers.</summary>
-        public float? PotentialRobocallsPercentage { get; set; }
+        public float? PotentialRobocallsPercentage { get => _explicitNullValuePotentialRobocallsPercentage; set { _explicitNullValuePotentialRobocallsPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("potential_robocalls_percentage"); else _explicitNullProperties?.Remove("potential_robocalls_percentage"); } }
+        private float? _explicitNullValuePotentialRobocallsPercentage = default!;
         /// <summary>Percentage of completed outbound calls under 10 seconds (PSTN Short call tags); More than 15% is typically low trust measured.</summary>
-        public float? ShortDurationCallsPercentage { get; set; }
+        public float? ShortDurationCallsPercentage { get => _explicitNullValueShortDurationCallsPercentage; set { _explicitNullValueShortDurationCallsPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_duration_calls_percentage"); else _explicitNullProperties?.Remove("short_duration_calls_percentage"); } }
+        private float? _explicitNullValueShortDurationCallsPercentage = default!;
         /// <summary>Percentage of calls with silence tags over total calls. A silent tag is indicative of a connectivity issue or muted audio.</summary>
-        public float? SilentCallsPercentage { get; set; }
+        public float? SilentCallsPercentage { get => _explicitNullValueSilentCallsPercentage; set { _explicitNullValueSilentCallsPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("silent_calls_percentage"); else _explicitNullProperties?.Remove("silent_calls_percentage"); } }
+        private float? _explicitNullValueSilentCallsPercentage = default!;
         /// <summary>Total number of outbound calls made with the given handle during the report period.</summary>
-        public int? TotalCalls { get; set; }
+        public int? TotalCalls { get => _explicitNullValueTotalCalls; set { _explicitNullValueTotalCalls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_calls"); else _explicitNullProperties?.Remove("total_calls"); } }
+        private int? _explicitNullValueTotalCalls = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport"/> and sets the default values.
         /// </summary>
@@ -89,7 +126,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReport(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,6 +169,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteFloatValue("short_duration_calls_percentage", ShortDurationCallsPercentage);
             writer.WriteFloatValue("silent_calls_percentage", SilentCallsPercentage);
             writer.WriteIntValue("total_calls", TotalCalls);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

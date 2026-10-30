@@ -12,50 +12,79 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccountReportKytOutboundCarrierCalling : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blocked_calls_by_carrier") is { } nullNodeBlockedCallsByCarrier && nullNodeBlockedCallsByCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedCallsByCarrier = null;
+            if (parseNode.GetChildNode("branded_calling") is { } nullNodeBrandedCalling && nullNodeBrandedCalling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandedCalling = null;
+            if (parseNode.GetChildNode("long_duration_calls_percentage") is { } nullNodeLongDurationCallsPercentage && nullNodeLongDurationCallsPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongDurationCallsPercentage = null;
+            if (parseNode.GetChildNode("potential_robocalls_percentage") is { } nullNodePotentialRobocallsPercentage && nullNodePotentialRobocallsPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PotentialRobocallsPercentage = null;
+            if (parseNode.GetChildNode("short_duration_calls_percentage") is { } nullNodeShortDurationCallsPercentage && nullNodeShortDurationCallsPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortDurationCallsPercentage = null;
+            if (parseNode.GetChildNode("stir_shaken") is { } nullNodeStirShaken && nullNodeStirShaken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StirShaken = null;
+            if (parseNode.GetChildNode("unique_called_numbers") is { } nullNodeUniqueCalledNumbers && nullNodeUniqueCalledNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueCalledNumbers = null;
+            if (parseNode.GetChildNode("unique_calling_numbers") is { } nullNodeUniqueCallingNumbers && nullNodeUniqueCallingNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueCallingNumbers = null;
+            if (parseNode.GetChildNode("voice_integrity") is { } nullNodeVoiceIntegrity && nullNodeVoiceIntegrity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceIntegrity = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Percentage of blocked calls by carrier per country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue>? BlockedCallsByCarrier { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue>? BlockedCallsByCarrier { get => _explicitNullValueBlockedCallsByCarrier; set { _explicitNullValueBlockedCallsByCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_calls_by_carrier"); else _explicitNullProperties?.Remove("blocked_calls_by_carrier"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue>? _explicitNullValueBlockedCallsByCarrier = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue> BlockedCallsByCarrier { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue> BlockedCallsByCarrier { get => _explicitNullValueBlockedCallsByCarrier; set { _explicitNullValueBlockedCallsByCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_calls_by_carrier"); else _explicitNullProperties?.Remove("blocked_calls_by_carrier"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.CountyCarrierValue> _explicitNullValueBlockedCallsByCarrier = default!;
 #endif
         /// <summary>Metrics related to Branded Calling bundled calls including CTIA for the report period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.BrandedCalling? BrandedCalling { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.BrandedCalling? BrandedCalling { get => _explicitNullValueBrandedCalling; set { _explicitNullValueBrandedCalling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branded_calling"); else _explicitNullProperties?.Remove("branded_calling"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.BrandedCalling? _explicitNullValueBrandedCalling = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.BrandedCalling BrandedCalling { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.BrandedCalling BrandedCalling { get => _explicitNullValueBrandedCalling; set { _explicitNullValueBrandedCalling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branded_calling"); else _explicitNullProperties?.Remove("branded_calling"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.BrandedCalling _explicitNullValueBrandedCalling = default!;
 #endif
         /// <summary>Percentage of long duration calls ( &gt;= 60 seconds)</summary>
-        public float? LongDurationCallsPercentage { get; set; }
+        public float? LongDurationCallsPercentage { get => _explicitNullValueLongDurationCallsPercentage; set { _explicitNullValueLongDurationCallsPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_duration_calls_percentage"); else _explicitNullProperties?.Remove("long_duration_calls_percentage"); } }
+        private float? _explicitNullValueLongDurationCallsPercentage = default!;
         /// <summary>Percentage of completed outbound calls to unassigned or unallocated phone numbers.</summary>
-        public float? PotentialRobocallsPercentage { get; set; }
+        public float? PotentialRobocallsPercentage { get => _explicitNullValuePotentialRobocallsPercentage; set { _explicitNullValuePotentialRobocallsPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("potential_robocalls_percentage"); else _explicitNullProperties?.Remove("potential_robocalls_percentage"); } }
+        private float? _explicitNullValuePotentialRobocallsPercentage = default!;
         /// <summary>Percentage of completed outbound calls under 10 seconds (PSTN Short call tags); More than 15% is typically low trust measured.</summary>
-        public float? ShortDurationCallsPercentage { get; set; }
+        public float? ShortDurationCallsPercentage { get => _explicitNullValueShortDurationCallsPercentage; set { _explicitNullValueShortDurationCallsPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_duration_calls_percentage"); else _explicitNullProperties?.Remove("short_duration_calls_percentage"); } }
+        private float? _explicitNullValueShortDurationCallsPercentage = default!;
         /// <summary>Metrics related to STIR/SHAKEN attestation A, B, and C for the report period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.StirShaken? StirShaken { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StirShaken? StirShaken { get => _explicitNullValueStirShaken; set { _explicitNullValueStirShaken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stir_shaken"); else _explicitNullProperties?.Remove("stir_shaken"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.StirShaken? _explicitNullValueStirShaken = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.StirShaken StirShaken { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.StirShaken StirShaken { get => _explicitNullValueStirShaken; set { _explicitNullValueStirShaken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stir_shaken"); else _explicitNullProperties?.Remove("stir_shaken"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.StirShaken _explicitNullValueStirShaken = default!;
 #endif
         /// <summary>Number of unique non-Twilio PSTN called numbers during the report period.</summary>
-        public int? UniqueCalledNumbers { get; set; }
+        public int? UniqueCalledNumbers { get => _explicitNullValueUniqueCalledNumbers; set { _explicitNullValueUniqueCalledNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_called_numbers"); else _explicitNullProperties?.Remove("unique_called_numbers"); } }
+        private int? _explicitNullValueUniqueCalledNumbers = default!;
         /// <summary>Number of unique PSTN calling numbers to non-Twilio numbers during the report period.</summary>
-        public int? UniqueCallingNumbers { get; set; }
+        public int? UniqueCallingNumbers { get => _explicitNullValueUniqueCallingNumbers; set { _explicitNullValueUniqueCallingNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_calling_numbers"); else _explicitNullProperties?.Remove("unique_calling_numbers"); } }
+        private int? _explicitNullValueUniqueCallingNumbers = default!;
         /// <summary>Metrics related to Voice Integrity enabled calls for the report period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrity? VoiceIntegrity { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrity? VoiceIntegrity { get => _explicitNullValueVoiceIntegrity; set { _explicitNullValueVoiceIntegrity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_integrity"); else _explicitNullProperties?.Remove("voice_integrity"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrity? _explicitNullValueVoiceIntegrity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrity VoiceIntegrity { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrity VoiceIntegrity { get => _explicitNullValueVoiceIntegrity; set { _explicitNullValueVoiceIntegrity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice_integrity"); else _explicitNullProperties?.Remove("voice_integrity"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrity _explicitNullValueVoiceIntegrity = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling"/> and sets the default values.
@@ -72,7 +101,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +138,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("unique_called_numbers", UniqueCalledNumbers);
             writer.WriteIntValue("unique_calling_numbers", UniqueCallingNumbers);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceIntegrity>("voice_integrity", VoiceIntegrity);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

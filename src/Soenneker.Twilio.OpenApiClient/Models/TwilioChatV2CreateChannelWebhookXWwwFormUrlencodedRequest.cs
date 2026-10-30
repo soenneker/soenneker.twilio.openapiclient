@@ -11,47 +11,72 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioChatV2CreateChannelWebhookXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Configuration.Filters") is { } nullNodeConfigurationFilters && nullNodeConfigurationFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationFilters = null;
+            if (parseNode.GetChildNode("Configuration.FlowSid") is { } nullNodeConfigurationFlowSid && nullNodeConfigurationFlowSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationFlowSid = null;
+            if (parseNode.GetChildNode("Configuration.Method") is { } nullNodeConfigurationMethod && nullNodeConfigurationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationMethod = null;
+            if (parseNode.GetChildNode("Configuration.RetryCount") is { } nullNodeConfigurationRetryCount && nullNodeConfigurationRetryCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationRetryCount = null;
+            if (parseNode.GetChildNode("Configuration.Triggers") is { } nullNodeConfigurationTriggers && nullNodeConfigurationTriggers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationTriggers = null;
+            if (parseNode.GetChildNode("Configuration.Url") is { } nullNodeConfigurationUrl && nullNodeConfigurationUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationUrl = null;
+            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The events that cause us to call the Channel Webhook. Used when `type` is `webhook`. This parameter takes only one event. To specify more than one event, repeat this parameter for each event. For the list of possible events, see [Webhook Event Triggers](https://www.twilio.com/docs/chat/webhook-events#webhook-event-trigger).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ConfigurationFilters { get; set; }
+        public List<string>? ConfigurationFilters { get => _explicitNullValueConfigurationFilters; set { _explicitNullValueConfigurationFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Filters"); else _explicitNullProperties?.Remove("Configuration.Filters"); } }
+        private List<string>? _explicitNullValueConfigurationFilters = default!;
 #nullable restore
 #else
-        public List<string> ConfigurationFilters { get; set; }
+        public List<string> ConfigurationFilters { get => _explicitNullValueConfigurationFilters; set { _explicitNullValueConfigurationFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Filters"); else _explicitNullProperties?.Remove("Configuration.Filters"); } }
+        private List<string> _explicitNullValueConfigurationFilters = default!;
 #endif
         /// <summary>The SID of the Studio [Flow](https://www.twilio.com/docs/studio/rest-api/flow) to call when an event in `configuration.filters` occurs. Used only when `type` is `studio`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigurationFlowSid { get; set; }
+        public string? ConfigurationFlowSid { get => _explicitNullValueConfigurationFlowSid; set { _explicitNullValueConfigurationFlowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.FlowSid"); else _explicitNullProperties?.Remove("Configuration.FlowSid"); } }
+        private string? _explicitNullValueConfigurationFlowSid = default!;
 #nullable restore
 #else
-        public string ConfigurationFlowSid { get; set; }
+        public string ConfigurationFlowSid { get => _explicitNullValueConfigurationFlowSid; set { _explicitNullValueConfigurationFlowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.FlowSid"); else _explicitNullProperties?.Remove("Configuration.FlowSid"); } }
+        private string _explicitNullValueConfigurationFlowSid = default!;
 #endif
         /// <summary>The ConfigurationMethod property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ChannelWebhookEnumMethod? ConfigurationMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChannelWebhookEnumMethod? ConfigurationMethod { get => _explicitNullValueConfigurationMethod; set { _explicitNullValueConfigurationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Method"); else _explicitNullProperties?.Remove("Configuration.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ChannelWebhookEnumMethod? _explicitNullValueConfigurationMethod = default!;
         /// <summary>The number of times to retry the webhook if the first attempt fails. Can be an integer between 0 and 3, inclusive, and the default is 0.</summary>
-        public int? ConfigurationRetryCount { get; set; }
+        public int? ConfigurationRetryCount { get => _explicitNullValueConfigurationRetryCount; set { _explicitNullValueConfigurationRetryCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.RetryCount"); else _explicitNullProperties?.Remove("Configuration.RetryCount"); } }
+        private int? _explicitNullValueConfigurationRetryCount = default!;
         /// <summary>A string that will cause us to call the webhook when it is present in a message body. This parameter takes only one trigger string. To specify more than one, repeat this parameter for each trigger string up to a total of 5 trigger strings. Used only when `type` = `trigger`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ConfigurationTriggers { get; set; }
+        public List<string>? ConfigurationTriggers { get => _explicitNullValueConfigurationTriggers; set { _explicitNullValueConfigurationTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Triggers"); else _explicitNullProperties?.Remove("Configuration.Triggers"); } }
+        private List<string>? _explicitNullValueConfigurationTriggers = default!;
 #nullable restore
 #else
-        public List<string> ConfigurationTriggers { get; set; }
+        public List<string> ConfigurationTriggers { get => _explicitNullValueConfigurationTriggers; set { _explicitNullValueConfigurationTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Triggers"); else _explicitNullProperties?.Remove("Configuration.Triggers"); } }
+        private List<string> _explicitNullValueConfigurationTriggers = default!;
 #endif
         /// <summary>The URL of the webhook to call using the `configuration.method`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigurationUrl { get; set; }
+        public string? ConfigurationUrl { get => _explicitNullValueConfigurationUrl; set { _explicitNullValueConfigurationUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Url"); else _explicitNullProperties?.Remove("Configuration.Url"); } }
+        private string? _explicitNullValueConfigurationUrl = default!;
 #nullable restore
 #else
-        public string ConfigurationUrl { get; set; }
+        public string ConfigurationUrl { get => _explicitNullValueConfigurationUrl; set { _explicitNullValueConfigurationUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Configuration.Url"); else _explicitNullProperties?.Remove("Configuration.Url"); } }
+        private string _explicitNullValueConfigurationUrl = default!;
 #endif
         /// <summary>The type of webhook. Can be: `webhook`, `studio`, or `trigger`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ChannelWebhookEnumType? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ChannelWebhookEnumType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ChannelWebhookEnumType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhookXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -67,7 +92,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhookXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhookXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV2CreateChannelWebhookXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,6 +125,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("Configuration.Triggers", ConfigurationTriggers);
             writer.WriteStringValue("Configuration.Url", ConfigurationUrl);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ChannelWebhookEnumType>("Type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

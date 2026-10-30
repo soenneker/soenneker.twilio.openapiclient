@@ -11,71 +11,115 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AreaCodeGeomatch") is { } nullNodeAreaCodeGeomatch && nullNodeAreaCodeGeomatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AreaCodeGeomatch = null;
+            if (parseNode.GetChildNode("FallbackMethod") is { } nullNodeFallbackMethod && nullNodeFallbackMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FallbackMethod = null;
+            if (parseNode.GetChildNode("FallbackToLongCode") is { } nullNodeFallbackToLongCode && nullNodeFallbackToLongCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FallbackToLongCode = null;
+            if (parseNode.GetChildNode("FallbackUrl") is { } nullNodeFallbackUrl && nullNodeFallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FallbackUrl = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("InboundMethod") is { } nullNodeInboundMethod && nullNodeInboundMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundMethod = null;
+            if (parseNode.GetChildNode("InboundRequestUrl") is { } nullNodeInboundRequestUrl && nullNodeInboundRequestUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundRequestUrl = null;
+            if (parseNode.GetChildNode("MmsConverter") is { } nullNodeMmsConverter && nullNodeMmsConverter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MmsConverter = null;
+            if (parseNode.GetChildNode("ScanMessageContent") is { } nullNodeScanMessageContent && nullNodeScanMessageContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScanMessageContent = null;
+            if (parseNode.GetChildNode("SmartEncoding") is { } nullNodeSmartEncoding && nullNodeSmartEncoding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartEncoding = null;
+            if (parseNode.GetChildNode("StatusCallback") is { } nullNodeStatusCallback && nullNodeStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallback = null;
+            if (parseNode.GetChildNode("StickySender") is { } nullNodeStickySender && nullNodeStickySender.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickySender = null;
+            if (parseNode.GetChildNode("SynchronousValidation") is { } nullNodeSynchronousValidation && nullNodeSynchronousValidation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SynchronousValidation = null;
+            if (parseNode.GetChildNode("Usecase") is { } nullNodeUsecase && nullNodeUsecase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usecase = null;
+            if (parseNode.GetChildNode("UseInboundWebhookOnNumber") is { } nullNodeUseInboundWebhookOnNumber && nullNodeUseInboundWebhookOnNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInboundWebhookOnNumber = null;
+            if (parseNode.GetChildNode("ValidityPeriod") is { } nullNodeValidityPeriod && nullNodeValidityPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidityPeriod = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to enable [Area Code Geomatch](https://www.twilio.com/docs/messaging/services#area-code-geomatch) on the Service Instance.</summary>
-        public bool? AreaCodeGeomatch { get; set; }
+        public bool? AreaCodeGeomatch { get => _explicitNullValueAreaCodeGeomatch; set { _explicitNullValueAreaCodeGeomatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AreaCodeGeomatch"); else _explicitNullProperties?.Remove("AreaCodeGeomatch"); } }
+        private bool? _explicitNullValueAreaCodeGeomatch = default!;
         /// <summary>The HTTP method we should use to call `fallback_url`. Can be: `GET` or `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequestFallbackMethod? FallbackMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequestFallbackMethod? FallbackMethod { get => _explicitNullValueFallbackMethod; set { _explicitNullValueFallbackMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FallbackMethod"); else _explicitNullProperties?.Remove("FallbackMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequestFallbackMethod? _explicitNullValueFallbackMethod = default!;
         /// <summary>[OBSOLETE] Former feature used to fallback to long code sender after certain short code message failures.</summary>
-        public bool? FallbackToLongCode { get; set; }
+        public bool? FallbackToLongCode { get => _explicitNullValueFallbackToLongCode; set { _explicitNullValueFallbackToLongCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FallbackToLongCode"); else _explicitNullProperties?.Remove("FallbackToLongCode"); } }
+        private bool? _explicitNullValueFallbackToLongCode = default!;
         /// <summary>The URL that we call using `fallback_method` if an error occurs while retrieving or executing the TwiML from the Inbound Request URL. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `fallback_url` defined for the Messaging Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FallbackUrl { get; set; }
+        public string? FallbackUrl { get => _explicitNullValueFallbackUrl; set { _explicitNullValueFallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FallbackUrl"); else _explicitNullProperties?.Remove("FallbackUrl"); } }
+        private string? _explicitNullValueFallbackUrl = default!;
 #nullable restore
 #else
-        public string FallbackUrl { get; set; }
+        public string FallbackUrl { get => _explicitNullValueFallbackUrl; set { _explicitNullValueFallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FallbackUrl"); else _explicitNullProperties?.Remove("FallbackUrl"); } }
+        private string _explicitNullValueFallbackUrl = default!;
 #endif
         /// <summary>A descriptive string that you create to describe the resource. It can be up to 64 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The HTTP method we should use to call `inbound_request_url`. Can be `GET` or `POST` and the default is `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequestInboundMethod? InboundMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequestInboundMethod? InboundMethod { get => _explicitNullValueInboundMethod; set { _explicitNullValueInboundMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InboundMethod"); else _explicitNullProperties?.Remove("InboundMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequestInboundMethod? _explicitNullValueInboundMethod = default!;
         /// <summary>The URL we call using `inbound_method` when a message is received by any phone number or short code in the Service. When this property is `null`, receiving inbound messages is disabled. All messages sent to the Twilio phone number or short code will not be logged and received on the Account. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `inbound_request_url` defined for the Messaging Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboundRequestUrl { get; set; }
+        public string? InboundRequestUrl { get => _explicitNullValueInboundRequestUrl; set { _explicitNullValueInboundRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InboundRequestUrl"); else _explicitNullProperties?.Remove("InboundRequestUrl"); } }
+        private string? _explicitNullValueInboundRequestUrl = default!;
 #nullable restore
 #else
-        public string InboundRequestUrl { get; set; }
+        public string InboundRequestUrl { get => _explicitNullValueInboundRequestUrl; set { _explicitNullValueInboundRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InboundRequestUrl"); else _explicitNullProperties?.Remove("InboundRequestUrl"); } }
+        private string _explicitNullValueInboundRequestUrl = default!;
 #endif
         /// <summary>Whether to enable the [MMS Converter](https://www.twilio.com/docs/messaging/services#mms-converter) for messages sent through the Service instance.</summary>
-        public bool? MmsConverter { get; set; }
+        public bool? MmsConverter { get => _explicitNullValueMmsConverter; set { _explicitNullValueMmsConverter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MmsConverter"); else _explicitNullProperties?.Remove("MmsConverter"); } }
+        private bool? _explicitNullValueMmsConverter = default!;
         /// <summary>Reserved.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumScanMessageContent? ScanMessageContent { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumScanMessageContent? ScanMessageContent { get => _explicitNullValueScanMessageContent; set { _explicitNullValueScanMessageContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScanMessageContent"); else _explicitNullProperties?.Remove("ScanMessageContent"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumScanMessageContent? _explicitNullValueScanMessageContent = default!;
         /// <summary>Whether to enable [Smart Encoding](https://www.twilio.com/docs/messaging/services#smart-encoding) for messages sent through the Service instance.</summary>
-        public bool? SmartEncoding { get; set; }
+        public bool? SmartEncoding { get => _explicitNullValueSmartEncoding; set { _explicitNullValueSmartEncoding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SmartEncoding"); else _explicitNullProperties?.Remove("SmartEncoding"); } }
+        private bool? _explicitNullValueSmartEncoding = default!;
         /// <summary>The URL we should call to [pass status updates](https://www.twilio.com/docs/sms/api/message-resource#message-status-values) about message delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCallback { get; set; }
+        public string? StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallback"); else _explicitNullProperties?.Remove("StatusCallback"); } }
+        private string? _explicitNullValueStatusCallback = default!;
 #nullable restore
 #else
-        public string StatusCallback { get; set; }
+        public string StatusCallback { get => _explicitNullValueStatusCallback; set { _explicitNullValueStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCallback"); else _explicitNullProperties?.Remove("StatusCallback"); } }
+        private string _explicitNullValueStatusCallback = default!;
 #endif
         /// <summary>Whether to enable [Sticky Sender](https://www.twilio.com/docs/messaging/services#sticky-sender) on the Service instance.</summary>
-        public bool? StickySender { get; set; }
+        public bool? StickySender { get => _explicitNullValueStickySender; set { _explicitNullValueStickySender = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StickySender"); else _explicitNullProperties?.Remove("StickySender"); } }
+        private bool? _explicitNullValueStickySender = default!;
         /// <summary>Reserved.</summary>
-        public bool? SynchronousValidation { get; set; }
+        public bool? SynchronousValidation { get => _explicitNullValueSynchronousValidation; set { _explicitNullValueSynchronousValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SynchronousValidation"); else _explicitNullProperties?.Remove("SynchronousValidation"); } }
+        private bool? _explicitNullValueSynchronousValidation = default!;
         /// <summary>A string that describes the scenario in which the Messaging Service will be used. Possible values are `notifications`, `marketing`, `verification`, `discussion`, `poll`, `undeclared`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Usecase { get; set; }
+        public string? Usecase { get => _explicitNullValueUsecase; set { _explicitNullValueUsecase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Usecase"); else _explicitNullProperties?.Remove("Usecase"); } }
+        private string? _explicitNullValueUsecase = default!;
 #nullable restore
 #else
-        public string Usecase { get; set; }
+        public string Usecase { get => _explicitNullValueUsecase; set { _explicitNullValueUsecase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Usecase"); else _explicitNullProperties?.Remove("Usecase"); } }
+        private string _explicitNullValueUsecase = default!;
 #endif
         /// <summary>A boolean value that indicates either the webhook url configured on the phone number will be used or `inbound_request_url`/`fallback_url` url will be called when a message is received from the phone number. If this field is enabled then the webhook url defined on the phone number will override the `inbound_request_url`/`fallback_url` defined for the Messaging Service.</summary>
-        public bool? UseInboundWebhookOnNumber { get; set; }
+        public bool? UseInboundWebhookOnNumber { get => _explicitNullValueUseInboundWebhookOnNumber; set { _explicitNullValueUseInboundWebhookOnNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UseInboundWebhookOnNumber"); else _explicitNullProperties?.Remove("UseInboundWebhookOnNumber"); } }
+        private bool? _explicitNullValueUseInboundWebhookOnNumber = default!;
         /// <summary>How long, in seconds, messages sent from the Service are valid. Can be an integer from `1` to `36,000`. Default value is `36,000`.</summary>
-        public int? ValidityPeriod { get; set; }
+        public int? ValidityPeriod { get => _explicitNullValueValidityPeriod; set { _explicitNullValueValidityPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ValidityPeriod"); else _explicitNullProperties?.Remove("ValidityPeriod"); } }
+        private int? _explicitNullValueValidityPeriod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -91,7 +135,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioMessagingV1UpdateServiceXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -142,6 +186,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("Usecase", Usecase);
             writer.WriteBoolValue("UseInboundWebhookOnNumber", UseInboundWebhookOnNumber);
             writer.WriteIntValue("ValidityPeriod", ValidityPeriod);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

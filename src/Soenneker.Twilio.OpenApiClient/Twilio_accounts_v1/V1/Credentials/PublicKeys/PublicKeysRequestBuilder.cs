@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.Credentials.Publi
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListCredentialPublicKeyResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListCredentialPublicKeyResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListCredentialPublicKeyResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListCredentialPublicKeyResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new Public Key Credential
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.Credentials.Publi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1CredentialCredentialPublicKey>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1CredentialCredentialPublicKey.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1CredentialCredentialPublicKey>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.AccountsV1CredentialCredentialPublicKey.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves a collection of Public Key Credentials belonging to the account used to make the request

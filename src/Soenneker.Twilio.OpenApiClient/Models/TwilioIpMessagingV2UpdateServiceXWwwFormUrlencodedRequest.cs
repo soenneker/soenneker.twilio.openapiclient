@@ -11,167 +11,252 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioIpMessagingV2UpdateServiceXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ConsumptionReportInterval") is { } nullNodeConsumptionReportInterval && nullNodeConsumptionReportInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsumptionReportInterval = null;
+            if (parseNode.GetChildNode("DefaultChannelCreatorRoleSid") is { } nullNodeDefaultChannelCreatorRoleSid && nullNodeDefaultChannelCreatorRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultChannelCreatorRoleSid = null;
+            if (parseNode.GetChildNode("DefaultChannelRoleSid") is { } nullNodeDefaultChannelRoleSid && nullNodeDefaultChannelRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultChannelRoleSid = null;
+            if (parseNode.GetChildNode("DefaultServiceRoleSid") is { } nullNodeDefaultServiceRoleSid && nullNodeDefaultServiceRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultServiceRoleSid = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("Limits.ChannelMembers") is { } nullNodeLimitsChannelMembers && nullNodeLimitsChannelMembers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LimitsChannelMembers = null;
+            if (parseNode.GetChildNode("Limits.UserChannels") is { } nullNodeLimitsUserChannels && nullNodeLimitsUserChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LimitsUserChannels = null;
+            if (parseNode.GetChildNode("Media.CompatibilityMessage") is { } nullNodeMediaCompatibilityMessage && nullNodeMediaCompatibilityMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaCompatibilityMessage = null;
+            if (parseNode.GetChildNode("Notifications.AddedToChannel.Enabled") is { } nullNodeNotificationsAddedToChannelEnabled && nullNodeNotificationsAddedToChannelEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsAddedToChannelEnabled = null;
+            if (parseNode.GetChildNode("Notifications.AddedToChannel.Sound") is { } nullNodeNotificationsAddedToChannelSound && nullNodeNotificationsAddedToChannelSound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsAddedToChannelSound = null;
+            if (parseNode.GetChildNode("Notifications.AddedToChannel.Template") is { } nullNodeNotificationsAddedToChannelTemplate && nullNodeNotificationsAddedToChannelTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsAddedToChannelTemplate = null;
+            if (parseNode.GetChildNode("Notifications.InvitedToChannel.Enabled") is { } nullNodeNotificationsInvitedToChannelEnabled && nullNodeNotificationsInvitedToChannelEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsInvitedToChannelEnabled = null;
+            if (parseNode.GetChildNode("Notifications.InvitedToChannel.Sound") is { } nullNodeNotificationsInvitedToChannelSound && nullNodeNotificationsInvitedToChannelSound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsInvitedToChannelSound = null;
+            if (parseNode.GetChildNode("Notifications.InvitedToChannel.Template") is { } nullNodeNotificationsInvitedToChannelTemplate && nullNodeNotificationsInvitedToChannelTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsInvitedToChannelTemplate = null;
+            if (parseNode.GetChildNode("Notifications.LogEnabled") is { } nullNodeNotificationsLogEnabled && nullNodeNotificationsLogEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsLogEnabled = null;
+            if (parseNode.GetChildNode("Notifications.NewMessage.BadgeCountEnabled") is { } nullNodeNotificationsNewMessageBadgeCountEnabled && nullNodeNotificationsNewMessageBadgeCountEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsNewMessageBadgeCountEnabled = null;
+            if (parseNode.GetChildNode("Notifications.NewMessage.Enabled") is { } nullNodeNotificationsNewMessageEnabled && nullNodeNotificationsNewMessageEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsNewMessageEnabled = null;
+            if (parseNode.GetChildNode("Notifications.NewMessage.Sound") is { } nullNodeNotificationsNewMessageSound && nullNodeNotificationsNewMessageSound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsNewMessageSound = null;
+            if (parseNode.GetChildNode("Notifications.NewMessage.Template") is { } nullNodeNotificationsNewMessageTemplate && nullNodeNotificationsNewMessageTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsNewMessageTemplate = null;
+            if (parseNode.GetChildNode("Notifications.RemovedFromChannel.Enabled") is { } nullNodeNotificationsRemovedFromChannelEnabled && nullNodeNotificationsRemovedFromChannelEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsRemovedFromChannelEnabled = null;
+            if (parseNode.GetChildNode("Notifications.RemovedFromChannel.Sound") is { } nullNodeNotificationsRemovedFromChannelSound && nullNodeNotificationsRemovedFromChannelSound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsRemovedFromChannelSound = null;
+            if (parseNode.GetChildNode("Notifications.RemovedFromChannel.Template") is { } nullNodeNotificationsRemovedFromChannelTemplate && nullNodeNotificationsRemovedFromChannelTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsRemovedFromChannelTemplate = null;
+            if (parseNode.GetChildNode("PostWebhookRetryCount") is { } nullNodePostWebhookRetryCount && nullNodePostWebhookRetryCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostWebhookRetryCount = null;
+            if (parseNode.GetChildNode("PostWebhookUrl") is { } nullNodePostWebhookUrl && nullNodePostWebhookUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostWebhookUrl = null;
+            if (parseNode.GetChildNode("PreWebhookRetryCount") is { } nullNodePreWebhookRetryCount && nullNodePreWebhookRetryCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreWebhookRetryCount = null;
+            if (parseNode.GetChildNode("PreWebhookUrl") is { } nullNodePreWebhookUrl && nullNodePreWebhookUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreWebhookUrl = null;
+            if (parseNode.GetChildNode("ReachabilityEnabled") is { } nullNodeReachabilityEnabled && nullNodeReachabilityEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReachabilityEnabled = null;
+            if (parseNode.GetChildNode("ReadStatusEnabled") is { } nullNodeReadStatusEnabled && nullNodeReadStatusEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadStatusEnabled = null;
+            if (parseNode.GetChildNode("TypingIndicatorTimeout") is { } nullNodeTypingIndicatorTimeout && nullNodeTypingIndicatorTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypingIndicatorTimeout = null;
+            if (parseNode.GetChildNode("WebhookFilters") is { } nullNodeWebhookFilters && nullNodeWebhookFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookFilters = null;
+            if (parseNode.GetChildNode("WebhookMethod") is { } nullNodeWebhookMethod && nullNodeWebhookMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookMethod = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ConsumptionReportInterval property</summary>
-        public int? ConsumptionReportInterval { get; set; }
+        public int? ConsumptionReportInterval { get => _explicitNullValueConsumptionReportInterval; set { _explicitNullValueConsumptionReportInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsumptionReportInterval"); else _explicitNullProperties?.Remove("ConsumptionReportInterval"); } }
+        private int? _explicitNullValueConsumptionReportInterval = default!;
         /// <summary>The DefaultChannelCreatorRoleSid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultChannelCreatorRoleSid { get; set; }
+        public string? DefaultChannelCreatorRoleSid { get => _explicitNullValueDefaultChannelCreatorRoleSid; set { _explicitNullValueDefaultChannelCreatorRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChannelCreatorRoleSid"); else _explicitNullProperties?.Remove("DefaultChannelCreatorRoleSid"); } }
+        private string? _explicitNullValueDefaultChannelCreatorRoleSid = default!;
 #nullable restore
 #else
-        public string DefaultChannelCreatorRoleSid { get; set; }
+        public string DefaultChannelCreatorRoleSid { get => _explicitNullValueDefaultChannelCreatorRoleSid; set { _explicitNullValueDefaultChannelCreatorRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChannelCreatorRoleSid"); else _explicitNullProperties?.Remove("DefaultChannelCreatorRoleSid"); } }
+        private string _explicitNullValueDefaultChannelCreatorRoleSid = default!;
 #endif
         /// <summary>The DefaultChannelRoleSid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultChannelRoleSid { get; set; }
+        public string? DefaultChannelRoleSid { get => _explicitNullValueDefaultChannelRoleSid; set { _explicitNullValueDefaultChannelRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChannelRoleSid"); else _explicitNullProperties?.Remove("DefaultChannelRoleSid"); } }
+        private string? _explicitNullValueDefaultChannelRoleSid = default!;
 #nullable restore
 #else
-        public string DefaultChannelRoleSid { get; set; }
+        public string DefaultChannelRoleSid { get => _explicitNullValueDefaultChannelRoleSid; set { _explicitNullValueDefaultChannelRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChannelRoleSid"); else _explicitNullProperties?.Remove("DefaultChannelRoleSid"); } }
+        private string _explicitNullValueDefaultChannelRoleSid = default!;
 #endif
         /// <summary>The DefaultServiceRoleSid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultServiceRoleSid { get; set; }
+        public string? DefaultServiceRoleSid { get => _explicitNullValueDefaultServiceRoleSid; set { _explicitNullValueDefaultServiceRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultServiceRoleSid"); else _explicitNullProperties?.Remove("DefaultServiceRoleSid"); } }
+        private string? _explicitNullValueDefaultServiceRoleSid = default!;
 #nullable restore
 #else
-        public string DefaultServiceRoleSid { get; set; }
+        public string DefaultServiceRoleSid { get => _explicitNullValueDefaultServiceRoleSid; set { _explicitNullValueDefaultServiceRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultServiceRoleSid"); else _explicitNullProperties?.Remove("DefaultServiceRoleSid"); } }
+        private string _explicitNullValueDefaultServiceRoleSid = default!;
 #endif
         /// <summary>The FriendlyName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The LimitsChannelMembers property</summary>
-        public int? LimitsChannelMembers { get; set; }
+        public int? LimitsChannelMembers { get => _explicitNullValueLimitsChannelMembers; set { _explicitNullValueLimitsChannelMembers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Limits.ChannelMembers"); else _explicitNullProperties?.Remove("Limits.ChannelMembers"); } }
+        private int? _explicitNullValueLimitsChannelMembers = default!;
         /// <summary>The LimitsUserChannels property</summary>
-        public int? LimitsUserChannels { get; set; }
+        public int? LimitsUserChannels { get => _explicitNullValueLimitsUserChannels; set { _explicitNullValueLimitsUserChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Limits.UserChannels"); else _explicitNullProperties?.Remove("Limits.UserChannels"); } }
+        private int? _explicitNullValueLimitsUserChannels = default!;
         /// <summary>The MediaCompatibilityMessage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaCompatibilityMessage { get; set; }
+        public string? MediaCompatibilityMessage { get => _explicitNullValueMediaCompatibilityMessage; set { _explicitNullValueMediaCompatibilityMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Media.CompatibilityMessage"); else _explicitNullProperties?.Remove("Media.CompatibilityMessage"); } }
+        private string? _explicitNullValueMediaCompatibilityMessage = default!;
 #nullable restore
 #else
-        public string MediaCompatibilityMessage { get; set; }
+        public string MediaCompatibilityMessage { get => _explicitNullValueMediaCompatibilityMessage; set { _explicitNullValueMediaCompatibilityMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Media.CompatibilityMessage"); else _explicitNullProperties?.Remove("Media.CompatibilityMessage"); } }
+        private string _explicitNullValueMediaCompatibilityMessage = default!;
 #endif
         /// <summary>The NotificationsAddedToChannelEnabled property</summary>
-        public bool? NotificationsAddedToChannelEnabled { get; set; }
+        public bool? NotificationsAddedToChannelEnabled { get => _explicitNullValueNotificationsAddedToChannelEnabled; set { _explicitNullValueNotificationsAddedToChannelEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.AddedToChannel.Enabled"); else _explicitNullProperties?.Remove("Notifications.AddedToChannel.Enabled"); } }
+        private bool? _explicitNullValueNotificationsAddedToChannelEnabled = default!;
         /// <summary>The NotificationsAddedToChannelSound property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsAddedToChannelSound { get; set; }
+        public string? NotificationsAddedToChannelSound { get => _explicitNullValueNotificationsAddedToChannelSound; set { _explicitNullValueNotificationsAddedToChannelSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.AddedToChannel.Sound"); else _explicitNullProperties?.Remove("Notifications.AddedToChannel.Sound"); } }
+        private string? _explicitNullValueNotificationsAddedToChannelSound = default!;
 #nullable restore
 #else
-        public string NotificationsAddedToChannelSound { get; set; }
+        public string NotificationsAddedToChannelSound { get => _explicitNullValueNotificationsAddedToChannelSound; set { _explicitNullValueNotificationsAddedToChannelSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.AddedToChannel.Sound"); else _explicitNullProperties?.Remove("Notifications.AddedToChannel.Sound"); } }
+        private string _explicitNullValueNotificationsAddedToChannelSound = default!;
 #endif
         /// <summary>The NotificationsAddedToChannelTemplate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsAddedToChannelTemplate { get; set; }
+        public string? NotificationsAddedToChannelTemplate { get => _explicitNullValueNotificationsAddedToChannelTemplate; set { _explicitNullValueNotificationsAddedToChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.AddedToChannel.Template"); else _explicitNullProperties?.Remove("Notifications.AddedToChannel.Template"); } }
+        private string? _explicitNullValueNotificationsAddedToChannelTemplate = default!;
 #nullable restore
 #else
-        public string NotificationsAddedToChannelTemplate { get; set; }
+        public string NotificationsAddedToChannelTemplate { get => _explicitNullValueNotificationsAddedToChannelTemplate; set { _explicitNullValueNotificationsAddedToChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.AddedToChannel.Template"); else _explicitNullProperties?.Remove("Notifications.AddedToChannel.Template"); } }
+        private string _explicitNullValueNotificationsAddedToChannelTemplate = default!;
 #endif
         /// <summary>The NotificationsInvitedToChannelEnabled property</summary>
-        public bool? NotificationsInvitedToChannelEnabled { get; set; }
+        public bool? NotificationsInvitedToChannelEnabled { get => _explicitNullValueNotificationsInvitedToChannelEnabled; set { _explicitNullValueNotificationsInvitedToChannelEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.InvitedToChannel.Enabled"); else _explicitNullProperties?.Remove("Notifications.InvitedToChannel.Enabled"); } }
+        private bool? _explicitNullValueNotificationsInvitedToChannelEnabled = default!;
         /// <summary>The NotificationsInvitedToChannelSound property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsInvitedToChannelSound { get; set; }
+        public string? NotificationsInvitedToChannelSound { get => _explicitNullValueNotificationsInvitedToChannelSound; set { _explicitNullValueNotificationsInvitedToChannelSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.InvitedToChannel.Sound"); else _explicitNullProperties?.Remove("Notifications.InvitedToChannel.Sound"); } }
+        private string? _explicitNullValueNotificationsInvitedToChannelSound = default!;
 #nullable restore
 #else
-        public string NotificationsInvitedToChannelSound { get; set; }
+        public string NotificationsInvitedToChannelSound { get => _explicitNullValueNotificationsInvitedToChannelSound; set { _explicitNullValueNotificationsInvitedToChannelSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.InvitedToChannel.Sound"); else _explicitNullProperties?.Remove("Notifications.InvitedToChannel.Sound"); } }
+        private string _explicitNullValueNotificationsInvitedToChannelSound = default!;
 #endif
         /// <summary>The NotificationsInvitedToChannelTemplate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsInvitedToChannelTemplate { get; set; }
+        public string? NotificationsInvitedToChannelTemplate { get => _explicitNullValueNotificationsInvitedToChannelTemplate; set { _explicitNullValueNotificationsInvitedToChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.InvitedToChannel.Template"); else _explicitNullProperties?.Remove("Notifications.InvitedToChannel.Template"); } }
+        private string? _explicitNullValueNotificationsInvitedToChannelTemplate = default!;
 #nullable restore
 #else
-        public string NotificationsInvitedToChannelTemplate { get; set; }
+        public string NotificationsInvitedToChannelTemplate { get => _explicitNullValueNotificationsInvitedToChannelTemplate; set { _explicitNullValueNotificationsInvitedToChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.InvitedToChannel.Template"); else _explicitNullProperties?.Remove("Notifications.InvitedToChannel.Template"); } }
+        private string _explicitNullValueNotificationsInvitedToChannelTemplate = default!;
 #endif
         /// <summary>The NotificationsLogEnabled property</summary>
-        public bool? NotificationsLogEnabled { get; set; }
+        public bool? NotificationsLogEnabled { get => _explicitNullValueNotificationsLogEnabled; set { _explicitNullValueNotificationsLogEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.LogEnabled"); else _explicitNullProperties?.Remove("Notifications.LogEnabled"); } }
+        private bool? _explicitNullValueNotificationsLogEnabled = default!;
         /// <summary>The NotificationsNewMessageBadgeCountEnabled property</summary>
-        public bool? NotificationsNewMessageBadgeCountEnabled { get; set; }
+        public bool? NotificationsNewMessageBadgeCountEnabled { get => _explicitNullValueNotificationsNewMessageBadgeCountEnabled; set { _explicitNullValueNotificationsNewMessageBadgeCountEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.NewMessage.BadgeCountEnabled"); else _explicitNullProperties?.Remove("Notifications.NewMessage.BadgeCountEnabled"); } }
+        private bool? _explicitNullValueNotificationsNewMessageBadgeCountEnabled = default!;
         /// <summary>The NotificationsNewMessageEnabled property</summary>
-        public bool? NotificationsNewMessageEnabled { get; set; }
+        public bool? NotificationsNewMessageEnabled { get => _explicitNullValueNotificationsNewMessageEnabled; set { _explicitNullValueNotificationsNewMessageEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.NewMessage.Enabled"); else _explicitNullProperties?.Remove("Notifications.NewMessage.Enabled"); } }
+        private bool? _explicitNullValueNotificationsNewMessageEnabled = default!;
         /// <summary>The NotificationsNewMessageSound property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsNewMessageSound { get; set; }
+        public string? NotificationsNewMessageSound { get => _explicitNullValueNotificationsNewMessageSound; set { _explicitNullValueNotificationsNewMessageSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.NewMessage.Sound"); else _explicitNullProperties?.Remove("Notifications.NewMessage.Sound"); } }
+        private string? _explicitNullValueNotificationsNewMessageSound = default!;
 #nullable restore
 #else
-        public string NotificationsNewMessageSound { get; set; }
+        public string NotificationsNewMessageSound { get => _explicitNullValueNotificationsNewMessageSound; set { _explicitNullValueNotificationsNewMessageSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.NewMessage.Sound"); else _explicitNullProperties?.Remove("Notifications.NewMessage.Sound"); } }
+        private string _explicitNullValueNotificationsNewMessageSound = default!;
 #endif
         /// <summary>The NotificationsNewMessageTemplate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsNewMessageTemplate { get; set; }
+        public string? NotificationsNewMessageTemplate { get => _explicitNullValueNotificationsNewMessageTemplate; set { _explicitNullValueNotificationsNewMessageTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.NewMessage.Template"); else _explicitNullProperties?.Remove("Notifications.NewMessage.Template"); } }
+        private string? _explicitNullValueNotificationsNewMessageTemplate = default!;
 #nullable restore
 #else
-        public string NotificationsNewMessageTemplate { get; set; }
+        public string NotificationsNewMessageTemplate { get => _explicitNullValueNotificationsNewMessageTemplate; set { _explicitNullValueNotificationsNewMessageTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.NewMessage.Template"); else _explicitNullProperties?.Remove("Notifications.NewMessage.Template"); } }
+        private string _explicitNullValueNotificationsNewMessageTemplate = default!;
 #endif
         /// <summary>The NotificationsRemovedFromChannelEnabled property</summary>
-        public bool? NotificationsRemovedFromChannelEnabled { get; set; }
+        public bool? NotificationsRemovedFromChannelEnabled { get => _explicitNullValueNotificationsRemovedFromChannelEnabled; set { _explicitNullValueNotificationsRemovedFromChannelEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.RemovedFromChannel.Enabled"); else _explicitNullProperties?.Remove("Notifications.RemovedFromChannel.Enabled"); } }
+        private bool? _explicitNullValueNotificationsRemovedFromChannelEnabled = default!;
         /// <summary>The NotificationsRemovedFromChannelSound property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsRemovedFromChannelSound { get; set; }
+        public string? NotificationsRemovedFromChannelSound { get => _explicitNullValueNotificationsRemovedFromChannelSound; set { _explicitNullValueNotificationsRemovedFromChannelSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.RemovedFromChannel.Sound"); else _explicitNullProperties?.Remove("Notifications.RemovedFromChannel.Sound"); } }
+        private string? _explicitNullValueNotificationsRemovedFromChannelSound = default!;
 #nullable restore
 #else
-        public string NotificationsRemovedFromChannelSound { get; set; }
+        public string NotificationsRemovedFromChannelSound { get => _explicitNullValueNotificationsRemovedFromChannelSound; set { _explicitNullValueNotificationsRemovedFromChannelSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.RemovedFromChannel.Sound"); else _explicitNullProperties?.Remove("Notifications.RemovedFromChannel.Sound"); } }
+        private string _explicitNullValueNotificationsRemovedFromChannelSound = default!;
 #endif
         /// <summary>The NotificationsRemovedFromChannelTemplate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsRemovedFromChannelTemplate { get; set; }
+        public string? NotificationsRemovedFromChannelTemplate { get => _explicitNullValueNotificationsRemovedFromChannelTemplate; set { _explicitNullValueNotificationsRemovedFromChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.RemovedFromChannel.Template"); else _explicitNullProperties?.Remove("Notifications.RemovedFromChannel.Template"); } }
+        private string? _explicitNullValueNotificationsRemovedFromChannelTemplate = default!;
 #nullable restore
 #else
-        public string NotificationsRemovedFromChannelTemplate { get; set; }
+        public string NotificationsRemovedFromChannelTemplate { get => _explicitNullValueNotificationsRemovedFromChannelTemplate; set { _explicitNullValueNotificationsRemovedFromChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.RemovedFromChannel.Template"); else _explicitNullProperties?.Remove("Notifications.RemovedFromChannel.Template"); } }
+        private string _explicitNullValueNotificationsRemovedFromChannelTemplate = default!;
 #endif
         /// <summary>The PostWebhookRetryCount property</summary>
-        public int? PostWebhookRetryCount { get; set; }
+        public int? PostWebhookRetryCount { get => _explicitNullValuePostWebhookRetryCount; set { _explicitNullValuePostWebhookRetryCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostWebhookRetryCount"); else _explicitNullProperties?.Remove("PostWebhookRetryCount"); } }
+        private int? _explicitNullValuePostWebhookRetryCount = default!;
         /// <summary>The PostWebhookUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PostWebhookUrl { get; set; }
+        public string? PostWebhookUrl { get => _explicitNullValuePostWebhookUrl; set { _explicitNullValuePostWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostWebhookUrl"); else _explicitNullProperties?.Remove("PostWebhookUrl"); } }
+        private string? _explicitNullValuePostWebhookUrl = default!;
 #nullable restore
 #else
-        public string PostWebhookUrl { get; set; }
+        public string PostWebhookUrl { get => _explicitNullValuePostWebhookUrl; set { _explicitNullValuePostWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostWebhookUrl"); else _explicitNullProperties?.Remove("PostWebhookUrl"); } }
+        private string _explicitNullValuePostWebhookUrl = default!;
 #endif
         /// <summary>The PreWebhookRetryCount property</summary>
-        public int? PreWebhookRetryCount { get; set; }
+        public int? PreWebhookRetryCount { get => _explicitNullValuePreWebhookRetryCount; set { _explicitNullValuePreWebhookRetryCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreWebhookRetryCount"); else _explicitNullProperties?.Remove("PreWebhookRetryCount"); } }
+        private int? _explicitNullValuePreWebhookRetryCount = default!;
         /// <summary>The PreWebhookUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreWebhookUrl { get; set; }
+        public string? PreWebhookUrl { get => _explicitNullValuePreWebhookUrl; set { _explicitNullValuePreWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreWebhookUrl"); else _explicitNullProperties?.Remove("PreWebhookUrl"); } }
+        private string? _explicitNullValuePreWebhookUrl = default!;
 #nullable restore
 #else
-        public string PreWebhookUrl { get; set; }
+        public string PreWebhookUrl { get => _explicitNullValuePreWebhookUrl; set { _explicitNullValuePreWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreWebhookUrl"); else _explicitNullProperties?.Remove("PreWebhookUrl"); } }
+        private string _explicitNullValuePreWebhookUrl = default!;
 #endif
         /// <summary>The ReachabilityEnabled property</summary>
-        public bool? ReachabilityEnabled { get; set; }
+        public bool? ReachabilityEnabled { get => _explicitNullValueReachabilityEnabled; set { _explicitNullValueReachabilityEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReachabilityEnabled"); else _explicitNullProperties?.Remove("ReachabilityEnabled"); } }
+        private bool? _explicitNullValueReachabilityEnabled = default!;
         /// <summary>The ReadStatusEnabled property</summary>
-        public bool? ReadStatusEnabled { get; set; }
+        public bool? ReadStatusEnabled { get => _explicitNullValueReadStatusEnabled; set { _explicitNullValueReadStatusEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReadStatusEnabled"); else _explicitNullProperties?.Remove("ReadStatusEnabled"); } }
+        private bool? _explicitNullValueReadStatusEnabled = default!;
         /// <summary>The TypingIndicatorTimeout property</summary>
-        public int? TypingIndicatorTimeout { get; set; }
+        public int? TypingIndicatorTimeout { get => _explicitNullValueTypingIndicatorTimeout; set { _explicitNullValueTypingIndicatorTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TypingIndicatorTimeout"); else _explicitNullProperties?.Remove("TypingIndicatorTimeout"); } }
+        private int? _explicitNullValueTypingIndicatorTimeout = default!;
         /// <summary>The WebhookFilters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? WebhookFilters { get; set; }
+        public List<string>? WebhookFilters { get => _explicitNullValueWebhookFilters; set { _explicitNullValueWebhookFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookFilters"); else _explicitNullProperties?.Remove("WebhookFilters"); } }
+        private List<string>? _explicitNullValueWebhookFilters = default!;
 #nullable restore
 #else
-        public List<string> WebhookFilters { get; set; }
+        public List<string> WebhookFilters { get => _explicitNullValueWebhookFilters; set { _explicitNullValueWebhookFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookFilters"); else _explicitNullProperties?.Remove("WebhookFilters"); } }
+        private List<string> _explicitNullValueWebhookFilters = default!;
 #endif
         /// <summary>The WebhookMethod property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UpdateServiceXWwwFormUrlencodedRequestWebhookMethod? WebhookMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UpdateServiceXWwwFormUrlencodedRequestWebhookMethod? WebhookMethod { get => _explicitNullValueWebhookMethod; set { _explicitNullValueWebhookMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookMethod"); else _explicitNullProperties?.Remove("WebhookMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UpdateServiceXWwwFormUrlencodedRequestWebhookMethod? _explicitNullValueWebhookMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UpdateServiceXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -187,7 +272,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UpdateServiceXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UpdateServiceXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UpdateServiceXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -268,6 +353,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("TypingIndicatorTimeout", TypingIndicatorTimeout);
             writer.WriteCollectionOfPrimitiveValues<string>("WebhookFilters", WebhookFilters);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIpMessagingV2UpdateServiceXWwwFormUrlencodedRequestWebhookMethod>("WebhookMethod", WebhookMethod);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

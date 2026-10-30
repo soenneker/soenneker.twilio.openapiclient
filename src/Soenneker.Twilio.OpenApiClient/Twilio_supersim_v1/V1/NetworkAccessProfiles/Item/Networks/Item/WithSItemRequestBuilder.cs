@@ -48,7 +48,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Fetch a Network Access Profile resource&apos;s Network resource.
@@ -66,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_supersim_v1.V1.NetworkAccessProf
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileNetworkAccessProfileNetwork>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileNetworkAccessProfileNetwork.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileNetworkAccessProfileNetwork>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.SupersimV1NetworkAccessProfileNetworkAccessProfileNetwork.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Remove a Network resource from the Network Access Profile resource&apos;s.

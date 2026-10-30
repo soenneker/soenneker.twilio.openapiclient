@@ -11,64 +11,92 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioOAuthV2FetchOAuth2ServerMetadata200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("authorization_endpoint") is { } nullNodeAuthorizationEndpoint && nullNodeAuthorizationEndpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizationEndpoint = null;
+            if (parseNode.GetChildNode("code_challenge_methods_supported") is { } nullNodeCodeChallengeMethodsSupported && nullNodeCodeChallengeMethodsSupported.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeChallengeMethodsSupported = null;
+            if (parseNode.GetChildNode("grant_types_supported") is { } nullNodeGrantTypesSupported && nullNodeGrantTypesSupported.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrantTypesSupported = null;
+            if (parseNode.GetChildNode("issuer") is { } nullNodeIssuer && nullNodeIssuer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Issuer = null;
+            if (parseNode.GetChildNode("response_types_supported") is { } nullNodeResponseTypesSupported && nullNodeResponseTypesSupported.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseTypesSupported = null;
+            if (parseNode.GetChildNode("token_endpoint") is { } nullNodeTokenEndpoint && nullNodeTokenEndpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenEndpoint = null;
+            if (parseNode.GetChildNode("token_endpoint_auth_methods_supported") is { } nullNodeTokenEndpointAuthMethodsSupported && nullNodeTokenEndpointAuthMethodsSupported.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenEndpointAuthMethodsSupported = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The authorization_endpoint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorizationEndpoint { get; set; }
+        public string? AuthorizationEndpoint { get => _explicitNullValueAuthorizationEndpoint; set { _explicitNullValueAuthorizationEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorization_endpoint"); else _explicitNullProperties?.Remove("authorization_endpoint"); } }
+        private string? _explicitNullValueAuthorizationEndpoint = default!;
 #nullable restore
 #else
-        public string AuthorizationEndpoint { get; set; }
+        public string AuthorizationEndpoint { get => _explicitNullValueAuthorizationEndpoint; set { _explicitNullValueAuthorizationEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorization_endpoint"); else _explicitNullProperties?.Remove("authorization_endpoint"); } }
+        private string _explicitNullValueAuthorizationEndpoint = default!;
 #endif
         /// <summary>The code_challenge_methods_supported property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.S256Item?>? CodeChallengeMethodsSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.S256Item?>? CodeChallengeMethodsSupported { get => _explicitNullValueCodeChallengeMethodsSupported; set { _explicitNullValueCodeChallengeMethodsSupported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge_methods_supported"); else _explicitNullProperties?.Remove("code_challenge_methods_supported"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.S256Item?>? _explicitNullValueCodeChallengeMethodsSupported = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.S256Item?> CodeChallengeMethodsSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.S256Item?> CodeChallengeMethodsSupported { get => _explicitNullValueCodeChallengeMethodsSupported; set { _explicitNullValueCodeChallengeMethodsSupported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge_methods_supported"); else _explicitNullProperties?.Remove("code_challenge_methods_supported"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.S256Item?> _explicitNullValueCodeChallengeMethodsSupported = default!;
 #endif
         /// <summary>The grant_types_supported property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseGrantTypesSupportedItem?>? GrantTypesSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseGrantTypesSupportedItem?>? GrantTypesSupported { get => _explicitNullValueGrantTypesSupported; set { _explicitNullValueGrantTypesSupported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grant_types_supported"); else _explicitNullProperties?.Remove("grant_types_supported"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseGrantTypesSupportedItem?>? _explicitNullValueGrantTypesSupported = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseGrantTypesSupportedItem?> GrantTypesSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseGrantTypesSupportedItem?> GrantTypesSupported { get => _explicitNullValueGrantTypesSupported; set { _explicitNullValueGrantTypesSupported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grant_types_supported"); else _explicitNullProperties?.Remove("grant_types_supported"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseGrantTypesSupportedItem?> _explicitNullValueGrantTypesSupported = default!;
 #endif
         /// <summary>The issuer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Issuer { get; set; }
+        public string? Issuer { get => _explicitNullValueIssuer; set { _explicitNullValueIssuer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuer"); else _explicitNullProperties?.Remove("issuer"); } }
+        private string? _explicitNullValueIssuer = default!;
 #nullable restore
 #else
-        public string Issuer { get; set; }
+        public string Issuer { get => _explicitNullValueIssuer; set { _explicitNullValueIssuer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuer"); else _explicitNullProperties?.Remove("issuer"); } }
+        private string _explicitNullValueIssuer = default!;
 #endif
         /// <summary>The response_types_supported property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CodeItem?>? ResponseTypesSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CodeItem?>? ResponseTypesSupported { get => _explicitNullValueResponseTypesSupported; set { _explicitNullValueResponseTypesSupported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_types_supported"); else _explicitNullProperties?.Remove("response_types_supported"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.CodeItem?>? _explicitNullValueResponseTypesSupported = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.CodeItem?> ResponseTypesSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.CodeItem?> ResponseTypesSupported { get => _explicitNullValueResponseTypesSupported; set { _explicitNullValueResponseTypesSupported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_types_supported"); else _explicitNullProperties?.Remove("response_types_supported"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.CodeItem?> _explicitNullValueResponseTypesSupported = default!;
 #endif
         /// <summary>The token_endpoint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TokenEndpoint { get; set; }
+        public string? TokenEndpoint { get => _explicitNullValueTokenEndpoint; set { _explicitNullValueTokenEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_endpoint"); else _explicitNullProperties?.Remove("token_endpoint"); } }
+        private string? _explicitNullValueTokenEndpoint = default!;
 #nullable restore
 #else
-        public string TokenEndpoint { get; set; }
+        public string TokenEndpoint { get => _explicitNullValueTokenEndpoint; set { _explicitNullValueTokenEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_endpoint"); else _explicitNullProperties?.Remove("token_endpoint"); } }
+        private string _explicitNullValueTokenEndpoint = default!;
 #endif
         /// <summary>The token_endpoint_auth_methods_supported property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem?>? TokenEndpointAuthMethodsSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem?>? TokenEndpointAuthMethodsSupported { get => _explicitNullValueTokenEndpointAuthMethodsSupported; set { _explicitNullValueTokenEndpointAuthMethodsSupported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_endpoint_auth_methods_supported"); else _explicitNullProperties?.Remove("token_endpoint_auth_methods_supported"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem?>? _explicitNullValueTokenEndpointAuthMethodsSupported = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem?> TokenEndpointAuthMethodsSupported { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem?> TokenEndpointAuthMethodsSupported { get => _explicitNullValueTokenEndpointAuthMethodsSupported; set { _explicitNullValueTokenEndpointAuthMethodsSupported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_endpoint_auth_methods_supported"); else _explicitNullProperties?.Remove("token_endpoint_auth_methods_supported"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem?> _explicitNullValueTokenEndpointAuthMethodsSupported = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200Response"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.CodeItem>("response_types_supported", ResponseTypesSupported);
             writer.WriteStringValue("token_endpoint", TokenEndpoint);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.TwilioOAuthV2FetchOAuth2ServerMetadata200ResponseTokenEndpointAuthMethodsSupportedItem>("token_endpoint_auth_methods_supported", TokenEndpointAuthMethodsSupported);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

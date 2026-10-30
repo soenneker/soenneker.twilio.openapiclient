@@ -12,7 +12,12 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class KnowledgeSourceTypes : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.FileSourceDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,21 +50,30 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeSourceTypes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeSourceTypes();
-            if("File".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("FileSourceDetails".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.FileSourceDetails = new global::Soenneker.Twilio.OpenApiClient.Models.FileSourceDetails();
+                
             }
-            else if("Text".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("TextSourceDetails".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TextSourceDetails = new global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetails();
+                
             }
-            else if("Web".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("WebSourceDetails".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.WebSourceDetails = new global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetails();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("Text".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("content") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("Web".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("url") != null && (parseNode.GetChildNode("crawlPeriod") == null || (parseNode.GetChildNode("crawlPeriod")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag3 && ("WEEKLY".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "BIWEEKLY".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "MONTHLY".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "NEVER".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal))))))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("File".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("fileName") != null && parseNode.GetChildNode("fileSize") != null && parseNode.GetChildNode("mimeType") != null && (parseNode.GetChildNode("mimeType")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag5 && ("text/csv".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "text/markdown".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "application/pdf".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "text/tab-separated-values".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "text/plain".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal)))))();
+            if (result.FileSourceDetails == null && result.TextSourceDetails == null && result.WebSourceDetails == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.TextSourceDetails = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetails(), parseNode);
+            if (result.FileSourceDetails == null && result.TextSourceDetails == null && result.WebSourceDetails == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.WebSourceDetails = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetails(), parseNode);
+            if (result.FileSourceDetails == null && result.TextSourceDetails == null && result.WebSourceDetails == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.FileSourceDetails = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.FileSourceDetails(), parseNode);
+            if (result.FileSourceDetails == null && result.TextSourceDetails == null && result.WebSourceDetails == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,17 +101,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (FileSourceDetails == null && TextSourceDetails == null && WebSourceDetails == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (FileSourceDetails != null && TextSourceDetails == null && WebSourceDetails == null) { if (FileSourceDetails is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FileSourceDetails); return; }
+            if (TextSourceDetails != null && FileSourceDetails == null && WebSourceDetails == null) { if (TextSourceDetails is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TextSourceDetails); return; }
+            if (WebSourceDetails != null && FileSourceDetails == null && TextSourceDetails == null) { if (WebSourceDetails is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, WebSourceDetails); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(FileSourceDetails != null)
             {
+                if (FileSourceDetails is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.FileSourceDetails>(null, FileSourceDetails);
             }
             else if(TextSourceDetails != null)
             {
+                if (TextSourceDetails is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TextSourceDetails>(null, TextSourceDetails);
             }
             else if(WebSourceDetails != null)
             {
+                if (WebSourceDetails is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.WebSourceDetails>(null, WebSourceDetails);
             }
         }

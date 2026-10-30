@@ -12,16 +12,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccountReportKyt : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("outbound_carrier_calling") is { } nullNodeOutboundCarrierCalling && nullNodeOutboundCarrierCalling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundCarrierCalling = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>KYT metrics for outbound carrier calling.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling? OutboundCarrierCalling { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling? OutboundCarrierCalling { get => _explicitNullValueOutboundCarrierCalling; set { _explicitNullValueOutboundCarrierCalling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_carrier_calling"); else _explicitNullProperties?.Remove("outbound_carrier_calling"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling? _explicitNullValueOutboundCarrierCalling = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling OutboundCarrierCalling { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling OutboundCarrierCalling { get => _explicitNullValueOutboundCarrierCalling; set { _explicitNullValueOutboundCarrierCalling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_carrier_calling"); else _explicitNullProperties?.Remove("outbound_carrier_calling"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling _explicitNullValueOutboundCarrierCalling = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt"/> and sets the default values.
@@ -38,7 +48,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,6 +69,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKytOutboundCarrierCalling>("outbound_carrier_calling", OutboundCarrierCalling);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

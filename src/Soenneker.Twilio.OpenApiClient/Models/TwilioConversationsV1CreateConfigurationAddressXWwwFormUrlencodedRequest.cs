@@ -11,75 +11,113 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioConversationsV1CreateConfigurationAddressXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("AddressCountry") is { } nullNodeAddressCountry && nullNodeAddressCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressCountry = null;
+            if (parseNode.GetChildNode("AutoCreation.ConversationServiceSid") is { } nullNodeAutoCreationConversationServiceSid && nullNodeAutoCreationConversationServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCreationConversationServiceSid = null;
+            if (parseNode.GetChildNode("AutoCreation.Enabled") is { } nullNodeAutoCreationEnabled && nullNodeAutoCreationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCreationEnabled = null;
+            if (parseNode.GetChildNode("AutoCreation.StudioFlowSid") is { } nullNodeAutoCreationStudioFlowSid && nullNodeAutoCreationStudioFlowSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCreationStudioFlowSid = null;
+            if (parseNode.GetChildNode("AutoCreation.StudioRetryCount") is { } nullNodeAutoCreationStudioRetryCount && nullNodeAutoCreationStudioRetryCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCreationStudioRetryCount = null;
+            if (parseNode.GetChildNode("AutoCreation.Type") is { } nullNodeAutoCreationType && nullNodeAutoCreationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCreationType = null;
+            if (parseNode.GetChildNode("AutoCreation.WebhookFilters") is { } nullNodeAutoCreationWebhookFilters && nullNodeAutoCreationWebhookFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCreationWebhookFilters = null;
+            if (parseNode.GetChildNode("AutoCreation.WebhookMethod") is { } nullNodeAutoCreationWebhookMethod && nullNodeAutoCreationWebhookMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCreationWebhookMethod = null;
+            if (parseNode.GetChildNode("AutoCreation.WebhookUrl") is { } nullNodeAutoCreationWebhookUrl && nullNodeAutoCreationWebhookUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCreationWebhookUrl = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique address to be configured. The address can be a whatsapp address or phone number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Address { get; set; }
+        public string? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        private string? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public string Address { get; set; }
+        public string Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        private string _explicitNullValueAddress = default!;
 #endif
         /// <summary>An ISO 3166-1 alpha-2n country code which the address belongs to. This is currently only applicable to short code addresses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressCountry { get; set; }
+        public string? AddressCountry { get => _explicitNullValueAddressCountry; set { _explicitNullValueAddressCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressCountry"); else _explicitNullProperties?.Remove("AddressCountry"); } }
+        private string? _explicitNullValueAddressCountry = default!;
 #nullable restore
 #else
-        public string AddressCountry { get; set; }
+        public string AddressCountry { get => _explicitNullValueAddressCountry; set { _explicitNullValueAddressCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressCountry"); else _explicitNullProperties?.Remove("AddressCountry"); } }
+        private string _explicitNullValueAddressCountry = default!;
 #endif
         /// <summary>Conversation Service for the auto-created conversation. If not set, the conversation is created in the default service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutoCreationConversationServiceSid { get; set; }
+        public string? AutoCreationConversationServiceSid { get => _explicitNullValueAutoCreationConversationServiceSid; set { _explicitNullValueAutoCreationConversationServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.ConversationServiceSid"); else _explicitNullProperties?.Remove("AutoCreation.ConversationServiceSid"); } }
+        private string? _explicitNullValueAutoCreationConversationServiceSid = default!;
 #nullable restore
 #else
-        public string AutoCreationConversationServiceSid { get; set; }
+        public string AutoCreationConversationServiceSid { get => _explicitNullValueAutoCreationConversationServiceSid; set { _explicitNullValueAutoCreationConversationServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.ConversationServiceSid"); else _explicitNullProperties?.Remove("AutoCreation.ConversationServiceSid"); } }
+        private string _explicitNullValueAutoCreationConversationServiceSid = default!;
 #endif
         /// <summary>Enable/Disable auto-creating conversations for messages to this address</summary>
-        public bool? AutoCreationEnabled { get; set; }
+        public bool? AutoCreationEnabled { get => _explicitNullValueAutoCreationEnabled; set { _explicitNullValueAutoCreationEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.Enabled"); else _explicitNullProperties?.Remove("AutoCreation.Enabled"); } }
+        private bool? _explicitNullValueAutoCreationEnabled = default!;
         /// <summary>For type `studio`, the studio flow SID where the webhook should be sent to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutoCreationStudioFlowSid { get; set; }
+        public string? AutoCreationStudioFlowSid { get => _explicitNullValueAutoCreationStudioFlowSid; set { _explicitNullValueAutoCreationStudioFlowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.StudioFlowSid"); else _explicitNullProperties?.Remove("AutoCreation.StudioFlowSid"); } }
+        private string? _explicitNullValueAutoCreationStudioFlowSid = default!;
 #nullable restore
 #else
-        public string AutoCreationStudioFlowSid { get; set; }
+        public string AutoCreationStudioFlowSid { get => _explicitNullValueAutoCreationStudioFlowSid; set { _explicitNullValueAutoCreationStudioFlowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.StudioFlowSid"); else _explicitNullProperties?.Remove("AutoCreation.StudioFlowSid"); } }
+        private string _explicitNullValueAutoCreationStudioFlowSid = default!;
 #endif
         /// <summary>For type `studio`, number of times to retry the webhook request</summary>
-        public int? AutoCreationStudioRetryCount { get; set; }
+        public int? AutoCreationStudioRetryCount { get => _explicitNullValueAutoCreationStudioRetryCount; set { _explicitNullValueAutoCreationStudioRetryCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.StudioRetryCount"); else _explicitNullProperties?.Remove("AutoCreation.StudioRetryCount"); } }
+        private int? _explicitNullValueAutoCreationStudioRetryCount = default!;
         /// <summary>The AutoCreationType property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationAddressEnumAutoCreationType? AutoCreationType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationAddressEnumAutoCreationType? AutoCreationType { get => _explicitNullValueAutoCreationType; set { _explicitNullValueAutoCreationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.Type"); else _explicitNullProperties?.Remove("AutoCreation.Type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationAddressEnumAutoCreationType? _explicitNullValueAutoCreationType = default!;
         /// <summary>The list of events, firing webhook event for this Conversation. Values can be any of the following: `onMessageAdded`, `onMessageUpdated`, `onMessageRemoved`, `onConversationUpdated`, `onConversationStateUpdated`, `onConversationRemoved`, `onParticipantAdded`, `onParticipantUpdated`, `onParticipantRemoved`, `onDeliveryUpdated`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AutoCreationWebhookFilters { get; set; }
+        public List<string>? AutoCreationWebhookFilters { get => _explicitNullValueAutoCreationWebhookFilters; set { _explicitNullValueAutoCreationWebhookFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.WebhookFilters"); else _explicitNullProperties?.Remove("AutoCreation.WebhookFilters"); } }
+        private List<string>? _explicitNullValueAutoCreationWebhookFilters = default!;
 #nullable restore
 #else
-        public List<string> AutoCreationWebhookFilters { get; set; }
+        public List<string> AutoCreationWebhookFilters { get => _explicitNullValueAutoCreationWebhookFilters; set { _explicitNullValueAutoCreationWebhookFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.WebhookFilters"); else _explicitNullProperties?.Remove("AutoCreation.WebhookFilters"); } }
+        private List<string> _explicitNullValueAutoCreationWebhookFilters = default!;
 #endif
         /// <summary>The AutoCreationWebhookMethod property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationAddressEnumMethod? AutoCreationWebhookMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationAddressEnumMethod? AutoCreationWebhookMethod { get => _explicitNullValueAutoCreationWebhookMethod; set { _explicitNullValueAutoCreationWebhookMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.WebhookMethod"); else _explicitNullProperties?.Remove("AutoCreation.WebhookMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationAddressEnumMethod? _explicitNullValueAutoCreationWebhookMethod = default!;
         /// <summary>For type `webhook`, the url for the webhook request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutoCreationWebhookUrl { get; set; }
+        public string? AutoCreationWebhookUrl { get => _explicitNullValueAutoCreationWebhookUrl; set { _explicitNullValueAutoCreationWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.WebhookUrl"); else _explicitNullProperties?.Remove("AutoCreation.WebhookUrl"); } }
+        private string? _explicitNullValueAutoCreationWebhookUrl = default!;
 #nullable restore
 #else
-        public string AutoCreationWebhookUrl { get; set; }
+        public string AutoCreationWebhookUrl { get => _explicitNullValueAutoCreationWebhookUrl; set { _explicitNullValueAutoCreationWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoCreation.WebhookUrl"); else _explicitNullProperties?.Remove("AutoCreation.WebhookUrl"); } }
+        private string _explicitNullValueAutoCreationWebhookUrl = default!;
 #endif
         /// <summary>The human-readable name of this configuration, limited to 256 characters. Optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>Type of Address, value can be `whatsapp` or `sms`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationAddressEnumType? Type { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationAddressEnumType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationAddressEnumType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1CreateConfigurationAddressXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -95,7 +133,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1CreateConfigurationAddressXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1CreateConfigurationAddressXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1CreateConfigurationAddressXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -138,6 +176,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("AutoCreation.WebhookUrl", AutoCreationWebhookUrl);
             writer.WriteStringValue("FriendlyName", FriendlyName);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConfigurationAddressEnumType>("Type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

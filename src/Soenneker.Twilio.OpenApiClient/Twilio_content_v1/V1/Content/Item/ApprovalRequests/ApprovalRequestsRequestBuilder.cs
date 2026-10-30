@@ -55,7 +55,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_content_v1.V1.Content.Item.Appro
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetch>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetch.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetch>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ContentV1ContentApprovalFetch.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Fetch a Content resource&apos;s approval status by its unique Content Sid

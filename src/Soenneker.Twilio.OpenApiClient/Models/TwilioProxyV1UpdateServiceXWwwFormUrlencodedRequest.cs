@@ -11,54 +11,82 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioProxyV1UpdateServiceXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CallbackUrl") is { } nullNodeCallbackUrl && nullNodeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackUrl = null;
+            if (parseNode.GetChildNode("ChatInstanceSid") is { } nullNodeChatInstanceSid && nullNodeChatInstanceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChatInstanceSid = null;
+            if (parseNode.GetChildNode("DefaultTtl") is { } nullNodeDefaultTtl && nullNodeDefaultTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultTtl = null;
+            if (parseNode.GetChildNode("GeoMatchLevel") is { } nullNodeGeoMatchLevel && nullNodeGeoMatchLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoMatchLevel = null;
+            if (parseNode.GetChildNode("InterceptCallbackUrl") is { } nullNodeInterceptCallbackUrl && nullNodeInterceptCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterceptCallbackUrl = null;
+            if (parseNode.GetChildNode("NumberSelectionBehavior") is { } nullNodeNumberSelectionBehavior && nullNodeNumberSelectionBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberSelectionBehavior = null;
+            if (parseNode.GetChildNode("OutOfSessionCallbackUrl") is { } nullNodeOutOfSessionCallbackUrl && nullNodeOutOfSessionCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutOfSessionCallbackUrl = null;
+            if (parseNode.GetChildNode("UniqueName") is { } nullNodeUniqueName && nullNodeUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The URL we should call when the interaction status changes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallbackUrl { get; set; }
+        public string? CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackUrl"); else _explicitNullProperties?.Remove("CallbackUrl"); } }
+        private string? _explicitNullValueCallbackUrl = default!;
 #nullable restore
 #else
-        public string CallbackUrl { get; set; }
+        public string CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallbackUrl"); else _explicitNullProperties?.Remove("CallbackUrl"); } }
+        private string _explicitNullValueCallbackUrl = default!;
 #endif
         /// <summary>The SID of the Chat Service Instance managed by Proxy Service. The Chat Service enables Proxy to forward SMS and channel messages to this chat instance. This is a one-to-one relationship.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChatInstanceSid { get; set; }
+        public string? ChatInstanceSid { get => _explicitNullValueChatInstanceSid; set { _explicitNullValueChatInstanceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatInstanceSid"); else _explicitNullProperties?.Remove("ChatInstanceSid"); } }
+        private string? _explicitNullValueChatInstanceSid = default!;
 #nullable restore
 #else
-        public string ChatInstanceSid { get; set; }
+        public string ChatInstanceSid { get => _explicitNullValueChatInstanceSid; set { _explicitNullValueChatInstanceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatInstanceSid"); else _explicitNullProperties?.Remove("ChatInstanceSid"); } }
+        private string _explicitNullValueChatInstanceSid = default!;
 #endif
         /// <summary>The default `ttl` value to set for Sessions created in the Service. The TTL (time to live) is measured in seconds after the Session&apos;s last create or last Interaction. The default value of `0` indicates an unlimited Session length. You can override a Session&apos;s default TTL value by setting its `ttl` value.</summary>
-        public int? DefaultTtl { get; set; }
+        public int? DefaultTtl { get => _explicitNullValueDefaultTtl; set { _explicitNullValueDefaultTtl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultTtl"); else _explicitNullProperties?.Remove("DefaultTtl"); } }
+        private int? _explicitNullValueDefaultTtl = default!;
         /// <summary>Where a proxy number must be located relative to the participant identifier. Can be: `country`, `area-code`, or `extended-area-code`. The default value is `country` and more specific areas than `country` are only available in North America.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumGeoMatchLevel? GeoMatchLevel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumGeoMatchLevel? GeoMatchLevel { get => _explicitNullValueGeoMatchLevel; set { _explicitNullValueGeoMatchLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GeoMatchLevel"); else _explicitNullProperties?.Remove("GeoMatchLevel"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumGeoMatchLevel? _explicitNullValueGeoMatchLevel = default!;
         /// <summary>The URL we call on each interaction. If we receive a 403 status, we block the interaction; otherwise the interaction continues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InterceptCallbackUrl { get; set; }
+        public string? InterceptCallbackUrl { get => _explicitNullValueInterceptCallbackUrl; set { _explicitNullValueInterceptCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InterceptCallbackUrl"); else _explicitNullProperties?.Remove("InterceptCallbackUrl"); } }
+        private string? _explicitNullValueInterceptCallbackUrl = default!;
 #nullable restore
 #else
-        public string InterceptCallbackUrl { get; set; }
+        public string InterceptCallbackUrl { get => _explicitNullValueInterceptCallbackUrl; set { _explicitNullValueInterceptCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InterceptCallbackUrl"); else _explicitNullProperties?.Remove("InterceptCallbackUrl"); } }
+        private string _explicitNullValueInterceptCallbackUrl = default!;
 #endif
         /// <summary>The preference for Proxy Number selection in the Service instance. Can be: `prefer-sticky` or `avoid-sticky`. `prefer-sticky` means that we will try and select the same Proxy Number for a given participant if they have previous [Sessions](https://www.twilio.com/docs/proxy/api/session), but we will not fail if that Proxy Number cannot be used.  `avoid-sticky` means that we will try to use different Proxy Numbers as long as that is possible within a given pool rather than try and use a previously assigned number.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumNumberSelectionBehavior? NumberSelectionBehavior { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumNumberSelectionBehavior? NumberSelectionBehavior { get => _explicitNullValueNumberSelectionBehavior; set { _explicitNullValueNumberSelectionBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumberSelectionBehavior"); else _explicitNullProperties?.Remove("NumberSelectionBehavior"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumNumberSelectionBehavior? _explicitNullValueNumberSelectionBehavior = default!;
         /// <summary>The URL we should call when an inbound call or SMS action occurs on a closed or non-existent Session. If your server (or a Twilio [function](https://www.twilio.com/en-us/serverless/functions)) responds with valid [TwiML](https://www.twilio.com/docs/voice/twiml), we will process it. This means it is possible, for example, to play a message for a call, send an automated text message response, or redirect a call to another Phone Number. See [Out-of-Session Callback Response Guide](https://www.twilio.com/docs/proxy/out-session-callback-response-guide) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OutOfSessionCallbackUrl { get; set; }
+        public string? OutOfSessionCallbackUrl { get => _explicitNullValueOutOfSessionCallbackUrl; set { _explicitNullValueOutOfSessionCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OutOfSessionCallbackUrl"); else _explicitNullProperties?.Remove("OutOfSessionCallbackUrl"); } }
+        private string? _explicitNullValueOutOfSessionCallbackUrl = default!;
 #nullable restore
 #else
-        public string OutOfSessionCallbackUrl { get; set; }
+        public string OutOfSessionCallbackUrl { get => _explicitNullValueOutOfSessionCallbackUrl; set { _explicitNullValueOutOfSessionCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OutOfSessionCallbackUrl"); else _explicitNullProperties?.Remove("OutOfSessionCallbackUrl"); } }
+        private string _explicitNullValueOutOfSessionCallbackUrl = default!;
 #endif
         /// <summary>An application-defined string that uniquely identifies the resource. This value must be 191 characters or fewer in length and be unique. **This value should not have PII.**</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniqueName { get; set; }
+        public string? UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string? _explicitNullValueUniqueName = default!;
 #nullable restore
 #else
-        public string UniqueName { get; set; }
+        public string UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string _explicitNullValueUniqueName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1UpdateServiceXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -75,7 +103,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1UpdateServiceXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1UpdateServiceXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioProxyV1UpdateServiceXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -110,6 +138,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ServiceEnumNumberSelectionBehavior>("NumberSelectionBehavior", NumberSelectionBehavior);
             writer.WriteStringValue("OutOfSessionCallbackUrl", OutOfSessionCallbackUrl);
             writer.WriteStringValue("UniqueName", UniqueName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

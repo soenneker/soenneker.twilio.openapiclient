@@ -68,6 +68,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
             {
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListRoleAssignments400Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamOrganizationsListRoleAssignments403Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.PublicApiCreateRoleAssignmentResponsePage.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -95,6 +97,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_organizations.Organizations.
             {
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.PublicApiRoleAssignmentResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.PublicApiRoleAssignmentResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

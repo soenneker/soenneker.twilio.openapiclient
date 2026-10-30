@@ -70,6 +70,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.I
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -101,13 +103,15 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.I
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Knowledge>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Knowledge.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Partially update mutable fields of an existing knowledge source such as name, description, tags, or source-specificconfiguration. Only the fields provided in the request body will be updated. Some changes (e.g., KnowledgeSourceTypes)may trigger asynchronous reprocessing of the underlying content. Fields omitted from the request remain unchanged.Immutable fields (id, type, status, url, createdAt, updatedAt) cannot be modified directly.## Refresh ##To request reprocessing without changing fields, pass the query parameter `refresh=true`. When `refresh=true` is provided,the server will re-queue processing for this knowledge resource (transitioning the persisted status to `QUEUED`) andreturn 202 Accepted. This query parameter is idempotent while the resource is already QUEUED or PROCESSING.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.Knowledge"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2UpdateKnowledgeSuccessResponse"/></returns>
         /// <param name="body">Core properties for knowledge source that can be set at creation time. Regularly update and organize yourKnowledge sources to ensure it contains the most accurate and relevant information. This includes adding new entries,updating existing ones, and removing outdated content.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -120,11 +124,11 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.I
         /// <exception cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioError">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Knowledge?> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeCore body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.Item.Knowledge.Item.WithKnowledgeItemRequestBuilder.WithKnowledgeItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2UpdateKnowledgeSuccessResponse?> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeCore body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.Item.Knowledge.Item.WithKnowledgeItemRequestBuilder.WithKnowledgeItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.Knowledge> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeCore body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.Item.Knowledge.Item.WithKnowledgeItemRequestBuilder.WithKnowledgeItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2UpdateKnowledgeSuccessResponse> PatchAsync(global::Soenneker.Twilio.OpenApiClient.Models.KnowledgeCore body, Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.Item.Knowledge.Item.WithKnowledgeItemRequestBuilder.WithKnowledgeItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -138,8 +142,10 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_knowledge_v2.V2.KnowledgeBases.I
                 { "429", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Twilio.OpenApiClient.Models.TwilioError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.Knowledge>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.Knowledge.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2UpdateKnowledgeSuccessResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioKnowledgeV2UpdateKnowledgeSuccessResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Permanently delete knowledge source and all its associated data, including  processed chunks and embeddings. This action cannot be undone. The knowledge  resource will no longer be available for search or retrieval operations.

@@ -12,84 +12,122 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfiguration : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("channelSettings") is { } nullNodeChannelSettings && nullNodeChannelSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelSettings = null;
+            if (parseNode.GetChildNode("conversationGroupingType") is { } nullNodeConversationGroupingType && nullNodeConversationGroupingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationGroupingType = null;
+            if (parseNode.GetChildNode("conversationsV1Bridge") is { } nullNodeConversationsV1Bridge && nullNodeConversationsV1Bridge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationsV1Bridge = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("intelligenceConfigurationIds") is { } nullNodeIntelligenceConfigurationIds && nullNodeIntelligenceConfigurationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntelligenceConfigurationIds = null;
+            if (parseNode.GetChildNode("memoryExtractionEnabled") is { } nullNodeMemoryExtractionEnabled && nullNodeMemoryExtractionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemoryExtractionEnabled = null;
+            if (parseNode.GetChildNode("memoryStoreId") is { } nullNodeMemoryStoreId && nullNodeMemoryStoreId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemoryStoreId = null;
+            if (parseNode.GetChildNode("observationExtractionStrategyIds") is { } nullNodeObservationExtractionStrategyIds && nullNodeObservationExtractionStrategyIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObservationExtractionStrategyIds = null;
+            if (parseNode.GetChildNode("statusCallbacks") is { } nullNodeStatusCallbacks && nullNodeStatusCallbacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCallbacks = null;
+            if (parseNode.GetChildNode("traitExtractionStrategyIds") is { } nullNodeTraitExtractionStrategyIds && nullNodeTraitExtractionStrategyIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraitExtractionStrategyIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Channel-specific parameters forwarded as-is to the downstream sending service.Allows passing backend-specific fields without requiring API changes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationChannelSettings? ChannelSettings { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationChannelSettings? ChannelSettings { get => _explicitNullValueChannelSettings; set { _explicitNullValueChannelSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelSettings"); else _explicitNullProperties?.Remove("channelSettings"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationChannelSettings? _explicitNullValueChannelSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationChannelSettings ChannelSettings { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationChannelSettings ChannelSettings { get => _explicitNullValueChannelSettings; set { _explicitNullValueChannelSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelSettings"); else _explicitNullProperties?.Remove("channelSettings"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfigurationChannelSettings _explicitNullValueChannelSettings = default!;
 #endif
         /// <summary>Type of Conversation grouping strategy:- `GROUP_BY_PROFILE`: Groups Communications by resolved Profile from the Memory Store.  A Profile is looked up or created for `CUSTOMER` Participant types. All Communications from the same Profile are in the same Conversation, regardless of address or channel.- `GROUP_BY_PARTICIPANT_ADDRESSES`: Groups Communications by Participant addresses across all channels.  A customer using +18005550100 will be in the same Conversation whether they contact by SMS, WhatsApp, or RCS.- `GROUP_BY_PARTICIPANT_ADDRESSES_AND_CHANNEL_TYPE`: Groups Communications by both Participant addresses AND channel.  A customer using +18005550100 by SMS will be in a different Conversation than the same customer by Voice.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationGroupingType? ConversationGroupingType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationGroupingType? ConversationGroupingType { get => _explicitNullValueConversationGroupingType; set { _explicitNullValueConversationGroupingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationGroupingType"); else _explicitNullProperties?.Remove("conversationGroupingType"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationGroupingType? _explicitNullValueConversationGroupingType = default!;
         /// <summary>Configuration for Conversations V1 bridge. When set, messaging channels route through Conversations V1. Use this to integrate with existing Conversations V1 applications.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationsV1Bridge? ConversationsV1Bridge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationsV1Bridge? ConversationsV1Bridge { get => _explicitNullValueConversationsV1Bridge; set { _explicitNullValueConversationsV1Bridge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationsV1Bridge"); else _explicitNullProperties?.Remove("conversationsV1Bridge"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationsV1Bridge? _explicitNullValueConversationsV1Bridge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationsV1Bridge ConversationsV1Bridge { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationsV1Bridge ConversationsV1Bridge { get => _explicitNullValueConversationsV1Bridge; set { _explicitNullValueConversationsV1Bridge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationsV1Bridge"); else _explicitNullProperties?.Remove("conversationsV1Bridge"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2ConversationsV1Bridge _explicitNullValueConversationsV1Bridge = default!;
 #endif
         /// <summary>Human-readable description for the Configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>A human-readable name for the configuration. Limited to 32 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>List of Intelligence Configuration IDs configured for this Configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? IntelligenceConfigurationIds { get; set; }
+        public List<string>? IntelligenceConfigurationIds { get => _explicitNullValueIntelligenceConfigurationIds; set { _explicitNullValueIntelligenceConfigurationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intelligenceConfigurationIds"); else _explicitNullProperties?.Remove("intelligenceConfigurationIds"); } }
+        private List<string>? _explicitNullValueIntelligenceConfigurationIds = default!;
 #nullable restore
 #else
-        public List<string> IntelligenceConfigurationIds { get; set; }
+        public List<string> IntelligenceConfigurationIds { get => _explicitNullValueIntelligenceConfigurationIds; set { _explicitNullValueIntelligenceConfigurationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intelligenceConfigurationIds"); else _explicitNullProperties?.Remove("intelligenceConfigurationIds"); } }
+        private List<string> _explicitNullValueIntelligenceConfigurationIds = default!;
 #endif
         /// <summary>Whether memory extraction is enabled for conversations under this configuration. Defaults to false.</summary>
-        public bool? MemoryExtractionEnabled { get; set; }
+        public bool? MemoryExtractionEnabled { get => _explicitNullValueMemoryExtractionEnabled; set { _explicitNullValueMemoryExtractionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memoryExtractionEnabled"); else _explicitNullProperties?.Remove("memoryExtractionEnabled"); } }
+        private bool? _explicitNullValueMemoryExtractionEnabled = default!;
         /// <summary>Memory Store ID for Profile resolution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MemoryStoreId { get; set; }
+        public string? MemoryStoreId { get => _explicitNullValueMemoryStoreId; set { _explicitNullValueMemoryStoreId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memoryStoreId"); else _explicitNullProperties?.Remove("memoryStoreId"); } }
+        private string? _explicitNullValueMemoryStoreId = default!;
 #nullable restore
 #else
-        public string MemoryStoreId { get; set; }
+        public string MemoryStoreId { get => _explicitNullValueMemoryStoreId; set { _explicitNullValueMemoryStoreId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memoryStoreId"); else _explicitNullProperties?.Remove("memoryStoreId"); } }
+        private string _explicitNullValueMemoryStoreId = default!;
 #endif
         /// <summary>A list of Observation Extraction Strategy IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ObservationExtractionStrategyIds { get; set; }
+        public List<string>? ObservationExtractionStrategyIds { get => _explicitNullValueObservationExtractionStrategyIds; set { _explicitNullValueObservationExtractionStrategyIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("observationExtractionStrategyIds"); else _explicitNullProperties?.Remove("observationExtractionStrategyIds"); } }
+        private List<string>? _explicitNullValueObservationExtractionStrategyIds = default!;
 #nullable restore
 #else
-        public List<string> ObservationExtractionStrategyIds { get; set; }
+        public List<string> ObservationExtractionStrategyIds { get => _explicitNullValueObservationExtractionStrategyIds; set { _explicitNullValueObservationExtractionStrategyIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("observationExtractionStrategyIds"); else _explicitNullProperties?.Remove("observationExtractionStrategyIds"); } }
+        private List<string> _explicitNullValueObservationExtractionStrategyIds = default!;
 #endif
         /// <summary>List of default webhook configurations applied to Conversations under this Configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig>? StatusCallbacks { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig>? StatusCallbacks { get => _explicitNullValueStatusCallbacks; set { _explicitNullValueStatusCallbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCallbacks"); else _explicitNullProperties?.Remove("statusCallbacks"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig>? _explicitNullValueStatusCallbacks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig> StatusCallbacks { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig> StatusCallbacks { get => _explicitNullValueStatusCallbacks; set { _explicitNullValueStatusCallbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCallbacks"); else _explicitNullProperties?.Remove("statusCallbacks"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig> _explicitNullValueStatusCallbacks = default!;
 #endif
         /// <summary>A list of Trait Extraction Strategy IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TraitExtractionStrategyIds { get; set; }
+        public List<string>? TraitExtractionStrategyIds { get => _explicitNullValueTraitExtractionStrategyIds; set { _explicitNullValueTraitExtractionStrategyIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitExtractionStrategyIds"); else _explicitNullProperties?.Remove("traitExtractionStrategyIds"); } }
+        private List<string>? _explicitNullValueTraitExtractionStrategyIds = default!;
 #nullable restore
 #else
-        public List<string> TraitExtractionStrategyIds { get; set; }
+        public List<string> TraitExtractionStrategyIds { get => _explicitNullValueTraitExtractionStrategyIds; set { _explicitNullValueTraitExtractionStrategyIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traitExtractionStrategyIds"); else _explicitNullProperties?.Remove("traitExtractionStrategyIds"); } }
+        private List<string> _explicitNullValueTraitExtractionStrategyIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfiguration"/> and sets the default values.
@@ -107,7 +145,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfiguration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2ListConversationByAccount200ResponseConversationsItemConfiguration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -148,6 +186,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("observationExtractionStrategyIds", ObservationExtractionStrategyIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2StatusCallbackConfig>("statusCallbacks", StatusCallbacks);
             writer.WriteCollectionOfPrimitiveValues<string>("traitExtractionStrategyIds", TraitExtractionStrategyIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

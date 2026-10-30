@@ -11,27 +11,47 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SmsPumpingRiskInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("carrier_risk_category") is { } nullNodeCarrierRiskCategory && nullNodeCarrierRiskCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierRiskCategory = null;
+            if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
+            if (parseNode.GetChildNode("number_blocked") is { } nullNodeNumberBlocked && nullNodeNumberBlocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberBlocked = null;
+            if (parseNode.GetChildNode("number_blocked_date") is { } nullNodeNumberBlockedDate && nullNodeNumberBlockedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberBlockedDate = null;
+            if (parseNode.GetChildNode("number_blocked_last_3_months") is { } nullNodeNumberBlockedLast3Months && nullNodeNumberBlockedLast3Months.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberBlockedLast3Months = null;
+            if (parseNode.GetChildNode("sms_pumping_risk_score") is { } nullNodeSmsPumpingRiskScore && nullNodeSmsPumpingRiskScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsPumpingRiskScore = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The carrier_risk_category property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierRiskCategory { get; set; }
+        public string? CarrierRiskCategory { get => _explicitNullValueCarrierRiskCategory; set { _explicitNullValueCarrierRiskCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_risk_category"); else _explicitNullProperties?.Remove("carrier_risk_category"); } }
+        private string? _explicitNullValueCarrierRiskCategory = default!;
 #nullable restore
 #else
-        public string CarrierRiskCategory { get; set; }
+        public string CarrierRiskCategory { get => _explicitNullValueCarrierRiskCategory; set { _explicitNullValueCarrierRiskCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_risk_category"); else _explicitNullProperties?.Remove("carrier_risk_category"); } }
+        private string _explicitNullValueCarrierRiskCategory = default!;
 #endif
         /// <summary>The error_code property</summary>
-        public int? ErrorCode { get; set; }
+        public int? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
+        private int? _explicitNullValueErrorCode = default!;
         /// <summary>The number_blocked property</summary>
-        public bool? NumberBlocked { get; set; }
+        public bool? NumberBlocked { get => _explicitNullValueNumberBlocked; set { _explicitNullValueNumberBlocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_blocked"); else _explicitNullProperties?.Remove("number_blocked"); } }
+        private bool? _explicitNullValueNumberBlocked = default!;
         /// <summary>The number_blocked_date property</summary>
-        public DateTimeOffset? NumberBlockedDate { get; set; }
+        public DateTimeOffset? NumberBlockedDate { get => _explicitNullValueNumberBlockedDate; set { _explicitNullValueNumberBlockedDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_blocked_date"); else _explicitNullProperties?.Remove("number_blocked_date"); } }
+        private DateTimeOffset? _explicitNullValueNumberBlockedDate = default!;
         /// <summary>The number_blocked_last_3_months property</summary>
-        public bool? NumberBlockedLast3Months { get; set; }
+        public bool? NumberBlockedLast3Months { get => _explicitNullValueNumberBlockedLast3Months; set { _explicitNullValueNumberBlockedLast3Months = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_blocked_last_3_months"); else _explicitNullProperties?.Remove("number_blocked_last_3_months"); } }
+        private bool? _explicitNullValueNumberBlockedLast3Months = default!;
         /// <summary>The sms_pumping_risk_score property</summary>
-        public int? SmsPumpingRiskScore { get; set; }
+        public int? SmsPumpingRiskScore { get => _explicitNullValueSmsPumpingRiskScore; set { _explicitNullValueSmsPumpingRiskScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_pumping_risk_score"); else _explicitNullProperties?.Remove("sms_pumping_risk_score"); } }
+        private int? _explicitNullValueSmsPumpingRiskScore = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo"/> and sets the default values.
         /// </summary>
@@ -47,7 +67,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +98,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("number_blocked_date", NumberBlockedDate);
             writer.WriteBoolValue("number_blocked_last_3_months", NumberBlockedLast3Months);
             writer.WriteIntValue("sms_pumping_risk_score", SmsPumpingRiskScore);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

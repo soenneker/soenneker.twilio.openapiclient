@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SigningRequest.Con
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListSigningRequestConfigurationResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListSigningRequestConfigurationResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListSigningRequestConfigurationResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListSigningRequestConfigurationResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Synchronous operation to insert or update a configuration for the customer.
@@ -69,7 +69,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SigningRequest.Con
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SigningRequestConfiguration>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SigningRequestConfiguration.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SigningRequestConfiguration>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1SigningRequestConfiguration.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Synchronous operation to retrieve configurations for the customer.

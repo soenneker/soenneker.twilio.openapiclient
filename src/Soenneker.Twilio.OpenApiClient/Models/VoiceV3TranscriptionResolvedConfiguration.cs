@@ -11,56 +11,81 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class VoiceV3TranscriptionResolvedConfiguration : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conversationConfigurationId") is { } nullNodeConversationConfigurationId && nullNodeConversationConfigurationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationConfigurationId = null;
+            if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("participantDefaults") is { } nullNodeParticipantDefaults && nullNodeParticipantDefaults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantDefaults = null;
+            if (parseNode.GetChildNode("speechModel") is { } nullNodeSpeechModel && nullNodeSpeechModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpeechModel = null;
+            if (parseNode.GetChildNode("transcriptionEngine") is { } nullNodeTranscriptionEngine && nullNodeTranscriptionEngine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionEngine = null;
+            if (parseNode.GetChildNode("transcriptionStatusCallback") is { } nullNodeTranscriptionStatusCallback && nullNodeTranscriptionStatusCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionStatusCallback = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Maestro conversation configuration ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConversationConfigurationId { get; set; }
+        public string? ConversationConfigurationId { get => _explicitNullValueConversationConfigurationId; set { _explicitNullValueConversationConfigurationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationConfigurationId"); else _explicitNullProperties?.Remove("conversationConfigurationId"); } }
+        private string? _explicitNullValueConversationConfigurationId = default!;
 #nullable restore
 #else
-        public string ConversationConfigurationId { get; set; }
+        public string ConversationConfigurationId { get => _explicitNullValueConversationConfigurationId; set { _explicitNullValueConversationConfigurationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationConfigurationId"); else _explicitNullProperties?.Remove("conversationConfigurationId"); } }
+        private string _explicitNullValueConversationConfigurationId = default!;
 #endif
         /// <summary>The language code for transcription</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Language { get; set; }
+        public string? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private string? _explicitNullValueLanguage = default!;
 #nullable restore
 #else
-        public string Language { get; set; }
+        public string Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private string _explicitNullValueLanguage = default!;
 #endif
         /// <summary>Default participant configurations for the transcription</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItem>? ParticipantDefaults { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItem>? ParticipantDefaults { get => _explicitNullValueParticipantDefaults; set { _explicitNullValueParticipantDefaults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participantDefaults"); else _explicitNullProperties?.Remove("participantDefaults"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItem>? _explicitNullValueParticipantDefaults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItem> ParticipantDefaults { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItem> ParticipantDefaults { get => _explicitNullValueParticipantDefaults; set { _explicitNullValueParticipantDefaults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participantDefaults"); else _explicitNullProperties?.Remove("participantDefaults"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfigurationParticipantDefaultsItem> _explicitNullValueParticipantDefaults = default!;
 #endif
         /// <summary>The speech model used for transcription (e.g., nova-2, nova-3, chirp_2)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpeechModel { get; set; }
+        public string? SpeechModel { get => _explicitNullValueSpeechModel; set { _explicitNullValueSpeechModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("speechModel"); else _explicitNullProperties?.Remove("speechModel"); } }
+        private string? _explicitNullValueSpeechModel = default!;
 #nullable restore
 #else
-        public string SpeechModel { get; set; }
+        public string SpeechModel { get => _explicitNullValueSpeechModel; set { _explicitNullValueSpeechModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("speechModel"); else _explicitNullProperties?.Remove("speechModel"); } }
+        private string _explicitNullValueSpeechModel = default!;
 #endif
         /// <summary>The engine used for transcription (Deepgram, Google, or auto)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TranscriptionEngine { get; set; }
+        public string? TranscriptionEngine { get => _explicitNullValueTranscriptionEngine; set { _explicitNullValueTranscriptionEngine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptionEngine"); else _explicitNullProperties?.Remove("transcriptionEngine"); } }
+        private string? _explicitNullValueTranscriptionEngine = default!;
 #nullable restore
 #else
-        public string TranscriptionEngine { get; set; }
+        public string TranscriptionEngine { get => _explicitNullValueTranscriptionEngine; set { _explicitNullValueTranscriptionEngine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptionEngine"); else _explicitNullProperties?.Remove("transcriptionEngine"); } }
+        private string _explicitNullValueTranscriptionEngine = default!;
 #endif
         /// <summary>The transcriptionStatusCallback property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback? TranscriptionStatusCallback { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback? TranscriptionStatusCallback { get => _explicitNullValueTranscriptionStatusCallback; set { _explicitNullValueTranscriptionStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptionStatusCallback"); else _explicitNullProperties?.Remove("transcriptionStatusCallback"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback? _explicitNullValueTranscriptionStatusCallback = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback TranscriptionStatusCallback { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback TranscriptionStatusCallback { get => _explicitNullValueTranscriptionStatusCallback; set { _explicitNullValueTranscriptionStatusCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcriptionStatusCallback"); else _explicitNullProperties?.Remove("transcriptionStatusCallback"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback _explicitNullValueTranscriptionStatusCallback = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionResolvedConfiguration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("speechModel", SpeechModel);
             writer.WriteStringValue("transcriptionEngine", TranscriptionEngine);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionTranscriptionStatusCallback>("transcriptionStatusCallback", TranscriptionStatusCallback);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -52,6 +52,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_marketplace_v1.V1.ReferralConver
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1TwilioServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ReferralConversion>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.MarketplaceV1ReferralConversion.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

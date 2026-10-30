@@ -11,86 +11,141 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TaskrouterV1WorkspaceWorkspaceCumulativeStatistics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("avg_task_acceptance_time") is { } nullNodeAvgTaskAcceptanceTime && nullNodeAvgTaskAcceptanceTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvgTaskAcceptanceTime = null;
+            if (parseNode.GetChildNode("end_time") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
+            if (parseNode.GetChildNode("reservations_accepted") is { } nullNodeReservationsAccepted && nullNodeReservationsAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReservationsAccepted = null;
+            if (parseNode.GetChildNode("reservations_canceled") is { } nullNodeReservationsCanceled && nullNodeReservationsCanceled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReservationsCanceled = null;
+            if (parseNode.GetChildNode("reservations_created") is { } nullNodeReservationsCreated && nullNodeReservationsCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReservationsCreated = null;
+            if (parseNode.GetChildNode("reservations_rejected") is { } nullNodeReservationsRejected && nullNodeReservationsRejected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReservationsRejected = null;
+            if (parseNode.GetChildNode("reservations_rescinded") is { } nullNodeReservationsRescinded && nullNodeReservationsRescinded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReservationsRescinded = null;
+            if (parseNode.GetChildNode("reservations_timed_out") is { } nullNodeReservationsTimedOut && nullNodeReservationsTimedOut.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReservationsTimedOut = null;
+            if (parseNode.GetChildNode("split_by_wait_time") is { } nullNodeSplitByWaitTime && nullNodeSplitByWaitTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SplitByWaitTime = null;
+            if (parseNode.GetChildNode("start_time") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("tasks_canceled") is { } nullNodeTasksCanceled && nullNodeTasksCanceled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TasksCanceled = null;
+            if (parseNode.GetChildNode("tasks_completed") is { } nullNodeTasksCompleted && nullNodeTasksCompleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TasksCompleted = null;
+            if (parseNode.GetChildNode("tasks_created") is { } nullNodeTasksCreated && nullNodeTasksCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TasksCreated = null;
+            if (parseNode.GetChildNode("tasks_deleted") is { } nullNodeTasksDeleted && nullNodeTasksDeleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TasksDeleted = null;
+            if (parseNode.GetChildNode("tasks_moved") is { } nullNodeTasksMoved && nullNodeTasksMoved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TasksMoved = null;
+            if (parseNode.GetChildNode("tasks_timed_out_in_workflow") is { } nullNodeTasksTimedOutInWorkflow && nullNodeTasksTimedOutInWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TasksTimedOutInWorkflow = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("wait_duration_until_accepted") is { } nullNodeWaitDurationUntilAccepted && nullNodeWaitDurationUntilAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WaitDurationUntilAccepted = null;
+            if (parseNode.GetChildNode("wait_duration_until_canceled") is { } nullNodeWaitDurationUntilCanceled && nullNodeWaitDurationUntilCanceled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WaitDurationUntilCanceled = null;
+            if (parseNode.GetChildNode("workspace_sid") is { } nullNodeWorkspaceSid && nullNodeWorkspaceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkspaceSid = null;
+        }
+
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Workspace resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get; set; }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get; set; }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The average time in seconds between Task creation and acceptance.</summary>
-        public int? AvgTaskAcceptanceTime { get; set; }
+        public int? AvgTaskAcceptanceTime { get => _explicitNullValueAvgTaskAcceptanceTime; set { _explicitNullValueAvgTaskAcceptanceTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avg_task_acceptance_time"); else _explicitNullProperties?.Remove("avg_task_acceptance_time"); } }
+        private int? _explicitNullValueAvgTaskAcceptanceTime = default!;
         /// <summary>The end of the interval during which these statistics were calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
-        public DateTimeOffset? EndTime { get; set; }
+        public DateTimeOffset? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_time"); else _explicitNullProperties?.Remove("end_time"); } }
+        private DateTimeOffset? _explicitNullValueEndTime = default!;
         /// <summary>The total number of Reservations accepted by Workers.</summary>
-        public int? ReservationsAccepted { get; set; }
+        public int? ReservationsAccepted { get => _explicitNullValueReservationsAccepted; set { _explicitNullValueReservationsAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reservations_accepted"); else _explicitNullProperties?.Remove("reservations_accepted"); } }
+        private int? _explicitNullValueReservationsAccepted = default!;
         /// <summary>The total number of Reservations that were canceled.</summary>
-        public int? ReservationsCanceled { get; set; }
+        public int? ReservationsCanceled { get => _explicitNullValueReservationsCanceled; set { _explicitNullValueReservationsCanceled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reservations_canceled"); else _explicitNullProperties?.Remove("reservations_canceled"); } }
+        private int? _explicitNullValueReservationsCanceled = default!;
         /// <summary>The total number of Reservations that were created for Workers.</summary>
-        public int? ReservationsCreated { get; set; }
+        public int? ReservationsCreated { get => _explicitNullValueReservationsCreated; set { _explicitNullValueReservationsCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reservations_created"); else _explicitNullProperties?.Remove("reservations_created"); } }
+        private int? _explicitNullValueReservationsCreated = default!;
         /// <summary>The total number of Reservations that were rejected.</summary>
-        public int? ReservationsRejected { get; set; }
+        public int? ReservationsRejected { get => _explicitNullValueReservationsRejected; set { _explicitNullValueReservationsRejected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reservations_rejected"); else _explicitNullProperties?.Remove("reservations_rejected"); } }
+        private int? _explicitNullValueReservationsRejected = default!;
         /// <summary>The total number of Reservations that were rescinded.</summary>
-        public int? ReservationsRescinded { get; set; }
+        public int? ReservationsRescinded { get => _explicitNullValueReservationsRescinded; set { _explicitNullValueReservationsRescinded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reservations_rescinded"); else _explicitNullProperties?.Remove("reservations_rescinded"); } }
+        private int? _explicitNullValueReservationsRescinded = default!;
         /// <summary>The total number of Reservations that were timed out.</summary>
-        public int? ReservationsTimedOut { get; set; }
+        public int? ReservationsTimedOut { get => _explicitNullValueReservationsTimedOut; set { _explicitNullValueReservationsTimedOut = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reservations_timed_out"); else _explicitNullProperties?.Remove("reservations_timed_out"); } }
+        private int? _explicitNullValueReservationsTimedOut = default!;
         /// <summary>A list of objects that describe the number of Tasks canceled and reservations accepted above and below the thresholds specified in seconds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SplitByWaitTime { get; set; }
+        public UntypedNode? SplitByWaitTime { get => _explicitNullValueSplitByWaitTime; set { _explicitNullValueSplitByWaitTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("split_by_wait_time"); else _explicitNullProperties?.Remove("split_by_wait_time"); } }
+        private UntypedNode? _explicitNullValueSplitByWaitTime = default!;
 #nullable restore
 #else
-        public UntypedNode SplitByWaitTime { get; set; }
+        public UntypedNode SplitByWaitTime { get => _explicitNullValueSplitByWaitTime; set { _explicitNullValueSplitByWaitTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("split_by_wait_time"); else _explicitNullProperties?.Remove("split_by_wait_time"); } }
+        private UntypedNode _explicitNullValueSplitByWaitTime = default!;
 #endif
         /// <summary>The beginning of the interval during which these statistics were calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
-        public DateTimeOffset? StartTime { get; set; }
+        public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
+        private DateTimeOffset? _explicitNullValueStartTime = default!;
         /// <summary>The total number of Tasks that were canceled.</summary>
-        public int? TasksCanceled { get; set; }
+        public int? TasksCanceled { get => _explicitNullValueTasksCanceled; set { _explicitNullValueTasksCanceled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks_canceled"); else _explicitNullProperties?.Remove("tasks_canceled"); } }
+        private int? _explicitNullValueTasksCanceled = default!;
         /// <summary>The total number of Tasks that were completed.</summary>
-        public int? TasksCompleted { get; set; }
+        public int? TasksCompleted { get => _explicitNullValueTasksCompleted; set { _explicitNullValueTasksCompleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks_completed"); else _explicitNullProperties?.Remove("tasks_completed"); } }
+        private int? _explicitNullValueTasksCompleted = default!;
         /// <summary>The total number of Tasks created.</summary>
-        public int? TasksCreated { get; set; }
+        public int? TasksCreated { get => _explicitNullValueTasksCreated; set { _explicitNullValueTasksCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks_created"); else _explicitNullProperties?.Remove("tasks_created"); } }
+        private int? _explicitNullValueTasksCreated = default!;
         /// <summary>The total number of Tasks that were deleted.</summary>
-        public int? TasksDeleted { get; set; }
+        public int? TasksDeleted { get => _explicitNullValueTasksDeleted; set { _explicitNullValueTasksDeleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks_deleted"); else _explicitNullProperties?.Remove("tasks_deleted"); } }
+        private int? _explicitNullValueTasksDeleted = default!;
         /// <summary>The total number of Tasks that were moved from one queue to another.</summary>
-        public int? TasksMoved { get; set; }
+        public int? TasksMoved { get => _explicitNullValueTasksMoved; set { _explicitNullValueTasksMoved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks_moved"); else _explicitNullProperties?.Remove("tasks_moved"); } }
+        private int? _explicitNullValueTasksMoved = default!;
         /// <summary>The total number of Tasks that were timed out of their Workflows (and deleted).</summary>
-        public int? TasksTimedOutInWorkflow { get; set; }
+        public int? TasksTimedOutInWorkflow { get => _explicitNullValueTasksTimedOutInWorkflow; set { _explicitNullValueTasksTimedOutInWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks_timed_out_in_workflow"); else _explicitNullProperties?.Remove("tasks_timed_out_in_workflow"); } }
+        private int? _explicitNullValueTasksTimedOutInWorkflow = default!;
         /// <summary>The absolute URL of the Workspace statistics resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks that were accepted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? WaitDurationUntilAccepted { get; set; }
+        public UntypedNode? WaitDurationUntilAccepted { get => _explicitNullValueWaitDurationUntilAccepted; set { _explicitNullValueWaitDurationUntilAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wait_duration_until_accepted"); else _explicitNullProperties?.Remove("wait_duration_until_accepted"); } }
+        private UntypedNode? _explicitNullValueWaitDurationUntilAccepted = default!;
 #nullable restore
 #else
-        public UntypedNode WaitDurationUntilAccepted { get; set; }
+        public UntypedNode WaitDurationUntilAccepted { get => _explicitNullValueWaitDurationUntilAccepted; set { _explicitNullValueWaitDurationUntilAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wait_duration_until_accepted"); else _explicitNullProperties?.Remove("wait_duration_until_accepted"); } }
+        private UntypedNode _explicitNullValueWaitDurationUntilAccepted = default!;
 #endif
         /// <summary>The wait duration statistics (`avg`, `min`, `max`, `total`) for Tasks that were canceled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? WaitDurationUntilCanceled { get; set; }
+        public UntypedNode? WaitDurationUntilCanceled { get => _explicitNullValueWaitDurationUntilCanceled; set { _explicitNullValueWaitDurationUntilCanceled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wait_duration_until_canceled"); else _explicitNullProperties?.Remove("wait_duration_until_canceled"); } }
+        private UntypedNode? _explicitNullValueWaitDurationUntilCanceled = default!;
 #nullable restore
 #else
-        public UntypedNode WaitDurationUntilCanceled { get; set; }
+        public UntypedNode WaitDurationUntilCanceled { get => _explicitNullValueWaitDurationUntilCanceled; set { _explicitNullValueWaitDurationUntilCanceled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wait_duration_until_canceled"); else _explicitNullProperties?.Remove("wait_duration_until_canceled"); } }
+        private UntypedNode _explicitNullValueWaitDurationUntilCanceled = default!;
 #endif
         /// <summary>The SID of the Workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkspaceSid { get; set; }
+        public string? WorkspaceSid { get => _explicitNullValueWorkspaceSid; set { _explicitNullValueWorkspaceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace_sid"); else _explicitNullProperties?.Remove("workspace_sid"); } }
+        private string? _explicitNullValueWorkspaceSid = default!;
 #nullable restore
 #else
-        public string WorkspaceSid { get; set; }
+        public string WorkspaceSid { get => _explicitNullValueWorkspaceSid; set { _explicitNullValueWorkspaceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace_sid"); else _explicitNullProperties?.Remove("workspace_sid"); } }
+        private string _explicitNullValueWorkspaceSid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceCumulativeStatistics"/> and sets the default values.
@@ -120,7 +175,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceCumulativeStatistics CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceCumulativeStatistics();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TaskrouterV1WorkspaceWorkspaceCumulativeStatistics(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -181,6 +236,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("wait_duration_until_accepted", WaitDurationUntilAccepted);
             writer.WriteObjectValue<UntypedNode>("wait_duration_until_canceled", WaitDurationUntilCanceled);
             writer.WriteStringValue("workspace_sid", WorkspaceSid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

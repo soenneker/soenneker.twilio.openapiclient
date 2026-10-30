@@ -11,28 +11,45 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioConversationsV2CreateCommunicationInConversation201ResponseRecipientsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("deliveryStatus") is { } nullNodeDeliveryStatus && nullNodeDeliveryStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryStatus = null;
+            if (parseNode.GetChildNode("participantId") is { } nullNodeParticipantId && nullNodeParticipantId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address value formatted according to channel type:- SMS/VOICE: E.164 phone number (such as &quot;+18005550100&quot;)- WHATSAPP: Phone number with whatsapp prefix (such as &quot;whatsapp:+18005550100&quot;)- RCS: Sender ID or phone number with rcs prefix (such as &quot;rcs:brand_acme_agent&quot; or &quot;rcs:+18005550100&quot;)- CHAT: Customer-defined string identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Address { get; set; }
+        public string? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private string? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public string Address { get; set; }
+        public string Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private string _explicitNullValueAddress = default!;
 #endif
         /// <summary>Channel type for a Communication address.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Channel? Channel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Channel? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Channel? _explicitNullValueChannel = default!;
         /// <summary>Delivery status of a Communication to a recipient.- INITIATED: Communication is initiated to be sent at a future time- IN_PROGRESS: Communication is in the process of being sent- DELIVERED: Provider confirms the Communication has been delivered- READ: Recipient has read the Communication (channels that support read receipts, e.g. WhatsApp, RCS)- FAILED: Communication could not be sent or delivered- COMPLETED: Deprecated and unused. Never emitted; do not rely on this value.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2RecipientDeliveryStatus? DeliveryStatus { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2RecipientDeliveryStatus? DeliveryStatus { get => _explicitNullValueDeliveryStatus; set { _explicitNullValueDeliveryStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryStatus"); else _explicitNullProperties?.Remove("deliveryStatus"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2RecipientDeliveryStatus? _explicitNullValueDeliveryStatus = default!;
         /// <summary>Participant ID associated with this address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParticipantId { get; set; }
+        public string? ParticipantId { get => _explicitNullValueParticipantId; set { _explicitNullValueParticipantId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participantId"); else _explicitNullProperties?.Remove("participantId"); } }
+        private string? _explicitNullValueParticipantId = default!;
 #nullable restore
 #else
-        public string ParticipantId { get; set; }
+        public string ParticipantId { get => _explicitNullValueParticipantId; set { _explicitNullValueParticipantId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participantId"); else _explicitNullProperties?.Remove("participantId"); } }
+        private string _explicitNullValueParticipantId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversation201ResponseRecipientsItem"/> and sets the default values.
@@ -49,7 +66,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversation201ResponseRecipientsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversation201ResponseRecipientsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversation201ResponseRecipientsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2Channel>("channel", Channel);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2RecipientDeliveryStatus>("deliveryStatus", DeliveryStatus);
             writer.WriteStringValue("participantId", ParticipantId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

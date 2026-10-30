@@ -11,16 +11,26 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MessagingV1ServiceUsAppToPersonUsecase : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("us_app_to_person_usecases") is { } nullNodeUsAppToPersonUsecases && nullNodeUsAppToPersonUsecases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsAppToPersonUsecases = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Human readable name, code, description and post_approval_required (indicates whether or not post approval is required for this Use Case) of A2P Campaign Use Cases.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? UsAppToPersonUsecases { get; set; }
+        public UntypedNode? UsAppToPersonUsecases { get => _explicitNullValueUsAppToPersonUsecases; set { _explicitNullValueUsAppToPersonUsecases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_app_to_person_usecases"); else _explicitNullProperties?.Remove("us_app_to_person_usecases"); } }
+        private UntypedNode? _explicitNullValueUsAppToPersonUsecases = default!;
 #nullable restore
 #else
-        public UntypedNode UsAppToPersonUsecases { get; set; }
+        public UntypedNode UsAppToPersonUsecases { get => _explicitNullValueUsAppToPersonUsecases; set { _explicitNullValueUsAppToPersonUsecases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("us_app_to_person_usecases"); else _explicitNullProperties?.Remove("us_app_to_person_usecases"); } }
+        private UntypedNode _explicitNullValueUsAppToPersonUsecases = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecase"/> and sets the default values.
@@ -37,7 +47,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecase CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecase();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1ServiceUsAppToPersonUsecase(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<UntypedNode>("us_app_to_person_usecases", UsAppToPersonUsecases);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

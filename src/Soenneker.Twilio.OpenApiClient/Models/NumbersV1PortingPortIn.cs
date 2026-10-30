@@ -12,134 +12,192 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NumbersV1PortingPortIn : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("auto_cancel_approval_numbers") is { } nullNodeAutoCancelApprovalNumbers && nullNodeAutoCancelApprovalNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCancelApprovalNumbers = null;
+            if (parseNode.GetChildNode("bundle_sid") is { } nullNodeBundleSid && nullNodeBundleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BundleSid = null;
+            if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
+            if (parseNode.GetChildNode("losing_carrier_information") is { } nullNodeLosingCarrierInformation && nullNodeLosingCarrierInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LosingCarrierInformation = null;
+            if (parseNode.GetChildNode("notification_emails") is { } nullNodeNotificationEmails && nullNodeNotificationEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationEmails = null;
+            if (parseNode.GetChildNode("order_cancellation_reason") is { } nullNodeOrderCancellationReason && nullNodeOrderCancellationReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderCancellationReason = null;
+            if (parseNode.GetChildNode("phone_numbers") is { } nullNodePhoneNumbers && nullNodePhoneNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumbers = null;
+            if (parseNode.GetChildNode("portability_advance_carrier") is { } nullNodePortabilityAdvanceCarrier && nullNodePortabilityAdvanceCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortabilityAdvanceCarrier = null;
+            if (parseNode.GetChildNode("port_in_request_sid") is { } nullNodePortInRequestSid && nullNodePortInRequestSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortInRequestSid = null;
+            if (parseNode.GetChildNode("port_in_request_status") is { } nullNodePortInRequestStatus && nullNodePortInRequestStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortInRequestStatus = null;
+            if (parseNode.GetChildNode("signature_request_url") is { } nullNodeSignatureRequestUrl && nullNodeSignatureRequestUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureRequestUrl = null;
+            if (parseNode.GetChildNode("support_ticket_id") is { } nullNodeSupportTicketId && nullNodeSupportTicketId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportTicketId = null;
+            if (parseNode.GetChildNode("target_port_in_date") is { } nullNodeTargetPortInDate && nullNodeTargetPortInDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetPortInDate = null;
+            if (parseNode.GetChildNode("target_port_in_time_range_end") is { } nullNodeTargetPortInTimeRangeEnd && nullNodeTargetPortInTimeRangeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetPortInTimeRangeEnd = null;
+            if (parseNode.GetChildNode("target_port_in_time_range_start") is { } nullNodeTargetPortInTimeRangeStart && nullNodeTargetPortInTimeRangeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetPortInTimeRangeStart = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Account Sid or subaccount where the phone number(s) will be Ported</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get; set; }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get; set; }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Japan specific field, indicates the number of phone numbers to automatically approve for cancellation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutoCancelApprovalNumbers { get; set; }
+        public string? AutoCancelApprovalNumbers { get => _explicitNullValueAutoCancelApprovalNumbers; set { _explicitNullValueAutoCancelApprovalNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_cancel_approval_numbers"); else _explicitNullProperties?.Remove("auto_cancel_approval_numbers"); } }
+        private string? _explicitNullValueAutoCancelApprovalNumbers = default!;
 #nullable restore
 #else
-        public string AutoCancelApprovalNumbers { get; set; }
+        public string AutoCancelApprovalNumbers { get => _explicitNullValueAutoCancelApprovalNumbers; set { _explicitNullValueAutoCancelApprovalNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_cancel_approval_numbers"); else _explicitNullProperties?.Remove("auto_cancel_approval_numbers"); } }
+        private string _explicitNullValueAutoCancelApprovalNumbers = default!;
 #endif
         /// <summary>The bundle sid is an optional identifier to reference a group of regulatory documents for a port request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BundleSid { get; set; }
+        public string? BundleSid { get => _explicitNullValueBundleSid; set { _explicitNullValueBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundle_sid"); else _explicitNullProperties?.Remove("bundle_sid"); } }
+        private string? _explicitNullValueBundleSid = default!;
 #nullable restore
 #else
-        public string BundleSid { get; set; }
+        public string BundleSid { get => _explicitNullValueBundleSid; set { _explicitNullValueBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundle_sid"); else _explicitNullProperties?.Remove("bundle_sid"); } }
+        private string _explicitNullValueBundleSid = default!;
 #endif
         /// <summary>The date_created property</summary>
-        public DateTimeOffset? DateCreated { get; set; }
+        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
+        private DateTimeOffset? _explicitNullValueDateCreated = default!;
         /// <summary>List of document SIDs for all phone numbers included in the port in request. At least one document SID referring to a document of the type Utility Bill is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Documents { get; set; }
+        public List<string>? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private List<string>? _explicitNullValueDocuments = default!;
 #nullable restore
 #else
-        public List<string> Documents { get; set; }
+        public List<string> Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private List<string> _explicitNullValueDocuments = default!;
 #endif
         /// <summary>The losing_carrier_information property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation? LosingCarrierInformation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation? LosingCarrierInformation { get => _explicitNullValueLosingCarrierInformation; set { _explicitNullValueLosingCarrierInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("losing_carrier_information"); else _explicitNullProperties?.Remove("losing_carrier_information"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation? _explicitNullValueLosingCarrierInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation LosingCarrierInformation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation LosingCarrierInformation { get => _explicitNullValueLosingCarrierInformation; set { _explicitNullValueLosingCarrierInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("losing_carrier_information"); else _explicitNullProperties?.Remove("losing_carrier_information"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation _explicitNullValueLosingCarrierInformation = default!;
 #endif
         /// <summary>Additional emails to send a copy of the signed LOA to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? NotificationEmails { get; set; }
+        public List<string>? NotificationEmails { get => _explicitNullValueNotificationEmails; set { _explicitNullValueNotificationEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_emails"); else _explicitNullProperties?.Remove("notification_emails"); } }
+        private List<string>? _explicitNullValueNotificationEmails = default!;
 #nullable restore
 #else
-        public List<string> NotificationEmails { get; set; }
+        public List<string> NotificationEmails { get => _explicitNullValueNotificationEmails; set { _explicitNullValueNotificationEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_emails"); else _explicitNullProperties?.Remove("notification_emails"); } }
+        private List<string> _explicitNullValueNotificationEmails = default!;
 #endif
         /// <summary>If the order is cancelled this field will provide further context on the cause of the cancellation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderCancellationReason { get; set; }
+        public string? OrderCancellationReason { get => _explicitNullValueOrderCancellationReason; set { _explicitNullValueOrderCancellationReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_cancellation_reason"); else _explicitNullProperties?.Remove("order_cancellation_reason"); } }
+        private string? _explicitNullValueOrderCancellationReason = default!;
 #nullable restore
 #else
-        public string OrderCancellationReason { get; set; }
+        public string OrderCancellationReason { get => _explicitNullValueOrderCancellationReason; set { _explicitNullValueOrderCancellationReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_cancellation_reason"); else _explicitNullProperties?.Remove("order_cancellation_reason"); } }
+        private string _explicitNullValueOrderCancellationReason = default!;
 #endif
         /// <summary>The phone_numbers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInPhoneNumberResult>? PhoneNumbers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInPhoneNumberResult>? PhoneNumbers { get => _explicitNullValuePhoneNumbers; set { _explicitNullValuePhoneNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_numbers"); else _explicitNullProperties?.Remove("phone_numbers"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInPhoneNumberResult>? _explicitNullValuePhoneNumbers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInPhoneNumberResult> PhoneNumbers { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInPhoneNumberResult> PhoneNumbers { get => _explicitNullValuePhoneNumbers; set { _explicitNullValuePhoneNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_numbers"); else _explicitNullProperties?.Remove("phone_numbers"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortInPhoneNumberResult> _explicitNullValuePhoneNumbers = default!;
 #endif
         /// <summary>A field only required for Japan port in requests. It is a unique identifier for the donor carrier service the line is being ported from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortabilityAdvanceCarrier { get; set; }
+        public string? PortabilityAdvanceCarrier { get => _explicitNullValuePortabilityAdvanceCarrier; set { _explicitNullValuePortabilityAdvanceCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portability_advance_carrier"); else _explicitNullProperties?.Remove("portability_advance_carrier"); } }
+        private string? _explicitNullValuePortabilityAdvanceCarrier = default!;
 #nullable restore
 #else
-        public string PortabilityAdvanceCarrier { get; set; }
+        public string PortabilityAdvanceCarrier { get => _explicitNullValuePortabilityAdvanceCarrier; set { _explicitNullValuePortabilityAdvanceCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portability_advance_carrier"); else _explicitNullProperties?.Remove("portability_advance_carrier"); } }
+        private string _explicitNullValuePortabilityAdvanceCarrier = default!;
 #endif
         /// <summary>The SID of the Port In request. This is a unique identifier of the port in request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortInRequestSid { get; set; }
+        public string? PortInRequestSid { get => _explicitNullValuePortInRequestSid; set { _explicitNullValuePortInRequestSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_request_sid"); else _explicitNullProperties?.Remove("port_in_request_sid"); } }
+        private string? _explicitNullValuePortInRequestSid = default!;
 #nullable restore
 #else
-        public string PortInRequestSid { get; set; }
+        public string PortInRequestSid { get => _explicitNullValuePortInRequestSid; set { _explicitNullValuePortInRequestSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_request_sid"); else _explicitNullProperties?.Remove("port_in_request_sid"); } }
+        private string _explicitNullValuePortInRequestSid = default!;
 #endif
         /// <summary>The status of the port in request. The possible values are: In progress, Completed, Expired, In review, Waiting for Signature, Action Required, and Canceled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortInRequestStatus { get; set; }
+        public string? PortInRequestStatus { get => _explicitNullValuePortInRequestStatus; set { _explicitNullValuePortInRequestStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_request_status"); else _explicitNullProperties?.Remove("port_in_request_status"); } }
+        private string? _explicitNullValuePortInRequestStatus = default!;
 #nullable restore
 #else
-        public string PortInRequestStatus { get; set; }
+        public string PortInRequestStatus { get => _explicitNullValuePortInRequestStatus; set { _explicitNullValuePortInRequestStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("port_in_request_status"); else _explicitNullProperties?.Remove("port_in_request_status"); } }
+        private string _explicitNullValuePortInRequestStatus = default!;
 #endif
         /// <summary>The signature_request_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignatureRequestUrl { get; set; }
+        public string? SignatureRequestUrl { get => _explicitNullValueSignatureRequestUrl; set { _explicitNullValueSignatureRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_request_url"); else _explicitNullProperties?.Remove("signature_request_url"); } }
+        private string? _explicitNullValueSignatureRequestUrl = default!;
 #nullable restore
 #else
-        public string SignatureRequestUrl { get; set; }
+        public string SignatureRequestUrl { get => _explicitNullValueSignatureRequestUrl; set { _explicitNullValueSignatureRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_request_url"); else _explicitNullProperties?.Remove("signature_request_url"); } }
+        private string _explicitNullValueSignatureRequestUrl = default!;
 #endif
         /// <summary>Unique ID of the request&apos;s support ticket</summary>
-        public int? SupportTicketId { get; set; }
+        public int? SupportTicketId { get => _explicitNullValueSupportTicketId; set { _explicitNullValueSupportTicketId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("support_ticket_id"); else _explicitNullProperties?.Remove("support_ticket_id"); } }
+        private int? _explicitNullValueSupportTicketId = default!;
         /// <summary>Target date to port the number. We cannot guarantee that this date will be honored by the other carriers, please work with Ops to get a confirmation of the firm order commitment (FOC) date. Expected format is ISO Local Date, example: ‘2011-12-03`. This date must be at least 7 days in the future for US ports and 10 days in the future for Japanese ports. If a start and end range is provided, the date will be converted to its UTC equivalent with the ranges as reference and stored in UTC. We can&apos;t guarantee the exact date and time, as this depends on the losing carrier.</summary>
-        public Date? TargetPortInDate { get; set; }
+        public Date? TargetPortInDate { get => _explicitNullValueTargetPortInDate; set { _explicitNullValueTargetPortInDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_port_in_date"); else _explicitNullProperties?.Remove("target_port_in_date"); } }
+        private Date? _explicitNullValueTargetPortInDate = default!;
         /// <summary>The latest time that the port should occur on the target port in date. Expected format is ISO Offset Time, example: ‘10:15:00-08:00&apos;. We can&apos;t guarantee the exact date and time, as this depends on the losing carrier. The time will be stored and returned as UTC standard timezone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetPortInTimeRangeEnd { get; set; }
+        public string? TargetPortInTimeRangeEnd { get => _explicitNullValueTargetPortInTimeRangeEnd; set { _explicitNullValueTargetPortInTimeRangeEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_port_in_time_range_end"); else _explicitNullProperties?.Remove("target_port_in_time_range_end"); } }
+        private string? _explicitNullValueTargetPortInTimeRangeEnd = default!;
 #nullable restore
 #else
-        public string TargetPortInTimeRangeEnd { get; set; }
+        public string TargetPortInTimeRangeEnd { get => _explicitNullValueTargetPortInTimeRangeEnd; set { _explicitNullValueTargetPortInTimeRangeEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_port_in_time_range_end"); else _explicitNullProperties?.Remove("target_port_in_time_range_end"); } }
+        private string _explicitNullValueTargetPortInTimeRangeEnd = default!;
 #endif
         /// <summary>The earliest time that the port should occur on the target port in date. Expected format is ISO Offset Time, example: ‘10:15:00-08:00&apos;. We can&apos;t guarantee the exact date and time, as this depends on the losing carrier. The time will be stored and returned as UTC standard timezone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetPortInTimeRangeStart { get; set; }
+        public string? TargetPortInTimeRangeStart { get => _explicitNullValueTargetPortInTimeRangeStart; set { _explicitNullValueTargetPortInTimeRangeStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_port_in_time_range_start"); else _explicitNullProperties?.Remove("target_port_in_time_range_start"); } }
+        private string? _explicitNullValueTargetPortInTimeRangeStart = default!;
 #nullable restore
 #else
-        public string TargetPortInTimeRangeStart { get; set; }
+        public string TargetPortInTimeRangeStart { get => _explicitNullValueTargetPortInTimeRangeStart; set { _explicitNullValueTargetPortInTimeRangeStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_port_in_time_range_start"); else _explicitNullProperties?.Remove("target_port_in_time_range_start"); } }
+        private string _explicitNullValueTargetPortInTimeRangeStart = default!;
 #endif
         /// <summary>The URL of this Port In request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortIn"/> and sets the default values.
@@ -156,7 +214,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortIn CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortIn();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingPortIn(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -211,6 +269,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("target_port_in_time_range_end", TargetPortInTimeRangeEnd);
             writer.WriteStringValue("target_port_in_time_range_start", TargetPortInTimeRangeStart);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

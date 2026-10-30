@@ -11,138 +11,195 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LookupResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("caller_name") is { } nullNodeCallerName && nullNodeCallerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallerName = null;
+            if (parseNode.GetChildNode("call_forwarding") is { } nullNodeCallForwarding && nullNodeCallForwarding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallForwarding = null;
+            if (parseNode.GetChildNode("calling_country_code") is { } nullNodeCallingCountryCode && nullNodeCallingCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallingCountryCode = null;
+            if (parseNode.GetChildNode("country_code") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
+            if (parseNode.GetChildNode("identity_match") is { } nullNodeIdentityMatch && nullNodeIdentityMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentityMatch = null;
+            if (parseNode.GetChildNode("line_status") is { } nullNodeLineStatus && nullNodeLineStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineStatus = null;
+            if (parseNode.GetChildNode("line_type_intelligence") is { } nullNodeLineTypeIntelligence && nullNodeLineTypeIntelligence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineTypeIntelligence = null;
+            if (parseNode.GetChildNode("national_format") is { } nullNodeNationalFormat && nullNodeNationalFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NationalFormat = null;
+            if (parseNode.GetChildNode("phone_number") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+            if (parseNode.GetChildNode("phone_number_quality_score") is { } nullNodePhoneNumberQualityScore && nullNodePhoneNumberQualityScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumberQualityScore = null;
+            if (parseNode.GetChildNode("pre_fill") is { } nullNodePreFill && nullNodePreFill.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreFill = null;
+            if (parseNode.GetChildNode("reassigned_number") is { } nullNodeReassignedNumber && nullNodeReassignedNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReassignedNumber = null;
+            if (parseNode.GetChildNode("sim_swap") is { } nullNodeSimSwap && nullNodeSimSwap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimSwap = null;
+            if (parseNode.GetChildNode("sms_pumping_risk") is { } nullNodeSmsPumpingRisk && nullNodeSmsPumpingRisk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsPumpingRisk = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("valid") is { } nullNodeValid && nullNodeValid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Valid = null;
+            if (parseNode.GetChildNode("validation_errors") is { } nullNodeValidationErrors && nullNodeValidationErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationErrors = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The caller_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallerNameInfo? CallerName { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallerNameInfo? CallerName { get => _explicitNullValueCallerName; set { _explicitNullValueCallerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caller_name"); else _explicitNullProperties?.Remove("caller_name"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallerNameInfo? _explicitNullValueCallerName = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallerNameInfo CallerName { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallerNameInfo CallerName { get => _explicitNullValueCallerName; set { _explicitNullValueCallerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caller_name"); else _explicitNullProperties?.Remove("caller_name"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallerNameInfo _explicitNullValueCallerName = default!;
 #endif
         /// <summary>The call_forwarding property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallForwardingInfo? CallForwarding { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallForwardingInfo? CallForwarding { get => _explicitNullValueCallForwarding; set { _explicitNullValueCallForwarding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_forwarding"); else _explicitNullProperties?.Remove("call_forwarding"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallForwardingInfo? _explicitNullValueCallForwarding = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.CallForwardingInfo CallForwarding { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.CallForwardingInfo CallForwarding { get => _explicitNullValueCallForwarding; set { _explicitNullValueCallForwarding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_forwarding"); else _explicitNullProperties?.Remove("call_forwarding"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.CallForwardingInfo _explicitNullValueCallForwarding = default!;
 #endif
         /// <summary>International dialing prefix of the phone number defined in the E.164 standard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallingCountryCode { get; set; }
+        public string? CallingCountryCode { get => _explicitNullValueCallingCountryCode; set { _explicitNullValueCallingCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calling_country_code"); else _explicitNullProperties?.Remove("calling_country_code"); } }
+        private string? _explicitNullValueCallingCountryCode = default!;
 #nullable restore
 #else
-        public string CallingCountryCode { get; set; }
+        public string CallingCountryCode { get => _explicitNullValueCallingCountryCode; set { _explicitNullValueCallingCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calling_country_code"); else _explicitNullProperties?.Remove("calling_country_code"); } }
+        private string _explicitNullValueCallingCountryCode = default!;
 #endif
         /// <summary>The phone number&apos;s [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountryCode { get; set; }
+        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_code"); else _explicitNullProperties?.Remove("country_code"); } }
+        private string? _explicitNullValueCountryCode = default!;
 #nullable restore
 #else
-        public string CountryCode { get; set; }
+        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_code"); else _explicitNullProperties?.Remove("country_code"); } }
+        private string _explicitNullValueCountryCode = default!;
 #endif
         /// <summary>The identity_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.IdentityMatchInfo? IdentityMatch { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IdentityMatchInfo? IdentityMatch { get => _explicitNullValueIdentityMatch; set { _explicitNullValueIdentityMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_match"); else _explicitNullProperties?.Remove("identity_match"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.IdentityMatchInfo? _explicitNullValueIdentityMatch = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.IdentityMatchInfo IdentityMatch { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.IdentityMatchInfo IdentityMatch { get => _explicitNullValueIdentityMatch; set { _explicitNullValueIdentityMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_match"); else _explicitNullProperties?.Remove("identity_match"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.IdentityMatchInfo _explicitNullValueIdentityMatch = default!;
 #endif
         /// <summary>The line_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.LineStatusInfo? LineStatus { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LineStatusInfo? LineStatus { get => _explicitNullValueLineStatus; set { _explicitNullValueLineStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_status"); else _explicitNullProperties?.Remove("line_status"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.LineStatusInfo? _explicitNullValueLineStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.LineStatusInfo LineStatus { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LineStatusInfo LineStatus { get => _explicitNullValueLineStatus; set { _explicitNullValueLineStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_status"); else _explicitNullProperties?.Remove("line_status"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.LineStatusInfo _explicitNullValueLineStatus = default!;
 #endif
         /// <summary>The line_type_intelligence property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo? LineTypeIntelligence { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo? LineTypeIntelligence { get => _explicitNullValueLineTypeIntelligence; set { _explicitNullValueLineTypeIntelligence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_type_intelligence"); else _explicitNullProperties?.Remove("line_type_intelligence"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo? _explicitNullValueLineTypeIntelligence = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo LineTypeIntelligence { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo LineTypeIntelligence { get => _explicitNullValueLineTypeIntelligence; set { _explicitNullValueLineTypeIntelligence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_type_intelligence"); else _explicitNullProperties?.Remove("line_type_intelligence"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.LineTypeIntelligenceInfo _explicitNullValueLineTypeIntelligence = default!;
 #endif
         /// <summary>The phone number in [national format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NationalFormat { get; set; }
+        public string? NationalFormat { get => _explicitNullValueNationalFormat; set { _explicitNullValueNationalFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_format"); else _explicitNullProperties?.Remove("national_format"); } }
+        private string? _explicitNullValueNationalFormat = default!;
 #nullable restore
 #else
-        public string NationalFormat { get; set; }
+        public string NationalFormat { get => _explicitNullValueNationalFormat; set { _explicitNullValueNationalFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("national_format"); else _explicitNullProperties?.Remove("national_format"); } }
+        private string _explicitNullValueNationalFormat = default!;
 #endif
         /// <summary>The phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumber { get; set; }
+        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        private string? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        private string _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>An object that contains information of a mobile phone number quality score. Quality score will return a risk score about the phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PhoneNumberQualityScore { get; set; }
+        public UntypedNode? PhoneNumberQualityScore { get => _explicitNullValuePhoneNumberQualityScore; set { _explicitNullValuePhoneNumberQualityScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number_quality_score"); else _explicitNullProperties?.Remove("phone_number_quality_score"); } }
+        private UntypedNode? _explicitNullValuePhoneNumberQualityScore = default!;
 #nullable restore
 #else
-        public UntypedNode PhoneNumberQualityScore { get; set; }
+        public UntypedNode PhoneNumberQualityScore { get => _explicitNullValuePhoneNumberQualityScore; set { _explicitNullValuePhoneNumberQualityScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number_quality_score"); else _explicitNullProperties?.Remove("phone_number_quality_score"); } }
+        private UntypedNode _explicitNullValuePhoneNumberQualityScore = default!;
 #endif
         /// <summary>An object that contains pre fill information. pre_fill will return PII information associated with the phone number like first name, last name, address line, country code, state and postal code. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PreFill { get; set; }
+        public UntypedNode? PreFill { get => _explicitNullValuePreFill; set { _explicitNullValuePreFill = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pre_fill"); else _explicitNullProperties?.Remove("pre_fill"); } }
+        private UntypedNode? _explicitNullValuePreFill = default!;
 #nullable restore
 #else
-        public UntypedNode PreFill { get; set; }
+        public UntypedNode PreFill { get => _explicitNullValuePreFill; set { _explicitNullValuePreFill = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pre_fill"); else _explicitNullProperties?.Remove("pre_fill"); } }
+        private UntypedNode _explicitNullValuePreFill = default!;
 #endif
         /// <summary>The reassigned_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo? ReassignedNumber { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo? ReassignedNumber { get => _explicitNullValueReassignedNumber; set { _explicitNullValueReassignedNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassigned_number"); else _explicitNullProperties?.Remove("reassigned_number"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo? _explicitNullValueReassignedNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo ReassignedNumber { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo ReassignedNumber { get => _explicitNullValueReassignedNumber; set { _explicitNullValueReassignedNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassigned_number"); else _explicitNullProperties?.Remove("reassigned_number"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ReassignedNumberInfo _explicitNullValueReassignedNumber = default!;
 #endif
         /// <summary>The sim_swap property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo? SimSwap { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo? SimSwap { get => _explicitNullValueSimSwap; set { _explicitNullValueSimSwap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_swap"); else _explicitNullProperties?.Remove("sim_swap"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo? _explicitNullValueSimSwap = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo SimSwap { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo SimSwap { get => _explicitNullValueSimSwap; set { _explicitNullValueSimSwap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sim_swap"); else _explicitNullProperties?.Remove("sim_swap"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.SimSwapInfo _explicitNullValueSimSwap = default!;
 #endif
         /// <summary>The sms_pumping_risk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo? SmsPumpingRisk { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo? SmsPumpingRisk { get => _explicitNullValueSmsPumpingRisk; set { _explicitNullValueSmsPumpingRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_pumping_risk"); else _explicitNullProperties?.Remove("sms_pumping_risk"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo? _explicitNullValueSmsPumpingRisk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo SmsPumpingRisk { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo SmsPumpingRisk { get => _explicitNullValueSmsPumpingRisk; set { _explicitNullValueSmsPumpingRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_pumping_risk"); else _explicitNullProperties?.Remove("sms_pumping_risk"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.SmsPumpingRiskInfo _explicitNullValueSmsPumpingRisk = default!;
 #endif
         /// <summary>The absolute URL of the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>Boolean which indicates if the phone number is in a valid range that can be freely assigned by a carrier to a user.</summary>
-        public bool? Valid { get; set; }
+        public bool? Valid { get => _explicitNullValueValid; set { _explicitNullValueValid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valid"); else _explicitNullProperties?.Remove("valid"); } }
+        private bool? _explicitNullValueValid = default!;
         /// <summary>Contains reasons why a phone number is invalid. Possible values: TOO_SHORT, TOO_LONG, INVALID_BUT_POSSIBLE, INVALID_COUNTRY_CODE, INVALID_LENGTH, NOT_A_NUMBER.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ValidationError?>? ValidationErrors { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ValidationError?>? ValidationErrors { get => _explicitNullValueValidationErrors; set { _explicitNullValueValidationErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_errors"); else _explicitNullProperties?.Remove("validation_errors"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ValidationError?>? _explicitNullValueValidationErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ValidationError?> ValidationErrors { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ValidationError?> ValidationErrors { get => _explicitNullValueValidationErrors; set { _explicitNullValueValidationErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_errors"); else _explicitNullProperties?.Remove("validation_errors"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ValidationError?> _explicitNullValueValidationErrors = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse"/> and sets the default values.
@@ -159,7 +216,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.LookupResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -212,6 +269,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("url", Url);
             writer.WriteBoolValue("valid", Valid);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Twilio.OpenApiClient.Models.ValidationError>("validation_errors", ValidationErrors);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

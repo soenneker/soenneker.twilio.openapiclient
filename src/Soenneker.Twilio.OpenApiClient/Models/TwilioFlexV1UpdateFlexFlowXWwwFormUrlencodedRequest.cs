@@ -11,91 +11,140 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioFlexV1UpdateFlexFlowXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ChannelType") is { } nullNodeChannelType && nullNodeChannelType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelType = null;
+            if (parseNode.GetChildNode("ChatServiceSid") is { } nullNodeChatServiceSid && nullNodeChatServiceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChatServiceSid = null;
+            if (parseNode.GetChildNode("ContactIdentity") is { } nullNodeContactIdentity && nullNodeContactIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactIdentity = null;
+            if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("Integration.Channel") is { } nullNodeIntegrationChannel && nullNodeIntegrationChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationChannel = null;
+            if (parseNode.GetChildNode("Integration.CreationOnMessage") is { } nullNodeIntegrationCreationOnMessage && nullNodeIntegrationCreationOnMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationCreationOnMessage = null;
+            if (parseNode.GetChildNode("Integration.FlowSid") is { } nullNodeIntegrationFlowSid && nullNodeIntegrationFlowSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationFlowSid = null;
+            if (parseNode.GetChildNode("Integration.Priority") is { } nullNodeIntegrationPriority && nullNodeIntegrationPriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationPriority = null;
+            if (parseNode.GetChildNode("Integration.RetryCount") is { } nullNodeIntegrationRetryCount && nullNodeIntegrationRetryCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationRetryCount = null;
+            if (parseNode.GetChildNode("Integration.Timeout") is { } nullNodeIntegrationTimeout && nullNodeIntegrationTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationTimeout = null;
+            if (parseNode.GetChildNode("IntegrationType") is { } nullNodeIntegrationType && nullNodeIntegrationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationType = null;
+            if (parseNode.GetChildNode("Integration.Url") is { } nullNodeIntegrationUrl && nullNodeIntegrationUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationUrl = null;
+            if (parseNode.GetChildNode("Integration.WorkflowSid") is { } nullNodeIntegrationWorkflowSid && nullNodeIntegrationWorkflowSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationWorkflowSid = null;
+            if (parseNode.GetChildNode("Integration.WorkspaceSid") is { } nullNodeIntegrationWorkspaceSid && nullNodeIntegrationWorkspaceSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationWorkspaceSid = null;
+            if (parseNode.GetChildNode("JanitorEnabled") is { } nullNodeJanitorEnabled && nullNodeJanitorEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JanitorEnabled = null;
+            if (parseNode.GetChildNode("LongLived") is { } nullNodeLongLived && nullNodeLongLived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongLived = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The channel type. One of `web`, `facebook`, `sms`, `whatsapp`, `line` or `custom`. By default, Studio’s Send to Flex widget passes it on to the Task attributes for Tasks created based on this Flex Flow. The Task attributes will be used by the Flex UI to render the respective Task as appropriate (applying channel-specific design and length limits). If `channelType` is `facebook`, `whatsapp` or `line`, the Send to Flex widget should set the Task Channel to Programmable Chat.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexFlowEnumChannelType? ChannelType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexFlowEnumChannelType? ChannelType { get => _explicitNullValueChannelType; set { _explicitNullValueChannelType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelType"); else _explicitNullProperties?.Remove("ChannelType"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.FlexFlowEnumChannelType? _explicitNullValueChannelType = default!;
         /// <summary>The SID of the chat service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChatServiceSid { get; set; }
+        public string? ChatServiceSid { get => _explicitNullValueChatServiceSid; set { _explicitNullValueChatServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatServiceSid"); else _explicitNullProperties?.Remove("ChatServiceSid"); } }
+        private string? _explicitNullValueChatServiceSid = default!;
 #nullable restore
 #else
-        public string ChatServiceSid { get; set; }
+        public string ChatServiceSid { get => _explicitNullValueChatServiceSid; set { _explicitNullValueChatServiceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChatServiceSid"); else _explicitNullProperties?.Remove("ChatServiceSid"); } }
+        private string _explicitNullValueChatServiceSid = default!;
 #endif
         /// <summary>The channel contact&apos;s Identity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactIdentity { get; set; }
+        public string? ContactIdentity { get => _explicitNullValueContactIdentity; set { _explicitNullValueContactIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactIdentity"); else _explicitNullProperties?.Remove("ContactIdentity"); } }
+        private string? _explicitNullValueContactIdentity = default!;
 #nullable restore
 #else
-        public string ContactIdentity { get; set; }
+        public string ContactIdentity { get => _explicitNullValueContactIdentity; set { _explicitNullValueContactIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactIdentity"); else _explicitNullProperties?.Remove("ContactIdentity"); } }
+        private string _explicitNullValueContactIdentity = default!;
 #endif
         /// <summary>Whether the new Flex Flow is enabled.</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>A descriptive string that you create to describe the Flex Flow resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The Task Channel SID (TCXXXX) or unique name (e.g., `sms`) to use for the Task that will be created. Applicable and required when `integrationType` is `task`. The default value is `default`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntegrationChannel { get; set; }
+        public string? IntegrationChannel { get => _explicitNullValueIntegrationChannel; set { _explicitNullValueIntegrationChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.Channel"); else _explicitNullProperties?.Remove("Integration.Channel"); } }
+        private string? _explicitNullValueIntegrationChannel = default!;
 #nullable restore
 #else
-        public string IntegrationChannel { get; set; }
+        public string IntegrationChannel { get => _explicitNullValueIntegrationChannel; set { _explicitNullValueIntegrationChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.Channel"); else _explicitNullProperties?.Remove("Integration.Channel"); } }
+        private string _explicitNullValueIntegrationChannel = default!;
 #endif
         /// <summary>In the context of outbound messaging, defines whether to create a Task immediately (and therefore reserve the conversation to current agent), or delay Task creation until the customer sends the first response. Set to false to create immediately, true to delay Task creation. This setting is only applicable for outbound messaging.</summary>
-        public bool? IntegrationCreationOnMessage { get; set; }
+        public bool? IntegrationCreationOnMessage { get => _explicitNullValueIntegrationCreationOnMessage; set { _explicitNullValueIntegrationCreationOnMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.CreationOnMessage"); else _explicitNullProperties?.Remove("Integration.CreationOnMessage"); } }
+        private bool? _explicitNullValueIntegrationCreationOnMessage = default!;
         /// <summary>The SID of the Studio Flow. Required when `integrationType` is `studio`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntegrationFlowSid { get; set; }
+        public string? IntegrationFlowSid { get => _explicitNullValueIntegrationFlowSid; set { _explicitNullValueIntegrationFlowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.FlowSid"); else _explicitNullProperties?.Remove("Integration.FlowSid"); } }
+        private string? _explicitNullValueIntegrationFlowSid = default!;
 #nullable restore
 #else
-        public string IntegrationFlowSid { get; set; }
+        public string IntegrationFlowSid { get => _explicitNullValueIntegrationFlowSid; set { _explicitNullValueIntegrationFlowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.FlowSid"); else _explicitNullProperties?.Remove("Integration.FlowSid"); } }
+        private string _explicitNullValueIntegrationFlowSid = default!;
 #endif
         /// <summary>The Task priority of a new Task. The default priority is 0. Optional when `integrationType` is `task`, not applicable otherwise.</summary>
-        public int? IntegrationPriority { get; set; }
+        public int? IntegrationPriority { get => _explicitNullValueIntegrationPriority; set { _explicitNullValueIntegrationPriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.Priority"); else _explicitNullProperties?.Remove("Integration.Priority"); } }
+        private int? _explicitNullValueIntegrationPriority = default!;
         /// <summary>The number of times to retry the Studio Flow or webhook in case of failure. Takes integer values from 0 to 3 with the default being 3. Optional when `integrationType` is `studio` or `external`, not applicable otherwise.</summary>
-        public int? IntegrationRetryCount { get; set; }
+        public int? IntegrationRetryCount { get => _explicitNullValueIntegrationRetryCount; set { _explicitNullValueIntegrationRetryCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.RetryCount"); else _explicitNullProperties?.Remove("Integration.RetryCount"); } }
+        private int? _explicitNullValueIntegrationRetryCount = default!;
         /// <summary>The Task timeout in seconds for a new Task. Default is 86,400 seconds (24 hours). Optional when `integrationType` is `task`, not applicable otherwise.</summary>
-        public int? IntegrationTimeout { get; set; }
+        public int? IntegrationTimeout { get => _explicitNullValueIntegrationTimeout; set { _explicitNullValueIntegrationTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.Timeout"); else _explicitNullProperties?.Remove("Integration.Timeout"); } }
+        private int? _explicitNullValueIntegrationTimeout = default!;
         /// <summary>The software that will handle inbound messages. [Integration Type](https://www.twilio.com/docs/flex/developer/messaging/manage-flows#integration-types) can be: `studio`, `external`,  or `task`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.FlexFlowEnumIntegrationType? IntegrationType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FlexFlowEnumIntegrationType? IntegrationType { get => _explicitNullValueIntegrationType; set { _explicitNullValueIntegrationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IntegrationType"); else _explicitNullProperties?.Remove("IntegrationType"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.FlexFlowEnumIntegrationType? _explicitNullValueIntegrationType = default!;
         /// <summary>The URL of the external webhook. Required when `integrationType` is `external`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntegrationUrl { get; set; }
+        public string? IntegrationUrl { get => _explicitNullValueIntegrationUrl; set { _explicitNullValueIntegrationUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.Url"); else _explicitNullProperties?.Remove("Integration.Url"); } }
+        private string? _explicitNullValueIntegrationUrl = default!;
 #nullable restore
 #else
-        public string IntegrationUrl { get; set; }
+        public string IntegrationUrl { get => _explicitNullValueIntegrationUrl; set { _explicitNullValueIntegrationUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.Url"); else _explicitNullProperties?.Remove("Integration.Url"); } }
+        private string _explicitNullValueIntegrationUrl = default!;
 #endif
         /// <summary>The Workflow SID for a new Task. Required when `integrationType` is `task`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntegrationWorkflowSid { get; set; }
+        public string? IntegrationWorkflowSid { get => _explicitNullValueIntegrationWorkflowSid; set { _explicitNullValueIntegrationWorkflowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.WorkflowSid"); else _explicitNullProperties?.Remove("Integration.WorkflowSid"); } }
+        private string? _explicitNullValueIntegrationWorkflowSid = default!;
 #nullable restore
 #else
-        public string IntegrationWorkflowSid { get; set; }
+        public string IntegrationWorkflowSid { get => _explicitNullValueIntegrationWorkflowSid; set { _explicitNullValueIntegrationWorkflowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.WorkflowSid"); else _explicitNullProperties?.Remove("Integration.WorkflowSid"); } }
+        private string _explicitNullValueIntegrationWorkflowSid = default!;
 #endif
         /// <summary>The Workspace SID for a new Task. Required when `integrationType` is `task`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntegrationWorkspaceSid { get; set; }
+        public string? IntegrationWorkspaceSid { get => _explicitNullValueIntegrationWorkspaceSid; set { _explicitNullValueIntegrationWorkspaceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.WorkspaceSid"); else _explicitNullProperties?.Remove("Integration.WorkspaceSid"); } }
+        private string? _explicitNullValueIntegrationWorkspaceSid = default!;
 #nullable restore
 #else
-        public string IntegrationWorkspaceSid { get; set; }
+        public string IntegrationWorkspaceSid { get => _explicitNullValueIntegrationWorkspaceSid; set { _explicitNullValueIntegrationWorkspaceSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Integration.WorkspaceSid"); else _explicitNullProperties?.Remove("Integration.WorkspaceSid"); } }
+        private string _explicitNullValueIntegrationWorkspaceSid = default!;
 #endif
         /// <summary>When enabled, the Messaging Channel Janitor will remove active Proxy sessions if the associated Task is deleted outside of the Flex UI. Defaults to `false`.</summary>
-        public bool? JanitorEnabled { get; set; }
+        public bool? JanitorEnabled { get => _explicitNullValueJanitorEnabled; set { _explicitNullValueJanitorEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("JanitorEnabled"); else _explicitNullProperties?.Remove("JanitorEnabled"); } }
+        private bool? _explicitNullValueJanitorEnabled = default!;
         /// <summary>When enabled, Flex will keep the chat channel active so that it may be used for subsequent interactions with a contact identity. Defaults to `false`.</summary>
-        public bool? LongLived { get; set; }
+        public bool? LongLived { get => _explicitNullValueLongLived; set { _explicitNullValueLongLived = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LongLived"); else _explicitNullProperties?.Remove("LongLived"); } }
+        private bool? _explicitNullValueLongLived = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1UpdateFlexFlowXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -111,7 +160,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1UpdateFlexFlowXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1UpdateFlexFlowXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioFlexV1UpdateFlexFlowXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -164,6 +213,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("Integration.WorkspaceSid", IntegrationWorkspaceSid);
             writer.WriteBoolValue("JanitorEnabled", JanitorEnabled);
             writer.WriteBoolValue("LongLived", LongLived);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

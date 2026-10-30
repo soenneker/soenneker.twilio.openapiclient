@@ -11,53 +11,84 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioPreviewCreateWirelessRatePlanXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CommandsEnabled") is { } nullNodeCommandsEnabled && nullNodeCommandsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommandsEnabled = null;
+            if (parseNode.GetChildNode("DataEnabled") is { } nullNodeDataEnabled && nullNodeDataEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataEnabled = null;
+            if (parseNode.GetChildNode("DataLimit") is { } nullNodeDataLimit && nullNodeDataLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataLimit = null;
+            if (parseNode.GetChildNode("DataMetering") is { } nullNodeDataMetering && nullNodeDataMetering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataMetering = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("InternationalRoaming") is { } nullNodeInternationalRoaming && nullNodeInternationalRoaming.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternationalRoaming = null;
+            if (parseNode.GetChildNode("MessagingEnabled") is { } nullNodeMessagingEnabled && nullNodeMessagingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingEnabled = null;
+            if (parseNode.GetChildNode("NationalRoamingEnabled") is { } nullNodeNationalRoamingEnabled && nullNodeNationalRoamingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NationalRoamingEnabled = null;
+            if (parseNode.GetChildNode("UniqueName") is { } nullNodeUniqueName && nullNodeUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueName = null;
+            if (parseNode.GetChildNode("VoiceEnabled") is { } nullNodeVoiceEnabled && nullNodeVoiceEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The CommandsEnabled property</summary>
-        public bool? CommandsEnabled { get; set; }
+        public bool? CommandsEnabled { get => _explicitNullValueCommandsEnabled; set { _explicitNullValueCommandsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CommandsEnabled"); else _explicitNullProperties?.Remove("CommandsEnabled"); } }
+        private bool? _explicitNullValueCommandsEnabled = default!;
         /// <summary>The DataEnabled property</summary>
-        public bool? DataEnabled { get; set; }
+        public bool? DataEnabled { get => _explicitNullValueDataEnabled; set { _explicitNullValueDataEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataEnabled"); else _explicitNullProperties?.Remove("DataEnabled"); } }
+        private bool? _explicitNullValueDataEnabled = default!;
         /// <summary>The DataLimit property</summary>
-        public int? DataLimit { get; set; }
+        public int? DataLimit { get => _explicitNullValueDataLimit; set { _explicitNullValueDataLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataLimit"); else _explicitNullProperties?.Remove("DataLimit"); } }
+        private int? _explicitNullValueDataLimit = default!;
         /// <summary>The DataMetering property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DataMetering { get; set; }
+        public string? DataMetering { get => _explicitNullValueDataMetering; set { _explicitNullValueDataMetering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataMetering"); else _explicitNullProperties?.Remove("DataMetering"); } }
+        private string? _explicitNullValueDataMetering = default!;
 #nullable restore
 #else
-        public string DataMetering { get; set; }
+        public string DataMetering { get => _explicitNullValueDataMetering; set { _explicitNullValueDataMetering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataMetering"); else _explicitNullProperties?.Remove("DataMetering"); } }
+        private string _explicitNullValueDataMetering = default!;
 #endif
         /// <summary>The FriendlyName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The InternationalRoaming property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InternationalRoaming { get; set; }
+        public List<string>? InternationalRoaming { get => _explicitNullValueInternationalRoaming; set { _explicitNullValueInternationalRoaming = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InternationalRoaming"); else _explicitNullProperties?.Remove("InternationalRoaming"); } }
+        private List<string>? _explicitNullValueInternationalRoaming = default!;
 #nullable restore
 #else
-        public List<string> InternationalRoaming { get; set; }
+        public List<string> InternationalRoaming { get => _explicitNullValueInternationalRoaming; set { _explicitNullValueInternationalRoaming = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InternationalRoaming"); else _explicitNullProperties?.Remove("InternationalRoaming"); } }
+        private List<string> _explicitNullValueInternationalRoaming = default!;
 #endif
         /// <summary>The MessagingEnabled property</summary>
-        public bool? MessagingEnabled { get; set; }
+        public bool? MessagingEnabled { get => _explicitNullValueMessagingEnabled; set { _explicitNullValueMessagingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MessagingEnabled"); else _explicitNullProperties?.Remove("MessagingEnabled"); } }
+        private bool? _explicitNullValueMessagingEnabled = default!;
         /// <summary>The NationalRoamingEnabled property</summary>
-        public bool? NationalRoamingEnabled { get; set; }
+        public bool? NationalRoamingEnabled { get => _explicitNullValueNationalRoamingEnabled; set { _explicitNullValueNationalRoamingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NationalRoamingEnabled"); else _explicitNullProperties?.Remove("NationalRoamingEnabled"); } }
+        private bool? _explicitNullValueNationalRoamingEnabled = default!;
         /// <summary>The UniqueName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniqueName { get; set; }
+        public string? UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string? _explicitNullValueUniqueName = default!;
 #nullable restore
 #else
-        public string UniqueName { get; set; }
+        public string UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string _explicitNullValueUniqueName = default!;
 #endif
         /// <summary>The VoiceEnabled property</summary>
-        public bool? VoiceEnabled { get; set; }
+        public bool? VoiceEnabled { get => _explicitNullValueVoiceEnabled; set { _explicitNullValueVoiceEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoiceEnabled"); else _explicitNullProperties?.Remove("VoiceEnabled"); } }
+        private bool? _explicitNullValueVoiceEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewCreateWirelessRatePlanXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -73,7 +104,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewCreateWirelessRatePlanXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewCreateWirelessRatePlanXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioPreviewCreateWirelessRatePlanXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +143,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("NationalRoamingEnabled", NationalRoamingEnabled);
             writer.WriteStringValue("UniqueName", UniqueName);
             writer.WriteBoolValue("VoiceEnabled", VoiceEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

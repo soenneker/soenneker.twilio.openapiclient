@@ -12,15 +12,28 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("answered_by_human_percentage") is { } nullNodeAnsweredByHumanPercentage && nullNodeAnsweredByHumanPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnsweredByHumanPercentage = null;
+            if (parseNode.GetChildNode("answered_by_machine_percentage") is { } nullNodeAnsweredByMachinePercentage && nullNodeAnsweredByMachinePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnsweredByMachinePercentage = null;
+            if (parseNode.GetChildNode("total_calls") is { } nullNodeTotalCalls && nullNodeTotalCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCalls = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Percentage of calls marked as answered by human.</summary>
-        public float? AnsweredByHumanPercentage { get; set; }
+        public float? AnsweredByHumanPercentage { get => _explicitNullValueAnsweredByHumanPercentage; set { _explicitNullValueAnsweredByHumanPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answered_by_human_percentage"); else _explicitNullProperties?.Remove("answered_by_human_percentage"); } }
+        private float? _explicitNullValueAnsweredByHumanPercentage = default!;
         /// <summary>Percentage of calls marked as answered by machined related like the following:`machine_start`, `machine_end_beep`, `machine_end_silence`, `machine_end_other`, `fax`</summary>
-        public float? AnsweredByMachinePercentage { get; set; }
+        public float? AnsweredByMachinePercentage { get => _explicitNullValueAnsweredByMachinePercentage; set { _explicitNullValueAnsweredByMachinePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answered_by_machine_percentage"); else _explicitNullProperties?.Remove("answered_by_machine_percentage"); } }
+        private float? _explicitNullValueAnsweredByMachinePercentage = default!;
         /// <summary>Total number of calls with answering machine detection (AMD) enabled.</summary>
-        public int? TotalCalls { get; set; }
+        public int? TotalCalls { get => _explicitNullValueTotalCalls; set { _explicitNullValueTotalCalls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_calls"); else _explicitNullProperties?.Remove("total_calls"); } }
+        private int? _explicitNullValueTotalCalls = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.InsightsV2OutboundPhoneNumberReportAnsweringMachineDetection(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteFloatValue("answered_by_human_percentage", AnsweredByHumanPercentage);
             writer.WriteFloatValue("answered_by_machine_percentage", AnsweredByMachinePercentage);
             writer.WriteIntValue("total_calls", TotalCalls);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

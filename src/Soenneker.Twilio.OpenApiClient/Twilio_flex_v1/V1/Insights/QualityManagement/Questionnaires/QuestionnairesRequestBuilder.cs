@@ -62,7 +62,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Insights.QualityManag
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListInsightsQuestionnairesResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListInsightsQuestionnairesResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListInsightsQuestionnairesResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListInsightsQuestionnairesResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// To create a Questionnaire
@@ -82,7 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_flex_v1.V1.Insights.QualityManag
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnaires>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnaires.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnaires>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.FlexV1InsightsQuestionnaires.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// To get all questionnaires with questions

@@ -52,6 +52,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2DeleteLookupPhoneNumberOverrides400Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -77,6 +79,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
             {
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupPhoneNumberOverrides400Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2FetchLookupPhoneNumberOverrides404Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -102,6 +106,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2CreateLookupPhoneNumberOverrides400Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -129,6 +135,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.PhoneNumbers.Item.
             {
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2UpdateLookupPhoneNumberOverrides400Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioLookupsV2UpdateLookupPhoneNumberOverrides404Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.OverridesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -11,92 +11,138 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AccountReport : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("aloc") is { } nullNodeAloc && nullNodeAloc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aloc = null;
+            if (parseNode.GetChildNode("answering_machine_detection") is { } nullNodeAnsweringMachineDetection && nullNodeAnsweringMachineDetection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnsweringMachineDetection = null;
+            if (parseNode.GetChildNode("average_queue_time_ms") is { } nullNodeAverageQueueTimeMs && nullNodeAverageQueueTimeMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageQueueTimeMs = null;
+            if (parseNode.GetChildNode("call_answer_score") is { } nullNodeCallAnswerScore && nullNodeCallAnswerScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallAnswerScore = null;
+            if (parseNode.GetChildNode("call_deliverability_score") is { } nullNodeCallDeliverabilityScore && nullNodeCallDeliverabilityScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallDeliverabilityScore = null;
+            if (parseNode.GetChildNode("call_direction") is { } nullNodeCallDirection && nullNodeCallDirection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallDirection = null;
+            if (parseNode.GetChildNode("callee_country_code") is { } nullNodeCalleeCountryCode && nullNodeCalleeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalleeCountryCode = null;
+            if (parseNode.GetChildNode("caller_country_code") is { } nullNodeCallerCountryCode && nullNodeCallerCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallerCountryCode = null;
+            if (parseNode.GetChildNode("call_state") is { } nullNodeCallState && nullNodeCallState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallState = null;
+            if (parseNode.GetChildNode("call_type") is { } nullNodeCallType && nullNodeCallType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallType = null;
+            if (parseNode.GetChildNode("KYT") is { } nullNodeKYT && nullNodeKYT.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KYT = null;
+            if (parseNode.GetChildNode("network_issues") is { } nullNodeNetworkIssues && nullNodeNetworkIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkIssues = null;
+            if (parseNode.GetChildNode("silent_calls_percentage") is { } nullNodeSilentCallsPercentage && nullNodeSilentCallsPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SilentCallsPercentage = null;
+            if (parseNode.GetChildNode("total_calls") is { } nullNodeTotalCalls && nullNodeTotalCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCalls = null;
+            if (parseNode.GetChildNode("twilio_edge_location") is { } nullNodeTwilioEdgeLocation && nullNodeTwilioEdgeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioEdgeLocation = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Average length of call in seconds.</summary>
-        public float? Aloc { get; set; }
+        public float? Aloc { get => _explicitNullValueAloc; set { _explicitNullValueAloc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aloc"); else _explicitNullProperties?.Remove("aloc"); } }
+        private float? _explicitNullValueAloc = default!;
         /// <summary>Number of calls made in each answering machine detection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportAnsweringMachineDetection? AnsweringMachineDetection { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportAnsweringMachineDetection? AnsweringMachineDetection { get => _explicitNullValueAnsweringMachineDetection; set { _explicitNullValueAnsweringMachineDetection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answering_machine_detection"); else _explicitNullProperties?.Remove("answering_machine_detection"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportAnsweringMachineDetection? _explicitNullValueAnsweringMachineDetection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportAnsweringMachineDetection AnsweringMachineDetection { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportAnsweringMachineDetection AnsweringMachineDetection { get => _explicitNullValueAnsweringMachineDetection; set { _explicitNullValueAnsweringMachineDetection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answering_machine_detection"); else _explicitNullProperties?.Remove("answering_machine_detection"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportAnsweringMachineDetection _explicitNullValueAnsweringMachineDetection = default!;
 #endif
         /// <summary>Average queue time in milliseconds.</summary>
-        public float? AverageQueueTimeMs { get; set; }
+        public float? AverageQueueTimeMs { get => _explicitNullValueAverageQueueTimeMs; set { _explicitNullValueAverageQueueTimeMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("average_queue_time_ms"); else _explicitNullProperties?.Remove("average_queue_time_ms"); } }
+        private float? _explicitNullValueAverageQueueTimeMs = default!;
         /// <summary>The call answer score measures customers behavior to the delivered calls.The score is a value between 0 and 100, where 100 indicates that all calls were successfully answered.</summary>
-        public float? CallAnswerScore { get; set; }
+        public float? CallAnswerScore { get => _explicitNullValueCallAnswerScore; set { _explicitNullValueCallAnswerScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_answer_score"); else _explicitNullProperties?.Remove("call_answer_score"); } }
+        private float? _explicitNullValueCallAnswerScore = default!;
         /// <summary>The call deliverability score measures the network effectiveness in delivering calls by scoring calls reach the intended recipient.The score is a value between 0 and 100, where 100 indicates that all calls were successfully delivered.</summary>
-        public float? CallDeliverabilityScore { get; set; }
+        public float? CallDeliverabilityScore { get => _explicitNullValueCallDeliverabilityScore; set { _explicitNullValueCallDeliverabilityScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_deliverability_score"); else _explicitNullProperties?.Remove("call_deliverability_score"); } }
+        private float? _explicitNullValueCallDeliverabilityScore = default!;
         /// <summary>Number of calls made in each direction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallDirection? CallDirection { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallDirection? CallDirection { get => _explicitNullValueCallDirection; set { _explicitNullValueCallDirection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_direction"); else _explicitNullProperties?.Remove("call_direction"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallDirection? _explicitNullValueCallDirection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallDirection CallDirection { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallDirection CallDirection { get => _explicitNullValueCallDirection; set { _explicitNullValueCallDirection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_direction"); else _explicitNullProperties?.Remove("call_direction"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallDirection _explicitNullValueCallDirection = default!;
 #endif
         /// <summary>Number of calls terminating in each country (ISO alpha-2).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCalleeCountryCodeProperty? CalleeCountryCode { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCalleeCountryCodeProperty? CalleeCountryCode { get => _explicitNullValueCalleeCountryCode; set { _explicitNullValueCalleeCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callee_country_code"); else _explicitNullProperties?.Remove("callee_country_code"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCalleeCountryCodeProperty? _explicitNullValueCalleeCountryCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCalleeCountryCodeProperty CalleeCountryCode { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCalleeCountryCodeProperty CalleeCountryCode { get => _explicitNullValueCalleeCountryCode; set { _explicitNullValueCalleeCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callee_country_code"); else _explicitNullProperties?.Remove("callee_country_code"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCalleeCountryCodeProperty _explicitNullValueCalleeCountryCode = default!;
 #endif
         /// <summary>Number of calls originating from each country (ISO alpha-2).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallerCountryCodeProperty? CallerCountryCode { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallerCountryCodeProperty? CallerCountryCode { get => _explicitNullValueCallerCountryCode; set { _explicitNullValueCallerCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caller_country_code"); else _explicitNullProperties?.Remove("caller_country_code"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallerCountryCodeProperty? _explicitNullValueCallerCountryCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallerCountryCodeProperty CallerCountryCode { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallerCountryCodeProperty CallerCountryCode { get => _explicitNullValueCallerCountryCode; set { _explicitNullValueCallerCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caller_country_code"); else _explicitNullProperties?.Remove("caller_country_code"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallerCountryCodeProperty _explicitNullValueCallerCountryCode = default!;
 #endif
         /// <summary>Number of calls made in each state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallState? CallState { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallState? CallState { get => _explicitNullValueCallState; set { _explicitNullValueCallState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_state"); else _explicitNullProperties?.Remove("call_state"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallState? _explicitNullValueCallState = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallState CallState { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallState CallState { get => _explicitNullValueCallState; set { _explicitNullValueCallState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_state"); else _explicitNullProperties?.Remove("call_state"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallState _explicitNullValueCallState = default!;
 #endif
         /// <summary>Number of calls made in each type.`carrier`, `sip`, `trunking`, `client`, `whatsapp`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallType? CallType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallType? CallType { get => _explicitNullValueCallType; set { _explicitNullValueCallType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_type"); else _explicitNullProperties?.Remove("call_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallType? _explicitNullValueCallType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallType CallType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallType CallType { get => _explicitNullValueCallType; set { _explicitNullValueCallType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_type"); else _explicitNullProperties?.Remove("call_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportCallType _explicitNullValueCallType = default!;
 #endif
         /// <summary>Know Your Traffic (KYT) metrics focused on outbound carrier performance and trust signals for the report period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt? KYT { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt? KYT { get => _explicitNullValueKYT; set { _explicitNullValueKYT = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("KYT"); else _explicitNullProperties?.Remove("KYT"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt? _explicitNullValueKYT = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt KYT { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt KYT { get => _explicitNullValueKYT; set { _explicitNullValueKYT = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("KYT"); else _explicitNullProperties?.Remove("KYT"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportKyt _explicitNullValueKYT = default!;
 #endif
         /// <summary>Network-quality indicators for SDK and Twilio Gateway traffic during the report period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues? NetworkIssues { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues? NetworkIssues { get => _explicitNullValueNetworkIssues; set { _explicitNullValueNetworkIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_issues"); else _explicitNullProperties?.Remove("network_issues"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues? _explicitNullValueNetworkIssues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues NetworkIssues { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues NetworkIssues { get => _explicitNullValueNetworkIssues; set { _explicitNullValueNetworkIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_issues"); else _explicitNullProperties?.Remove("network_issues"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssues _explicitNullValueNetworkIssues = default!;
 #endif
         /// <summary>Percentage of silent calls.</summary>
-        public float? SilentCallsPercentage { get; set; }
+        public float? SilentCallsPercentage { get => _explicitNullValueSilentCallsPercentage; set { _explicitNullValueSilentCallsPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("silent_calls_percentage"); else _explicitNullProperties?.Remove("silent_calls_percentage"); } }
+        private float? _explicitNullValueSilentCallsPercentage = default!;
         /// <summary>Total number of calls made during the report period.</summary>
-        public int? TotalCalls { get; set; }
+        public int? TotalCalls { get => _explicitNullValueTotalCalls; set { _explicitNullValueTotalCalls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_calls"); else _explicitNullProperties?.Remove("total_calls"); } }
+        private int? _explicitNullValueTotalCalls = default!;
         /// <summary>Number of calls made in each Twilio Edge location. Refer to [Public Edge Locations](https://www.twilio.com/docs/global-infrastructure/edge-locations#public-edge-locations) for more detail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty? TwilioEdgeLocation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty? TwilioEdgeLocation { get => _explicitNullValueTwilioEdgeLocation; set { _explicitNullValueTwilioEdgeLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_edge_location"); else _explicitNullProperties?.Remove("twilio_edge_location"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty? _explicitNullValueTwilioEdgeLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty TwilioEdgeLocation { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty TwilioEdgeLocation { get => _explicitNullValueTwilioEdgeLocation; set { _explicitNullValueTwilioEdgeLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilio_edge_location"); else _explicitNullProperties?.Remove("twilio_edge_location"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty _explicitNullValueTwilioEdgeLocation = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AccountReport"/> and sets the default values.
@@ -113,7 +159,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.AccountReport CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.AccountReport();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.AccountReport(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -162,6 +208,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteFloatValue("silent_calls_percentage", SilentCallsPercentage);
             writer.WriteIntValue("total_calls", TotalCalls);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.AccountReportTwilioEdgeLocationProperty>("twilio_edge_location", TwilioEdgeLocation);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

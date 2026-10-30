@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v1.V1.PhoneNumbers.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumber>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumber.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumber>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.LookupsV1PhoneNumber.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Fetch information about a phone number. You can use this endpoint to retrieve the carrier and caller name for a phone number, as well as any installed Add-ons.

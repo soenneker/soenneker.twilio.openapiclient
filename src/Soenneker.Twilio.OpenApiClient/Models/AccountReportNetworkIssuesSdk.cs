@@ -12,17 +12,32 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccountReportNetworkIssuesSdk : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("high_jitter_percentage") is { } nullNodeHighJitterPercentage && nullNodeHighJitterPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HighJitterPercentage = null;
+            if (parseNode.GetChildNode("high_latency_percentage") is { } nullNodeHighLatencyPercentage && nullNodeHighLatencyPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HighLatencyPercentage = null;
+            if (parseNode.GetChildNode("high_packet_loss_percentage") is { } nullNodeHighPacketLossPercentage && nullNodeHighPacketLossPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HighPacketLossPercentage = null;
+            if (parseNode.GetChildNode("ice_failures_percentage") is { } nullNodeIceFailuresPercentage && nullNodeIceFailuresPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IceFailuresPercentage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Percentage of calls with high jitter.</summary>
-        public float? HighJitterPercentage { get; set; }
+        public float? HighJitterPercentage { get => _explicitNullValueHighJitterPercentage; set { _explicitNullValueHighJitterPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("high_jitter_percentage"); else _explicitNullProperties?.Remove("high_jitter_percentage"); } }
+        private float? _explicitNullValueHighJitterPercentage = default!;
         /// <summary>Percentage of calls with high latency.</summary>
-        public float? HighLatencyPercentage { get; set; }
+        public float? HighLatencyPercentage { get => _explicitNullValueHighLatencyPercentage; set { _explicitNullValueHighLatencyPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("high_latency_percentage"); else _explicitNullProperties?.Remove("high_latency_percentage"); } }
+        private float? _explicitNullValueHighLatencyPercentage = default!;
         /// <summary>Percentage of calls with high packet loss.</summary>
-        public float? HighPacketLossPercentage { get; set; }
+        public float? HighPacketLossPercentage { get => _explicitNullValueHighPacketLossPercentage; set { _explicitNullValueHighPacketLossPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("high_packet_loss_percentage"); else _explicitNullProperties?.Remove("high_packet_loss_percentage"); } }
+        private float? _explicitNullValueHighPacketLossPercentage = default!;
         /// <summary>Percentage of ICE connection failure tag that ICE candidates have failed to find compatible connection.</summary>
-        public float? IceFailuresPercentage { get; set; }
+        public float? IceFailuresPercentage { get => _explicitNullValueIceFailuresPercentage; set { _explicitNullValueIceFailuresPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ice_failures_percentage"); else _explicitNullProperties?.Remove("ice_failures_percentage"); } }
+        private float? _explicitNullValueIceFailuresPercentage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk"/> and sets the default values.
         /// </summary>
@@ -38,7 +53,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.AccountReportNetworkIssuesSdk(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,6 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteFloatValue("high_latency_percentage", HighLatencyPercentage);
             writer.WriteFloatValue("high_packet_loss_percentage", HighPacketLossPercentage);
             writer.WriteFloatValue("ice_failures_percentage", IceFailuresPercentage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,41 +11,65 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioInsightsV1UpdateAnnotationXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AnsweredBy") is { } nullNodeAnsweredBy && nullNodeAnsweredBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnsweredBy = null;
+            if (parseNode.GetChildNode("CallScore") is { } nullNodeCallScore && nullNodeCallScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallScore = null;
+            if (parseNode.GetChildNode("Comment") is { } nullNodeComment && nullNodeComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comment = null;
+            if (parseNode.GetChildNode("ConnectivityIssue") is { } nullNodeConnectivityIssue && nullNodeConnectivityIssue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectivityIssue = null;
+            if (parseNode.GetChildNode("Incident") is { } nullNodeIncident && nullNodeIncident.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Incident = null;
+            if (parseNode.GetChildNode("QualityIssues") is { } nullNodeQualityIssues && nullNodeQualityIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QualityIssues = null;
+            if (parseNode.GetChildNode("Spam") is { } nullNodeSpam && nullNodeSpam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Spam = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The AnsweredBy property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumAnsweredBy? AnsweredBy { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumAnsweredBy? AnsweredBy { get => _explicitNullValueAnsweredBy; set { _explicitNullValueAnsweredBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AnsweredBy"); else _explicitNullProperties?.Remove("AnsweredBy"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumAnsweredBy? _explicitNullValueAnsweredBy = default!;
         /// <summary>Specify the call score. This is of type integer. Use a range of 1-5 to indicate the call experience score, with the following mapping as a reference for rating the call [5: Excellent, 4: Good, 3 : Fair, 2 : Poor, 1: Bad].</summary>
-        public int? CallScore { get; set; }
+        public int? CallScore { get => _explicitNullValueCallScore; set { _explicitNullValueCallScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallScore"); else _explicitNullProperties?.Remove("CallScore"); } }
+        private int? _explicitNullValueCallScore = default!;
         /// <summary>Specify any comments pertaining to the call. `comment` has a maximum character limit of 100. Twilio does not treat this field as PII, so no PII should be included in the `comment`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Comment { get; set; }
+        public string? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Comment"); else _explicitNullProperties?.Remove("Comment"); } }
+        private string? _explicitNullValueComment = default!;
 #nullable restore
 #else
-        public string Comment { get; set; }
+        public string Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Comment"); else _explicitNullProperties?.Remove("Comment"); } }
+        private string _explicitNullValueComment = default!;
 #endif
         /// <summary>The ConnectivityIssue property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumConnectivityIssue? ConnectivityIssue { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumConnectivityIssue? ConnectivityIssue { get => _explicitNullValueConnectivityIssue; set { _explicitNullValueConnectivityIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConnectivityIssue"); else _explicitNullProperties?.Remove("ConnectivityIssue"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.AnnotationEnumConnectivityIssue? _explicitNullValueConnectivityIssue = default!;
         /// <summary>Associate this call with an incident or support ticket. The `incident` parameter is of type string with a maximum character limit of 100. Twilio does not treat this field as PII, so no PII should be included in `incident`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Incident { get; set; }
+        public string? Incident { get => _explicitNullValueIncident; set { _explicitNullValueIncident = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Incident"); else _explicitNullProperties?.Remove("Incident"); } }
+        private string? _explicitNullValueIncident = default!;
 #nullable restore
 #else
-        public string Incident { get; set; }
+        public string Incident { get => _explicitNullValueIncident; set { _explicitNullValueIncident = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Incident"); else _explicitNullProperties?.Remove("Incident"); } }
+        private string _explicitNullValueIncident = default!;
 #endif
         /// <summary>Specify if the call had any subjective quality issues. Possible values, one or more of `no_quality_issue`, `low_volume`, `choppy_robotic`, `echo`, `dtmf`, `latency`, `owa`, `static_noise`. Use comma separated values to indicate multiple quality issues for the same call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QualityIssues { get; set; }
+        public string? QualityIssues { get => _explicitNullValueQualityIssues; set { _explicitNullValueQualityIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QualityIssues"); else _explicitNullProperties?.Remove("QualityIssues"); } }
+        private string? _explicitNullValueQualityIssues = default!;
 #nullable restore
 #else
-        public string QualityIssues { get; set; }
+        public string QualityIssues { get => _explicitNullValueQualityIssues; set { _explicitNullValueQualityIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QualityIssues"); else _explicitNullProperties?.Remove("QualityIssues"); } }
+        private string _explicitNullValueQualityIssues = default!;
 #endif
         /// <summary>A boolean flag to indicate if the call was a spam call. Use this to provide feedback on whether calls placed from your account were marked as spam, or if inbound calls received by your account were unwanted spam. Use `true` if the call was a spam call.</summary>
-        public bool? Spam { get; set; }
+        public bool? Spam { get => _explicitNullValueSpam; set { _explicitNullValueSpam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Spam"); else _explicitNullProperties?.Remove("Spam"); } }
+        private bool? _explicitNullValueSpam = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1UpdateAnnotationXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -61,7 +85,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1UpdateAnnotationXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1UpdateAnnotationXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioInsightsV1UpdateAnnotationXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +118,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("Incident", Incident);
             writer.WriteStringValue("QualityIssues", QualityIssues);
             writer.WriteBoolValue("Spam", Spam);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

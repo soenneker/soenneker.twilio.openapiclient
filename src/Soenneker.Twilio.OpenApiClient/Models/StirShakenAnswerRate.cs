@@ -12,15 +12,28 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StirShakenAnswerRate : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("stsh_a") is { } nullNodeStshA && nullNodeStshA.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StshA = null;
+            if (parseNode.GetChildNode("stsh_b") is { } nullNodeStshB && nullNodeStshB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StshB = null;
+            if (parseNode.GetChildNode("stsh_c") is { } nullNodeStshC && nullNodeStshC.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StshC = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Answer rate for Stir Shaken category A.</summary>
-        public float? StshA { get; set; }
+        public float? StshA { get => _explicitNullValueStshA; set { _explicitNullValueStshA = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stsh_a"); else _explicitNullProperties?.Remove("stsh_a"); } }
+        private float? _explicitNullValueStshA = default!;
         /// <summary>Answer rate for Stir Shaken category B.</summary>
-        public float? StshB { get; set; }
+        public float? StshB { get => _explicitNullValueStshB; set { _explicitNullValueStshB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stsh_b"); else _explicitNullProperties?.Remove("stsh_b"); } }
+        private float? _explicitNullValueStshB = default!;
         /// <summary>Answer rate for Stir Shaken category C.</summary>
-        public float? StshC { get; set; }
+        public float? StshC { get => _explicitNullValueStshC; set { _explicitNullValueStshC = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stsh_c"); else _explicitNullProperties?.Remove("stsh_c"); } }
+        private float? _explicitNullValueStshC = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.StirShakenAnswerRate"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.StirShakenAnswerRate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.StirShakenAnswerRate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.StirShakenAnswerRate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteFloatValue("stsh_a", StshA);
             writer.WriteFloatValue("stsh_b", StshB);
             writer.WriteFloatValue("stsh_c", StshC);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

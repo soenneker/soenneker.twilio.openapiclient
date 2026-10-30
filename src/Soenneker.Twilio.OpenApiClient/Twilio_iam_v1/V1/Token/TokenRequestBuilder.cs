@@ -51,7 +51,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_iam_v1.V1.Token
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1OAuthV1Token>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1OAuthV1Token.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1OAuthV1Token>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TwilioIamV1OAuthV1Token.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Issues a new Access token (optionally identity_token &amp; refresh_token) in exchange of Oauth grant

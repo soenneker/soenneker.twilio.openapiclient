@@ -46,7 +46,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_pricing_v1.V1.Voice.Countries.It
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.PricingV1VoiceVoiceCountryInstance>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.PricingV1VoiceVoiceCountryInstance.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.PricingV1VoiceVoiceCountryInstance>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.PricingV1VoiceVoiceCountryInstance.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

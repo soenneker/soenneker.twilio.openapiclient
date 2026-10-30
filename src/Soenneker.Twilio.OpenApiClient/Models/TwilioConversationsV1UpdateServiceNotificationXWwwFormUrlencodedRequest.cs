@@ -11,76 +11,116 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioConversationsV1UpdateServiceNotificationXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AddedToConversation.Enabled") is { } nullNodeAddedToConversationEnabled && nullNodeAddedToConversationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedToConversationEnabled = null;
+            if (parseNode.GetChildNode("AddedToConversation.Sound") is { } nullNodeAddedToConversationSound && nullNodeAddedToConversationSound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedToConversationSound = null;
+            if (parseNode.GetChildNode("AddedToConversation.Template") is { } nullNodeAddedToConversationTemplate && nullNodeAddedToConversationTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedToConversationTemplate = null;
+            if (parseNode.GetChildNode("LogEnabled") is { } nullNodeLogEnabled && nullNodeLogEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogEnabled = null;
+            if (parseNode.GetChildNode("NewMessage.BadgeCountEnabled") is { } nullNodeNewMessageBadgeCountEnabled && nullNodeNewMessageBadgeCountEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMessageBadgeCountEnabled = null;
+            if (parseNode.GetChildNode("NewMessage.Enabled") is { } nullNodeNewMessageEnabled && nullNodeNewMessageEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMessageEnabled = null;
+            if (parseNode.GetChildNode("NewMessage.Sound") is { } nullNodeNewMessageSound && nullNodeNewMessageSound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMessageSound = null;
+            if (parseNode.GetChildNode("NewMessage.Template") is { } nullNodeNewMessageTemplate && nullNodeNewMessageTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMessageTemplate = null;
+            if (parseNode.GetChildNode("NewMessage.WithMedia.Enabled") is { } nullNodeNewMessageWithMediaEnabled && nullNodeNewMessageWithMediaEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMessageWithMediaEnabled = null;
+            if (parseNode.GetChildNode("NewMessage.WithMedia.Template") is { } nullNodeNewMessageWithMediaTemplate && nullNodeNewMessageWithMediaTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMessageWithMediaTemplate = null;
+            if (parseNode.GetChildNode("RemovedFromConversation.Enabled") is { } nullNodeRemovedFromConversationEnabled && nullNodeRemovedFromConversationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemovedFromConversationEnabled = null;
+            if (parseNode.GetChildNode("RemovedFromConversation.Sound") is { } nullNodeRemovedFromConversationSound && nullNodeRemovedFromConversationSound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemovedFromConversationSound = null;
+            if (parseNode.GetChildNode("RemovedFromConversation.Template") is { } nullNodeRemovedFromConversationTemplate && nullNodeRemovedFromConversationTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemovedFromConversationTemplate = null;
+        }
+
         /// <summary>Whether to send a notification when a participant is added to a conversation. The default is `false`.</summary>
-        public bool? AddedToConversationEnabled { get; set; }
+        public bool? AddedToConversationEnabled { get => _explicitNullValueAddedToConversationEnabled; set { _explicitNullValueAddedToConversationEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddedToConversation.Enabled"); else _explicitNullProperties?.Remove("AddedToConversation.Enabled"); } }
+        private bool? _explicitNullValueAddedToConversationEnabled = default!;
         /// <summary>The name of the sound to play when a participant is added to a conversation and `added_to_conversation.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddedToConversationSound { get; set; }
+        public string? AddedToConversationSound { get => _explicitNullValueAddedToConversationSound; set { _explicitNullValueAddedToConversationSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddedToConversation.Sound"); else _explicitNullProperties?.Remove("AddedToConversation.Sound"); } }
+        private string? _explicitNullValueAddedToConversationSound = default!;
 #nullable restore
 #else
-        public string AddedToConversationSound { get; set; }
+        public string AddedToConversationSound { get => _explicitNullValueAddedToConversationSound; set { _explicitNullValueAddedToConversationSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddedToConversation.Sound"); else _explicitNullProperties?.Remove("AddedToConversation.Sound"); } }
+        private string _explicitNullValueAddedToConversationSound = default!;
 #endif
         /// <summary>The template to use to create the notification text displayed when a participant is added to a conversation and `added_to_conversation.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddedToConversationTemplate { get; set; }
+        public string? AddedToConversationTemplate { get => _explicitNullValueAddedToConversationTemplate; set { _explicitNullValueAddedToConversationTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddedToConversation.Template"); else _explicitNullProperties?.Remove("AddedToConversation.Template"); } }
+        private string? _explicitNullValueAddedToConversationTemplate = default!;
 #nullable restore
 #else
-        public string AddedToConversationTemplate { get; set; }
+        public string AddedToConversationTemplate { get => _explicitNullValueAddedToConversationTemplate; set { _explicitNullValueAddedToConversationTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddedToConversation.Template"); else _explicitNullProperties?.Remove("AddedToConversation.Template"); } }
+        private string _explicitNullValueAddedToConversationTemplate = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Weather the notification logging is enabled.</summary>
-        public bool? LogEnabled { get; set; }
+        public bool? LogEnabled { get => _explicitNullValueLogEnabled; set { _explicitNullValueLogEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogEnabled"); else _explicitNullProperties?.Remove("LogEnabled"); } }
+        private bool? _explicitNullValueLogEnabled = default!;
         /// <summary>Whether the new message badge is enabled. The default is `false`.</summary>
-        public bool? NewMessageBadgeCountEnabled { get; set; }
+        public bool? NewMessageBadgeCountEnabled { get => _explicitNullValueNewMessageBadgeCountEnabled; set { _explicitNullValueNewMessageBadgeCountEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NewMessage.BadgeCountEnabled"); else _explicitNullProperties?.Remove("NewMessage.BadgeCountEnabled"); } }
+        private bool? _explicitNullValueNewMessageBadgeCountEnabled = default!;
         /// <summary>Whether to send a notification when a new message is added to a conversation. The default is `false`.</summary>
-        public bool? NewMessageEnabled { get; set; }
+        public bool? NewMessageEnabled { get => _explicitNullValueNewMessageEnabled; set { _explicitNullValueNewMessageEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NewMessage.Enabled"); else _explicitNullProperties?.Remove("NewMessage.Enabled"); } }
+        private bool? _explicitNullValueNewMessageEnabled = default!;
         /// <summary>The name of the sound to play when a new message is added to a conversation and `new_message.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewMessageSound { get; set; }
+        public string? NewMessageSound { get => _explicitNullValueNewMessageSound; set { _explicitNullValueNewMessageSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NewMessage.Sound"); else _explicitNullProperties?.Remove("NewMessage.Sound"); } }
+        private string? _explicitNullValueNewMessageSound = default!;
 #nullable restore
 #else
-        public string NewMessageSound { get; set; }
+        public string NewMessageSound { get => _explicitNullValueNewMessageSound; set { _explicitNullValueNewMessageSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NewMessage.Sound"); else _explicitNullProperties?.Remove("NewMessage.Sound"); } }
+        private string _explicitNullValueNewMessageSound = default!;
 #endif
         /// <summary>The template to use to create the notification text displayed when a new message is added to a conversation and `new_message.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewMessageTemplate { get; set; }
+        public string? NewMessageTemplate { get => _explicitNullValueNewMessageTemplate; set { _explicitNullValueNewMessageTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NewMessage.Template"); else _explicitNullProperties?.Remove("NewMessage.Template"); } }
+        private string? _explicitNullValueNewMessageTemplate = default!;
 #nullable restore
 #else
-        public string NewMessageTemplate { get; set; }
+        public string NewMessageTemplate { get => _explicitNullValueNewMessageTemplate; set { _explicitNullValueNewMessageTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NewMessage.Template"); else _explicitNullProperties?.Remove("NewMessage.Template"); } }
+        private string _explicitNullValueNewMessageTemplate = default!;
 #endif
         /// <summary>Whether to send a notification when a new message with media/file attachments is added to a conversation. The default is `false`.</summary>
-        public bool? NewMessageWithMediaEnabled { get; set; }
+        public bool? NewMessageWithMediaEnabled { get => _explicitNullValueNewMessageWithMediaEnabled; set { _explicitNullValueNewMessageWithMediaEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NewMessage.WithMedia.Enabled"); else _explicitNullProperties?.Remove("NewMessage.WithMedia.Enabled"); } }
+        private bool? _explicitNullValueNewMessageWithMediaEnabled = default!;
         /// <summary>The template to use to create the notification text displayed when a new message with media/file attachments is added to a conversation and `new_message.attachments.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewMessageWithMediaTemplate { get; set; }
+        public string? NewMessageWithMediaTemplate { get => _explicitNullValueNewMessageWithMediaTemplate; set { _explicitNullValueNewMessageWithMediaTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NewMessage.WithMedia.Template"); else _explicitNullProperties?.Remove("NewMessage.WithMedia.Template"); } }
+        private string? _explicitNullValueNewMessageWithMediaTemplate = default!;
 #nullable restore
 #else
-        public string NewMessageWithMediaTemplate { get; set; }
+        public string NewMessageWithMediaTemplate { get => _explicitNullValueNewMessageWithMediaTemplate; set { _explicitNullValueNewMessageWithMediaTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NewMessage.WithMedia.Template"); else _explicitNullProperties?.Remove("NewMessage.WithMedia.Template"); } }
+        private string _explicitNullValueNewMessageWithMediaTemplate = default!;
 #endif
         /// <summary>Whether to send a notification to a user when they are removed from a conversation. The default is `false`.</summary>
-        public bool? RemovedFromConversationEnabled { get; set; }
+        public bool? RemovedFromConversationEnabled { get => _explicitNullValueRemovedFromConversationEnabled; set { _explicitNullValueRemovedFromConversationEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RemovedFromConversation.Enabled"); else _explicitNullProperties?.Remove("RemovedFromConversation.Enabled"); } }
+        private bool? _explicitNullValueRemovedFromConversationEnabled = default!;
         /// <summary>The name of the sound to play to a user when they are removed from a conversation and `removed_from_conversation.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RemovedFromConversationSound { get; set; }
+        public string? RemovedFromConversationSound { get => _explicitNullValueRemovedFromConversationSound; set { _explicitNullValueRemovedFromConversationSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RemovedFromConversation.Sound"); else _explicitNullProperties?.Remove("RemovedFromConversation.Sound"); } }
+        private string? _explicitNullValueRemovedFromConversationSound = default!;
 #nullable restore
 #else
-        public string RemovedFromConversationSound { get; set; }
+        public string RemovedFromConversationSound { get => _explicitNullValueRemovedFromConversationSound; set { _explicitNullValueRemovedFromConversationSound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RemovedFromConversation.Sound"); else _explicitNullProperties?.Remove("RemovedFromConversation.Sound"); } }
+        private string _explicitNullValueRemovedFromConversationSound = default!;
 #endif
         /// <summary>The template to use to create the notification text displayed to a user when they are removed from a conversation and `removed_from_conversation.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RemovedFromConversationTemplate { get; set; }
+        public string? RemovedFromConversationTemplate { get => _explicitNullValueRemovedFromConversationTemplate; set { _explicitNullValueRemovedFromConversationTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RemovedFromConversation.Template"); else _explicitNullProperties?.Remove("RemovedFromConversation.Template"); } }
+        private string? _explicitNullValueRemovedFromConversationTemplate = default!;
 #nullable restore
 #else
-        public string RemovedFromConversationTemplate { get; set; }
+        public string RemovedFromConversationTemplate { get => _explicitNullValueRemovedFromConversationTemplate; set { _explicitNullValueRemovedFromConversationTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RemovedFromConversation.Template"); else _explicitNullProperties?.Remove("RemovedFromConversation.Template"); } }
+        private string _explicitNullValueRemovedFromConversationTemplate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1UpdateServiceNotificationXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -97,7 +137,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1UpdateServiceNotificationXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1UpdateServiceNotificationXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1UpdateServiceNotificationXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -142,6 +182,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteBoolValue("RemovedFromConversation.Enabled", RemovedFromConversationEnabled);
             writer.WriteStringValue("RemovedFromConversation.Sound", RemovedFromConversationSound);
             writer.WriteStringValue("RemovedFromConversation.Template", RemovedFromConversationTemplate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

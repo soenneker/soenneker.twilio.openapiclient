@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_insights_v1.V1.Conferences.Item.
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipant>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipant.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipant>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.InsightsV1ConferenceConferenceParticipant.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a specific Conference Participant Summary for a Conference.

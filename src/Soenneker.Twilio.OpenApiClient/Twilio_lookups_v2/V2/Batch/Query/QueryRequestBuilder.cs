@@ -51,7 +51,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_lookups_v2.V2.Batch.Query
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseSchema>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseSchema.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseSchema>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.LookupResponseSchema.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Discussions made regarding how to help the customer to correlation request and response objects:- Respecting the natural order (requests vs. response)- Using phone numbers as unique key- Adding a correlation_id key

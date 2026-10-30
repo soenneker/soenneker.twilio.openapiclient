@@ -11,98 +11,140 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NumbersV1PortingLosingCarrierInformation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_number") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
+            if (parseNode.GetChildNode("account_telephone_number") is { } nullNodeAccountTelephoneNumber && nullNodeAccountTelephoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountTelephoneNumber = null;
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("address_sid") is { } nullNodeAddressSid && nullNodeAddressSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressSid = null;
+            if (parseNode.GetChildNode("authorized_representative") is { } nullNodeAuthorizedRepresentative && nullNodeAuthorizedRepresentative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizedRepresentative = null;
+            if (parseNode.GetChildNode("authorized_representative_email") is { } nullNodeAuthorizedRepresentativeEmail && nullNodeAuthorizedRepresentativeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizedRepresentativeEmail = null;
+            if (parseNode.GetChildNode("authorized_representative_katakana") is { } nullNodeAuthorizedRepresentativeKatakana && nullNodeAuthorizedRepresentativeKatakana.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizedRepresentativeKatakana = null;
+            if (parseNode.GetChildNode("building") is { } nullNodeBuilding && nullNodeBuilding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Building = null;
+            if (parseNode.GetChildNode("customer_name") is { } nullNodeCustomerName && nullNodeCustomerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerName = null;
+            if (parseNode.GetChildNode("customer_type") is { } nullNodeCustomerType && nullNodeCustomerType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerType = null;
+            if (parseNode.GetChildNode("katakana_name") is { } nullNodeKatakanaName && nullNodeKatakanaName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KatakanaName = null;
+            if (parseNode.GetChildNode("sub_municipality") is { } nullNodeSubMunicipality && nullNodeSubMunicipality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubMunicipality = null;
+        }
+
         /// <summary>The account number of the customer for the losing carrier. Only require for mobile phone numbers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountNumber { get; set; }
+        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
+        private string? _explicitNullValueAccountNumber = default!;
 #nullable restore
 #else
-        public string AccountNumber { get; set; }
+        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
+        private string _explicitNullValueAccountNumber = default!;
 #endif
         /// <summary>The account phone number of the customer for the losing carrier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountTelephoneNumber { get; set; }
+        public string? AccountTelephoneNumber { get => _explicitNullValueAccountTelephoneNumber; set { _explicitNullValueAccountTelephoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_telephone_number"); else _explicitNullProperties?.Remove("account_telephone_number"); } }
+        private string? _explicitNullValueAccountTelephoneNumber = default!;
 #nullable restore
 #else
-        public string AccountTelephoneNumber { get; set; }
+        public string AccountTelephoneNumber { get => _explicitNullValueAccountTelephoneNumber; set { _explicitNullValueAccountTelephoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_telephone_number"); else _explicitNullProperties?.Remove("account_telephone_number"); } }
+        private string _explicitNullValueAccountTelephoneNumber = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingAddress? Address { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingAddress Address { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>If you already have an Address SID that represents the address needed for the LOA, you can provide an Address SID instead of providing the address object in the request body. This will copy the address into the port in request. If changes are made to the Address SID after port in request creation, those changes will not be reflected in the port in request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressSid { get; set; }
+        public string? AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_sid"); else _explicitNullProperties?.Remove("address_sid"); } }
+        private string? _explicitNullValueAddressSid = default!;
 #nullable restore
 #else
-        public string AddressSid { get; set; }
+        public string AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_sid"); else _explicitNullProperties?.Remove("address_sid"); } }
+        private string _explicitNullValueAddressSid = default!;
 #endif
         /// <summary>The first and last name of the person listed with the losing carrier who is authorized to make changes on the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorizedRepresentative { get; set; }
+        public string? AuthorizedRepresentative { get => _explicitNullValueAuthorizedRepresentative; set { _explicitNullValueAuthorizedRepresentative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorized_representative"); else _explicitNullProperties?.Remove("authorized_representative"); } }
+        private string? _explicitNullValueAuthorizedRepresentative = default!;
 #nullable restore
 #else
-        public string AuthorizedRepresentative { get; set; }
+        public string AuthorizedRepresentative { get => _explicitNullValueAuthorizedRepresentative; set { _explicitNullValueAuthorizedRepresentative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorized_representative"); else _explicitNullProperties?.Remove("authorized_representative"); } }
+        private string _explicitNullValueAuthorizedRepresentative = default!;
 #endif
         /// <summary>Email address of the person (owner of the number) who will sign the letter of authorization for the port in request. This email address should belong to the person named in as the authorized representative.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorizedRepresentativeEmail { get; set; }
+        public string? AuthorizedRepresentativeEmail { get => _explicitNullValueAuthorizedRepresentativeEmail; set { _explicitNullValueAuthorizedRepresentativeEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorized_representative_email"); else _explicitNullProperties?.Remove("authorized_representative_email"); } }
+        private string? _explicitNullValueAuthorizedRepresentativeEmail = default!;
 #nullable restore
 #else
-        public string AuthorizedRepresentativeEmail { get; set; }
+        public string AuthorizedRepresentativeEmail { get => _explicitNullValueAuthorizedRepresentativeEmail; set { _explicitNullValueAuthorizedRepresentativeEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorized_representative_email"); else _explicitNullProperties?.Remove("authorized_representative_email"); } }
+        private string _explicitNullValueAuthorizedRepresentativeEmail = default!;
 #endif
         /// <summary>The authorized_representative_katakana property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorizedRepresentativeKatakana { get; set; }
+        public string? AuthorizedRepresentativeKatakana { get => _explicitNullValueAuthorizedRepresentativeKatakana; set { _explicitNullValueAuthorizedRepresentativeKatakana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorized_representative_katakana"); else _explicitNullProperties?.Remove("authorized_representative_katakana"); } }
+        private string? _explicitNullValueAuthorizedRepresentativeKatakana = default!;
 #nullable restore
 #else
-        public string AuthorizedRepresentativeKatakana { get; set; }
+        public string AuthorizedRepresentativeKatakana { get => _explicitNullValueAuthorizedRepresentativeKatakana; set { _explicitNullValueAuthorizedRepresentativeKatakana = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorized_representative_katakana"); else _explicitNullProperties?.Remove("authorized_representative_katakana"); } }
+        private string _explicitNullValueAuthorizedRepresentativeKatakana = default!;
 #endif
         /// <summary>The building property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Building { get; set; }
+        public string? Building { get => _explicitNullValueBuilding; set { _explicitNullValueBuilding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("building"); else _explicitNullProperties?.Remove("building"); } }
+        private string? _explicitNullValueBuilding = default!;
 #nullable restore
 #else
-        public string Building { get; set; }
+        public string Building { get => _explicitNullValueBuilding; set { _explicitNullValueBuilding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("building"); else _explicitNullProperties?.Remove("building"); } }
+        private string _explicitNullValueBuilding = default!;
 #endif
         /// <summary>Customer name as it is registered with the losing carrier. This can be an individual or a business name depending on the customer type selected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerName { get; set; }
+        public string? CustomerName { get => _explicitNullValueCustomerName; set { _explicitNullValueCustomerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_name"); else _explicitNullProperties?.Remove("customer_name"); } }
+        private string? _explicitNullValueCustomerName = default!;
 #nullable restore
 #else
-        public string CustomerName { get; set; }
+        public string CustomerName { get => _explicitNullValueCustomerName; set { _explicitNullValueCustomerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_name"); else _explicitNullProperties?.Remove("customer_name"); } }
+        private string _explicitNullValueCustomerName = default!;
 #endif
         /// <summary>The type of customer account in the losing carrier. This should either be: &apos;Individual&apos; or &apos;Business&apos;.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformationCustomerType? CustomerType { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformationCustomerType? CustomerType { get => _explicitNullValueCustomerType; set { _explicitNullValueCustomerType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_type"); else _explicitNullProperties?.Remove("customer_type"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformationCustomerType? _explicitNullValueCustomerType = default!;
         /// <summary>The katakana_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? KatakanaName { get; set; }
+        public string? KatakanaName { get => _explicitNullValueKatakanaName; set { _explicitNullValueKatakanaName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("katakana_name"); else _explicitNullProperties?.Remove("katakana_name"); } }
+        private string? _explicitNullValueKatakanaName = default!;
 #nullable restore
 #else
-        public string KatakanaName { get; set; }
+        public string KatakanaName { get => _explicitNullValueKatakanaName; set { _explicitNullValueKatakanaName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("katakana_name"); else _explicitNullProperties?.Remove("katakana_name"); } }
+        private string _explicitNullValueKatakanaName = default!;
 #endif
         /// <summary>The sub_municipality property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubMunicipality { get; set; }
+        public string? SubMunicipality { get => _explicitNullValueSubMunicipality; set { _explicitNullValueSubMunicipality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub_municipality"); else _explicitNullProperties?.Remove("sub_municipality"); } }
+        private string? _explicitNullValueSubMunicipality = default!;
 #nullable restore
 #else
-        public string SubMunicipality { get; set; }
+        public string SubMunicipality { get => _explicitNullValueSubMunicipality; set { _explicitNullValueSubMunicipality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub_municipality"); else _explicitNullProperties?.Remove("sub_municipality"); } }
+        private string _explicitNullValueSubMunicipality = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation"/> and sets the default values.
@@ -119,7 +161,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -162,6 +204,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1PortingLosingCarrierInformationCustomerType>("customer_type", CustomerType);
             writer.WriteStringValue("katakana_name", KatakanaName);
             writer.WriteStringValue("sub_municipality", SubMunicipality);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

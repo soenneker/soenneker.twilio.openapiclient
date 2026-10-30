@@ -12,48 +12,70 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShortCodeApplicationBusinessInformation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("business_website") is { } nullNodeBusinessWebsite && nullNodeBusinessWebsite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessWebsite = null;
+            if (parseNode.GetChildNode("customer_facing_profile") is { } nullNodeCustomerFacingProfile && nullNodeCustomerFacingProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerFacingProfile = null;
+            if (parseNode.GetChildNode("ein_customer_facing_profile") is { } nullNodeEinCustomerFacingProfile && nullNodeEinCustomerFacingProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EinCustomerFacingProfile = null;
+            if (parseNode.GetChildNode("ein_managing_company_profile") is { } nullNodeEinManagingCompanyProfile && nullNodeEinManagingCompanyProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EinManagingCompanyProfile = null;
+            if (parseNode.GetChildNode("managing_company_profile") is { } nullNodeManagingCompanyProfile && nullNodeManagingCompanyProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManagingCompanyProfile = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The business_website property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessWebsite { get; set; }
+        public string? BusinessWebsite { get => _explicitNullValueBusinessWebsite; set { _explicitNullValueBusinessWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_website"); else _explicitNullProperties?.Remove("business_website"); } }
+        private string? _explicitNullValueBusinessWebsite = default!;
 #nullable restore
 #else
-        public string BusinessWebsite { get; set; }
+        public string BusinessWebsite { get => _explicitNullValueBusinessWebsite; set { _explicitNullValueBusinessWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_website"); else _explicitNullProperties?.Remove("business_website"); } }
+        private string _explicitNullValueBusinessWebsite = default!;
 #endif
         /// <summary>The customer_facing_profile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerFacingProfile { get; set; }
+        public string? CustomerFacingProfile { get => _explicitNullValueCustomerFacingProfile; set { _explicitNullValueCustomerFacingProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_facing_profile"); else _explicitNullProperties?.Remove("customer_facing_profile"); } }
+        private string? _explicitNullValueCustomerFacingProfile = default!;
 #nullable restore
 #else
-        public string CustomerFacingProfile { get; set; }
+        public string CustomerFacingProfile { get => _explicitNullValueCustomerFacingProfile; set { _explicitNullValueCustomerFacingProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_facing_profile"); else _explicitNullProperties?.Remove("customer_facing_profile"); } }
+        private string _explicitNullValueCustomerFacingProfile = default!;
 #endif
         /// <summary>The ein_customer_facing_profile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EinCustomerFacingProfile { get; set; }
+        public string? EinCustomerFacingProfile { get => _explicitNullValueEinCustomerFacingProfile; set { _explicitNullValueEinCustomerFacingProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ein_customer_facing_profile"); else _explicitNullProperties?.Remove("ein_customer_facing_profile"); } }
+        private string? _explicitNullValueEinCustomerFacingProfile = default!;
 #nullable restore
 #else
-        public string EinCustomerFacingProfile { get; set; }
+        public string EinCustomerFacingProfile { get => _explicitNullValueEinCustomerFacingProfile; set { _explicitNullValueEinCustomerFacingProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ein_customer_facing_profile"); else _explicitNullProperties?.Remove("ein_customer_facing_profile"); } }
+        private string _explicitNullValueEinCustomerFacingProfile = default!;
 #endif
         /// <summary>The ein_managing_company_profile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EinManagingCompanyProfile { get; set; }
+        public string? EinManagingCompanyProfile { get => _explicitNullValueEinManagingCompanyProfile; set { _explicitNullValueEinManagingCompanyProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ein_managing_company_profile"); else _explicitNullProperties?.Remove("ein_managing_company_profile"); } }
+        private string? _explicitNullValueEinManagingCompanyProfile = default!;
 #nullable restore
 #else
-        public string EinManagingCompanyProfile { get; set; }
+        public string EinManagingCompanyProfile { get => _explicitNullValueEinManagingCompanyProfile; set { _explicitNullValueEinManagingCompanyProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ein_managing_company_profile"); else _explicitNullProperties?.Remove("ein_managing_company_profile"); } }
+        private string _explicitNullValueEinManagingCompanyProfile = default!;
 #endif
         /// <summary>The managing_company_profile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ManagingCompanyProfile { get; set; }
+        public string? ManagingCompanyProfile { get => _explicitNullValueManagingCompanyProfile; set { _explicitNullValueManagingCompanyProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managing_company_profile"); else _explicitNullProperties?.Remove("managing_company_profile"); } }
+        private string? _explicitNullValueManagingCompanyProfile = default!;
 #nullable restore
 #else
-        public string ManagingCompanyProfile { get; set; }
+        public string ManagingCompanyProfile { get => _explicitNullValueManagingCompanyProfile; set { _explicitNullValueManagingCompanyProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managing_company_profile"); else _explicitNullProperties?.Remove("managing_company_profile"); } }
+        private string _explicitNullValueManagingCompanyProfile = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationBusinessInformation"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationBusinessInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationBusinessInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationBusinessInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("ein_customer_facing_profile", EinCustomerFacingProfile);
             writer.WriteStringValue("ein_managing_company_profile", EinManagingCompanyProfile);
             writer.WriteStringValue("managing_company_profile", ManagingCompanyProfile);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

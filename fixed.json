@@ -111824,6 +111824,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/TwilioKnowledgeV2UpdateKnowledgeSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/Knowledge"
                 }
               }
@@ -111834,6 +111837,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/TwilioKnowledgeV2UpdateKnowledgeSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/TwilioKnowledgeV2UpdateKnowledge202Response"
                 }
               }
@@ -238144,9 +238150,6 @@
         }
       },
       "ConversationsV2CreateConversationActionRequest": {
-        "required": [
-          "type"
-        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/ConversationsV2StartConversationSendMessageAction"
@@ -238155,21 +238158,7 @@
             "$ref": "#/components/schemas/ConversationsV2StartConversationStartFlowAction"
           }
         ],
-        "properties": {
-          "type": {
-            "type": "string"
-          }
-        },
         "description": "The single action dispatched once the Conversation is created, selected by \u0060type\u0060.",
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "SEND_MESSAGE": "#/components/schemas/ConversationsV2StartConversationSendMessageAction",
-            "START_FLOW": "#/components/schemas/ConversationsV2StartConversationStartFlowAction",
-            "conversations.v2.start_conversation_send_message_action": "#/components/schemas/ConversationsV2StartConversationSendMessageAction",
-            "conversations.v2.start_conversation_start_flow_action": "#/components/schemas/ConversationsV2StartConversationStartFlowAction"
-          }
-        },
         "example": {
           "type": "START_FLOW",
           "payload": {
@@ -238178,12 +238167,18 @@
               "orderNumber": "12345"
             }
           }
+        },
+        "x-client-original-discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "SEND_MESSAGE": "#/components/schemas/ConversationsV2StartConversationSendMessageAction",
+            "START_FLOW": "#/components/schemas/ConversationsV2StartConversationStartFlowAction",
+            "conversations.v2.start_conversation_send_message_action": "#/components/schemas/ConversationsV2StartConversationSendMessageAction",
+            "conversations.v2.start_conversation_start_flow_action": "#/components/schemas/ConversationsV2StartConversationStartFlowAction"
+          }
         }
       },
       "ConversationsV2StartConversationActionRequest": {
-        "required": [
-          "type"
-        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/ConversationsV2StartConversationSendMessageAction"
@@ -238195,13 +238190,17 @@
             "$ref": "#/components/schemas/ConversationsV2StartConversationCallAction"
           }
         ],
-        "properties": {
-          "type": {
-            "type": "string"
+        "description": "The single action dispatched once the Conversation is created, selected by \u0060type\u0060.",
+        "example": {
+          "type": "SEND_MESSAGE",
+          "channel": "SMS",
+          "payload": {
+            "content": {
+              "text": "Your order has shipped!"
+            }
           }
         },
-        "description": "The single action dispatched once the Conversation is created, selected by \u0060type\u0060.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "type",
           "mapping": {
             "SEND_MESSAGE": "#/components/schemas/ConversationsV2StartConversationSendMessageAction",
@@ -238210,15 +238209,6 @@
             "conversations.v2.start_conversation_send_message_action": "#/components/schemas/ConversationsV2StartConversationSendMessageAction",
             "conversations.v2.start_conversation_start_flow_action": "#/components/schemas/ConversationsV2StartConversationStartFlowAction",
             "conversations.v2.start_conversation_call_action": "#/components/schemas/ConversationsV2StartConversationCallAction"
-          }
-        },
-        "example": {
-          "type": "SEND_MESSAGE",
-          "channel": "SMS",
-          "payload": {
-            "content": {
-              "text": "Your order has shipped!"
-            }
           }
         }
       },
@@ -250978,33 +250968,21 @@
       },
       "OperatorResultsResponseV1": {
         "title": "Operator Results Response V1",
-        "required": [
-          "outputFormat"
-        ],
-        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/TextResult"
+            "$ref": "#/components/schemas/OperatorResultsResponseV1OneOf1"
           },
           {
-            "$ref": "#/components/schemas/JsonResult"
+            "$ref": "#/components/schemas/OperatorResultsResponseV1OneOf2"
           },
           {
-            "$ref": "#/components/schemas/ClassificationResult"
+            "$ref": "#/components/schemas/OperatorResultsResponseV1OneOf3"
           },
           {
-            "$ref": "#/components/schemas/ExtractionResult"
+            "$ref": "#/components/schemas/OperatorResultsResponseV1OneOf4"
           }
         ],
-        "properties": {
-          "outputFormat": {
-            "title": "Output Format",
-            "pattern": "^(CLASSIFICATION|TEXT|EXTRACTION|JSON)$",
-            "type": "string",
-            "description": "The output format set on the Operator that generated this result. Determines the structure of the \u0060result\u0060 object."
-          }
-        },
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "outputFormat",
           "mapping": {
             "TEXT": "#/components/schemas/TextResult",
@@ -255286,10 +255264,6 @@
         }
       },
       "KnowledgeSourceTypes": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/TextSourceDetails"
@@ -255301,13 +255275,8 @@
             "$ref": "#/components/schemas/FileSourceDetails"
           }
         ],
-        "properties": {
-          "type": {
-            "type": "string"
-          }
-        },
         "description": "Details specific to the knowledge source type. Each knowledge source type has  its own set of configuration\nparameters and source specific properties.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "type",
           "mapping": {
             "Text": "#/components/schemas/TextSourceDetails",
@@ -255751,20 +255720,22 @@
       },
       "OperationResult": {
         "required": [
-          "type"
+          "type",
+          "id"
         ],
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/OperationResultResourceId"
-          }
-        ],
+        "type": "object",
         "properties": {
+          "id": {
+            "maxLength": 128,
+            "type": "string",
+            "description": "The identifier of the created or affected resource."
+          },
           "type": {
-            "type": "string"
+            "$ref": "#/components/schemas/ResourceIdType"
           }
         },
         "description": "Operation-specific output. Present when status is COMPLETED.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "type",
           "mapping": {
             "RESOURCE_ID": "#/components/schemas/OperationResultResourceId",
@@ -258354,9 +258325,6 @@
         "description": "A Trait is a single attribute or characteristic of a profile, such as age, location, or preferences."
       },
       "ValidationRule": {
-        "required": [
-          "ruleType"
-        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/StringValidationRule"
@@ -258371,12 +258339,7 @@
             "$ref": "#/components/schemas/ArrayValidationRule"
           }
         ],
-        "properties": {
-          "ruleType": {
-            "type": "string"
-          }
-        },
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "ruleType",
           "mapping": {
             "STRING": "#/components/schemas/StringValidationRule",
@@ -258539,10 +258502,6 @@
         }
       },
       "DataMappingFromTypes": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/DataMappingFromIngress"
@@ -258554,13 +258513,12 @@
             "$ref": "#/components/schemas/DataMappingFromWarehouseDataSet"
           }
         ],
-        "properties": {
-          "type": {
-            "type": "string"
-          }
-        },
         "description": "Details of where to map data items from. Each data mapping from type has its own set of configuration\nparameters and source specific properties.",
-        "discriminator": {
+        "example": {
+          "type": "DATASET_WAREHOUSE",
+          "datasetId": "tdi_dataset_00000000000000000000000000"
+        },
+        "x-client-original-discriminator": {
           "propertyName": "type",
           "mapping": {
             "INGRESS": "#/components/schemas/DataMappingFromIngress",
@@ -258570,35 +258528,15 @@
             "DataMappingFromCloudAppDataSet": "#/components/schemas/DataMappingFromCloudAppDataSet",
             "DataMappingFromWarehouseDataSet": "#/components/schemas/DataMappingFromWarehouseDataSet"
           }
-        },
-        "example": {
-          "type": "DATASET_WAREHOUSE",
-          "datasetId": "tdi_dataset_00000000000000000000000000"
         }
       },
       "DataMappingToTypes": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/DataMappingToTraits"
           }
         ],
-        "properties": {
-          "type": {
-            "type": "string"
-          }
-        },
         "description": "Details of where to map data items to. Each data mapping to type has its own set of configuration\nparameters and destination specific properties.",
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "TRAITS": "#/components/schemas/DataMappingToTraits",
-            "DataMappingToTraits": "#/components/schemas/DataMappingToTraits"
-          }
-        },
         "example": {
           "type": "TRAITS",
           "mappings": [
@@ -258608,6 +258546,13 @@
               "traitName": "email"
             }
           ]
+        },
+        "x-client-original-discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "TRAITS": "#/components/schemas/DataMappingToTraits",
+            "DataMappingToTraits": "#/components/schemas/DataMappingToTraits"
+          }
         }
       },
       "DataMappingToTraits": {
@@ -259052,20 +258997,22 @@
       },
       "TwilioMemoryV1OperationResult": {
         "required": [
-          "type"
+          "type",
+          "id"
         ],
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/TwilioMemoryV1OperationResultResourceId"
-          }
-        ],
+        "type": "object",
         "properties": {
           "type": {
-            "type": "string"
+            "$ref": "#/components/schemas/ResourceIdType"
+          },
+          "id": {
+            "maxLength": 128,
+            "type": "string",
+            "description": "The identifier of the created or affected resource."
           }
         },
         "description": "Operation-specific output. Present when status is COMPLETED.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "type",
           "mapping": {
             "RESOURCE_ID": "#/components/schemas/TwilioMemoryV1OperationResultResourceId",
@@ -259171,30 +259118,21 @@
         }
       },
       "DataMappingSuggestionToTypes": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/DataMappingSuggestionToTraits"
           }
         ],
-        "properties": {
-          "type": {
-            "type": "string"
-          }
-        },
         "description": "Destination configuration for a suggested mapping request.",
-        "discriminator": {
+        "example": {
+          "type": "TRAITS"
+        },
+        "x-client-original-discriminator": {
           "propertyName": "type",
           "mapping": {
             "TRAITS": "#/components/schemas/DataMappingSuggestionToTraits",
             "DataMappingSuggestionToTraits": "#/components/schemas/DataMappingSuggestionToTraits"
           }
-        },
-        "example": {
-          "type": "TRAITS"
         }
       },
       "DataMappingSuggestionToTraits": {
@@ -259232,28 +259170,12 @@
         "description": "Request to generate suggested mappings from a set of source fields to the requested\ndestination type."
       },
       "DataMappingSuggestionResultTypes": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/DataMappingSuggestionToTraitsResult"
           }
         ],
-        "properties": {
-          "type": {
-            "type": "string"
-          }
-        },
         "description": "Details of the generated suggestions. Each destination type has its own set of\nconfiguration parameters and destination specific properties.",
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "TRAITS": "#/components/schemas/DataMappingSuggestionToTraitsResult",
-            "DataMappingSuggestionToTraitsResult": "#/components/schemas/DataMappingSuggestionToTraitsResult"
-          }
-        },
         "example": {
           "type": "TRAITS",
           "mappings": [
@@ -259267,6 +259189,13 @@
               "rationale": "Column \u0027primary_email\u0027 is a direct match for the email trait."
             }
           ]
+        },
+        "x-client-original-discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "TRAITS": "#/components/schemas/DataMappingSuggestionToTraitsResult",
+            "DataMappingSuggestionToTraitsResult": "#/components/schemas/DataMappingSuggestionToTraitsResult"
+          }
         }
       },
       "DataMappingSuggestionToTraitsResult": {
@@ -263492,10 +263421,6 @@
         }
       },
       "TypingIndicatorRequest": {
-        "required": [
-          "channel"
-        ],
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/WhatsAppTypingIndicatorRequest"
@@ -263507,13 +263432,8 @@
             "$ref": "#/components/schemas/RcsTypingIndicatorRequest"
           }
         ],
-        "properties": {
-          "channel": {
-            "type": "string"
-          }
-        },
         "description": "Request body for sending a typing indicator. The schema varies by channel. Use the \u0060channel\u0060 field to determine which properties are required.\n",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "channel",
           "mapping": {
             "WHATSAPP": "#/components/schemas/WhatsAppTypingIndicatorRequest",
@@ -302419,19 +302339,21 @@
       },
       "TwilioConversationsV2CreateConversationActionRequest": {
         "required": [
-          "type"
+          "type",
+          "payload"
         ],
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/TwilioConversationsV2CreateConversationActionRequestOneOf1"
-          }
-        ],
+        "type": "object",
         "properties": {
           "type": {
-            "type": "string"
+            "type": "string",
+            "description": "Action type discriminator. Accepted values: SEND_MESSAGE.",
+            "example": "SEND_MESSAGE"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/ConversationsV2SendMessagePayload"
           }
         },
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "type"
         }
       },
@@ -352299,6 +352221,296 @@
             }
           ]
         }
+      },
+      "OperatorResultsResponseV1OneOf1": {
+        "type": "object",
+        "properties": {
+          "outputFormat": {
+            "title": "Output Format",
+            "pattern": "^(CLASSIFICATION|TEXT|EXTRACTION|JSON)$",
+            "type": "string",
+            "description": "The output format set on the Operator that generated this result. Determines the structure of the \u0060result\u0060 object."
+          },
+          "id": {
+            "pattern": "^intelligence_operatorresult_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "A unique identifier for the Operator Result. Assigned by Twilio (TTID).",
+            "example": "intelligence_operatorresult_01k6fc25s7epm9qtk8rszbv3q5"
+          },
+          "accountId": {
+            "pattern": "^AC[a-zA-Z0-9]{32}$",
+            "type": "string",
+            "description": "The ID of the Account that created the Language Operator."
+          },
+          "intelligenceConfiguration": {
+            "$ref": "#/components/schemas/IntelligenceConfigurationReference"
+          },
+          "conversationId": {
+            "pattern": "^conv_conversation_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The \u0060id\u0060 of the Conversation attached to the Operator Result.",
+            "example": "conv_conversation_01k1etk2y5f1y9fpe2epfdtvv2"
+          },
+          "operator": {
+            "$ref": "#/components/schemas/OperatorReference"
+          },
+          "dateCreated": {
+            "type": "string",
+            "description": "Timestamp for when the Operator Result was created.",
+            "format": "date-time"
+          },
+          "referenceIds": {
+            "type": "array",
+            "items": {
+              "maxLength": 97,
+              "type": "string",
+              "example": "CA0fd5fb62ac7e24ce24f071041847aa92"
+            },
+            "description": "The \u0060id\u0060s of objects related to this Operator Result."
+          },
+          "executionDetails": {
+            "$ref": "#/components/schemas/ExecutionDetails"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/TextResultMetadata"
+          },
+          "result": {
+            "$ref": "#/components/schemas/TextResultResult"
+          }
+        },
+        "required": [
+          "executionDetails",
+          "operator",
+          "outputFormat",
+          "dateCreated",
+          "referenceIds",
+          "metadata",
+          "result",
+          "id",
+          "accountId",
+          "conversationId",
+          "intelligenceConfiguration"
+        ]
+      },
+      "OperatorResultsResponseV1OneOf2": {
+        "type": "object",
+        "properties": {
+          "outputFormat": {
+            "title": "Output Format",
+            "pattern": "^(CLASSIFICATION|TEXT|EXTRACTION|JSON)$",
+            "type": "string",
+            "description": "The output format set on the Operator that generated this result. Determines the structure of the \u0060result\u0060 object."
+          },
+          "id": {
+            "pattern": "^intelligence_operatorresult_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "A unique identifier for the Operator Result. Assigned by Twilio (TTID).",
+            "example": "intelligence_operatorresult_01k6fc25s7epm9qtk8rszbv3q5"
+          },
+          "accountId": {
+            "pattern": "^AC[a-zA-Z0-9]{32}$",
+            "type": "string",
+            "description": "The ID of the Account that created the Language Operator."
+          },
+          "intelligenceConfiguration": {
+            "$ref": "#/components/schemas/IntelligenceConfigurationReference"
+          },
+          "conversationId": {
+            "pattern": "^conv_conversation_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The \u0060id\u0060 of the Conversation attached to the Operator Result.",
+            "example": "conv_conversation_01k1etk2y5f1y9fpe2epfdtvv2"
+          },
+          "operator": {
+            "$ref": "#/components/schemas/OperatorReference"
+          },
+          "dateCreated": {
+            "type": "string",
+            "description": "Timestamp for when the Operator Result was created.",
+            "format": "date-time"
+          },
+          "referenceIds": {
+            "type": "array",
+            "items": {
+              "maxLength": 97,
+              "type": "string",
+              "example": "CA0fd5fb62ac7e24ce24f071041847aa92"
+            },
+            "description": "The \u0060id\u0060s of objects related to this Operator Result."
+          },
+          "executionDetails": {
+            "$ref": "#/components/schemas/ExecutionDetails"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/JsonResultMetadata"
+          },
+          "result": {
+            "$ref": "#/components/schemas/JsonResultResultProperty"
+          }
+        },
+        "required": [
+          "executionDetails",
+          "operator",
+          "outputFormat",
+          "dateCreated",
+          "referenceIds",
+          "metadata",
+          "result",
+          "id",
+          "accountId",
+          "conversationId",
+          "intelligenceConfiguration"
+        ]
+      },
+      "OperatorResultsResponseV1OneOf3": {
+        "type": "object",
+        "properties": {
+          "outputFormat": {
+            "title": "Output Format",
+            "pattern": "^(CLASSIFICATION|TEXT|EXTRACTION|JSON)$",
+            "type": "string",
+            "description": "The output format set on the Operator that generated this result. Determines the structure of the \u0060result\u0060 object."
+          },
+          "id": {
+            "pattern": "^intelligence_operatorresult_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "A unique identifier for the Operator Result. Assigned by Twilio (TTID).",
+            "example": "intelligence_operatorresult_01k6fc25s7epm9qtk8rszbv3q5"
+          },
+          "accountId": {
+            "pattern": "^AC[a-zA-Z0-9]{32}$",
+            "type": "string",
+            "description": "The ID of the Account that created the Language Operator."
+          },
+          "intelligenceConfiguration": {
+            "$ref": "#/components/schemas/IntelligenceConfigurationReference"
+          },
+          "conversationId": {
+            "pattern": "^conv_conversation_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The \u0060id\u0060 of the Conversation attached to the Operator Result.",
+            "example": "conv_conversation_01k1etk2y5f1y9fpe2epfdtvv2"
+          },
+          "operator": {
+            "$ref": "#/components/schemas/OperatorReference"
+          },
+          "dateCreated": {
+            "type": "string",
+            "description": "Timestamp for when the Operator Result was created.",
+            "format": "date-time"
+          },
+          "referenceIds": {
+            "type": "array",
+            "items": {
+              "maxLength": 97,
+              "type": "string",
+              "example": "CA0fd5fb62ac7e24ce24f071041847aa92"
+            },
+            "description": "The \u0060id\u0060s of objects related to this Operator Result."
+          },
+          "executionDetails": {
+            "$ref": "#/components/schemas/ExecutionDetails"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ClassificationResultMetadata"
+          },
+          "result": {
+            "$ref": "#/components/schemas/ClassificationResultResult"
+          }
+        },
+        "required": [
+          "executionDetails",
+          "operator",
+          "outputFormat",
+          "dateCreated",
+          "referenceIds",
+          "metadata",
+          "result",
+          "id",
+          "accountId",
+          "conversationId",
+          "intelligenceConfiguration"
+        ]
+      },
+      "OperatorResultsResponseV1OneOf4": {
+        "type": "object",
+        "properties": {
+          "outputFormat": {
+            "title": "Output Format",
+            "pattern": "^(CLASSIFICATION|TEXT|EXTRACTION|JSON)$",
+            "type": "string",
+            "description": "The output format set on the Operator that generated this result. Determines the structure of the \u0060result\u0060 object."
+          },
+          "id": {
+            "pattern": "^intelligence_operatorresult_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "A unique identifier for the Operator Result. Assigned by Twilio (TTID).",
+            "example": "intelligence_operatorresult_01k6fc25s7epm9qtk8rszbv3q5"
+          },
+          "accountId": {
+            "pattern": "^AC[a-zA-Z0-9]{32}$",
+            "type": "string",
+            "description": "The ID of the Account that created the Language Operator."
+          },
+          "intelligenceConfiguration": {
+            "$ref": "#/components/schemas/IntelligenceConfigurationReference"
+          },
+          "conversationId": {
+            "pattern": "^conv_conversation_[0-7][0-9a-z]{25}$",
+            "type": "string",
+            "description": "The \u0060id\u0060 of the Conversation attached to the Operator Result.",
+            "example": "conv_conversation_01k1etk2y5f1y9fpe2epfdtvv2"
+          },
+          "operator": {
+            "$ref": "#/components/schemas/OperatorReference"
+          },
+          "dateCreated": {
+            "type": "string",
+            "description": "Timestamp for when the Operator Result was created.",
+            "format": "date-time"
+          },
+          "referenceIds": {
+            "type": "array",
+            "items": {
+              "maxLength": 97,
+              "type": "string",
+              "example": "CA0fd5fb62ac7e24ce24f071041847aa92"
+            },
+            "description": "The \u0060id\u0060s of objects related to this Operator Result."
+          },
+          "executionDetails": {
+            "$ref": "#/components/schemas/ExecutionDetails"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ExtractionResultMetadata"
+          },
+          "result": {
+            "$ref": "#/components/schemas/ExtractionResultResult"
+          }
+        },
+        "required": [
+          "executionDetails",
+          "operator",
+          "outputFormat",
+          "dateCreated",
+          "referenceIds",
+          "metadata",
+          "result",
+          "id",
+          "accountId",
+          "conversationId",
+          "intelligenceConfiguration"
+        ]
+      },
+      "TwilioKnowledgeV2UpdateKnowledgeSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/Knowledge"
+          },
+          {
+            "$ref": "#/components/schemas/TwilioKnowledgeV2UpdateKnowledge202Response"
+          }
+        ]
       }
     },
     "responses": {

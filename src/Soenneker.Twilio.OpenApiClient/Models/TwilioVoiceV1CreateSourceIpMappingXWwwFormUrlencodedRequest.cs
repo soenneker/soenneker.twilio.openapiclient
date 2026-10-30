@@ -11,24 +11,37 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioVoiceV1CreateSourceIpMappingXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("IpRecordSid") is { } nullNodeIpRecordSid && nullNodeIpRecordSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpRecordSid = null;
+            if (parseNode.GetChildNode("SipDomainSid") is { } nullNodeSipDomainSid && nullNodeSipDomainSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SipDomainSid = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Twilio-provided string that uniquely identifies the IP Record resource to map from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpRecordSid { get; set; }
+        public string? IpRecordSid { get => _explicitNullValueIpRecordSid; set { _explicitNullValueIpRecordSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IpRecordSid"); else _explicitNullProperties?.Remove("IpRecordSid"); } }
+        private string? _explicitNullValueIpRecordSid = default!;
 #nullable restore
 #else
-        public string IpRecordSid { get; set; }
+        public string IpRecordSid { get => _explicitNullValueIpRecordSid; set { _explicitNullValueIpRecordSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IpRecordSid"); else _explicitNullProperties?.Remove("IpRecordSid"); } }
+        private string _explicitNullValueIpRecordSid = default!;
 #endif
         /// <summary>The SID of the SIP Domain that the IP Record should be mapped to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SipDomainSid { get; set; }
+        public string? SipDomainSid { get => _explicitNullValueSipDomainSid; set { _explicitNullValueSipDomainSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SipDomainSid"); else _explicitNullProperties?.Remove("SipDomainSid"); } }
+        private string? _explicitNullValueSipDomainSid = default!;
 #nullable restore
 #else
-        public string SipDomainSid { get; set; }
+        public string SipDomainSid { get => _explicitNullValueSipDomainSid; set { _explicitNullValueSipDomainSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SipDomainSid"); else _explicitNullProperties?.Remove("SipDomainSid"); } }
+        private string _explicitNullValueSipDomainSid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateSourceIpMappingXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateSourceIpMappingXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateSourceIpMappingXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV1CreateSourceIpMappingXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("IpRecordSid", IpRecordSid);
             writer.WriteStringValue("SipDomainSid", SipDomainSid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,56 +11,86 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioVerifyV2UpdateFactorXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AuthPayload") is { } nullNodeAuthPayload && nullNodeAuthPayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthPayload = null;
+            if (parseNode.GetChildNode("Config.Alg") is { } nullNodeConfigAlg && nullNodeConfigAlg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigAlg = null;
+            if (parseNode.GetChildNode("Config.CodeLength") is { } nullNodeConfigCodeLength && nullNodeConfigCodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigCodeLength = null;
+            if (parseNode.GetChildNode("Config.NotificationPlatform") is { } nullNodeConfigNotificationPlatform && nullNodeConfigNotificationPlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigNotificationPlatform = null;
+            if (parseNode.GetChildNode("Config.NotificationToken") is { } nullNodeConfigNotificationToken && nullNodeConfigNotificationToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigNotificationToken = null;
+            if (parseNode.GetChildNode("Config.SdkVersion") is { } nullNodeConfigSdkVersion && nullNodeConfigSdkVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigSdkVersion = null;
+            if (parseNode.GetChildNode("Config.Skew") is { } nullNodeConfigSkew && nullNodeConfigSkew.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigSkew = null;
+            if (parseNode.GetChildNode("Config.TimeStep") is { } nullNodeConfigTimeStep && nullNodeConfigTimeStep.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigTimeStep = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The optional payload needed to verify the Factor for the first time. E.g. for a TOTP, the numeric code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthPayload { get; set; }
+        public string? AuthPayload { get => _explicitNullValueAuthPayload; set { _explicitNullValueAuthPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthPayload"); else _explicitNullProperties?.Remove("AuthPayload"); } }
+        private string? _explicitNullValueAuthPayload = default!;
 #nullable restore
 #else
-        public string AuthPayload { get; set; }
+        public string AuthPayload { get => _explicitNullValueAuthPayload; set { _explicitNullValueAuthPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AuthPayload"); else _explicitNullProperties?.Remove("AuthPayload"); } }
+        private string _explicitNullValueAuthPayload = default!;
 #endif
         /// <summary>The ConfigAlg property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.FactorEnumTotpAlgorithms? ConfigAlg { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.FactorEnumTotpAlgorithms? ConfigAlg { get => _explicitNullValueConfigAlg; set { _explicitNullValueConfigAlg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.Alg"); else _explicitNullProperties?.Remove("Config.Alg"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.FactorEnumTotpAlgorithms? _explicitNullValueConfigAlg = default!;
         /// <summary>Number of digits for generated TOTP codes. Must be between 3 and 8, inclusive</summary>
-        public int? ConfigCodeLength { get; set; }
+        public int? ConfigCodeLength { get => _explicitNullValueConfigCodeLength; set { _explicitNullValueConfigCodeLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.CodeLength"); else _explicitNullProperties?.Remove("Config.CodeLength"); } }
+        private int? _explicitNullValueConfigCodeLength = default!;
         /// <summary>The transport technology used to generate the Notification Token. Can be `apn`, `fcm` or `none`.Required when `factor_type` is `push`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigNotificationPlatform { get; set; }
+        public string? ConfigNotificationPlatform { get => _explicitNullValueConfigNotificationPlatform; set { _explicitNullValueConfigNotificationPlatform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.NotificationPlatform"); else _explicitNullProperties?.Remove("Config.NotificationPlatform"); } }
+        private string? _explicitNullValueConfigNotificationPlatform = default!;
 #nullable restore
 #else
-        public string ConfigNotificationPlatform { get; set; }
+        public string ConfigNotificationPlatform { get => _explicitNullValueConfigNotificationPlatform; set { _explicitNullValueConfigNotificationPlatform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.NotificationPlatform"); else _explicitNullProperties?.Remove("Config.NotificationPlatform"); } }
+        private string _explicitNullValueConfigNotificationPlatform = default!;
 #endif
         /// <summary>For APN, the device token. For FCM, the registration token. It is used to send the push notifications. Required when `factor_type` is `push`. If specified, this value must be between 32 and 255 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigNotificationToken { get; set; }
+        public string? ConfigNotificationToken { get => _explicitNullValueConfigNotificationToken; set { _explicitNullValueConfigNotificationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.NotificationToken"); else _explicitNullProperties?.Remove("Config.NotificationToken"); } }
+        private string? _explicitNullValueConfigNotificationToken = default!;
 #nullable restore
 #else
-        public string ConfigNotificationToken { get; set; }
+        public string ConfigNotificationToken { get => _explicitNullValueConfigNotificationToken; set { _explicitNullValueConfigNotificationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.NotificationToken"); else _explicitNullProperties?.Remove("Config.NotificationToken"); } }
+        private string _explicitNullValueConfigNotificationToken = default!;
 #endif
         /// <summary>The Verify Push SDK version used to configure the factor</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigSdkVersion { get; set; }
+        public string? ConfigSdkVersion { get => _explicitNullValueConfigSdkVersion; set { _explicitNullValueConfigSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.SdkVersion"); else _explicitNullProperties?.Remove("Config.SdkVersion"); } }
+        private string? _explicitNullValueConfigSdkVersion = default!;
 #nullable restore
 #else
-        public string ConfigSdkVersion { get; set; }
+        public string ConfigSdkVersion { get => _explicitNullValueConfigSdkVersion; set { _explicitNullValueConfigSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.SdkVersion"); else _explicitNullProperties?.Remove("Config.SdkVersion"); } }
+        private string _explicitNullValueConfigSdkVersion = default!;
 #endif
         /// <summary>The number of time-steps, past and future, that are valid for validation of TOTP codes. Must be between 0 and 2, inclusive</summary>
-        public int? ConfigSkew { get; set; }
+        public int? ConfigSkew { get => _explicitNullValueConfigSkew; set { _explicitNullValueConfigSkew = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.Skew"); else _explicitNullProperties?.Remove("Config.Skew"); } }
+        private int? _explicitNullValueConfigSkew = default!;
         /// <summary>Defines how often, in seconds, are TOTP codes generated. i.e, a new TOTP code is generated every time_step seconds. Must be between 20 and 60 seconds, inclusive</summary>
-        public int? ConfigTimeStep { get; set; }
+        public int? ConfigTimeStep { get => _explicitNullValueConfigTimeStep; set { _explicitNullValueConfigTimeStep = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Config.TimeStep"); else _explicitNullProperties?.Remove("Config.TimeStep"); } }
+        private int? _explicitNullValueConfigTimeStep = default!;
         /// <summary>The new friendly name of this Factor. It can be up to 64 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateFactorXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -77,7 +107,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateFactorXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateFactorXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVerifyV2UpdateFactorXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +144,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("Config.Skew", ConfigSkew);
             writer.WriteIntValue("Config.TimeStep", ConfigTimeStep);
             writer.WriteStringValue("FriendlyName", FriendlyName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

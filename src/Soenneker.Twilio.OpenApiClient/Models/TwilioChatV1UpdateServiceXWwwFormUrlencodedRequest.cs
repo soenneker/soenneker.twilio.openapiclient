@@ -11,278 +11,420 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioChatV1UpdateServiceXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ConsumptionReportInterval") is { } nullNodeConsumptionReportInterval && nullNodeConsumptionReportInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsumptionReportInterval = null;
+            if (parseNode.GetChildNode("DefaultChannelCreatorRoleSid") is { } nullNodeDefaultChannelCreatorRoleSid && nullNodeDefaultChannelCreatorRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultChannelCreatorRoleSid = null;
+            if (parseNode.GetChildNode("DefaultChannelRoleSid") is { } nullNodeDefaultChannelRoleSid && nullNodeDefaultChannelRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultChannelRoleSid = null;
+            if (parseNode.GetChildNode("DefaultServiceRoleSid") is { } nullNodeDefaultServiceRoleSid && nullNodeDefaultServiceRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultServiceRoleSid = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("Limits.ChannelMembers") is { } nullNodeLimitsChannelMembers && nullNodeLimitsChannelMembers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LimitsChannelMembers = null;
+            if (parseNode.GetChildNode("Limits.UserChannels") is { } nullNodeLimitsUserChannels && nullNodeLimitsUserChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LimitsUserChannels = null;
+            if (parseNode.GetChildNode("Notifications.AddedToChannel.Enabled") is { } nullNodeNotificationsAddedToChannelEnabled && nullNodeNotificationsAddedToChannelEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsAddedToChannelEnabled = null;
+            if (parseNode.GetChildNode("Notifications.AddedToChannel.Template") is { } nullNodeNotificationsAddedToChannelTemplate && nullNodeNotificationsAddedToChannelTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsAddedToChannelTemplate = null;
+            if (parseNode.GetChildNode("Notifications.InvitedToChannel.Enabled") is { } nullNodeNotificationsInvitedToChannelEnabled && nullNodeNotificationsInvitedToChannelEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsInvitedToChannelEnabled = null;
+            if (parseNode.GetChildNode("Notifications.InvitedToChannel.Template") is { } nullNodeNotificationsInvitedToChannelTemplate && nullNodeNotificationsInvitedToChannelTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsInvitedToChannelTemplate = null;
+            if (parseNode.GetChildNode("Notifications.NewMessage.Enabled") is { } nullNodeNotificationsNewMessageEnabled && nullNodeNotificationsNewMessageEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsNewMessageEnabled = null;
+            if (parseNode.GetChildNode("Notifications.NewMessage.Template") is { } nullNodeNotificationsNewMessageTemplate && nullNodeNotificationsNewMessageTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsNewMessageTemplate = null;
+            if (parseNode.GetChildNode("Notifications.RemovedFromChannel.Enabled") is { } nullNodeNotificationsRemovedFromChannelEnabled && nullNodeNotificationsRemovedFromChannelEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsRemovedFromChannelEnabled = null;
+            if (parseNode.GetChildNode("Notifications.RemovedFromChannel.Template") is { } nullNodeNotificationsRemovedFromChannelTemplate && nullNodeNotificationsRemovedFromChannelTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationsRemovedFromChannelTemplate = null;
+            if (parseNode.GetChildNode("PostWebhookUrl") is { } nullNodePostWebhookUrl && nullNodePostWebhookUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostWebhookUrl = null;
+            if (parseNode.GetChildNode("PreWebhookUrl") is { } nullNodePreWebhookUrl && nullNodePreWebhookUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreWebhookUrl = null;
+            if (parseNode.GetChildNode("ReachabilityEnabled") is { } nullNodeReachabilityEnabled && nullNodeReachabilityEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReachabilityEnabled = null;
+            if (parseNode.GetChildNode("ReadStatusEnabled") is { } nullNodeReadStatusEnabled && nullNodeReadStatusEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadStatusEnabled = null;
+            if (parseNode.GetChildNode("TypingIndicatorTimeout") is { } nullNodeTypingIndicatorTimeout && nullNodeTypingIndicatorTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypingIndicatorTimeout = null;
+            if (parseNode.GetChildNode("WebhookFilters") is { } nullNodeWebhookFilters && nullNodeWebhookFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookFilters = null;
+            if (parseNode.GetChildNode("WebhookMethod") is { } nullNodeWebhookMethod && nullNodeWebhookMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelAdded.Method") is { } nullNodeWebhooksOnChannelAddedMethod && nullNodeWebhooksOnChannelAddedMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelAddedMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelAdded.Url") is { } nullNodeWebhooksOnChannelAddedUrl && nullNodeWebhooksOnChannelAddedUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelAddedUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelAdd.Method") is { } nullNodeWebhooksOnChannelAddMethod && nullNodeWebhooksOnChannelAddMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelAddMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelAdd.Url") is { } nullNodeWebhooksOnChannelAddUrl && nullNodeWebhooksOnChannelAddUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelAddUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelDestroyed.Method") is { } nullNodeWebhooksOnChannelDestroyedMethod && nullNodeWebhooksOnChannelDestroyedMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelDestroyedMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelDestroyed.Url") is { } nullNodeWebhooksOnChannelDestroyedUrl && nullNodeWebhooksOnChannelDestroyedUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelDestroyedUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelDestroy.Method") is { } nullNodeWebhooksOnChannelDestroyMethod && nullNodeWebhooksOnChannelDestroyMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelDestroyMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelDestroy.Url") is { } nullNodeWebhooksOnChannelDestroyUrl && nullNodeWebhooksOnChannelDestroyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelDestroyUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelUpdated.Method") is { } nullNodeWebhooksOnChannelUpdatedMethod && nullNodeWebhooksOnChannelUpdatedMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelUpdatedMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelUpdated.Url") is { } nullNodeWebhooksOnChannelUpdatedUrl && nullNodeWebhooksOnChannelUpdatedUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelUpdatedUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelUpdate.Method") is { } nullNodeWebhooksOnChannelUpdateMethod && nullNodeWebhooksOnChannelUpdateMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelUpdateMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnChannelUpdate.Url") is { } nullNodeWebhooksOnChannelUpdateUrl && nullNodeWebhooksOnChannelUpdateUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnChannelUpdateUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnMemberAdded.Method") is { } nullNodeWebhooksOnMemberAddedMethod && nullNodeWebhooksOnMemberAddedMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMemberAddedMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnMemberAdded.Url") is { } nullNodeWebhooksOnMemberAddedUrl && nullNodeWebhooksOnMemberAddedUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMemberAddedUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnMemberAdd.Method") is { } nullNodeWebhooksOnMemberAddMethod && nullNodeWebhooksOnMemberAddMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMemberAddMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnMemberAdd.Url") is { } nullNodeWebhooksOnMemberAddUrl && nullNodeWebhooksOnMemberAddUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMemberAddUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnMemberRemoved.Method") is { } nullNodeWebhooksOnMemberRemovedMethod && nullNodeWebhooksOnMemberRemovedMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMemberRemovedMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnMemberRemoved.Url") is { } nullNodeWebhooksOnMemberRemovedUrl && nullNodeWebhooksOnMemberRemovedUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMemberRemovedUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnMemberRemove.Method") is { } nullNodeWebhooksOnMemberRemoveMethod && nullNodeWebhooksOnMemberRemoveMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMemberRemoveMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnMemberRemove.Url") is { } nullNodeWebhooksOnMemberRemoveUrl && nullNodeWebhooksOnMemberRemoveUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMemberRemoveUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageRemoved.Method") is { } nullNodeWebhooksOnMessageRemovedMethod && nullNodeWebhooksOnMessageRemovedMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageRemovedMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageRemoved.Url") is { } nullNodeWebhooksOnMessageRemovedUrl && nullNodeWebhooksOnMessageRemovedUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageRemovedUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageRemove.Method") is { } nullNodeWebhooksOnMessageRemoveMethod && nullNodeWebhooksOnMessageRemoveMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageRemoveMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageRemove.Url") is { } nullNodeWebhooksOnMessageRemoveUrl && nullNodeWebhooksOnMessageRemoveUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageRemoveUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageSend.Method") is { } nullNodeWebhooksOnMessageSendMethod && nullNodeWebhooksOnMessageSendMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageSendMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageSend.Url") is { } nullNodeWebhooksOnMessageSendUrl && nullNodeWebhooksOnMessageSendUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageSendUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageSent.Method") is { } nullNodeWebhooksOnMessageSentMethod && nullNodeWebhooksOnMessageSentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageSentMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageSent.Url") is { } nullNodeWebhooksOnMessageSentUrl && nullNodeWebhooksOnMessageSentUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageSentUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageUpdated.Method") is { } nullNodeWebhooksOnMessageUpdatedMethod && nullNodeWebhooksOnMessageUpdatedMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageUpdatedMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageUpdated.Url") is { } nullNodeWebhooksOnMessageUpdatedUrl && nullNodeWebhooksOnMessageUpdatedUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageUpdatedUrl = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageUpdate.Method") is { } nullNodeWebhooksOnMessageUpdateMethod && nullNodeWebhooksOnMessageUpdateMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageUpdateMethod = null;
+            if (parseNode.GetChildNode("Webhooks.OnMessageUpdate.Url") is { } nullNodeWebhooksOnMessageUpdateUrl && nullNodeWebhooksOnMessageUpdateUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhooksOnMessageUpdateUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>DEPRECATED. The interval in seconds between consumption reports submission batches from client endpoints.</summary>
-        public int? ConsumptionReportInterval { get; set; }
+        public int? ConsumptionReportInterval { get => _explicitNullValueConsumptionReportInterval; set { _explicitNullValueConsumptionReportInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsumptionReportInterval"); else _explicitNullProperties?.Remove("ConsumptionReportInterval"); } }
+        private int? _explicitNullValueConsumptionReportInterval = default!;
         /// <summary>The channel role assigned to a channel creator when they join a new channel. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultChannelCreatorRoleSid { get; set; }
+        public string? DefaultChannelCreatorRoleSid { get => _explicitNullValueDefaultChannelCreatorRoleSid; set { _explicitNullValueDefaultChannelCreatorRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChannelCreatorRoleSid"); else _explicitNullProperties?.Remove("DefaultChannelCreatorRoleSid"); } }
+        private string? _explicitNullValueDefaultChannelCreatorRoleSid = default!;
 #nullable restore
 #else
-        public string DefaultChannelCreatorRoleSid { get; set; }
+        public string DefaultChannelCreatorRoleSid { get => _explicitNullValueDefaultChannelCreatorRoleSid; set { _explicitNullValueDefaultChannelCreatorRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChannelCreatorRoleSid"); else _explicitNullProperties?.Remove("DefaultChannelCreatorRoleSid"); } }
+        private string _explicitNullValueDefaultChannelCreatorRoleSid = default!;
 #endif
         /// <summary>The channel role assigned to users when they are added to a channel. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultChannelRoleSid { get; set; }
+        public string? DefaultChannelRoleSid { get => _explicitNullValueDefaultChannelRoleSid; set { _explicitNullValueDefaultChannelRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChannelRoleSid"); else _explicitNullProperties?.Remove("DefaultChannelRoleSid"); } }
+        private string? _explicitNullValueDefaultChannelRoleSid = default!;
 #nullable restore
 #else
-        public string DefaultChannelRoleSid { get; set; }
+        public string DefaultChannelRoleSid { get => _explicitNullValueDefaultChannelRoleSid; set { _explicitNullValueDefaultChannelRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChannelRoleSid"); else _explicitNullProperties?.Remove("DefaultChannelRoleSid"); } }
+        private string _explicitNullValueDefaultChannelRoleSid = default!;
 #endif
         /// <summary>The service role assigned to users when they are added to the service. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultServiceRoleSid { get; set; }
+        public string? DefaultServiceRoleSid { get => _explicitNullValueDefaultServiceRoleSid; set { _explicitNullValueDefaultServiceRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultServiceRoleSid"); else _explicitNullProperties?.Remove("DefaultServiceRoleSid"); } }
+        private string? _explicitNullValueDefaultServiceRoleSid = default!;
 #nullable restore
 #else
-        public string DefaultServiceRoleSid { get; set; }
+        public string DefaultServiceRoleSid { get => _explicitNullValueDefaultServiceRoleSid; set { _explicitNullValueDefaultServiceRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultServiceRoleSid"); else _explicitNullProperties?.Remove("DefaultServiceRoleSid"); } }
+        private string _explicitNullValueDefaultServiceRoleSid = default!;
 #endif
         /// <summary>A descriptive string that you create to describe the resource. It can be up to 64 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The maximum number of Members that can be added to Channels within this Service. Can be up to 1,000.</summary>
-        public int? LimitsChannelMembers { get; set; }
+        public int? LimitsChannelMembers { get => _explicitNullValueLimitsChannelMembers; set { _explicitNullValueLimitsChannelMembers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Limits.ChannelMembers"); else _explicitNullProperties?.Remove("Limits.ChannelMembers"); } }
+        private int? _explicitNullValueLimitsChannelMembers = default!;
         /// <summary>The maximum number of Channels Users can be a Member of within this Service. Can be up to 1,000.</summary>
-        public int? LimitsUserChannels { get; set; }
+        public int? LimitsUserChannels { get => _explicitNullValueLimitsUserChannels; set { _explicitNullValueLimitsUserChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Limits.UserChannels"); else _explicitNullProperties?.Remove("Limits.UserChannels"); } }
+        private int? _explicitNullValueLimitsUserChannels = default!;
         /// <summary>Whether to send a notification when a member is added to a channel. Can be: `true` or `false` and the default is `false`.</summary>
-        public bool? NotificationsAddedToChannelEnabled { get; set; }
+        public bool? NotificationsAddedToChannelEnabled { get => _explicitNullValueNotificationsAddedToChannelEnabled; set { _explicitNullValueNotificationsAddedToChannelEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.AddedToChannel.Enabled"); else _explicitNullProperties?.Remove("Notifications.AddedToChannel.Enabled"); } }
+        private bool? _explicitNullValueNotificationsAddedToChannelEnabled = default!;
         /// <summary>The template to use to create the notification text displayed when a member is added to a channel and `notifications.added_to_channel.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsAddedToChannelTemplate { get; set; }
+        public string? NotificationsAddedToChannelTemplate { get => _explicitNullValueNotificationsAddedToChannelTemplate; set { _explicitNullValueNotificationsAddedToChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.AddedToChannel.Template"); else _explicitNullProperties?.Remove("Notifications.AddedToChannel.Template"); } }
+        private string? _explicitNullValueNotificationsAddedToChannelTemplate = default!;
 #nullable restore
 #else
-        public string NotificationsAddedToChannelTemplate { get; set; }
+        public string NotificationsAddedToChannelTemplate { get => _explicitNullValueNotificationsAddedToChannelTemplate; set { _explicitNullValueNotificationsAddedToChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.AddedToChannel.Template"); else _explicitNullProperties?.Remove("Notifications.AddedToChannel.Template"); } }
+        private string _explicitNullValueNotificationsAddedToChannelTemplate = default!;
 #endif
         /// <summary>Whether to send a notification when a user is invited to a channel. Can be: `true` or `false` and the default is `false`.</summary>
-        public bool? NotificationsInvitedToChannelEnabled { get; set; }
+        public bool? NotificationsInvitedToChannelEnabled { get => _explicitNullValueNotificationsInvitedToChannelEnabled; set { _explicitNullValueNotificationsInvitedToChannelEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.InvitedToChannel.Enabled"); else _explicitNullProperties?.Remove("Notifications.InvitedToChannel.Enabled"); } }
+        private bool? _explicitNullValueNotificationsInvitedToChannelEnabled = default!;
         /// <summary>The template to use to create the notification text displayed when a user is invited to a channel and `notifications.invited_to_channel.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsInvitedToChannelTemplate { get; set; }
+        public string? NotificationsInvitedToChannelTemplate { get => _explicitNullValueNotificationsInvitedToChannelTemplate; set { _explicitNullValueNotificationsInvitedToChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.InvitedToChannel.Template"); else _explicitNullProperties?.Remove("Notifications.InvitedToChannel.Template"); } }
+        private string? _explicitNullValueNotificationsInvitedToChannelTemplate = default!;
 #nullable restore
 #else
-        public string NotificationsInvitedToChannelTemplate { get; set; }
+        public string NotificationsInvitedToChannelTemplate { get => _explicitNullValueNotificationsInvitedToChannelTemplate; set { _explicitNullValueNotificationsInvitedToChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.InvitedToChannel.Template"); else _explicitNullProperties?.Remove("Notifications.InvitedToChannel.Template"); } }
+        private string _explicitNullValueNotificationsInvitedToChannelTemplate = default!;
 #endif
         /// <summary>Whether to send a notification when a new message is added to a channel. Can be: `true` or `false` and the default is `false`.</summary>
-        public bool? NotificationsNewMessageEnabled { get; set; }
+        public bool? NotificationsNewMessageEnabled { get => _explicitNullValueNotificationsNewMessageEnabled; set { _explicitNullValueNotificationsNewMessageEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.NewMessage.Enabled"); else _explicitNullProperties?.Remove("Notifications.NewMessage.Enabled"); } }
+        private bool? _explicitNullValueNotificationsNewMessageEnabled = default!;
         /// <summary>The template to use to create the notification text displayed when a new message is added to a channel and `notifications.new_message.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsNewMessageTemplate { get; set; }
+        public string? NotificationsNewMessageTemplate { get => _explicitNullValueNotificationsNewMessageTemplate; set { _explicitNullValueNotificationsNewMessageTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.NewMessage.Template"); else _explicitNullProperties?.Remove("Notifications.NewMessage.Template"); } }
+        private string? _explicitNullValueNotificationsNewMessageTemplate = default!;
 #nullable restore
 #else
-        public string NotificationsNewMessageTemplate { get; set; }
+        public string NotificationsNewMessageTemplate { get => _explicitNullValueNotificationsNewMessageTemplate; set { _explicitNullValueNotificationsNewMessageTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.NewMessage.Template"); else _explicitNullProperties?.Remove("Notifications.NewMessage.Template"); } }
+        private string _explicitNullValueNotificationsNewMessageTemplate = default!;
 #endif
         /// <summary>Whether to send a notification to a user when they are removed from a channel. Can be: `true` or `false` and the default is `false`.</summary>
-        public bool? NotificationsRemovedFromChannelEnabled { get; set; }
+        public bool? NotificationsRemovedFromChannelEnabled { get => _explicitNullValueNotificationsRemovedFromChannelEnabled; set { _explicitNullValueNotificationsRemovedFromChannelEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.RemovedFromChannel.Enabled"); else _explicitNullProperties?.Remove("Notifications.RemovedFromChannel.Enabled"); } }
+        private bool? _explicitNullValueNotificationsRemovedFromChannelEnabled = default!;
         /// <summary>The template to use to create the notification text displayed to a user when they are removed from a channel and `notifications.removed_from_channel.enabled` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationsRemovedFromChannelTemplate { get; set; }
+        public string? NotificationsRemovedFromChannelTemplate { get => _explicitNullValueNotificationsRemovedFromChannelTemplate; set { _explicitNullValueNotificationsRemovedFromChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.RemovedFromChannel.Template"); else _explicitNullProperties?.Remove("Notifications.RemovedFromChannel.Template"); } }
+        private string? _explicitNullValueNotificationsRemovedFromChannelTemplate = default!;
 #nullable restore
 #else
-        public string NotificationsRemovedFromChannelTemplate { get; set; }
+        public string NotificationsRemovedFromChannelTemplate { get => _explicitNullValueNotificationsRemovedFromChannelTemplate; set { _explicitNullValueNotificationsRemovedFromChannelTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Notifications.RemovedFromChannel.Template"); else _explicitNullProperties?.Remove("Notifications.RemovedFromChannel.Template"); } }
+        private string _explicitNullValueNotificationsRemovedFromChannelTemplate = default!;
 #endif
         /// <summary>The URL for post-event webhooks, which are called by using the `webhook_method`. See [Webhook Events](https://www.twilio.com/docs/api/chat/webhooks) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PostWebhookUrl { get; set; }
+        public string? PostWebhookUrl { get => _explicitNullValuePostWebhookUrl; set { _explicitNullValuePostWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostWebhookUrl"); else _explicitNullProperties?.Remove("PostWebhookUrl"); } }
+        private string? _explicitNullValuePostWebhookUrl = default!;
 #nullable restore
 #else
-        public string PostWebhookUrl { get; set; }
+        public string PostWebhookUrl { get => _explicitNullValuePostWebhookUrl; set { _explicitNullValuePostWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostWebhookUrl"); else _explicitNullProperties?.Remove("PostWebhookUrl"); } }
+        private string _explicitNullValuePostWebhookUrl = default!;
 #endif
         /// <summary>The URL for pre-event webhooks, which are called by using the `webhook_method`. See [Webhook Events](https://www.twilio.com/docs/api/chat/webhooks) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreWebhookUrl { get; set; }
+        public string? PreWebhookUrl { get => _explicitNullValuePreWebhookUrl; set { _explicitNullValuePreWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreWebhookUrl"); else _explicitNullProperties?.Remove("PreWebhookUrl"); } }
+        private string? _explicitNullValuePreWebhookUrl = default!;
 #nullable restore
 #else
-        public string PreWebhookUrl { get; set; }
+        public string PreWebhookUrl { get => _explicitNullValuePreWebhookUrl; set { _explicitNullValuePreWebhookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreWebhookUrl"); else _explicitNullProperties?.Remove("PreWebhookUrl"); } }
+        private string _explicitNullValuePreWebhookUrl = default!;
 #endif
         /// <summary>Whether to enable the [Reachability Indicator](https://www.twilio.com/docs/chat/reachability-indicator) for this Service instance. The default is `false`.</summary>
-        public bool? ReachabilityEnabled { get; set; }
+        public bool? ReachabilityEnabled { get => _explicitNullValueReachabilityEnabled; set { _explicitNullValueReachabilityEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReachabilityEnabled"); else _explicitNullProperties?.Remove("ReachabilityEnabled"); } }
+        private bool? _explicitNullValueReachabilityEnabled = default!;
         /// <summary>Whether to enable the [Message Consumption Horizon](https://www.twilio.com/docs/chat/consumption-horizon) feature. The default is `true`.</summary>
-        public bool? ReadStatusEnabled { get; set; }
+        public bool? ReadStatusEnabled { get => _explicitNullValueReadStatusEnabled; set { _explicitNullValueReadStatusEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReadStatusEnabled"); else _explicitNullProperties?.Remove("ReadStatusEnabled"); } }
+        private bool? _explicitNullValueReadStatusEnabled = default!;
         /// <summary>How long in seconds after a `started typing` event until clients should assume that user is no longer typing, even if no `ended typing` message was received.  The default is 5 seconds.</summary>
-        public int? TypingIndicatorTimeout { get; set; }
+        public int? TypingIndicatorTimeout { get => _explicitNullValueTypingIndicatorTimeout; set { _explicitNullValueTypingIndicatorTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TypingIndicatorTimeout"); else _explicitNullProperties?.Remove("TypingIndicatorTimeout"); } }
+        private int? _explicitNullValueTypingIndicatorTimeout = default!;
         /// <summary>The list of WebHook events that are enabled for this Service instance. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? WebhookFilters { get; set; }
+        public List<string>? WebhookFilters { get => _explicitNullValueWebhookFilters; set { _explicitNullValueWebhookFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookFilters"); else _explicitNullProperties?.Remove("WebhookFilters"); } }
+        private List<string>? _explicitNullValueWebhookFilters = default!;
 #nullable restore
 #else
-        public List<string> WebhookFilters { get; set; }
+        public List<string> WebhookFilters { get => _explicitNullValueWebhookFilters; set { _explicitNullValueWebhookFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookFilters"); else _explicitNullProperties?.Remove("WebhookFilters"); } }
+        private List<string> _explicitNullValueWebhookFilters = default!;
 #endif
         /// <summary>The HTTP method to use for calls to the `pre_webhook_url` and `post_webhook_url` webhooks.  Can be: `POST` or `GET` and the default is `POST`. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhookMethod? WebhookMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhookMethod? WebhookMethod { get => _explicitNullValueWebhookMethod; set { _explicitNullValueWebhookMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WebhookMethod"); else _explicitNullProperties?.Remove("WebhookMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhookMethod? _explicitNullValueWebhookMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_channel_added` event`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelAddedMethod? WebhooksOnChannelAddedMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelAddedMethod? WebhooksOnChannelAddedMethod { get => _explicitNullValueWebhooksOnChannelAddedMethod; set { _explicitNullValueWebhooksOnChannelAddedMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelAdded.Method"); else _explicitNullProperties?.Remove("Webhooks.OnChannelAdded.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelAddedMethod? _explicitNullValueWebhooksOnChannelAddedMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_channel_added` event using the `webhooks.on_channel_added.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnChannelAddedUrl { get; set; }
+        public string? WebhooksOnChannelAddedUrl { get => _explicitNullValueWebhooksOnChannelAddedUrl; set { _explicitNullValueWebhooksOnChannelAddedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelAdded.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelAdded.Url"); } }
+        private string? _explicitNullValueWebhooksOnChannelAddedUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnChannelAddedUrl { get; set; }
+        public string WebhooksOnChannelAddedUrl { get => _explicitNullValueWebhooksOnChannelAddedUrl; set { _explicitNullValueWebhooksOnChannelAddedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelAdded.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelAdded.Url"); } }
+        private string _explicitNullValueWebhooksOnChannelAddedUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_channel_add.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelAddMethod? WebhooksOnChannelAddMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelAddMethod? WebhooksOnChannelAddMethod { get => _explicitNullValueWebhooksOnChannelAddMethod; set { _explicitNullValueWebhooksOnChannelAddMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelAdd.Method"); else _explicitNullProperties?.Remove("Webhooks.OnChannelAdd.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelAddMethod? _explicitNullValueWebhooksOnChannelAddMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_channel_add` event using the `webhooks.on_channel_add.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnChannelAddUrl { get; set; }
+        public string? WebhooksOnChannelAddUrl { get => _explicitNullValueWebhooksOnChannelAddUrl; set { _explicitNullValueWebhooksOnChannelAddUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelAdd.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelAdd.Url"); } }
+        private string? _explicitNullValueWebhooksOnChannelAddUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnChannelAddUrl { get; set; }
+        public string WebhooksOnChannelAddUrl { get => _explicitNullValueWebhooksOnChannelAddUrl; set { _explicitNullValueWebhooksOnChannelAddUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelAdd.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelAdd.Url"); } }
+        private string _explicitNullValueWebhooksOnChannelAddUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_channel_destroyed.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelDestroyedMethod? WebhooksOnChannelDestroyedMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelDestroyedMethod? WebhooksOnChannelDestroyedMethod { get => _explicitNullValueWebhooksOnChannelDestroyedMethod; set { _explicitNullValueWebhooksOnChannelDestroyedMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelDestroyed.Method"); else _explicitNullProperties?.Remove("Webhooks.OnChannelDestroyed.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelDestroyedMethod? _explicitNullValueWebhooksOnChannelDestroyedMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_channel_added` event using the `webhooks.on_channel_destroyed.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnChannelDestroyedUrl { get; set; }
+        public string? WebhooksOnChannelDestroyedUrl { get => _explicitNullValueWebhooksOnChannelDestroyedUrl; set { _explicitNullValueWebhooksOnChannelDestroyedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelDestroyed.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelDestroyed.Url"); } }
+        private string? _explicitNullValueWebhooksOnChannelDestroyedUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnChannelDestroyedUrl { get; set; }
+        public string WebhooksOnChannelDestroyedUrl { get => _explicitNullValueWebhooksOnChannelDestroyedUrl; set { _explicitNullValueWebhooksOnChannelDestroyedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelDestroyed.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelDestroyed.Url"); } }
+        private string _explicitNullValueWebhooksOnChannelDestroyedUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_channel_destroy.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelDestroyMethod? WebhooksOnChannelDestroyMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelDestroyMethod? WebhooksOnChannelDestroyMethod { get => _explicitNullValueWebhooksOnChannelDestroyMethod; set { _explicitNullValueWebhooksOnChannelDestroyMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelDestroy.Method"); else _explicitNullProperties?.Remove("Webhooks.OnChannelDestroy.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelDestroyMethod? _explicitNullValueWebhooksOnChannelDestroyMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_channel_destroy` event using the `webhooks.on_channel_destroy.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnChannelDestroyUrl { get; set; }
+        public string? WebhooksOnChannelDestroyUrl { get => _explicitNullValueWebhooksOnChannelDestroyUrl; set { _explicitNullValueWebhooksOnChannelDestroyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelDestroy.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelDestroy.Url"); } }
+        private string? _explicitNullValueWebhooksOnChannelDestroyUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnChannelDestroyUrl { get; set; }
+        public string WebhooksOnChannelDestroyUrl { get => _explicitNullValueWebhooksOnChannelDestroyUrl; set { _explicitNullValueWebhooksOnChannelDestroyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelDestroy.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelDestroy.Url"); } }
+        private string _explicitNullValueWebhooksOnChannelDestroyUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_channel_updated.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelUpdatedMethod? WebhooksOnChannelUpdatedMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelUpdatedMethod? WebhooksOnChannelUpdatedMethod { get => _explicitNullValueWebhooksOnChannelUpdatedMethod; set { _explicitNullValueWebhooksOnChannelUpdatedMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelUpdated.Method"); else _explicitNullProperties?.Remove("Webhooks.OnChannelUpdated.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelUpdatedMethod? _explicitNullValueWebhooksOnChannelUpdatedMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_channel_updated` event using the `webhooks.on_channel_updated.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnChannelUpdatedUrl { get; set; }
+        public string? WebhooksOnChannelUpdatedUrl { get => _explicitNullValueWebhooksOnChannelUpdatedUrl; set { _explicitNullValueWebhooksOnChannelUpdatedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelUpdated.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelUpdated.Url"); } }
+        private string? _explicitNullValueWebhooksOnChannelUpdatedUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnChannelUpdatedUrl { get; set; }
+        public string WebhooksOnChannelUpdatedUrl { get => _explicitNullValueWebhooksOnChannelUpdatedUrl; set { _explicitNullValueWebhooksOnChannelUpdatedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelUpdated.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelUpdated.Url"); } }
+        private string _explicitNullValueWebhooksOnChannelUpdatedUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_channel_update.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelUpdateMethod? WebhooksOnChannelUpdateMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelUpdateMethod? WebhooksOnChannelUpdateMethod { get => _explicitNullValueWebhooksOnChannelUpdateMethod; set { _explicitNullValueWebhooksOnChannelUpdateMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelUpdate.Method"); else _explicitNullProperties?.Remove("Webhooks.OnChannelUpdate.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnChannelUpdateMethod? _explicitNullValueWebhooksOnChannelUpdateMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_channel_update` event using the `webhooks.on_channel_update.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnChannelUpdateUrl { get; set; }
+        public string? WebhooksOnChannelUpdateUrl { get => _explicitNullValueWebhooksOnChannelUpdateUrl; set { _explicitNullValueWebhooksOnChannelUpdateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelUpdate.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelUpdate.Url"); } }
+        private string? _explicitNullValueWebhooksOnChannelUpdateUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnChannelUpdateUrl { get; set; }
+        public string WebhooksOnChannelUpdateUrl { get => _explicitNullValueWebhooksOnChannelUpdateUrl; set { _explicitNullValueWebhooksOnChannelUpdateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnChannelUpdate.Url"); else _explicitNullProperties?.Remove("Webhooks.OnChannelUpdate.Url"); } }
+        private string _explicitNullValueWebhooksOnChannelUpdateUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_channel_updated.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberAddedMethod? WebhooksOnMemberAddedMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberAddedMethod? WebhooksOnMemberAddedMethod { get => _explicitNullValueWebhooksOnMemberAddedMethod; set { _explicitNullValueWebhooksOnMemberAddedMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberAdded.Method"); else _explicitNullProperties?.Remove("Webhooks.OnMemberAdded.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberAddedMethod? _explicitNullValueWebhooksOnMemberAddedMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_channel_updated` event using the `webhooks.on_channel_updated.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnMemberAddedUrl { get; set; }
+        public string? WebhooksOnMemberAddedUrl { get => _explicitNullValueWebhooksOnMemberAddedUrl; set { _explicitNullValueWebhooksOnMemberAddedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberAdded.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMemberAdded.Url"); } }
+        private string? _explicitNullValueWebhooksOnMemberAddedUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnMemberAddedUrl { get; set; }
+        public string WebhooksOnMemberAddedUrl { get => _explicitNullValueWebhooksOnMemberAddedUrl; set { _explicitNullValueWebhooksOnMemberAddedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberAdded.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMemberAdded.Url"); } }
+        private string _explicitNullValueWebhooksOnMemberAddedUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_member_add.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberAddMethod? WebhooksOnMemberAddMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberAddMethod? WebhooksOnMemberAddMethod { get => _explicitNullValueWebhooksOnMemberAddMethod; set { _explicitNullValueWebhooksOnMemberAddMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberAdd.Method"); else _explicitNullProperties?.Remove("Webhooks.OnMemberAdd.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberAddMethod? _explicitNullValueWebhooksOnMemberAddMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_member_add` event using the `webhooks.on_member_add.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnMemberAddUrl { get; set; }
+        public string? WebhooksOnMemberAddUrl { get => _explicitNullValueWebhooksOnMemberAddUrl; set { _explicitNullValueWebhooksOnMemberAddUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberAdd.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMemberAdd.Url"); } }
+        private string? _explicitNullValueWebhooksOnMemberAddUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnMemberAddUrl { get; set; }
+        public string WebhooksOnMemberAddUrl { get => _explicitNullValueWebhooksOnMemberAddUrl; set { _explicitNullValueWebhooksOnMemberAddUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberAdd.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMemberAdd.Url"); } }
+        private string _explicitNullValueWebhooksOnMemberAddUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_member_removed.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberRemovedMethod? WebhooksOnMemberRemovedMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberRemovedMethod? WebhooksOnMemberRemovedMethod { get => _explicitNullValueWebhooksOnMemberRemovedMethod; set { _explicitNullValueWebhooksOnMemberRemovedMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberRemoved.Method"); else _explicitNullProperties?.Remove("Webhooks.OnMemberRemoved.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberRemovedMethod? _explicitNullValueWebhooksOnMemberRemovedMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_member_removed` event using the `webhooks.on_member_removed.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnMemberRemovedUrl { get; set; }
+        public string? WebhooksOnMemberRemovedUrl { get => _explicitNullValueWebhooksOnMemberRemovedUrl; set { _explicitNullValueWebhooksOnMemberRemovedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberRemoved.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMemberRemoved.Url"); } }
+        private string? _explicitNullValueWebhooksOnMemberRemovedUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnMemberRemovedUrl { get; set; }
+        public string WebhooksOnMemberRemovedUrl { get => _explicitNullValueWebhooksOnMemberRemovedUrl; set { _explicitNullValueWebhooksOnMemberRemovedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberRemoved.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMemberRemoved.Url"); } }
+        private string _explicitNullValueWebhooksOnMemberRemovedUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_member_remove.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberRemoveMethod? WebhooksOnMemberRemoveMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberRemoveMethod? WebhooksOnMemberRemoveMethod { get => _explicitNullValueWebhooksOnMemberRemoveMethod; set { _explicitNullValueWebhooksOnMemberRemoveMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberRemove.Method"); else _explicitNullProperties?.Remove("Webhooks.OnMemberRemove.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMemberRemoveMethod? _explicitNullValueWebhooksOnMemberRemoveMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_member_remove` event using the `webhooks.on_member_remove.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnMemberRemoveUrl { get; set; }
+        public string? WebhooksOnMemberRemoveUrl { get => _explicitNullValueWebhooksOnMemberRemoveUrl; set { _explicitNullValueWebhooksOnMemberRemoveUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberRemove.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMemberRemove.Url"); } }
+        private string? _explicitNullValueWebhooksOnMemberRemoveUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnMemberRemoveUrl { get; set; }
+        public string WebhooksOnMemberRemoveUrl { get => _explicitNullValueWebhooksOnMemberRemoveUrl; set { _explicitNullValueWebhooksOnMemberRemoveUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMemberRemove.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMemberRemove.Url"); } }
+        private string _explicitNullValueWebhooksOnMemberRemoveUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_message_removed.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageRemovedMethod? WebhooksOnMessageRemovedMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageRemovedMethod? WebhooksOnMessageRemovedMethod { get => _explicitNullValueWebhooksOnMessageRemovedMethod; set { _explicitNullValueWebhooksOnMessageRemovedMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageRemoved.Method"); else _explicitNullProperties?.Remove("Webhooks.OnMessageRemoved.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageRemovedMethod? _explicitNullValueWebhooksOnMessageRemovedMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_message_removed` event using the `webhooks.on_message_removed.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnMessageRemovedUrl { get; set; }
+        public string? WebhooksOnMessageRemovedUrl { get => _explicitNullValueWebhooksOnMessageRemovedUrl; set { _explicitNullValueWebhooksOnMessageRemovedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageRemoved.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageRemoved.Url"); } }
+        private string? _explicitNullValueWebhooksOnMessageRemovedUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnMessageRemovedUrl { get; set; }
+        public string WebhooksOnMessageRemovedUrl { get => _explicitNullValueWebhooksOnMessageRemovedUrl; set { _explicitNullValueWebhooksOnMessageRemovedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageRemoved.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageRemoved.Url"); } }
+        private string _explicitNullValueWebhooksOnMessageRemovedUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_message_remove.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageRemoveMethod? WebhooksOnMessageRemoveMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageRemoveMethod? WebhooksOnMessageRemoveMethod { get => _explicitNullValueWebhooksOnMessageRemoveMethod; set { _explicitNullValueWebhooksOnMessageRemoveMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageRemove.Method"); else _explicitNullProperties?.Remove("Webhooks.OnMessageRemove.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageRemoveMethod? _explicitNullValueWebhooksOnMessageRemoveMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_message_remove` event using the `webhooks.on_message_remove.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnMessageRemoveUrl { get; set; }
+        public string? WebhooksOnMessageRemoveUrl { get => _explicitNullValueWebhooksOnMessageRemoveUrl; set { _explicitNullValueWebhooksOnMessageRemoveUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageRemove.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageRemove.Url"); } }
+        private string? _explicitNullValueWebhooksOnMessageRemoveUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnMessageRemoveUrl { get; set; }
+        public string WebhooksOnMessageRemoveUrl { get => _explicitNullValueWebhooksOnMessageRemoveUrl; set { _explicitNullValueWebhooksOnMessageRemoveUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageRemove.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageRemove.Url"); } }
+        private string _explicitNullValueWebhooksOnMessageRemoveUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_message_send.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageSendMethod? WebhooksOnMessageSendMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageSendMethod? WebhooksOnMessageSendMethod { get => _explicitNullValueWebhooksOnMessageSendMethod; set { _explicitNullValueWebhooksOnMessageSendMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageSend.Method"); else _explicitNullProperties?.Remove("Webhooks.OnMessageSend.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageSendMethod? _explicitNullValueWebhooksOnMessageSendMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_message_send` event using the `webhooks.on_message_send.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnMessageSendUrl { get; set; }
+        public string? WebhooksOnMessageSendUrl { get => _explicitNullValueWebhooksOnMessageSendUrl; set { _explicitNullValueWebhooksOnMessageSendUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageSend.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageSend.Url"); } }
+        private string? _explicitNullValueWebhooksOnMessageSendUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnMessageSendUrl { get; set; }
+        public string WebhooksOnMessageSendUrl { get => _explicitNullValueWebhooksOnMessageSendUrl; set { _explicitNullValueWebhooksOnMessageSendUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageSend.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageSend.Url"); } }
+        private string _explicitNullValueWebhooksOnMessageSendUrl = default!;
 #endif
         /// <summary>The URL of the webhook to call in response to the `on_message_sent` event`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageSentMethod? WebhooksOnMessageSentMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageSentMethod? WebhooksOnMessageSentMethod { get => _explicitNullValueWebhooksOnMessageSentMethod; set { _explicitNullValueWebhooksOnMessageSentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageSent.Method"); else _explicitNullProperties?.Remove("Webhooks.OnMessageSent.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageSentMethod? _explicitNullValueWebhooksOnMessageSentMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_message_sent` event using the `webhooks.on_message_sent.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnMessageSentUrl { get; set; }
+        public string? WebhooksOnMessageSentUrl { get => _explicitNullValueWebhooksOnMessageSentUrl; set { _explicitNullValueWebhooksOnMessageSentUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageSent.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageSent.Url"); } }
+        private string? _explicitNullValueWebhooksOnMessageSentUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnMessageSentUrl { get; set; }
+        public string WebhooksOnMessageSentUrl { get => _explicitNullValueWebhooksOnMessageSentUrl; set { _explicitNullValueWebhooksOnMessageSentUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageSent.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageSent.Url"); } }
+        private string _explicitNullValueWebhooksOnMessageSentUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_message_updated.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageUpdatedMethod? WebhooksOnMessageUpdatedMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageUpdatedMethod? WebhooksOnMessageUpdatedMethod { get => _explicitNullValueWebhooksOnMessageUpdatedMethod; set { _explicitNullValueWebhooksOnMessageUpdatedMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageUpdated.Method"); else _explicitNullProperties?.Remove("Webhooks.OnMessageUpdated.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageUpdatedMethod? _explicitNullValueWebhooksOnMessageUpdatedMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_message_updated` event using the `webhooks.on_message_updated.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnMessageUpdatedUrl { get; set; }
+        public string? WebhooksOnMessageUpdatedUrl { get => _explicitNullValueWebhooksOnMessageUpdatedUrl; set { _explicitNullValueWebhooksOnMessageUpdatedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageUpdated.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageUpdated.Url"); } }
+        private string? _explicitNullValueWebhooksOnMessageUpdatedUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnMessageUpdatedUrl { get; set; }
+        public string WebhooksOnMessageUpdatedUrl { get => _explicitNullValueWebhooksOnMessageUpdatedUrl; set { _explicitNullValueWebhooksOnMessageUpdatedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageUpdated.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageUpdated.Url"); } }
+        private string _explicitNullValueWebhooksOnMessageUpdatedUrl = default!;
 #endif
         /// <summary>The HTTP method to use when calling the `webhooks.on_message_update.url`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageUpdateMethod? WebhooksOnMessageUpdateMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageUpdateMethod? WebhooksOnMessageUpdateMethod { get => _explicitNullValueWebhooksOnMessageUpdateMethod; set { _explicitNullValueWebhooksOnMessageUpdateMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageUpdate.Method"); else _explicitNullProperties?.Remove("Webhooks.OnMessageUpdate.Method"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageUpdateMethod? _explicitNullValueWebhooksOnMessageUpdateMethod = default!;
         /// <summary>The URL of the webhook to call in response to the `on_message_update` event using the `webhooks.on_message_update.method` HTTP method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebhooksOnMessageUpdateUrl { get; set; }
+        public string? WebhooksOnMessageUpdateUrl { get => _explicitNullValueWebhooksOnMessageUpdateUrl; set { _explicitNullValueWebhooksOnMessageUpdateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageUpdate.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageUpdate.Url"); } }
+        private string? _explicitNullValueWebhooksOnMessageUpdateUrl = default!;
 #nullable restore
 #else
-        public string WebhooksOnMessageUpdateUrl { get; set; }
+        public string WebhooksOnMessageUpdateUrl { get => _explicitNullValueWebhooksOnMessageUpdateUrl; set { _explicitNullValueWebhooksOnMessageUpdateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Webhooks.OnMessageUpdate.Url"); else _explicitNullProperties?.Remove("Webhooks.OnMessageUpdate.Url"); } }
+        private string _explicitNullValueWebhooksOnMessageUpdateUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -299,7 +441,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -426,6 +568,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("Webhooks.OnMessageUpdated.Url", WebhooksOnMessageUpdatedUrl);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioChatV1UpdateServiceXWwwFormUrlencodedRequestWebhooksOnMessageUpdateMethod>("Webhooks.OnMessageUpdate.Method", WebhooksOnMessageUpdateMethod);
             writer.WriteStringValue("Webhooks.OnMessageUpdate.Url", WebhooksOnMessageUpdateUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

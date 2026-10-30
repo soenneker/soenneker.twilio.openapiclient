@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.ShortCodes.Item.Ite
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3ShortCode>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3ShortCode.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3ShortCode>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3ShortCode.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Assign an Processing Region to a short code. Short codes only support a Messaging region; Voice is not supported.
@@ -69,7 +69,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_routes_v3.V3.ShortCodes.Item.Ite
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3ShortCode>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3ShortCode.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3ShortCode>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.RoutesV3ShortCode.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Fetch the Processing Region assigned to a short code. Short codes only support a Messaging region; Voice is not supported.

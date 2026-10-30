@@ -11,40 +11,59 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioServerlessV1CreateBuildXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AssetVersions") is { } nullNodeAssetVersions && nullNodeAssetVersions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetVersions = null;
+            if (parseNode.GetChildNode("Dependencies") is { } nullNodeDependencies && nullNodeDependencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dependencies = null;
+            if (parseNode.GetChildNode("FunctionVersions") is { } nullNodeFunctionVersions && nullNodeFunctionVersions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunctionVersions = null;
+            if (parseNode.GetChildNode("Runtime") is { } nullNodeRuntime && nullNodeRuntime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Runtime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The list of Asset Version resource SIDs to include in the Build.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AssetVersions { get; set; }
+        public List<string>? AssetVersions { get => _explicitNullValueAssetVersions; set { _explicitNullValueAssetVersions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssetVersions"); else _explicitNullProperties?.Remove("AssetVersions"); } }
+        private List<string>? _explicitNullValueAssetVersions = default!;
 #nullable restore
 #else
-        public List<string> AssetVersions { get; set; }
+        public List<string> AssetVersions { get => _explicitNullValueAssetVersions; set { _explicitNullValueAssetVersions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssetVersions"); else _explicitNullProperties?.Remove("AssetVersions"); } }
+        private List<string> _explicitNullValueAssetVersions = default!;
 #endif
         /// <summary>A list of objects that describe the Dependencies included in the Build. Each object contains the `name` and `version` of the dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Dependencies { get; set; }
+        public string? Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dependencies"); else _explicitNullProperties?.Remove("Dependencies"); } }
+        private string? _explicitNullValueDependencies = default!;
 #nullable restore
 #else
-        public string Dependencies { get; set; }
+        public string Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dependencies"); else _explicitNullProperties?.Remove("Dependencies"); } }
+        private string _explicitNullValueDependencies = default!;
 #endif
         /// <summary>The list of the Function Version resource SIDs to include in the Build.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FunctionVersions { get; set; }
+        public List<string>? FunctionVersions { get => _explicitNullValueFunctionVersions; set { _explicitNullValueFunctionVersions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FunctionVersions"); else _explicitNullProperties?.Remove("FunctionVersions"); } }
+        private List<string>? _explicitNullValueFunctionVersions = default!;
 #nullable restore
 #else
-        public List<string> FunctionVersions { get; set; }
+        public List<string> FunctionVersions { get => _explicitNullValueFunctionVersions; set { _explicitNullValueFunctionVersions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FunctionVersions"); else _explicitNullProperties?.Remove("FunctionVersions"); } }
+        private List<string> _explicitNullValueFunctionVersions = default!;
 #endif
         /// <summary>The Runtime version that will be used to run the Build resource when it is deployed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Runtime { get; set; }
+        public string? Runtime { get => _explicitNullValueRuntime; set { _explicitNullValueRuntime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Runtime"); else _explicitNullProperties?.Remove("Runtime"); } }
+        private string? _explicitNullValueRuntime = default!;
 #nullable restore
 #else
-        public string Runtime { get; set; }
+        public string Runtime { get => _explicitNullValueRuntime; set { _explicitNullValueRuntime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Runtime"); else _explicitNullProperties?.Remove("Runtime"); } }
+        private string _explicitNullValueRuntime = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioServerlessV1CreateBuildXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioServerlessV1CreateBuildXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioServerlessV1CreateBuildXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioServerlessV1CreateBuildXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("Dependencies", Dependencies);
             writer.WriteCollectionOfPrimitiveValues<string>("FunctionVersions", FunctionVersions);
             writer.WriteStringValue("Runtime", Runtime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

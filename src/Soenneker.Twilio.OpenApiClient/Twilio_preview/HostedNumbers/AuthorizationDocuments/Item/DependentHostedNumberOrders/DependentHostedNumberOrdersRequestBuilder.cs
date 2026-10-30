@@ -49,7 +49,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_preview.HostedNumbers.Authorizat
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListHostedNumbersDependentHostedNumberOrderResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListHostedNumbersDependentHostedNumberOrderResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.ListHostedNumbersDependentHostedNumberOrderResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.ListHostedNumbersDependentHostedNumberOrderResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a list of dependent HostedNumberOrders belonging to the AuthorizationDocument.

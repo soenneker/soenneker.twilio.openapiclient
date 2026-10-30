@@ -8,42 +8,47 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ClassificationResult"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResult"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.JsonResult"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TextResult"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf1"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf2"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf3"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf4"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OperatorResultsResponseV1 : IComposedTypeWrapper, IParsable
-    {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ClassificationResult"/></summary>
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ClassificationResult? ClassificationResult { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf1? OperatorResultsResponseV1OneOf1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ClassificationResult ClassificationResult { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf1 OperatorResultsResponseV1OneOf1 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResult"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResult? ExtractionResult { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf2? OperatorResultsResponseV1OneOf2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResult ExtractionResult { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf2 OperatorResultsResponseV1OneOf2 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.JsonResult"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.JsonResult? JsonResult { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf3? OperatorResultsResponseV1OneOf3 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.JsonResult JsonResult { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf3 OperatorResultsResponseV1OneOf3 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TextResult"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf4"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.TextResult? TextResult { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf4? OperatorResultsResponseV1OneOf4 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.TextResult TextResult { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf4 OperatorResultsResponseV1OneOf4 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -53,25 +58,36 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("outputFormat")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1();
-            if("CLASSIFICATION".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("OperatorResultsResponseV1OneOf1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ClassificationResult = new global::Soenneker.Twilio.OpenApiClient.Models.ClassificationResult();
+                
             }
-            else if("EXTRACTION".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("OperatorResultsResponseV1OneOf2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ExtractionResult = new global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResult();
+                
             }
-            else if("JSON".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("OperatorResultsResponseV1OneOf3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.JsonResult = new global::Soenneker.Twilio.OpenApiClient.Models.JsonResult();
+                
             }
-            else if("TEXT".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("OperatorResultsResponseV1OneOf4".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TextResult = new global::Soenneker.Twilio.OpenApiClient.Models.TextResult();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("executionDetails") != null && parseNode.GetChildNode("operator") != null && parseNode.GetChildNode("outputFormat") != null && parseNode.GetChildNode("dateCreated") != null && parseNode.GetChildNode("referenceIds") != null && parseNode.GetChildNode("metadata") != null && parseNode.GetChildNode("result") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("accountId") != null && parseNode.GetChildNode("conversationId") != null && parseNode.GetChildNode("intelligenceConfiguration") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("executionDetails") != null && parseNode.GetChildNode("operator") != null && parseNode.GetChildNode("outputFormat") != null && parseNode.GetChildNode("dateCreated") != null && parseNode.GetChildNode("referenceIds") != null && parseNode.GetChildNode("metadata") != null && parseNode.GetChildNode("result") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("accountId") != null && parseNode.GetChildNode("conversationId") != null && parseNode.GetChildNode("intelligenceConfiguration") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("executionDetails") != null && parseNode.GetChildNode("operator") != null && parseNode.GetChildNode("outputFormat") != null && parseNode.GetChildNode("dateCreated") != null && parseNode.GetChildNode("referenceIds") != null && parseNode.GetChildNode("metadata") != null && parseNode.GetChildNode("result") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("accountId") != null && parseNode.GetChildNode("conversationId") != null && parseNode.GetChildNode("intelligenceConfiguration") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("executionDetails") != null && parseNode.GetChildNode("operator") != null && parseNode.GetChildNode("outputFormat") != null && parseNode.GetChildNode("dateCreated") != null && parseNode.GetChildNode("referenceIds") != null && parseNode.GetChildNode("metadata") != null && parseNode.GetChildNode("result") != null && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("accountId") != null && parseNode.GetChildNode("conversationId") != null && parseNode.GetChildNode("intelligenceConfiguration") != null))();
+            if (result.OperatorResultsResponseV1OneOf1 == null && result.OperatorResultsResponseV1OneOf2 == null && result.OperatorResultsResponseV1OneOf3 == null && result.OperatorResultsResponseV1OneOf4 == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3) result.OperatorResultsResponseV1OneOf1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf1(), parseNode);
+            if (result.OperatorResultsResponseV1OneOf1 == null && result.OperatorResultsResponseV1OneOf2 == null && result.OperatorResultsResponseV1OneOf3 == null && result.OperatorResultsResponseV1OneOf4 == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3) result.OperatorResultsResponseV1OneOf2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf2(), parseNode);
+            if (result.OperatorResultsResponseV1OneOf1 == null && result.OperatorResultsResponseV1OneOf2 == null && result.OperatorResultsResponseV1OneOf3 == null && result.OperatorResultsResponseV1OneOf4 == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3) result.OperatorResultsResponseV1OneOf3 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf3(), parseNode);
+            if (result.OperatorResultsResponseV1OneOf1 == null && result.OperatorResultsResponseV1OneOf2 == null && result.OperatorResultsResponseV1OneOf3 == null && result.OperatorResultsResponseV1OneOf4 == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.OperatorResultsResponseV1OneOf4 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf4(), parseNode);
+            if (result.OperatorResultsResponseV1OneOf1 == null && result.OperatorResultsResponseV1OneOf2 == null && result.OperatorResultsResponseV1OneOf3 == null && result.OperatorResultsResponseV1OneOf4 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,21 +95,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(ClassificationResult != null)
+            if(OperatorResultsResponseV1OneOf1 != null)
             {
-                return ClassificationResult.GetFieldDeserializers();
+                return OperatorResultsResponseV1OneOf1.GetFieldDeserializers();
             }
-            else if(ExtractionResult != null)
+            else if(OperatorResultsResponseV1OneOf2 != null)
             {
-                return ExtractionResult.GetFieldDeserializers();
+                return OperatorResultsResponseV1OneOf2.GetFieldDeserializers();
             }
-            else if(JsonResult != null)
+            else if(OperatorResultsResponseV1OneOf3 != null)
             {
-                return JsonResult.GetFieldDeserializers();
+                return OperatorResultsResponseV1OneOf3.GetFieldDeserializers();
             }
-            else if(TextResult != null)
+            else if(OperatorResultsResponseV1OneOf4 != null)
             {
-                return TextResult.GetFieldDeserializers();
+                return OperatorResultsResponseV1OneOf4.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -103,22 +119,33 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (OperatorResultsResponseV1OneOf1 == null && OperatorResultsResponseV1OneOf2 == null && OperatorResultsResponseV1OneOf3 == null && OperatorResultsResponseV1OneOf4 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (OperatorResultsResponseV1OneOf1 != null && OperatorResultsResponseV1OneOf2 == null && OperatorResultsResponseV1OneOf3 == null && OperatorResultsResponseV1OneOf4 == null) { if (OperatorResultsResponseV1OneOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, OperatorResultsResponseV1OneOf1); return; }
+            if (OperatorResultsResponseV1OneOf2 != null && OperatorResultsResponseV1OneOf1 == null && OperatorResultsResponseV1OneOf3 == null && OperatorResultsResponseV1OneOf4 == null) { if (OperatorResultsResponseV1OneOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, OperatorResultsResponseV1OneOf2); return; }
+            if (OperatorResultsResponseV1OneOf3 != null && OperatorResultsResponseV1OneOf1 == null && OperatorResultsResponseV1OneOf2 == null && OperatorResultsResponseV1OneOf4 == null) { if (OperatorResultsResponseV1OneOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, OperatorResultsResponseV1OneOf3); return; }
+            if (OperatorResultsResponseV1OneOf4 != null && OperatorResultsResponseV1OneOf1 == null && OperatorResultsResponseV1OneOf2 == null && OperatorResultsResponseV1OneOf3 == null) { if (OperatorResultsResponseV1OneOf4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, OperatorResultsResponseV1OneOf4); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(ClassificationResult != null)
+            if(OperatorResultsResponseV1OneOf1 != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ClassificationResult>(null, ClassificationResult);
+                if (OperatorResultsResponseV1OneOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf1>(null, OperatorResultsResponseV1OneOf1);
             }
-            else if(ExtractionResult != null)
+            else if(OperatorResultsResponseV1OneOf2 != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ExtractionResult>(null, ExtractionResult);
+                if (OperatorResultsResponseV1OneOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf2>(null, OperatorResultsResponseV1OneOf2);
             }
-            else if(JsonResult != null)
+            else if(OperatorResultsResponseV1OneOf3 != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.JsonResult>(null, JsonResult);
+                if (OperatorResultsResponseV1OneOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf3>(null, OperatorResultsResponseV1OneOf3);
             }
-            else if(TextResult != null)
+            else if(OperatorResultsResponseV1OneOf4 != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TextResult>(null, TextResult);
+                if (OperatorResultsResponseV1OneOf4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.OperatorResultsResponseV1OneOf4>(null, OperatorResultsResponseV1OneOf4);
             }
         }
     }

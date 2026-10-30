@@ -12,24 +12,37 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IdentityResolutionSettingsCore : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("identifierConfigs") is { } nullNodeIdentifierConfigs && nullNodeIdentifierConfigs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentifierConfigs = null;
+            if (parseNode.GetChildNode("matchingRules") is { } nullNodeMatchingRules && nullNodeMatchingRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchingRules = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of identifier types and their resolution settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig>? IdentifierConfigs { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig>? IdentifierConfigs { get => _explicitNullValueIdentifierConfigs; set { _explicitNullValueIdentifierConfigs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifierConfigs"); else _explicitNullProperties?.Remove("identifierConfigs"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig>? _explicitNullValueIdentifierConfigs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig> IdentifierConfigs { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig> IdentifierConfigs { get => _explicitNullValueIdentifierConfigs; set { _explicitNullValueIdentifierConfigs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifierConfigs"); else _explicitNullProperties?.Remove("identifierConfigs"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig> _explicitNullValueIdentifierConfigs = default!;
 #endif
         /// <summary>Priority list of identifiers to locate profiles to apply new data to, or for determining if two existing profiles should merge. Individual rules are evaluated with `OR` logic between them, meaning that satisfying any single rule will trigger a match. Each rule is a single identifier type; compound rules are not supported.Rules are evaluated in order.- If no rule matches against existing profiles, a new profile will be created. - If a rule matches to a single existing profile, the profile will be updated. - If a rule matches to multiple existing profiles, those existing profiles will be merged.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MatchingRules { get; set; }
+        public List<string>? MatchingRules { get => _explicitNullValueMatchingRules; set { _explicitNullValueMatchingRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchingRules"); else _explicitNullProperties?.Remove("matchingRules"); } }
+        private List<string>? _explicitNullValueMatchingRules = default!;
 #nullable restore
 #else
-        public List<string> MatchingRules { get; set; }
+        public List<string> MatchingRules { get => _explicitNullValueMatchingRules; set { _explicitNullValueMatchingRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchingRules"); else _explicitNullProperties?.Remove("matchingRules"); } }
+        private List<string> _explicitNullValueMatchingRules = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.IdentityResolutionSettingsCore"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.IdentityResolutionSettingsCore CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.IdentityResolutionSettingsCore();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.IdentityResolutionSettingsCore(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.IdentifierConfig>("identifierConfigs", IdentifierConfigs);
             writer.WriteCollectionOfPrimitiveValues<string>("matchingRules", MatchingRules);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

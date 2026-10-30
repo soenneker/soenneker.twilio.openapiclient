@@ -11,45 +11,68 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioTaskrouterV1CreateTaskQueueXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AssignmentActivitySid") is { } nullNodeAssignmentActivitySid && nullNodeAssignmentActivitySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignmentActivitySid = null;
+            if (parseNode.GetChildNode("FriendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("MaxReservedWorkers") is { } nullNodeMaxReservedWorkers && nullNodeMaxReservedWorkers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxReservedWorkers = null;
+            if (parseNode.GetChildNode("ReservationActivitySid") is { } nullNodeReservationActivitySid && nullNodeReservationActivitySid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReservationActivitySid = null;
+            if (parseNode.GetChildNode("TargetWorkers") is { } nullNodeTargetWorkers && nullNodeTargetWorkers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetWorkers = null;
+            if (parseNode.GetChildNode("TaskOrder") is { } nullNodeTaskOrder && nullNodeTaskOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskOrder = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The SID of the Activity to assign Workers when a task is assigned to them.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssignmentActivitySid { get; set; }
+        public string? AssignmentActivitySid { get => _explicitNullValueAssignmentActivitySid; set { _explicitNullValueAssignmentActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssignmentActivitySid"); else _explicitNullProperties?.Remove("AssignmentActivitySid"); } }
+        private string? _explicitNullValueAssignmentActivitySid = default!;
 #nullable restore
 #else
-        public string AssignmentActivitySid { get; set; }
+        public string AssignmentActivitySid { get => _explicitNullValueAssignmentActivitySid; set { _explicitNullValueAssignmentActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AssignmentActivitySid"); else _explicitNullProperties?.Remove("AssignmentActivitySid"); } }
+        private string _explicitNullValueAssignmentActivitySid = default!;
 #endif
         /// <summary>A descriptive string that you create to describe the TaskQueue. For example `Support-Tier 1`, `Sales`, or `Escalation`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FriendlyName"); else _explicitNullProperties?.Remove("FriendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>The maximum number of Workers to reserve for the assignment of a Task in the queue. Can be an integer between 1 and 50, inclusive and defaults to 1.</summary>
-        public int? MaxReservedWorkers { get; set; }
+        public int? MaxReservedWorkers { get => _explicitNullValueMaxReservedWorkers; set { _explicitNullValueMaxReservedWorkers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaxReservedWorkers"); else _explicitNullProperties?.Remove("MaxReservedWorkers"); } }
+        private int? _explicitNullValueMaxReservedWorkers = default!;
         /// <summary>The SID of the Activity to assign Workers when a task is reserved for them.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReservationActivitySid { get; set; }
+        public string? ReservationActivitySid { get => _explicitNullValueReservationActivitySid; set { _explicitNullValueReservationActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReservationActivitySid"); else _explicitNullProperties?.Remove("ReservationActivitySid"); } }
+        private string? _explicitNullValueReservationActivitySid = default!;
 #nullable restore
 #else
-        public string ReservationActivitySid { get; set; }
+        public string ReservationActivitySid { get => _explicitNullValueReservationActivitySid; set { _explicitNullValueReservationActivitySid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReservationActivitySid"); else _explicitNullProperties?.Remove("ReservationActivitySid"); } }
+        private string _explicitNullValueReservationActivitySid = default!;
 #endif
         /// <summary>A string that describes the Worker selection criteria for any Tasks that enter the TaskQueue. For example, `&apos;&quot;language&quot; == &quot;spanish&quot;&apos;`. The default value is `1==1`. If this value is empty, Tasks will wait in the TaskQueue until they are deleted or moved to another TaskQueue. For more information about Worker selection, see [Describing Worker selection criteria](https://www.twilio.com/docs/taskrouter/api/taskqueues#target-workers).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetWorkers { get; set; }
+        public string? TargetWorkers { get => _explicitNullValueTargetWorkers; set { _explicitNullValueTargetWorkers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TargetWorkers"); else _explicitNullProperties?.Remove("TargetWorkers"); } }
+        private string? _explicitNullValueTargetWorkers = default!;
 #nullable restore
 #else
-        public string TargetWorkers { get; set; }
+        public string TargetWorkers { get => _explicitNullValueTargetWorkers; set { _explicitNullValueTargetWorkers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TargetWorkers"); else _explicitNullProperties?.Remove("TargetWorkers"); } }
+        private string _explicitNullValueTargetWorkers = default!;
 #endif
         /// <summary>How Tasks will be assigned to Workers. Set this parameter to `LIFO` to assign most recently created Task first or `FIFO` to assign the oldest Task. Default is FIFO. [Click here](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo) to learn more.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TaskQueueEnumTaskOrder? TaskOrder { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TaskQueueEnumTaskOrder? TaskOrder { get => _explicitNullValueTaskOrder; set { _explicitNullValueTaskOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaskOrder"); else _explicitNullProperties?.Remove("TaskOrder"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TaskQueueEnumTaskOrder? _explicitNullValueTaskOrder = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1CreateTaskQueueXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -65,7 +88,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1CreateTaskQueueXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1CreateTaskQueueXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1CreateTaskQueueXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("ReservationActivitySid", ReservationActivitySid);
             writer.WriteStringValue("TargetWorkers", TargetWorkers);
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TaskQueueEnumTaskOrder>("TaskOrder", TaskOrder);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

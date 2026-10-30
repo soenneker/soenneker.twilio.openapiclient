@@ -74,6 +74,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_trusthub_v1.V1.A2PCampaignRegist
                 { "401", global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1CreateA2PCampaignRegistration401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1CreateA2PCampaignRegistration403Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioTrusthubV1CreateA2PCampaignRegistration500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1A2PEmbeddedSession>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.TrusthubV1A2PEmbeddedSession.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

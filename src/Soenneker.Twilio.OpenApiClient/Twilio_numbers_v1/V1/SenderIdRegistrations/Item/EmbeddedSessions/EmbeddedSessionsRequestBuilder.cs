@@ -61,6 +61,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
                 { "404", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession404Response.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession409Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistrationEmbeddedSession500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedSessionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

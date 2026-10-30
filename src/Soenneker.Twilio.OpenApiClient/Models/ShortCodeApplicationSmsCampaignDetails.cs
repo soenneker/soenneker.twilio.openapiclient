@@ -12,138 +12,195 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShortCodeApplicationSmsCampaignDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("avg_monthly_messages_received_from_subscribers") is { } nullNodeAvgMonthlyMessagesReceivedFromSubscribers && nullNodeAvgMonthlyMessagesReceivedFromSubscribers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvgMonthlyMessagesReceivedFromSubscribers = null;
+            if (parseNode.GetChildNode("avg_monthly_messages_sent_to_each_subscriber") is { } nullNodeAvgMonthlyMessagesSentToEachSubscriber && nullNodeAvgMonthlyMessagesSentToEachSubscriber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvgMonthlyMessagesSentToEachSubscriber = null;
+            if (parseNode.GetChildNode("campaign_brand_website") is { } nullNodeCampaignBrandWebsite && nullNodeCampaignBrandWebsite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignBrandWebsite = null;
+            if (parseNode.GetChildNode("campaign_frequency") is { } nullNodeCampaignFrequency && nullNodeCampaignFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignFrequency = null;
+            if (parseNode.GetChildNode("campaign_name") is { } nullNodeCampaignName && nullNodeCampaignName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignName = null;
+            if (parseNode.GetChildNode("customer_care_channel") is { } nullNodeCustomerCareChannel && nullNodeCustomerCareChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerCareChannel = null;
+            if (parseNode.GetChildNode("customer_care_value") is { } nullNodeCustomerCareValue && nullNodeCustomerCareValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerCareValue = null;
+            if (parseNode.GetChildNode("duration_of_the_campaign") is { } nullNodeDurationOfTheCampaign && nullNodeDurationOfTheCampaign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationOfTheCampaign = null;
+            if (parseNode.GetChildNode("estimated_total_subscribers") is { } nullNodeEstimatedTotalSubscribers && nullNodeEstimatedTotalSubscribers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimatedTotalSubscribers = null;
+            if (parseNode.GetChildNode("expected_traffic_start_date") is { } nullNodeExpectedTrafficStartDate && nullNodeExpectedTrafficStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedTrafficStartDate = null;
+            if (parseNode.GetChildNode("monthly_inbound_volume_expected") is { } nullNodeMonthlyInboundVolumeExpected && nullNodeMonthlyInboundVolumeExpected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyInboundVolumeExpected = null;
+            if (parseNode.GetChildNode("monthly_outbound_volume_expected") is { } nullNodeMonthlyOutboundVolumeExpected && nullNodeMonthlyOutboundVolumeExpected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyOutboundVolumeExpected = null;
+            if (parseNode.GetChildNode("planned_traffic_spikes") is { } nullNodePlannedTrafficSpikes && nullNodePlannedTrafficSpikes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlannedTrafficSpikes = null;
+            if (parseNode.GetChildNode("sc_use_case_categories") is { } nullNodeScUseCaseCategories && nullNodeScUseCaseCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScUseCaseCategories = null;
+            if (parseNode.GetChildNode("sms_privacy_policy_url") is { } nullNodeSmsPrivacyPolicyUrl && nullNodeSmsPrivacyPolicyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsPrivacyPolicyUrl = null;
+            if (parseNode.GetChildNode("sms_terms_of_service_url") is { } nullNodeSmsTermsOfServiceUrl && nullNodeSmsTermsOfServiceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsTermsOfServiceUrl = null;
+            if (parseNode.GetChildNode("spike_details") is { } nullNodeSpikeDetails && nullNodeSpikeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpikeDetails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The avg_monthly_messages_received_from_subscribers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvgMonthlyMessagesReceivedFromSubscribers { get; set; }
+        public string? AvgMonthlyMessagesReceivedFromSubscribers { get => _explicitNullValueAvgMonthlyMessagesReceivedFromSubscribers; set { _explicitNullValueAvgMonthlyMessagesReceivedFromSubscribers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avg_monthly_messages_received_from_subscribers"); else _explicitNullProperties?.Remove("avg_monthly_messages_received_from_subscribers"); } }
+        private string? _explicitNullValueAvgMonthlyMessagesReceivedFromSubscribers = default!;
 #nullable restore
 #else
-        public string AvgMonthlyMessagesReceivedFromSubscribers { get; set; }
+        public string AvgMonthlyMessagesReceivedFromSubscribers { get => _explicitNullValueAvgMonthlyMessagesReceivedFromSubscribers; set { _explicitNullValueAvgMonthlyMessagesReceivedFromSubscribers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avg_monthly_messages_received_from_subscribers"); else _explicitNullProperties?.Remove("avg_monthly_messages_received_from_subscribers"); } }
+        private string _explicitNullValueAvgMonthlyMessagesReceivedFromSubscribers = default!;
 #endif
         /// <summary>The avg_monthly_messages_sent_to_each_subscriber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvgMonthlyMessagesSentToEachSubscriber { get; set; }
+        public string? AvgMonthlyMessagesSentToEachSubscriber { get => _explicitNullValueAvgMonthlyMessagesSentToEachSubscriber; set { _explicitNullValueAvgMonthlyMessagesSentToEachSubscriber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avg_monthly_messages_sent_to_each_subscriber"); else _explicitNullProperties?.Remove("avg_monthly_messages_sent_to_each_subscriber"); } }
+        private string? _explicitNullValueAvgMonthlyMessagesSentToEachSubscriber = default!;
 #nullable restore
 #else
-        public string AvgMonthlyMessagesSentToEachSubscriber { get; set; }
+        public string AvgMonthlyMessagesSentToEachSubscriber { get => _explicitNullValueAvgMonthlyMessagesSentToEachSubscriber; set { _explicitNullValueAvgMonthlyMessagesSentToEachSubscriber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avg_monthly_messages_sent_to_each_subscriber"); else _explicitNullProperties?.Remove("avg_monthly_messages_sent_to_each_subscriber"); } }
+        private string _explicitNullValueAvgMonthlyMessagesSentToEachSubscriber = default!;
 #endif
         /// <summary>The campaign_brand_website property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CampaignBrandWebsite { get; set; }
+        public string? CampaignBrandWebsite { get => _explicitNullValueCampaignBrandWebsite; set { _explicitNullValueCampaignBrandWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_brand_website"); else _explicitNullProperties?.Remove("campaign_brand_website"); } }
+        private string? _explicitNullValueCampaignBrandWebsite = default!;
 #nullable restore
 #else
-        public string CampaignBrandWebsite { get; set; }
+        public string CampaignBrandWebsite { get => _explicitNullValueCampaignBrandWebsite; set { _explicitNullValueCampaignBrandWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_brand_website"); else _explicitNullProperties?.Remove("campaign_brand_website"); } }
+        private string _explicitNullValueCampaignBrandWebsite = default!;
 #endif
         /// <summary>The campaign_frequency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCampaignFrequencyItem?>? CampaignFrequency { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCampaignFrequencyItem?>? CampaignFrequency { get => _explicitNullValueCampaignFrequency; set { _explicitNullValueCampaignFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_frequency"); else _explicitNullProperties?.Remove("campaign_frequency"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCampaignFrequencyItem?>? _explicitNullValueCampaignFrequency = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCampaignFrequencyItem?> CampaignFrequency { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCampaignFrequencyItem?> CampaignFrequency { get => _explicitNullValueCampaignFrequency; set { _explicitNullValueCampaignFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_frequency"); else _explicitNullProperties?.Remove("campaign_frequency"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCampaignFrequencyItem?> _explicitNullValueCampaignFrequency = default!;
 #endif
         /// <summary>The campaign_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CampaignName { get; set; }
+        public string? CampaignName { get => _explicitNullValueCampaignName; set { _explicitNullValueCampaignName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_name"); else _explicitNullProperties?.Remove("campaign_name"); } }
+        private string? _explicitNullValueCampaignName = default!;
 #nullable restore
 #else
-        public string CampaignName { get; set; }
+        public string CampaignName { get => _explicitNullValueCampaignName; set { _explicitNullValueCampaignName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_name"); else _explicitNullProperties?.Remove("campaign_name"); } }
+        private string _explicitNullValueCampaignName = default!;
 #endif
         /// <summary>The customer_care_channel property</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCustomerCareChannel? CustomerCareChannel { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCustomerCareChannel? CustomerCareChannel { get => _explicitNullValueCustomerCareChannel; set { _explicitNullValueCustomerCareChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_care_channel"); else _explicitNullProperties?.Remove("customer_care_channel"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsCustomerCareChannel? _explicitNullValueCustomerCareChannel = default!;
         /// <summary>The customer_care_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerCareValue { get; set; }
+        public string? CustomerCareValue { get => _explicitNullValueCustomerCareValue; set { _explicitNullValueCustomerCareValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_care_value"); else _explicitNullProperties?.Remove("customer_care_value"); } }
+        private string? _explicitNullValueCustomerCareValue = default!;
 #nullable restore
 #else
-        public string CustomerCareValue { get; set; }
+        public string CustomerCareValue { get => _explicitNullValueCustomerCareValue; set { _explicitNullValueCustomerCareValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_care_value"); else _explicitNullProperties?.Remove("customer_care_value"); } }
+        private string _explicitNullValueCustomerCareValue = default!;
 #endif
         /// <summary>The duration_of_the_campaign property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DurationOfTheCampaign { get; set; }
+        public string? DurationOfTheCampaign { get => _explicitNullValueDurationOfTheCampaign; set { _explicitNullValueDurationOfTheCampaign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_of_the_campaign"); else _explicitNullProperties?.Remove("duration_of_the_campaign"); } }
+        private string? _explicitNullValueDurationOfTheCampaign = default!;
 #nullable restore
 #else
-        public string DurationOfTheCampaign { get; set; }
+        public string DurationOfTheCampaign { get => _explicitNullValueDurationOfTheCampaign; set { _explicitNullValueDurationOfTheCampaign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_of_the_campaign"); else _explicitNullProperties?.Remove("duration_of_the_campaign"); } }
+        private string _explicitNullValueDurationOfTheCampaign = default!;
 #endif
         /// <summary>The estimated_total_subscribers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EstimatedTotalSubscribers { get; set; }
+        public string? EstimatedTotalSubscribers { get => _explicitNullValueEstimatedTotalSubscribers; set { _explicitNullValueEstimatedTotalSubscribers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimated_total_subscribers"); else _explicitNullProperties?.Remove("estimated_total_subscribers"); } }
+        private string? _explicitNullValueEstimatedTotalSubscribers = default!;
 #nullable restore
 #else
-        public string EstimatedTotalSubscribers { get; set; }
+        public string EstimatedTotalSubscribers { get => _explicitNullValueEstimatedTotalSubscribers; set { _explicitNullValueEstimatedTotalSubscribers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimated_total_subscribers"); else _explicitNullProperties?.Remove("estimated_total_subscribers"); } }
+        private string _explicitNullValueEstimatedTotalSubscribers = default!;
 #endif
         /// <summary>The expected_traffic_start_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExpectedTrafficStartDate { get; set; }
+        public string? ExpectedTrafficStartDate { get => _explicitNullValueExpectedTrafficStartDate; set { _explicitNullValueExpectedTrafficStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_traffic_start_date"); else _explicitNullProperties?.Remove("expected_traffic_start_date"); } }
+        private string? _explicitNullValueExpectedTrafficStartDate = default!;
 #nullable restore
 #else
-        public string ExpectedTrafficStartDate { get; set; }
+        public string ExpectedTrafficStartDate { get => _explicitNullValueExpectedTrafficStartDate; set { _explicitNullValueExpectedTrafficStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expected_traffic_start_date"); else _explicitNullProperties?.Remove("expected_traffic_start_date"); } }
+        private string _explicitNullValueExpectedTrafficStartDate = default!;
 #endif
         /// <summary>The monthly_inbound_volume_expected property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MonthlyInboundVolumeExpected { get; set; }
+        public string? MonthlyInboundVolumeExpected { get => _explicitNullValueMonthlyInboundVolumeExpected; set { _explicitNullValueMonthlyInboundVolumeExpected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_inbound_volume_expected"); else _explicitNullProperties?.Remove("monthly_inbound_volume_expected"); } }
+        private string? _explicitNullValueMonthlyInboundVolumeExpected = default!;
 #nullable restore
 #else
-        public string MonthlyInboundVolumeExpected { get; set; }
+        public string MonthlyInboundVolumeExpected { get => _explicitNullValueMonthlyInboundVolumeExpected; set { _explicitNullValueMonthlyInboundVolumeExpected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_inbound_volume_expected"); else _explicitNullProperties?.Remove("monthly_inbound_volume_expected"); } }
+        private string _explicitNullValueMonthlyInboundVolumeExpected = default!;
 #endif
         /// <summary>The monthly_outbound_volume_expected property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MonthlyOutboundVolumeExpected { get; set; }
+        public string? MonthlyOutboundVolumeExpected { get => _explicitNullValueMonthlyOutboundVolumeExpected; set { _explicitNullValueMonthlyOutboundVolumeExpected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_outbound_volume_expected"); else _explicitNullProperties?.Remove("monthly_outbound_volume_expected"); } }
+        private string? _explicitNullValueMonthlyOutboundVolumeExpected = default!;
 #nullable restore
 #else
-        public string MonthlyOutboundVolumeExpected { get; set; }
+        public string MonthlyOutboundVolumeExpected { get => _explicitNullValueMonthlyOutboundVolumeExpected; set { _explicitNullValueMonthlyOutboundVolumeExpected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_outbound_volume_expected"); else _explicitNullProperties?.Remove("monthly_outbound_volume_expected"); } }
+        private string _explicitNullValueMonthlyOutboundVolumeExpected = default!;
 #endif
         /// <summary>The planned_traffic_spikes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlannedTrafficSpikes { get; set; }
+        public string? PlannedTrafficSpikes { get => _explicitNullValuePlannedTrafficSpikes; set { _explicitNullValuePlannedTrafficSpikes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("planned_traffic_spikes"); else _explicitNullProperties?.Remove("planned_traffic_spikes"); } }
+        private string? _explicitNullValuePlannedTrafficSpikes = default!;
 #nullable restore
 #else
-        public string PlannedTrafficSpikes { get; set; }
+        public string PlannedTrafficSpikes { get => _explicitNullValuePlannedTrafficSpikes; set { _explicitNullValuePlannedTrafficSpikes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("planned_traffic_spikes"); else _explicitNullProperties?.Remove("planned_traffic_spikes"); } }
+        private string _explicitNullValuePlannedTrafficSpikes = default!;
 #endif
         /// <summary>The sc_use_case_categories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsScUseCaseCategoriesItem?>? ScUseCaseCategories { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsScUseCaseCategoriesItem?>? ScUseCaseCategories { get => _explicitNullValueScUseCaseCategories; set { _explicitNullValueScUseCaseCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sc_use_case_categories"); else _explicitNullProperties?.Remove("sc_use_case_categories"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsScUseCaseCategoriesItem?>? _explicitNullValueScUseCaseCategories = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsScUseCaseCategoriesItem?> ScUseCaseCategories { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsScUseCaseCategoriesItem?> ScUseCaseCategories { get => _explicitNullValueScUseCaseCategories; set { _explicitNullValueScUseCaseCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sc_use_case_categories"); else _explicitNullProperties?.Remove("sc_use_case_categories"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetailsScUseCaseCategoriesItem?> _explicitNullValueScUseCaseCategories = default!;
 #endif
         /// <summary>The sms_privacy_policy_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmsPrivacyPolicyUrl { get; set; }
+        public string? SmsPrivacyPolicyUrl { get => _explicitNullValueSmsPrivacyPolicyUrl; set { _explicitNullValueSmsPrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_privacy_policy_url"); else _explicitNullProperties?.Remove("sms_privacy_policy_url"); } }
+        private string? _explicitNullValueSmsPrivacyPolicyUrl = default!;
 #nullable restore
 #else
-        public string SmsPrivacyPolicyUrl { get; set; }
+        public string SmsPrivacyPolicyUrl { get => _explicitNullValueSmsPrivacyPolicyUrl; set { _explicitNullValueSmsPrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_privacy_policy_url"); else _explicitNullProperties?.Remove("sms_privacy_policy_url"); } }
+        private string _explicitNullValueSmsPrivacyPolicyUrl = default!;
 #endif
         /// <summary>The sms_terms_of_service_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmsTermsOfServiceUrl { get; set; }
+        public string? SmsTermsOfServiceUrl { get => _explicitNullValueSmsTermsOfServiceUrl; set { _explicitNullValueSmsTermsOfServiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_terms_of_service_url"); else _explicitNullProperties?.Remove("sms_terms_of_service_url"); } }
+        private string? _explicitNullValueSmsTermsOfServiceUrl = default!;
 #nullable restore
 #else
-        public string SmsTermsOfServiceUrl { get; set; }
+        public string SmsTermsOfServiceUrl { get => _explicitNullValueSmsTermsOfServiceUrl; set { _explicitNullValueSmsTermsOfServiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_terms_of_service_url"); else _explicitNullProperties?.Remove("sms_terms_of_service_url"); } }
+        private string _explicitNullValueSmsTermsOfServiceUrl = default!;
 #endif
         /// <summary>The spike_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpikeDetails { get; set; }
+        public string? SpikeDetails { get => _explicitNullValueSpikeDetails; set { _explicitNullValueSpikeDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spike_details"); else _explicitNullProperties?.Remove("spike_details"); } }
+        private string? _explicitNullValueSpikeDetails = default!;
 #nullable restore
 #else
-        public string SpikeDetails { get; set; }
+        public string SpikeDetails { get => _explicitNullValueSpikeDetails; set { _explicitNullValueSpikeDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spike_details"); else _explicitNullProperties?.Remove("spike_details"); } }
+        private string _explicitNullValueSpikeDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails"/> and sets the default values.
@@ -160,7 +217,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.ShortCodeApplicationSmsCampaignDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -213,6 +270,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("sms_privacy_policy_url", SmsPrivacyPolicyUrl);
             writer.WriteStringValue("sms_terms_of_service_url", SmsTermsOfServiceUrl);
             writer.WriteStringValue("spike_details", SpikeDetails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

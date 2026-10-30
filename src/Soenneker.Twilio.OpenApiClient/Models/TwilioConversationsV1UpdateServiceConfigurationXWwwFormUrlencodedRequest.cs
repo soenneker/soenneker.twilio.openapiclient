@@ -11,35 +11,53 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioConversationsV1UpdateServiceConfigurationXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DefaultChatServiceRoleSid") is { } nullNodeDefaultChatServiceRoleSid && nullNodeDefaultChatServiceRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultChatServiceRoleSid = null;
+            if (parseNode.GetChildNode("DefaultConversationCreatorRoleSid") is { } nullNodeDefaultConversationCreatorRoleSid && nullNodeDefaultConversationCreatorRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultConversationCreatorRoleSid = null;
+            if (parseNode.GetChildNode("DefaultConversationRoleSid") is { } nullNodeDefaultConversationRoleSid && nullNodeDefaultConversationRoleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultConversationRoleSid = null;
+            if (parseNode.GetChildNode("ReachabilityEnabled") is { } nullNodeReachabilityEnabled && nullNodeReachabilityEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReachabilityEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The service-level role assigned to users when they are added to the service. See [Conversation Role](https://www.twilio.com/docs/conversations/api/role-resource) for more info about roles.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultChatServiceRoleSid { get; set; }
+        public string? DefaultChatServiceRoleSid { get => _explicitNullValueDefaultChatServiceRoleSid; set { _explicitNullValueDefaultChatServiceRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChatServiceRoleSid"); else _explicitNullProperties?.Remove("DefaultChatServiceRoleSid"); } }
+        private string? _explicitNullValueDefaultChatServiceRoleSid = default!;
 #nullable restore
 #else
-        public string DefaultChatServiceRoleSid { get; set; }
+        public string DefaultChatServiceRoleSid { get => _explicitNullValueDefaultChatServiceRoleSid; set { _explicitNullValueDefaultChatServiceRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultChatServiceRoleSid"); else _explicitNullProperties?.Remove("DefaultChatServiceRoleSid"); } }
+        private string _explicitNullValueDefaultChatServiceRoleSid = default!;
 #endif
         /// <summary>The conversation-level role assigned to a conversation creator when they join a new conversation. See [Conversation Role](https://www.twilio.com/docs/conversations/api/role-resource) for more info about roles.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultConversationCreatorRoleSid { get; set; }
+        public string? DefaultConversationCreatorRoleSid { get => _explicitNullValueDefaultConversationCreatorRoleSid; set { _explicitNullValueDefaultConversationCreatorRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultConversationCreatorRoleSid"); else _explicitNullProperties?.Remove("DefaultConversationCreatorRoleSid"); } }
+        private string? _explicitNullValueDefaultConversationCreatorRoleSid = default!;
 #nullable restore
 #else
-        public string DefaultConversationCreatorRoleSid { get; set; }
+        public string DefaultConversationCreatorRoleSid { get => _explicitNullValueDefaultConversationCreatorRoleSid; set { _explicitNullValueDefaultConversationCreatorRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultConversationCreatorRoleSid"); else _explicitNullProperties?.Remove("DefaultConversationCreatorRoleSid"); } }
+        private string _explicitNullValueDefaultConversationCreatorRoleSid = default!;
 #endif
         /// <summary>The conversation-level role assigned to users when they are added to a conversation. See [Conversation Role](https://www.twilio.com/docs/conversations/api/role-resource) for more info about roles.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultConversationRoleSid { get; set; }
+        public string? DefaultConversationRoleSid { get => _explicitNullValueDefaultConversationRoleSid; set { _explicitNullValueDefaultConversationRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultConversationRoleSid"); else _explicitNullProperties?.Remove("DefaultConversationRoleSid"); } }
+        private string? _explicitNullValueDefaultConversationRoleSid = default!;
 #nullable restore
 #else
-        public string DefaultConversationRoleSid { get; set; }
+        public string DefaultConversationRoleSid { get => _explicitNullValueDefaultConversationRoleSid; set { _explicitNullValueDefaultConversationRoleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultConversationRoleSid"); else _explicitNullProperties?.Remove("DefaultConversationRoleSid"); } }
+        private string _explicitNullValueDefaultConversationRoleSid = default!;
 #endif
         /// <summary>Whether the [Reachability Indicator](https://www.twilio.com/docs/conversations/reachability) is enabled for this Conversations Service. The default is `false`.</summary>
-        public bool? ReachabilityEnabled { get; set; }
+        public bool? ReachabilityEnabled { get => _explicitNullValueReachabilityEnabled; set { _explicitNullValueReachabilityEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReachabilityEnabled"); else _explicitNullProperties?.Remove("ReachabilityEnabled"); } }
+        private bool? _explicitNullValueReachabilityEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1UpdateServiceConfigurationXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1UpdateServiceConfigurationXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1UpdateServiceConfigurationXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV1UpdateServiceConfigurationXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("DefaultConversationCreatorRoleSid", DefaultConversationCreatorRoleSid);
             writer.WriteStringValue("DefaultConversationRoleSid", DefaultConversationRoleSid);
             writer.WriteBoolValue("ReachabilityEnabled", ReachabilityEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

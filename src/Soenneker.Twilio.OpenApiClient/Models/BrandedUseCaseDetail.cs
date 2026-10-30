@@ -12,26 +12,46 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BrandedUseCaseDetail : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("answer_rate") is { } nullNodeAnswerRate && nullNodeAnswerRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnswerRate = null;
+            if (parseNode.GetChildNode("enabled_phonenumbers") is { } nullNodeEnabledPhonenumbers && nullNodeEnabledPhonenumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledPhonenumbers = null;
+            if (parseNode.GetChildNode("engagement_rate") is { } nullNodeEngagementRate && nullNodeEngagementRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EngagementRate = null;
+            if (parseNode.GetChildNode("human_answer_rate") is { } nullNodeHumanAnswerRate && nullNodeHumanAnswerRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanAnswerRate = null;
+            if (parseNode.GetChildNode("total_calls") is { } nullNodeTotalCalls && nullNodeTotalCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCalls = null;
+            if (parseNode.GetChildNode("use_case") is { } nullNodeUseCase && nullNodeUseCase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseCase = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Answer rate per each use case for Branded bundled calls.</summary>
-        public float? AnswerRate { get; set; }
+        public float? AnswerRate { get => _explicitNullValueAnswerRate; set { _explicitNullValueAnswerRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer_rate"); else _explicitNullProperties?.Remove("answer_rate"); } }
+        private float? _explicitNullValueAnswerRate = default!;
         /// <summary>The number of phone numbers enabled Branded calls.</summary>
-        public int? EnabledPhonenumbers { get; set; }
+        public int? EnabledPhonenumbers { get => _explicitNullValueEnabledPhonenumbers; set { _explicitNullValueEnabledPhonenumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_phonenumbers"); else _explicitNullProperties?.Remove("enabled_phonenumbers"); } }
+        private int? _explicitNullValueEnabledPhonenumbers = default!;
         /// <summary>Engagement Rate for Branded bundled calls where its call length is longer than 60 seconds per each use case for Branded bundled calls.</summary>
-        public float? EngagementRate { get; set; }
+        public float? EngagementRate { get => _explicitNullValueEngagementRate; set { _explicitNullValueEngagementRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagement_rate"); else _explicitNullProperties?.Remove("engagement_rate"); } }
+        private float? _explicitNullValueEngagementRate = default!;
         /// <summary>Rate of Branded bundled calls that were answered by Human per each use case for Branded bundled calls.</summary>
-        public float? HumanAnswerRate { get; set; }
+        public float? HumanAnswerRate { get => _explicitNullValueHumanAnswerRate; set { _explicitNullValueHumanAnswerRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_answer_rate"); else _explicitNullProperties?.Remove("human_answer_rate"); } }
+        private float? _explicitNullValueHumanAnswerRate = default!;
         /// <summary>The number of total outbound calls for the use case.</summary>
-        public int? TotalCalls { get; set; }
+        public int? TotalCalls { get => _explicitNullValueTotalCalls; set { _explicitNullValueTotalCalls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_calls"); else _explicitNullProperties?.Remove("total_calls"); } }
+        private int? _explicitNullValueTotalCalls = default!;
         /// <summary>The name of supported use case for Branded calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UseCase { get; set; }
+        public string? UseCase { get => _explicitNullValueUseCase; set { _explicitNullValueUseCase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_case"); else _explicitNullProperties?.Remove("use_case"); } }
+        private string? _explicitNullValueUseCase = default!;
 #nullable restore
 #else
-        public string UseCase { get; set; }
+        public string UseCase { get => _explicitNullValueUseCase; set { _explicitNullValueUseCase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_case"); else _explicitNullProperties?.Remove("use_case"); } }
+        private string _explicitNullValueUseCase = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.BrandedUseCaseDetail"/> and sets the default values.
@@ -48,7 +68,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.BrandedUseCaseDetail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.BrandedUseCaseDetail();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.BrandedUseCaseDetail(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +99,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteFloatValue("human_answer_rate", HumanAnswerRate);
             writer.WriteIntValue("total_calls", TotalCalls);
             writer.WriteStringValue("use_case", UseCase);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,122 +11,183 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MessagingV1BrandRegistrations : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("a2p_profile_bundle_sid") is { } nullNodeA2pProfileBundleSid && nullNodeA2pProfileBundleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) A2pProfileBundleSid = null;
+            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("brand_feedback") is { } nullNodeBrandFeedback && nullNodeBrandFeedback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandFeedback = null;
+            if (parseNode.GetChildNode("brand_score") is { } nullNodeBrandScore && nullNodeBrandScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandScore = null;
+            if (parseNode.GetChildNode("brand_type") is { } nullNodeBrandType && nullNodeBrandType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandType = null;
+            if (parseNode.GetChildNode("customer_profile_bundle_sid") is { } nullNodeCustomerProfileBundleSid && nullNodeCustomerProfileBundleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerProfileBundleSid = null;
+            if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("date_updated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
+            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("failure_reason") is { } nullNodeFailureReason && nullNodeFailureReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureReason = null;
+            if (parseNode.GetChildNode("government_entity") is { } nullNodeGovernmentEntity && nullNodeGovernmentEntity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GovernmentEntity = null;
+            if (parseNode.GetChildNode("identity_status") is { } nullNodeIdentityStatus && nullNodeIdentityStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentityStatus = null;
+            if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("mock") is { } nullNodeMock && nullNodeMock.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mock = null;
+            if (parseNode.GetChildNode("russell_3000") is { } nullNodeRussell3000 && nullNodeRussell3000.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Russell3000 = null;
+            if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
+            if (parseNode.GetChildNode("skip_automatic_sec_vet") is { } nullNodeSkipAutomaticSecVet && nullNodeSkipAutomaticSecVet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipAutomaticSecVet = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("tax_exempt_status") is { } nullNodeTaxExemptStatus && nullNodeTaxExemptStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxExemptStatus = null;
+            if (parseNode.GetChildNode("tcr_id") is { } nullNodeTcrId && nullNodeTcrId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TcrId = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>A2P Messaging Profile Bundle BundleSid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? A2pProfileBundleSid { get; set; }
+        public string? A2pProfileBundleSid { get => _explicitNullValueA2pProfileBundleSid; set { _explicitNullValueA2pProfileBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("a2p_profile_bundle_sid"); else _explicitNullProperties?.Remove("a2p_profile_bundle_sid"); } }
+        private string? _explicitNullValueA2pProfileBundleSid = default!;
 #nullable restore
 #else
-        public string A2pProfileBundleSid { get; set; }
+        public string A2pProfileBundleSid { get => _explicitNullValueA2pProfileBundleSid; set { _explicitNullValueA2pProfileBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("a2p_profile_bundle_sid"); else _explicitNullProperties?.Remove("a2p_profile_bundle_sid"); } }
+        private string _explicitNullValueA2pProfileBundleSid = default!;
 #endif
         /// <summary>The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Brand Registration resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get; set; }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get; set; }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>DEPRECATED. Feedback on how to improve brand score</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumBrandFeedback?>? BrandFeedback { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumBrandFeedback?>? BrandFeedback { get => _explicitNullValueBrandFeedback; set { _explicitNullValueBrandFeedback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_feedback"); else _explicitNullProperties?.Remove("brand_feedback"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumBrandFeedback?>? _explicitNullValueBrandFeedback = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumBrandFeedback?> BrandFeedback { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumBrandFeedback?> BrandFeedback { get => _explicitNullValueBrandFeedback; set { _explicitNullValueBrandFeedback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_feedback"); else _explicitNullProperties?.Remove("brand_feedback"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumBrandFeedback?> _explicitNullValueBrandFeedback = default!;
 #endif
         /// <summary>The secondary vetting score if it was done. Otherwise, it will be the brand score if it&apos;s returned from TCR. It may be null if no score is available.</summary>
-        public int? BrandScore { get; set; }
+        public int? BrandScore { get => _explicitNullValueBrandScore; set { _explicitNullValueBrandScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_score"); else _explicitNullProperties?.Remove("brand_score"); } }
+        private int? _explicitNullValueBrandScore = default!;
         /// <summary>Type of brand. One of: &quot;STANDARD&quot;, &quot;SOLE_PROPRIETOR&quot;. SOLE_PROPRIETOR is for the low volume, SOLE_PROPRIETOR campaign use case. There can only be one SOLE_PROPRIETOR campaign created per SOLE_PROPRIETOR brand. STANDARD is for all other campaign use cases. Multiple campaign use cases can be created per STANDARD brand.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrandType { get; set; }
+        public string? BrandType { get => _explicitNullValueBrandType; set { _explicitNullValueBrandType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_type"); else _explicitNullProperties?.Remove("brand_type"); } }
+        private string? _explicitNullValueBrandType = default!;
 #nullable restore
 #else
-        public string BrandType { get; set; }
+        public string BrandType { get => _explicitNullValueBrandType; set { _explicitNullValueBrandType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_type"); else _explicitNullProperties?.Remove("brand_type"); } }
+        private string _explicitNullValueBrandType = default!;
 #endif
         /// <summary>A2P Messaging Profile Bundle BundleSid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerProfileBundleSid { get; set; }
+        public string? CustomerProfileBundleSid { get => _explicitNullValueCustomerProfileBundleSid; set { _explicitNullValueCustomerProfileBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_profile_bundle_sid"); else _explicitNullProperties?.Remove("customer_profile_bundle_sid"); } }
+        private string? _explicitNullValueCustomerProfileBundleSid = default!;
 #nullable restore
 #else
-        public string CustomerProfileBundleSid { get; set; }
+        public string CustomerProfileBundleSid { get => _explicitNullValueCustomerProfileBundleSid; set { _explicitNullValueCustomerProfileBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_profile_bundle_sid"); else _explicitNullProperties?.Remove("customer_profile_bundle_sid"); } }
+        private string _explicitNullValueCustomerProfileBundleSid = default!;
 #endif
         /// <summary>The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
-        public DateTimeOffset? DateCreated { get; set; }
+        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
+        private DateTimeOffset? _explicitNullValueDateCreated = default!;
         /// <summary>The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.</summary>
-        public DateTimeOffset? DateUpdated { get; set; }
+        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
+        private DateTimeOffset? _explicitNullValueDateUpdated = default!;
         /// <summary>A list of errors that occurred during the brand registration process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Errors { get; set; }
+        public UntypedNode? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private UntypedNode? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public UntypedNode Errors { get; set; }
+        public UntypedNode Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private UntypedNode _explicitNullValueErrors = default!;
 #endif
         /// <summary>DEPRECATED. A reason why brand registration has failed. Only applicable when status is FAILED.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailureReason { get; set; }
+        public string? FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
+        private string? _explicitNullValueFailureReason = default!;
 #nullable restore
 #else
-        public string FailureReason { get; set; }
+        public string FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
+        private string _explicitNullValueFailureReason = default!;
 #endif
         /// <summary>Identified as a government entity</summary>
-        public bool? GovernmentEntity { get; set; }
+        public bool? GovernmentEntity { get => _explicitNullValueGovernmentEntity; set { _explicitNullValueGovernmentEntity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("government_entity"); else _explicitNullProperties?.Remove("government_entity"); } }
+        private bool? _explicitNullValueGovernmentEntity = default!;
         /// <summary>When a brand is registered, TCR will attempt to verify the identity of the brand based on the supplied information.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumIdentityStatus? IdentityStatus { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumIdentityStatus? IdentityStatus { get => _explicitNullValueIdentityStatus; set { _explicitNullValueIdentityStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_status"); else _explicitNullProperties?.Remove("identity_status"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumIdentityStatus? _explicitNullValueIdentityStatus = default!;
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinksProperty? Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinksProperty? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinksProperty? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinksProperty Links { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinksProperty Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrationsLinksProperty _explicitNullValueLinks = default!;
 #endif
         /// <summary>A boolean that specifies whether brand should be a mock or not. If true, brand will be registered as a mock brand. Defaults to false if no value is provided.</summary>
-        public bool? Mock { get; set; }
+        public bool? Mock { get => _explicitNullValueMock; set { _explicitNullValueMock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mock"); else _explicitNullProperties?.Remove("mock"); } }
+        private bool? _explicitNullValueMock = default!;
         /// <summary>Publicly traded company identified in the Russell 3000 Index</summary>
-        public bool? Russell3000 { get; set; }
+        public bool? Russell3000 { get => _explicitNullValueRussell3000; set { _explicitNullValueRussell3000 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("russell_3000"); else _explicitNullProperties?.Remove("russell_3000"); } }
+        private bool? _explicitNullValueRussell3000 = default!;
         /// <summary>The unique string to identify Brand Registration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sid { get; set; }
+        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        private string? _explicitNullValueSid = default!;
 #nullable restore
 #else
-        public string Sid { get; set; }
+        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        private string _explicitNullValueSid = default!;
 #endif
         /// <summary>A flag to disable automatic secondary vetting for brands which it would otherwise be done.</summary>
-        public bool? SkipAutomaticSecVet { get; set; }
+        public bool? SkipAutomaticSecVet { get => _explicitNullValueSkipAutomaticSecVet; set { _explicitNullValueSkipAutomaticSecVet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_automatic_sec_vet"); else _explicitNullProperties?.Remove("skip_automatic_sec_vet"); } }
+        private bool? _explicitNullValueSkipAutomaticSecVet = default!;
         /// <summary>Brand Registration status. One of &quot;PENDING&quot;, &quot;APPROVED&quot;, &quot;FAILED&quot;, &quot;IN_REVIEW&quot;, &quot;DELETION_PENDING&quot;, &quot;DELETION_FAILED&quot;, &quot;SUSPENDED&quot;.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumStatus? Status { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.BrandRegistrationsEnumStatus? _explicitNullValueStatus = default!;
         /// <summary>Nonprofit organization tax-exempt status per section 501 of the U.S. tax code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxExemptStatus { get; set; }
+        public string? TaxExemptStatus { get => _explicitNullValueTaxExemptStatus; set { _explicitNullValueTaxExemptStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_exempt_status"); else _explicitNullProperties?.Remove("tax_exempt_status"); } }
+        private string? _explicitNullValueTaxExemptStatus = default!;
 #nullable restore
 #else
-        public string TaxExemptStatus { get; set; }
+        public string TaxExemptStatus { get => _explicitNullValueTaxExemptStatus; set { _explicitNullValueTaxExemptStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_exempt_status"); else _explicitNullProperties?.Remove("tax_exempt_status"); } }
+        private string _explicitNullValueTaxExemptStatus = default!;
 #endif
         /// <summary>Campaign Registry (TCR) Brand ID. Assigned only after successful brand registration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TcrId { get; set; }
+        public string? TcrId { get => _explicitNullValueTcrId; set { _explicitNullValueTcrId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tcr_id"); else _explicitNullProperties?.Remove("tcr_id"); } }
+        private string? _explicitNullValueTcrId = default!;
 #nullable restore
 #else
-        public string TcrId { get; set; }
+        public string TcrId { get => _explicitNullValueTcrId; set { _explicitNullValueTcrId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tcr_id"); else _explicitNullProperties?.Remove("tcr_id"); } }
+        private string _explicitNullValueTcrId = default!;
 #endif
         /// <summary>The absolute URL of the Brand Registration resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations"/> and sets the default values.
@@ -143,7 +204,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.MessagingV1BrandRegistrations(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -204,6 +265,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteStringValue("tax_exempt_status", TaxExemptStatus);
             writer.WriteStringValue("tcr_id", TcrId);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,50 +11,79 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DataEnabled") is { } nullNodeDataEnabled && nullNodeDataEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataEnabled = null;
+            if (parseNode.GetChildNode("DataLimit") is { } nullNodeDataLimit && nullNodeDataLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataLimit = null;
+            if (parseNode.GetChildNode("IpCommandsMethod") is { } nullNodeIpCommandsMethod && nullNodeIpCommandsMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpCommandsMethod = null;
+            if (parseNode.GetChildNode("IpCommandsUrl") is { } nullNodeIpCommandsUrl && nullNodeIpCommandsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpCommandsUrl = null;
+            if (parseNode.GetChildNode("NetworkAccessProfile") is { } nullNodeNetworkAccessProfile && nullNodeNetworkAccessProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkAccessProfile = null;
+            if (parseNode.GetChildNode("SmsCommandsEnabled") is { } nullNodeSmsCommandsEnabled && nullNodeSmsCommandsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsCommandsEnabled = null;
+            if (parseNode.GetChildNode("SmsCommandsMethod") is { } nullNodeSmsCommandsMethod && nullNodeSmsCommandsMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsCommandsMethod = null;
+            if (parseNode.GetChildNode("SmsCommandsUrl") is { } nullNodeSmsCommandsUrl && nullNodeSmsCommandsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsCommandsUrl = null;
+            if (parseNode.GetChildNode("UniqueName") is { } nullNodeUniqueName && nullNodeUniqueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines whether SIMs in the Fleet are capable of using 2G/3G/4G/LTE/CAT-M data connectivity. Defaults to `true`.</summary>
-        public bool? DataEnabled { get; set; }
+        public bool? DataEnabled { get => _explicitNullValueDataEnabled; set { _explicitNullValueDataEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataEnabled"); else _explicitNullProperties?.Remove("DataEnabled"); } }
+        private bool? _explicitNullValueDataEnabled = default!;
         /// <summary>The total data usage (download and upload combined) in Megabytes that each Super SIM assigned to the Fleet can consume during a billing period (normally one month). Value must be between 1MB (1) and 2TB (2,000,000). Defaults to 1GB (1,000).</summary>
-        public int? DataLimit { get; set; }
+        public int? DataLimit { get => _explicitNullValueDataLimit; set { _explicitNullValueDataLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DataLimit"); else _explicitNullProperties?.Remove("DataLimit"); } }
+        private int? _explicitNullValueDataLimit = default!;
         /// <summary>A string representing the HTTP method to use when making a request to `ip_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequestIpCommandsMethod? IpCommandsMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequestIpCommandsMethod? IpCommandsMethod { get => _explicitNullValueIpCommandsMethod; set { _explicitNullValueIpCommandsMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IpCommandsMethod"); else _explicitNullProperties?.Remove("IpCommandsMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequestIpCommandsMethod? _explicitNullValueIpCommandsMethod = default!;
         /// <summary>The URL that will receive a webhook when a Super SIM in the Fleet is used to send an IP Command from your device to a special IP address. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpCommandsUrl { get; set; }
+        public string? IpCommandsUrl { get => _explicitNullValueIpCommandsUrl; set { _explicitNullValueIpCommandsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IpCommandsUrl"); else _explicitNullProperties?.Remove("IpCommandsUrl"); } }
+        private string? _explicitNullValueIpCommandsUrl = default!;
 #nullable restore
 #else
-        public string IpCommandsUrl { get; set; }
+        public string IpCommandsUrl { get => _explicitNullValueIpCommandsUrl; set { _explicitNullValueIpCommandsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IpCommandsUrl"); else _explicitNullProperties?.Remove("IpCommandsUrl"); } }
+        private string _explicitNullValueIpCommandsUrl = default!;
 #endif
         /// <summary>The SID or unique name of the Network Access Profile that will control which cellular networks the Fleet&apos;s SIMs can connect to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NetworkAccessProfile { get; set; }
+        public string? NetworkAccessProfile { get => _explicitNullValueNetworkAccessProfile; set { _explicitNullValueNetworkAccessProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetworkAccessProfile"); else _explicitNullProperties?.Remove("NetworkAccessProfile"); } }
+        private string? _explicitNullValueNetworkAccessProfile = default!;
 #nullable restore
 #else
-        public string NetworkAccessProfile { get; set; }
+        public string NetworkAccessProfile { get => _explicitNullValueNetworkAccessProfile; set { _explicitNullValueNetworkAccessProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetworkAccessProfile"); else _explicitNullProperties?.Remove("NetworkAccessProfile"); } }
+        private string _explicitNullValueNetworkAccessProfile = default!;
 #endif
         /// <summary>Defines whether SIMs in the Fleet are capable of sending and receiving machine-to-machine SMS via Commands. Defaults to `true`.</summary>
-        public bool? SmsCommandsEnabled { get; set; }
+        public bool? SmsCommandsEnabled { get => _explicitNullValueSmsCommandsEnabled; set { _explicitNullValueSmsCommandsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SmsCommandsEnabled"); else _explicitNullProperties?.Remove("SmsCommandsEnabled"); } }
+        private bool? _explicitNullValueSmsCommandsEnabled = default!;
         /// <summary>A string representing the HTTP method to use when making a request to `sms_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequestSmsCommandsMethod? SmsCommandsMethod { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequestSmsCommandsMethod? SmsCommandsMethod { get => _explicitNullValueSmsCommandsMethod; set { _explicitNullValueSmsCommandsMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SmsCommandsMethod"); else _explicitNullProperties?.Remove("SmsCommandsMethod"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequestSmsCommandsMethod? _explicitNullValueSmsCommandsMethod = default!;
         /// <summary>The URL that will receive a webhook when a Super SIM in the Fleet is used to send an SMS from your device to the SMS Commands number. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmsCommandsUrl { get; set; }
+        public string? SmsCommandsUrl { get => _explicitNullValueSmsCommandsUrl; set { _explicitNullValueSmsCommandsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SmsCommandsUrl"); else _explicitNullProperties?.Remove("SmsCommandsUrl"); } }
+        private string? _explicitNullValueSmsCommandsUrl = default!;
 #nullable restore
 #else
-        public string SmsCommandsUrl { get; set; }
+        public string SmsCommandsUrl { get => _explicitNullValueSmsCommandsUrl; set { _explicitNullValueSmsCommandsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SmsCommandsUrl"); else _explicitNullProperties?.Remove("SmsCommandsUrl"); } }
+        private string _explicitNullValueSmsCommandsUrl = default!;
 #endif
         /// <summary>An application-defined string that uniquely identifies the resource. It can be used in place of the resource&apos;s `sid` in the URL to address the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniqueName { get; set; }
+        public string? UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string? _explicitNullValueUniqueName = default!;
 #nullable restore
 #else
-        public string UniqueName { get; set; }
+        public string UniqueName { get => _explicitNullValueUniqueName; set { _explicitNullValueUniqueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueName"); else _explicitNullProperties?.Remove("UniqueName"); } }
+        private string _explicitNullValueUniqueName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -71,7 +100,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +137,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioSupersimV1CreateFleetXWwwFormUrlencodedRequestSmsCommandsMethod>("SmsCommandsMethod", SmsCommandsMethod);
             writer.WriteStringValue("SmsCommandsUrl", SmsCommandsUrl);
             writer.WriteStringValue("UniqueName", UniqueName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

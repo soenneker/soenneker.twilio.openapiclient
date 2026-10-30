@@ -11,40 +11,59 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConversationsV2SendMessagePayload : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("channelSettings") is { } nullNodeChannelSettings && nullNodeChannelSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelSettings = null;
+            if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("from") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
+            if (parseNode.GetChildNode("to") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Channel-specific parameters forwarded as-is to the downstream sending service.Allows passing backend-specific fields without requiring API changes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayloadChannelSettings? ChannelSettings { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayloadChannelSettings? ChannelSettings { get => _explicitNullValueChannelSettings; set { _explicitNullValueChannelSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelSettings"); else _explicitNullProperties?.Remove("channelSettings"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayloadChannelSettings? _explicitNullValueChannelSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayloadChannelSettings ChannelSettings { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayloadChannelSettings ChannelSettings { get => _explicitNullValueChannelSettings; set { _explicitNullValueChannelSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channelSettings"); else _explicitNullProperties?.Remove("channelSettings"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayloadChannelSettings _explicitNullValueChannelSettings = default!;
 #endif
         /// <summary>Content for a SEND_MESSAGE action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent? Content { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent Content { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent _explicitNullValueContent = default!;
 #endif
         /// <summary>Identifies a participant for an Action. Supports three resolution modes:1. participantId + channel: Resolves address from participant&apos;s registered addresses2. participantId only: Resolves when participant has exactly one address3. address + channel: Uses explicit address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant? From { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant? _explicitNullValueFrom = default!;
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant From { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant _explicitNullValueFrom = default!;
 #endif
         /// <summary>The recipients of this action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant>? To { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant>? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant>? _explicitNullValueTo = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant> To { get; set; }
+        public List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant> To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        private List<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant> _explicitNullValueTo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayload"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessagePayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageContent>("content", Content);
             writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant>("from", From);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.ConversationsV2SendMessageParticipant>("to", To);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

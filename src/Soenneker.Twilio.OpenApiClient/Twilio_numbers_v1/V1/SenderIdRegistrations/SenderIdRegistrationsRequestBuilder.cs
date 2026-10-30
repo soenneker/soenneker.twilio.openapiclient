@@ -70,6 +70,8 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_numbers_v1.V1.SenderIdRegistrati
             {
                 { "400", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistration400Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Twilio.OpenApiClient.Models.TwilioNumbersV1CreateSenderIdRegistration500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponse>(requestInfo, global::Soenneker.Twilio.OpenApiClient.Models.NumbersV1CreateEmbeddedRegistrationResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

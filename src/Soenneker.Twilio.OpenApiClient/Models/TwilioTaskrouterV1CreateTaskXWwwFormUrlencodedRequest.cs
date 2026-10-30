@@ -11,62 +11,93 @@ namespace Soenneker.Twilio.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioTaskrouterV1CreateTaskXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("IgnoreCapacity") is { } nullNodeIgnoreCapacity && nullNodeIgnoreCapacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgnoreCapacity = null;
+            if (parseNode.GetChildNode("Priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("RoutingTarget") is { } nullNodeRoutingTarget && nullNodeRoutingTarget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutingTarget = null;
+            if (parseNode.GetChildNode("TaskChannel") is { } nullNodeTaskChannel && nullNodeTaskChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskChannel = null;
+            if (parseNode.GetChildNode("TaskQueueSid") is { } nullNodeTaskQueueSid && nullNodeTaskQueueSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskQueueSid = null;
+            if (parseNode.GetChildNode("Timeout") is { } nullNodeTimeout && nullNodeTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timeout = null;
+            if (parseNode.GetChildNode("VirtualStartTime") is { } nullNodeVirtualStartTime && nullNodeVirtualStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VirtualStartTime = null;
+            if (parseNode.GetChildNode("WorkflowSid") is { } nullNodeWorkflowSid && nullNodeWorkflowSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowSid = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON string with the attributes of the new task. This value is passed to the Workflow&apos;s `assignment_callback_url` when the Task is assigned to a Worker. For example: `{ &quot;task_type&quot;: &quot;call&quot;, &quot;twilio_call_sid&quot;: &quot;CAxxx&quot;, &quot;customer_ticket_number&quot;: &quot;12345&quot; }`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Attributes { get; set; }
+        public string? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
+        private string? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public string Attributes { get; set; }
+        public string Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Attributes"); else _explicitNullProperties?.Remove("Attributes"); } }
+        private string _explicitNullValueAttributes = default!;
 #endif
         /// <summary>A boolean that indicates if the Task should respect a Worker&apos;s capacity and availability during assignment. This field can only be used when the `RoutingTarget` field is set to a Worker SID. By setting `IgnoreCapacity` to a value of `true`, `1`, or `yes`, the Task will be routed to the Worker without respecting their capacity and availability. Any other value will enforce the Worker&apos;s capacity and availability. The default value of `IgnoreCapacity` is `true` when the `RoutingTarget` is set to a Worker SID. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IgnoreCapacity { get; set; }
+        public string? IgnoreCapacity { get => _explicitNullValueIgnoreCapacity; set { _explicitNullValueIgnoreCapacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IgnoreCapacity"); else _explicitNullProperties?.Remove("IgnoreCapacity"); } }
+        private string? _explicitNullValueIgnoreCapacity = default!;
 #nullable restore
 #else
-        public string IgnoreCapacity { get; set; }
+        public string IgnoreCapacity { get => _explicitNullValueIgnoreCapacity; set { _explicitNullValueIgnoreCapacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IgnoreCapacity"); else _explicitNullProperties?.Remove("IgnoreCapacity"); } }
+        private string _explicitNullValueIgnoreCapacity = default!;
 #endif
         /// <summary>The priority to assign the new task and override the default. When supplied, the new Task will have this priority unless it matches a Workflow Target with a Priority set. When not supplied, the new Task will have the priority of the matching Workflow Target. Value can be 0 to 2^31^ (2,147,483,647).</summary>
-        public int? Priority { get; set; }
+        public int? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
+        private int? _explicitNullValuePriority = default!;
         /// <summary>A SID of a Worker, Queue, or Workflow to route a Task to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoutingTarget { get; set; }
+        public string? RoutingTarget { get => _explicitNullValueRoutingTarget; set { _explicitNullValueRoutingTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutingTarget"); else _explicitNullProperties?.Remove("RoutingTarget"); } }
+        private string? _explicitNullValueRoutingTarget = default!;
 #nullable restore
 #else
-        public string RoutingTarget { get; set; }
+        public string RoutingTarget { get => _explicitNullValueRoutingTarget; set { _explicitNullValueRoutingTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutingTarget"); else _explicitNullProperties?.Remove("RoutingTarget"); } }
+        private string _explicitNullValueRoutingTarget = default!;
 #endif
         /// <summary>When MultiTasking is enabled, specify the TaskChannel by passing either its `unique_name` or `sid`. Default value is `default`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskChannel { get; set; }
+        public string? TaskChannel { get => _explicitNullValueTaskChannel; set { _explicitNullValueTaskChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaskChannel"); else _explicitNullProperties?.Remove("TaskChannel"); } }
+        private string? _explicitNullValueTaskChannel = default!;
 #nullable restore
 #else
-        public string TaskChannel { get; set; }
+        public string TaskChannel { get => _explicitNullValueTaskChannel; set { _explicitNullValueTaskChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaskChannel"); else _explicitNullProperties?.Remove("TaskChannel"); } }
+        private string _explicitNullValueTaskChannel = default!;
 #endif
         /// <summary>The SID of the TaskQueue in which the Task belongs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskQueueSid { get; set; }
+        public string? TaskQueueSid { get => _explicitNullValueTaskQueueSid; set { _explicitNullValueTaskQueueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaskQueueSid"); else _explicitNullProperties?.Remove("TaskQueueSid"); } }
+        private string? _explicitNullValueTaskQueueSid = default!;
 #nullable restore
 #else
-        public string TaskQueueSid { get; set; }
+        public string TaskQueueSid { get => _explicitNullValueTaskQueueSid; set { _explicitNullValueTaskQueueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaskQueueSid"); else _explicitNullProperties?.Remove("TaskQueueSid"); } }
+        private string _explicitNullValueTaskQueueSid = default!;
 #endif
         /// <summary>The amount of time in seconds the new task can live before being assigned. Can be up to a maximum of 2 weeks (1,209,600 seconds). The default value is 24 hours (86,400 seconds). On timeout, the `task.canceled` event will fire with description `Task TTL Exceeded`.</summary>
-        public int? Timeout { get; set; }
+        public int? Timeout { get => _explicitNullValueTimeout; set { _explicitNullValueTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timeout"); else _explicitNullProperties?.Remove("Timeout"); } }
+        private int? _explicitNullValueTimeout = default!;
         /// <summary>The virtual start time to assign the new task and override the default. When supplied, the new task will have this virtual start time. When not supplied, the new task will have the virtual start time equal to `date_created`. Value can&apos;t be in the future or before the year of 1900.</summary>
-        public DateTimeOffset? VirtualStartTime { get; set; }
+        public DateTimeOffset? VirtualStartTime { get => _explicitNullValueVirtualStartTime; set { _explicitNullValueVirtualStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VirtualStartTime"); else _explicitNullProperties?.Remove("VirtualStartTime"); } }
+        private DateTimeOffset? _explicitNullValueVirtualStartTime = default!;
         /// <summary>The SID of the Workflow that you would like to handle routing for the new Task. If there is only one Workflow defined for the Workspace that you are posting the new task to, this parameter is optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowSid { get; set; }
+        public string? WorkflowSid { get => _explicitNullValueWorkflowSid; set { _explicitNullValueWorkflowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WorkflowSid"); else _explicitNullProperties?.Remove("WorkflowSid"); } }
+        private string? _explicitNullValueWorkflowSid = default!;
 #nullable restore
 #else
-        public string WorkflowSid { get; set; }
+        public string WorkflowSid { get => _explicitNullValueWorkflowSid; set { _explicitNullValueWorkflowSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WorkflowSid"); else _explicitNullProperties?.Remove("WorkflowSid"); } }
+        private string _explicitNullValueWorkflowSid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1CreateTaskXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -83,7 +114,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1CreateTaskXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1CreateTaskXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioTaskrouterV1CreateTaskXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -120,6 +151,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             writer.WriteIntValue("Timeout", Timeout);
             writer.WriteDateTimeOffsetValue("VirtualStartTime", VirtualStartTime);
             writer.WriteStringValue("WorkflowSid", WorkflowSid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
