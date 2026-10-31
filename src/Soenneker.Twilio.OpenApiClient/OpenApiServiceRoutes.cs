@@ -6,8 +6,10 @@ internal static class OpenApiServiceRoutes
     private static readonly global::System.Collections.Generic.HashSet<string> KnownServers = new(global::System.StringComparer.OrdinalIgnoreCase) { "https://accounts.twilio.com", "https://api.twilio.com", "https://bulkexports.twilio.com", "https://chat.twilio.com", "https://content.twilio.com", "https://conversations.twilio.com", "https://events.twilio.com", "https://flex-api.twilio.com", "https://frontline-api.twilio.com", "https://iam.twilio.com", "https://insights.twilio.com", "https://intelligence.twilio.com", "https://ip-messaging.twilio.com", "https://knowledge.twilio.com", "https://lookups.twilio.com", "https://marketplace.twilio.com", "https://memory.twilio.com", "https://messaging.twilio.com", "https://monitor.twilio.com", "https://notify.twilio.com", "https://numbers.twilio.com", "https://oauth.twilio.com", "https://preview-iam.twilio.com", "https://preview.twilio.com", "https://pricing.twilio.com", "https://proxy.twilio.com", "https://routes.twilio.com", "https://serverless.twilio.com", "https://studio.twilio.com", "https://supersim.twilio.com", "https://sync.twilio.com", "https://taskrouter.twilio.com", "https://trunking.twilio.com", "https://trusthub.twilio.com", "https://verify.twilio.com", "https://video.twilio.com", "https://voice.twilio.com", "https://wireless.twilio.com" };
     internal static string Resolve(string template, string? configuredBaseUrl, string server, string path, bool rawUrl)
     {
-        var queryMatch = global::System.Text.RegularExpressions.Regex.Match(template, @"\{[?&]|\?");
-        int query = queryMatch.Success ? queryMatch.Index : -1;
+        int query = template.IndexOf('?');
+        if (query > 0 && template[query - 1] == '{') query--;
+        int continuation = template.IndexOf("{&", global::System.StringComparison.Ordinal);
+        if (continuation >= 0 && (query < 0 || continuation < query)) query = continuation;
         string suffix = query >= 0 ? template.Substring(query) : "";
         bool useService = server.Length > 0 && (string.IsNullOrEmpty(configuredBaseUrl) || KnownServers.Contains(configuredBaseUrl.TrimEnd('/')));
         if (useService && !rawUrl && server.Contains('{'))

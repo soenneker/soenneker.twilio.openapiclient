@@ -76,7 +76,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.Messaging.GeoPerm
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.Messaging.GeoPermissions.GeoPermissionsRequestBuilder.GeoPermissionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://accounts.twilio.com", "/twilio_accounts_v1/v1/Messaging/GeoPermissions", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -94,7 +94,7 @@ namespace Soenneker.Twilio.OpenApiClient.Twilio_accounts_v1.V1.Messaging.GeoPerm
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PATCH, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://accounts.twilio.com", "/twilio_accounts_v1/v1/Messaging/GeoPermissions", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.PATCH, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
