@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceId"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1"/>, <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TwilioVoiceV3CreateV3TranscriptionsRequest : IComposedTypeWrapper, IParsable
@@ -18,21 +18,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl? VoiceV3TranscriptionCreateRequestWithMediaUrl { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1? TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl VoiceV3TranscriptionCreateRequestWithMediaUrl { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceId"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceId? VoiceV3TranscriptionCreateRequestWithSourceId { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2? TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceId VoiceV3TranscriptionCreateRequestWithSourceId { get; set; }
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -42,27 +42,27 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("inputSource")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequest();
-            if("MEDIA_URL".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 
             }
-            else if("SOURCE_ID".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("transcriptionConfigurationId") && shapeMembers1.ContainsKey("sourceId") && (!shapeMembers1.ContainsKey("transcriptionConfigurationId") || (((shapeMembers1["transcriptionConfigurationId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("inputSource") || (((shapeMembers1["inputSource"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["inputSource"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "SOURCE_ID".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("sourceId") || (((shapeMembers1["sourceId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("participants") || (((shapeMembers1["participants"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))))))))();
-            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("transcriptionConfigurationId") && (!shapeMembers1.ContainsKey("transcriptionConfigurationId") || (((shapeMembers1["transcriptionConfigurationId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("inputSource") || (((shapeMembers1["inputSource"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["inputSource"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "MEDIA_URL".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("mediaUrl") || (((shapeMembers1["mediaUrl"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("audioStartedAt") || (((shapeMembers1["audioStartedAt"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("participants") || (((shapeMembers1["participants"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))))))))();
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("transcriptionConfigurationId") && shapeMembers1.ContainsKey("sourceId") && shapeMembers1.ContainsKey("inputSource") && (!shapeMembers1.ContainsKey("transcriptionConfigurationId") || (((shapeMembers1["transcriptionConfigurationId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("inputSource") || (((shapeMembers1["inputSource"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["inputSource"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "SOURCE_ID".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("sourceId") || (((shapeMembers1["sourceId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("participants") || (((shapeMembers1["participants"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))))))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("transcriptionConfigurationId") && shapeMembers1.ContainsKey("inputSource") && (!shapeMembers1.ContainsKey("transcriptionConfigurationId") || (((shapeMembers1["transcriptionConfigurationId"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("inputSource") || (((shapeMembers1["inputSource"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["inputSource"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal4 && "MEDIA_URL".Equals(literal4.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("mediaUrl") || (((shapeMembers1["mediaUrl"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("audioStartedAt") || (((shapeMembers1["audioStartedAt"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("participants") || (((shapeMembers1["participants"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))))))))();
             int matchingUnionBranches = 0;
             if (matchesUnionBranch0) matchingUnionBranches++;
             if (matchesUnionBranch1) matchingUnionBranches++;
-            bool noSelectedUnionBranch = result.VoiceV3TranscriptionCreateRequestWithMediaUrl == null && result.VoiceV3TranscriptionCreateRequestWithSourceId == null;
-            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.VoiceV3TranscriptionCreateRequestWithSourceId = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceId(), parseNode);
-            if (noSelectedUnionBranch && matchesUnionBranch1 && matchingUnionBranches == 1) result.VoiceV3TranscriptionCreateRequestWithMediaUrl = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl(), parseNode);
-            if (result.VoiceV3TranscriptionCreateRequestWithMediaUrl == null && result.VoiceV3TranscriptionCreateRequestWithSourceId == null) result.UnrecognizedValue = unionPayload;
+            bool noSelectedUnionBranch = result.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 == null && result.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch1 && matchingUnionBranches == 1) result.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2(), parseNode);
+            if (result.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 == null && result.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
         /// <summary>
@@ -73,13 +73,13 @@ return result;
         {
             if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
 
-            if(VoiceV3TranscriptionCreateRequestWithMediaUrl != null)
+            if(TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 != null)
             {
-                return VoiceV3TranscriptionCreateRequestWithMediaUrl.GetFieldDeserializers();
+                return TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1.GetFieldDeserializers();
             }
-            else if(VoiceV3TranscriptionCreateRequestWithSourceId != null)
+            else if(TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 != null)
             {
-                return VoiceV3TranscriptionCreateRequestWithSourceId.GetFieldDeserializers();
+                return TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -90,23 +90,23 @@ return result;
         public virtual void Serialize(ISerializationWriter writer)
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
-            if (VoiceV3TranscriptionCreateRequestWithMediaUrl == null && VoiceV3TranscriptionCreateRequestWithSourceId == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 == null && TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
             int selectedUnionBranches = 0;
-            if (VoiceV3TranscriptionCreateRequestWithMediaUrl != null) selectedUnionBranches++;
-            if (VoiceV3TranscriptionCreateRequestWithSourceId != null) selectedUnionBranches++;
-            if (VoiceV3TranscriptionCreateRequestWithMediaUrl != null && selectedUnionBranches == 1) { if (VoiceV3TranscriptionCreateRequestWithMediaUrl is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, VoiceV3TranscriptionCreateRequestWithMediaUrl); return; }
-            if (VoiceV3TranscriptionCreateRequestWithSourceId != null && selectedUnionBranches == 1) { if (VoiceV3TranscriptionCreateRequestWithSourceId is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, VoiceV3TranscriptionCreateRequestWithSourceId); return; }
+            if (TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 != null) selectedUnionBranches++;
+            if (TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 != null) selectedUnionBranches++;
+            if (TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 != null && selectedUnionBranches == 1) { if (TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1); return; }
+            if (TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 != null && selectedUnionBranches == 1) { if (TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(VoiceV3TranscriptionCreateRequestWithMediaUrl != null)
+            if(TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 != null)
             {
-                if (VoiceV3TranscriptionCreateRequestWithMediaUrl is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl>(null, VoiceV3TranscriptionCreateRequestWithMediaUrl);
+                if (TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1>(null, TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1);
             }
-            else if(VoiceV3TranscriptionCreateRequestWithSourceId != null)
+            else if(TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 != null)
             {
-                if (VoiceV3TranscriptionCreateRequestWithSourceId is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithSourceId>(null, VoiceV3TranscriptionCreateRequestWithSourceId);
+                if (TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
+                writer.WriteObjectValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2>(null, TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2);
             }
         }
     }

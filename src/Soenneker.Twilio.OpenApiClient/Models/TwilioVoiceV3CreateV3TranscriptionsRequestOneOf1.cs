@@ -9,7 +9,7 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class VoiceV3TranscriptionCreateRequestWithMediaUrl : IAdditionalDataHolder, IParsable
+    public partial class TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -17,37 +17,22 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("audioStartedAt") is null) { _explicitNullValueAudioStartedAt = default!; _explicitNullProperties?.Remove("audioStartedAt"); }
-            else if (parseNode.GetChildNode("audioStartedAt") is { } nullNodeAudioStartedAt && nullNodeAudioStartedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioStartedAt = null;
             if (parseNode.GetChildNode("inputSource") is null) { _explicitNullValueInputSource = default!; _explicitNullProperties?.Remove("inputSource"); }
             else if (parseNode.GetChildNode("inputSource") is { } nullNodeInputSource && nullNodeInputSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputSource = null;
-            if (parseNode.GetChildNode("mediaUrl") is null) { _explicitNullValueMediaUrl = default!; _explicitNullProperties?.Remove("mediaUrl"); }
-            else if (parseNode.GetChildNode("mediaUrl") is { } nullNodeMediaUrl && nullNodeMediaUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaUrl = null;
             if (parseNode.GetChildNode("participants") is null) { _explicitNullValueParticipants = default!; _explicitNullProperties?.Remove("participants"); }
             else if (parseNode.GetChildNode("participants") is { } nullNodeParticipants && nullNodeParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Participants = null;
+            if (parseNode.GetChildNode("sourceId") is null) { _explicitNullValueSourceId = default!; _explicitNullProperties?.Remove("sourceId"); }
+            else if (parseNode.GetChildNode("sourceId") is { } nullNodeSourceId && nullNodeSourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceId = null;
             if (parseNode.GetChildNode("transcriptionConfigurationId") is null) { _explicitNullValueTranscriptionConfigurationId = default!; _explicitNullProperties?.Remove("transcriptionConfigurationId"); }
             else if (parseNode.GetChildNode("transcriptionConfigurationId") is { } nullNodeTranscriptionConfigurationId && nullNodeTranscriptionConfigurationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionConfigurationId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The start time of the audio recording</summary>
-        public DateTimeOffset? AudioStartedAt { get => _explicitNullValueAudioStartedAt; set { _explicitNullValueAudioStartedAt = value; AdditionalData?.Remove("audioStartedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioStartedAt"); else _explicitNullProperties?.Remove("audioStartedAt"); } }
-        private DateTimeOffset? _explicitNullValueAudioStartedAt = default!;
         /// <summary>Discriminator indicating the input source type</summary>
-        public global::Soenneker.Twilio.OpenApiClient.Models.MediaUrlInputSource? InputSource { get => _explicitNullValueInputSource; set { _explicitNullValueInputSource = value; AdditionalData?.Remove("inputSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputSource"); else _explicitNullProperties?.Remove("inputSource"); } }
-        private global::Soenneker.Twilio.OpenApiClient.Models.MediaUrlInputSource? _explicitNullValueInputSource = default!;
-        /// <summary>URL to the media file to transcribe</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; AdditionalData?.Remove("mediaUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaUrl"); else _explicitNullProperties?.Remove("mediaUrl"); } }
-        private string? _explicitNullValueMediaUrl = default!;
-#nullable restore
-#else
-        public string MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; AdditionalData?.Remove("mediaUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaUrl"); else _explicitNullProperties?.Remove("mediaUrl"); } }
-        private string _explicitNullValueMediaUrl = default!;
-#endif
-        /// <summary>Participants in the conversation. If omitted or partially specified, defaultsfrom the transcription configuration will be applied.</summary>
+        public global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1_inputSource? InputSource { get => _explicitNullValueInputSource; set { _explicitNullValueInputSource = value; AdditionalData?.Remove("inputSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputSource"); else _explicitNullProperties?.Remove("inputSource"); } }
+        private global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1_inputSource? _explicitNullValueInputSource = default!;
+        /// <summary>Array of participants in the conversation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>? Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; AdditionalData?.Remove("participants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
@@ -56,6 +41,16 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 #else
         public List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant> Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; AdditionalData?.Remove("participants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
         private List<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant> _explicitNullValueParticipants = default!;
+#endif
+        /// <summary>The SID or TTID of the source audio to transcribe (e.g. a Twilio Recording SID).When provided, audioStartedAt is inferred from the recording&apos;s start timeand does not need to be supplied by the caller.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SourceId { get => _explicitNullValueSourceId; set { _explicitNullValueSourceId = value; AdditionalData?.Remove("sourceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceId"); else _explicitNullProperties?.Remove("sourceId"); } }
+        private string? _explicitNullValueSourceId = default!;
+#nullable restore
+#else
+        public string SourceId { get => _explicitNullValueSourceId; set { _explicitNullValueSourceId = value; AdditionalData?.Remove("sourceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceId"); else _explicitNullProperties?.Remove("sourceId"); } }
+        private string _explicitNullValueSourceId = default!;
 #endif
         /// <summary>The ID of the transcription configuration to use</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,21 +63,21 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         private string _explicitNullValueTranscriptionConfigurationId = default!;
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1"/> and sets the default values.
         /// </summary>
-        public VoiceV3TranscriptionCreateRequestWithMediaUrl()
+        public TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionCreateRequestWithMediaUrl(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,10 +87,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "audioStartedAt", n => { AudioStartedAt = n.GetDateTimeOffsetValue(); } },
-                { "inputSource", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MediaUrlInputSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInputSource = default; _explicitNullProperties?.Remove("inputSource"); AdditionalData["inputSource"] = unknown; } else { InputSource = parsed; AdditionalData.Remove("inputSource"); } } },
-                { "mediaUrl", n => { MediaUrl = n.GetStringValue(); } },
+                { "inputSource", n => { var parsed = n.GetEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1_inputSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInputSource = default; _explicitNullProperties?.Remove("inputSource"); AdditionalData["inputSource"] = unknown; } else { InputSource = parsed; AdditionalData.Remove("inputSource"); } } },
                 { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>(global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "sourceId", n => { SourceId = n.GetStringValue(); } },
                 { "transcriptionConfigurationId", n => { TranscriptionConfigurationId = n.GetStringValue(); } },
             };
         }
@@ -106,10 +100,9 @@ namespace Soenneker.Twilio.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteDateTimeOffsetValue("audioStartedAt", AudioStartedAt);
-            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.MediaUrlInputSource>("inputSource", InputSource);
-            writer.WriteStringValue("mediaUrl", MediaUrl);
+            writer.WriteEnumValue<global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1_inputSource>("inputSource", InputSource);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Twilio.OpenApiClient.Models.VoiceV3TranscriptionParticipant>("participants", Participants);
+            writer.WriteStringValue("sourceId", SourceId);
             writer.WriteStringValue("transcriptionConfigurationId", TranscriptionConfigurationId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
