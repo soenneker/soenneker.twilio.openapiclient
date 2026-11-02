@@ -5,11 +5,11 @@ namespace Soenneker.Twilio.OpenApiClient.Models
 {
     /// <summary>Discriminator indicating the input source type</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2_inputSource
+    public enum TwilioVoiceV3CreateV3TranscriptionsRequestTwilioVoiceV3CreateV3TranscriptionsRequestOneOf1_inputSource
     {
-        [EnumMember(Value = "MEDIA_URL")]
+        [EnumMember(Value = "SOURCE_ID")]
         #pragma warning disable CS1591
-        MediaUrl,
+        SourceId,
         #pragma warning restore CS1591
     }
 }
