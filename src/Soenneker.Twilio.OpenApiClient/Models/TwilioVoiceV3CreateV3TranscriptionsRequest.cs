@@ -51,8 +51,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("inputSource")?.GetStringValue();
             return mappingValue switch
             {
-                "MEDIA_URL" => new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestTwilioVoiceV3CreateV3TranscriptionsRequestOneOf2(),
-                "SOURCE_ID" => new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestTwilioVoiceV3CreateV3TranscriptionsRequestOneOf1(),
+                "MEDIA_URL" => new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2Variant(),
+                "SOURCE_ID" => new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1Variant(),
                 _ => new global::Soenneker.Twilio.OpenApiClient.Models.TwilioVoiceV3CreateV3TranscriptionsRequest(),
             };
         }

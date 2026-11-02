@@ -333695,8 +333695,8 @@
         "discriminator": {
           "propertyName": "inputSource",
           "mapping": {
-            "SOURCE_ID": "#/components/schemas/TwilioVoiceV3CreateV3TranscriptionsRequestTwilioVoiceV3CreateV3TranscriptionsRequestOneOf1",
-            "MEDIA_URL": "#/components/schemas/TwilioVoiceV3CreateV3TranscriptionsRequestTwilioVoiceV3CreateV3TranscriptionsRequestOneOf2"
+            "SOURCE_ID": "#/components/schemas/TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1Variant",
+            "MEDIA_URL": "#/components/schemas/TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2Variant"
           }
         },
         "x-client-original-tagged-union": {
@@ -337227,8 +337227,8 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "TEXT": "#/components/schemas/TwilioConversationsV2CreateCommunicationInConversationRequestContentTwilioConversationsV2CreateCommunicationInConversationRequestContentContentText",
-            "TRANSCRIPTION": "#/components/schemas/TwilioConversationsV2CreateCommunicationInConversationRequestContentTwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription"
+            "TEXT": "#/components/schemas/TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTextVariant",
+            "TRANSCRIPTION": "#/components/schemas/TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscriptionVariant"
           }
         },
         "x-client-original-tagged-union": {
@@ -361465,7 +361465,7 @@
           }
         ]
       },
-      "TwilioVoiceV3CreateV3TranscriptionsRequestTwilioVoiceV3CreateV3TranscriptionsRequestOneOf1": {
+      "TwilioVoiceV3CreateV3TranscriptionsRequestOneOf1Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TwilioVoiceV3CreateV3TranscriptionsRequest"
@@ -361523,7 +361523,7 @@
           }
         ]
       },
-      "TwilioVoiceV3CreateV3TranscriptionsRequestTwilioVoiceV3CreateV3TranscriptionsRequestOneOf2": {
+      "TwilioVoiceV3CreateV3TranscriptionsRequestOneOf2Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TwilioVoiceV3CreateV3TranscriptionsRequest"
@@ -361586,7 +361586,7 @@
           }
         ]
       },
-      "TwilioConversationsV2CreateCommunicationInConversationRequestContentTwilioConversationsV2CreateCommunicationInConversationRequestContentContentText": {
+      "TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTextVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TwilioConversationsV2CreateCommunicationInConversationRequestContent"
@@ -361609,7 +361609,7 @@
           }
         ]
       },
-      "TwilioConversationsV2CreateCommunicationInConversationRequestContentTwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription": {
+      "TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscriptionVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TwilioConversationsV2CreateCommunicationInConversationRequestContent"

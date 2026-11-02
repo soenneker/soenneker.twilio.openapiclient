@@ -52,8 +52,8 @@ namespace Soenneker.Twilio.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "TEXT" => new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentTwilioConversationsV2CreateCommunicationInConversationRequestContentContentText(),
-                "TRANSCRIPTION" => new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentTwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscription(),
+                "TEXT" => new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTextVariant(),
+                "TRANSCRIPTION" => new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContentContentTranscriptionVariant(),
                 _ => new global::Soenneker.Twilio.OpenApiClient.Models.TwilioConversationsV2CreateCommunicationInConversationRequestContent(),
             };
         }
